@@ -1,0 +1,1811 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>MicroCounter</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cryptomuseum">
+    <meta name="twitter:url" content="https://www.cryptomuseum.com/df/opto/microcounter/index.htm">
+    <meta name="twitter:image" content="https://www.cryptomuseum.com/df/opto/microcounter/img/304410/005/full.jpg">
+    <meta name="twitter:title" content="Micro Counter">
+    <meta name="twitter:description" content="Miniature recording frequency counter (10 MHz - 1.2 GHz) in the shape of a Motorola pager.">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of model numbers and names" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Radio Direction Finders" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/df.htm';" >DF</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Radio Monitoring Equipment" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/mon.htm';" >Monitoring</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../df/receivers.htm';" >Surveillance</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Technical Surveillance and Countermeasures" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../../df/tscm.htm';" >TSCM</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../df/antennas.htm';" >Antennas</div>
+          <div class="but sub" onClick="location.href='../../../df/scanners.htm';" >Scanners</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="wire tapping" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/wired.htm';" >Wired</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../df/tempest.htm';" >TEMPEST</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Soviet Union" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/ussr.htm';" >USSR</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../../df/mason/index.htm';" >Mason</div>
+          <div class="but sub" onClick="location.href='../../../df/microtel/index.htm';" >Microtel</div>
+          <div class="but sub" onClick="location.href='../../../df/minilock/index.htm';" >Minilock</div>
+          <div class="but sub" onClick="location.href='../../../df/rei/index.htm';" >REI</div>
+          <div class="but sub" onClick="location.href='../../../df/rft/index.htm';" >RFT</div>
+          <div class="but sub" onClick="location.href='../../../df/rs/index.htm';" >Rohde & Schwarz</div>
+          <div class="but sub" onClick="location.href='../../../df/scanlock/index.htm';" >Scanlock</div>
+          <div class="but sub" onClick="location.href='../../../df/telefunken/index.htm';" >Telefunken</div>
+          <div class="but sub" onClick="location.href='../../../df/wj/index.htm';" >Watkins-Johnson</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../index.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Optoelectronics" class="key">Optoelectronics</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>MicroCounter</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Miniature recording frequency counter</b>
+<br />
+<br />
+<b>MicroCounter</b> is a miniature recording frequency counter in the shape of
+a pager,
+introduced in 1997 by
+<a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: Optoelectronics">Optoelectronics</span></a> in Fort Lauderdale (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Florida">FL</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>).
+It is part of a the <a href="#fam"><span data-balloon-pos="up" aria-label="Jump to: ..."><i>Tech&#173;toyz</i> series</span></a>,
+all of which are housed in the same plastic
+<a href="../../../manuf/motorola"><span data-balloon-pos="up" aria-label="More about: Motorola">Motorola</span></a> Basic Bravo <sup><font color="#FF8800">1</font></sup> pager enclosure.
+The device can be used to quickly determine the frequency of a nearby
+transmitter in the 10 MHz to 1.2 GHz range.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Pagers were popular devices at the time the Optoelectronics
+MicroCounter was introduced, mainly resulting from the preceeding decade
+in which <span class="short" aria-label="Global System for Mobile communication" data-balloon-pos="up"><a href="../../../phone/gsm" class="short" >GSM</a></span> <a href="../../../phone/gsm"><span data-balloon-pos="up" aria-label="More about: (2G) mobile telephony">(2G) mobile telephony</span></a> was not yet
+available and <a href="../../../phone/atf"><span data-balloon-pos="up" aria-label="More about: analogue (1G) mobile telephony">analogue (1G) mobile telephony</span></a> was
+very expensive and not widely spread.
+<br />
+<br />
+This allowed anyone to carry the device without attracting attention,
+and covertly register the fre&#173;quency of any nearby radio transmission.
+The MicroCounter automatically stores up to three frequencies in
+its memory.
+A padlock symbol is shown on the display when memory is full.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304410/009/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Running (capturing noise)">
+<a href="img/304410/009/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Running (capturing noise)">
+            <img src="img/304410/009/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Running (capturing noise)"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The MicroCounter is part of a series of three devices that became known as the
+<a href="#fam"><span data-balloon-pos="up" aria-label="Jump to: ..."><i>Techtoyz</i></span></a>, the other two being an <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> detector
+and a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Double-Tone Multi-Frequency">DTMF</span> tone decoder. All these devices were housed in the same plastic
+enclosure, which had probably been obtained &ndash; together with the 12-segment
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Liquid Crystal Display">LCD</span> &ndash; from <a href="../../../manuf/motorola"><span data-balloon-pos="up" aria-label="More about: Motorola">Motorola</span></a> after production of its
+Basic Bravo pager had ended. Although the MicroCounter works exceptionally well
+and was relatively inexpensive, it was criticized by some reviewers for its lack
+of storage capacity. The slightly larger <a href="../scout"><span data-balloon-pos="up" aria-label="More about: Scout Model 40">Scout Model 40</span></a> &ndash; introduced 2
+years earlier &ndash; might have been a better alternative as it offers 400 memory
+positions, albeit at a much higher price.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+The Basic Bravo pager was also sold by Motorola as an <span class="short tooltip-red" data-balloon-pos="up" aria-label="Original Equipment manufacturer">OEM</span> product,
+  as a result of which it can be found under a variety of brand names.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="MicroCounter with antenna">          <img src="img/304410/000/thumbnail.jpg"
+           alt="MicroCounter with antenna"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304410/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="MicroCounter without antenna">          <img src="img/304410/002/thumbnail.jpg"
+           alt="MicroCounter without antenna"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304410/002"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="MicroCounter without antenna">          <img src="img/304410/003/thumbnail.jpg"
+           alt="MicroCounter without antenna"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304410/003"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="With battery">          <img src="img/304410/004/thumbnail.jpg"
+           alt="With battery"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304410/004"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Rear side with belt clip">          <img src="img/304410/006/thumbnail.jpg"
+           alt="Rear side with belt clip"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304410/006"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Right side">          <img src="img/304410/008/thumbnail.jpg"
+           alt="Right side"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304410/008"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Running (capturing noise)">          <img src="img/304410/009/thumbnail.jpg"
+           alt="Running (capturing noise)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304410/009"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Reading the intercepted frequency from the display">          <img src="img/304410/005/thumbnail.jpg"
+           alt="Reading the intercepted frequency from the display"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304410/005"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304410/000/full.jpg" alt="MicroCounter with antenna">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304410/002/full.jpg" alt="MicroCounter without antenna">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304410/003/full.jpg" alt="MicroCounter without antenna">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304410/004/full.jpg" alt="With battery">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304410/006/full.jpg" alt="Rear side with belt clip">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304410/008/full.jpg" alt="Right side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304410/009/full.jpg" alt="Running (capturing noise)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304410/005/full.jpg" alt="Reading the intercepted frequency from the display">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image below provides an overview of the features of the MicroCounter.
+The device is powered by a single 1.5V AA-size battery, which should
+last for 12 to 15 hours. At the left side (when viewed from the top)
+is a three-position slide switch that is used to select the mode of operation.
+It has an integrated push-button that allows selection of sub-modes.
+Just below the mode switch is a 2 mm jack socket for connection of
+an external antenna, which was available separately.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304410/003/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304410/003/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/mc_ext.png"
+             style="
+            "
+             align="center"
+             width="548px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+At the top of the device is a 12-digit Liquid Crystal Display (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Liquid Crystal Display">LCD</span>)
+that shows the current or re&#173;cor&#173;ded frequency. At the front are two push-buttons:
+a grey one with a &uarr; symbol and an un&#173;mar&#173;ked black one. Both buttons
+have the same function, which depends on the currently selected mode.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=mode></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          MODE selector
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+        <table width=100% cellspacing=0 cellpadding=0>
+          <tr>
+          <td width=100%>
+          <table
+           class="table"
+           width=100% border=0 cellspacing=1 cellpadding=2 bgcolor=#FFFFFF>
+            <tr>
+<td bgcolor="#E0E0E0" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Switch</font></td></b><td bgcolor="#E0E0E0" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Mode</font></td></b><td bgcolor="#E0E0E0" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Description</font></td></b>            </tr>
+            <tr>
+            <td bgcolor=#FFFFFF colspan=3><font size=-1>
+            </font></td>
+            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Up</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>NORMAL</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Shows running frequency for as long transmission continues.<br />Press &uarr; to alter gate time: 1 KHz, 100 Hz, 10 Hz.</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&bullet; Press 1 &#215;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>FILTER</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Shows last detected frequency until new one is encountered.<br />Press &uarr; to alter gate time: 1 KHz, 100 Hz, 10 Hz.</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&bullet; Press 2 &#215;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>CAPTURE</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Up to three frequencies are logged (until memory is full).<br />In this mode, only 1 kHz gate time is available.</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Middle</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>RECALL</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>In this mode, previously recorded frequencies can be read.<br />Use &uarr; to scroll through captured frequencies.</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Down</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>OFF</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Device is off.</font></td>            </tr>
+          </table>
+<div style="height: 20px;"></div>        </td>
+        </tr></table>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Clear memory
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The device can capture up to three frequencies in its memory. When the
+memory is full, a padlock pictogram is displayed on the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Liquid Crystal Display">LCD</span> and no
+further frequencies will be logged. To clear the three memory positions,
+hold the &uarr; button while turning the device ON.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <a name=int></a>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304410/011/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304410/011/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/mc_int.png"
+             style="
+            "
+             align="center"
+             width="498px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Interior</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The device is housed in a molded plastic case that consists of
+two shells, held together by two Allen head screws at the rear.
+The interior can be accessed by removing these two
+screws, after which the rear case half can be removed.
+This exposes the interior as shown in the image above.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Inside the device are two printed circuit boards (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>s), interconnected
+by an 8-pin header. The lower board (i.e. the larger one) is a universal
+base board that holds the battery contacts, the <a href="#mode"><span data-balloon-pos="up" aria-label="Jump to: MODE selector">MODE selector</span></a> and
+the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Liquid Crystal Display">LCD</span>. At the bottom side (shown on the right) is a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span>
+converter, a microcontroller, an <span class="short tooltip-red" data-balloon-pos="up" aria-label="Electrically Erasable Programmable Read-Only Memory" data-balloon-length="large">EEPROM</span> and a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Liquid Crystal Display">LCD</span> driver.
+<br />
+<br />
+The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span> converter <a href="#data_1">[a]</a> is a Linear Technology LT1307, which
+converts the 1.5V battery voltage to 3.3V for the digital circuits.
+The 8-bit micro&#173;con&#173;trol&#173;ler <a href="#data_2">[b]</a> is a COP8SAC720M9 with 4KB <span class="short tooltip-red" data-balloon-pos="up" aria-label="One-Time Programmable (PROM)">OTP</span>,
+128 bytes of <span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span> and a Microwire <sup><font color="#FF8800">1</font></sup> interface.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304410/016/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Base board - bottom view">
+<a href="img/304410/016/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Base board - bottom view">
+            <img src="img/304410/016/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Base board - bottom view"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Note that this is a universal board  that was also used in the other
+devices of the <a href="#fam"><span data-balloon-pos="up" aria-label="Jump to: Techtoyz family">Techtoyz family</span></a> (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> detector & <span class="short tooltip-red" data-balloon-pos="up" aria-label="Double-Tone Multi-Frequency">DTMF</span> decoder),
+albeit with different firmware.
+The data bus of the microcontroller is connected a Philips PCF8576CT universal <span class="short tooltip-red" data-balloon-pos="up" aria-label="Liquid Crystal Display">LCD</span>
+driver <a href="#data_3">[c]</a> that drives the Motorola pager display.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The I<sup>2</sup>C bus of the microcontroller is connected to a Catalyst Semiconductor <sup><font color="#FF8800">2</font></sup>
+128-byte 24C01 <span class="short tooltip-red" data-balloon-pos="up" aria-label="Electrically Erasable Programmable Read-Only Memory" data-balloon-length="large">EEPROM</span> <a href="#data_4">[d]</a> for storing the captured frequencies.
+<br />
+<br />
+A separate <span class="short tooltip-red" data-balloon-pos="up" aria-label="Serial Peripheral Interface">SPI</span> bus is brought out to the 8-pin expansion con&#173;nec&#173;tor on which the
+<i>feature board</i> is fitted. This board &mdash; shown in the image on the right &mdash;
+is specific for the MicroCounter and is built around a Xilinx CX3430
+Spartan 3 Field-Programmable Gate Array (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Field Programmable Gate Array">FPGA</span>) <a href="#data_5">[e]</a>.
+The anten&#173;na signal is first amplified in a two-stage ampli&#173;fier with BFR505
+wideband transistors (N30)  <a href="#data_6">[f]</a> and then passed to an UPB587 prescaler <a href="#data_7">[g]</a>.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304410/018/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Feature board - bottom view">
+<a href="img/304410/018/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Feature board - bottom view">
+            <img src="img/304410/018/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Feature board - bottom view"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The prescaler divides the frequency by eight before applying the signal to the
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Field Programmable Gate Array">FPGA</span>, where it is further processed. The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Field Programmable Gate Array">FPGA</span> effectively implements the
+complete frequency counter in firmware. When the device is switch ON, it displays
+the text 'OPTO' whilst the firmware
+is transferred via the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Serial Peripheral Interface">SPI</span> interface from the microcontroller on the base board
+to the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Field Programmable Gate Array">FPGA</span> on the feature board.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Microwire is the National Semiconductor variant of the Philips I<sup>2</sup>C standard.
+          </li>
+          <li>
+Catalyst Semiconductor, Inc. (CSI) is the original inventor and patent holder
+  of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Electrically Erasable Programmable Read-Only Memory" data-balloon-length="large">EEPROM</span>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Inside the MicroCounter">          <img src="img/304410/011/thumbnail.jpg"
+           alt="Inside the MicroCounter"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304410/011"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Base board (top) and feature board (bottom)">          <img src="img/304410/012/thumbnail.jpg"
+           alt="Base board (top) and feature board (bottom)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304410/012"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Base board - top view">          <img src="img/304410/013/thumbnail.jpg"
+           alt="Base board - top view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304410/013"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Base board - bottom view">          <img src="img/304410/016/thumbnail.jpg"
+           alt="Base board - bottom view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304410/016"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Base board - top">          <img src="img/304410/014/thumbnail.jpg"
+           alt="Base board - top"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304410/014"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Base board - bottom">          <img src="img/304410/017/thumbnail.jpg"
+           alt="Base board - bottom"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304410/017"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Feature board - bottom view">          <img src="img/304410/018/thumbnail.jpg"
+           alt="Feature board - bottom view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304410/018"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Feature board - bottom">          <img src="img/304410/019/thumbnail.jpg"
+           alt="Feature board - bottom"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304410/019"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'B'" onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">B</span></div></div><div style="height: 40px;"></div>
+<div id="slide_2" class="slide" onClick="slideClose('slide_2')"><span class="slide_close_left" onClick="slideClose('slide_2')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_2', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304410/011/full.jpg" alt="Inside the MicroCounter">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304410/012/full.jpg" alt="Base board (top) and feature board (bottom)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304410/013/full.jpg" alt="Base board - top view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304410/016/full.jpg" alt="Base board - bottom view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304410/014/full.jpg" alt="Base board - top">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304410/017/full.jpg" alt="Base board - bottom">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304410/018/full.jpg" alt="Feature board - bottom view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304410/019/full.jpg" alt="Feature board - bottom">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_2', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_2', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=spec></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Specifications</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Device</div>Recording frequency counter            <li><div style="display:inline-block; width:100px;">Purpose</div>Covert frequency capturing of near-field transmissions            <li><div style="display:inline-block; width:100px;">Family</div>Techtoyz            <li><div style="display:inline-block; width:100px;">Model</div>MicroCounter            <li><div style="display:inline-block; width:100px;">Manufacturer</div><a href="../index.htm">Optoelectronics</a>            <li><div style="display:inline-block; width:100px;">Country</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>            <li><div style="display:inline-block; width:100px;">Year</div>1997            <li><div style="display:inline-block; width:100px;">Frequency</div>10 MHz - 1.2 GHz            <li><div style="display:inline-block; width:100px;">Resolution</div>1 kHz, 100 Hz, 10 Hz            <li><div style="display:inline-block; width:100px;">Impedance</div>50&Omega;            <li><div style="display:inline-block; width:100px;">Input</div>&le; +15 dBm (50 mW)            <li><div style="display:inline-block; width:100px;">Sensitivity</div>&lt; 5 mV &#64; 150 MHz            <li><div style="display:inline-block; width:100px;">Time base</div>10 MHz            <li><div style="display:inline-block; width:100px;">Gate</div>3 selectable gate times            <li><div style="display:inline-block; width:100px;">Memory</div>3            <li><div style="display:inline-block; width:100px;">Display</div>12 digit <span class="short tooltip-red" data-balloon-pos="up" aria-label="Liquid Crystal Display">LCD</span>            <li><div style="display:inline-block; width:100px;">Antenna</div>TMC-100 (rubber duck)            <li><div style="display:inline-block; width:100px;">Power</div>1.5V (AA-size battery)            <li><div style="display:inline-block; width:100px;">Duration</div>15 hrs (with alkaline battery)            <li><div style="display:inline-block; width:100px;">Dimensions</div>73 &#215; 50 &#215; 32 mm            <li><div style="display:inline-block; width:100px;">Weight</div>70 g (with battery)            <li><div style="display:inline-block; width:100px;">Price</div>USD 99 (1998), antenna USD 9          </ul>
+</font></td></tr></table>        <a name=fam></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Techtoyz family
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>RF Detector            <li>DTMF Decoder            <li>Micro Counter          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=data></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Datasheets</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=a>
+            <a name="data_1"></a>
+            <li><a href="files/LT1307.pdf">LT1307, Single Cell Micropower 600 kHz PWM DC/DC Converter</a><br />
+Linear Technology Corporation, 1995. Rev. A.
+            <p />
+            <a name="data_2"></a>
+            <li><a href="files/COP8SA.pdf">COP8SA Family, 8-bit CMOS ROM based OTP Microcontroller</a><br />
+COP8SAC720M9, 4KB OTP, RAM 128 Byte, 20-pin SOIC.<br />
+National Semiductor, 1999.
+            <p />
+            <a name="data_3"></a>
+            <li><a href="files/PCF8576C.pdf">PCF8576CT, Universal LCD driver for low multiplex rates</a><br />
+NXP, 16 December 2013, Rev. 13.
+            <p />
+            <a name="data_4"></a>
+            <li><a href="files/24C01C.pdf">24C01J, 1K (128 byte) 5.0V I<sup>2</sup>C Serial EEPROM</a><br />
+Microchip Technology Inc., 1997-2012.
+            <p />
+            <a name="data_5"></a>
+            <li><a href="../xplorer/files/Spartan_3A.pdf">Spartan 3A FPGA (Xilinx XC3430A)</a><br />
+DS610. Xilinx, 4 October 2010.
+            <p />
+            <a name="data_6"></a>
+            <li><a href="files/BFR505.pdf">BFR505, NPN 9 GHz wideband transistor</a><br />
+NXP, 7 September 2011. Rev. 4.
+            <p />
+            <a name="data_7"></a>
+            <li><a href="files/UPB587.pdf">1.0 GHz Divide-by-1/4/6 Prescaler</a><br />
+NEC, undated.
+          </ol type=a>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=lit></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Literature</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=a>
+            <a name="lit_1"></a>
+            <li><a href="files/MT_199710_toyz.pdf">Optoelectronics Advert: <i>Toyz for Test</i></a><br />
+Monitoring Times, October 1997. Page II (inside cover).
+            <p />
+            <a name="lit_2"></a>
+            <li><a href="files/MT_199711_p89_mc_review.pdf"><i>Opto Micro Counter</i> - Review</a><br />
+Monitoring Times, November 1987. p. 89.
+          </ol type=a>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=doc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Documentation</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <a name="doc_1"></a>
+            <li><a href="files/microcounter_manual.pdf">Micro Counter manual</a><br />
+Optoelectronics, 1998.
+          </ol type=A>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../scout">Scout Model 40</a><br />
+            <li><a href="../index.htm">Other Optoelectronics products</a><br />
+            <li><a href="../../tscm.htm">Other TSCM equipment</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Sunday 03 August 2025. Last changed: Monday, 04 August 2025 - 20:32 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

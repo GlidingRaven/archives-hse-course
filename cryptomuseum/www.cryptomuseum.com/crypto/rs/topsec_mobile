@@ -1,0 +1,1530 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>TopSec Mobile</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cryptomuseum">
+    <meta name="twitter:url" content="https://www.cryptomuseum.com/crypto/rs/topsec_mobile/index.htm">
+    <meta name="twitter:image" content="https://www.cryptomuseum.com/crypto/rs/topsec_mobile/img/303703/002/full.jpg">
+    <meta name="twitter:title" content="TopSec Mobile">
+    <meta name="twitter:description" content="Portable secure voice module with Bluetooth for smartphones.">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of cryptographic devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/glossary.htm';" >Glossary</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="The ENIGMA cipher machine" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/enigma/index.htm';" >Enigma</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Machines from Boris Hagelin and/or Crypto AG" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/hagelin/index.htm';" >Hagelin</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Soviet rotor-based cipher machine M-125, codenamed Fialka" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/fialka/index.htm';" >Fialka</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Rotor-based cipher machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/rotor.htm';" >Rotor</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Pin-and-lug cipher machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/pinwheel.htm';" >Pin-wheel</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tapeless Rotorless On-Line cipher machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/trol/index.htm';" >TROL</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Secure speech devices" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../../crypto/voice.htm';" >Voice</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Telegraphy and computer data encryption" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/data.htm';" >Data</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Manual cipher systems" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/manual.htm';" >Hand</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="The unbreakable One-Time Pad" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/otp/index.htm';" >OTP</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Electronic Message Units" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/emu.htm';" >EMU</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Hardware Security Modules" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/hsm.htm';" >HSM</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines based on One-Time Tape encryption" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/ott.htm';" >Mixers</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Secure telephones and privacy sets" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../../crypto/phone.htm';" >Phones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Bulk encryptors and IP-based networks" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/ip.htm';" >Bulk</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Key transfer devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/fill.htm';" >FILL</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Codebooks, procedures and key distribution material" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/codebook/index.htm';" >Codebooks</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Public and secret algorithms used in cryptography" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/algo/index.htm';" >Algorithms</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cryptographic Processors" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/chips.htm';" >Chips</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cryptanalytic Machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../cam/index.htm';" >Cryptanalysis</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../crypto/toys.htm';" >Toys</div>
+          <div class="but sub" onClick="location.href='../../../crypto/ww2.htm';" >World War II</div>
+          <div class="spacer"></div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Countries
+          </div>
+          <div class="hidden">
+            <div class="but sub" onClick="location.href='../../../crypto/cs.htm';" >Czechoslovakia</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former East-Germany" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/ddr/index.htm';" >DDR</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/france/index.htm';" >France</div>
+            <div class="but sel sub" onClick="location.href='../../../crypto/germany/index.htm';" >Germany</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="The Netherlands, Holland" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/nl/index.htm';" >Netherlands</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/ru/index.htm';" >Russia</div>
+            <div class="but sub" onClick="location.href='../../../crypto/swiss/index.htm';" >Switzerland</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United Kingdom" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/uk/index.htm';" >UK</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United States of America" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/usa/index.htm';" >USA</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Soviet Union" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/ussr/index.htm';" >USSR</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former Yugoslav republic" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/yugo/index.htm';" >Yugoslavia</div>
+</div>
+          </div>
+          </div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Manufacturers
+          </div>
+          <div class="hidden">
+            <div class="but sub" onClick="location.href='../../../crypto/ant/index.htm';" >ANT</div>
+            <div class="but sub" onClick="location.href='../../../crypto/aristo/index.htm';" >Aristo</div>
+            <div class="but sub" onClick="location.href='../../../crypto/ascom/index.htm';" >Ascom</div>
+            <div class="but sub" onClick="location.href='../../../crypto/att/index.htm';" >AT&amp;T</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Brown, Boveri and Company" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/bbc/index.htm';" >BBC</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/bosch/index.htm';" >Bosch</div>
+            <div class="but sub" onClick="location.href='../../../crypto/compumatica/index.htm';" >Compumatica</div>
+            <div class="but sub" onClick="location.href='../../../crypto/hagelin/index.htm';" >Crypto AG</div>
+            <div class="but sub" onClick="location.href='../../../crypto/datotek/index.htm';" >Datotek</div>
+            <div class="but sub" onClick="location.href='../../../crypto/foxit/fffe/index.htm';" >Fox-IT</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="General Dynamics" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../manuf/gd/index.htm';" >GD</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../manuf/gemalto/index.htm';" >Gemalto</div>
+            <div class="but sub" onClick="location.href='../../../crypto/gretag/index.htm';" >Gretag</div>
+            <div class="but sub" onClick="location.href='../../../crypto/harris/index.htm';" >Harris</div>
+            <div class="but sub" onClick="location.href='../../../crypto/hell/index.htm';" >HELL</div>
+            <div class="but sub" onClick="location.href='../../../crypto/itt/index.htm';" >ITT</div>
+            <div class="but sub" onClick="location.href='../../../crypto/lorenz/index.htm';" >Lorenz</div>
+            <div class="but sub" onClick="location.href='../../../crypto/lugagne/index.htm';" >Lugagne</div>
+            <div class="but sub" onClick="location.href='../../../crypto/mel/index.htm';" >MEL</div>
+            <div class="but sub" onClick="location.href='../../../crypto/mils/index.htm';" >Mils</div>
+            <div class="but sub" onClick="location.href='../../../crypto/motorola/index.htm';" >Motorola</div>
+            <div class="but sub" onClick="location.href='../../../manuf/mykotronx/index.htm';" >Mykotronx</div>
+            <div class="but sub" onClick="location.href='../../../crypto/nokia/index.htm';" >Nokia</div>
+            <div class="but sub" onClick="location.href='../../../crypto/omi/index.htm';" >OMI</div>
+            <div class="but sub" onClick="location.href='../../../crypto/omnisec/index.htm';" >Omnisec</div>
+            <div class="but sub" onClick="location.href='../../../crypto/philips/index.htm';" >Philips</div>
+            <div class="but sub" onClick="location.href='../../../crypto/ptt/index.htm';" >PTT</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Rohde & Schwarz" data-balloon-length="medium">
+            <div class="but sel sub" onClick="location.href='../../../crypto/rs/index.htm';" >R&S</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/racal/index.htm';" >Racal</div>
+            <div class="but sub" onClick="location.href='../../../crypto/randata/index.htm';" >RanData</div>
+            <div class="but sub" onClick="location.href='../../../crypto/raytheon/index.htm';" >Raytheon</div>
+            <div class="but sub" onClick="location.href='../../../crypto/rca/index.htm';" >RCA</div>
+            <div class="but sub" onClick="location.href='../../../manuf/safenet/index.htm';" >Safenet</div>
+            <div class="but sub" onClick="location.href='../../../manuf/secunet/index.htm';" >Secunet</div>
+            <div class="but sub" onClick="location.href='../../../crypto/siemens/index.htm';" >Siemens</div>
+            <div class="but sub" onClick="location.href='../../../crypto/stk/index.htm';" >STK</div>
+            <div class="but sub" onClick="location.href='../../../crypto/tadiran/index.htm';" >Tadiran</div>
+            <div class="but sub" onClick="location.href='../../../crypto/tait/index.htm';" >Tait</div>
+            <div class="but sub" onClick="location.href='../../../manuf/tcc/index.htm';" >TCC</div>
+            <div class="but sub" onClick="location.href='../../../crypto/telefunken/index.htm';" >Telefunken</div>
+            <div class="but sub" onClick="location.href='../../../crypto/telsy/index.htm';" >Telsy</div>
+            <div class="but sub" onClick="location.href='../../../crypto/teltron/index.htm';" >Teltron</div>
+            <div class="but sub" onClick="location.href='../../../crypto/thales/index.htm';" >Thales</div>
+            <div class="but sub" onClick="location.href='../../../manuf/tno/index.htm';" >TNO</div>
+            <div class="but sub" onClick="location.href='../../../crypto/transvertex/index.htm';" >Transvertex</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tele Security Timmann" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/tst/index.htm';" >TST</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/tutus/index.htm';" >Tutus Data AB</div>
+            <div class="but sub" onClick="location.href='../../../manuf/ultra/index.htm';" >Ultra Electronics</div>
+            <div class="but sub" onClick="location.href='../../../manuf/utimaco/index.htm';" >Utimaco</div>
+            <div class="but sub" onClick="location.href='../../../manuf/zellweger/index.htm';" >Zellweger</div>
+            <div class="but sub" onClick="location.href='../../../manuf/index.htm';" >OTHER</div>
+          </div>
+          </div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../../phone.htm"><div  data-balloon-pos="up" aria-label="Shortcut to secure phones" class="key">Phone</div></a><a class="key" href="../../../phone/gsm/index.htm"><div  data-balloon-pos="up" aria-label="Shortcut to the GSM mobile phone standard" class="key">GSM</div></a><a class="key" href="../index.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Rohde & Schwarz" class="key">R&S</div></a>&nbsp;&nbsp;<a class="key" href="../topsec_gsm/index.htm"><div  data-balloon-pos="up" aria-label="Back to TopSec GSM" class="key right">&larr; TopSec GSM</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>TopSec Mobile</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Smartphone voice encryptor</b>
+<br />
+<br />
+<b>TopSec Mobile</b> was a mobile <a href="../../index.htm"><span data-balloon-pos="up" aria-label="More about: encryption device">encryption device</span></a>,
+introduced in 2008 by <a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: Rohde & Schwarz SIT">Rohde & Schwarz SIT</span></a> <sup><font color="#FF8800">1</font></sup> in M&#252;nchen
+(Munich, Germany). It enables
+<a href="../../phone.htm"><span data-balloon-pos="up" aria-label="More about: secure voice calls">secure voice calls</span></a> via
+<span class="short" aria-label="Global System for Mobile communication" data-balloon-pos="up"><a href="../../../phone/gsm/index.htm" class="short" >GSM</a></span> and <span class="short" aria-label="Universal Mobile Telecommunications System" data-balloon-pos="up"><a href="../../../phone/glossary.htm#umts" class="short" >UMTS</a></span> mobile net&shy;works,
+using AES-256 encryption via a Bluetooth<sup>&#174;</sup> connection.
+It is the successor to the less secure <a href="../topsec_gsm/index.htm"><span data-balloon-pos="up" aria-label="More about: TopSec GSM">TopSec GSM</span></a>,
+and is <a href="#comp"><span data-balloon-pos="up" aria-label="Jump to: compatible">compatible</span></a> with
+iPhone, Android, Windows Phone and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Operating System (Microsoft)">Windows</span> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Personal Computer">PC</span>.
+It was certified by the <span class="short" aria-label="Bundesamt f&#252;r Sicherheit in der Informationstechnik (Germany)" data-balloon-pos="up"><a href="../../../intel/bsi/index.htm" class="short" >BSI</a></span> and <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato/index.htm" class="short" >NATO</a></span>/SECAN for conversations up to the level
+of VS-VERTRAULICH <a href="#ref_4">[4]</a>. <sup><font color="#FF8800">2</font></sup>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The product consists of two parts: a software-based <span class="short tooltip-red" data-balloon-pos="up" aria-label="Voice over IP">VoIP</span> client
+for the mobile phone, and an external hardware-based encryption unit
+that connects to the mobile phone via Bluetooth.
+<br />
+<br />
+The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Voice over IP">VoIP</span> client is available from <span class="short" aria-label="Rohde & Schwarz" data-balloon-pos="up"><a href="../index.htm" class="short" >R&S</a></span> as a
+<a href="#comp"><span data-balloon-pos="up" aria-label="Jump to: free App for most smartphones">free App for most smartphones</span></a> and can also be used as a stand-alone
+application for making normal (insecure) <span class="short tooltip-red" data-balloon-pos="up" aria-label="Voice over IP">VoIP</span> calls.
+For secure conversations, the external TopSec Mobile device
+is needed, as shown in the image on the right.
+It uses its own microphone and earphones so that no
+unencryp&shy;ted voice data is handled by the mobile phone.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/303703/002/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="TopSec Mobile">
+<a href="img/303703/002/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="TopSec Mobile">
+            <img src="img/303703/002/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="TopSec Mobile"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Encryption and decryption are entirely handled by the device.
+Keys are exchanged by means of a 384-bit <span class="short tooltip-red" data-balloon-pos="up" aria-label="Elyptic Curve Cryptography">ECC</span> algorithm, whilst
+AES-256 is used for the transmission of the actual voice data <a href="#ref_2">[2]</a>.
+Two (mobile) parties can exchange secure calls, if they both have
+installed a TopSec Mobile unit and the accompanying application (App).
+In addition, secure calls to regular <span class="short tooltip-red" data-balloon-pos="up" aria-label="Voice over IP">VoIP</span> telephones can be made when the
+external party has installed a TopSec Office Gateway (<span class="short tooltip-red" data-balloon-pos="up" aria-label="TopSec Office Gateway">TSOG</span>) on its <span class="short" aria-label="Private Automatic Branch Exchange" data-balloon-pos="up"><a href="../../../phone/glossary.htm#pabx" class="short" >PABX</a></span> <a href="#doc_7">[G]</a>.
+<br />
+<br />
+TopSec Mobile was certified by the
+<a href="../../../intel/bsi"><span data-balloon-pos="up" aria-label="More about: German Federal Office for ...">German Federal Office for Information Security</span></a> (<span class="short" aria-label="Bundesamt f&#252;r Sicherheit in der Informationstechnik (Germany)" data-balloon-pos="up"><a href="../../../intel/bsi/index.htm" class="short" >BSI</a></span>)
+and also by <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato/index.htm" class="short" >NATO</a></span>/SECAN, for conversations up to the level of VS-VERTRAULICH <a href="#ref_4">[4]</a>.
+TopSec Mobile was discontinued around 2024 and was succeeded by <b>R&S ComSec</b>,
+a software-only solution, based on <b>Apple indigo</b>.
+The latter has also been approved by the German <span class="short" aria-label="Bundesamt f&#252;r Sicherheit in der Informationstechnik (Germany)" data-balloon-pos="up"><a href="../../../intel/bsi/index.htm" class="short" >BSI</a></span> up to VS-NfD level <sup><font color="#FF8800">3</font></sup> <a href="#ref_7">[7]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li style="margin-bottom: 6px;">
+Rohde & Schwarz SIT is a subsidary of Rohde & Schwarz Cybersecurity GmbH,
+  whicht itself is a subsidary of
+  <a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: Rohde & Schwarz International GmbH ...">Rohde & Schwarz International GmbH (RUSIG)</span></a>.
+  Both companies are located at the same premises.
+          </li>
+          <li style="margin-bottom: 6px;">
+VS-VERTRAULICH &equals; Vertrouwliche Verschlusssache &mdash; equivalent to CONFIDENTIAL <a href="#ref_6">[6]</a>.
+          </li>
+          <li style="margin-bottom: 6px;">
+VS-NfD &equals; Nur f&#252;r den Dienstgebrauch (for official use only) - equivalent to RESTRICTED <a href="#ref_7">[7]</a>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Packaging">          <img src="img/303703/000/thumbnail.jpg"
+           alt="Packaging"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303703/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Open packaging">          <img src="img/303703/001/thumbnail.jpg"
+           alt="Open packaging"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303703/001"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TopSec Mobile">          <img src="img/303703/002/thumbnail.jpg"
+           alt="TopSec Mobile"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303703/002"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TopSec Mobile in the palm of a hand">          <img src="img/303703/004/thumbnail.jpg"
+           alt="TopSec Mobile in the palm of a hand"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303703/004"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Rear view">          <img src="img/303703/007/thumbnail.jpg"
+           alt="Rear view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303703/007"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Device in leatherette case">          <img src="img/303703/014/thumbnail.jpg"
+           alt="Device in leatherette case"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303703/014"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Cable for microphone and earbuts">          <img src="img/303703/015/thumbnail.jpg"
+           alt="Cable for microphone and earbuts"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303703/015"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Documentation">          <img src="img/303703/019/thumbnail.jpg"
+           alt="Documentation"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303703/019"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303703/000/full.jpg" alt="Packaging">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303703/001/full.jpg" alt="Open packaging">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303703/002/full.jpg" alt="TopSec Mobile">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303703/004/full.jpg" alt="TopSec Mobile in the palm of a hand">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303703/007/full.jpg" alt="Rear view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303703/014/full.jpg" alt="Device in leatherette case">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303703/015/full.jpg" alt="Cable for microphone and earbuts">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303703/019/full.jpg" alt="Documentation">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=spec></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Specifications</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:120px;">Device</div>Secure voice encryptor with Bluetooth            <li><div style="display:inline-block; width:120px;">Purpose</div>Secure voice calls via GSM smartphone            <li><div style="display:inline-block; width:120px;">Model</div>TopSec Mobile            <li><div style="display:inline-block; width:120px;">Manufacturer</div><a href="../index.htm">Rohde & Schwarz</a>            <li><div style="display:inline-block; width:120px;">Year</div>2008            <li><div style="display:inline-block; width:120px;">Country</div>Germany            <li><div style="display:inline-block; width:120px;">Predecessor</div><a href="../topsec_gsm">TopSec GSM</a>            <li><div style="display:inline-block; width:120px;">Successor</div>R&S ComSec - Apple indigo            <li><div style="display:inline-block; width:120px;">Bluetooth</div>2.0            <li><div style="display:inline-block; width:120px;">Protocol</div>V.32, V.110, TCP/IP            <li><div style="display:inline-block; width:120px;">Standby</div>100 hours            <li><div style="display:inline-block; width:120px;">Usage</div>4 hours            <li><div style="display:inline-block; width:120px;">Data transfer</div>3G, EDGE, Wi-Fi            <li><div style="display:inline-block; width:120px;">Data rate</div>9600 bit/s            <li><div style="display:inline-block; width:120px;">Controls</div>Note            <li><div style="display:inline-block; width:120px;">Readout</div>Liquid Crystal Display (LCD)            <li><div style="display:inline-block; width:120px;">Support</div>(<a href="#comp">see below</a>)            <li><div style="display:inline-block; width:120px;">Authentication</div>384-bit ECC key exchange            <li><div style="display:inline-block; width:120px;">Encryption</div>256-bit AES encryption            <li><div style="display:inline-block; width:120px;">Weight</div>85 grams          </ul>
+</font></td></tr></table>        <a name=comp></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Compatibility
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="https://apps/apple.com/us/app/topsec-phone/id504783609" target="_blank"><div style="display:inline-block; width:120px;">Apple iPhone</div>2021</a>            <li><a href="https://www.microsoft.com/en-us/p/topsec-phone/9nblggzvppd" target="_blank"><div style="display:inline-block; width:120px;">Windows Phone</div>2021</a>            <li>Android phone            <li>Windows PC          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=doc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Documentation</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <a name="doc_1"></a>
+            <li><a href="files/TopSecMobile_user_DE.pdf">TopSec Mobile (device) &mdash; user manual (German)</a><br />
+5411.1567.03-05.01. Rohde & Schwarz GmbH, 2015.
+            <p />
+            <a name="doc_2"></a>
+            <li><a href="files/TopSec_iOS.pdf">TopSec Mobile Phone App for iOS &mdash; user manual (English)</a><br />
+5415.5050.02. Rohde & Schwarz SIT GmbH, 2012.
+            <p />
+            <a name="doc_3"></a>
+            <li><a href="files/TopSecMobile_manual_EN.pdf">TopSec Mobile & TopSec Phone Windows PC &mdash; user manual (English)</a><br />
+Rohde & Schwarz SIT GmbH, 2013.
+            <p />
+            <a name="doc_4"></a>
+            <li><a href="files/TopSecMobile_manual_DE.pdf">TopSec Mobile & TopSec Phone Windows PC &mdash; user manual (German)</a><br />
+Rohde & Schwarz SIT GmbH, 2013.
+            <p />
+            <a name="doc_5"></a>
+            <li><a href="files/TopSecMobile.pdf">TopSec Mobile, tap-proof phone calls &mdash; brochure</a><br />
+PD 3606.6492.12. Rohde & Schwarz GmbH & Co. KG, February 2014. Version 03.00.
+            <p />
+            <a name="doc_6"></a>
+            <li><a href="files/NEWS_207_TopSecMobile_EN.pdf">Smart and secure: tap-proof voice calls on smartphones</a><br />
+Erika Friesen. R&S News 207/12 pp. 43-45.
+            <p />
+            <a name="doc_7"></a>
+            <li><a href="files/TopSecGateway_spec_DE.pdf">TopSec Office Gateway, Festnetzgegenstellen &mdash; Specifikationen</a><br />
+Rohde & Schwarz SIT GmbH, 2014.
+          </ol type=A>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+<li><font color=#F52E00>Tim Ehrhart, two R&S TopSec Mobile devices - THANKS !</font><br />
+Received October 2021.
+            <p />
+            <a name="ref_2"></a>
+            <li><a href="https://www.electrospaces.net/2012/06/highly-secure-mobile-phones.html" target="_blank">Peter Koop, <i>Rohde & Schwarz: TopSec Mobile</i></a><br />
+<a href="https://www.electrospaces.net" target="_blank">Electrospaces.net</a>.
+22 June 2012. Updated 9 April 2016.
+            <p />
+            <a name="ref_3"></a>
+            <li><a href="files/MTT_comp.pdf"><i>Feature comparison between Stealthphone Hard and TopSec Mobile</i></a><br />
+Mobile Trust Telecommunications. Date unknown.
+            <p />
+            <a name="ref_4"></a>
+            <li><a href="files/BSI_mobile_DE.pdf">BSI, <i>Sicheres mobiles Arbeiten</i></a><br />
+<a href="../../../intel/bsi/index.htm">Bundesamt f&#252;r Sicherheit in der Informationstechnik (BSI)</a>,
+October 2016. pp. 43-45.
+            <p />
+            <a name="ref_5"></a>
+            <li><a href="https://www.youtube.com/watch?v=P5Ut24sSuAk" target="_blank">Rohde & Schwarz, <i>TopSec Mobile - Tap-proof phone calls</i> (video)</a><br />
+Via YouTube. 1 October 2015 (English spoken).
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://www.youtube.com/watch?v=7-7zssp8WAs" target="_blank">German version</a>
+            <p />
+            <a name="ref_6"></a>
+            <li><a href="https://de.wikipedia.org/wiki/Geheimhaltungsgrad" target="_blank">Wikipedia (Germany), <i>Geheimhaltungsgrad</i></a><br />
+Visited 26 September 2021.
+            <p />
+            <a name="ref_7"></a>
+            <li><a href="https://www.rohde-schwarz.com/fi/solutions/networks-and-cybersecurity/secure-mobile-connectivity/r-s-comsec_257814.html" target="_blank">R&S ComSec solutions using Apple indigo for smartphones and tablets</a><br />
+<a href="https://www.rohde-schwarz.com" target="_blank">Rohde & Schwarz website</a>. Retrieved 20 February 2025.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../topsec_gsm/index.htm">TopSec GSM, the predecessor</a><br />
+            <li><a href="../index.htm">Other R&S crypto equipment</a><br />
+            <li><a href="../../voice.htm">Other secure voice products</a><br />
+            <li><a href="../../phone.htm">Other secure telephone products</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Sunday 26 September 2021. Last changed: Thursday, 20 February 2025 - 11:47 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

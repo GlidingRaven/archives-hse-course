@@ -1,0 +1,1809 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>Micro-Tel</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../index.htm"><img src="../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../index.htm"><img src="../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Micro-Tel</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Micro-Tel was an electronics company based in Hunt Valley, Maryland (US).
+It was established in 1962 by Dick Finke (later with Bill Richardson).
+The company specialized in high-end microwave receivers that were mainly
+intended for the US Goverment and the US Department of Defense.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The company was built on the foundation layed by Richard S. Finke
+in 1962 when he started his own company. Being educated
+in electronics during WWII, he had build up a strong reputation and
+began developing equipment for the DoD.
+<br />
+<br />
+By 1972, he had teamed up with Bill Richardson to become one
+of the most important pioneers in the world of defence electronics.
+Together they founded Micro-Tel Inc. and settled down in Hunt Valley,
+Maryland (US) where in 1982 they built a brand new 30,000 square foot
+facility for 2.6 million US$; quite a lot of money in those days.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/500415/000/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Micro-Tel assembly workshop in July 1980 with President Richard Finke and William Richardson looking over some equipment [10]" data-balloon-length="large">
+<a href="img/500415/000/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Micro-Tel assembly workshop in July 1980 with President Richard Finke and William Richardson looking over some equipment [10]" data-balloon-length="large">
+            <img src="img/500415/000/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Micro-Tel assembly workshop in July 1980 with President Richard Finke and William Richardson looking over some equipment [10]"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+Micro-Tel became well known during the early 1980s for its range of
+microwave receivers, such as the
+<a href="../../df/microtel/pr700/index.htm"><span data-balloon-pos="up" aria-label="More about: PR-700">PR-700</span></a>
+and the <a href="../../df/microtel/msr901/index.htm"><span data-balloon-pos="up" aria-label="More about: MSR-901">MSR-901</span></a>.
+In 1989, Micro-Tel was taken over by M/A-COM, which in turn was
+taken over by Tyco International Ltd. in 1999.
+Under Tyco, Micro-Tel M/A-COM became the worlds largest producer
+of microwave components and equipment for the defence industry.
+<br />
+<br />
+In 2008, after a series of complaints against Tyco International
+about fraude and bribery in Saudi Arabia, the M/A-COM SIGINT
+division was sold to Cobham and is currently known as
+Cobham Advanced Electronic Solutions (CAES). They are no longer based
+based in Hunt Valley (MD, <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>).
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Micro-Tel equipment on this website
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../../df/microtel/pr700/index.htm>
+<div  data-balloon-pos="up" aria-label="Micro-Tel PR-700 surveillance receiver">          <img src="../../df/microtel/pr700/img/300739/005/thumbnail.jpg"
+           alt="Micro-Tel PR-700 surveillance receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../df/microtel/pr700/index.htm>PR-700</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../df/microtel/msr901/index.htm>
+<div  data-balloon-pos="up" aria-label="Micro-Tel MSR-901">          <img src="../../df/microtel/msr901/img/301705/001/thumbnail.jpg"
+           alt="Micro-Tel MSR-901"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../df/microtel/msr901/index.htm>MSR-901</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../df/microtel/msr902/index.htm>
+<div  data-balloon-pos="up" aria-label="Portable microwave surveillance receiver">          <img src="../../df/microtel/msr902/img/302749/013/thumbnail.jpg"
+           alt="Portable microwave surveillance receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../df/microtel/msr902/index.htm>MSR-902</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../df/microtel/msr903/index.htm>
+<div  data-balloon-pos="up" aria-label="Percision microwave receiver">          <img src="../../img/thumb.jpg"
+           alt="Percision microwave receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../df/microtel/msr903/index.htm>MSR-903</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../df/microtel/msr904/index.htm>
+<div  data-balloon-pos="up" aria-label="Precision surveillance receiver">          <img src="../../df/microtel/msr904/img/302750/003/thumbnail.jpg"
+           alt="Precision surveillance receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../df/microtel/msr904/index.htm>MSR-904</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../df/microtel/1200/index.htm>
+<div  data-balloon-pos="up" aria-label="1200-series wide range SHF receiver">          <img src="../../img/thumb.jpg"
+           alt="1200-series wide range SHF receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../df/microtel/1200/index.htm>MSR-1200</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 8px;"></div>        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<font color="#E7E">&#10148;</font>&nbsp;<a href="../../df/microtel/index.htm#known">Other MicroTel equipment</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=hist></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>History</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The history of Micro-Tel starts with Richard (Bill) S. Finke, a native of
+New York City, born on 31 March 1923 and educated at
+schools in the Forest Hills area. When America got involved in <span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../../spy/glossary/htm#ww2" class="short" >WWII</a></span>
+in 1941, Finke was 18 y.o. and studied Electrical Engineering
+at the New York University.
+<br />
+<br />
+In 1943, at the age of 20, he earned a degree in Electrical Engineering
+from New York University. Shortly afterwards he joined the Army where
+he became an officer in the Army Signals Corps. He spent most of his
+time during <a href="../../spy/glossary.htm#ww2"><span data-balloon-pos="up" aria-label="More about: World War II">World War II</span></a> in Europe.
+After the war, he started working for the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span>
+electronics company <a href="../rca"><span data-balloon-pos="up" aria-label="More about: ..."><b>RCA Corporation</b></span></a> and later for the
+<a href="../../intel/index.htm#cia"><span data-balloon-pos="up" aria-label="More about: ..."><b>Central Intelligence Agency (CIA)</b></span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Micro-Tel Corporation
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the early 1950s, Finke moved to the Baltimore area where he worked
+for <b>Martin Marietta Cor&shy;poration</b> and the <b>Bendix Communication Division</b>,
+until he started his own company in 1962. The company became known as
+<b>Micro-Tel Corporation</b> and specialized in microwave receivers for the
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span> Department of Defence (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Department of Defense (US)">DoD</span>) and for various <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span> domestic
+<a href="../../intel/index.htm"><span data-balloon-pos="up" aria-label="More about: intelligence agencies">intelligence agencies</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Micro-Tel Inc.
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In 1972, Bill Finke met Bill Richardson and together they set up
+<b>Micro-Tel Inc</b>. As they wanted to expand the company, they moved to
+Hunt Valley, Maryland (<span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span>). At the time, they were one of the first
+technology companies to settle down in the area, which has since
+become one of the region's most important high-tech hotspots.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Adams-Russell
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In 1978, Micro-Tel merged with Adams-Russell and was eventually renamed
+<b>Adams-Russell, Micro-Tel Divi&shy;sion</b> (1981).
+The image below shows the Mirco-Tel asssembly workshop in July 1980,
+with President Dick Finke and Bill Richardson behind some of the
+company's equipment.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="img/500415/000/full.jpg"
+             style="
+            "
+             align="center"
+             width="618px"
+             vspace="4"
+             border=0
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+Plans were made for a new premises for which they started rasing the
+necessary fun&shy;ding in the middle of the recession of 1980.
+Below is an artist's impression of the proposed building.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/500415/001/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Artist's impression of the new Micro-Tel premises that was built in 1982 [11]" data-balloon-length="large">
+<a href="img/500415/001/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Artist's impression of the new Micro-Tel premises that was built in 1982 [11]" data-balloon-length="large">
+            <img src="img/500415/002/wide.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="Artist's impression of the new Micro-Tel premises that was built in 1982 [11]"
+             border=0
+             width=618 height=149
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+In 1982 a brand new 30,000 square foot facility was erected at
+Gilroy Road for no less than 2.6 million US$. In this period, Micro-Tel
+became best known for their range of microwave compo&shy;nents,
+measurement receivers and intercept equipment,
+with their typical faint mint colour.
+<br />
+<br />
+Even&shy;tually. Dick Finke sold his shares in the company and retired.
+In 1989 he moved from Towson to Oxford (<span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span>), where on
+28 November 1992, at the age of 69, he died of a heart
+attack <a href="#ref_1">[1]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          M/A-COM
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In 1989, Micro-Tel was sold to <b>M/A-COM Inc.</b>,
+a Public Company from Burlington, (MA, <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span>) with a desire to expand.
+At that time, M/A-COM had well over a 1000 employees
+and was growing rapidly <a href="#ref_2">[2]</a>. With the acquisition of Micro-Tel they hoped
+to expand their business in microwave equipment and components
+for the defence industry. In early 1999, Micro-Tel was renamed
+<b>M/A-COM SIGINT Products</b> and that same year they won a US$ 3.5
+million contract to supply an unknown number of microwave receivers
+to the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span> Department of Defence (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Department of Defense (US)">DoD</span>) <a href="#ref_3">[3]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Tyco
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Shortly afterwards, also in 1999, M/A-COM was taken over by
+<b>Tyco International Ltd.</b>, a Swiss-based electronics giant that
+had acquired many companies over the years, in order to increase
+their global market share.
+As a result, Tyco became the worlds largest supplier <a href="#ref_4">[4]</a>
+of advanced microwave electronics for the defence industry with
+over 3500 employees by 2006 <a href="#ref_5">[5]</a>.
+<br />
+<br />
+In 2006, Tyco reported a sales turnover of 12.7 billion US$.
+Later that year however,
+the tide turned when Tyco was accused of
+accountancy fraude, tax fraude, and bribery <a href="#ref_6">[6]</a><a href="#ref_7">[7]</a>.
+Several complaints against the company were filed under the
+Foreign Corrupt Practices Act (FCPA),
+mainly related to a Tyco subsidary in Saudi Arabia,
+resulting in a settlement of approx. 30 million US$.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Cobham
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Following the 2006 fraude case, M/A-COM was moved from Tyco International
+(Switzerland) to Tyco Electronics (Florida, US), but to no avail.
+Investigations revealed that the fraude had con&shy;ti&shy;nued even after the
+settlement in 2006. Finally, on 13 May 2008, M/A-COM, and hence
+SIGINT Products (which had nothing to do with the fraude),
+was sold for US$ 425 million to <b>Cobham Defence Electronics</b>,
+one of the largest defence contracters in the United Kingdom <a href="#ref_8">[8]</a>.
+<br />
+<br />
+The microwave products division (i.e. the former Micro-Tel)
+became a separate business unit of Cobham Defence Electronics,
+known as <b>CDES SIGINT</b>, and was still located at the
+<a href="#adr"><span data-balloon-pos="up" aria-label="Jump to: old address">old address</span></a>
+in Hunt Valley, Maryland (US) in 2013 <a href="#ref_9">[9]</a>.
+A quick search on <a href="http://goo.gl/prv73x"><span data-balloon-pos="up" aria-label="goo.gl (off-site)">Google Maps</span></a>
+reveals that the building at 10713 Gilroy Road has hardly changed since 1982.
+Apparently <a href="http://goo.gl/prv73x"><span data-balloon-pos="up" aria-label="goo.gl (off-site)">it is currently abandoned</span></a> (2015).
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/gilroy_10713.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="The building at Gilroy 10713 in 2015 (via Google Maps)" data-balloon-length="large">
+<a href="img/gilroy_10713.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="The building at Gilroy 10713 in 2015 (via Google Maps)" data-balloon-length="large">
+            <img src="img/gilroy_10713_wide.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="The building at Gilroy 10713 in 2015 (via Google Maps)"
+             border=0
+             width=618 height=209
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Advent International
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+On 17 January 2020, following approval from the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United Kingdom (Great Britain)">UK</span> Government and
+security guarantees by the buyer, Cobham was taken over by the American
+private equity firm <b>Advent International</b> for GBP 4 billion <a href="#ref_12">[12]</a>.
+Immediately after the acquisition however, Advent started divesting most
+of Cob&shy;ham's sub&shy;sidaries and business units.
+18 months into the deal, they
+had already sold the bulk of Cobham's operations to other buyers,
+leaving no manufacturing operations in the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United Kingdom (Great Britain)">UK</span>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          CAES
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In 2021, the former <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> division of Cobham became
+<b>Cobham Advanced Electronic Solutions</b> (<span class="short tooltip-red" data-balloon-pos="up" aria-label=" Cobham Advanced Electronic Solutions">CAES</span>), with is a standalone
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span> national company with an independent board of directors <a href="#ref_13">[13]</a>.
+In November 2024, CAES became part of Honeywell International Inc. <a href="#ref_14">[14]</a><a href="#ref_15">[15]</a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="#timeline">Company timeline</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=imp></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Impressions</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+One of the first people to be hired by Dick Finke and Bill Richardson
+after they founded Micro-Tel Inc. in 1972, was Fred Markle who eventually
+became the lead design engineer. The image below shows Markle in front
+of one of the radio systems he designed. It is part of a series of three
+pho&shy;to&shy;graphs from Markle's estate,
+that were rediscovered by his son Jody in early 2025 <a href="#ref_16">[16]</a>.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/500415/005/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Senior Developer Fred Markle in front of a receiver" data-balloon-length="large">
+<a href="img/500415/005/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Senior Developer Fred Markle in front of a receiver" data-balloon-length="large">
+            <img src="img/500415/005/full.jpg"
+             style="
+            "
+             align="center"
+             width="618"
+             vspace="4"
+             alt="Senior Developer Fred Markle in front of a receiver"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+            <div style="margin-top: 4px; margin-bottom: 4px;">
+            <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+            <center><a href="img/500415/005/full.jpg">Lead design engineer Fred Markle in front of a radio system. Copyright Jody Markle [16].</a></center>
+            </font>
+            </div>
+          </td></tr></table>
+<br />
+The photographs, that were in a deplorable state when they were rediscovered
+and had <a href="img/markle_faded.jpg"><span data-balloon-pos="up" aria-label="More about: signi&shy;fi&shy;cantly faded">signi&shy;fi&shy;cantly faded</span></a> over the years,
+were colour-correct and digitally enhanced at Crypto Museum.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/500415/004/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="A device on a workbench at Micro-Tel">
+<a href="img/500415/004/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="A device on a workbench at Micro-Tel">
+            <img src="img/500415/004/full.jpg"
+             style="
+            "
+             align="center"
+             width="618"
+             vspace="4"
+             alt="A device on a workbench at Micro-Tel"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+            <div style="margin-top: 4px; margin-bottom: 4px;">
+            <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+            <center><a href="img/500415/004/full.jpg">A device on a workbench</a></center>
+            </font>
+            </div>
+          </td></tr></table>
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/500415/006/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="A team in the Micro-Tel workshop (does anyone know the names?)" data-balloon-length="large">
+<a href="img/500415/006/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="A team in the Micro-Tel workshop (does anyone know the names?)" data-balloon-length="large">
+            <img src="img/500415/006/full.jpg"
+             style="
+            "
+             align="center"
+             width="618"
+             vspace="4"
+             alt="A team in the Micro-Tel workshop (does anyone know the names?)"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+            <div style="margin-top: 4px; margin-bottom: 4px;">
+            <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+            <center><a href="img/500415/006/full.jpg">Colleagues at Micro-Tel &mdash; does anyone know their names?</a></center>
+            </font>
+            </div>
+          </td></tr></table>
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=owners></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Names and owners</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+        <table width=100% cellspacing=0 cellpadding=0>
+          <tr>
+          <td width=100%>
+          <table
+           class="table"
+           width=100% border=0 cellspacing=1 cellpadding=2 bgcolor=#FFFFFF>
+            <tr>
+<td bgcolor="#E0E0E0" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Year</font></td></b><td bgcolor="#E0E0E0" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Owner</font></td></b><td bgcolor="#E0E0E0" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Country</font></td></b><td bgcolor="#E0E0E0" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Name</font></td></b>            </tr>
+            <tr>
+            <td bgcolor=#FFFFFF colspan=4><font size=-1>
+            </font></td>
+            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1962</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Richard Finke</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span></font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Micro-Tel Corporation</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1972</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Richard Finke, Bill Richardson</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span></font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Micro-Tel Inc.</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1978</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Adams-Russell</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span></font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Micro-Tel</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1981</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Adams-Russell</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span></font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Adams-Russell, Micro-Tel Division</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1989</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>M/A-COM</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span></font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Micro-Tel</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1999</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>M/A-COM</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span></font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>M/A-COM SIGINT Products</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1999</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Tyco International</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><span class="short tooltip-red" data-balloon-pos="up" aria-label="Switzerland">CH</span></font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Tyco SIGINT Products</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2006</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Tyco Electronics</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span></font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Tyco SIGINT Products</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2008</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Cobham</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><span class="short tooltip-red" data-balloon-pos="up" aria-label="United Kingdom (Great Britain)">UK</span></font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>CDES SIGINT</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2020</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Advent International</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span></font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Cobham Advanced Electronic Solutions</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2021</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>CAES</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span></font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>CAES</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2024</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Honeywell</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span></font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>CAES</font></td>            </tr>
+          </table>
+<div style="height: 32px;"></div>        </td>
+        </tr></table>
+        <a name=timeline></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Timeline</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The timeline below shows the history of Micro-Tel and its products
+from its foundation by Dick Finke in 1962, through various mergers
+and takeovers, to the present day. As a result of the mergers and
+takeovers, the ownership and name of the company changed a number
+of times, as listed in the table above.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/microtel_timeline.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=adr></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Addresses</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+<li><font color=#F52E00>Micro-Tel Corporation</font><br />
+1406 Shoemaker Road, Baltimore, Maryland 21209, USA
+            <p />
+<li><font color=#F52E00>Adams-Russel, Micro-Tel Division</font><br />
+10713 Gilroy Road, Hunt Valley, MD 21031-1336, USA<br />
+Phone 301-771-0077
+            <p />
+<li><font color=#F52E00>M/A-COM Sigint Products</font><br />
+10713 Gilroy Road, Hunt Valley, MD 21031-1336, USA<br />
+Phone (410) 329-7915
+            <p />
+            <li><a href="http://www.cobham.com/" target="_blank">Cobham Defence Electronics</a><br />
+Business Unit CDES SIGINT<br />
+10713 Gilroy Road, Hunt Valley, MD 21031, USA<br />
+Phone +1 (410) 329 7900
+            <p />
+            <li><a href="https://caes.com" target="_blank">CAES by Honeywell</a><br />
+2121 Crystal Drive<br />
+Arlington, VA 22202, USA<br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+            <li><a href="http://articles.baltimoresun.com/1992-12-06/news/1992341061_1_war_ii-carey-iii-delray-beach">The Baltimore Sun, <i>Richard S. Finke, Electrical Engineer, Orbituary</i></a><br />
+6 December 1992. Retrieved April 2013.
+            <p />
+            <a name="ref_2"></a>
+            <li><a href="http://www.bizjournals.com/baltimore/stories/1999/11/08/focus1.html?page=all">Roger Hughlett, <i>MicroTel, Hunt Valley grow in stature together</i></a><br />
+Baltimore Business Journal, 5 November 1999. Retrieved April 2013.
+            <p />
+            <a name="ref_3"></a>
+            <li><a href="http://www.telecompaper.com/news/macom-sigint-products-wins-microwave-receiver-deal--183928">Telecompaper, <i>M/A-COM, SIGINT Products winds Microwave Receiver Deal</i></a><br />
+Retrieved April 2013.
+            <p />
+            <a name="ref_4"></a>
+            <li><a href="http://www1.futureelectronics.com/doc/M-A-COM/DM1-18A.pdf">Tyco Electronics, <i>RF & Microwave Product Solutions</i></a><br />
+Products brochure pp. 107, June 2006. Retrieved April 2013.
+            <p />
+            <a name="ref_5"></a>
+            <li><a href="http://www.bultronic.net/documents/presentations/overview_MACOM.pdf">Tyco Electronics, <i>M/A-COM Tyco Electronics, An overview</i></a><br />
+29 December 2006. Retrieved April 2013.
+            <p />
+            <a name="ref_6"></a>
+            <li><a href="http://www.sec.gov/ligitation/complaints/2012/comp-pr2012-196.pdf">Securities and Exchange Commission, <i>Complaints against Tyco International Ltd (Switzerland)</i></a><br />
+24 September 2012. Retrieved April 2013.
+            <p />
+            <a name="ref_7"></a>
+            <li><a href="http://www.fcpaprofessor.com/in-depth-on-the-tyco-enforcement-action">FCPA Professor, <i>In Depth On The Tyco Enforcement Action</i></a><br />
+26 September 2012. Retrieved April 2013.
+            <p />
+            <a name="ref_8"></a>
+            <li><a href="http://www.cobhaminvestors.com/news-item?item=64220498565397">Cobham News, <i>Cobham PLC acquires M/A-COM from Tyco</i></a><br />
+13 May 2008. Retrieved April 2013.
+            <p />
+            <a name="ref_9"></a>
+            <li><a href="http://www.cobham.com/about-cobham/defence-systems/about-us/defence-electronics/hunt-valley.aspx">Cobham website, <i>Cobham Defence Electronics - Hunt Valley</i></a><br />
+Retrieved April 2013.
+            <p />
+            <a name="ref_10"></a>
+            <li><a href="img/500415/000/full.jpg">J. Pat Carter, <i>Photograph of Micro-Tel factory</i></a><br />
+21 July 1980. Published in the Evening Sun (Baltimore, US).<br />
+<small>Crypto Museum #301707.</small>
+            <p />
+            <a name="ref_11"></a>
+            <li><a href="img/500415/001/full.jpg">Unknown artist, <i>Artist's impression of new Micro-Tel building in Hunt Valley</i></a><br />
+McCormick Properties Inc. Design Builders. Gaudreau Inc. Architects Planners Engineers.<br />
+24 September 1982. Published in the Evening Sun (Baltimore, US).<br />
+<small>Crypto Museum #301708.</small>
+            <p />
+            <a name="ref_12"></a>
+            <li><a href="https://en.wikipedia.org/wiki/Cobham_Limited" target="_blank">Wikipedia, <i>Cobham Limited</i></a><br />
+Visited 13 March 2025.
+            <p />
+            <a name="ref_13"></a>
+            <li><a href="https://caes.com/about/history" target="_blank">CAES History (About us)</a><br />
+Visited 13 March 2025.
+            <p />
+            <a name="ref_14"></a>
+            <li><a href="https://caes.com/legal/privacy" target="_blank">CAES/Honeywell Privacy Notice</a><br />
+Visited 13 March 2025.
+            <p />
+            <a name="ref_15"></a>
+            <li><a href="https://www.honeywell.com/us/en/press/2024/09/honeywell-completes-acquisition-of-caes"><i>Honeywell completes Acquisition of CAES</i></a><br />
+Honeywell press release, 4 September 2024.
+            <p />
+            <a name="ref_16"></a>
+<li><font color=#F52E00>Jody Markle, Photo impressions from the estate of his father Fred Markle</font><br />
+Digitally enhanced by Crypto Museum (2025).<br />
+Crypto Museum, 11 March 2025.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../../df/microtel/index.htm">Micro-Tel receivers on this website</a><br />
+            <li><a href="../index.htm">Index of manufacturers</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Last changed: Saturday, 15 March 2025 - 11:42 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../index.htm"><img src=../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

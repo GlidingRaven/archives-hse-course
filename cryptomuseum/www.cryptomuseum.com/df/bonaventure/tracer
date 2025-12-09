@@ -1,0 +1,1592 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>Tracer SCD</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cryptomuseum">
+    <meta name="twitter:url" content="https://www.cryptomuseum.com/df/bonaventure/tracer/index.htm">
+    <meta name="twitter:image" content="https://www.cryptomuseum.com/df/bonaventure/tracer/img/304032/002/full.jpg">
+    <meta name="twitter:title" content="Tracer scd auto">
+    <meta name="twitter:description" content="Fully automatic bug tracer from 1978. The device is basicalle a copy of the Scanlock 3.">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of model numbers and names" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Radio Direction Finders" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/df.htm';" >DF</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Radio Monitoring Equipment" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/mon.htm';" >Monitoring</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../df/receivers.htm';" >Surveillance</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Technical Surveillance and Countermeasures" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../../df/tscm.htm';" >TSCM</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../df/antennas.htm';" >Antennas</div>
+          <div class="but sub" onClick="location.href='../../../df/scanners.htm';" >Scanners</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="wire tapping" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/wired.htm';" >Wired</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../df/tempest.htm';" >TEMPEST</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Soviet Union" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/ussr.htm';" >USSR</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../../df/mason/index.htm';" >Mason</div>
+          <div class="but sub" onClick="location.href='../../../df/microtel/index.htm';" >Microtel</div>
+          <div class="but sub" onClick="location.href='../../../df/minilock/index.htm';" >Minilock</div>
+          <div class="but sub" onClick="location.href='../../../df/rei/index.htm';" >REI</div>
+          <div class="but sub" onClick="location.href='../../../df/rft/index.htm';" >RFT</div>
+          <div class="but sub" onClick="location.href='../../../df/rs/index.htm';" >Rohde & Schwarz</div>
+          <div class="but sub" onClick="location.href='../../../df/scanlock/index.htm';" >Scanlock</div>
+          <div class="but sub" onClick="location.href='../../../df/telefunken/index.htm';" >Telefunken</div>
+          <div class="but sub" onClick="location.href='../../../df/wj/index.htm';" >Watkins-Johnson</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../../tscm.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Technical Surveillance and Counter Measures" data-balloon-length="large" class="key">TSCM</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>TRACER scd auto</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Automatic bug finder</b>
+<br />
+<br />
+<b>TRACER scd auto</b>, is a portable <a href="../../tscm.htm"><span data-balloon-pos="up" aria-label="More about: automatic scanning receiver">automatic scanning receiver</span></a>
+for the detection of <a href="../../../covert/bugs"><span data-balloon-pos="up" aria-label="More about: covert listening devices (bugs)">covert listening devices (bugs)</span></a>,
+introduced in 1978 by Bonaventure International Security in London (<span class="short tooltip-red" data-balloon-pos="up" aria-label="United Kingdom (Great Britain)">UK</span>).
+The device was intended for tracing <a href="../../../covert/bugs"><span data-balloon-pos="up" aria-label="More about: bugs">bugs</span></a> that operate on
+frequencies between 10 MHz and 1.5 GHz, and is very similar to the
+contemporary (original) <a href="../../scanlock/mark3"><span data-balloon-pos="up" aria-label="More about: Scanlock Mark 3">Scanlock Mark 3</span></a>, made by
+competitor <a href="../../scanlock"><span data-balloon-pos="up" aria-label="More about: Audiotel">Audiotel</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The device has the same outer dimensions as the
+<a href="../../scanlock/mark3"><span data-balloon-pos="up" aria-label="More about: Scanlock Mark 3">Scanlock Mark 3</span></a> (1976) and the
+<a href="../../scanlock/markvb"><span data-balloon-pos="up" aria-label="More about: Scanlock Mark V">Scanlock Mark V</span></a> (1978) and is based on the same
+principle: the <i><a href="#block"><span data-balloon-pos="up" aria-label="Jump to: staircase receiver">staircase receiver</span></a></i>, also known as an
+<i><a href="#block"><span data-balloon-pos="up" aria-label="Jump to: harmonics receiver">harmonics receiver</span></a></i>, invented in 1962
+by <a href="../../../people/tracey/lee.htm"><span data-balloon-pos="up" aria-label="More about: Lee Tracey">Lee Tracey</span></a> (<span class="short tooltip-red" data-balloon-pos="up" aria-label="United Kingdom (Great Britain)">UK</span>).
+<br />
+<br />
+The unit automatically locks onto the strongest <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> signal in its
+vicinity, which is usually the <a href="../../../covert/bugs"><span data-balloon-pos="up" aria-label="More about: bug">bug</span></a>.
+Within seconds, it can detect <span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span> or <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Modulation">FM</span> and even subcarrier-modulated
+<a href="../../../covert/bugs"><span data-balloon-pos="up" aria-label="More about: bugs">bugs</span></a> (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Subcarrier modulated bugs">SC</span>). The device was supplied in a
+<a href="img/304032/005/full.jpg"><span data-balloon-pos="up" aria-label="More about: black leather carrying case with ...">black leather carrying case with shoulder strap</span></a>,
+and was powered by internal batteries,
+or directly from the local <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> mains.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304032/002/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Tracer scd auto - automatic bug finder">
+<a href="img/304032/002/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Tracer scd auto - automatic bug finder">
+            <img src="img/304032/002/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Tracer scd auto - automatic bug finder"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The internal <span class="short tooltip-red" data-balloon-pos="up" aria-label="Nickel-Cadmium (rechargeable batteries)">NiCd</span> batteries are automatically charged when the device
+is connected to the mains.
+Signals can be picked up with the built-in telescopic antenna, or by
+an external antenna that is
+<a href="img/304032/007/full.jpg"><span data-balloon-pos="up" aria-label="More about: connected to the miniature antenna ...">connected to the miniature antenna socket</span></a>
+at the front panel. Judging the <a href="#int"><span data-balloon-pos="up" aria-label="Jump to: interior">interior</span></a>, the device is more or less
+a copy of the <a href="../../scanlock/mark3"><span data-balloon-pos="up" aria-label="More about: Scanlock Mark 3">Scanlock Mark 3</span></a>, for which
+<a href="../../../people/tracey/lee.htm"><span data-balloon-pos="up" aria-label="More about: Lee Tracey">Lee Tracey</span></a> had failed to register a patent.
+<br />
+<br />
+The device was developed and marketed by Bonaventure in London,
+a company &ndash; led by Mr. John Herbert &ndash; that was widely known for its
+portfolio of counter-terrorism devices, such as electronic stethoscopes
+and optical probes. TRACER was part of Bonaventure's portfolio
+of equipment for
+<a href="../../tscm.htm"><span data-balloon-pos="up" aria-label="More about: Technical Surveillance and ...">Technical Surveillance and Counter-Measures (TSCM)</span></a>.
+It was also sold by other companies, such as Mercks and Hollander.
+According to a label found inside the unit, the device shown here
+once belonged to  Brent Electronics & Communications Ltd. in Cleethorpes
+(Lincolnshire, <span class="short tooltip-red" data-balloon-pos="up" aria-label="United Kingdom (Great Britain)">UK</span>), at the time a supplier of surveillance equipment
+to the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Ministry of Defense (UK)">MoD</span>. Brent Electronics was dissolved in 2009.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="In leather carrying case">          <img src="img/304032/005/thumbnail.jpg"
+           alt="In leather carrying case"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304032/005"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TRACER operated from within the carrying case">          <img src="img/304032/006/thumbnail.jpg"
+           alt="TRACER operated from within the carrying case"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304032/006"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Tracer scd auto - straight up">          <img src="img/304032/000/thumbnail.jpg"
+           alt="Tracer scd auto - straight up"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304032/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Control panel">          <img src="img/304032/001/thumbnail.jpg"
+           alt="Control panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304032/001"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Tracer scd auto - automatic bug finder">          <img src="img/304032/002/thumbnail.jpg"
+           alt="Tracer scd auto - automatic bug finder"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304032/002"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel">          <img src="img/304032/003/thumbnail.jpg"
+           alt="Front panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304032/003"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Mains power socket and fuse">          <img src="img/304032/004/thumbnail.jpg"
+           alt="Mains power socket and fuse"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304032/004"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Connecting an external antenna">          <img src="img/304032/007/thumbnail.jpg"
+           alt="Connecting an external antenna"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304032/007"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304032/005/full.jpg" alt="In leather carrying case">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304032/006/full.jpg" alt="TRACER operated from within the carrying case">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304032/000/full.jpg" alt="Tracer scd auto - straight up">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304032/001/full.jpg" alt="Control panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304032/002/full.jpg" alt="Tracer scd auto - automatic bug finder">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304032/003/full.jpg" alt="Front panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304032/004/full.jpg" alt="Mains power socket and fuse">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304032/007/full.jpg" alt="Connecting an external antenna">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image below shows the clear and well-arranged controls and readouts at
+the front panel of the device. At the left is the integrated telescopic
+antenna. At the right is the field strength meter. The device is immediately
+ready after switching it on, and locks as soon as it detects a signal
+that exceeds the threshold level, in which case the
+signal level will be visible on the meter.
+The tele&shy;scopic antenna does not have a knee-joint, which implies that
+it <a href="img/304032/000/full.jpg"><span data-balloon-pos="up" aria-label="More about: had to be used straight up">had to be used straight up</span></a>.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304032/003/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304032/003/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/tracer_ext.png"
+             style="
+            "
+             align="center"
+             width="618px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+In most cases, the use of the built-in telescopic antenna will be sufficient,
+but in cases where the bug is difficult to find, a separate 'magic wand'
+antenna could be connected to the
+<a href="img/304032/007/full.jpg"><span data-balloon-pos="up" aria-label="More about: external input at the top left">external input at the top left</span></a>.
+In addition, locating a bug is assisted by SONIC LOOP and LOCATE,
+two features that have been copied straight from the
+<a href="../../scanlock/mark3"><span data-balloon-pos="up" aria-label="More about: Scanlock Mark 3">Scanlock Mark 3</span></a>.
+The device is only suitable for fully automatic scanning and does not have a
+manual mode, like the later <a href="../../scanlock/markvb"><span data-balloon-pos="up" aria-label="More about: Audiotel Scanlock Mark VB">Audiotel Scanlock Mark VB</span></a>.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=mode></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Modes of operation</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <b>TRACER scd auto</b> can be used in a variety of modes and with
+<a href="#mod"><span data-balloon-pos="up" aria-label="Jump to: various types of modulation">various types of modulation</span></a>,
+depending on the type of bug, the method of searching
+and the time available to do the sweep. The following modes are available:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+<li><font color=#F52E00>Automatic mode (AM/FM)</font><br />
+In this mode, the device searches fully automatically for bugs in the
+room and locks itself onto the strongest signal that it finds, with a lock
+sensitivity of 1mV up to 1.5 GHz. In earas with strong broadcast transmitters,
+it may be necessary to move the receiver around the room whilst searching.
+            <p />
+<li><font color=#F52E00>Sonic Loop</font><br />
+In this mode, the device emits a continuous (audible) tone, that changes
+to an intermittent tone when the receiver detects itself (i.e. if it hears
+its tone through the bug).
+This mode should be used as a last resort, as it is likely to alert the
+eavesdropping party of the fact that a bug-sweep is taking place.
+            <p />
+<li><font color=#F52E00>Locate mode</font><br />
+When the LOCATE button is depressed, the device provides an audible
+tone with a pitch that is proportional to the strength of the acquired
+signal. Starting off with a low frequency ticking sound, the pitch gets
+higher when approaching the bug. In this mode, the use of a pair of
+headphones is advised, as otherwise the eavesdropping party might become
+aware of the fact that a bug-sweep is taking place.
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=mod></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Modulation types</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>TRACER scd auto</b> is suitable for reception of the following types
+of modulation:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+<li><font color=#F52E00>AM</font><br />
+This is for bugs that use Amplitude Modulation (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span>).
+Not many bugs are of this type. It is generally used with low-frequency
+transmitters (below 80 MHz).
+            <p />
+<li><font color=#F52E00>FM</font><br />
+This is for the most common type of bugs that use
+Frequency Modulation (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Modulation">FM</span>). These bugs generally operate at frequencies
+from 80 MHz onwards. Most of the cheaper commercial and homemade bugs
+are of this type.
+            <p />
+<li><font color=#F52E00>Subcarrier</font><br />
+With some of the more sophisticated bugs, the audio is modulated onto
+a non-audible subcarrier. As a result, the bug appears to be sending a
+silent carrier (or hum or noise), whereas in reality it carries the
+sound it picks up in the target area. In this mode, the device automatically
+detects and locks onto the bug's subcarrier frequency as well.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../../covert/bugs/masking/index.htm#sc">More information</a>
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=search></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Searching for bugs</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Operation of the device is remarkably simple. All you need to do
+when first scanning a room for potential bugs (sweeping) is to ensure that
+all buttons are up (out) when the unit is switched on. Next press the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Modulation">FM</span>
+button to search for the most common type of <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Modulation">FM</span> bugs. The device will now
+automatically lock onto the strongest signal in its vicinity, as illustrated
+below:
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="../../scanlock/markvb/svg/area.svg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+With the receiver in location <b>A</b>, it will probably lock immediately
+onto a strong broadcast station that is nearby. Such broadcast stations are
+generally much stronger than a potential bug in the room. When the TRACER
+is moved around the room however, it will continue to scan and lock onto
+the strongest signal. When the receiver is in location <b>B</b> it will
+intermittently switch between the broadcast station and the bug, but when
+it is moved closer to the bug (<b>C</b>) the RF signal from the bug will dominate
+over the broadcast station and the bug will be heard.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=block></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Block diagram</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <b>TRACER scd auto</b> is based on
+<a href="../../../people/tracey/lee.htm"><span data-balloon-pos="up" aria-label="More about: Lee Tracey">Lee Tracey</span></a>'s design of the <b>Scanlock</b> locking
+staircase receiver of 1962. As Scanlock was the first locking receiver
+of this type that was commercially marketed, it is generally
+referred to as <i>the original Scanlock</i>. The device uses the following
+principle:
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/tracer_block.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+There is no preselection other than a filter that allows only frequencies
+above 10 MHz to pass by. The 10 MHz output of the first local oscillator
+is fed to a so-called comb generator. This is effectively a non-linear
+junction (i.e. a diode) that causes harmonics of the fundamental frequency
+to be generated. It produces signals at 10 MHz, 20 MHz, 30 MHz,
+40 MHz, etc.
+<br />
+<br />
+The output of the comb generator is then mixed directly with the antenna
+signal, resulting in many frequency segments of 10 MHz each, being superimposed
+on top of each other. The problem of sweeping the entire spectrum between
+10 MHz and 4 GHz has now been reduced to sweeping just a single small segement
+of 10 MHz, by sweeping all superimposed or stacked segments simultaneously.
+The output of the 2nd IF stage is fed to three demodulators (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Modulation">FM</span> and
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Subcarrier modulated bugs">SC</span>), By using a sweeping oscillator in the 2nd <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> stage, the resulting
+10 MHz segments can be swept in less than a second. The receiver locks onto
+the strongest signal found.
+<br />
+<br />
+In Sonic Loop mode (SL), the speaker produces a continuous 1800 Hz
+tone. The output of all demodulators (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Modulation">FM</span>, and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Subcarrier modulated bugs">SC</span>) is checked
+for this tone by applying it to a sharp 1800 Hz filter. When this
+particular frequency is detected, the tone is changed into an
+intermitted one.
+<br />
+<br />
+Note that frequencies below 10 MHz are not covered by this receiver.
+Although it is unlikely that bugs operate below 10 MHz,
+it is possible to use these low frequencies, e.g. when using them as a
+carrier. The later <a href="../../scanlock/2000/index.htm"><span data-balloon-pos="up" aria-label="More about: Scanlock 2000">Scanlock 2000</span></a>
+contained a extra detector to find
+mains carrier bugs (MC) and the <a href="../../scanlock/ecm/index.htm"><span data-balloon-pos="up" aria-label="More about: Scanlock ECM">Scanlock ECM</span></a>
+even had a separate <span class="short tooltip-red" data-balloon-pos="up" aria-label="Very Low Frequency">VLF</span> receiver to cover the 10 kHz to 10 MHz section.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=int></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Interior</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The interior of the <b>TRACER scd auto</b> can be accessed by removing two screws
+from the bottom of the case, after which the font panel can be extracted from
+the case shell and the interior is exposed. All internal parts are fitted
+to an aluminium frame that is fitted to the front panel.
+<br />
+<br />
+Although the circuit appears to have been copied from the
+<a href="../../scanlock/markvb"><span data-balloon-pos="up" aria-label="More about: Scanlock Mark VB">Scanlock Mark VB</span></a>, the layout of the printed
+circuit board (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>) is much cleaner and is silk-screen printed
+with the IDs of the com&shy;
+ponents.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+<li><font color=#F52E00>Nico van Dongen, Bonaventure TRACER scd auto - THANKS !</font><br />
+Crypto Museum, donated April 2023.
+            <p />
+            <a name="ref_2"></a>
+<li><font color=#F52E00>Michael Dewar, <i>Weapons and Equipment of Counter-Terrorism</i></font><br />
+Arms and Armour Press Ltd., 1987. ISBN 0-85368-841-9.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../../scanlock/mark3">Scanlock Mark 3</a><br />
+            <li><a href="../../scanlock/markvb">Scanlock Mark VB</a><br />
+            <li><a href="../../../people/tracey/lee.htm">Lee Tracey, the inventor</a><br />
+            <li><a href="../../tscm.htm">Other TSCM equipment</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Sunday 30 April 2023. Last changed: Tuesday, 25 March 2025 - 10:59 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

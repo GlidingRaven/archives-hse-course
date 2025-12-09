@@ -1,0 +1,1701 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>Burst Encoders</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="Keywords" content="burst encoders, high speed transmission, snelzender, kurzsignalgeber, burst transmitters, high-speed transmitter">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../index.htm"><img src="../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but sub first sel" onClick="location.href='../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of high-speed burst transmitters" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../burst/list.htm';" >Index</div>
+</div>
+          <div class="but sub" onClick="location.href='../spy/r350/burst.htm';" >R-350</div>
+          <div class="but sub" onClick="location.href='../spy/r353/burst.htm';" >R-353</div>
+          <div class="but sub" onClick="location.href='../spy/r354/index.htm#burst';" >R-354</div>
+          <div class="but sub" onClick="location.href='../burst/r014d/index.htm';" >R-014D</div>
+          <div class="but sub" onClick="location.href='../burst/dkms/index.htm';" >DKM-S</div>
+          <div class="but sub" onClick="location.href='../burst/rt3/index.htm';" >RT-3</div>
+          <div class="but sub" onClick="location.href='../burst/gra71/index.htm';" >CK-8 / GRA-71</div>
+          <div class="but sub" onClick="location.href='../burst/speicher/index.htm';" >Speicher</div>
+          <div class="but sub" onClick="location.href='../burst/mmp/index.htm';" >MMP</div>
+          <div class="but sub" onClick="location.href='../burst/mg80/index.htm';" >MG-80</div>
+          <div class="but sub" onClick="location.href='../burst/ma4230/index.htm';" >MA-4230</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../index.htm"><img src="../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Burst encoders</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>High-speed data encoders</b>
+<br />
+<br />
+During <a href="../spy/glossary.htm#ww2"><span data-balloon-pos="up" aria-label="More about: WWII">WWII</span></a>
+and also during the <a href="../spy/glossary.htm#cold_war"><span data-balloon-pos="up" aria-label="More about: Cold War">Cold War</span></a>,
+secret agents operating on enemy territory
+commonly used <a href="#../spy/index.htm"><span data-balloon-pos="up" aria-label="Jump to: clandestine transmitters">clandestine transmitters</span></a>
+to send messages to the <b>spy centre</b> in their home country, via the
+short-wave radio bands (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Short Wave">SW</span>
+or <span class="short tooltip-red" data-balloon-pos="up" aria-label="High Frequency">HF</span>), using
+<a href="../radio/morse/index.htm"><span data-balloon-pos="up" aria-label="More about: morse code">morse code</span></a>.
+As the enemy was continuously trying to intercept such messages
+and determine the location of the rogue transmitter by means of
+<a href="../df/df.htm"><span data-balloon-pos="up" aria-label="More about: Radio Direction Finding (RDF)">Radio Direction Finding (RDF)</span></a>,
+it was necessary to be on-the-air
+as little and as short as possible.
+This was also necessary to make effective use of the limited
+frequency spectrum that was available.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Over the years, different systems were developed to reduce the
+length of a message.
+One method that was commonly used, was to replace long
+sentences and frequently-used expressions by a predetermined code.
+Examples of such <i>short messages</i> are the international
+<a href="../ref/qcodes"><span data-balloon-pos="up" aria-label="More about: Q-codes">Q-codes</span></a>
+and the use of various military and civil
+<a href="../crypto/codebook/index.htm"><span data-balloon-pos="up" aria-label="More about: code books">code books</span></a>.
+<br />
+<br />
+As the <a href="../spy/glossary.htm#cold_war"><span data-balloon-pos="up" aria-label="More about: Cold War">Cold War</span></a>
+progressed, the need to send more and longer messages
+gradually increased and new methods had to be devised to avoid detection.
+This resulted in the development of high-speed morse keyers
+and <b>Burst Encoders</b>.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Burst encoder with various tape cassettes" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Burst encoder with various tape cassettes" class="tooltip-red">
+            <img src="../spy/r353/img/300470/061/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Burst encoder with various tape cassettes"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+A Burst Encoder is a device that allows messages to be stored
+on a recording medium first. The pre-recorded message is then
+sent over the air at very high speed using a <i>high-speed keyer</i>.
+A wide range of solutions was developed for this, using a variety of media,
+such as paper, audio tape, metal tape, mechanical drums, rods,
+photographic film and finally electronic memory chips.
+<br />
+<br />
+Messages that are sent this way often sound like a short tone
+or <i>burst</i>, which is why it is called a <i>Burst Transmission</i>.
+This part of the website describes a number of solutions that were
+developed for high-speed burst transmission of messages.
+Use the buttons on the left, check the
+<a href="list.htm"><span data-balloon-pos="up" aria-label="More about: index of burst encoders">index of burst encoders</span></a>, or click any of the thumbnails below
+for more information on a particular device.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="list.htm">Index of burst encoders</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=burst></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Burst encoders on this website
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=squirt/index.htm>
+<div  data-balloon-pos="up" aria-label="SQUIRT WWII rod-based burst encoder">          <img src="squirt/img/squirt_thumb1.jpg"
+           alt="SQUIRT WWII rod-based burst encoder"
+           border="0" width=74 height=50
+           style="
+           opacity: 0.4;
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=squirt/index.htm>Squirt</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ksg/index.htm>
+<div  data-balloon-pos="up" aria-label="Kurzsignalgeber (KSG) developed by the BND for the KSG-Sender" data-balloon-length="large">          <img src="ksg/img/302039/041/thumbnail.jpg"
+           alt="Kurzsignalgeber (KSG) developed by the BND for the KSG-Sender"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ksg/index.htm>KSG</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=gra71/index.htm>
+<div  data-balloon-pos="up" aria-label="CIA coder/keyer CK-8">          <img src="gra71/img/300079/096/thumbnail.jpg"
+           alt="CIA coder/keyer CK-8"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=gra71/index.htm>CK-8</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=gra71/index.htm#mil>
+<div  data-balloon-pos="up" aria-label="USA: AN/GRA-71 external automatic tape-based burst encoder" data-balloon-length="large">          <img src="gra71/img/300653/023/thumbnail.jpg"
+           alt="USA: AN/GRA-71 external automatic tape-based burst encoder"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=gra71/index.htm#mil>GRA-71</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ma4010/index.htm>
+<div  data-balloon-pos="up" aria-label="Racal MA-4010/8 tape-based burst encoder">          <img src="ma4010/img/301834/001/thumbnail.jpg"
+           alt="Racal MA-4010/8 tape-based burst encoder"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ma4010/index.htm>MA-4010</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=rt3/index.htm>
+<div  data-balloon-pos="up" aria-label="Europe: Manual (mechanical) burst encoder">          <img src="rt3/img/300081/001/thumbnail.jpg"
+           alt="Europe: Manual (mechanical) burst encoder"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=rt3/index.htm>RT3</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=speicher/index.htm>
+<div  data-balloon-pos="up" aria-label="Europe: Digital burst encoder used by West-European Gladio Forces" data-balloon-length="large">          <img src="speicher/img/302081/070/thumbnail.jpg"
+           alt="Europe: Digital burst encoder used by West-European Gladio Forces"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=speicher/index.htm>Speicher</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=mmp/index.htm>
+<div  data-balloon-pos="up" aria-label="Europe: fully electronic hight-speed burst encoder (1980)" data-balloon-length="large">          <img src="mmp/img/301698/006/thumbnail.jpg"
+           alt="Europe: fully electronic hight-speed burst encoder (1980)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mmp/index.htm>MMP</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../spy/ee2/index.htm#disc>
+<div  data-balloon-pos="up" aria-label="French burst transmitter with metal tape and nail polish (name unknown)" data-balloon-length="large">          <img src="../spy/ee2/img/EE_burst_thumb.jpg"
+           alt="French burst transmitter with metal tape and nail polish (name unknown)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../spy/ee2/index.htm#disc>French</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../crypto/mel/ba1304/index.htm>
+<div  data-balloon-pos="up" aria-label="UK (SAS): crypto burst transmitter for the PRC-319 radio" data-balloon-length="large">          <img src="../../../crypto/mel/ba1304/img/300867/011/thumbnail.jpg"
+           alt="UK (SAS): crypto burst transmitter for the PRC-319 radio"
+           border="0"
+           style="
+           max-height: 50px;
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../crypto/mel/ba1304/index.htm>EMU</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../crypto/mel/emu_a>
+<div  data-balloon-pos="up" aria-label="EMU Alpha - Alphanumeric version of the BA-1304 (EMU)" data-balloon-length="large">          <img src="../crypto/mel/emu_a/img/EMUa_thumb.jpg"
+           alt="EMU Alpha - Alphanumeric version of the BA-1304 (EMU)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../crypto/mel/emu_a>EMU &alpha;</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../crypto/nokia/parsa/index.htm>
+<div  data-balloon-pos="up" aria-label="Nokia Sanla - Sanomalaite">          <img src="../crypto/philips/ua8295/img/303753/015/thumbnail.jpg"
+           alt="Nokia Sanla - Sanomalaite"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../crypto/nokia/parsa/index.htm>Sanla</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../crypto/nokia/parsa/index.htm>
+<div  data-balloon-pos="up" aria-label="Nokia Parsa - Partiosanomalaite">          <img src="../crypto/nokia/parsa/img/300722/034/thumbnail.jpg"
+           alt="Nokia Parsa - Partiosanomalaite"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../crypto/nokia/parsa/index.htm>Parsa</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../crypto/philips/ua8295>
+<div  data-balloon-pos="up" aria-label="Philips UA-8295 short-burst terminal with encryption" data-balloon-length="large">          <img src="../crypto/philips/ua8295/img/303753/015/thumbnail.jpg"
+           alt="Philips UA-8295 short-burst terminal with encryption"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../crypto/philips/ua8295>UA-8295</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ma4230/index.htm>
+<div  data-balloon-pos="up" aria-label="Racal MA-4230 morse encoder and MA-4231 morse decoder" data-balloon-length="large">          <img src="ma4230/img/301073/000/thumbnail.jpg"
+           alt="Racal MA-4230 morse encoder and MA-4231 morse decoder"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ma4230/index.htm>MA-4230</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=mg80/index.htm>
+<div  data-balloon-pos="up" aria-label="DDR: Digital burst encoder built in the DDR (East-Germany) during the Cold War" data-balloon-length="large">          <img src="mg80/img/300594/002/thumbnail.jpg"
+           alt="DDR: Digital burst encoder built in the DDR (East-Germany) during the Cold War"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mg80/index.htm>MG-80</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../crypto/racal/ma4450/index.htm>
+<div  data-balloon-pos="up" aria-label="Racal MA-4450 Message Entry and Read-Out Device (MEROD)" data-balloon-length="large">          <img src="../crypto/racal/ma4450/img/301109/010/thumbnail.jpg"
+           alt="Racal MA-4450 Message Entry and Read-Out Device (MEROD)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../crypto/racal/ma4450/index.htm>MEROD</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=mesic/index.htm>
+<div  data-balloon-pos="up" aria-label="Czechoslovakian Mesic tape-based morse burst encoder (1966)" data-balloon-length="large">          <img src="mesic/img/302166/000/thumbnail.jpg"
+           alt="Czechoslovakian Mesic tape-based morse burst encoder (1966)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mesic/index.htm>M&#283;sic</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=stanze/index.htm>
+<div  data-balloon-pos="up" aria-label="East-German manually operated tape puncher Stanze (codename: Main')" data-balloon-length="large">          <img src="stanze/img/302973/038/thumbnail.jpg"
+           alt="East-German manually operated tape puncher Stanze (codename: Main')"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=stanze/index.htm>MAIN</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=hsg/index.htm>
+<div  data-balloon-pos="up" aria-label="East-German Handschnellgeber (manual fast keyer)">          <img src="hsg/img/302973/225/thumbnail.jpg"
+           alt="East-German Handschnellgeber (manual fast keyer)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=hsg/index.htm>HSG</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../radio/spider/med.htm>
+<div  data-balloon-pos="up" aria-label="Message Exchange Device (MED)">          <img src="../radio/spider/img/302994/000/thumbnail.jpg"
+           alt="Message Exchange Device (MED)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../radio/spider/med.htm>MED</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../crypto/ant/tcu7000>
+<div  data-balloon-pos="up" aria-label="TCU-7000 controller and message encryptor for HRM-7000 (HF-7000)" data-balloon-length="large">          <img src="../crypto/ant/tcu7000/img/304223/024/thumbnail.jpg"
+           alt="TCU-7000 controller and message encryptor for HRM-7000 (HF-7000)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../crypto/ant/tcu7000>TCU-7000</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <a name=ussr></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          USSR
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../spy/r350/burst.htm>
+<div  data-balloon-pos="up" aria-label="R-350 manual film-based burst encoder">          <img src="../spy/r350/img/300160/003/thumbnail.jpg"
+           alt="R-350 manual film-based burst encoder"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../spy/r350/burst.htm>R-350<br />Electron</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../spy/r353/burst.htm>
+<div  data-balloon-pos="up" aria-label="R-353 automatic metal-tape-based burst encoder">          <img src="../spy/r353/img/300470/054/thumbnail.jpg"
+           alt="R-353 automatic metal-tape-based burst encoder"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../spy/r353/burst.htm>R-353<br />Proton</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../spy/r354/index.htm>
+<div  data-balloon-pos="up" aria-label="R-354 automatic film-based burst encoder">          <img src="../spy/r354/img/300074/003/thumbnail.jpg"
+           alt="R-354 automatic film-based burst encoder"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../spy/r354/index.htm>R-354<br />Schmel</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=r014d/index.htm>
+<div  data-balloon-pos="up" aria-label="R-014D, the first fully electronic burst encoder developed by the USSR" data-balloon-length="large">          <img src="r014d/img/300154/015/thumbnail.jpg"
+           alt="R-014D, the first fully electronic burst encoder developed by the USSR"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=r014d/index.htm>R-014D<br />Datchik</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../spy/r394/k.htm>
+<div  data-balloon-pos="up" aria-label="R-394K built-in digital burst encoder">          <img src="../spy/r394/img/301492/038/thumbnail.jpg"
+           alt="R-394K built-in digital burst encoder"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../spy/r394/k.htm>R-394K<br />Strizh-K</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../spy/r394/km.htm>
+<div  data-balloon-pos="up" aria-label="R-394KM digital integrated burst encoder">          <img src="../spy/r394/img/300141/025/thumbnail.jpg"
+           alt="R-394KM digital integrated burst encoder"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../spy/r394/km.htm>R-394KM<br />Strizh-KM</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=dkms/index.htm>
+<div  data-balloon-pos="up" aria-label="DKM-S digital burst encoder (USSR)">          <img src="dkms/img/301202/011/thumbnail.jpg"
+           alt="DKM-S digital burst encoder (USSR)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=dkms/index.htm>DKM-S</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../spy/r355/index.htm>
+<div  data-balloon-pos="up" aria-label="Russian R-355 Base Station Controller">          <img src="../spy/r355/img/301949/022/thumbnail.jpg"
+           alt="Russian R-355 Base Station Controller"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../spy/r355/index.htm>R-355</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Wanted
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=davac/index.htm>
+<div  data-balloon-pos="up" aria-label="Czechoslovakian TI-485 (Davac) tape-based morse burst encoder (1962)" data-balloon-length="large">          <img src="davac/img/davac_10t2.jpg"
+           alt="Czechoslovakian TI-485 (Davac) tape-based morse burst encoder (1962)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=davac/index.htm>D&#225;va&#269;</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../crypto/usa/ck42/index.htm>
+<div  data-balloon-pos="up" aria-label="American baudot coder/keyer with built-in encryption" data-balloon-length="large">          <img src="../crypto/usa/ck42/img/ck42_rot_thumb.png"
+           alt="American baudot coder/keyer with built-in encryption"
+           border="0"
+           style="
+           max-height: 50px;
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../crypto/usa/ck42/index.htm>CK-42</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Known CIA keyers</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Over the years, the US Central Intelligence Agency (CIA) developed an
+impressive range of burst encoders for a variety of radios and applications.
+These encoders were commonly identified with the letters 'CK' for 'Coder/Keyer'.
+Some of them were also used by the Army under a different designator.
+The following CIA burst encoders are currently known <a href="#ref_1">[1]</a>:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:80px;">CK-7</div><div style="display:inline-block; width:80px;">1959</div>Coder/Keyer (military: AN/UGT-1)            <li><a href="gra71/index.htm"><div style="display:inline-block; width:80px;">CK-8</div><div style="display:inline-block; width:80px;">1959</div>Coder/Keyer (military: AN/GRA-71)</a>            <li><div style="display:inline-block; width:80px;">CK-12</div><div style="display:inline-block; width:80px;">1960</div>Coder/Keyer (used with RT-6)            <li><div style="display:inline-block; width:80px;">CK-100</div><div style="display:inline-block; width:80px;">1964</div>Coder/Keyer (special version of CK-8)            <li><div style="display:inline-block; width:80px;">CK-30</div><div style="display:inline-block; width:80px;">1965</div>Coder/Keyer (compatible with RT-49)            <li><div style="display:inline-block; width:80px;">CK-34</div><div style="display:inline-block; width:80px;">1965</div>Coder/Keyer (used with AS-12)            <li><div style="display:inline-block; width:80px;">CK-36</div><div style="display:inline-block; width:80px;">1966</div>Coder/Keyer (used with ASR-100 transceiver)            <li><div style="display:inline-block; width:80px;">CK-33</div><div style="display:inline-block; width:80px;">1970</div>Morse coder/keyer (film-based)            <li><div style="display:inline-block; width:80px;">CK/A-33</div><div style="display:inline-block; width:80px;">1973</div>Baudot version of CK-33            <li><a href="../crypto/usa/ck42/index.htm"><div style="display:inline-block; width:80px;">CK-42</div><div style="display:inline-block; width:80px;">1974</div>Baudot coder/keyer with built-in encryption</a>            <li><div style="display:inline-block; width:80px;">CK-43</div><div style="display:inline-block; width:80px;">1973</div>Baudot coder/keyer with built-in encryption            <li><div style="display:inline-block; width:80px;">CK-45</div><div style="display:inline-block; width:80px;">1973</div>Morse coder/keyer (compatible with <font color="#E7E">&#10148;</font>&nbsp;<a href="../spy/rs59/index.htm">RS-59</a>)          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Nomenclature</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Burst encoders are known by the following names
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>Burst encoder            <li>Burst transmitter            <li>Burst keyer            <li>Burst coder            <li>Coder/keyer            <li>High-speed burst transmitter            <li>High-speed morse transmitter            <li>High-speed keyer            <li>Morse burst-keyer            <li>Squirt            <li>Squirt transmitter          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+            <li><a href="http://www.spyradios.com/gra71.html" target="_blank">Peter McCollum, <i>The CK-8 Coder/Keyer</i></a><br />
+Website 1999-2017. Retrieved November 2017.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="list.htm">Index of burst encoders</a><br />
+            <li><a href="../spy/index.htm">Spy transmitters and receivers</a><br />
+            <li><a href="../df/index.htm">Direction finding equipment</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Monday 03 August 2009. Last changed: Friday, 23 May 2025 - 16:34 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../index.htm"><img src=../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

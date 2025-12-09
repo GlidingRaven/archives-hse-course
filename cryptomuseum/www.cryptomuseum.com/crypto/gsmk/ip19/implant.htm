@@ -1,0 +1,1884 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>Implant</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cryptomuseum">
+    <meta name="twitter:url" content="https://www.cryptomuseum.com/crypto/gsmk/ip19/implant.htm">
+    <meta name="twitter:image" content="https://www.cryptomuseum.com/crypto/gsmk/ip19/img/303529/024/full.jpg">
+    <meta name="twitter:title" content="CryptoPhone IP-19 with bug">
+    <meta name="twitter:description" content="A sophisticated bug was found inside this CryptoPhone that was used by WikiLeaks between 2012 and 2016. Experts think it was planted by the CIA.">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of covert-related items" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/glossary.htm';" >Glossary</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../../covert/camera/index.htm';" >Cameras</div>
+          <div class="but sub" onClick="location.href='../../../covert/rec/index.htm';" >Recorders</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Concealed radios" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Covert listening devices" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../../covert/bugs/index.htm';" >Bugs</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../covert/mic/index.htm';" >Microphones</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Covert wired and wireless earphones" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/ear/index.htm';" >Earpieces</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Free Space Optics and optoelectronics" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/opto/index.htm';" >Optics</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Concealment devices and microcaches" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/conceal/index.htm';" >Concealments</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Dead letter boxes" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/deaddrop/index.htm';" >Dead drops</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tools used in the espionage trade" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/tools/index.htm';" >Tools</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Spy-related stories and covert operations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/cases/index.htm';" >Stories</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../covert/sw/index.htm';" >Software</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="tracking devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/tracking/index.htm';" >Tracking</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../../../covert/bugs"><div  data-balloon-pos="up" aria-label="Shortcut to covert listening devices" class="key">Bugs</div></a><a class="key" href="../../phone.htm"><div  data-balloon-pos="up" aria-label="Shortcut to cryptographically securet telepgone sets" data-balloon-length="large" class="key">Phones</div></a><a class="key" href="../../../org/wikileaks"><div  data-balloon-pos="up" aria-label="Shortcut to whistleblower platform WikiLeaks" class="key">WikiLeaks</div></a>&nbsp;&nbsp;<a class="key" href="index.htm"><div  data-balloon-pos="up" aria-label="Back to CryptoPhone IP-19 (Snom CryptoPhone 870)" class="key right">&larr; IP-19</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>CryptoPhone implant</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Embedded covert listening device &#183; 2018</b>
+<br />
+<br />
+This page describes a highly sophisticated
+<a href="../../../covert/bugs"><span data-balloon-pos="up" aria-label="More about: covert listening device (bug)">covert listening device (bug)</span></a>
+that was discovered in March 2018 in Germany, inside a
+<a href="index.htm"><span data-balloon-pos="up" aria-label="More about: CryptoPhone IP-19">CryptoPhone IP-19</span></a> that was used by activists working for the
+whistleblower platform <span class="short" aria-label="whistleblower platform WikiLeaks" data-balloon-pos="up"><a href="../../../org/wikileaks" class="short" >WikiLeaks</a></span> <a href="#ref_4">[4]</a>.
+<span class="short" aria-label="whistleblower platform WikiLeaks" data-balloon-pos="up"><a href="../../../org/wikileaks" class="short" >WikiLeaks</a></span> used it for <a href="../../phone.htm"><span data-balloon-pos="up" aria-label="More about: secure communication">secure communication</span></a>
+between London and Berlin, whilst coordinating the revelations of <span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../../../intel/nsa" class="short" >NSA</a></span>
+whistleblower <a href="../../../people/snowden"><span data-balloon-pos="up" aria-label="More about: Edward Snowden">Edward Snowden</span></a> in mid-2013.
+It was also used in the days that <span class="short" aria-label="whistleblower platform WikiLeaks" data-balloon-pos="up"><a href="../../../org/wikileaks" class="short" >WikiLeaks</a></span> founder
+<a href="../../../people/assange/julian.htm"><span data-balloon-pos="up" aria-label="More about: Julian Assange">Julian Assange</span></a>
+<a href="#ref_5">[5]</a> was a resident of the Embassy of Equador in London.
+The expensive high-tech implant was tailor-made <sup><font color="#FF8800">1</font></sup> and is attributed by some
+experts to the
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span> <a href="../../../intel/cia"><span data-balloon-pos="up" aria-label="More about: Central Intelligence Agency">Central Intelligence Agency</span></a> (<span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span>)
+or a related agency <a href="#ref_1">[1]</a><a href="#ref_2">[2]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<a href="index.htm"><span data-balloon-pos="up" aria-label="More about: CryptoPhone IP19">CryptoPhone IP19</span></a> is a
+<a href="../../phone.htm"><span data-balloon-pos="up" aria-label="More about: cryptographically secured desktop ...">cryptographically secured desktop telephone</span></a>
+&mdash; based on the Snom 870 &mdash; that is marketed by <a href="index.htm"><span data-balloon-pos="up" aria-label="More about: GSMK">GSMK</span></a>
+in Berlin (Germany). It enables encrypted voice communications
+with other <a href="index.htm"><span data-balloon-pos="up" aria-label="More about: CryptoPhone">CryptoPhone</span></a>
+subscribers only, using <span class="short tooltip-red" data-balloon-pos="up" aria-label="Voice over IP (Internet Protocol)">VoIP</span>.
+<br />
+<br />
+One day in March 2018, the phone was brought back to Germany to
+replace its faulty display that had somehow been overheated.
+But when it was dismantled, the contents appeared to differ
+from a regular <a href="index.htm"><span data-balloon-pos="up" aria-label="More about: IP-19">IP-19</span></a> and the implant was discovered.
+It was subsequently photographed and reported to the
+police who initiated an investigation <a href="#ref_1">[1]</a>. <sup><font color="#FF8800">2</font></sup>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/303529/024/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Implant with battery and amplifier circuit (metal cover removed)" data-balloon-length="large">
+<a href="img/303529/024/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Implant with battery and amplifier circuit (metal cover removed)" data-balloon-length="large">
+            <img src="img/303529/024/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Implant with battery and amplifier circuit (metal cover removed)"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The bug circumvents the device's strong encryption, by connecting
+directly to the audio circuits.
+It is passive in that it does not transmit the
+intercepted conversations immediately. Instead, it records the
+conversations in its internal memory. Upon receiving a remote
+command, it transmits the recorded conversations (probably
+encrypted) in a short wideband burst. This makes it virtually
+impossible to detect and discover the device in a regular
+<a href="../../../df/tscm.htm"><span data-balloon-pos="up" aria-label="More about: bug sweep">bug sweep</span></a>.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="#loc">Location of the bug</a>
+<br />
+<br />
+It is difficult to determine the <a href="#origin"><span data-balloon-pos="up" aria-label="Jump to: origin of this bug">origin of this bug</span></a>,
+but given the fact that it is professionally made in quantity
+and that it is tailor-made for this type of telephone, it seems
+likely that it was a state actor, probably the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span>
+<a href="../../../intel/cia"><span data-balloon-pos="up" aria-label="More about: Central Intelligence Agency (CIA)">Central Intelligence Agency (CIA)</span></a>.
+Note that this covert implant is not only suitable for the
+<a href="index.htm"><span data-balloon-pos="up" aria-label="More about: CryptoPhone IP-19">CryptoPhone IP-19</span></a>, but for <b>every Snom IP-phone</b>
+that uses the same chassis.
+<br />
+<br />
+<font color="#E7E">&#10148;</font>&nbsp;<a href="#origin">Origin of the bug</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li style="margin-bottom: 6px;">
+Partly tailor-made and partly off-the-shelf.
+          </li>
+          <li style="margin-bottom: 6px;">
+Led by the Federal Criminal Police (Bundeskriminalamt)
+  in Berlin. According to the German Federal Prosecutor (Bundesanwaltschaft)
+  the investigation is ongoing under number <b>3 ARP 692/20-3</b>. <a href="#ref_9">[9]</a>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Replacement keypad board with implant, batteries, antenna and amplifier circuit" data-balloon-length="large">          <img src="img/303529/019/thumbnail.jpg"
+           alt="Replacement keypad board with implant, batteries, antenna and amplifier circuit"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303529/019"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Implant with battery and amplifier circuit (metal cover removed)" data-balloon-length="large">          <img src="img/303529/024/thumbnail.jpg"
+           alt="Implant with battery and amplifier circuit (metal cover removed)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303529/024"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Replacement board with implant (metal cover removed)" data-balloon-length="large">          <img src="img/303529/020/thumbnail.jpg"
+           alt="Replacement board with implant (metal cover removed)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303529/020"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Replacement board with implant">          <img src="img/303529/021/thumbnail.jpg"
+           alt="Replacement board with implant"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303529/021"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Implant with battery and amplifier circuit">          <img src="img/303529/023/thumbnail.jpg"
+           alt="Implant with battery and amplifier circuit"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303529/023"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Implant 2: small PCB with flying leads for tapping the audio circuits" data-balloon-length="large">          <img src="img/303529/022/thumbnail.jpg"
+           alt="Implant 2: small PCB with flying leads for tapping the audio circuits"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303529/022"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Replacement board aside an original keypad board (metal cover in place)" data-balloon-length="large">          <img src="img/303529/029/thumbnail.jpg"
+           alt="Replacement board aside an original keypad board (metal cover in place)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303529/029"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Replacement board aside an original keypad board (metal cover removed)" data-balloon-length="large">          <img src="img/303529/028/thumbnail.jpg"
+           alt="Replacement board aside an original keypad board (metal cover removed)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303529/028"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div>        <img src="../../../img/blank.gif" width=1 height=2>
+
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303529/019/full.jpg" alt="Replacement keypad board with implant, batteries, antenna and amplifier circuit">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303529/024/full.jpg" alt="Implant with battery and amplifier circuit (metal cover removed)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303529/020/full.jpg" alt="Replacement board with implant (metal cover removed)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303529/021/full.jpg" alt="Replacement board with implant">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303529/023/full.jpg" alt="Implant with battery and amplifier circuit">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303529/022/full.jpg" alt="Implant 2: small PCB with flying leads for tapping the audio circuits">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303529/029/full.jpg" alt="Replacement board aside an original keypad board (metal cover in place)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303529/028/full.jpg" alt="Replacement board aside an original keypad board (metal cover removed)">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+These images were taken from the website <a href="https://buggedplanet.info" target="_blank"><span data-balloon-pos="up" aria-label="buggedplanet.info (off-site)">Buggedplanet.info</span></a> <a href="#ref_3">[3]</a>.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> passive            <li>Conversations are recorded            <li>Remotely triggered activation            <li>Burst transmission            <li>High-tech <span class="short tooltip-red" data-balloon-pos="up" aria-label="Field-Programmable Gate Array">FPGA</span>-based design            <li>Hardware-based encryption            <li>16GB Flash Memory            <li>Built-in rechargeable battery            <li>Invisible from the outside            <li>Almost invisible on the inside          </ul>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+<a href="index.htm">              <div style="position: relative;" data-balloon-pos="up" aria-label="CryptoPhone IP-19 - right angle view - click for more information" data-balloon-length="large">
+<a href="index.htm">              <div style="position: relative;" data-balloon-pos="up" aria-label="CryptoPhone IP-19 - right angle view - click for more information" data-balloon-length="large">
+              <img src="img/303529/002/small.jpg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               alt="CryptoPhone IP-19 - right angle view - click for more information"
+               border=0
+               width=298 height=200
+               />
+              </div>
+              </a>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=setup></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Setup</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The diagram below shows how the system worked. At the left is the
+Listening Post (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Listening Post">LP</span>) with a command transmitter and a receiver.
+At the right is the modified <a href="index.htm"><span data-balloon-pos="up" aria-label="More about: CryptoPhone IP-19">CryptoPhone IP-19</span></a> of which
+the keypad board is substituted by a replacement board of identical size,
+that contains the implant.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/ip19_imp_setup.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+Judging from the type of antenna, the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Listening Post">LP</span>
+must have been in the immediate vicinity of the bugged telephone set.
+It seems likely that the distance between the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Listening Post">LP</span> and the target
+was no more than 50 metres and probably less. This means that the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Listening Post">LP</span>
+must have been in the same appartment, or across the street, or in a
+car driving by regularly to collect the intelligence.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="#block">Block diagram</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=loc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Location of the implant</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The implant was placed inside an <a href="index.htm"><span data-balloon-pos="up" aria-label="More about: IP-19 CryptoPhone">IP-19 CryptoPhone</span></a> in such
+a way that it was virtually invisible, even after opening the device.
+To understand how and where it was located inside the telephone, we will
+use the photo&shy;graph of the interior of a regular
+<a href="index.htm"><span data-balloon-pos="up" aria-label="More about: IP-19 CryptoPhone">IP-19 CryptoPhone</span></a> (below) as a guide.
+<br />
+<br />
+After removing the rear case shell and turning the device over (front
+panel facing down), we see two green printed circuit boards (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>s).
+The largest one is at the bottom of the stack. It is fitted directly
+to the front panel and holds the contacts for the keypad. In addition,
+it covers the Liquid Crystal Display (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Liquid Crystal Display">LCD</span>).
+In the image below this board is highlighted with a blue outline.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/303529/014/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/303529/014/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/ip19_imp_loc.png"
+             style="
+            "
+             align="center"
+             width="560px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The smaller <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> is the <b>main board</b> that contains the actual telephone
+electronics, the micro&shy;controller and the firmware. It has components
+on both sides and is highlighted here with a yellow outline. It is
+connected to the keypad board by means of a 20-pin header in the
+bottom right corner. The side that is visible here, holds the
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Unshielded Twisted Pair (cable)">UTP</span> connectors, the <a href="img/303529/007/full.jpg"><span data-balloon-pos="up" aria-label="More about: ethernet interface">ethernet interface</span></a>
+and two <span class="short tooltip-red" data-balloon-pos="up" aria-label="Universal Serial Bus">USB</span> expansion sockets.
+The microcontroller and the audio circuits
+are at the <a href="img/303529/010/full.jpg"><span data-balloon-pos="up" aria-label="More about: other side">other side</span></a>.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/303529/022/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/303529/022/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/ip19_imp2.png"
+             style="
+            "
+             align="center"
+             width="618px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The image above shows the
+<a href="img/303529/010/full.jpg"><span data-balloon-pos="up" aria-label="More about: reverse side of the main board">reverse side of the main board</span></a>.
+At the right is the 20-pin inter-board connector. At the centre of the
+image, in the yellow circle, is a small board (implant 2) that is not
+present on the <a href="img/303529/010/full.jpg"><span data-balloon-pos="up" aria-label="More about: original board">original board</span></a>. It is glued to
+the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> and is used to 'tap' the audio signals from the microphone
+and speaker circuits by means of four thin green wires. The tap board
+is connected to the main implant (the replacement keypad board) by means
+of the three black wires at the top.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/303529/030/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/303529/030/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/ip19_imp1.png"
+             style="
+            "
+             align="center"
+             width="618px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The main implant (implant 1) is on the large <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> and is hidden
+underneath the main board. It is fitted to a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> which has the same
+outer dimensions as the original keypad board and is shown in the image
+above. The empty area at the left is the part that covers the display.
+The rest of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> holds the implant, and is normally covered by
+the main board. The actual implant is at the centre. It is a separate
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> that is soldered to the keypad <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> by means of short wires.
+When it was discovered, it was
+<a href="img/303529/019/full.jpg"><span data-balloon-pos="up" aria-label="More about: covered by a metal enclosure">covered by a metal enclosure</span></a> (removed here)
+that was <a href="img/303529/029/full.jpg"><span data-balloon-pos="up" aria-label="More about: printed with a serial number">printed with a serial number</span></a>.
+This suggests that the implant was a volume-produced off-the-shelf solution.
+<br />
+<br />
+Above the implant is a Li-ION battery pack that is connected to a 2-pin
+header. It is used to power the implant when the telephone set is
+disconnected from its power source. To the right of the implant are
+the audio amplifiers (for the microphone and speaker signals) and
+a circuit for charging the battery pack. At the bottom is the antenna
+by which the device is connected to the Listening Post (LP) outside
+the building. The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Listening Post">LP</span> had to be in the immediate vicinity of the bug.
+<br />
+<br />
+When the telephone is reassembled, the implant and the additional parts
+on the <a href="img/303529/030/full.jpg"><span data-balloon-pos="up" aria-label="More about: replacement keypad board (implant ...">replacement keypad board (implant 1)</span></a>
+are virtually invisible, as they are obstructed from view by the main
+board. The <a href="img/303529/022/full.jpg"><span data-balloon-pos="up" aria-label="More about: tap board (implant 2)">tap board (implant 2)</span></a>
+is also invisible as it is at the rear side of the main board.
+<br />
+<br />
+From the available photographs it is difficult to identify the various
+components, in particular because the photographs are unsharp and the
+implant <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> is covered by a conformal coating.
+But some information can be gained from Andy M&#252;ller-Maguhn's
+presentation on the subject <a href="#ref_1">[1]</a>.
+All components have manufacturing date codes of April 2013 or earlier,
+which implies that the implant was made after that date.
+Furthermore, the dimensions of the board suggest a non-metric origin.
+The antenna is dimensioned for operation at a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Ultra High Frequency (300-3000 MHz)">UHF</span> frequency on or
+near 800 MHz.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior of the telephone with the front panel facing down" data-balloon-length="large">          <img src="img/303529/014/thumbnail.jpg"
+           alt="Interior of the telephone with the front panel facing down"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303529/014"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Reverse side of the main board, holding the microcontroller and the audio circuits" data-balloon-length="large">          <img src="img/303529/010/thumbnail.jpg"
+           alt="Reverse side of the main board, holding the microcontroller and the audio circuits"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303529/010"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Area where a miniature board (implant 2) is added">          <img src="img/303529/011/thumbnail.jpg"
+           alt="Area where a miniature board (implant 2) is added"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303529/011"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Implant 2: small PCB with flying leads for tapping the audio circuits" data-balloon-length="large">          <img src="img/303529/022/thumbnail.jpg"
+           alt="Implant 2: small PCB with flying leads for tapping the audio circuits"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303529/022"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Replacement keypad board with implant, batteries, antenna and amplifier circuit" data-balloon-length="large">          <img src="img/303529/019/thumbnail.jpg"
+           alt="Replacement keypad board with implant, batteries, antenna and amplifier circuit"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303529/019"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Relacement board with implant (metal shield removed)" data-balloon-length="large">          <img src="img/303529/030/thumbnail.jpg"
+           alt="Relacement board with implant (metal shield removed)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303529/030"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Replacement board aside an original keypad board (metal cover in place)" data-balloon-length="large">          <img src="img/303529/029/thumbnail.jpg"
+           alt="Replacement board aside an original keypad board (metal cover in place)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303529/029"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Replacement board aside an original keypad board (metal cover removed)" data-balloon-length="large">          <img src="img/303529/028/thumbnail.jpg"
+           alt="Replacement board aside an original keypad board (metal cover removed)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303529/028"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'B'" onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">B</span></div></div><div style="height: 40px;"></div>
+<div id="slide_2" class="slide" onClick="slideClose('slide_2')"><span class="slide_close_left" onClick="slideClose('slide_2')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_2', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303529/014/full.jpg" alt="Interior of the telephone with the front panel facing down">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303529/010/full.jpg" alt="Reverse side of the main board, holding the microcontroller and the audio circuits">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303529/011/full.jpg" alt="Area where a miniature board (implant 2) is added">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303529/022/full.jpg" alt="Implant 2: small PCB with flying leads for tapping the audio circuits">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303529/019/full.jpg" alt="Replacement keypad board with implant, batteries, antenna and amplifier circuit">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303529/030/full.jpg" alt="Relacement board with implant (metal shield removed)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303529/029/full.jpg" alt="Replacement board aside an original keypad board (metal cover in place)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303529/028/full.jpg" alt="Replacement board aside an original keypad board (metal cover removed)">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_2', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_2', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=origin></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Origin</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+It is difficult to determine who planted the bug in the
+<a href="index.htm"><span data-balloon-pos="up" aria-label="More about: CryptoPhone IP-19">CryptoPhone IP-19</span></a>,
+but judging from its professional signature, the choice of components
+and the no doubt high development cost, it seems likely that it was
+a state actor. Furthermore, to plant the device, an operative had
+to gain access to the premises where the phone was kept, which is
+not without risk. Taking into account that the United States wanted
+<a href="../../../people/assange/julian.htm"><span data-balloon-pos="up" aria-label="More about: Assange">Assange</span></a>
+for violating the Espionage Act and revealing state secrets, it
+seems likely the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span>
+<a href="../../../intel/cia"><span data-balloon-pos="up" aria-label="More about: Central Intelligence Agency (CIA)">Central Intelligence Agency (CIA)</span></a>
+was behind the operation, probably with help from the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span>
+<a href="../../../intel/nsa"><span data-balloon-pos="up" aria-label="More about: National Security Agency (NSA)">National Security Agency (NSA)</span></a>
+and <a href="../../../intel/gchq"><span data-balloon-pos="up" aria-label="More about: British intelligence service GCHQ">British intelligence service GCHQ</span></a>
+or <a href="../../../intel/index.htm#mi5"><span data-balloon-pos="up" aria-label="More about: MI5">MI5</span></a>.
+<br />
+<br />
+It is unknown how long the device had been in operation before it was
+discovered, but this might have been years. The phone was first used
+from the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United Kingdom (Great Britain)">UK</span> for confidential talks with the German magazine
+<i>Der Spiegel</i> in mid-2013, in relation to the revelations of
+<span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../../../intel/nsa" class="short" >NSA</a></span> whistleblower <a href="../../../people/snowden"><span data-balloon-pos="up" aria-label="More about: Edward Snowden">Edward Snowden</span></a>.
+From the date codes on the components found in the implant, it
+is certain that it was made some time after April 2013.
+In theory it could have been inserted later that year or early in
+2014, in which case it might have been operational for <u>four years</u>
+before it was discovered.
+<br />
+<br />
+The device is partly based on an existing (<span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../../../intel/nsa" class="short" >NSA</a></span>?) product (the actual
+implant in the metal case), but its carrier board &mdash; the replacement
+keypad board &mdash; is specifically made for this type of telephone.
+Such designs are typically made by the Tailored Access Operations
+(TAO) unit of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span> <a href="../../../intel/nsa"><span data-balloon-pos="up" aria-label="More about: National Security Agency">National Security Agency</span></a>
+(<span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../../../intel/nsa" class="short" >NSA</a></span>) <a href="#ref_6">[6]</a><a href="#ref_7">[7]</a>.
+From the way the implant is installed &mdash; implant 2 and its thin wires
+are glued to the main board &mdash; it can be concluded that
+the intelligence agency responsible for planting the bug had to
+get access to the premises at least twice: once to remove the telephone
+and once to put it back. Such operations are typically carried out by
+the Physical Access Group (PAG) of the Center for Cyber Intelligence
+(<span class="short tooltip-red" data-balloon-pos="up" aria-label="Center for Cyber Intelligence (CIA)">CCI</span>} of the <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span> <a href="#ref_8">[8]</a>.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=block></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Block diagram</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is an educated guess of the block diagram of the implant, based
+on information provided by Andy M&#252;ller-Maguhn in a presentation
+at <span class="short tooltip-red" data-balloon-pos="up" aria-label="Chaos Computer Club">CCC</span> on 28 December 2020 <a href="#ref_1">[1]</a>. At the bottom is a miniature
+amplifier board (implant 2) that is soldered onto the main board of
+the telephone set.
+<br />
+<br />
+The other part of the bug (implant 1) is a large printed circuit board
+(<span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>) that replaces the existing keypad <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> of the telephone set.
+It contains two amplifiers &mdash; one for the microphone circuit of the
+telephone and one for the speaker circuit &mdash; a rechargeable Li-ION battery,
+a patch antenna (part of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>) and a rectangular metal enclosure
+that contains the actual bug.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/ip19_imp_block.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The encapsulated unit is a sophisticated listening device that contains
+two field-programmable gate arrays (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Field-Programmable Gate Array">FPGA</span>s), 16GB Flash Memory,
+an <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span> modem and a wideband transceiver. Audio is picked up from the
+microphone and speaker circuits of the telephone's main board, amplified
+and digitised, before it is fed to an Actel <span class="short tooltip-red" data-balloon-pos="up" aria-label="Field-Programmable Gate Array">FPGA</span> where it is
+encoded and possibly also encrypted. The encoded audio is temporarily
+stored in the on-board 16GB Flash Memory device.
+<br />
+<br />
+When commanded by a nearby Command and Control transmitter, the data
+from the Flash Memory device is converted to a digital wideband waveform,
+and transmitted as a <i>burst</i> via a built-in transmitter,
+via a patch antenna at the edge of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>. Also connected to the
+antenna is the Command and Control receiver through which the listening
+post (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Listening Post">LP</span>) can request the data.
+<br />
+<br />
+The Li-ION battery, which is mounted on the large implant board and is
+recharged by the telephone, allows the device to deliver its data even
+when the telephone itself is disconnected. It is likely that the bug
+is controlled by a (virtual) microcontroller that is part of one of
+the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Field-Programmable Gate Array">FPGA</span>s.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+            <li><a href="https://media.ccc.de/v/rc3-11512-cia_vs_wikileaks#t=19">Andy M&#252;ller-Maguhn, <i>CIA vs WikiLeaks</i></a><br />
+media.ccc.de (website), 18 December 2020.
+            <p />
+            <a name="ref_2"></a>
+            <li><a href="https://earsandeyes.noblogs.org/files/2023/03/list-pictures-en-2023-03.pdf">Ears and eyes, <i>List of found surveillance devices</i></a><br />
+<a href="https://earsandeyes.noblogs.org">Ears and eyes (website)</a>,
+March 2023. Chapter 14.1.1, pp. 62-63.
+            <p />
+            <a name="ref_3"></a>
+            <li><a href="https://buggedplanet.info/lost+found/20180323">High resolution photopgraphs of the IP-19 implant</a><br />
+<a href="https://buggedplanet.info">Bugged planet (website)</a>, 23 March 2018.
+            <p />
+            <a name="ref_4"></a>
+            <li><a href="https://en.wikipedia.org/wiki/WikiLeaks" target="_blank">Wikipedia, <i>WikiLeaks</i></a><br />
+Visited 21 March 2023.
+            <p />
+            <a name="ref_5"></a>
+            <li><a href="https://en.wikipedia.org/wiki/Julian_Assange" target="_blank">Wikipedia, <i>Julian Assange</i></a><br />
+Visited 21 March 2023.
+            <p />
+            <a name="ref_6"></a>
+            <li><a href="https://www.schneier.com/blog/archives/2013/12/more_about_the.html">Bruce Schneier, <i>More about the NSA's Tailored Access Operations Unit</i></a><br />
+Blog, 31 December 2013.
+            <p />
+            <a name="ref_7"></a>
+            <li><a href="https://en.wikipedia.org/wiki/Tailored_Access_Operations" target="_blank">Wikipedia, <i>Tailored Access Operations</i></a><br />
+Visited 22 March 2023.
+            <p />
+            <a name="ref_8"></a>
+            <li><a href="https://wikileaks.org/vault7/#Dumbo" target="_blank">WikiLeaks, <i>Vault7: Projects</i></a><br />
+3 August 2017.
+            <p />
+            <a name="ref_9"></a>
+            <li><a href="https://bit.ly/40moAO6" target="_blank">Jens Gl&#252;sing & Jorg Schindler, <i>Jagt die CIA Assanges Unterst&#252;tzer?</i></a><br />
+Der Spegel, 23 February 2023.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="https://archive.is/mt4fT" target="_blank">Cached</a>
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../../../intel/cia">Central Intelligence Agency (CIA)</a><br />
+            <li><a href="../../../intel/nsa">National Security Agency (NSA)</a><br />
+            <li><a href="../../../org/wikileaks">WikiLeaks</a><br />
+<br />
+            <li><a href="index.htm">CryptoPhone IP-19</a><br />
+            <li><a href="../../../people/assange/julian.htm">WikiLeaks founder Julian Assange</a><br />
+            <li><a href="../../../people/snowden">NSA whistleblower Edward Snowden</a><br />
+            <li><a href="../../phone.htm">Other secure telephones</a><br />
+            <li><a href="../../../covert/bugs">Other bugs</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Tuesday 21 March 2023. Last changed: Monday, 15 July 2024 - 22:05 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

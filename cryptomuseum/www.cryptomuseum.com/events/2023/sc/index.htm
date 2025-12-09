@@ -1,0 +1,2088 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>Secret Communications 4</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../events/index.htm';" >Index</div>
+          <div class="but sub" onClick="location.href='../../../events/lectures.htm';" >Lectures</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Secret Communications 4</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>This exhibitionis now closed</b>
+<br />
+<br />
+Following the success of our previous exhibitions
+<a href="../../2013/sc/index.htm"><span data-balloon-pos="up" aria-label="More about: Secret Communications 1">Secret Communications 1</span></a>,
+<a href="../../2016/sc/index.htm"><span data-balloon-pos="up" aria-label="More about: 2">2</span></a> and <a href="../../2019/sc/index.htm"><span data-balloon-pos="up" aria-label="More about: 3">3</span></a>
+&mdash; <a href="../../2019/sc/index.htm"><span data-balloon-pos="up" aria-label="More about: the last of which was in 2019">the last of which was in 2019</span></a> &mdash;
+Crypto Museum and the <a href="http://www.cdvandt.org"><span data-balloon-pos="up" aria-label="www.cdvandt.org (off-site)">Foundation for German Communication (CDV&T)</span></a> have once again
+teamed up and are pleased to announce <b>Secret Communications 4</b> &mdash; to be held in
+<a href="#loc"><span data-balloon-pos="up" aria-label="Jump to: Duivendrecht">Duivendrecht</span></a> (Netherlands).
+Please note that for the first time, there are two weekends in which we will be
+open on two successive days. This might be particularly useful for foreign visitors.
+The exclusive exhibition <b>Secret Communications 4</b> will be open to the general public
+on these days:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+        <table width=100% cellspacing=0 cellpadding=0>
+          <tr>
+          <td width=100%>
+          <table
+           class="table"
+           width=100% border=0 cellspacing=1 cellpadding=2 bgcolor=#FFFFFF>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="30" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>&#160;</font></td></b><td bgcolor=#FFFFFF align="left" valign="center" width="1"><img style=" padding-left: 4px;" src="status/blank.gif" width=1 height=1></td><td bgcolor="#E0E0E0" align="left" valign="center" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Day</font></td></b><td bgcolor="#E0E0E0" align="left" valign="center" width="200" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Date</font></td></b>            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+            <tr>
+            <td bgcolor=#FFFFFF colspan=5><font size=-1>
+            </font></td>
+            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="30" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor=#FFDDDD align="left" valign="center" width="1"><img style=" padding-left: 4px;" src="status/blank.gif" width=1 height=1></td><td bgcolor="#F4F4F4" align="left" valign="center" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><s>Saturday<br />Sunday</s></font></td><td bgcolor="#F4F4F4" align="left" valign="center" width="200" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><s>23 September 2023<br />24 September 2023</s></font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><font color="#E7E">&#10148;</font>&nbsp;<a href="https://www.cdvandt.org/secret-comms-4-1.htm">Photographs</a></font></td>            </tr>
+            <tr>
+            <td bgcolor=#FFFFFF colspan=5><font size=-1>
+            </font></td>
+            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="30" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor=#FFFFFF align="left" valign="center" width="1"><img style=" padding-left: 4px;" src="status/blank.gif" width=1 height=1></td><td bgcolor="#F4F4F4" align="left" valign="center" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><s>Sunday</s></font></td><td bgcolor="#F4F4F4" align="left" valign="center" width="200" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><s>15 October 2023</s></font></td>            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+            <tr>
+            <td bgcolor=#FFFFFF colspan=5><font size=-1>
+            </font></td>
+            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="30" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor=#FFFFFF align="left" valign="center" width="1"><img style=" padding-left: 4px;" src="status/blank.gif" width=1 height=1></td><td bgcolor="#F4F4F4" align="left" valign="center" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><s>Saturday</s></font></td><td bgcolor="#F4F4F4" align="left" valign="center" width="200" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><s>11 November 2023</s></font></td>            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+            <tr>
+            <td bgcolor=#FFFFFF colspan=5><font size=-1>
+            </font></td>
+            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="30" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor=#FFDDDD align="left" valign="center" width="1"><img style=" padding-left: 4px;" src="status/blank.gif" width=1 height=1></td><td bgcolor="#F4F4F4" align="left" valign="center" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><s>Saturday<br />Sunday</s></font></td><td bgcolor="#F4F4F4" align="left" valign="center" width="200" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><s>2 December 2023<br />3 December 2023</s></font></td>            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+            <tr>
+            <td bgcolor=#FFFFFF colspan=5><font size=-1>
+            </font></td>
+            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="30" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor=#FFFFFF align="left" valign="center" width="1"><img style=" padding-left: 4px;" src="status/blank.gif" width=1 height=1></td><td bgcolor="#F4F4F4" align="left" valign="center" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><s>Sunday</s></font></td><td bgcolor="#F4F4F4" align="left" valign="center" width="200" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><s>17 December 2023</s></font></td>            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+          </table>
+<div style="height: 20px;"></div>        </td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+On these days, we will be open from 10:00 to 17:00 and <b>admission is free</b>. Furthermore, coffee, tea and sandwiches will be available free of charge.
+We will be showing an exciting collection of
+<a href="../../../crypto/index.htm"><span data-balloon-pos="up" aria-label="More about: cipher machines">cipher machines</span></a> and
+<a href="../../../spy/index.htm"><span data-balloon-pos="up" aria-label="More about: espionage gear">espionage gear</span></a>,
+some of which have never been on public display before.
+Check the <a href="#overview"><span data-balloon-pos="up" aria-label="Jump to: overview below">overview below</span></a>
+to see what we have selected for you.
+Large groups may apply for a visit outside the regular opening
+days and times. <a href="mailto:info@cryptomuseum.com"><span data-balloon-pos="up" aria-label="Send e-mail to: info@cryptomuseum.com">Contact Crypto Museum</span></a>
+to make arrangements.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="#parking">Free parking</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="#overview">What to expect</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="#loc">Directions</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=themes></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Main themes</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The exhibition will cover the following main themes:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+<li><font color=#F52E00>Enigma &amp; Friends</font><br />
+<a href="../../../crypto/enigma">Enigma</a> is arguably the most famous and well-known
+<a href="../../../crypto">cipher machine</a> in the world. We have shown it previously
+in its many variations, with all kinds of peripherals, as it was used by the
+German <i>Third Reich</i> during World War II for their secret communication.
+This year, a new member has been added to the Enigma Family: the extremely
+rare <a href="../../../crypto/enigma/g">Enigma G</a>, also known as the
+<a href="../../../crypto/enigma/g"><i>Abwehr Enigma</i></a> &mdash; ask for a demonstration.
+            <p />
+<li><font color=#F52E00>Operation Rubicon</font><br />
+In February 2020 it was revealed that the largest civil manufacturer of
+cryptographic equipment &mdash; <a href="../../../manuf/crypto">Crypto AG in Switzerland</a>
+&mdash; was owned by the German intelligence service <span class="short" aria-label="Bundesnachrichtendienst (Germany)" data-balloon-pos="up"><a href="../../../intel/bnd" class="short" >BND</a></span> and the American <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span>.
+In 1970 they had secretly purchased the company from its original
+owner <a href="../../../people/hagelin/boris.htm">Boris Hagelin</a>, as part of
+<a href="../../../intel/cia/rubicon.htm">Operation Rubicon</a>.
+It was used it to spy on more than 130 countries and organisations.
+In this exhibition we will show many of the original devices that have been
+<a href="../../../intel/nsa/backdoor.htm"><i>backdoored</i></a>
+with help from the <span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../../../intel/nsa" class="short" >NSA</a></span> and others.
+            <p />
+<li><font color=#F52E00>Optics</font><br />
+Apart from radio waves, (invisible) light is an interesting medium for
+the transmission of speech over several kilometres.
+During the Cold War, the Stasi of the former DDR used infrared light beams
+for secret communication with its agents at the other side of the Berlin Wall.
+In this exhibition we will show and demonstrate a range of
+<a href="../../../covert/opto">light communi&shy;cation devices</a>
+(German: <a href="../../../covert/opto">Lichtsprechger&#228;te</a>),
+the oldest of which is from World War II.
+In addition, a collection of espionage cameras and pinhole lenses from the
+Cold War era.
+            <p />
+<li><font color=#F52E00>Washington-Moscow Hotline</font><br />
+In 1962, the so-called Cuban Missile Crisis almost led to the
+outbreak of a nuclear war between America and the former <span class="short" aria-label="Soviet Union" data-balloon-pos="up"><a href="../../../crypto/glossary.htm#soviet" class="short" >USSR</a></span>.
+A year later, in 1963, it was decided to establish a direct line
+of communication between the two nuclear powers, which became known
+as the <a href="../../../crypto/hotline">Washington-Moscow Hotline</a>.
+Contrary to popular believe, this was a not a red telephone,
+but a teleprinter link with <a href="../../../crypto/ott.htm">One-Time Tape cipher machines</a>.
+In this exhibition we will demonstrate the original machines and
+their teleprinters.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=overview></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Things to expect
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Last updated 22 September 2023</b>
+<br />
+<br />
+Below is a non-exhaustive overview of the items we will be showing and
+demonstrating in this exhibition. Further information on each item is available
+by clicking the corresponding thumbnail image below.
+This list will be updated regularly so please visit this page again soon.
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../../../crypto/enigma/i/index.htm>
+<div  data-balloon-pos="up" aria-label="Enigma I">          <img src="../../../crypto/enigma/img/300002/004/thumbnail.jpg"
+           alt="Enigma I"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/enigma/i/index.htm>Enigma I</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/enigma/m4/index.htm>
+<div  data-balloon-pos="up" aria-label="Naval Enigma M4 (used by the U-Boats or the German Kriegsmarine)" data-balloon-length="large">          <img src="../../../crypto/enigma/m4/img/300012/093/thumbnail.jpg"
+           alt="Naval Enigma M4 (used by the U-Boats or the German Kriegsmarine)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/enigma/m4/index.htm>Enigma M4</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/enigma/d/index.htm>
+<div  data-balloon-pos="up" aria-label="The main Commercial Enigma machine on which all later models were based" data-balloon-length="large">          <img src="../../../crypto/enigma/k/img/301443/069/thumbnail.jpg"
+           alt="The main Commercial Enigma machine on which all later models were based"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/enigma/d/index.htm>Enigma K</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/enigma/k/swiss.htm>
+<div  data-balloon-pos="up" aria-label="Special version of Enigma K for the Swiss Army">          <img src="../../../crypto/enigma/img/300879/045/thumbnail.jpg"
+           alt="Special version of Enigma K for the Swiss Army"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/enigma/k/swiss.htm>Swiss K</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/enigma/g/a28.htm>
+<div  data-balloon-pos="up" aria-label="Zählwerk Enigma A28, the predecessor of the Enigma G" data-balloon-length="large">          <img src="../../../crypto/enigma/img/300166/019/thumbnail.jpg"
+           alt="Zählwerk Enigma A28, the predecessor of the Enigma G"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/enigma/g/a28.htm>Z&#228;hlwerk</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/enigma/g>
+<div  data-balloon-pos="up" aria-label="Smaller version of the Zählwerk ENigma (A28)">          <img src="../../../crypto/enigma/g/img/303828/064/thumbnail.jpg"
+           alt="Smaller version of the Zählwerk ENigma (A28)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/enigma/g>Enigma G</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/enigma/schreibmax/index.htm>
+<div  data-balloon-pos="up" aria-label="Schreibmax printer attachement">          <img src="../../../crypto/enigma/schreibmax/img/301500/039/thumbnail.jpg"
+           alt="Schreibmax printer attachement"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/enigma/schreibmax/index.htm>Schreibmax</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/enigma/uhr/index.htm>
+<div  data-balloon-pos="up" aria-label="Enigma Uhr (also known as UhrBox)">          <img src="../../../crypto/enigma/img/300170/002/thumbnail.jpg"
+           alt="Enigma Uhr (also known as UhrBox)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/enigma/uhr/index.htm>Uhr</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../../../crypto/enigma/ukwd/index.htm>
+<div  data-balloon-pos="up" aria-label="Umkehrwalze D">          <img src="../../../crypto/enigma/img/300017/001/thumbnail.jpg"
+           alt="Umkehrwalze D"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/enigma/ukwd/index.htm>UKW-D</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/nema/index.htm>
+<div  data-balloon-pos="up" aria-label="Swiss NEMA (replacement for Enigma K)">          <img src="../../../crypto/nema/img/300014/022/thumbnail.jpg"
+           alt="Swiss NEMA (replacement for Enigma K)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/nema/index.htm>NEMA</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/fialka/index.htm>
+<div  data-balloon-pos="up" aria-label="Fialka M-125 cipher machines">          <img src="../../../crypto/fialka/img/300365/002/thumbnail.jpg"
+           alt="Fialka M-125 cipher machines"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/fialka/index.htm>Fialka</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/siemens/t52/index.htm>
+<div  data-balloon-pos="up" aria-label="Siemens T-52 Geheimschreiber">          <img src="../../../crypto/siemens/t52/img/t52_thumb.jpg"
+           alt="Siemens T-52 Geheimschreiber"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/siemens/t52/index.htm>T-52</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../intel/cia/rubicon.htm>
+<div  data-balloon-pos="up" aria-label="Operation RUBICON (THESAURUS) - the secret purchase of Crypto AG" data-balloon-length="large">          <img src="../../../intel/cia/img/rubicon_thumb.jpg"
+           alt="Operation RUBICON (THESAURUS) - the secret purchase of Crypto AG"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../intel/cia/rubicon.htm>Rubicon</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/m209/index.htm>
+<div  data-balloon-pos="up" aria-label="M-209 (CX-38)">          <img src="../../../crypto/hagelin/m209/img/300451/013/thumbnail.jpg"
+           alt="M-209 (CX-38)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/m209/index.htm>M-209</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/bc38/index.htm>
+<div  data-balloon-pos="up" aria-label="BC-39 (motorised version of BC-38 / M-209)">          <img src="../../../crypto/hagelin/img/300018/002/thumbnail.jpg"
+           alt="BC-39 (motorised version of BC-38 / M-209)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/bc38/index.htm>BC-38</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/c446/index.htm>
+<div  data-balloon-pos="up" aria-label="C-446-A and C-446(RT)">          <img src="../../../crypto/hagelin/c446/img/300905/017/thumbnail.jpg"
+           alt="C-446-A and C-446(RT)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/c446/index.htm>C-446</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/c52/index.htm>
+<div  data-balloon-pos="up" aria-label="C-52 and accessories">          <img src="../../../crypto/hagelin/c52/img/301440/013/thumbnail.jpg"
+           alt="C-52 and accessories"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/c52/index.htm>C-52</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/c52/30_arab.htm>
+<div  data-balloon-pos="up" aria-label="30-character version of the C-52 with Arabic symbols" data-balloon-length="large">          <img src="../../../crypto/hagelin/c52/img/301440/013/thumbnail.jpg"
+           alt="30-character version of the C-52 with Arabic symbols"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/c52/30_arab.htm>C-52/30</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hell/h54/index.htm>
+<div  data-balloon-pos="up" aria-label="H-54 pin-wheel cipher machine (CX-52 clone)">          <img src="../../../crypto/hell/h54/img/301711/036/thumbnail.jpg"
+           alt="H-54 pin-wheel cipher machine (CX-52 clone)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hell/h54/index.htm>H-54</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/cx52/index.htm>
+<div  data-balloon-pos="up" aria-label="CX-52 with removable wheels and irregular stepping">          <img src="../../../crypto/hagelin/cx52/img/300244/066/thumbnail.jpg"
+           alt="CX-52 with removable wheels and irregular stepping"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/cx52/index.htm>CX-52</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/cd57/index.htm>
+<div  data-balloon-pos="up" aria-label="CD-57 pocket cipher machine">          <img src="../../../crypto/hagelin/cd57/img/301856/040/thumbnail.jpg"
+           alt="CD-57 pocket cipher machine"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/cd57/index.htm>CD-57</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/tc52/index.htm>
+<div  data-balloon-pos="up" aria-label="TC-52, a hybrid on-line cipher machine">          <img src="../../../crypto/hagelin/tc52/img/300988/053/thumbnail.jpg"
+           alt="TC-52, a hybrid on-line cipher machine"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/tc52/index.htm>TC-52</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/hx63/index.htm>
+<div  data-balloon-pos="up" aria-label="Hagelin HX-63 rotor-based cipher machine">          <img src="../../../crypto/hagelin/hx63/img/303678/017/thumbnail.jpg"
+           alt="Hagelin HX-63 rotor-based cipher machine"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/hx63/index.htm>HX-63</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/h460/index.htm>
+<div  data-balloon-pos="up" aria-label="H-460, the first electronic Hagelin cipher machine based on shift-registers" data-balloon-length="large">          <img src="../../../crypto/hagelin/h460/img/303319/008/thumbnail.jpg"
+           alt="H-460, the first electronic Hagelin cipher machine based on shift-registers"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/h460/index.htm>H-460</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/hc520/index.htm>
+<div  data-balloon-pos="up" aria-label="HC-520 CRYPTOMATIC portable off-line cipher machine" data-balloon-length="large">          <img src="../../../crypto/hagelin/hc520/img/303072/001/thumbnail.jpg"
+           alt="HC-520 CRYPTOMATIC portable off-line cipher machine"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/hc520/index.htm>HC-520</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/hc530/index.htm>
+<div  data-balloon-pos="up" aria-label="HC-530 CRYPTOMATIC portable electronic cipher machine" data-balloon-length="large">          <img src="../../../crypto/hagelin/hc530/img/300971/002/thumbnail.jpg"
+           alt="HC-530 CRYPTOMATIC portable electronic cipher machine"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/hc530/index.htm>HC-530</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/hc570/index.htm>
+<div  data-balloon-pos="up" aria-label="HC-570 CRYPTOMATIC desktop electronic cipher machine" data-balloon-length="large">          <img src="../../../crypto/hagelin/hc570/img/301147/130/thumbnail.jpg"
+           alt="HC-570 CRYPTOMATIC desktop electronic cipher machine"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/hc570/index.htm>HC-570</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/cse280/index.htm>
+<div  data-balloon-pos="up" aria-label="Hagelin CSE-280 voice encryption device">          <img src="../../../crypto/hagelin/cse280/img/303321/002/thumbnail.jpg"
+           alt="Hagelin CSE-280 voice encryption device"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/cse280/index.htm>CSE-280</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/hc250/index.htm>
+<div  data-balloon-pos="up" aria-label="F/T voice scrambler for telephone and HF radio">          <img src="../../../crypto/hagelin/hc250/img/303320/001/thumbnail.jpg"
+           alt="F/T voice scrambler for telephone and HF radio"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/hc250/index.htm>HC-250</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/cvx396/index.htm>
+<div  data-balloon-pos="up" aria-label="Hagelin CVX-396 (SVZ-B) voice encryptor">          <img src="../../../crypto/hagelin/cvx396/img/302999/001/thumbnail.jpg"
+           alt="Hagelin CVX-396 (SVZ-B) voice encryptor"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/cvx396/index.htm>CVX-396</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/crm008/index.htm>
+<div  data-balloon-pos="up" aria-label="CRM-008 CRYPTOCOM - Voice Crypto Unit">          <img src="../../../crypto/hagelin/crm008/img/300675/027/thumbnail.jpg"
+           alt="CRM-008 CRYPTOCOM - Voice Crypto Unit"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/crm008/index.htm>CRM-008</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/hc3300/index.htm>
+<div  data-balloon-pos="up" aria-label="HC-3300 Secure Crypto Phone">          <img src="../../../crypto/hagelin/hc3300/img/301404/000/thumbnail.jpg"
+           alt="HC-3300 Secure Crypto Phone"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/hc3300/index.htm>HC-3300</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/hc4220/index.htm>
+<div  data-balloon-pos="up" aria-label="HC-4220 Fax Encryptor">          <img src="../../../crypto/hagelin/hc4220/img/301393/021/thumbnail.jpg"
+           alt="HC-4220 Fax Encryptor"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/hc4220/index.htm>HC-4220</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/hc2203/index.htm>
+<div  data-balloon-pos="up" aria-label="HC-2203 PSTN Phone Encryptor">          <img src="../../../crypto/hagelin/hc2203/img/301388/029/thumbnail.jpg"
+           alt="HC-2203 PSTN Phone Encryptor"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/hc2203/index.htm>HC-2203</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/ascom/se160/index.htm>
+<div  data-balloon-pos="up" aria-label="Cryptovox SE-160 secure handheld VHF/UHF radio">          <img src="../../../crypto/ascom/se160/img/302433/052/thumbnail.jpg"
+           alt="Cryptovox SE-160 secure handheld VHF/UHF radio"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/ascom/se160/index.htm>SE-160</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/ascom/se660/index.htm>
+<div  data-balloon-pos="up" aria-label="Cryptovox SE-660 secure mobile VHF/UHF radio">          <img src="../../../crypto/ascom/se660/img/302664/001/thumbnail.jpg"
+           alt="Cryptovox SE-660 secure mobile VHF/UHF radio"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/ascom/se660/index.htm>SE-660</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/ked3400/index.htm>
+<div  data-balloon-pos="up" aria-label="Key entry device for the HC-3400 CRYPTOVOX embedded encryption unit" data-balloon-length="large">          <img src="../../../crypto/hagelin/ked3400/img/302665/000/thumbnail.jpg"
+           alt="Key entry device for the HC-3400 CRYPTOVOX embedded encryption unit"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/ked3400/index.htm>KED-3400</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hagelin/varia/index.htm>
+<div  data-balloon-pos="up" aria-label="Various Hagelin-related items">          <img src="../../../crypto/hagelin/varia/img/300510/003/thumbnail.jpg"
+           alt="Various Hagelin-related items"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hagelin/varia/index.htm>Varia</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/gretag/905/index.htm>
+<div  data-balloon-pos="up" aria-label="Gretacoder 905, portable electronic cipher device">          <img src="../../../crypto/gretag/905/img/303369/000/thumbnail.jpg"
+           alt="Gretacoder 905, portable electronic cipher device"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/gretag/905/index.htm>GC-905</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/gretag/805/index.htm>
+<div  data-balloon-pos="up" aria-label="Gretacoder 805 (portable version)">          <img src="../../../crypto/gretag/805/img/300972/002/thumbnail.jpg"
+           alt="Gretacoder 805 (portable version)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/gretag/805/index.htm>GC-805</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../../../crypto/gretag/805/desktop.htm>
+<div  data-balloon-pos="up" aria-label="Gretacoder 805 (desktop version)">          <img src="../../../crypto/gretag/805/img/301572/024/thumbnail.jpg"
+           alt="Gretacoder 805 (desktop version)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/gretag/805/desktop.htm>GC-805</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/hotline/index.htm>
+<div  data-balloon-pos="up" aria-label="Washington-Moscow Hotline">          <img src="../../../crypto/hotline/img/etcrrm1_thumb.jpg"
+           alt="Washington-Moscow Hotline"
+           border="0" width=75 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/hotline/index.htm>Hotline</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/stk/etcrrm/index.htm>
+<div  data-balloon-pos="up" aria-label="ATCRRM mixer machine used on the Washington-Moscow hotline" data-balloon-length="large">          <img src="../../../crypto/stk/etcrrm/img/302390/012/thumbnail.jpg"
+           alt="ATCRRM mixer machine used on the Washington-Moscow hotline"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/stk/etcrrm/index.htm>ETCRRM</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../crypto/siemens/m190/index.htm>
+<div  data-balloon-pos="up" aria-label="Siemens M-190 OTT cipher machine, used on the Washington-Moscow hotline" data-balloon-length="large">          <img src="../../../crypto/siemens/img/300030/004/thumbnail.jpg"
+           alt="Siemens M-190 OTT cipher machine, used on the Washington-Moscow hotline"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/siemens/m190/index.htm>M-190</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../covert/opto/jo4/index.htm>
+<div  data-balloon-pos="up" aria-label="Infrared transceiver (Lichtsprechgerät) JO-4 developed in the DDR" data-balloon-length="large">          <img src="../../../covert/opto/jo4/img/303714/033/thumbnail.jpg"
+           alt="Infrared transceiver (Lichtsprechgerät) JO-4 developed in the DDR"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../covert/opto/jo4/index.htm>JO-4</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../covert/opto/jo402/index.htm>
+<div  data-balloon-pos="up" aria-label="Infrared transceiver (Lichtsprechgerät) JO-4.02 developed in the DDR" data-balloon-length="large">          <img src="../../../covert/opto/jo402/img/303708/006/thumbnail.jpg"
+           alt="Infrared transceiver (Lichtsprechgerät) JO-4.02 developed in the DDR"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../covert/opto/jo402/index.htm>JO-4.02</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../covert/opto/jo403/index.htm>
+<div  data-balloon-pos="up" aria-label="Infrared transceiver (Lichtsprechgerät) JO-4.03 developed in the DDR" data-balloon-length="large">          <img src="../../../covert/opto/jo403/img/303709/021/thumbnail.jpg"
+           alt="Infrared transceiver (Lichtsprechgerät) JO-4.03 developed in the DDR"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../covert/opto/jo403/index.htm>JO-4.03</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../covert/opto/finow/index.htm>
+<div  data-balloon-pos="up" aria-label="Modular infrared transceiver (Lichtsprechgerät) developed in the DDR" data-balloon-length="large">          <img src="../../../covert/opto/finow/img/303718/005/thumbnail.jpg"
+           alt="Modular infrared transceiver (Lichtsprechgerät) developed in the DDR"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../covert/opto/finow/index.htm>FINOW</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../../../covert/camera/gsk/img/303727/007/full.jpg>
+<div  data-balloon-pos="up" aria-label="GSK with pinhole lens and 2.5x and 2x range extenders" data-balloon-length="large">          <img src="../../../covert/camera/gsk/img/303727/007/thumbnail.jpg"
+           alt="GSK with pinhole lens and 2.5x and 2x range extenders"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../covert/camera/gsk/img/303727/007/full.jpg>GSK</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../covert/camera/so351/img/303723/008/full.jpg>
+<div  data-balloon-pos="up" aria-label="Lens, range extenders and pinhole lens caps">          <img src="../../../covert/camera/so351/img/303723/008/thumbnail.jpg"
+           alt="Lens, range extenders and pinhole lens caps"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../covert/camera/so351/img/303723/008/full.jpg>Pinhole</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../covert/camera/robot/star/img/302221/027/full.jpg>
+<div  data-balloon-pos="up" aria-label="Robot Star 50">          <img src="../../../covert/camera/robot/star/img/302221/027/thumbnail.jpg"
+           alt="Robot Star 50"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../covert/camera/robot/star/img/302221/027/full.jpg>Star 50</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../covert/camera/zola/img/302802/040/full.jpg>
+<div  data-balloon-pos="up" aria-label="ZOLA covert camera">          <img src="../../../covert/camera/zola/img/302802/040/thumbnail.jpg"
+           alt="ZOLA covert camera"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../covert/camera/zola/img/302802/040/full.jpg>ZOLA</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../covert/camera/minox/index.htm>
+<div  data-balloon-pos="up" aria-label="Minox miniature and subminiature cameras">          <img src="../../../covert/camera/minox/riga/img/300931/017/thumbnail.jpg"
+           alt="Minox miniature and subminiature cameras"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../covert/camera/minox/index.htm>Minox</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../covert/camera/tochka/index.htm>
+<div  data-balloon-pos="up" aria-label="Tochka-58 and Tochka-58M subminiature clockwork cameras used by the KGB (Russian variant of the Minox-A)" data-balloon-length="large">          <img src="../../../covert/camera/tochka/img/301669/004/thumbnail.jpg"
+           alt="Tochka-58 and Tochka-58M subminiature clockwork cameras used by the KGB (Russian variant of the Minox-A)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../covert/camera/tochka/index.htm>Tochka</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../covert/camera/sniper/index.htm>
+<div  data-balloon-pos="up" aria-label="Russian Photo Sniper (Foto Snaiper) with 300 mm telephoto lens used by the KGB" data-balloon-length="large">          <img src="../../../covert/camera/sniper/img/301423/024/thumbnail.jpg"
+           alt="Russian Photo Sniper (Foto Snaiper) with 300 mm telephoto lens used by the KGB"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../covert/camera/sniper/index.htm>Sniper</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../covert/camera/f21/index.htm>
+<div  data-balloon-pos="up" aria-label="Russian Krasnogorsk F-21 spy camera used by the KGB for a variety of applications" data-balloon-length="large">          <img src="../../../covert/camera/f21/img/300412/001/thumbnail.jpg"
+           alt="Russian Krasnogorsk F-21 spy camera used by the KGB for a variety of applications"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../covert/camera/f21/index.htm>F-21</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../../../covert/camera/zakhod/index.htm>
+<div  data-balloon-pos="up" aria-label="Miniature electronic covert surveillance camera">          <img src="../../../covert/camera/zakhod/img/302216/091/thumbnail.jpg"
+           alt="Miniature electronic covert surveillance camera"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../covert/camera/zakhod/index.htm>Zakhod</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../covert/camera/zasada/index.htm>
+<div  data-balloon-pos="up" aria-label="High-volume covert surveillance camera">          <img src="../../../covert/camera/zasada/img/302776/001/thumbnail.jpg"
+           alt="High-volume covert surveillance camera"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../covert/camera/zasada/index.htm>Zasada</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../../covert/camera/rubin/index.htm>
+<div  data-balloon-pos="up" aria-label="Commercial rollover camera, also used by the KGB">          <img src="../../../covert/camera/rubin/img/302775/005/thumbnail.jpg"
+           alt="Commercial rollover camera, also used by the KGB"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../covert/camera/rubin/index.htm>Rubin</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="http://www.cdvandt.org/secret-comms-4-description.htm">Read the announcement on the Foundation's website</a><br />
+            <li><a href="http://www.cdvandt.org">Foundation for German Communication and Related Technologies</a><br />
+            <li><a href="mailto:aobauer@xs4all.nl">Contact the curator Arthur Bauer</a> 
+            <br />
+            <li><a href="../../2019/sc/index.htm">Impression of the previous exhibition in 2019</a><br />
+            <li><a href="../../index.htm">Other events</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Last changed: Saturday, 30 December 2023 - 18:39 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

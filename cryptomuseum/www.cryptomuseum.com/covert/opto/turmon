@@ -1,0 +1,1542 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>Turmon</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of covert-related items" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/glossary.htm';" >Glossary</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../../covert/camera/index.htm';" >Cameras</div>
+          <div class="but sub" onClick="location.href='../../../covert/rec/index.htm';" >Recorders</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Concealed radios" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Covert listening devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/bugs/index.htm';" >Bugs</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../covert/mic/index.htm';" >Microphones</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Covert wired and wireless earphones" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/ear/index.htm';" >Earpieces</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Free Space Optics and optoelectronics" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../../covert/opto/index.htm';" >Optics</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Concealment devices and microcaches" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/conceal/index.htm';" >Concealments</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Dead letter boxes" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/deaddrop/index.htm';" >Dead drops</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tools used in the espionage trade" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/tools/index.htm';" >Tools</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Spy-related stories and covert operations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/cases/index.htm';" >Stories</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../covert/sw/index.htm';" >Software</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="tracking devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/tracking/index.htm';" >Tracking</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../../../intel/stasi/index.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Ministerium für Staatssicherheit (MfS)" class="key">Stasi</div></a><a class="key" href="../../../manuf/zeiss"><div  data-balloon-pos="up" aria-label="Shortcut to Carl Zeiss" class="key">Zeiss</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Turmon 8x21</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Foldable micro monocular</b>
+<br />
+<br />
+<b>TURMON</b> is a portable foldable 8 &#215; 21 monocular telescope, also known as a
+spyglass, intro&#173;duced in 1921 by <a href="../../../manuf/zeiss"><span data-balloon-pos="up" aria-label="More about: Carl Zeiss">Carl Zeiss</span></a>
+and produced under <a href="#names"><span data-balloon-pos="up" aria-label="Jump to: various names">various names</span></a> for nearly 100 years.
+It uses the Porro Prism principle and was popular among spies as it could be
+<a href="img/304324/008/full.jpg"><span data-balloon-pos="up" aria-label="More about: concealed and ope&#173;ra&#173;ted in one ...">concealed and ope&#173;ra&#173;ted in one hand</span></a>
+without attracting attention.
+The device shown here was made around 1950 in the <span class="short tooltip-red" data-balloon-pos="up" aria-label="German Democratic Republic (GDR) (East-Germany)">DDR</span>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The device can be used in folded or unfolded state. When unfolded,
+it measures just 70 &#215; 45 &#215; 25 mm, which is extremely small compared to similar
+devices from other manu&#173;fac&#173;tu&#173;rers.
+In this state it projects the image upside down.
+When unused it can be <a href="img/304324/001/full.jpg"><span data-balloon-pos="up" aria-label="More about: stowed">stowed</span></a>
+in the <a href="img/304324/000/full.jpg"><span data-balloon-pos="up" aria-label="More about: leather pouch">leather pouch</span></a>.
+<br />
+<br />
+When folded however, the image is projected straight up and the device is
+small enough to be <a href="img/304324/008/full.jpg"><span data-balloon-pos="up" aria-label="More about: concealed in one's hand">concealed in one's hand</span></a>.
+For this reason the device was popular amoung theatre visitors, but also
+amoung spies, as it allowed them to watch an object under surveillance
+unobtrusively.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304324/007/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Turmon with ocular up">
+<a href="img/304324/007/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Turmon with ocular up">
+            <img src="img/304324/007/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Turmon with ocular up"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Despite its small size, the device enlarges the image 8 times whilst
+maintaining a crisp and clear detailed image.
+Due to the use of a porro prism <a href="#ref_8">[8]</a>
+(as opposed to a roof prism) the optics do not require phase-corrective
+coatings <a href="#ref_1">[1]</a>. The device contains two prisms, an ocular
+comprising four lenses, and a 21 mm objective lens.
+Over the years, Turmon was improved several times.
+It was in production from
+1921 to 2020. The one shown here was manufactured between 1949 and 1989.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Leather pouch">          <img src="img/304324/000/thumbnail.jpg"
+           alt="Leather pouch"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304324/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Turmon in leather pouch">          <img src="img/304324/001/thumbnail.jpg"
+           alt="Turmon in leather pouch"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304324/001"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Unfolded Turmon showing the 'DDR' mark">          <img src="img/304324/002/thumbnail.jpg"
+           alt="Unfolded Turmon showing the 'DDR' mark"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304324/002"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Top view">          <img src="img/304324/004/thumbnail.jpg"
+           alt="Top view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304324/004"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Turmon with front lens up">          <img src="img/304324/006/thumbnail.jpg"
+           alt="Turmon with front lens up"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304324/006"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Turmon with ocular up">          <img src="img/304324/007/thumbnail.jpg"
+           alt="Turmon with ocular up"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304324/007"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Hiding the Turmon in one hand - front lens shown">          <img src="img/304324/008/thumbnail.jpg"
+           alt="Hiding the Turmon in one hand - front lens shown"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304324/008"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Hinding the Turmon in one hand - eye piece shown">          <img src="img/304324/009/thumbnail.jpg"
+           alt="Hinding the Turmon in one hand - eye piece shown"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304324/009"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304324/000/full.jpg" alt="Leather pouch">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304324/001/full.jpg" alt="Turmon in leather pouch">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304324/002/full.jpg" alt="Unfolded Turmon showing the 'DDR' mark">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304324/004/full.jpg" alt="Top view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304324/006/full.jpg" alt="Turmon with front lens up">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304324/007/full.jpg" alt="Turmon with ocular up">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304324/008/full.jpg" alt="Hiding the Turmon in one hand - front lens shown">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304324/009/full.jpg" alt="Hinding the Turmon in one hand - eye piece shown">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=hist></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>History</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <b>Turmon 8x21</b> was introduced by <a href="../../../manuf/zeiss"><span data-balloon-pos="up" aria-label="More about: Carl Zeiss">Carl Zeiss</span></a> in 1921.
+It was produced at the Zeiss factory in <b>Jena</b> in eastern Germany.
+At that time it weighed 100 grams and had a Field-Of-View (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Field Of View">FOV</span>) of
+110m/1000m. This means that at a viewing distance of 1 km, the image
+is 110 metres wide.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="files/19240520_Turmon.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="files/19240520_Turmon.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="files/19240520_Turmon.jpg"
+             style="
+            "
+             align="center"
+             width="618px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+            <div style="margin-top: 4px; margin-bottom: 4px;">
+            <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+            <center><a href="files/19240520_Turmon.jpg">Original line drawing by Carl Zeiss from 20 May 1924</a></center>
+            </font>
+            </div>
+          </td></tr></table>
+<br />
+After <a href="../../../spy/glossary.htm#ww2"><span data-balloon-pos="up" aria-label="More about: World War II">World War II</span></a> (<span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../../../spy/glossary.htm#ww2" class="short" >WWII</a></span>), in 1949, Germany
+was split into West-Germany (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Bundesrepublik Deutschland (Federal Republic of Germany (FRG))" data-balloon-length="large">BRD</span>) and East-Germany (<span class="short tooltip-red" data-balloon-pos="up" aria-label="German Democratic Republic (GDR) (East-Germany)">DDR</span>), and the city
+of Jena became part of East Germany.
+Zeiss Jena was subsequently natio&#173;na&#173;li&#173;sed and came under <span class="short tooltip-red" data-balloon-pos="up" aria-label="German Democratic Republic (GDR) (East-Germany)">DDR</span> control.
+It was renamed Kombinat <b><span class="short tooltip-red" data-balloon-pos="up" aria-label="Volkseigener Betrieb (Publicly Owned Enterprise)">VEB</span> Carl Zeiss Jena</b> (CZJ).
+Although most of the Zeiss facilities were relocated to
+Kyiv (Ukraine) and became <a href="../../../manuf/arsenal"><span data-balloon-pos="up" aria-label="More about: Arsenal (Kiev)">Arsenal (Kiev)</span></a>,
+the plant that produced Turmon remained in Jena.
+In 1970, the plant was relocated to <b>Eisfeld</b>.
+Devices pro&#173;duced in this era (1949-1989) can be recognised
+by the <a href="img/304324/002/full.jpg"><span data-balloon-pos="up" aria-label="More about: inscription ...">inscription <b>DDR</b></span></a>.
+In <a href="../../../intel/wp"><span data-balloon-pos="up" aria-label="More about: Eastern-Bloc countries">Eastern-Bloc countries</span></a>
+they were sold under the <b>Carl Zeis Jena</b> brand,
+whilst <b>Aus Jena</b> was used for export.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="files/1931_turmon_prospect.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="files/1931_turmon_prospect.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="files/1931_turmon_prospect.jpg"
+             style="
+            "
+             align="center"
+             width="618px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+            <div style="margin-top: 4px; margin-bottom: 4px;">
+            <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+            <center><a href="files/1931_turmon_prospect.jpg">Turmon advert from 1931</a></center>
+            </font>
+            </div>
+          </td></tr></table>
+<br />
+Following the reunification of Germany in 1990, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Volkseigener Betrieb (Publicly Owned Enterprise)">VEB</span> Carl Zeiss Jena became
+<b>Jenoptik Carl Zeiss Jena GmbH</b>. Two years later, in 1992, the plant in
+Eisfeld was taken over by Docter-Optic and became <b>Docter-Optic-Eisfeld</b>.
+The Turmon was accordingly rebranded and was given a 30-year warranty <a href="#ref_1">[1]</a>.
+Unfortunately, Docter went bankrupt on 15 November 1995.
+Eventually, the Eisfeld plant was taken over in 1997 by Analytic Jena GmbH
+and continued trading as <b>Docter-Optics</b>. <sup><font color="#FF8800">1</font></sup>
+<br />
+<br />
+in 2016, Docter-Optics was taken over by Noblex GmbH, who initially
+continued the entire Zeiss Jena product line. The products were gradually
+rebranded <b>Noblex</b>. From 2018 onwards however, most of the older product
+lines were discontinued. Turmon 8x21 was discontinued in 2020.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Note the addition of the 's' to the trade name.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=14607-001></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Use as 0.8x converter</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In July 1981, the East German intelligence ser&#173;vice <span class="short" aria-label="Ministerium f&#252;r Staatssicherheit (MfS)" data-balloon-pos="up"><a href="../../../intel/stasi/index.htm" class="short" >MfS</a></span> &ndash; also known as the
+<span class="short" aria-label="Ministerium f&#252;r Staatssicherheit (MfS)" data-balloon-pos="up"><a href="../../../intel/stasi/index.htm" class="short" >Stasi</a></span> &ndash; modified the objective lens of the Turmon in such a way that it
+could be used as a 0.8x converter for the
+<a href="../../camera/so352"><span data-balloon-pos="up" aria-label="More about: SO-3.5.2 pinhole lens">SO-3.5.2 pinhole lens</span></a> <a href="#ref_5">[5]</a><a href="#ref_6">[6]</a>.
+This lens was often used by the <span class="short" aria-label="Ministerium f&#252;r Staatssicherheit (MfS)" data-balloon-pos="up"><a href="../../../intel/stasi/index.htm" class="short" >Stasi</a></span>
+as part of a covert video surveillance system.
+The 0.8x converter was known by <span class="short" aria-label="Ministerium f&#252;r Staatssicherheit (MfS)" data-balloon-pos="up"><a href="../../../intel/stasi/index.htm" class="short" >Stasi</a></span> as <b>Ger&#228;t 14607-001</b>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="files/14607_001.pdf">Description of the converter</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../camera/so352">SO-3.5.2 pinhole lens</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../camera/so352">            <div style="position: relative;" data-balloon-pos="up" aria-label="Pinhole lens SO-3.5.2 (Projekt 14607) for use with a video camera" data-balloon-length="large">
+<a href="../../camera/so352">            <div style="position: relative;" data-balloon-pos="up" aria-label="Pinhole lens SO-3.5.2 (Projekt 14607) for use with a video camera" data-balloon-length="large">
+            <img src="../../camera/so352/img/303737/007/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Pinhole lens SO-3.5.2 (Projekt 14607) for use with a video camera"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=spec></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Specifications</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Device</div>Portable foldable monocular            <li><div style="display:inline-block; width:100px;">Purpose</div>Image enlarger for (covert) viewing            <li><div style="display:inline-block; width:100px;">Model</div>Turmon 8x21            <li><div style="display:inline-block; width:100px;">Manufacturer</div><a href="../../../manuf/zeiss">Carl Zeiss Jena</a>            <li><div style="display:inline-block; width:100px;">Year</div>1960 ~            <li><div style="display:inline-block; width:100px;">Country</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="German Democratic Republic (GDR) (East-Germany)">DDR</span>            <li><div style="display:inline-block; width:100px;">Production</div>1921-2020            <li><div style="display:inline-block; width:100px;">Principle</div>Porro prism            <li><div style="display:inline-block; width:100px;">Prism coating</div>n/a <sup><font color="#FF8800">1</font></sup>            <li><div style="display:inline-block; width:100px;">Enlargement</div>8 &#215;            <li><div style="display:inline-block; width:100px;">Diameter</div>21 mm (objective)            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Field Of View">FOV</span></div>121 m at 1000 m            <li><div style="display:inline-block; width:100px;">Focus</div>1.6 m - &infin;            <li><div style="display:inline-block; width:100px;">Exit pupil</div>2.6 mm            <li><div style="display:inline-block; width:100px;">Dimensions</div>Unfolded: 70 &#215; 45 &#215; 25 mm<br /><div style="display:inline-block; width:100px;"></div>Folded: 45 &#215; 45 &#215; 45 mm            <li><div style="display:inline-block; width:100px;">Weight</div>84 g          </ul>
+</font></td></tr></table>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Porro prisms do not need phase correcting coatings.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=names></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Brands
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:60px;">1921</div>Carl Zeiss            <li><div style="display:inline-block; width:60px;">1946</div>Carl Zeiss Jena (VEB Zeiss Jena),            <li><div style="display:inline-block; width:60px;">1970</div>Aus Jena <sup><font color="#FF8800">1</font></sup>            <li><div style="display:inline-block; width:60px;">1989</div>Zeiss Jena GmbH            <li><div style="display:inline-block; width:60px;">1990</div>Jenoptik Carl Zeiss Jena GmbH            <li><div style="display:inline-block; width:60px;">1992</div>Docter-Optic-Eisfeld GmbH, Jena <sup><font color="#FF8800">2</font></sup>            <li><div style="display:inline-block; width:60px;">1997</div>Analytic Jena GmbH, trading as Docter-Optics            <li><div style="display:inline-block; width:60px;">2016</div>Noblex GmbH <a href="#ref_3">[3]</a> <sup><font color="#FF8800">3</font></sup>          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li style="margin-bottom: 6px;">
+The name <b>Aus Jena</b> was mainly used on products exported from the <span class="short tooltip-red" data-balloon-pos="up" aria-label="German Democratic Republic (GDR) (East-Germany)">DDR</span>
+  from 1970 onwards.
+          </li>
+          <li style="margin-bottom: 6px;">
+<b>Docter Optic</b> was declared bankrupt on 15 November 1995.
+  Parts of it were acquired in 1997 by Analytic Jena GmbH, whilst products
+  were sold under the <b>Docter-Optics</b> brand (note the 's' at the end).
+          </li>
+          <li style="margin-bottom: 6px;">
+In 2016, Docter-Optics was acquired by Noblex GmbH, and gradually
+  rebranded the products 'Noblex'. Most of the older product lines
+  were discontinued from 2018 onwards. Turmon 8x21 was discontinued
+  in 2020.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+            <li><a href="https://www.opticsreviewer.com/docter-monocular.html" target="_blank"><i>The Docter Monocular - Have You Ever Seen a Folding Monocular?</i></a><br />
+Optics Reviewer, August 2012.
+            <p />
+            <a name="ref_2"></a>
+            <li><a href="https://www.houseofoutdoor.com/wp-content/uploads/2023/07/A-century-of-foldable-micro-monoculars.pdf" target="_blank">Dr. Gijs van Ginkel, <i>A Century of Foldable Micro Monoculars</i></a><br />
+House of Outdoor & Optics, July 2023.
+            <p />
+            <a name="ref_3"></a>
+            <li><a href="https://en.wikipedia.org/wiki/NOBLEX_E-Optics_GmbH" target="_blank">Wikipedia, <i>NOBLEX E-Optics GmbH</i></a><br />
+Visited 17 April 2025.
+            <p />
+            <a name="ref_4"></a>
+            <li><a href="https://web.archive.org/web/20181221043422/http://www.akoehler.de/">Albrecht K&#246;hler, <i>Fernoptik, Turmon 8x21</i></a><br />
+21 December 2018. Retrieved via WayBack machine.
+            <p />
+            <a name="ref_5"></a>
+<li><font color=#F52E00>Detlev Vreisleben, Personal correspondence</font><br />
+19 April 2025.
+            <p />
+            <a name="ref_6"></a>
+            <li><a href="files/14607_001.pdf">Beschreibung des Ger&#228;tes 14607-001 (0.8x converter) <sup><font color="#FF8800">1</font></sup> </a><br />
+Description of device 14607-001 for device 14607 (German).<br />
+<span class="short" aria-label="Ministerium f&#252;r Staatssicherheit (MfS)" data-balloon-pos="up"><a href="../../../intel/stasi/index.htm" class="short" >MfS</a></span>, 7 July 1981. BStU 000352-000357.
+            <p />
+            <a name="ref_7"></a>
+            <li><a href="http://www.bstu.de/EN" target="_blank">Bundesbeauftragte f&#252;r die Stasi-Unterlagen (BStU) <sup><font color="#FF8800">2</font></sup> </a><br />
+Federal Commissioner for the Stasi-Records.
+            <p />
+            <a name="ref_8"></a>
+            <li><a href="https://en.wikipedia.org/wiki/Porro_prism" target="_blank">Wikipedia, <i>Porro prism</i></a><br />
+Visited 20 April 2025.
+            <p />
+            <a name="ref_9"></a>
+            <li><a href="https://www.monocular.info/turmon.htm" target="_blank">Monoculars, <i>Carl Zeiss Turmon</i></a><br />
+Website. Visited 20 April 2025.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li style="margin-bottom: 6px;">
+Document from BStU <a href="#ref_7">[7]</a> kindly provided by Detlev Vreisleben <a href="#ref_5">[5]</a>.
+          </li>
+          <li style="margin-bottom: 6px;">
+Full name: Bundesbeauftragte f&#252;r die Unterlagen des Staatssicherheitsdienstes
+  der ehemaligen Deutschen Demokratischen Republik
+  (<a href="../../glossary.htm#ddr"><span data-balloon-pos="up" aria-label="More about: DDR">DDR</span></a>) &mdash;
+  Federal Commissioner for the Records of the
+  <a href="../../glossary.htm#mfs"><span data-balloon-pos="up" aria-label="More about: State Security Service">State Security Service</span></a>
+  of the former German Democratic Republic (<a href="../../glossary.htm#ddr"><span data-balloon-pos="up" aria-label="More about: GDR">GDR</span></a>) &mdash;
+  officially abbreviated <b>BStU</b>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../index.htm">Other optical devices</a><br />
+            <li><a href="../../../manuf/zeiss">Other Zeiss products</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Thursday 17 April 2025. Last changed: Sunday, 20 April 2025 - 08:46 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

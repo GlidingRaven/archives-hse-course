@@ -1,0 +1,3387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>PD-5</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cryptomuseum">
+    <meta name="twitter:url" content="https://www.cryptomuseum.com/spy/pd5/index.htm">
+    <meta name="twitter:image" content="https://www.cryptomuseum.com/spy/pd5/img/304034/006/full.jpg">
+    <meta name="twitter:title" content="PD5 spy radio transmitter">
+    <meta name="twitter:description" content="Two-piece valve-based clandestine radio set, probably built around 1963 by an unknown country">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../index.htm"><img src="../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../spy/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../spy/glossary.htm';" >Glossary</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../spy/ww2.htm';" >World War II</div>
+          <div class="but sel sub" onClick="location.href='../../spy/coldwar.htm';" >Cold War</div>
+          <div class="but sub" onClick="location.href='../../spy/sf.htm';" >Special forces</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Spy radio sets used by Stay-Behind Organisations in Europe" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../spy/sbo/index.htm';" >Stay-Behind</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Short Range Agent Communication" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../spy/srac.htm';" >SRAC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="One-Way Voice Link - Numbers Stations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../spy/owvl/index.htm';" >OWVL</div>
+</div>
+          <div class="but sub" onClick="location.href='../../spy/rx.htm';" >Receivers</div>
+          <div class="but sel sub" onClick="location.href='../../spy/other.htm';" >Other</div>
+          <div class="spacer"></div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Countries
+          </div>
+          <div class="hidden">
+            <div class="but sub" onClick="location.href='../../spy/sbo/at/index.htm';" >Austria</div>
+            <div class="but sub" onClick="location.href='../../spy/belgium.htm';" >Belgium</div>
+            <div class="but sub" onClick="location.href='../../spy/cs.htm';" >Czechoslovakia</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former East-Germany" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../spy/ddr.htm';" >DDR</div>
+</div>
+            <div class="but sub" onClick="location.href='../../spy/kyynel/index.htm';" >Finland</div>
+            <div class="but sub" onClick="location.href='../../spy/fr.htm';" >France</div>
+            <div class="but sub" onClick="location.href='../../spy/de.htm';" >Germany</div>
+            <div class="but sub" onClick="location.href='../../spy/hu.htm';" >Hungary</div>
+            <div class="but sub" onClick="location.href='../../spy/italy.htm';" >Italy</div>
+            <div class="but sub" onClick="location.href='../../spy/japan.htm';" >Japan</div>
+            <div class="but sub" onClick="location.href='../../spy/nl.htm';" >Netherlands</div>
+            <div class="but sub" onClick="location.href='../../spy/norway.htm';" >Norway</div>
+            <div class="but sub" onClick="location.href='../../spy/poland.htm';" >Poland</div>
+            <div class="but sub" onClick="location.href='../../spy/sweden.htm';" >Sweden</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United Kingdom" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../spy/uk.htm';" >UK</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United States of America" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../spy/usa.htm';" >USA</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former Soviet Union" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../spy/ussr.htm';" >USSR</div>
+</div>
+            <div class="but sub" onClick="location.href='../../spy/yugo.htm';" >Yugoslavia</div>
+          </div>
+          </div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../index.htm"><img src="../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../pd3"><div  data-balloon-pos="up" aria-label="Back to similar PD-3 spy radio set" class="key">&larr; PD-3</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>PD-5</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Spy radio transmitter</b>
+<font color=#F52E00>- wanted item</font>
+<br />
+<br />
+<b>PD-5</b> is a valve-based crystal-operated short wave (<span class="short tooltip-red" data-balloon-pos="up" aria-label="High Frequency (3-30 MHz)">HF</span>)
+<a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: spy radio transmitter">spy radio transmitter</span></a>,
+developed around 1963 by an unknown country.
+The device consists of two identically sized units
+&mdash; a <a href="#psu"><span data-balloon-pos="up" aria-label="Jump to: mains power supply unit (PSU)">mains power supply unit (PSU)</span></a>
+and the actual <a href="#tx"><span data-balloon-pos="up" aria-label="Jump to: transmitter">transmitter</span></a> &mdash;
+and has externally fitted valves (tubes).
+The device shown here surfaced in China in 2023.
+Almost all parts are British, which suggests that it might
+have been built by a country with close ties to the <span class="short" aria-label="United Kingdom (Great Britain)" data-balloon-pos="up"><a href="../uk.htm" class="short" >UK</a></span>, such as
+Singapore, Hong Kong, or India <sup><font color="#FF8800">1</font></sup>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The two units are interconnected by means of a
+<a href="img/304034/013/full.jpg"><span data-balloon-pos="up" aria-label="More about: 14-pin connector at the sides">14-pin connector at the sides</span></a>.
+The <a href="#tx"><span data-balloon-pos="up" aria-label="Jump to: transmitter">transmitter</span></a> is built around three
+<a href="../../valves/6aq5.htm"><span data-balloon-pos="up" aria-label="More about: 6AQ5 valves">6AQ5 valves</span></a> that are installed
+into ceramic sockets at the <a href="img/304034/007/full.jpg"><span data-balloon-pos="up" aria-label="More about: rear of the enclosure">rear of the enclosure</span></a>.
+This was likely done
+to provide efficient cooling. One valve is used for the oscillator,
+whilst the other two &ndash; connected in parallel &ndash; are used as a Power Amplifier
+(<span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Amplifier (final stage of the transmitter)">PA</span>). Recessed black knobs are present for adjusting the various tuned circuits.
+<br />
+<br />
+The <a href="#psu"><span data-balloon-pos="up" aria-label="Jump to: power supply unit">power supply unit</span></a> (<span class="short" aria-label="Power Supply Unit" data-balloon-pos="up"><a href="#psu" class="short" >PSU</a></span>) is internally wired for use on the
+Chinese 220V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> mains network, but could internally also be wired for
+110V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span>.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304034/001/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="PD5 spy radio set">
+<a href="img/304034/001/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="PD5 spy radio set">
+            <img src="img/304034/001/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="PD5 spy radio set"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Both units are housed in a
+<a href="img/304034/014/full.jpg"><span data-balloon-pos="up" aria-label="More about: professionally molded black-eloxed ...">professionally molded black-eloxed aluminium enclosure</span></a>
+and have a <a href="#int"><span data-balloon-pos="up" aria-label="Jump to: professionally built interior">professionally built interior</span></a>.
+It is likely that only a small quantity was made, probably no more than 50 units.
+The PD-5 was released around the same time as the slightly larger
+<a href="../pd3"><span data-balloon-pos="up" aria-label="More about: PD-3">PD-3</span></a>, which produces a higher output power and has a higher
+frequency range.
+It is likely that it used for agent-to-centre communications
+by a (currently unknown) state actor.
+The unit shown here was found in China and was obtained by a collector
+from a former Chinese intelligence warehouse <a href="#ref_2">[2]</a>.
+It was probably confiscated by Chinese authorities in the late
+1960s or early 1970s.
+The device shown here is currently held in
+the private collection of Reinhard Glogowski in Germany <a href="#ref_1">[1]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+From 1819 to 1965 (interrupted by <span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../glossary.htm#ww2" class="short" >WWII</a></span>), Singapore
+  was part of the British Empire. <font color="#E7E">&#10148;</font>&nbsp;<a href="https://en.wikipedia.org/wiki/Singapore" target="_blank">Wikipedia</a>
+  <br />
+  From 1841 to 1997 (interrupted by <span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../glossary.htm#ww2" class="short" >WWII</a></span>), Hong Kong was part
+  of the British Empire. <font color="#E7E">&#10148;</font>&nbsp;<a href="https://en.wikipedia.org/wiki/Hong_Kong" target="_blank">Wikipedia</a>
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <div style="background-color: #EEEEEE; font-size: 8pt; padding: 12px; color: #777777; overflow: auto;">
+<font color=#F52E00>PLEASE HELP &mdash;</font>
+The origin of this spy radio transmitter is currently unknown.
+We are also looking for circuit diagrams and any documentation that is
+related to this device, including stories of former users.
+Please help us to expand this page by
+providing additional information. <font color="#E7E">&#10148;</font>&nbsp;<a href="mailto:info@cryptomuseum.com">Contact us</a>
+        </div>
+        <div class="clear_float"></div>
+<div style="height: 20px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PD5 power supply (left) and transmitter (right)">          <img src="img/304034/000/thumbnail.jpg"
+           alt="PD5 power supply (left) and transmitter (right)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PD5 power supply (left) and transmitter (right)">          <img src="img/304034/006/thumbnail.jpg"
+           alt="PD5 power supply (left) and transmitter (right)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/006"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PD5 spy radio set">          <img src="img/304034/001/thumbnail.jpg"
+           alt="PD5 spy radio set"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/001"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PD5 spy radio set">          <img src="img/304034/002/thumbnail.jpg"
+           alt="PD5 spy radio set"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/002"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Rear view">          <img src="img/304034/003/thumbnail.jpg"
+           alt="Rear view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/003"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PD5 transmitter (without valves)">          <img src="img/304034/008/thumbnail.jpg"
+           alt="PD5 transmitter (without valves)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/008"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Transmitter - rear view">          <img src="img/304034/007/thumbnail.jpg"
+           alt="Transmitter - rear view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/007"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PD5 power supply">          <img src="img/304034/005/thumbnail.jpg"
+           alt="PD5 power supply"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/005"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304034/000/full.jpg" alt="PD5 power supply (left) and transmitter (right)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304034/006/full.jpg" alt="PD5 power supply (left) and transmitter (right)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304034/001/full.jpg" alt="PD5 spy radio set">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304034/002/full.jpg" alt="PD5 spy radio set">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304034/003/full.jpg" alt="Rear view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304034/008/full.jpg" alt="PD5 transmitter (without valves)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304034/007/full.jpg" alt="Transmitter - rear view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304034/005/full.jpg" alt="PD5 power supply">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image below shows a complete PD-5 transmitter setup. At the left is the
+<a href="#psu"><span data-balloon-pos="up" aria-label="Jump to: power supply unit">power supply unit</span></a> (<span class="short" aria-label="Power Supply Unit" data-balloon-pos="up"><a href="#psu" class="short" >PSU</a></span>), marked <b>PD5-P</b>, with a
+<a href="../../valves/6j6.htm"><span data-balloon-pos="up" aria-label="More about: 6J6 double triode">6J6 double triode</span></a>
+valve installed in a ceramic socket at the top.
+<a href="img/304034/046/full.jpg"><span data-balloon-pos="up" aria-label="More about: At the rear">At the rear</span></a> is a
+<a href="img/304034/044/full.jpg"><span data-balloon-pos="up" aria-label="More about: 2-pin receptacle">2-pin receptacle</span></a>
+for connection of the 220V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> mains voltage. The 9-pin socket at the front
+(SK2) is for connection of a <a href="#key"><span data-balloon-pos="up" aria-label="Jump to: morse key">morse key</span></a> or burst keyer.
+At the right is a <a href="#conn_sk1"><span data-balloon-pos="up" aria-label="Jump to: 14-pin male plug (SK1)">14-pin male plug (SK1)</span></a>
+for connection of the <b>PD5-T</b>
+transmitter. The set is turned on with the <a href="#mode"><span data-balloon-pos="up" aria-label="Jump to: MODE selector">MODE selector</span></a>.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304034/006/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304034/006/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/pd5_ext.png"
+             style="
+            "
+             align="center"
+             width="616px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+At the right is the <a href="#tx"><span data-balloon-pos="up" aria-label="Jump to: transmitter">transmitter</span></a>, marked <b>PD5-T</b>. It is built around three
+<a href="../../valves/6aq5.htm"><span data-balloon-pos="up" aria-label="More about: 6AQ5 (EL90) valves">6AQ5 (EL90) valves</span></a> that are installed in the
+<a href="img/304034/012/full.jpg"><span data-balloon-pos="up" aria-label="More about: ceramic sockets at the rear">ceramic sockets at the rear</span></a>.
+At the left is a <a href="#conn_sk1"><span data-balloon-pos="up" aria-label="Jump to: 14-pin socket (SK1)">14-pin socket (SK1)</span></a>
+that mates with SK1 of the <span class="short" aria-label="Power Supply Unit" data-balloon-pos="up"><a href="#psu" class="short" >PSU</a></span>.
+At the rear is a
+<a href="img/304034/043/full.jpg"><span data-balloon-pos="up" aria-label="More about: socket for connection of a wire ...">socket for connection of a wire antenna</span></a>.
+Strangely, the device has no ground terminal for connection of a counterpoise.
+At the right is a 2 mm jack socket marked 'J'. The purpose of this socket
+is currently unknown.
+<br />
+<br />
+After
+<a href="img/304034/039/full.jpg"><span data-balloon-pos="up" aria-label="More about: installing a suitable crystal in ...">installing a suitable crystal in the XTAL socket</span></a>
+of the transmitter, <a href="img/304034/047/full.jpg"><span data-balloon-pos="up" aria-label="More about: connecting a morse key">connecting a morse key</span></a>
+to socket SK2 on the <span class="short" aria-label="Power Supply Unit" data-balloon-pos="up"><a href="#psu" class="short" >PSU</a></span> and setting the MODE selector to TUNE, the
+indicator to the right of the meter (OSC IND) should light up. If it doesn't,
+select a different BAND and adjust the oscillator (OSC) for maximum light of
+the indicator. Next, switch to 'operate' (OPR), hold down the morse key and
+tune the rightmost two knobs (AMP TUNING and ANT TUNING) for a maximum reading
+on the meter. The device is now ready for operation.
+The MODE selector has three settings:
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=mode></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Mode
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:60px;">OFF</div>Power off            <li><div style="display:inline-block; width:60px;">TUNE</div>Low power transmission (for tuning)            <li><div style="display:inline-block; width:60px;">OPR</div>Full power          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Always on
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Note that the oscillator is always on, and that the morse key turns the
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Amplifier (final stage of the transmitter)">PA</span> valves on and off. Some of the oscillator signal leaks out through the
+antenna, which means that at short distances from the transmitter, the
+oscillator signal can be picked up by a receiver, even when the morse key is
+not held down. This is potentially dangerous for the agent that uses it, as it
+allowes the device to be located more easily by means of
+<a href="../../df/df.htm"><span data-balloon-pos="up" aria-label="More about: Radio Direction Finding (RDF)">Radio Direction Finding (RDF)</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=rx></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          No receiver
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+No receivers were found with any of the surviving PD-5 units, which indicates
+that the device was either used for <i>blind transmissions</i>, in which a
+message was sent and no acknowledgement was needed, or that it was used in
+combination with a regular domestic short wave receiver that could be purchased
+freely in the host country without attracting attention.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PD5 transmitter - control panel">          <img src="img/304034/009/thumbnail.jpg"
+           alt="PD5 transmitter - control panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/009"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PD5 power supply - control panel">          <img src="img/304034/010/thumbnail.jpg"
+           alt="PD5 power supply - control panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/010"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Mating connectors">          <img src="img/304034/013/thumbnail.jpg"
+           alt="Mating connectors"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/013"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Crystal fitted on the transmitter">          <img src="img/304034/039/thumbnail.jpg"
+           alt="Crystal fitted on the transmitter"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/039"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Valve sockets">          <img src="img/304034/012/thumbnail.jpg"
+           alt="Valve sockets"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/012"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Valves">          <img src="img/304034/011/thumbnail.jpg"
+           alt="Valves"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/011"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Mains power connected to the PSU">          <img src="img/304034/044/thumbnail.jpg"
+           alt="Mains power connected to the PSU"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/044"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Antenna connected to the ANT socket">          <img src="img/304034/043/thumbnail.jpg"
+           alt="Antenna connected to the ANT socket"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/043"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'B'" onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">B</span></div></div><div style="height: 40px;"></div>
+<div id="slide_2" class="slide" onClick="slideClose('slide_2')"><span class="slide_close_left" onClick="slideClose('slide_2')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_2', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304034/009/full.jpg" alt="PD5 transmitter - control panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304034/010/full.jpg" alt="PD5 power supply - control panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304034/013/full.jpg" alt="Mating connectors">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304034/039/full.jpg" alt="Crystal fitted on the transmitter">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304034/012/full.jpg" alt="Valve sockets">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304034/011/full.jpg" alt="Valves">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304034/044/full.jpg" alt="Mains power connected to the PSU">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304034/043/full.jpg" alt="Antenna connected to the ANT socket">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_2', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_2', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Origin</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <a href="img/304034/033/full.jpg"><span data-balloon-pos="up" aria-label="More about: electrolytic capacitors">electrolytic capacitors</span></a>
+inside the <span class="short" aria-label="Power Supply Unit" data-balloon-pos="up"><a href="#psu" class="short" >PSU</a></span> were made by Plessey (<span class="short" aria-label="United Kingdom (Great Britain)" data-balloon-pos="up"><a href="../uk.htm" class="short" >UK</a></span>) in
+April 1962, which means that the device was probably made in late 1962 or
+during the course of 1963. Most other parts are from the <span class="short" aria-label="United Kingdom (Great Britain)" data-balloon-pos="up"><a href="../uk.htm" class="short" >UK</a></span> as well.
+The enclosures are professionally made with manufacturing methods that were
+commonly used by the <span class="short" aria-label="United States of America" data-balloon-pos="up"><a href="../usa.htm" class="short" >USA</a></span> for devices like <a href="../rs6"><span data-balloon-pos="up" aria-label="More about: RS-6">RS-6</span></a>, <a href="../qrc222"><span data-balloon-pos="up" aria-label="More about: QRC-222">QRC-222</span></a>
+and <a href="../../burst/gra71"><span data-balloon-pos="up" aria-label="More about: CK-8 (GRA-71)">CK-8 (GRA-71)</span></a>. The compact and modular construction
+allows the device to be hidden easily, and tells us that the device was most
+likely intended for agent-to-centre communication and/or espionage.
+<br />
+<br />
+According to a former owner, the devices turned  up in various places in China,
+including a city that used to have a large warehouse of the Chinese intelligence
+agency, some 30 years ago. It is likely that the devices had been captured
+in the preceeding years, and that after investigation they were
+stored in the warehouse. They have since landed in the hands of collectors.
+It is also likely that the Chinese used the design of this transmitter as the
+base for developing their own spy radio sets <a href="#ref_2">[2]</a>.
+Such sets had a similar circuit, but were built with parts from the
+<a href="../glossary.htm#soviet"><span data-balloon-pos="up" aria-label="More about: Soviet Union">Soviet Union</span></a>.
+<br />
+<br />
+It is currently unknown by which country or intelligence service the PD-5
+was developed, but it is clear that it was produced professionally by
+a country that had access to first class components, mainly from the <span class="short" aria-label="United Kingdom (Great Britain)" data-balloon-pos="up"><a href="../uk.htm" class="short" >UK</a></span>,
+and to first class manufacturing methods. As the build style is completely
+different from the regular <a href="../uk.htm"><span data-balloon-pos="up" aria-label="More about: British spy radio sets">British spy radio sets</span></a>, it seems more
+likely that it was made by a country near China, which had strong ties with
+the <span class="short" aria-label="United Kingdom (Great Britain)" data-balloon-pos="up"><a href="../uk.htm" class="short" >UK</a></span>, such as Singapore, Hong Kong or India.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=parts></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Parts</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=#tx>
+<div  data-balloon-pos="up" aria-label="PD5-T transmitter">          <img src="img/304034/007/thumbnail.jpg"
+           alt="PD5-T transmitter"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#tx>Transmitter</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#psu>
+<div  data-balloon-pos="up" aria-label="PD5-P power supply unit">          <img src="img/304034/045/thumbnail.jpg"
+           alt="PD5-P power supply unit"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#psu>PSU</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#valves>
+<div  data-balloon-pos="up" aria-label="Valves (tubes)">          <img src="img/304034/011/thumbnail.jpg"
+           alt="Valves (tubes)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#valves>Valves</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#xtal>
+<div  data-balloon-pos="up" aria-label="Plug-in quartz crystals">          <img src="img/304034/041/thumbnail.jpg"
+           alt="Plug-in quartz crystals"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#xtal>Crystals</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#key>
+<div  data-balloon-pos="up" aria-label="Morse key">          <img src="img/304034/049/thumbnail.jpg"
+           alt="Morse key"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#key>Morse</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#ant>
+<div  data-balloon-pos="up" aria-label="Wire antenna">          <img src="../mk15/img/303702/030/thumbnail.jpg"
+           alt="Wire antenna"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#ant>Antenna</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <a name=tx></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Transmitter 
+          &nbsp;<font color="#CCC">
+          PD5-T
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <b>PD5-T</b> is a <span class="short" aria-label="Continuous Wave (morse code)" data-balloon-pos="up"><a href="../../radio/morse" class="short" >CW</a></span>-only transmitter, suitable for sending messages in
+<a href="../../radio/morse"><span data-balloon-pos="up" aria-label="More about: morse code">morse code</span></a>,
+either with a <a href="#key"><span data-balloon-pos="up" aria-label="Jump to: morse key">morse key</span></a> or with a medium speed burst keyer.
+<br />
+<br />
+The device is housed in a black-eloxed molded aluminium enclosure that
+measures 120 &#215; 67 &#215; 43 mm and weighs 430 grams without the valves.
+It is powered by the <a href="#psu"><span data-balloon-pos="up" aria-label="Jump to: PD5-P power supply unit">PD5-P power supply unit</span></a>, which should be attached
+to its left side.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304034/007/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Transmitter - rear view">
+<a href="img/304034/007/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Transmitter - rear view">
+            <img src="img/304034/007/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Transmitter - rear view"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=psu></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Power supply unit 
+          &nbsp;<font color="#CCC">
+          PD5-P
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <b>PD5-P</b> power supply unit is also housed in a black-eloxed molded
+enclosure that measures 120 &#215; 67 &#215; 43 mm and weighs 860 grams without
+the valve. A <a href="../../valves/6j6.htm"><span data-balloon-pos="up" aria-label="More about: 6J6 valve">6J6 valve</span></a> should be
+<a href="img/304034/005/full.jpg"><span data-balloon-pos="up" aria-label="More about: installed into the ceramic socket ...">installed into the ceramic socket at the top</span></a>.
+<br />
+<br />
+<a href="img/304034/046/full.jpg"><span data-balloon-pos="up" aria-label="More about: At the rear">At the rear</span></a>
+it has a two-pin receptacle for connection to the mains.
+It is connected to the <a href="#tx"><span data-balloon-pos="up" aria-label="Jump to: transmitter">transmitter</span></a> via the
+<a href="#conn_sk1"><span data-balloon-pos="up" aria-label="Jump to: 14-pin connector (SK1)">14-pin connector (SK1)</span></a> at its right side. At the front is a
+<a href="#conn_sk2"><span data-balloon-pos="up" aria-label="Jump to: socket (SK2)">socket (SK2)</span></a> for connection of a <a href="#key"><span data-balloon-pos="up" aria-label="Jump to: morse key">morse key</span></a>.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304034/045/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="PSU - front view">
+<a href="img/304034/045/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="PSU - front view">
+            <img src="img/304034/045/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="PSU - front view"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=valves></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Valves 
+          &nbsp;<font color="#CCC">
+          tubes
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The PD-5 was supplied with four valves (tubes) that were stowed separately
+to avoid damage. The smaller valve is a <a href="../../valves/6j6.htm"><span data-balloon-pos="up" aria-label="More about: 6J6 double triode">6J6 double triode</span></a>,
+which must be installed in the socket on the <a href="#psu"><span data-balloon-pos="up" aria-label="Jump to: PSU">PSU</span></a>.
+<br />
+<br />
+The other three valves are all <a href="../../valves/6aq5.htm"><span data-balloon-pos="up" aria-label="More about: 6AQ5 (EL90) penthodes">6AQ5 (EL90) penthodes</span></a>
+that must be installed in the three sockets at the
+<a href="img/304034/007/full.jpg"><span data-balloon-pos="up" aria-label="More about: rear of the transmitter">rear of the transmitter</span></a>.
+One of these valves is used in the oscillator, whilst the other two are
+used in the power amplifier (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Amplifier (final stage of the transmitter)">PA</span>).
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304034/011/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Valves">
+<a href="img/304034/011/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Valves">
+            <img src="img/304034/011/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Valves"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=xtal></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Crystals
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The PD-5 transmitter must be operated with a suitable quartz crystal
+that should be installed in the socket marked XTAL. It accepts any
+crystal with 2.35 mm pins spaced at 12.34 mm, which includes
+<a href="../../radio/xtal/index.htm#hc"><span data-balloon-pos="up" aria-label="More about: HC-17/U, HC-6/L">HC-17/U, HC-6/L</span></a>,
+<a href="../../radio/xtal/index.htm#ft243"><span data-balloon-pos="up" aria-label="More about: CR-5/U, FT241 and FT-243">CR-5/U, FT241 and FT-243</span></a> shapes.
+Such crystal were available from many <span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../glossary.htm#ww2" class="short" >WWII</a></span> surplus stores at the time.
+<br />
+<br />
+<a href="#rest"><span data-balloon-pos="up" aria-label="Jump to: Experiments with the PD5 shown here">Experiments with the PD5 shown here</span></a>, have revealed that it can be
+operated reliably between 3 and 16 MHz.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../radio/xtal/index.htm">Crystal shapes</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304034/040/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Suitable crystals">
+<a href="img/304034/040/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Suitable crystals">
+            <img src="img/304034/040/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Suitable crystals"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=key></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Morse key
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The transmitter is designed for the transmission of
+<a href="../../radio.morse"><span data-balloon-pos="up" aria-label="More about: morse code">morse code</span></a> signals, using <span class="short" aria-label="Continuous Wave (morse code)" data-balloon-pos="up"><a href="../../radio/morse" class="short" >CW</a></span>.
+Basically any type of morse key &mdash; big or small &mdash; can be used.
+It is likely though, that the device was used with a small morse key,
+so that it could be hidden more easily.
+<br />
+<br />
+The image on the right shows an example of such a key, which in this case
+was taken from a <span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../glossary.htm#ww2" class="short" >WWII</a></span> field telephone.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304034/049/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Miniature morse key">
+<a href="img/304034/049/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Miniature morse key">
+            <img src="img/304034/049/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Miniature morse key"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=ant></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Wire antenna
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+A suitable antenna should be connected to the socket marked ANT at the rear
+of the trans&shy;mitter. In most cases, a long wire with a mini&shy;mum length
+of 20 metres should be sufficient.
+<br />
+<br />
+The image on the right shows an example of a suitable antenna wire. It is
+important that the antenna is hanging freely in the air and that the remote
+end is properly isolated from and trees or buildings in its vicinity.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../mk15/img/303702/030/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Antenna wire with 3 mm plug">
+<a href="../mk15/img/303702/030/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Antenna wire with 3 mm plug">
+            <img src="../mk15/img/303702/030/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Antenna wire with 3 mm plug"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Valves">          <img src="img/304034/011/thumbnail.jpg"
+           alt="Valves"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/011"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Transmitter with valves - rear view">          <img src="img/304034/004/thumbnail.jpg"
+           alt="Transmitter with valves - rear view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/004"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="12.187 MHz crystal">          <img src="img/304034/041/thumbnail.jpg"
+           alt="12.187 MHz crystal"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/041"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Suitable crystals">          <img src="img/304034/040/thumbnail.jpg"
+           alt="Suitable crystals"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/040"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Crystal fitted on the transmitter">          <img src="img/304034/039/thumbnail.jpg"
+           alt="Crystal fitted on the transmitter"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/039"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="12.187 MHz crystal installed in the XTAL socket">          <img src="img/304034/042/thumbnail.jpg"
+           alt="12.187 MHz crystal installed in the XTAL socket"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/042"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Miniature morse key">          <img src="img/304034/049/thumbnail.jpg"
+           alt="Miniature morse key"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/049"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Morse key connection to the PSU">          <img src="img/304034/047/thumbnail.jpg"
+           alt="Morse key connection to the PSU"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/047"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Transmitter - rear view">          <img src="img/304034/007/thumbnail.jpg"
+           alt="Transmitter - rear view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 9);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/007"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PD5 transmitter (without valves)">          <img src="img/304034/008/thumbnail.jpg"
+           alt="PD5 transmitter (without valves)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 10);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/008"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PSU - front view">          <img src="img/304034/045/thumbnail.jpg"
+           alt="PSU - front view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 11);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/045"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PSU - rear view">          <img src="img/304034/046/thumbnail.jpg"
+           alt="PSU - rear view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 12);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/046"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'C'" onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">C</span></div></div><div style="height: 40px;"></div>
+<div id="slide_3" class="slide" onClick="slideClose('slide_3')"><span class="slide_close_left" onClick="slideClose('slide_3')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_3', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 1 / 12</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304034/011/full.jpg" alt="Valves">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 2 / 12</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304034/004/full.jpg" alt="Transmitter with valves - rear view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 3 / 12</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304034/041/full.jpg" alt="12.187 MHz crystal">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 4 / 12</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304034/040/full.jpg" alt="Suitable crystals">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 5 / 12</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304034/039/full.jpg" alt="Crystal fitted on the transmitter">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 6 / 12</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304034/042/full.jpg" alt="12.187 MHz crystal installed in the XTAL socket">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 7 / 12</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304034/049/full.jpg" alt="Miniature morse key">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 8 / 12</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304034/047/full.jpg" alt="Morse key connection to the PSU">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 9 / 12</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304034/007/full.jpg" alt="Transmitter - rear view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 10 / 12</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304034/008/full.jpg" alt="PD5 transmitter (without valves)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 11 / 12</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304034/045/full.jpg" alt="PSU - front view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 12 / 12</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304034/046/full.jpg" alt="PSU - rear view">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_3', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_3', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=int></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Interior</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The PD-5 is a <a href="img/304034/025/full.jpg"><span data-balloon-pos="up" aria-label="More about: professionally manufactured device">professionally manufactured device</span></a>,
+with a black-eloxed molded
+enclosure that consists of two case shells. The shells are held in place by
+black metric recessed screws around the sides. After removing these screws,
+the <a href="img/304034/014/full.jpg"><span data-balloon-pos="up" aria-label="More about: case shells can be taken off">case shells can be taken off</span></a>,
+revealing the interior.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Inside the device is an aluminium frame with itegrated threaded nuts and
+sub-panels, to which all parts are mounted. The image on the right shows the
+frame as seen from the top. At the right is the antenna coil, which is wound
+around a rectangular pertinax rod. Behind the coil, the wiring of the two
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Amplifier (final stage of the transmitter)">PA</span>-valves is visible.
+<br />
+<br />
+The left half of the unit contains the oscillator. Its XTAL socket is visible
+behind the meter. <a href="img/304034/017/full.jpg"><span data-balloon-pos="up" aria-label="More about: At the bottom side">At the bottom side</span></a>,
+the other side of the antenna coil is visible, together
+with the passive parts, the band selector and the tuning capacitors.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304034/015/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Transmitter interior - top view">
+<a href="img/304034/015/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Transmitter interior - top view">
+            <img src="img/304034/015/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Transmitter interior - top view"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The power supply unit is
+<a href="img/304034/026/full.jpg"><span data-balloon-pos="up" aria-label="More about: also housed in a black-eloxed ...">also housed in a black-eloxed molded aluminium enclosure</span></a>,
+and is built in the same style as the transmitter. Inside the device
+is also an anluminium frame to which all parts are mounted. The transformer was
+probably purpose-made to fit the small enclosure.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Transmitter with removed case shells">          <img src="img/304034/014/thumbnail.jpg"
+           alt="Transmitter with removed case shells"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/014"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Transmitter interior - top view">          <img src="img/304034/015/thumbnail.jpg"
+           alt="Transmitter interior - top view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/015"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Transmitter interior - bottom view">          <img src="img/304034/017/thumbnail.jpg"
+           alt="Transmitter interior - bottom view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/017"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Transmitter interior - top side">          <img src="img/304034/016/thumbnail.jpg"
+           alt="Transmitter interior - top side"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/016"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Transmitter interior - bottom side">          <img src="img/304034/018/thumbnail.jpg"
+           alt="Transmitter interior - bottom side"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/018"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Coil and band selector">          <img src="img/304034/019/thumbnail.jpg"
+           alt="Coil and band selector"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/019"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Tuning capacitors">          <img src="img/304034/020/thumbnail.jpg"
+           alt="Tuning capacitors"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/020"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Transmitter detail">          <img src="img/304034/021/thumbnail.jpg"
+           alt="Transmitter detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/021"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Transmitter detail">          <img src="img/304034/022/thumbnail.jpg"
+           alt="Transmitter detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 9);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/022"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Valve socket wiring">          <img src="img/304034/023/thumbnail.jpg"
+           alt="Valve socket wiring"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 10);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/023"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Oscillator tuning knob removed">          <img src="img/304034/024/thumbnail.jpg"
+           alt="Oscillator tuning knob removed"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 11);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/024"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Manufacturing detail">          <img src="img/304034/025/thumbnail.jpg"
+           alt="Manufacturing detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 12);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/025"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Power supply with removed case shells">          <img src="img/304034/026/thumbnail.jpg"
+           alt="Power supply with removed case shells"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 13);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/026"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Power supply - top view">          <img src="img/304034/027/thumbnail.jpg"
+           alt="Power supply - top view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 14);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/027"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Power supply - top view">          <img src="img/304034/030/thumbnail.jpg"
+           alt="Power supply - top view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 15);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/030"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Power supply - top side">          <img src="img/304034/031/thumbnail.jpg"
+           alt="Power supply - top side"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 16);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/031"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Power supply - bottom side">          <img src="img/304034/032/thumbnail.jpg"
+           alt="Power supply - bottom side"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 17);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/032"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Plessey capacitors">          <img src="img/304034/033/thumbnail.jpg"
+           alt="Plessey capacitors"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 18);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/033"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PSU capacitor and two neon lamps">          <img src="img/304034/034/thumbnail.jpg"
+           alt="PSU capacitor and two neon lamps"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 19);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/034"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Transformer wiring">          <img src="img/304034/035/thumbnail.jpg"
+           alt="Transformer wiring"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 20);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/035"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interconnection detail">          <img src="img/304034/036/thumbnail.jpg"
+           alt="Interconnection detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 21);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/036"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Fuse">          <img src="img/304034/037/thumbnail.jpg"
+           alt="Fuse"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 22);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/037"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PSU serial number (stamped into frame)">          <img src="img/304034/038/thumbnail.jpg"
+           alt="PSU serial number (stamped into frame)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 23);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/038"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'D'" onClick="slideOpen('slide_4'); slideCurrent('slide_4', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">D</span></div></div><div style="height: 40px;"></div>
+<div id="slide_4" class="slide" onClick="slideClose('slide_4')"><span class="slide_close_left" onClick="slideClose('slide_4')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_4', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 1 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/014/full.jpg" alt="Transmitter with removed case shells">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 2 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/015/full.jpg" alt="Transmitter interior - top view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 3 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/017/full.jpg" alt="Transmitter interior - bottom view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 4 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/016/full.jpg" alt="Transmitter interior - top side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 5 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/018/full.jpg" alt="Transmitter interior - bottom side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 6 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/019/full.jpg" alt="Coil and band selector">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 7 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/020/full.jpg" alt="Tuning capacitors">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 8 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/021/full.jpg" alt="Transmitter detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 9 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/022/full.jpg" alt="Transmitter detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 10 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/023/full.jpg" alt="Valve socket wiring">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 11 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/024/full.jpg" alt="Oscillator tuning knob removed">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 12 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/025/full.jpg" alt="Manufacturing detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 13 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/026/full.jpg" alt="Power supply with removed case shells">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 14 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/027/full.jpg" alt="Power supply - top view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 15 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/030/full.jpg" alt="Power supply - top view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 16 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/031/full.jpg" alt="Power supply - top side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 17 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/032/full.jpg" alt="Power supply - bottom side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 18 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/033/full.jpg" alt="Plessey capacitors">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 19 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/034/full.jpg" alt="PSU capacitor and two neon lamps">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 20 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/035/full.jpg" alt="Transformer wiring">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 21 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/036/full.jpg" alt="Interconnection detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 22 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/037/full.jpg" alt="Fuse">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 23 / 23</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304034/038/full.jpg" alt="PSU serial number (stamped into frame)">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_4', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_4', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=rest></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Restoration</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+As the device featured here is not part of our collection &mdash; it was given
+on loan for a short period of time <a href="#ref_1">[1]</a> &mdash; we have only tested it functionally,
+and have made no attempt to restore it. Power was applied with a VARIAC and
+was gradually raised over the course of 15 minues from 50V to 200V, in order to
+allow the <a href="img/304034/033/full.jpg"><span data-balloon-pos="up" aria-label="More about: electrolytic capacitors">electrolytic capacitors</span></a>
+in the <span class="short" aria-label="Power Supply Unit" data-balloon-pos="up"><a href="#psu" class="short" >PSU</a></span> to reform themselves somewhat.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+It should be noted
+that the device was designed for use on 220V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> and that the mains voltage
+in continental Europe is now 240V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span>. For this reason, we have set the VARIAC
+to a maximum of 200V for our tests. With a mains voltage below 180V, the
+oscillator became unstable.
+<br />
+<br />
+The device was first tested with a 12.187 MHz crystal. After the valves had
+warmed up, appropriate settings of the BAND selector and the oscillator tuning
+(OSC) were sought and found. Note that the oscillator is always on, and that
+it can be picked up on a nearby receiver.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304034/042/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="12.187 MHz crystal installed in the XTAL socket">
+<a href="img/304034/042/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="12.187 MHz crystal installed in the XTAL socket">
+            <img src="img/304034/042/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="12.187 MHz crystal installed in the XTAL socket"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+For the experiment, we connected an improvised antenna &mdash; a 20 metre long wire &mdash;
+to the <a href="img/304034/043/full.jpg"><span data-balloon-pos="up" aria-label="More about: ANT terminal at the rear of the ...">ANT terminal at the rear of the transmitter</span></a>.
+The oscillator signal could easily be picked up by our general coverage
+communications receiver, even when a 30dB attenuator was inserted in the
+antenna path. A 100 Hz hum was noticable in the signal, indicating that the
+electrolytic capacitors inside the <span class="short" aria-label="Power Supply Unit" data-balloon-pos="up"><a href="#psu" class="short" >PSU</a></span> have lost most of their capacity.
+It is up to the owner to replace them (or not).
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+For the next experiment, we connected an improvised morse key to the
+<a href="#conn_sk2"><span data-balloon-pos="up" aria-label="Jump to: SK2 socket">SK2 socket</span></a> at the front of the <span class="short" aria-label="Power Supply Unit" data-balloon-pos="up"><a href="#psu" class="short" >PSU</a></span>.
+Only two pins of this socket are used for the morse key (C and H).
+They connect the kathode of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Amplifier (final stage of the transmitter)">PA</span> valves to ground.
+When pressing down the morse key, the meter gives an indication of the
+antenna current. The rightmost two knobs (AMP TUNING and ANT TUNING)
+were then adjusted for a maximum meter reading.
+<br />
+<br />
+The fact that the hum in the signal increases when the key is held down, is
+another indication that the electrolytic capacitors are worn out.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304034/047/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Morse key connection to the PSU">
+<a href="img/304034/047/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Morse key connection to the PSU">
+            <img src="img/304034/047/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Morse key connection to the PSU"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Apart from this, the transmitter works perfectly, some 60 years after it
+was made. We tested it with various crystals and it could be made to operate
+reliably between 3 and 16 MHz. A crystal at a frequency of 18.074 MHz worked,
+but produced an unstable signal. This probably means that this frequency it
+outside the transmitter's specified range. At the lower end of the spectrum,
+a frequency of 3 MHz appeared to be the lowest on which a stable
+signal could be obtained.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Test setip with crystal, morse key, antenna and mains connection" data-balloon-length="large">          <img src="img/304034/048/thumbnail.jpg"
+           alt="Test setip with crystal, morse key, antenna and mains connection"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/048"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Mains power connected to the PSU">          <img src="img/304034/044/thumbnail.jpg"
+           alt="Mains power connected to the PSU"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/044"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Antenna connected to the ANT socket">          <img src="img/304034/043/thumbnail.jpg"
+           alt="Antenna connected to the ANT socket"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/043"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="12.187 MHz crystal installed in the XTAL socket">          <img src="img/304034/042/thumbnail.jpg"
+           alt="12.187 MHz crystal installed in the XTAL socket"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/042"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Morse key connection to the PSU">          <img src="img/304034/047/thumbnail.jpg"
+           alt="Morse key connection to the PSU"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/047"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Plessey capacitors">          <img src="img/304034/033/thumbnail.jpg"
+           alt="Plessey capacitors"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/033"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PSU capacitor and two neon lamps">          <img src="img/304034/034/thumbnail.jpg"
+           alt="PSU capacitor and two neon lamps"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304034/034"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'E'" onClick="slideOpen('slide_5'); slideCurrent('slide_5', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">E</span></div></div><div style="height: 40px;"></div>
+<div id="slide_5" class="slide" onClick="slideClose('slide_5')"><span class="slide_close_left" onClick="slideClose('slide_5')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_5', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 1 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304034/048/full.jpg" alt="Test setip with crystal, morse key, antenna and mains connection">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 2 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304034/044/full.jpg" alt="Mains power connected to the PSU">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 3 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304034/043/full.jpg" alt="Antenna connected to the ANT socket">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 4 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304034/042/full.jpg" alt="12.187 MHz crystal installed in the XTAL socket">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 5 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304034/047/full.jpg" alt="Morse key connection to the PSU">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 6 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304034/033/full.jpg" alt="Plessey capacitors">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 7 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304034/034/full.jpg" alt="PSU capacitor and two neon lamps">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_5', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_5', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=conn></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Connections</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <a name=conn_sk1></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Inter-module connector 
+          &nbsp;<font color="#CCC">
+          SK1
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<a href="img/304034/013/full.jpg"><span data-balloon-pos="up" aria-label="More about: A set of 14-pin male/female ...">A set of 14-pin male/female connectors</span></a>,
+both marked SK1, are used to connect the <a href="#psu"><span data-balloon-pos="up" aria-label="Jump to: PSU">PSU</span></a> and the <a href="#tx"><span data-balloon-pos="up" aria-label="Jump to: transmitter">transmitter</span></a>.
+The male part at the right side of the <span class="short" aria-label="Power Supply Unit" data-balloon-pos="up"><a href="#psu" class="short" >PSU</a></span>, mates with the female part at
+the left side of the transmitter. The image below show the pinout when looking
+into the male part on the <span class="short" aria-label="Power Supply Unit" data-balloon-pos="up"><a href="#psu" class="short" >PSU</a></span>.
+The pinout of this connector is currently unknown.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li>?            <li>?            <li>?            <li>?            <li>?            <li>?            <li>?            <li>?            <li>?            <li>?            <li>?            <li>?            <li>?            <li>?          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="svg/pd5_sk1.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=conn_sk2></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Morse key 
+          &nbsp;<font color="#CCC">
+          SK2
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+At the front of the <a href="#psu"><span data-balloon-pos="up" aria-label="Jump to: power supply unit">power supply unit</span></a> is a hexagonal socket for
+connection of a <a href="#key"><span data-balloon-pos="up" aria-label="Jump to: morse key">morse key</span></a> or medium speed burst keyer (up to 300 WPM).
+It is a 9-pin Winchester M9-series socket, made by Electro Methods Ltd in the
+<span class="short" aria-label="United Kingdom (Great Britain)" data-balloon-pos="up"><a href="../uk.htm" class="short" >UK</a></span>, of which only two pins are used (C and H). Shorting these two pins,
+enables the transmitter's <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Amplifier (final stage of the transmitter)">PA</span> stage.
+Below is the layout when looking into the socket.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <li><font color=#F52E00><i>n.c.</i></font>            <li><font color=#F52E00><i>n.c.</i></font>            <li>Morse key (1)            <li><font color=#F52E00><i>n.c.</i></font>            <li><font color=#F52E00><i>n.c.</i></font>            <li><font color=#F52E00><i>n.c.</i></font>            <li><font color=#F52E00><i>n.c.</i></font>            <li>Morse key (2)            <li value="10"><font color=#F52E00><i>n.c.</i></font>          </ol type=A>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="svg/pd5_sk2.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol type=A>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Antenna 
+          &nbsp;<font color="#CCC">
+          ANT
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+At the <a href="img/304034/007/full.jpg"><span data-balloon-pos="up" aria-label="More about: rear of the transmitter">rear of the transmitter</span></a>
+(PD5-T) is a 2 mm socket for
+<a href="img/304034/043/full.jpg"><span data-balloon-pos="up" aria-label="More about: connection of a wire antenna">connection of a wire antenna</span></a>.
+In practice, a <a href="#ant"><span data-balloon-pos="up" aria-label="Jump to: 20 m long wire">20 m long wire</span></a> would probably be sufficient.
+Strangely there is no connection for a counterpoise or ground wire.
+It is possible though that the capacitive coupling to the mains wiring
+provides a sufficient counterpoise in this case.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          2 mm jack socket 
+          &nbsp;<font color="#CCC">
+          J
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+At the right side of the transmitter is a socket for a 2 mm jack, similar to
+the ones that are commonly used with earphones. This socket is fully isolated
+from the chassis and has two connections, known as <i>ring</i> and <i>tip</i>.
+The function of this socket is currently unknown.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Mains
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+At the rear of the <span class="short" aria-label="Power Supply Unit" data-balloon-pos="up"><a href="#psu" class="short" >PSU</a></span> is a two-pin receptacle for connection to the
+mains <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> network. In this case, the <span class="short" aria-label="Power Supply Unit" data-balloon-pos="up"><a href="#psu" class="short" >PSU</a></span> is wired for use on 220V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span>,
+but the transformer can internally also be wired for use on 110V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> networks.
+Note that there is no ground connection (earth}.
+As a result, due to capacitive leakage
+inside the <span class="short" aria-label="Power Supply Unit" data-balloon-pos="up"><a href="#psu" class="short" >PSU</a></span>, part of the mains voltage can be felt on the metal body of
+the <span class="short" aria-label="Power Supply Unit" data-balloon-pos="up"><a href="#psu" class="short" >PSU</a></span> and the <a href="#tx"><span data-balloon-pos="up" aria-label="Jump to: transmitter">transmitter</span></a>.
+It is therefore strongly discouraged to place one hand on the body of the
+transmitter, whilst operating the morse key with the other hand.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=spec></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Specifications</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Device</div>Spy radio transmitter            <li><div style="display:inline-block; width:100px;">Purpose</div>Agent-to-centre communication            <li><div style="display:inline-block; width:100px;">Model</div>PD-5            <li><div style="display:inline-block; width:100px;">Manufacturer</div><font color=#F52E00><i>unknown</i></font>            <li><div style="display:inline-block; width:100px;">Country</div><font color=#F52E00><i>unknown</i></font> <sup><font color="#FF8800">2</font></sup>            <li><div style="display:inline-block; width:100px;">Year</div>~ 1963            <li><div style="display:inline-block; width:100px;">Valves</div>3 &#215; <a href="../../valves/6aq5.htm">6AQ5</a> (TX), 1 &#215; <a href="../../valves/6j6.htm">6J6</a> (<span class="short" aria-label="Power Supply Unit" data-balloon-pos="up"><a href="#psu" class="short" >PSU</a></span>)            <li><div style="display:inline-block; width:100px;">Frequency</div>3 - 16 MHz            <li><div style="display:inline-block; width:100px;">Bands</div>5            <li><div style="display:inline-block; width:100px;">Operation</div>Crystal            <li><div style="display:inline-block; width:100px;">Modulation</div><span class="short" aria-label="Continuous Wave (morse code)" data-balloon-pos="up"><a href="../../radio/morse" class="short" >CW</a></span> (<a href="../../radio/morse">morse</a>)            <li><div style="display:inline-block; width:100px;">Output</div>10W (est.)            <li><div style="display:inline-block; width:100px;">Mains</div>220V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span>            <li><div style="display:inline-block; width:100px;">Dimensions</div>120 &#215; 67 &#215; 43 mm (each)            <li><div style="display:inline-block; width:100px;">Weight</div>430 g (Transmitter) <sup><font color="#FF8800">1</font></sup> <br /><div style="display:inline-block; width:100px;"></div>860 g (<span class="short" aria-label="Power Supply Unit" data-balloon-pos="up"><a href="#psu" class="short" >PSU</a></span>) <sup><font color="#FF8800">1</font></sup>            <li><div style="display:inline-block; width:100px;">Quantity</div>50 (est.)          </ul>
+</font></td></tr></table>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Without the valves (tubes).
+          </li>
+          <li>
+Probably Singapore, Hong Kong or India.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=spec_parts></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Parts origin
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Parts from the following countries have been identified:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Valves</div>3 &#215; <a href="../../valves/6aq5.htm">6AQ5 (EL90)</a>, 1 &#215; <a href="../../valves/6j6.htm">6J6</a> (Mullard, <span class="short" aria-label="United Kingdom (Great Britain)" data-balloon-pos="up"><a href="../uk.htm" class="short" >UK</a></span>)            <li><div style="display:inline-block; width:100px;">Valve sockets</div>?            <li><div style="display:inline-block; width:100px;">Meter</div>?            <li><div style="display:inline-block; width:100px;">Capacitors</div>Plessey (UK)<br /><div style="display:inline-block; width:100px;"></div>Murata (Japan)<br /><div style="display:inline-block; width:100px;"></div>Lemco (UK)            <li><div style="display:inline-block; width:100px;">Resistors</div>E-SIL Components (UK)            <li><div style="display:inline-block; width:100px;">SK1</div>14-pin male/female, SMRE 14S, Electro Methods Ltd. (UK)            <li><div style="display:inline-block; width:100px;">SK2</div>9-pin female connector M9S, Electro Methods Ltd. (UK)          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Known serial numbers
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below are the surviving PD-5 units that have surfaced so far.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">PD5-T-15 (10)</div><div style="display:inline-block; width:100px;">Transmitter</div>Reinhard Glogowski            <li><div style="display:inline-block; width:100px;">PD5-P-26 (17)</div><div style="display:inline-block; width:100px;">Power supply</div>Reinhard Glogowski          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+It is believed
+that the designator consists of the model number (PD5), followed by the device
+type (T &equals; transmitter, P &equals; <span class="short" aria-label="Power Supply Unit" data-balloon-pos="up"><a href="#psu" class="short" >PSU</a></span>), followed by the serial
+number. Given the low serial numbers found, and the absence of leading zeros,
+it seems likely that around 50 units were made.
+The number in brackets is the serial number that was found inside the
+device, engraved in the chassis.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+<li><font color=#F52E00>Reinhard Glogowski, PD5-P and PD5-T</font><br />
+Crypto Museum, 25 April 2023.
+            <p />
+            <a name="ref_2"></a>
+<li><font color=#F52E00>Anonymous, former owner of a PD5 in China</font><br />
+Correspondence via <a href="#ref_1">[1]</a>, 26 April 2023.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../pd3">PD-3 spy radio set</a><br />
+            <li><a href="../index.htm">Other spy radio sets</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Tuesday 25 April 2023. Last changed: Wednesday, 05 November 2025 - 12:09 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../index.htm"><img src=../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

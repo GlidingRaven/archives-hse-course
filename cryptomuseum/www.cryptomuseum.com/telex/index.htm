@@ -1,0 +1,3560 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>Telex</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="Keywords" content="Telex, Teletype, Fernschreiber, Creed, 5-bit code, baudot, verreschrijver">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../index.htm"><img src="../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but sub first sel" onClick="location.href='../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of telegraphic equipment" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../telex/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tools used in combination with telegraphic equipment" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../telex/tools/index.htm';" >Tools</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../telex/creed/index.htm';" >Creed</div>
+          <div class="but sub" onClick="location.href='../telex/gretag/etk47/index.htm';" >Gretag</div>
+          <div class="but sub" onClick="location.href='../telex/hell/index.htm';" >HELL</div>
+          <div class="but sub" onClick="location.href='../telex/sagem/index.htm';" >Sagem</div>
+          <div class="but sub" onClick="location.href='../telex/siemens/index.htm';" >Siemens</div>
+          <div class="but sub" onClick="location.href='../telex/telefunken/index.htm';" >Telefunken</div>
+          <div class="but sub" onClick="location.href='../telex/teletype/index.htm';" >Teletype</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../index.htm"><img src="../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Telex</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Teletypewriters, peripherals and related equipment</b>
+<br />
+<br />
+This part of the Crypto Museum website deals with automatic
+(analogue or digital)
+telegraphy by means of typewriter-style devices, using a binary code
+such as the common <a href="../crypto/baudot.htm"><span data-balloon-pos="up" aria-label="More about: 5-bit Baudot code">5-bit Baudot code</span></a>,
+or the <a href="../crypto/ascii.htm"><span data-balloon-pos="up" aria-label="More about: 7/8-bit ASCII">7/8-bit ASCII</span></a> standard.
+Such systems are generally known as
+<b>teletype</b> machines (after the <a href="teletype"><span data-balloon-pos="up" aria-label="More about: Teletype brand">Teletype brand</span></a>),
+<b>teleprinters</b>,
+<b>telex</b> (short for <u>Tel</u>eprinter <u>Ex</u>change),
+<b>teletypewriters</b>
+or by the abbreviation <b>TTY</b>.
+On these pages we will use <b>telex</b> or <b>teleprinter</b> to identify such systems.
+<br />
+<br />
+Teleprinters are operated over land lines (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Teletype">TTY</span>)
+or via radio (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Teletype">RTTY</span>), mainly using the standard speed of 45.45 baud (USA)
+or 50 baud (Europe). The use over radio links is also known as
+Telex Over Radio (TOR).
+<a href="repair/index.htm"><span data-balloon-pos="up" aria-label="More about: Punched paper tape">Punched paper tape</span></a> was commonly used with telex
+equipment for storing and (re)transmitting messages.
+Although telex has been superseded by modern computers, some computer
+terminal sessions are still called <span class="short tooltip-red" data-balloon-pos="up" aria-label="Teletype">TTY</span>, for example on UNIX-like
+operating systems.
+<br />
+<br />
+Although teleprinters are not cryptographic devices,
+many of them were used in combination with external
+<a href="../crypto/index.htm"><span data-balloon-pos="up" aria-label="More about: cipher machines">cipher machines</span></a> and some even had built-in cryptographic capabilities. For that reason, several machines and peripherals are described
+on this website. For a more complete overview of telex machines,
+please check out the links at the bottom of this page.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=tp></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Teleprinters on this website
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=hell/index.htm>
+<div  data-balloon-pos="up" aria-label="Hellschreiber, Feld-Hell and other HELL-based systems" data-balloon-length="large">          <img src="hell/img/300078/020/thumbnail.jpg"
+           alt="Hellschreiber, Feld-Hell and other HELL-based systems"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=hell/index.htm>Feld-Hell</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=gretag/etk47/index.htm>
+<div  data-balloon-pos="up" aria-label="Gretag ETK-47 teleprinter with 14-bit technology">          <img src="gretag/etk47/img/301751/005/thumbnail.jpg"
+           alt="Gretag ETK-47 teleprinter with 14-bit technology"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=gretag/etk47/index.htm>ETK-47</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=hell/atf.htm>
+<div  data-balloon-pos="up" aria-label="RFT ATF Hellschreiber">          <img src="hell/img/300562/047/thumbnail1.jpg"
+           alt="RFT ATF Hellschreiber"
+           border="0" width=75 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=hell/atf.htm>ATF</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=siemens/t68/index.htm>
+<div  data-balloon-pos="up" aria-label="Siemens T-68D telex machine">          <img src="siemens/t68/img/300152/025/thumbnail.jpg"
+           alt="Siemens T-68D telex machine"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=siemens/t68/index.htm>T-68D</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=siemens/t100/index.htm>
+<div  data-balloon-pos="up" aria-label="Siemens T-100 teleprinter">          <img src="siemens/t100/img/304054/004/thumbnail.jpg"
+           alt="Siemens T-100 teleprinter"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=siemens/t100/index.htm>T-100</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=tekade/fs200/index.htm>
+<div  data-balloon-pos="up" aria-label="TeKaDe FS-200 and FS-220 military electronic teleprinters (telex)" data-balloon-length="large">          <img src="tekade/fs200/img/300596/000/thumbnail.jpg"
+           alt="TeKaDe FS-200 and FS-220 military electronic teleprinters (telex)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=tekade/fs200/index.htm>FS-200</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=mite/ugc41/index.htm>
+<div  data-balloon-pos="up" aria-label="MITE UGC-41 teletypewriter (US Navy)">          <img src="mite/ugc41/img/302768/001/thumbnail.jpg"
+           alt="MITE UGC-41 teletypewriter (US Navy)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mite/ugc41/index.htm>UGC-41</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=telefunken/telestar/index.htm>
+<div  data-balloon-pos="up" aria-label="AEG Telefunken Telestar 120, 121 and 122">          <img src="telefunken/telestar/img/302704/011/thumbnail.jpg"
+           alt="AEG Telefunken Telestar 120, 121 and 122"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=telefunken/telestar/index.htm>Telestar</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 16px;"></div>        <a name=per></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Peripherals
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=siemens/tsend61/index.htm>
+<div  data-balloon-pos="up" aria-label="Siemens T.send.61b punched paper tape transmitter">          <img src="siemens/tsend61/img/302292/000/thumbnail.jpg"
+           alt="Siemens T.send.61b punched paper tape transmitter"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=siemens/tsend61/index.htm>T send 61</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=siemens/tsend77/index.htm>
+<div  data-balloon-pos="up" aria-label="Siemens T.send.77 double punched paper tape reader">          <img src="siemens/tsend77/img/303277/007/thumbnail.jpg"
+           alt="Siemens T.send.77 double punched paper tape reader"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=siemens/tsend77/index.htm>T send 77</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=santec/gnt4606/index.htm>
+<div  data-balloon-pos="up" aria-label="Santec (Helioprint) GNT-4606 paper-tape puncher/reader for telex and computer" data-balloon-length="large">          <img src="santec/gnt4606/img/301562/000/thumbnail.jpg"
+           alt="Santec (Helioprint) GNT-4606 paper-tape puncher/reader for telex and computer"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=santec/gnt4606/index.htm>GNT-4606</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=facit/n4000/index.htm>
+<div  data-balloon-pos="up" aria-label="Facit N-4000 paper tape reader/puncher">          <img src="facit/n4000/img/301826/000/thumbnail.jpg"
+           alt="Facit N-4000 paper tape reader/puncher"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=facit/n4000/index.htm>N-4000</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=siemens/ag13>
+<div  data-balloon-pos="up" aria-label="Anschlussgerät 13 (Connection Device 13)">          <img src="siemens/ag13/img/304018/001/thumbnail.jpg"
+           alt="Anschlussgerät 13 (Connection Device 13)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=siemens/ag13>AG-13</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=siemens/t56>
+<div  data-balloon-pos="up" aria-label="Siemens T-56 Fernschreib-Endsatz (teleprinter terminating unit) with signalling" data-balloon-length="large">          <img src="siemens/t56/img/304022/019/thumbnail.jpg"
+           alt="Siemens T-56 Fernschreib-Endsatz (teleprinter terminating unit) with signalling"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=siemens/t56>T-56</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=tekade/fag200>
+<div  data-balloon-pos="up" aria-label="TekaDe FAG-200 teleprinter connection device">          <img src="tekade/fag200/img/302848/000/thumbnail.jpg"
+           alt="TekaDe FAG-200 teleprinter connection device"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=tekade/fag200>FAG-200</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=tools/index.htm>
+<div  data-balloon-pos="up" aria-label="Repair and maintenance tools">          <img src="repair/img/301613/003/thumbnail.jpg"
+           alt="Repair and maintenance tools"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=tools/index.htm>Tools</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=telefunken/th3483/index.htm>
+<div  data-balloon-pos="up" aria-label="Military teleprinter connection device TH-3483">          <img src="telefunken/th3483/img/302739/000/thumbnail.jpg"
+           alt="Military teleprinter connection device TH-3483"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=telefunken/th3483/index.htm>TH-3483</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=telefunken/th3676>
+<div  data-balloon-pos="up" aria-label="Military teleprinter connection device with FSK modem TH-3676" data-balloon-length="large">          <img src="telefunken/th3676/img/304278/012/thumbnail.jpg"
+           alt="Military teleprinter connection device with FSK modem TH-3676"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=telefunken/th3676>TH-3676</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=teletron/tg44e>
+<div  data-balloon-pos="up" aria-label="Telegraphy demodulator">          <img src="teletron/tg44e/img/303264/000/thumbnail.jpg"
+           alt="Telegraphy demodulator"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=teletron/tg44e>TG-44E</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../radio/hagenuk/tg1001m>
+<div  data-balloon-pos="up" aria-label="Hagenuk TG-1001/M FSK demodulator">          <img src="../radio/hagenuk/tg1001m/img/304293/012/thumbnail.jpg"
+           alt="Hagenuk TG-1001/M FSK demodulator"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../radio/hagenuk/tg1001m>TG-1001M</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 16px;"></div>        <a name=man></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Teleprinter manufacturers on this website
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=creed/index.htm>
+<div  data-balloon-pos="up" aria-label="Creed Teleprinters">          <img src="../img/thumb.jpg"
+           alt="Creed Teleprinters"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=creed/index.htm>Creed</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=gretag/etk47/index.htm>
+<div  data-balloon-pos="up" aria-label="Gretag ETK-47 teleprinter with 14-bit technology">          <img src="gretag/etk47/img/301751/005/thumbnail.jpg"
+           alt="Gretag ETK-47 teleprinter with 14-bit technology"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=gretag/etk47/index.htm>Gretag</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=hell/index.htm>
+<div  data-balloon-pos="up" aria-label="Rudolf Hell">          <img src="hell/img/300078/020/thumbnail.jpg"
+           alt="Rudolf Hell"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=hell/index.htm>Hell</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=mite/ugc41/index.htm>
+<div  data-balloon-pos="up" aria-label="MITE Corporation">          <img src="mite/ugc41/img/302768/001/thumbnail.jpg"
+           alt="MITE Corporation"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mite/ugc41/index.htm>MITE</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=lorenz>
+<div  data-balloon-pos="up" aria-label="Standard Electric Lorenz (SEL)">          <img src="../img/thumb.jpg"
+           alt="Standard Electric Lorenz (SEL)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=lorenz>Lorenz</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=philips>
+<div  data-balloon-pos="up" aria-label="Philips Telecommunications Industry">          <img src="../img/thumb.jpg"
+           alt="Philips Telecommunications Industry"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=philips>Philips</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=sagem/index.htm>
+<div  data-balloon-pos="up" aria-label="Sagem">          <img src="../img/thumb.jpg"
+           alt="Sagem"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=sagem/index.htm>Sagem</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=siemens/index.htm>
+<div  data-balloon-pos="up" aria-label="Siemens & Halske">          <img src="siemens/t68/img/300152/025/thumbnail.jpg"
+           alt="Siemens & Halske"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=siemens/index.htm>Siemens</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=tekade>
+<div  data-balloon-pos="up" aria-label="TeKaDe">          <img src="tekade/fs200/img/300596/000/thumbnail.jpg"
+           alt="TeKaDe"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=tekade>TeKaDe</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=telefunken/index.htm>
+<div  data-balloon-pos="up" aria-label="AEG Telefunken">          <img src="telefunken/telestar/img/302704/011/thumbnail.jpg"
+           alt="AEG Telefunken"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=telefunken/index.htm>Telefunken</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=teletype/index.htm>
+<div  data-balloon-pos="up" aria-label="Teletype Corporation">          <img src="../img/thumb.jpg"
+           alt="Teletype Corporation"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=teletype/index.htm>Teletype</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 16px;"></div>        <a name=spec></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Specials
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../crypto/rs/pu104/index.htm>
+<div  data-balloon-pos="up" aria-label="Random number generator for the creation of key tapes" data-balloon-length="large">          <img src="../crypto/rs/pu104/img/301967/000/thumbnail.jpg"
+           alt="Random number generator for the creation of key tapes"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../crypto/rs/pu104/index.htm>PU-104</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=rs/ga082>
+<div  data-balloon-pos="up" aria-label="Rohde & Schwarz GA-082 FSK analyzer">          <img src="rs/ga082/img/304284/065/thumbnail.jpg"
+           alt="Rohde & Schwarz GA-082 FSK analyzer"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=rs/ga082>GA-082</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 16px;"></div>        <a name=test></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Test equipment
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=siemens/tlab340/index.htm>
+<div  data-balloon-pos="up" aria-label="Siemens T.lab.340a teleprinter speed error recorder" data-balloon-length="large">          <img src="siemens/tlab340/img/301722/027/thumbnail.jpg"
+           alt="Siemens T.lab.340a teleprinter speed error recorder"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=siemens/tlab340/index.htm>T lab 340</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=bund/mes23>
+<div  data-balloon-pos="up" aria-label="Fernschreiberprüfgerät MES 2/3 (teleprinter test device)" data-balloon-length="large">          <img src="bund/mes23/img/302191/006/thumbnail.jpg"
+           alt="Fernschreiberprüfgerät MES 2/3 (teleprinter test device)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=bund/mes23>MES 2/3</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=siemens/t124>
+<div  data-balloon-pos="up" aria-label="Teleprinter distortion generator">          <img src="siemens/t124/img/300643/002/thumbnail.jpg"
+           alt="Teleprinter distortion generator"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=siemens/t124>T-124</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=siemens/2h3>
+<div  data-balloon-pos="up" aria-label="2H3">          <img src="siemens/2h3/img/300642/004/thumbnail.jpg"
+           alt="2H3"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=siemens/2h3>2H3</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=siemens/t109>
+<div  data-balloon-pos="up" aria-label="9.T.mse.109a relay tester">          <img src="siemens/t109/img/304020/013/thumbnail.jpg"
+           alt="9.T.mse.109a relay tester"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=siemens/t109>T-109</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=siemens/pgfs020>
+<div  data-balloon-pos="up" aria-label="Teleprinter test device PGFS-020">          <img src="siemens/pgfs020/img/304280/012/thumbnail.jpg"
+           alt="Teleprinter test device PGFS-020"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=siemens/pgfs020>PGFS-020</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 16px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Related topics
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=telexphone>
+<div  data-balloon-pos="up" aria-label="TelexPhone interface for connecting teleprinters via analogue telephone lines" data-balloon-length="large">          <img src="telexphone/img/301791/012/thumbnail.jpg"
+           alt="TelexPhone interface for connecting teleprinters via analogue telephone lines"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=telexphone>TelexPhone</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=itelex>
+<div  data-balloon-pos="up" aria-label="i-Telex interface for connecting teleprinters to the internet" data-balloon-length="large">          <img src="itelex/img/304240/000/thumbnail.jpg"
+           alt="i-Telex interface for connecting teleprinters to the internet"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=itelex>i-Telex</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../crypto>
+<div  data-balloon-pos="up" aria-label="Cipher machines for the encryption of teleprinter traffic" data-balloon-length="large">          <img src="../crypto/siemens/t52/img/t52_thumb.jpg"
+           alt="Cipher machines for the encryption of teleprinter traffic"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../crypto>Crypto</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../phone>
+<div  data-balloon-pos="up" aria-label="Vintage telephone (systems)">          <img src="../phone/gpo/700/img/303644/001/thumbnail.jpg"
+           alt="Vintage telephone (systems)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../phone>Telephone</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Standards</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+For many years, Telex was the de-facto standard for communication
+with the Armies world-wide.
+It was introduced long before <span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../spy/glossary.htm#ww2" class="short" >WWII</a></span> (in 1849) and lasted until the 1990s.
+It was also used by press agencies, governments, large corporations and
+by the police. Telex can be employed reliably  over (fixed) land lines
+as well as over radio (HF). In the past, there was an international
+Telex network, consisting of decicated land lines and special exchanges,
+but towards the 2000s most of them were gradually phased out.
+Telex is still used today by amateur radio operators (HAMs).
+<br />
+<br />
+Although most telex systems use the 5-bit digital
+<a href="../ref/ita2/index.htm"><span data-balloon-pos="up" aria-label="More about: ITA2 code">ITA2 code</span></a>, generally
+known the <a href="../crypto/baudot.htm"><span data-balloon-pos="up" aria-label="More about: Baudot code">Baudot code</span></a>,
+there are systems that use a less-common standards,
+such as the multi-tone <a href="../crypto/coquelet.htm"><span data-balloon-pos="up" aria-label="More about: COQUELET code">COQUELET code</span></a>,
+often used in France,
+and the <a href="gretag/etk47/index.htm"><span data-balloon-pos="up" aria-label="More about: 14-bit ETK standard">14-bit ETK standard</span></a>
+that was introduced by <a href="../manuf/gretag/index.htm"><span data-balloon-pos="up" aria-label="More about: Gretag">Gretag</span></a>
+in the 1950s.
+Such systems were considered more fault-tolerant but never met
+wide-spread acceptance.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../ref/ita2/index.htm">ITA2 (baudot)</a><br />
+            <li><a href="../ref/ita5/index.htm">ITA5 (ASCII)</a><br />
+            <li><a href="gretag/etk47/index.htm">ETK</a><br />
+          </ul>
+</font>        </td><td width="70%"
+         valign="bottom"
+        >
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li><a href="../ref/coquelet/index.htm">COQUELET</a><br />
+          <li><a href="../ref/piccolo/index.htm">Piccolo</a><br />
+          <li><a href="philips/stb75/index.htm">Telex over Radio with FEC and ARQ</a><br />
+        </ul>
+      </font></td></tr></table>
+<div style="height: 14px;"></div>      <a name=today></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Telex today</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Telex, short for <u>Tel</u>eprinter <u>Ex</u>change,
+is a world-wide communications system
+of the past. It was once one of the most important methods of communication
+between companies, embassies, go&shy;vern&shy;mental bodies, public services,
+etc., but lost its popularity in the 1980s, when they were gra&shy;dually
+replaced by fax machines (which have meanwhile been superseded by modern
+computers).
+<br />
+<br />
+Nevertheless, they are marvels of electromechanical and electronic engineering,
+and many collec&shy;tors and museums make an effort to preserve them for the future
+and keep them running when&shy;ever possible. This can be done by wire (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Teletype">TTY</span>) or via
+radio (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Teletype">RTTY</span>). There are several initiatives that allow (private) collectors
+and museums to take part in a modern world-wide network of tele&shy;printers,
+such as <a href="#telexphone"><span data-balloon-pos="up" aria-label="Jump to: TelePhone">TelePhone</span></a>
+and <a href="#itelex"><span data-balloon-pos="up" aria-label="Jump to: i-Telex">i-Telex</span></a> project listed below.
+        </font>
+        </td></tr>
+      </table>
+<br />      <a name=telexphone></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        TelexPhone
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+TelexPhone is an old project that allows vintage teleprinters to
+connect to a worldwide network of (bobbyist) teleprinters, via a
+regular analogue dial-up telephone line (POTS).
+<br />
+<br />
+With the demise of the old analogue networks, the project has
+meanwhile been superseded by the <a href="itelex"><span data-balloon-pos="up" aria-label="More about: i-Telex project">i-Telex project</span></a> (below).
+Our TelexPhone page is kept for reference only.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="telexphone">More information</a>
+<br />
+<br />
+        </font></td>
+        <td>&nbsp;&nbsp;</td>
+        <td align=center valign=top width=100>
+        <table 
+         border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="telexphone">          <div style="position: relative;" data-balloon-pos="up" aria-label="Analogue modem">
+<a href="telexphone">          <div style="position: relative;" data-balloon-pos="up" aria-label="Analogue modem">
+          <img src="telexphone/img/301791/012/small.jpg"
+           style="
+           max-width: 618px;
+          "
+           align="left"
+           vspace="4"
+           alt="Analogue modem"
+           border=0
+           width=298 height=200
+           />
+          <img src="../stamp/redbar1.svg" style="position: absolute; top: 18px; left: 30px;" 
+          />
+          </div>
+          </a>
+          </td></tr><tr><td align=center>
+        </td></tr></table>
+        </td></tr>
+      </table>
+<br />      <a name=itelex></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        i-Telex
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+As analogue telephone lines are gradually disappearing, and telecom
+providers are discouraging the use of such lines, the above TelexPhone idea
+has been ported to the internet.
+<br />
+<br />
+By using a simple interface, it is now
+possible to run teleprinters on a world-wide virtual telex network
+through the internet <a href="#ref_6">[6]</a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="itelex">More information</a>
+<br />
+<br />
+        </font></td>
+        <td>&nbsp;&nbsp;</td>
+        <td align=center valign=top width=100>
+        <table 
+         border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="itelex">          <div style="position: relative;" data-balloon-pos="up" aria-label="i-Telex card">
+<a href="itelex">          <div style="position: relative;" data-balloon-pos="up" aria-label="i-Telex card">
+          <img src="itelex/img/304240/000/small.jpg"
+           style="
+           max-width: 618px;
+          "
+           align="left"
+           vspace="4"
+           alt="i-Telex card"
+           border=0
+           width=298 height=200
+           />
+          </div>
+          </a>
+          </td></tr><tr><td align=center>
+        </td></tr></table>
+        </td></tr>
+      </table>
+<br />      <a name=manuf></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Manufacturers</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Telex machines were developed and produced world-wide by a variety
+of manufacturers. Most of these machines were compatible in one way
+or another. The initial machines worked at the rather low baud-rate
+of 45.45 baud or 50 baud, but later machines were capable of running
+at 75, 100 and even speeds up to 150 baud as well. The following manufacturers produced
+telex equipment:
+        </font>
+        </td></tr>
+      </table>
+<br />      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td valign="">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li>ACEC          <li>Creed          <li>Gretag          <li>Hasler          <li><a href="teletype/index.htm">Kleinschmidt</a>        </ul>
+</font>      </td><td width="25%"
+       valign="top"
+      >
+      <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+      <ul>
+        <li><a href="lorenz">Lorenz (SEL)</a>        <li><a href="teletype/index.htm">Morkrum</a>        <li>Olivetti        <li>OKI        <li>Philips      </ul>
+</font>    </td><td width="25%"
+     valign="top"
+    >
+    <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+    <ul>
+      <li>RFT      <li><a href="sagem/index.htm">Sagem</a>      <li><a href="siemens/index.htm">Siemens</a>      <li><a href="telefunken/telestar/index.htm">Telefunken</a>      <li><a href="teletype/index.htm">Teletype</a>    </ul>
+</font>  </td><td width="25%"
+   valign="top"
+  >
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+  <ul>
+    <li><a href="tekade/fs200/index.htm">Tekade</a>    <li>Transtel  </ul>
+</font></td></tr></table><table width=100% border=0 cellspacing=0 cellpadding=0>
+  <tr>
+  <td valign=top align=left>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Alternative devices, which resemble a teleprinter but do not follow
+the <a href="../crypto/baudot.htm"><span data-balloon-pos="up" aria-label="More about: Baudot/ITA-2 standard">Baudot/ITA-2 standard</span></a>, were developed by:
+  </font>
+  </td></tr>
+</table>
+<br /><table width=100% border=0 cellspacing=0 cellpadding=4>
+  <tr>
+  <td valign="">
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+  <ul>
+    <li><a href="gretag/etk47/index.htm">Gretag</a>  </ul>
+</font></td><td width="75%"
+>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ul>
+  <li><a href="hell/index.htm">HELL</a></ul>
+</font></td></tr></table><a name=names></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+Nomenclature
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+<tr>
+<td valign="">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ul>
+  <li>Teletypewriter  <li>Teleprinter  <li>Teletype  <li>TTY (TeleType)</ul>
+</font></td><td width="50%"
+>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ul>
+<li>RTTY (Radio TeleType)<li>Telex (Teleprinter Exchange)<li>Fernschreiber (German)<li>Verreschrijver (Dutch)</ul>
+</font></td></tr></table><div style="height: 14px;"></div><a name=signalling></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+<b>Signalling</b>
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+There are two methods for transporting the data.
+The first methods transports the digital data bits are currents (either
+on/off or +/-) through two or wire wires. The second method uses
+Frequency-Shift Keying (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span>) to transfer them as tones.
+The methods are named as follows:
+</font>
+</td></tr>
+</table>
+<br /><table width=100% border=0 cellspacing=0 cellpadding=4>
+<tr>
+<td valign="">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ul>
+<li><div style="display:inline-block; width:60px;">TW39</div>Single/double-current line, 2-wire or 4-wire<li><div style="display:inline-block; width:60px;">ED1000</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span> (virtual double-current)</ul>
+</font></td></tr></table><table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When used on dial-up telex lines, the teleprinter setup must be capable of
+dialling a subscriber number. It must also be able to answer an incoming call.
+This is known as signalling.
+Generally speaking, there are two methods for
+dialling a subscriber number:
+</font>
+</td></tr>
+</table>
+<br /><table width=100% border=0 cellspacing=0 cellpadding=4>
+<tr>
+<td valign="">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ol type=A>
+<li>By means of a rotary dial<li>Via the teleprinter keyboard</ol type=A>
+</font></td></tr></table><table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Both dialling methods are supported by <a href="itelex"><span data-balloon-pos="up" aria-label="More about: i-Telex">i-Telex</span></a>. In addition, different
+expansion cards are avai&shy;lable for the TW39 and ED1000 standards.
+Which card you need, depends on the type of tele&shy;printer you want to
+connect.
+Most older electromechanical teleprinters, such as the
+<a href="siemens/t37"><span data-balloon-pos="up" aria-label="More about: Siemens T-37">Siemens T-37</span></a> and the immensely popular <a href="siemens/t100"><span data-balloon-pos="up" aria-label="More about: T-100">T-100</span></a>,
+follow the TW39 standard, whilst later electronic machines, such as the
+<a href="siemens/t1000"><span data-balloon-pos="up" aria-label="More about: Siemens T-1000">Siemens T-1000</span></a> and the <a href="tekade/fs200"><span data-balloon-pos="up" aria-label="More about: TeKaDe FS-200">TeKaDe FS-200</span></a>,
+usually follow the ED1000 standard.
+<br />
+<br />
+</font>
+</td></tr>
+</table>
+<br /><a name=conf></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+<b>Classic configurations</b>
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Teletypewriters can be interconnected in a variety of ways, depending on
+the local and remote situation, the distance and the transport medium
+(wire-line or radio). Below are several popular configurations. For a good
+understanding it is important to use unambiguous terminology. In the following
+text, it is assumed that 5-bit digital telegraphy is used, according to the
+<a href="../ref/ita2/index.htm"><span data-balloon-pos="up" aria-label="More about: ITA2 (CCITT-2) standard">ITA2 (CCITT-2) standard</span></a>. Each data word consists of
+7&#189; timing units: 1 start bit, 5 data bits and 1&#189; stop bit.
+<br />
+<br />
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<div style="position: relative;">
+<div style="position: relative;">
+<img src="svg/tty_word.svg"
+ style="
+ max-width: 618px;
+"
+ align="center"
+ vspace="4"
+ border=0
+
+ />
+</div>
+</td></tr><tr><td align=center>
+</td></tr></table>
+<br />
+In <span class="short tooltip-red" data-balloon-pos="up" aria-label="Teletype">TTY</span> terminology, the logic states '1' and '0' are known as 'MARK' and 'SPACE'
+respectively. In a single-current configuration, a MARK is represented by a
+negative current (-40 mA) whilst SPACE is a currentless state.
+In a double-current configuration, a SPACE is represented by a +40 mA current.
+Historically, the five data bits are numbered channel 1 to 5, with channel 1
+representing the least-significant bit (LSB).
+In computer terminology however, these bits are commonly known as
+b0 to b4 respectively.
+As an example, the diagram below shows the timing of the letter 'Y',
+which has the bit pattern (10101).
+In rest, the machine constantly sends a MARK signal (logic '1').
+<br />
+<br />
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<div style="position: relative;">
+<div style="position: relative;">
+<img src="svg/tty_y.svg"
+ style="
+ max-width: 618px;
+"
+ align="center"
+ vspace="4"
+ border=0
+
+ />
+</div>
+</td></tr><tr><td align=center>
+</td></tr></table>
+<br />
+When sending a character, the machine always begins with a start-pulse (ST),
+which is always a logic '0' (SPACE). Next it sends the 5 databits (b0-b4),
+followed by a stop-pulse (Logic '1') which has a length of 1&#189; unit.
+The receiver is then ready to accept the next character.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="../ref/ita2/index.htm#format">More</a>
+<br />
+<br />
+</font>
+</td></tr>
+</table>
+<br /><a name=conf_2w_1c></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+2-wire single-current 
+&nbsp;<font color="#CCC">
+half-duplex
+</font>
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the simplest configuration, the TX and RX circuits of both machines are
+connected in series. This situation, which is known as 2-wire single-current,
+is shown in the diagram below. As all circuits are connected in series, only
+a single current source is needed. Anything typed on the local machine, will
+appear at both sides. This configuration is also known as <i>half-duplex</i>,
+as each party has to wait until the other side has finised its transmission,
+before sending a message.
+<br />
+<br />
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<div style="position: relative;">
+<div style="position: relative;">
+<img src="svg/tty_2w_1c.svg"
+ style="
+ max-width: 618px;
+"
+ align="center"
+ vspace="4"
+ border=0
+
+ />
+</div>
+</td></tr><tr><td align=center>
+</td></tr></table>
+<br />
+This configuration is very popular for creating a small demonstration network.
+It can be imple&shy;mented with just two electromechanical teleprinters, such as
+the <a href="siemens/t100"><span data-balloon-pos="up" aria-label="More about: Siemens T-100">Siemens T-100</span></a>, and a simple connection device like the
+<a href="siemens/ag13"><span data-balloon-pos="up" aria-label="More about: Siemens Anschlussger&#228;t 13">Siemens Anschlussger&#228;t 13</span></a>. As this is an ON/OFF configuration
+(current/no-current), it is only suitable for short distances.
+The diagram below shows how a teleprinter is connected to a nearby exchange,
+via a <span class="short" aria-label="Teleprinter Connection Device" data-balloon-pos="up"><a href="#tcd" class="short" >TCD</a></span> and a 2-wire single-current line.
+<br />
+<br />
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<div style="position: relative;">
+<div style="position: relative;">
+<img src="svg/tcd_2w1c_exchange.svg"
+ style="
+ max-width: 618px;
+"
+ align="center"
+ vspace="4"
+ border=0
+
+ />
+</div>
+</td></tr><tr><td align=center>
+</td></tr></table>
+<br />
+In practice, this configuration was not very popular for permanent
+(leased line) connections, as the distance between the two endpoints would
+probably be too large. It was suitable however for connection to a nearby
+exchange, which could be up to several kilometres away. This configura&shy;tion
+is also suitable for use in combination with a modern internet interface,
+such as <a href="itelex"><span data-balloon-pos="up" aria-label="More about: i-Telex">i-Telex</span></a>:
+<br />
+<br />
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<div style="position: relative;">
+<div style="position: relative;">
+<img src="svg/tcd_2w1c_itelex.svg"
+ style="
+ max-width: 618px;
+"
+ align="center"
+ vspace="4"
+ border=0
+
+ />
+</div>
+</td></tr><tr><td align=center>
+</td></tr></table>
+<br />
+</font>
+</td></tr>
+</table>
+<br /><a name=conf_2w_2c></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+2-wire double-current 
+&nbsp;<font color="#CCC">
+half-duplex
+</font>
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The diagram below shows a 2-wire double-current configuration, in which
+the MARK and SPACE signals are represented by -60V and +60V respectively.
+In this configuration, the line is never currentless; it is either +40 mA or
+-40 mA, as a result of which it can be used for long distance telegraphy.
+This is by far the most common configu&shy;ration for long distance telegraphy
+over hundreds of kilometres. This diagram below shows a 2-wire double-current
+line to an exchange.
+<br />
+<br />
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<div style="position: relative;">
+<div style="position: relative;">
+<img src="svg/tcd_2w2c_exchange.svg"
+ style="
+ max-width: 618px;
+"
+ align="center"
+ vspace="4"
+ border=0
+
+ />
+</div>
+</td></tr><tr><td align=center>
+</td></tr></table>
+<br />
+In this mode, the <span class="short" aria-label="Teleprinter Connection Device" data-balloon-pos="up"><a href="#tcd" class="short" >TCD</a></span> takes care of the conversion from the teleprinter's
+4-wire connection to the 2-wire line and vice versa. The 2-wire double-current
+mode was also popular as part of more complex routed telegraphy connections,
+that ran over several long and short distance telegraphy paths, as illustrated
+below. In this example the signal first runs over a long distance
+2-wire path, is then converted to a 4-wire line, and is then multiplexed
+over another long distance path.
+<br />
+<br />
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<div style="position: relative;">
+<div style="position: relative;">
+<img src="svg/tcd_2w2c_exchange_mp.svg"
+ style="
+ max-width: 618px;
+"
+ align="center"
+ vspace="4"
+ border=0
+
+ />
+</div>
+</td></tr><tr><td align=center>
+</td></tr></table>
+<br />
+The 2-wire double-current configuration is also extremely useful for
+use on long distance leased lines, as illustrated below.
+It allows two teleprinters, each with a suitable
+<a href="#tcd"><span data-balloon-pos="up" aria-label="Jump to: teleprinter connection device">teleprinter connection device</span></a> (<span class="short" aria-label="Teleprinter Connection Device" data-balloon-pos="up"><a href="#tcd" class="short" >TCD</a></span>),
+to be linked directly over long distances (&gt; 100km)
+with just a single wire pair.
+<br />
+<br />
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<div style="position: relative;">
+<div style="position: relative;">
+<img src="svg/tcd_2w2c_leased.svg"
+ style="
+ max-width: 618px;
+"
+ align="center"
+ vspace="4"
+ border=0
+
+ />
+</div>
+</td></tr><tr><td align=center>
+</td></tr></table>
+<br />
+</font>
+</td></tr>
+</table>
+<br /><a name=conf_4w_1c></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+4-wire single-current 
+&nbsp;<font color="#CCC">
+full-duplex
+</font>
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When the transmit and receive circuits are wired separately, four wires are
+needed. In that case, full-duplex communication is possible. The diagram
+below shows a 4-wire single-current con&shy;figuration, in which each side has
+its own current source that drives the telegraph relay at the other end.
+Although technically viable, this configuration was hardly ever used in
+practice.
+<br />
+<br />
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<div style="position: relative;">
+<div style="position: relative;">
+<img src="svg/tty_4w_1c.svg"
+ style="
+ max-width: 618px;
+"
+ align="center"
+ vspace="4"
+ border=0
+
+ />
+</div>
+</td></tr><tr><td align=center>
+</td></tr></table>
+<br />
+</font>
+</td></tr>
+</table>
+<br /><a name=conf_4w_2c></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+4-wire double-current 
+&nbsp;<font color="#CCC">
+duplex
+</font>
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The diagram below shows a 4-wire double-current configuration, in which
+the MARK and SPACE signals are represented by -60V and +60V respectively.
+This is by far the most common configu&shy;ration for long distance telegraphy.
+It is compatible with most popular teletypewriters and cipher machines, such
+as the <a href="../crypto/siemens/t52"><span data-balloon-pos="up" aria-label="More about: Siemens T-52 Geheimschreiber">Siemens T-52 Geheimschreiber</span></a>.
+Send and receive circuits are fully isolated.
+The arrows show the direction of the 40 mA current when both sides are at rest
+(i.e. MARK).
+In this configuration, the line is never currentless; it is either +40 mA or
+-40 mA. When switching from MARK to SPACE, the current is simply reversed.
+At the receiving end, this forces the <a href="polar.htm"><span data-balloon-pos="up" aria-label="More about: polar relay">polar relay</span></a>
+to its alternative position.
+As a result, this configuration is suitable for long distance lines.
+<br />
+<br />
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<div style="position: relative;">
+<div style="position: relative;">
+<img src="svg/tty_4w_2c.svg"
+ style="
+ max-width: 618px;
+"
+ align="center"
+ vspace="4"
+ border=0
+
+ />
+</div>
+</td></tr><tr><td align=center>
+</td></tr></table>
+<br />
+The diagram above shows how this configuration could be used for local setups
+and demonstra&shy;tions, in which no signalling is required.
+In practice, 4-wire double-current was sometimes used for the connection
+to a local or remote concentrator, after the data was multiplexed with
+other lines on a long distance route to the exchange. This situation
+is illustrated in the diagram below.
+<br />
+<br />
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<div style="position: relative;">
+<div style="position: relative;">
+<img src="svg/tcd_4w2c_exchange.svg"
+ style="
+ max-width: 618px;
+"
+ align="center"
+ vspace="4"
+ border=0
+
+ />
+</div>
+</td></tr><tr><td align=center>
+</td></tr></table>
+<br />
+In the same vein it is possible to connect the teleprinter directly to a
+remote teleprinter via a fixed or leased line. Like in the configuration above,
+the four wires may run directly to the other end, but will in most cases
+be multiplexed with other leased lines. This situation is shown here:
+<br />
+<br />
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<div style="position: relative;">
+<div style="position: relative;">
+<img src="svg/tcd_4w2c_leased.svg"
+ style="
+ max-width: 618px;
+"
+ align="center"
+ vspace="4"
+ border=0
+
+ />
+</div>
+</td></tr><tr><td align=center>
+</td></tr></table>
+<br />
+<br />
+<br />
+</font>
+</td></tr>
+</table>
+<br /><a name=tcd></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+<b>Teleprinter connection device 
+&nbsp;<font color="#CCC">
+TCD</b>
+</font>
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In order to connect two teleprinters together, or to connect a teleprinter
+to a telex subscriber line or a leased line, a Teleprinter Connection Device (<span class="short" aria-label="Teleprinter Connection Device" data-balloon-pos="up"><a href="#tcd" class="short" >TCD</a></span>)
+or a Line Terminating Device (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Line Terminating Device">LTD</span>) is re&shy;quired.
+It forms the interface between the line and the teleprinter.
+Some <span class="short" aria-label="Teleprinter Connection Device" data-balloon-pos="up"><a href="#tcd" class="short" >TCD</a></span>s provide signalling, which is needed for dial-up lines.
+Others are 'dumb' devices that simply connect to a leased line.
+<br />
+<br />
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<div style="position: relative;">
+<div style="position: relative;">
+<img src="svg/tty_ltd.svg"
+ style="
+ max-width: 618px;
+"
+ align="center"
+ vspace="4"
+ border=0
+
+ />
+</div>
+</td></tr><tr><td align=center>
+</td></tr></table>
+<br />
+</font>
+</td></tr>
+</table>
+<br /><a name=hybrid></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+Hybrid circuit
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+An important feature of a <span class="short" aria-label="Teleprinter Connection Device" data-balloon-pos="up"><a href="#tcd" class="short" >TCD</a></span> is the use of hybrid circuits.
+A hybrid circuit, also known as a fork circuit, can combine and split
+two individual signals without one 'seeing' the other. This is done
+to avoid delayed echos on long haul telecommunications lines. It fully
+separates the two-way traffic, in the same way as the hybrid circuit in a
+<a href="../phone"><span data-balloon-pos="up" aria-label="More about: telephone set">telephone set</span></a> is used to cancel voice echo.
+<br />
+<br />
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<div style="position: relative;">
+<div style="position: relative;">
+<img src="svg/tcd_hybrid.svg"
+ style="
+ max-width: 618px;
+"
+ align="center"
+ vspace="4"
+ border=0
+
+ />
+</div>
+</td></tr><tr><td align=center>
+</td></tr></table>
+<br />
+Contrary to a telephone however, in which the hybrid is usually
+implemented as a special trans&shy;former, the hybrid of a <span class="short" aria-label="Teleprinter Connection Device" data-balloon-pos="up"><a href="#tcd" class="short" >TCD</a></span> is
+less obvious. It is often implemented with one or more
+<a href="polar.htm"><span data-balloon-pos="up" aria-label="More about: polar relays">polar relays</span></a> with multiple coils each.
+Several sub-circuits in the <span class="short" aria-label="Teleprinter Connection Device" data-balloon-pos="up"><a href="#tcd" class="short" >TCD</a></span> contribute to the currents through
+these coils, as a result of which they are not easily recognised
+in the circuit diagram.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="hybrid.htm">More about hybrid circuits</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="polar.htm">More about polar relays</a>
+<br />
+<br />
+</font>
+</td></tr>
+</table>
+<br /><a name=tcd_nom></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+Nomenclature
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the German language a <span class="short" aria-label="Teleprinter Connection Device" data-balloon-pos="up"><a href="#tcd" class="short" >TCD</a></span> is &ndash; confusingly &ndash; known under various names,
+including:
+</font>
+</td></tr>
+</table>
+<br /><table width=100% border=0 cellspacing=0 cellpadding=4>
+<tr>
+<td valign="">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ul>
+<li><div style="display:inline-block; width:60px;">FAG</div>Fernschreiber-Anschlussger&#228;t<li><div style="display:inline-block; width:60px;">FAG</div>Fernschreiber-Anschaltger&#228;t<li><div style="display:inline-block; width:60px;">FSG</div>Fernschaltger&#228;t<li><div style="display:inline-block; width:60px;">FES</div>Fernschreib-Endsatz<li><div style="display:inline-block; width:60px;">AG</div>Anschlussger&#228;t<li><div style="display:inline-block; width:60px;">AG</div>Anschaltger&#228;t<li><div style="display:inline-block; width:60px;">EG</div>Endger&#228;t</ul>
+</font></td></tr></table><table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+Popular TCDs
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+<tr>
+<td valign="">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ul>
+<li><a href="siemens/ag13"><div style="display:inline-block; width:100px;">AG-13</div>Siemens Anschlussger&#228;t 13</a><li><a href="siemens/t56"><div style="display:inline-block; width:100px;">T-56</div>Siemens Fernschreib-Endsatz T56</a><li><div style="display:inline-block; width:100px;">T-57</div>Allstrom Fernschaltger&#228;t (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Deutsche Demokratische Republik (former East-Germany)" data-balloon-length="large">DDR</span>)<li><div style="display:inline-block; width:100px;">FSG</div>Siemens Fernschaltger&#228;t<li><div style="display:inline-block; width:100px;">FSG-N</div>Siemens Fernschaltger&#228;t (Bundeswehr version)<li><div style="display:inline-block; width:100px;">FSG-NL</div>Siemens Fernschaltger&#228;t (Dutch version)<li><div style="display:inline-block; width:100px;">FSG-TL</div>Siemens Fernschaltger&#228;t (Tastaturwahl, Lokalbetrieb)<li><div style="display:inline-block; width:100px;">FSG-53</div>Allstrom Fernschaltger&#228;t (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Deutsche Demokratische Republik (former East-Germany)" data-balloon-length="large">DDR</span>)<li><div style="display:inline-block; width:100px;">FZGT-564</div>Lorenz<li><a href="tekade/fag200"><div style="display:inline-block; width:100px;">FAG-200</div>TekaDe Ferschreiberanschlussger&#228;t</a> for <a href="tekade/fs200">FS-200/FS-220</a> (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span>)</ul>
+</font></td></tr></table><div style="height: 14px;"></div><table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+Teleprinter connection devices on this website
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+<tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+<tr>
+<td align=center valign=top>
+<a href=siemens/ag13>
+<div  data-balloon-pos="up" aria-label="Siemens Anschlussgerät 13 (connection device 13) without signalling" data-balloon-length="large"><img src="siemens/ag13/img/304018/001/thumbnail.jpg"
+ alt="Siemens Anschlussgerät 13 (connection device 13) without signalling"
+ border="0" width=74 height=50
+ style="
+ max-width: 618px;
+"
+ /></div>
+</a>
+<div style="padding-top: 4px;">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=siemens/ag13>AG-13</a></font>
+</div>
+</td>
+<td width=4><img src="../img/blank.gif" width=4 height=1></td>
+<td align=center valign=top>
+<a href=siemens/t56>
+<div  data-balloon-pos="up" aria-label="Siemens T-56 Fernschreib-Endsatz (teleprinter terminating unit) with signalling" data-balloon-length="large"><img src="siemens/t56/img/304022/019/thumbnail.jpg"
+ alt="Siemens T-56 Fernschreib-Endsatz (teleprinter terminating unit) with signalling"
+ border="0" width=74 height=50
+ style="
+ max-width: 618px;
+"
+ /></div>
+</a>
+<div style="padding-top: 4px;">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=siemens/t56>T-56</a></font>
+</div>
+</td>
+<td width=4><img src="../img/blank.gif" width=4 height=1></td>
+<td align=center valign=top>
+<a href=tekade/fag200>
+<div  data-balloon-pos="up" aria-label="TekaDe FAG-200 teleprinter connection device"><img src="tekade/fag200/img/302848/000/thumbnail.jpg"
+ alt="TekaDe FAG-200 teleprinter connection device"
+ border="0" width=74 height=50
+ style="
+ max-width: 618px;
+"
+ /></div>
+</a>
+<div style="padding-top: 4px;">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=tekade/fag200>FAG-200</a></font>
+</div>
+</td>
+<td width=4><img src="../img/blank.gif" width=4 height=1></td>
+<td align=center valign=top>
+<a href=telefunken/th3483/index.htm>
+<div  data-balloon-pos="up" aria-label="Military teleprinter connection device TH-3483"><img src="telefunken/th3483/img/302739/000/thumbnail.jpg"
+ alt="Military teleprinter connection device TH-3483"
+ border="0" width=74 height=50
+ style="
+ max-width: 618px;
+"
+ /></div>
+</a>
+<div style="padding-top: 4px;">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=telefunken/th3483/index.htm>TH-3483</a></font>
+</div>
+</td>
+<td width=4><img src="../img/blank.gif" width=4 height=1></td>
+<td align=center valign=top>
+<a href=telefunken/th3676>
+<div  data-balloon-pos="up" aria-label="Military teleprinter connection device with FSK modem TH-3676" data-balloon-length="large"><img src="telefunken/th3676/img/304278/012/thumbnail.jpg"
+ alt="Military teleprinter connection device with FSK modem TH-3676"
+ border="0" width=74 height=50
+ style="
+ max-width: 618px;
+"
+ /></div>
+</a>
+<div style="padding-top: 4px;">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=telefunken/th3676>TH-3676</a></font>
+</div>
+</td>
+</tr>
+<tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+</table>
+<div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div><a name=conn></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+<b>Connections</b>
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When bringing old teleprinter equipment back to life, it may be useful
+to know how existing telephone connectors were wired at the time for use
+in combination with telex equipment. Note that the wiring of a telex machine
+can be very different from a standard telephone set and that many different
+configurations are possible. Also note that a current-loop system is used.
+</font>
+</td></tr>
+</table>
+<br /><a name=c6></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+6-pin circular plug
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+One some older teleprinters, in particular in the Netherlands, a large
+6-pin circular connector was often used. These connectors were also used on
+early cipher machines like the
+<a href="../crypto/philips/ec2/index.htm"><span data-balloon-pos="up" aria-label="More about: Philips Ecolex II">Philips Ecolex II</span></a>
+and <a href="../crypto/philips/ec4/index.htm"><span data-balloon-pos="up" aria-label="More about: Ecolex IV">Ecolex IV</span></a>.
+In later years, the 6-pin connectors and sockets were often replaced
+by the circular <a href="#ados"><span data-balloon-pos="up" aria-label="Jump to: Walzenstecker (ADoS)">Walzenstecker (ADoS)</span></a>
+or the more popular <a href="#ado8"><span data-balloon-pos="up" aria-label="Jump to: ADo 8">ADo 8</span></a> (see below).
+</font>
+</td></tr>
+</table>
+<br /><table width=100% border=0 cellspacing=0 cellpadding=4>
+<tr>
+<td valign="">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ol>
+<li>TX relay A (common)<li>TX relay Z (mark)<li>120&Omega; RX relay (with 6)<li>TX relay T (space)<li>Alarm contact (with 4)<li>120&Omega; RX relay (with 3)</ol>
+</font>
+</td>
+<td>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ol>
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+  <div style="position: relative;">
+  <div style="position: relative;">
+  <img src="svg/c6.svg"
+   style="
+   max-width: 618px;
+  "
+   align="right"
+   vspace="4"
+   border=0
+  
+   />
+  </div>
+  </td></tr><tr><td align=center>
+</td></tr></table>
+</ol>
+</font></td></tr></table><div style="height: 14px;"></div><a name=ados></a>
+<a name=ado4></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+ADo4, ADoS, Walzenstecker
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The eldest connector used for teleprinters in Europe is the so-called
+<i>Walzenstecker</i> (wheel plug); a circular plug with four contacts
+that was originally used for the connection of telephone equip&shy;ment,
+wired as (1) a, (2) b, (3) bell and (4) ground, but redefined to accomodate
+the TX and RX contacts of a teleprinter. The pin-out for use in combination
+with telex equipment is given below.
+<br />
+<br />
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<div style="position: relative;">
+<div style="position: relative;">
+<img src="svg/ADoS.svg"
+ style="
+ max-width: 618px;
+"
+ align="center"
+ vspace="4"
+ border=0
+
+ />
+</div>
+</td></tr><tr><td align=center>
+</td></tr></table>
+<br />
+The official designator for this plug is <i>Anschlu&#223;dosenst&#246;psel ZB 27</i>,
+or <b>ADoS ZB 27</b>. It is some&shy;times erroneously called <b>ADo4</b> &ndash; even in official
+documentation &ndash; indicating that it has 4 contacts.
+The mating socket is known as <b>ADo ZB 50</b>. It has an extra
+contact (a1) which is shorted to (a) when no plug is inserted.
+Below is the pinout for telephone and teleprinter equipment.
+</font>
+</td></tr>
+</table>
+<br /><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+<table width=100% cellspacing=0 cellpadding=0>
+<tr>
+<td width=100%>
+<table
+ class="table"
+ width=100% border=0 cellspacing=1 cellpadding=2 bgcolor=#FFFFFF>
+<tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="20" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>&#160;</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="60" colspan=3><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Telephone</font></td></b><td bgcolor="#FFFFFF" align="right" valign="center" width="20" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>&#160;</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="60" colspan=3><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Teletype (telex)</font></td></b></tr>
+<tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="20" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>&#160;</font></td></b><td bgcolor="#E0E0E0" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Name</font></td></b><td bgcolor="#E0E0E0" align="left" valign="center" width="60" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Colour</font></td></b><td bgcolor="#E0E0E0" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Description</font></td></b><td bgcolor="#FFFFFF" align="right" valign="center" width="20" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>&#160;</font></td></b><td bgcolor="#E0E0E0" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Name</font></td></b><td bgcolor="#E0E0E0" align="left" valign="center" width="60" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Colour</font></td></b><td bgcolor="#E0E0E0" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Description</font></td></b><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>&#160;</font></td></b></tr>
+<tr>
+<td bgcolor=#FFFFFF colspan=8><font size=-1>
+</font></td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="20" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>a</font></td><td bgcolor="#F4F4F4" align="left" valign="center" width="60" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>white</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Line a (La)</font></td><td bgcolor="#FFFFFF" align="right" valign="center" width="20" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>a1</font></td><td bgcolor="#F4F4F4" align="left" valign="center" width="60" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>white</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>TX a</font></td></tr>
+<tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="20" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>b</font></td><td bgcolor="#F4F4F4" align="left" valign="center" width="60" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>brown</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Line b (Lb)</font></td><td bgcolor="#FFFFFF" align="right" valign="center" width="20" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>b1</font></td><td bgcolor="#F4F4F4" align="left" valign="center" width="60" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>brown</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>TX b</font></td></tr>
+<tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="20" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>W2</font></td><td bgcolor="#F4F4F4" align="left" valign="center" width="60" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>green</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Extra bell</font></td><td bgcolor="#FFFFFF" align="right" valign="center" width="20" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>a2</font></td><td bgcolor="#F4F4F4" align="left" valign="center" width="60" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>green</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>RX a</font></td></tr>
+<tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="20" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>4</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>c</font></td><td bgcolor="#F4F4F4" align="left" valign="center" width="60" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>yellow</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Ground (hold)</font></td><td bgcolor="#FFFFFF" align="right" valign="center" width="20" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>4</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>b2</font></td><td bgcolor="#F4F4F4" align="left" valign="center" width="60" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>yellow</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>RX b</font></td></tr>
+</table>
+<div style="height: 32px;"></div></td>
+</tr></table>
+<a name=ado8></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+ADo8 for TW39
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <i>Walzenstecker</i> shown above was succeeded by the more
+versatile 8-pin connector known as <b>ADo 8</b>. This connector was used for
+a variety of equipment and had two 'keyed' guide pins at the centre,
+to ensure that the plug is entered into the socket with the right side
+up, and to avoid the wrong plug being inserted into the wrong equipment.
+The sockets are 'programmable'.
+Below is the pinout of the socket &ndash; with the correct teleprinter keying &ndash;
+when looking into the socket.
+</font>
+</td></tr>
+</table>
+<br /><table width=100% border=0 cellspacing=0 cellpadding=4>
+<tr>
+<td valign="">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ol>
+<li><div style="display:inline-block; width:60px;">a1</div><div style="display:inline-block; width:60px;">White</div>TX a<li><div style="display:inline-block; width:60px;">b1</div><div style="display:inline-block; width:60px;">Brown</div>TX b<li><div style="display:inline-block; width:60px;">a2</div><div style="display:inline-block; width:60px;">Yellow</div>RX a<li><div style="display:inline-block; width:60px;">b2</div><div style="display:inline-block; width:60px;">Green</div>RX b<li><div style="display:inline-block; width:60px;">s</div><div style="display:inline-block; width:60px;">Red</div>Shorting bridge to 6 <sup><font color="#FF8800">1</font></sup><li><div style="display:inline-block; width:60px;">s</div><div style="display:inline-block; width:60px;">Blue</div>Shorting bridge to 5 <sup><font color="#FF8800">1</font></sup><li><font color=#F52E00><div style="display:inline-block; width:60px;"><i>n.c.</div><div style="display:inline-block; width:60px;">Pink</div>unused</i></font><li><font color=#F52E00><div style="display:inline-block; width:60px;"><i>n.c.</div><div style="display:inline-block; width:60px;">Grey</div>unused</i></font></ol>
+</font>
+</td>
+<td>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ol>
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+  <div style="position: relative;" data-balloon-pos="up" aria-label="Pinout for TW39 telex when looking into an ADo8 socket" data-balloon-length="large" class="tooltip-red">
+  <div style="position: relative;" data-balloon-pos="up" aria-label="Pinout for TW39 telex when looking into an ADo8 socket" data-balloon-length="large" class="tooltip-red">
+  <img src="svg/ADo8.svg"
+   style="
+   max-width: 618px;
+  "
+   align="right"
+   vspace="4"
+   alt="Pinout for TW39 telex when looking into an ADo8 socket"
+   border=0
+  
+   />
+  </div>
+  </td></tr><tr><td align=center>
+</td></tr></table>
+</ol>
+</font></td></tr></table><div style="height: 14px;"></div><table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The orientation of two small discs inside the socket can be altered in
+order to configure it for various applications.
+The image above shows the correct configuration for use with
+a teleprinter. Pins 1-4 are used for the same signals as on the earlier
+<i>Walzenstecker</i>. The bridge between pins 5 and 6 is optional <sup><font color="#FF8800">1</font></sup> and is
+used on newer equipment to signal that the teleprinter is connected.
+</font>
+</td></tr>
+</table>
+<br /><table width="50" cellspacing="0" cellpadding="0"><tr>
+<td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+</tr></table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr><td>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+<ol>
+<li>
+This is a bridge inside the socket (not the plug).
+</ol>
+</small></font></td></tr>
+</table>
+<div style="height: 20px;"></div><table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+ADo8 for ED1000
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When used with ED1000-standard teleprinters (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span>) the definitions
+of the pins of the ADo8 socket are different. The line (a, b) is
+connected to pins 1 and 4, and is used for transmission and reception
+simultaneously (full duplex). The shorting bridge between pins 5 and 6
+of the socket, is needed by several teleprinters for sensing that it
+is connected. Without this shorting bridge, the teleprinter may not work.
+Below is the pinout when looking into the socket.
+</font>
+</td></tr>
+</table>
+<br /><table width=100% border=0 cellspacing=0 cellpadding=4>
+<tr>
+<td valign="">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ol>
+<li><div style="display:inline-block; width:60px;">a</div><div style="display:inline-block; width:60px;">White</div>TX/RX a<li><div style="display:inline-block; width:60px;"><font color=#F52E00>n.c.</font></div><div style="display:inline-block; width:60px;">Brown</div>-<li><div style="display:inline-block; width:60px;"><font color=#F52E00>n.c.</font></div><div style="display:inline-block; width:60px;">Yellow</div>-<li><div style="display:inline-block; width:60px;">b</div><div style="display:inline-block; width:60px;">Green</div>TX/RX b<li><div style="display:inline-block; width:60px;">s</div><div style="display:inline-block; width:60px;">Red</div>Shorting bridge to 6 <sup><font color="#FF8800">1</font></sup><li><div style="display:inline-block; width:60px;">s</div><div style="display:inline-block; width:60px;">Blue</div>Shorting bridge to 5 <sup><font color="#FF8800">1</font></sup><li><div style="display:inline-block; width:60px;"><font color=#F52E00>n.c.</font></div><div style="display:inline-block; width:60px;">Pink</div>Option: paper-end detection<li><div style="display:inline-block; width:60px;"><font color=#F52E00>n.c.</font></div><div style="display:inline-block; width:60px;">Grey</div>Option: paper-end detection</ol>
+</font>
+</td>
+<td>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ol>
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+  <div style="position: relative;" data-balloon-pos="up" aria-label="Pinout for TW39 telex when looking into an ADo8 socket" data-balloon-length="large" class="tooltip-red">
+  <div style="position: relative;" data-balloon-pos="up" aria-label="Pinout for TW39 telex when looking into an ADo8 socket" data-balloon-length="large" class="tooltip-red">
+  <img src="svg/ADo8.svg"
+   style="
+   max-width: 618px;
+  "
+   align="right"
+   vspace="4"
+   alt="Pinout for TW39 telex when looking into an ADo8 socket"
+   border=0
+  
+   />
+  </div>
+  </td></tr><tr><td align=center>
+</td></tr></table>
+</ol>
+</font></td></tr></table><div style="height: 14px;"></div><table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Shome teleprinters close a contact when it senses the end of the
+paper supply. When used, these contacts are available on pins 7 and 8,
+so that an external signal (e.g. a bell) can be sounded.
+</font>
+</td></tr>
+</table>
+<br /><table width="50" cellspacing="0" cellpadding="0"><tr>
+<td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+</tr></table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr><td>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+<ol>
+<li>
+This is a bridge inside the socket (not the plug).
+</ol>
+</small></font></td></tr>
+</table>
+<div style="height: 20px;"></div><table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+Adapter between ADo 8 and Walzenstecker
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The table below shows the wiring for an adapter from ADo-8 to Walzenstecker
+or vice versa.
+</font>
+</td></tr>
+</table>
+<br /><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+<table width=100% cellspacing=0 cellpadding=0>
+<tr>
+<td width=100%>
+<table
+ class="table"
+ width=100% border=0 cellspacing=1 cellpadding=2 bgcolor=#FFFFFF>
+<tr>
+<td bgcolor="#E0E0E0" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Signal</font></td></b><td bgcolor="#E0E0E0" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>ADo 8 <sup><font color="#FF8800">1</font></sup></font></td></b><td bgcolor="#E0E0E0" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Walze <sup><font color="#FF8800">2</font></sup></font></td></b><td bgcolor="#E0E0E0" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Colour</font></td></b><td bgcolor="#E0E0E0" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Description</font></td></b></tr>
+<tr>
+<td bgcolor=#FFFFFF colspan=2><font size=-1>
+</font></td>
+</tr>
+<tr>
+<td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>a1</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1 (a)</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>white</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>TX a</font></td></tr>
+<tr>
+<td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>b1</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2 (b)</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>brown</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>TX b (no bridge to 3)</font></td></tr>
+<tr>
+<td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>a2</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3 (W2)</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>yellow</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>RX a (no bridge to 2)</font></td></tr>
+<tr>
+<td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>b2</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>4</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>4 (c)</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>green</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>RX b</font></td></tr>
+</table>
+<div style="height: 20px;"></div></td>
+</tr></table>
+<table width="50" cellspacing="0" cellpadding="0"><tr>
+<td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+</tr></table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr><td>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+<ol>
+<li>
+Bridge between 5 and 6 in ADo-8 <u>socket</u> only.
+</li>
+<li>
+Walzenstecker. Original name when used for telephone shown in brackets.
+</ol>
+</small></font></td></tr>
+</table>
+<div style="height: 20px;"></div><a name=v10></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+V.10 interface 
+&nbsp;<font color="#CCC">
+RS-530
+</font>
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Some teleprinters, such as the V.10 version of the
+<a href="tekade/fs200"><span data-balloon-pos="up" aria-label="More about: TeKaDe FS-200/FS-220">TeKaDe FS-200/FS-220</span></a> have a V.10 interface that uses
+unbalanced &#177;6V signalling. Below is the pinout when looking into the
+<a href="../ref/conn/dsub/index.htm#db25"><span data-balloon-pos="up" aria-label="More about: DB25 plug">DB25 plug</span></a>. The pinout is based on the
+RS-530 standard, which can be balanced or unbalanded. When used with
+balanced signals, the wire it is paired with, is shown in red in square
+brackets, like this: <font color=#F52E00>[18]</font>.
+</font>
+</td></tr>
+</table>
+<br /><table width=100% border=0 cellspacing=0 cellpadding=4>
+<tr>
+<td valign="">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ol>
+<li><div style="display:inline-block; width:60px;">GND</div>Chassis <font color=#F52E00>[18]</font><li><div style="display:inline-block; width:60px;">TXD</div>Transmitted data (out) <font color=#F52E00>[14]</font><li><div style="display:inline-block; width:60px;">RXD</div>Received data (in) <font color=#F52E00>[16]</font><li><div style="display:inline-block; width:60px;">RTS</div>Request To Send (out) <font color=#F52E00>[19]</font><li><div style="display:inline-block; width:60px;">CTS</div>Clear To Send (in) <font color=#F52E00>[13]</font><li><div style="display:inline-block; width:60px;">DSR</div>Data Set Ready (in) <font color=#F52E00>[22]</font><li><div style="display:inline-block; width:60px;">GND</div>Signal ground <font color=#F52E00>[21]</font><li><div style="display:inline-block; width:60px;">DCD</div>Data Carrier Detect (in) <font color=#F52E00>[10]</font><li><div style="display:inline-block; width:60px;"><font color=#F52E00>/RDS</font></div>Return RX element timing (in) <font color=#F52E00>[17]</font><li><div style="display:inline-block; width:60px;"><font color=#F52E00>/DCD</font></div>Return DCD (in) <font color=#F52E00>[8]</font><li><div style="display:inline-block; width:60px;"><font color=#F52E00>/TDT</font></div>Return TX element timing DTE (out) <font color=#F52E00>[24]</font><li><div style="display:inline-block; width:60px;"><font color=#F52E00>/TDS</font></div>Return TX element timing DCE (in) <font color=#F52E00>[15]</font><li><div style="display:inline-block; width:60px;"><font color=#F52E00>/CTS</font></div>Return CTS (in) <font color=#F52E00>[5]</font><li><div style="display:inline-block; width:60px;"><font color=#F52E00>/TXD</font></div>Return TXD (out) <font color=#F52E00>[2]</font><li><div style="display:inline-block; width:60px;">TDS</div>TX element timing (in) <font color=#F52E00>[12]</font><li><div style="display:inline-block; width:60px;"><font color=#F52E00>/RXD</font></div>Return RXD (in) <font color=#F52E00>[3]</font><li><div style="display:inline-block; width:60px;">RDS</div>RX element timing (in) <font color=#F52E00>[9]</font><li><div style="display:inline-block; width:60px;">LL</div>Local Loopback (out) <font color=#F52E00>[1]</font><li><div style="display:inline-block; width:60px;"><font color=#F52E00>/RTS</font></div>Return RTS <font color=#F52E00>[4]</font><li><div style="display:inline-block; width:60px;">DTR</div>Data Terminal Ready (out) <font color=#F52E00>[23]</font><li><div style="display:inline-block; width:60px;">RL</div>Remote Loopback (out) <font color=#F52E00>[7]</font><li><div style="display:inline-block; width:60px;"><font color=#F52E00>/DSR</font></div>Return DSR (in) <font color=#F52E00>[6]</font><li><div style="display:inline-block; width:60px;"><font color=#F52E00>/DTR</font></div>Return DTR (out) <font color=#F52E00>[20]</font><li><div style="display:inline-block; width:60px;">TDT</div>TX element timing (out) <font color=#F52E00>[11]</font><li><div style="display:inline-block; width:60px;">-</div>Test Mode (in)</ol>
+</font>
+</td>
+<td>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ol>
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+  <div style="position: relative;">
+  <div style="position: relative;">
+  <img src="../../../ref/conn/dsub/svg/DB25_M.svg"
+   style="
+   max-width: 618px;
+  "
+   align="right"
+   vspace="4"
+   border=0
+  
+   />
+  </div>
+  </td></tr><tr><td align=center>
+</td></tr></table>
+</ol>
+</font></td></tr></table><table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the case of teleprinters, V.10 is often used in unbalanced configuration,
+in which case the return lines (prefixed with '<font color=#F52E00>/</font>') should be connected to
+ground (pin 7). In practice, only a subset of the wiring above will be
+implemented.
+<br />
+<br />
+</font>
+</td></tr>
+</table>
+<br /><a name=timeline></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+<b>Telex timeline</b>
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Telex was first developed in Germany between 1926 and 1933 <a href="#ref_10">[10]</a>
+and was introduced in many countries in the early 1930s.
+The diagram below shows the timeline of the telex network in some European
+countries, the United States and Canada. In most countries, the Telex service
+started in the 1930 and lasted until 2006-2008. In Switzerland, the UK and
+Germany, the telex service was taken over by Swiss Telex AG, which closed
+its network in 2020.
+<br />
+<br />
+<table 
+ border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<div style="position: relative;">
+<div style="position: relative;">
+<img src="svg/telex_timeline.svg"
+ style="
+ max-width: 618px;
+"
+ align="center"
+ vspace="4"
+ border=0
+
+ />
+</div>
+</td></tr><tr><td align=center>
+</td></tr></table>
+<br />
+Telex is still used in some smaller countries, and in countries with an
+infrastructure that doesn't support the higher data rates of the internet.
+After 2020, the telecom providers kept offering internet based solutions for
+connection to telex subscribers is such countries, through services like
+iTelegram and EasyLink's Real Time Messenger. As of March 2019, iTelegram
+maintains its services in ~180 countries.
+Telex is still used in maritime and military environments.
+<br />
+<br />
+</font>
+</td></tr>
+</table>
+<br /><table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+<b>Glossary</b>
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+
+
+<div style="height: 4px;"></div><table width=100% border="0" cellpadding=0 cellspacing=0 >
+<tr>
+<td width="40" align="right" valign="top">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#FF8800><b>RTTY</b></font>
+</td>
+<td width="6">&nbsp;</td>
+<td valign="top">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b><u>R</u>adio <u>T</u>ele<u>ty</u>pe</b>
+<br />
+<div style="height: 12px;"></div></font></td></tr>
+<tr>
+<td width="40" align="right" valign="top">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#FF8800><b>TOR</b></font>
+</td>
+<td width="6">&nbsp;</td>
+<td valign="top">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Telex Over Radio</b>
+<br />
+<div style="height: 12px;"></div></font></td></tr>
+<tr>
+<td width="40" align="right" valign="top">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#FF8800><b>TTY</b></font>
+</td>
+<td width="6">&nbsp;</td>
+<td valign="top">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b><u>T</u>ele<u>ty</u>pe</b>
+<br />
+
+<div style="height: 12px;"></div></font></td></tr>
+<tr>
+<td width="40" align="right" valign="top">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#FF8800><b>Baud</b></font>
+</td>
+<td width="6">&nbsp;</td>
+<td valign="top">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Bits per second</b>
+<br />
+Common expression for specifying the transmission speed of a digital
+telegraphic data signal, derived from the
+<a href="../crypto/baudot.htm"><span data-balloon-pos="up" aria-label="More about: Baudot encoding standard">Baudot encoding standard</span></a>,
+also known as bits-per-second (bps).
+
+<div style="height: 12px;"></div></font></td></tr>
+</table>
+<div style="height: 20px;"></div><a name=contr></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+<b>Contributors</b>
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td valign=top align=left>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The following people have contributed to the contents of this page:
+</font>
+</td></tr>
+</table>
+<br /><table width=100% border=0 cellspacing=0 cellpadding=4>
+<tr>
+<td valign="">
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ul>
+<li>Heinz Blumberg<li>Paul Reuvers<li>Marc Simons<li>Henning Treumann</ul>
+</font></td></tr></table><div style="height: 14px;"></div><a name=lit></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+<b>Literature</b>
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+<tr>
+<td>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ol type=a>
+<a name="lit_1"></a>
+<li><font color=#F52E00>Dr.-Ing. Fritz Schiweck, <i>Fernschreibtechnik</i></font><br />
+Lehrb&#252;cher der Feinwerktechnik, Band 9.<br />
+CFW Leipzig (Germany), 1942.
+<p />
+<a name="lit_2"></a>
+<li><font color=#F52E00>G&#252;nter Keye, <i>Handbuch f&#252;r Fernschreiber</i></font><br />
+Gesellschaft f&#252;r Sport und Technik. <span class="short tooltip-red" data-balloon-pos="up" aria-label="Deutsche Demokratische Republik (former East-Germany)" data-balloon-length="large">DDR</span>, 1967.
+</ol type=a>
+</font></td></tr></table>
+<div style="height: 14px;"></div><a name=doc></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+<b>Documentation</b>
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+<tr>
+<td>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ol type=A>
+<a name="doc_1"></a>
+<li><a href="files/creed_basic_tty.pdf">Basic Teleprinter and Telegraph Principles</a><br />
+Creed Publications, 7 November 1968.<br />
+Via Sam Hallas, <a href="http://www.samhallas.co.uk" target="_blank">website</a>
+<p />
+<a name="doc_2"></a>
+<li><a href="files/rtty_easy.pdf">RTTY, the easy way</a><br />
+BARTG, Arthur W. Owen (G2FUD).
+</ol type=A>
+</font></td></tr></table>
+<div style="height: 14px;"></div><a name=ref></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+<b>References</b>
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+<tr>
+<td>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ol>
+<li><a href="https://www.teleprinter.net/" target="_blank">DF3OE's Fernschreiber Museum</a><br />
+Teleprinter museum by Henning Treumann (German/English).
+<p />
+<li><a href="http://www.teleprinter.net/txp/index2.html" target="_blank">TelexPhone project</a><br />
+An initiative of Henning and Philipp in Germany.
+<p />
+<li><a href="http://fernschreibamt-hausneindorf.de/index.html" target="_blank">Fernschreibamt Hausneindorf</a><br />
+Private teleprinter collection of Michael Brandes (Germany).
+Retrieved April 2012.
+<p />
+<li><a href="repair/files/ecma_10.pdf">ECMA, <i>Standard ECMA-10 for Data Interchange on Punched Tape</i></a><br />
+2nd Edition. July 1970.
+<p />
+<li><a href="http://en.wikipedia.org/wiki/Radioteletype">Wikipedia, <i>Radioteletype</i></a><br />
+Retrieved january 2014.
+<p />
+<li><a href="https://www.i-telex.net" target="_blank">i-Telex - Telex over Internet</a><br />
+Retrieved Sepetember 2019.
+<p />
+<li><a href="https://wiki.telexforum.de/index.php?title=Fernschreibnetze" target="_blank">i-Telex forum, <i>Fernschreibnetze</i></a><br />
+History of Telex in Germany (German).<br />
+Visited September 2024.
+<p />
+<li><a href="https://wiki.telexforum.de/index.php?title=TW39_Verfahren_(Teil_2)" target="_blank">i-Telex forum, <i>TW39 Verfahren (Teil 2)</i></a><br />
+Description of the TW39 standard (German).<br />
+Visited September 2024.
+<p />
+<li><a href="https://en.wikipedia.org/wiki/telex" target="_blank">Wikipedia, <i>telex</i></a><br />
+Visited September 2024.
+<p />
+<li><a href="https://de.wikipedia.org/wiki/telex" target="_blank">Wikipedia (Germany), <i>telex</i></a><br />
+Visited September 2024.
+</ol>
+</font></td></tr></table>
+<div style="height: 14px;"></div><table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+<b>Further information</b>
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+<tr>
+<td>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ul>
+<li><a href="../crypto/baudot.htm">5-bit Baudot Code</a><br />
+<li><a href="../crypto/ascii.htm">7/8-bit ASCII Code</a><br />
+<li><a href="hybrid.htm">Hybrid circuits</a><br />
+<li><a href="polar.htm">Polar relays</a><br />
+<li><a href="../crypto">Cipher machines</a><br />
+</ul>
+</font></td></tr></table>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+<tr>
+<td align="left" valign="center">
+<font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+Other websites
+</font>
+</td>
+</tr>
+<tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+<tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+<tr>
+<td>
+<font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Telex" target="_blank">Telex on Wikipedia</a><br />
+<li><a href="http://en.wikipedia.org/wiki/Teleprinter" target="_blank">Teleprinter on Wikipedia</a><br />
+<li><a href="http://en.wikipedia.org/wiki/Radioteletype" target="_blank">Radioteletype on Wikipedia</a><br />
+<li><a href="https://www.teleprinter.net/" target="_blank">DF3OE's Fernschreiber Museum </a><br />
+<li><a href="http://fernschreibamt-hausneindorf.de/index.html" target="_blank">Fernschreibamt Hausneindorf (private collection)</a><br />
+</ul>
+</font></td></tr></table>
+<div style="height: 14px;"></div></td></tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td colspan=3 width=100%>
+<div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+</table>
+</td></tr>
+<tr>
+<td align=center width=100%>
+<font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+ 
+© Crypto Museum. Created: Saturday 07 April 2012. Last changed: Sunday, 20 July 2025 - 09:46 CET.
+<br />
+</font
+</td>
+</tr>
+<tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+<tr><td align=center>
+<a href="../index.htm"><img src=../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+</td></tr>
+</table>
+</td></tr>
+</table>
+</font>
+</td>
+</tr></table>
+</body>
+</html>

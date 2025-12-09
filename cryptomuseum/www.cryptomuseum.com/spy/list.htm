@@ -1,0 +1,1429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>Index</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../index.htm"><img src="../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../spy/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../spy/glossary.htm';" >Glossary</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../spy/ww2.htm';" >World War II</div>
+          <div class="but sub" onClick="location.href='../spy/coldwar.htm';" >Cold War</div>
+          <div class="but sub" onClick="location.href='../spy/sf.htm';" >Special forces</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Spy radio sets used by Stay-Behind Organisations in Europe" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../spy/sbo/index.htm';" >Stay-Behind</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Short Range Agent Communication" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../spy/srac.htm';" >SRAC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="One-Way Voice Link - Numbers Stations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../spy/owvl/index.htm';" >OWVL</div>
+</div>
+          <div class="but sub" onClick="location.href='../spy/rx.htm';" >Receivers</div>
+          <div class="but sub" onClick="location.href='../spy/other.htm';" >Other</div>
+          <div class="spacer"></div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Countries
+          </div>
+          <div class="hidden">
+            <div class="but sub" onClick="location.href='../spy/sbo/at/index.htm';" >Austria</div>
+            <div class="but sub" onClick="location.href='../spy/belgium.htm';" >Belgium</div>
+            <div class="but sub" onClick="location.href='../spy/cs.htm';" >Czechoslovakia</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former East-Germany" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../spy/ddr.htm';" >DDR</div>
+</div>
+            <div class="but sub" onClick="location.href='../spy/kyynel/index.htm';" >Finland</div>
+            <div class="but sub" onClick="location.href='../spy/fr.htm';" >France</div>
+            <div class="but sub" onClick="location.href='../spy/de.htm';" >Germany</div>
+            <div class="but sub" onClick="location.href='../spy/hu.htm';" >Hungary</div>
+            <div class="but sub" onClick="location.href='../spy/italy.htm';" >Italy</div>
+            <div class="but sub" onClick="location.href='../spy/japan.htm';" >Japan</div>
+            <div class="but sub" onClick="location.href='../spy/nl.htm';" >Netherlands</div>
+            <div class="but sub" onClick="location.href='../spy/norway.htm';" >Norway</div>
+            <div class="but sub" onClick="location.href='../spy/poland.htm';" >Poland</div>
+            <div class="but sub" onClick="location.href='../spy/sweden.htm';" >Sweden</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United Kingdom" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../spy/uk.htm';" >UK</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United States of America" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../spy/usa.htm';" >USA</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former Soviet Union" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../spy/ussr.htm';" >USSR</div>
+</div>
+            <div class="but sub" onClick="location.href='../spy/yugo.htm';" >Yugoslavia</div>
+          </div>
+          </div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../index.htm"><img src="../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Index of spy radio sets</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+All spy radio sets, described on this website, are listed
+below in alphabetical order.
+Please note that the list is by no means complete and only
+shows items that we either have in our collection or have
+been able to research at some point in the past.
+Click any of the links below for a full description,
+or go to the main <a href="index.htm"><span data-balloon-pos="up" aria-label="More about: spy sets">spy sets</span></a> page.
+<br />
+<br />
+<b>We are always interested in expanding the collection by
+adding new equipment to it. If you have anything to offer,
+please do not hestiate to <a href="mailto:info@cryptomuseum.com"><span data-balloon-pos="up" aria-label="Send e-mail to: info@cryptomuseum.com">contact</span></a> us.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Alphabetical order</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="kyynel/m10.htm">1W Br m/44</a><br />
+            <li><a href="owvl/schnatterinchen/index.htm">2028</a><br />
+            <li><a href="cs_300/index.htm">300-A</a><br />
+            <li><a href="cs_300/300ab.htm">300-AB</a><br />
+            <li><a href="owvl/schnatterinchen/index.htm">32028</a><br />
+            <li><a href="wsa6">32212</a><br />
+            <li><a href="wsa6/32213.htm">32213</a><br />
+            <li><a href="grenze">32261 (TSE)</a><br />
+            <li><a href="grenze">32262 (TSS)</a><br />
+            <li><a href="owvl/32620/index.htm">32620</a><br />
+            <li><a href="owvl/32620/32621.htm">32621</a><br />
+            <li><a href="prc64/index.htm">5300</a><br />
+            <li><a href="rft/ilmenau_210/index.htm">64/72 W 210</a><br />
+            <li><a href="94-6/index.htm">94-6 (Japan)</a><br />
+<br />
+            <li><a href="a2/index.htm">A2</a><br />
+            <li><a href="a3/index.htm">A3</a><br />
+            <li><a href="sezha/index.htm">A-610</a><br />
+            <li><a href="de.htm">Abwehr</a><br />
+            <li><a href="oranje/acorn.htm">Acorn (radio)</a><br />
+            <li><a href="owvl/index.htm">Agency link</a><br />
+            <li><a href="sony/icfpro70/index.htm#air7">AIR-7</a><br />
+            <li><a href="ak20/index.htm">AK-20</a><br />
+            <li><a href="rs1/index.htm">AN/GRC-109</a><br />
+            <li><a href="prc64/index.htm">AN/PRC-64</a><br />
+            <li><a href="cs_300/index.htm">Angola</a><br />
+            <li><a href="ap5/index.htm">AP-5</a><br />
+            <li><a href="as3/index.htm">AS-3</a><br />
+            <li><a href="sp20/asg6800.htm">ASG-6800</a><br />
+            <li><a href="as3/at3.htm">AT-3</a><br />
+            <li><a href="fs5000/index.htm">AZO-90</a><br />
+<br />
+            <li><a href="b2/index.htm">B2</a><br />
+            <li><a href="b2m">B2M</a><br />
+            <li><a href="b2/index.htm">B.II</a><br />
+            <li><a href="owvl/schnatterinchen/index.htm">Baudot-to-speech converter</a><br />
+            <li><a href="rst101/index.htm">BDR-500/01</a><br />
+            <li><a href="bcra/index.htm">BCRA transmitter</a><br />
+            <li><a href="be20/index.htm">BE-20</a><br />
+            <li><a href="be20/1.htm">BE-20/1</a><br />
+            <li><a href="be20/2.htm">BE-20/2</a><br />
+            <li><a href="be20/3.htm">BE-20/3</a><br />
+            <li><a href="be20/index.htm">Berger</a><br />
+            <li><a href="sp15/fs7.htm#tx">BN-22</a><br />
+            <li><a href="sp15/uhu.htm">BN-48 (UHU)</a><br />
+            <li><a href="sp15/fe8.htm#rx">BN-58 (FE-8)</a><br />
+            <li><a href="bnd_conv/index.htm">BND Converter</a><br />
+            <li><a href="bodrog/index.htm">Bodrog</a><br />
+            <li><a href="bp3/index.htm">BP-3</a><br />
+            <li><a href="bp5/index.htm">BP-5</a><br />
+<br />
+            <li><a href="cds501/index.htm">CDS-501</a><br />
+            <li><a href="cs.htm">Czechoslovakia</a><br />
+<br />
+            <li><a href="../burst/davac/index.htm">Davac</a><br />
+            <li><a href="davor/index.htm">Davor</a><br />
+            <li><a href="ddr.htm">DDR</a><br />
+            <li><a href="ddr2/index.htm">DDR 'Type 2'</a><br />
+            <li><a href="prc64/index.htm">Delco 5300</a><br />
+            <li><a href="prm4150/index.htm">DZO-81</a><br />
+<br />
+            <li><a href="ddr.htm">East-Germany</a><br />
+            <li><a href="owvl/32620/index.htm">Eiserne Frau</a><br />
+            <li><a href="ksg/index.htm">EL-84 Sender</a><br />
+            <li><a href="sp15/fe8.htm">Empf&#228;nger SP-15</a><br />
+            <li><a href="smp1750">EMT-1423/2</a><br />
+            <li><a href="esk52/index.htm">ESK-52</a><br />
+            <li><a href="esk52/index.htm">ESK-632</a><br />
+<br />
+            <li><a href="sp15/fe8.htm#rx">FE-8</a><br />
+            <li><a href="sp15/fs7.htm#tx">FFS-7</a><br />
+            <li><a href="frm4750">FRM-4750</a><br />
+            <li><a href="fs5000/index.htm">FS-5000</a><br />
+            <li><a href="sp15/fs7.htm#tx">FS-7</a><br />
+            <li><a href="ksg/index.htm">FS-8</a><br />
+            <li><a href="sp15/nl.htm#nl">FSS-7</a><br />
+<br />
+            <li><a href="rs1/index.htm">GRC-109</a><br />
+            <li><a href="grenze">Grenze</a><br />
+<br />
+            <li><a href="fs5000/index.htm">Harpoon</a><br />
+            <li><a href="horizont">Horizont</a><br />
+            <li><a href="hu.htm">Hungary</a><br />
+            <li><a href="../covert/radio/cs/hvezda4/index.htm">Hvezda 4</a><br />
+<br />
+            <li><a href="icf2001d/index.htm">ICF-2001D</a><br />
+            <li><a href="icf2001d/index.htm">ICF-2010</a><br />
+            <li><a href="sony/icf7600ds/index.htm">ICF-7600DS</a><br />
+            <li><a href="sony/icfpro70/index.htm">ICF-PRO70</a><br />
+            <li><a href="sony/icfpro70/index.htm#pro80">ICF-PRO80</a><br />
+            <li><a href="sp15/index.htm#nl">IFS-7</a><br />
+            <li><a href="rft/ilmenau_210/index.htm">Ilmenau 210</a><br />
+            <li><a href="cs_300/300ab.htm">Irak</a><br />
+            <li><a href="r397">IRTYSH</a><br />
+<br />
+            <li><a href="sirius/index.htm#javornik">Javornik</a><br />
+<br />
+            <li><a href="frm4750">Kaynard</a><br />
+            <li><a href="sp20/ke30.htm">KE-30</a><br />
+            <li><a href="kelchblatt/index.htm">Kelchblatt</a><br />
+            <li><a href="rft/ilmenau_210/index.htm">Kleinstsuper 64/72 W 210</a><br />
+            <li><a href="kongo/index.htm">Kongo</a><br />
+            <li><a href="sp20/ks30.htm">KS-30</a><br />
+            <li><a href="ksg/index.htm">KSG</a><br />
+            <li><a href="cs_300/300ab.htm">Kurdistan</a><br />
+            <li><a href="kyynel/index.htm">Kyynel (overview)</a><br />
+            <li><a href="kyynel/m5.htm">Kyynel M-5</a><br />
+            <li><a href="kyynel/m7.htm">Kyynel M-7</a><br />
+            <li><a href="kyynel/m10.htm">Kyynel M-10X</a><br />
+            <li><a href="kyynel/m11.htm">Kyynel M-11X</a><br />
+<br />
+            <li><a href="../radio/se6861/index.htm">LAPR</a><br />
+            <li><a href="r397/lk.htm">LYAPIS</a><br />
+<br />
+            <li><a href="kyynel/m5.htm">M-5</a><br />
+            <li><a href="kyynel/m7.htm">M-7</a><br />
+            <li><a href="kyynel/m10.htm">M-10X</a><br />
+            <li><a href="kyynel/m11.htm">M-11X</a><br />
+            <li><a href="prm4150">MA-4150</a><br />
+            <li><a href="ma444/index.htm">MA-444</a><br />
+            <li><a href="mk5/index.htm">Mark 5</a><br />
+            <li><a href="mk7/index.htm">Mark 7</a><br />
+            <li><a href="mcr1_bg/index.htm">MBLE</a><br />
+            <li><a href="mcr1/index.htm">MCR-1</a><br />
+            <li><a href="mcr1_bg/index.htm">MCR-1 Bg (MBLE)</a><br />
+            <li><a href="../burst/mesic/index.htm">Mesic</a><br />
+            <li><a href="wsa6/32213.htm">MEZ-12</a><br />
+            <li><a href="mk119/index.htm">Mk-119</a><br />
+            <li><a href="mk122/index.htm">Mk-122</a><br />
+            <li><a href="mk123/index.htm">Mk-123</a><br />
+            <li><a href="mk128/index.htm">Mk-128</a><br />
+            <li><a href="mk301/index.htm">Mk-301</a><br />
+            <li><a href="mk328/index.htm">Mk-328</a><br />
+            <li><a href="mk5/index.htm">Mk V (Le Paracette)</a><br />
+            <li><a href="mk7/index.htm">Mk VII (Paraset)</a><br />
+            <li><a href="mk15/index.htm">Mk XV</a><br />
+            <li><a href="owvl/32620/index.htm">Morse/speech generator Device 32620</a><br />
+<br />
+            <li><a href="owvl/index.htm">Number Stations</a><br />
+<br />
+            <li><a href="od/index.htm">OD radio set</a><br />
+            <li><a href="od/rx.htm">OD receiver</a><br />
+            <li><a href="od/tx.htm">OD transmitter</a><br />
+            <li><a href="r397/ok.htm">OKOLSH</a><br />
+            <li><a href="op3/index.htm">OP-3</a><br />
+            <li><a href="oranje/index.htm">Oranje (radio)</a><br />
+            <li><a href="r350/index.htm">Orel</a><br />
+            <li><a href="pivonka/index.htm">OTA</a><br />
+            <li><a href="owvl/index.htm">OWVL</a><br />
+<br />
+            <li><a href="kyynel/index.htm">P-12-24</a><br />
+            <li><a href="rion/index.htm">P-57</a><br />
+            <li><a href="sp20/index.htm">P-928</a><br />
+            <li><a href="oranje/panter.htm">Panter (radio)</a><br />
+            <li><a href="parabola/index.htm">Parabola</a><br />
+            <li><a href="paraset/index.htm">Paracette</a><br />
+            <li><a href="paraset/index.htm">Paraset</a><br />
+            <li><a href="pcr/index.htm">PCR</a><br />
+            <li><a href="pd5">PD-5</a><br />
+            <li><a href="pivonka/index.htm">Peony</a><br />
+            <li><a href="rs804/index.htm">Phobos</a><br />
+            <li><a href="pivonka/index.htm">Pivonka</a><br />
+            <li><a href="pluto/index.htm">Pluto</a><br />
+            <li><a href="../df/rz301/index.htm">Pospisil</a><br />
+            <li><a href="rion/pr56.htm">PR-56A</a><br />
+            <li><a href="prc64/index.htm">PRC-64</a><br />
+            <li><a href="../df/pristroj/index.htm">Pristroj</a><br />
+            <li><a href="prm4150/index.htm">PRM-4150</a><br />
+            <li><a href="prm4150/index.htm">PRM-4180</a><br />
+            <li><a href="r353/index.htm">Proton</a><br />
+<br />
+            <li><a href="qrc222/index.htm">QRC-222</a><br />
+<br />
+            <li><a href="radione/r3.htm">R3</a><br />
+            <li><a href="rion/index.htm">R-57 (Rion)</a><br />
+            <li><a href="r350/index.htm">R-350 (Orel)</a><br />
+            <li><a href="r350m/index.htm">R-350M (Orel-M)</a><br />
+            <li><a href="r353/index.htm">R-353 (Proton)</a><br />
+            <li><a href="r354/index.htm">R-354 (Shmel)</a><br />
+            <li><a href="r355/index.htm">R-355 (Base Station Controller)</a><br />
+            <li><a href="r394/index.htm">R-394 - overview</a><br />
+            <li><a href="r394/k.htm">R-394D (Strizh D)</a><br />
+            <li><a href="r394/k.htm">R-394K (Strizh K)</a><br />
+            <li><a href="r394/km.htm">R-394KM (Strizh KM)</a><br />
+            <li><a href="r394/t.htm">R-394T (Strizh T)</a><br />
+            <li><a href="r397/index.htm">R-397</a><br />
+            <li><a href="r397/ok.htm">R-397-OK</a><br />
+            <li><a href="r397/lk.htm">R-397-LP</a><br />
+            <li><a href="ra190/index.htm">Ra-190</a><br />
+            <li><a href="rhn/index.htm">Radio Herrijzend Nederland</a><br />
+            <li><a href="radione/index.htm">Radione</a><br />
+            <li><a href="radione/r3.htm">Radione R3</a><br />
+            <li><a href="radione/rs20m.htm">Radione RS-20/M</a><br />
+            <li><a href="oranje/index.htm">Radio Oranje</a><br />
+            <li><a href="rbz/index.htm">RBZ Receiver</a><br />
+            <li><a href="rc2/index.htm">RC-2</a><br />
+            <li><a href="smp1750">RET-1424-1750</a><br />
+            <li><a href="rion/index.htm">Rion</a><br />
+            <li><a href="zenith/1000/index.htm">Royal 1000-D</a><br />
+            <li><a href="rs49/rr49.htm">RR-49</a><br />
+            <li><a href="rs59/index.htm#rx">RR-59</a><br />
+            <li><a href="as3/rre11.htm">RR/E-11</a><br />
+            <li><a href="rs1/index.htm">RS-1</a><br />
+            <li><a href="rs6/index.htm">RS-6</a><br />
+            <li><a href="qrc222/index.htm">RS-8</a><br />
+            <li><a href="radione/rs20m.htm">RS-20/M</a><br />
+            <li><a href="rs49/index.htm">RS-49</a><br />
+            <li><a href="rs59/index.htm">RS-59</a><br />
+            <li><a href="prc64">RS-69</a><br />
+            <li><a href="rs100">RS-100</a><br />
+            <li><a href="rs101">RS-101</a><br />
+            <li><a href="rs804/index.htm">RS-804</a><br />
+            <li><a href="rst101/index.htm">RST-101</a><br />
+            <li><a href="rs1/index.htm">RT-3</a><br />
+            <li><a href="rs49/rt49.htm">RT-49</a><br />
+            <li><a href="rs59/index.htm#tx">RT-59</a><br />
+            <li><a href="rtp8/ssb.htm">RTP-8 SSB</a><br />
+            <li><a href="rtp8/ssb3.htm">RTP-8 SSB/3</a><br />
+            <li><a href="../df/rz301/index.htm">RZ-301</a><br />
+<br />
+            <li><a href="sp20/s6800.htm">S-6800</a><br />
+            <li><a href="s87_20/index.htm">S-87/20</a><br />
+            <li><a href="owvl/schnatterinchen/index.htm">Schnatterinchen</a><br />
+            <li><a href="../radio/se6861/index.htm">SE-6861</a><br />
+            <li><a href="se74_12/index.htm">SE-74/12</a><br />
+            <li><a href="se98_3/index.htm">SE-98/3</a><br />
+            <li><a href="se108_10/index.htm">SE-100/11</a><br />
+            <li><a href="se108_10/index.htm">SE-108/10</a><br />
+            <li><a href="se109_3/index.htm">SE-109/3</a><br />
+            <li><a href="severok/index.htm">Severok-K</a><br />
+            <li><a href="sezha/index.htm">Sezha</a><br />
+            <li><a href="r354/index.htm">Shmel</a><br />
+            <li><a href="sirius/index.htm">Sirius</a><br />
+            <li><a href="sirius/tx.htm">Sirius AB</a><br />
+            <li><a href="sirius3/index.htm">Sirius III</a><br />
+            <li><a href="smp1750">SMP-1750</a><br />
+            <li><a href="sony/index.htm">Sony</a><br />
+            <li><a href="sp15/index.htm">SP-15</a><br />
+            <li><a href="sp15/nl.htm">SP-15 (Dutch version)</a><br />
+            <li><a href="sp20/index.htm">SP-20</a><br />
+            <li><a href="sp15/fe8.htm#rx">SP-20E</a><br />
+            <li><a href="sphone/index.htm">S-Phone</a><br />
+            <li><a href="owvl/32620/index.htm">Speech/morse generator Device 32620</a><br />
+            <li><a href="owvl/32620/index.htm">Sprach-Morse-Generator</a><br />
+            <li><a href="sstr1">SSTR-1</a><br />
+            <li><a href="../covert/bugs/stenice/index.htm">Stenice</a><br />
+            <li><a href="sternchen/index.htm">Sternchen</a><br />
+            <li><a href="sp20/steu6800.htm">STEU-6800</a><br />
+            <li><a href="owvl/32620/index.htm">Stimme</a><br />
+            <li><a href="r394/index.htm">Strizh (overview)</a><br />
+            <li><a href="r394/k.htm">Strizh-D</a><br />
+            <li><a href="r394/k.htm">Strizh-K</a><br />
+            <li><a href="r394/km.htm">Strizh-KM</a><br />
+            <li><a href="r394/t.htm">Strizh-T</a><br />
+            <li><a href="ma444/index.htm">Svenskesuperen</a><br />
+            <li><a href="fs5000/index.htm">SY-5000</a><br />
+            <li><a href="sweetheart/index.htm">Sweetheart</a><br />
+<br />
+            <li><a href="tar224/index.htm">TAR-224</a><br />
+            <li><a href="owvl/schnatterinchen/index.htm">Telegrafie-NF-Analog-umsetzer</a><br />
+            <li><a href="tensor/index.htm">Tensor</a><br />
+            <li><a href="pluto/index.htm">TI-462</a><br />
+            <li><a href="pluto/rx.htm">TI-462A</a><br />
+            <li><a href="pluto/tx.htm">TI-462B</a><br />
+            <li><a href="sirius/index.htm">TI-466</a><br />
+            <li><a href="sirius/tx.htm">TI-466AB</a><br />
+            <li><a href="../burst/davac/index.htm">TI-485</a><br />
+            <li><a href="pivonka/index.htm">TI-509</a><br />
+            <li><a href="../covert/radio/cs/hvezda4/index.htm">TI-523</a><br />
+            <li><a href="sirius3/index.htm">TI-526</a><br />
+            <li><a href="../covert/bugs/stenice/index.htm">TI-574A</a><br />
+            <li><a href="../df/pristroj/index.htm#int">TI-574B</a><br />
+            <li><a href="../df/pristroj/index.htm#int">TI-640A</a><br />
+            <li><a href="bodrog/index.htm">TI-667</a><br />
+            <li><a href="prm4150/index.htm">TITHE</a><br />
+            <li><a href="as3/index.htm#tp3">TP-3</a><br />
+            <li><a href="trbp3a/index.htm">TR-BP-3A</a><br />
+            <li><a href="trtg2a/index.htm">TR-TG-2A</a><br />
+            <li><a href="grenze">TSE-2</a><br />
+            <li><a href="grenze">TSS-2</a><br />
+            <li><a href="sphone/index.htm">Type 13</a><br />
+            <li><a href="ddr2/index.htm">Type 2 (DDR)</a><br />
+            <li><a href="a3/index.htm">Type 21 Mk.III</a><br />
+            <li><a href="b2/index.htm">Type 3 Mk.II</a><br />
+            <li><a href="op3/index.htm">Type 30/1</a><br />
+            <li><a href="sweetheart/index.htm">Type 31/1 (Sweetheart)</a><br />
+            <li><a href="mcr1/index.htm">Type 36/1 (MCR-1)</a><br />
+            <li><a href="esk52/index.htm">Type 41</a><br />
+            <li><a href="a2/index.htm">Type A Mk.II</a><br />
+            <li><a href="a3/index.htm">Type A Mk.III</a><br />
+            <li><a href="b2/index.htm">Type B Mk.II</a><br />
+<br />
+            <li><a href="sp15/uhu.htm">UHU (BN-48)</a><br />
+            <li><a href="sirius/index.htm#upa">UPA</a><br />
+<br />
+            <li><a href="kyynel/m5.htm">VRHAC</a><br />
+            <li><a href="kyynel/m10.htm">VRHAG</a><br />
+            <li><a href="kyynel/m11.htm">VRHAI</a><br />
+<br />
+            <li><a href="mk5/index.htm">Whaddon Mark V (Paracette)</a><br />
+            <li><a href="mk7/index.htm">Whaddon Mark VII (Paraset)</a><br />
+            <li><a href="ws38/index.htm">WS-38 Mk. II</a><br />
+            <li><a href="wsa6">WSA-6/A</a><br />
+            <li><a href="wsa6/32213.htm">WSA-6/B</a><br />
+<br />
+            <li><a href="yugo.htm">Yugoslavia</a><br />
+<br />
+            <li><a href="rst101/index.htm">ZA 00294 Bg</a><br />
+            <li><a href="zenith/1000/index.htm">Zenith 1000</a><br />
+            <li><a href="zo47/index.htm">ZO-47</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Spy sets per subject</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="usa.htm">USA spy sets</a><br />
+            <li><a href="ussr.htm">USSR spy sets</a><br />
+            <li><a href="uk.htm">UK spy sets</a><br />
+            <li><a href="ddr.htm">East-Germany (DRR)</a><br />
+            <li><a href="poland.htm">Poland</a><br />
+            <li><a href="cs.htm">Czechoslovakia</a><br />
+            <li><a href="hu.htm">Hungary</a><br />
+            <li><a href="94-6/index.htm">Japan</a><br />
+            <li><a href="nl.htm">Netherlands</a><br />
+            <li><a href="belgium.htm">Belgium</a><br />
+            <li><a href="ww2.htm">World War II</a><br />
+            <li><a href="coldwar.htm">Cold War</a><br />
+            <li><a href="sbo/index.htm">Stay-Behind (Gladio)</a><br />
+            <li><a href="owvl/index.htm">Numbers Stations (One-way voice link)</a><br />
+            <li><a href="other.htm">Other spy sets</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Russian</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="r397/index.htm">&#1048;&#1088;&#1090;&#1099;&#1096;, &#1056;-397</a><br />
+            <li><a href="r397/lk.htm">&#1051;&#1103;&#1087;&#1080;&#1089;, &#1056;-397-&#1051;&#1050;</a><br />
+            <li><a href="r397/ok.htm">&#1054;&#1082;&#1086;&#1083;&#1099;&#1096;, &#1056;-397-&#1054;&#1050;</a><br />
+            <li><a href="r350/index.htm">&#1054;&#1088;&#1077;&#1083;, &#1056;-350</a><br />
+            <li><a href="r350m/index.htm">&#1054;&#1088;&#1077;&#1083;-&#1052;, &#1056;-350&#1052;</a><br />
+            <li><a href="r353/index.htm">&#1055;&#1088;&#1086;&#1090;&#1086;&#1085;, &#1056;-353</a><br />
+            <li><a href="rion/index.htm">&#1056;&#1080;&#1086;&#1085;, &#1056;-57</a><br />
+            <li><a href="sezha/index.htm">&#1057;&#1045;&#1046;&#1040;, &#1040;-610</a><br />
+            <li><a href="r394/r394k.htm">&#1057;&#1090;&#1088;&#1080;&#1078;-&#1050;, &#1056;-394&#1050;</a><br />
+            <li><a href="r394/index.htm">&#1057;&#1090;&#1088;&#1080;&#1078;-&#1050;&#1052;, &#1056;-394&#1050;&#1052;</a><br />
+            <li><a href="r354/index.htm">&#1064;&#1084;&#1077;&#1083;&#1100;, &#1056;-354</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="index.htm">Main spy set page</a><br />
+            <li><a href="../wanted/index.htm">Wanted items</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Last changed: Wednesday, 19 November 2025 - 13:43 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../index.htm"><img src=../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

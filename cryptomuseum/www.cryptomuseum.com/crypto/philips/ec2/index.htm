@@ -1,0 +1,3696 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>Ecolex II</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="Keywords" content="Exolex-2, Ecolex II, EC-2, OTT, OTP, mixer machine, cipher, crypto, Us8503">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of cryptographic devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/glossary.htm';" >Glossary</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="The ENIGMA cipher machine" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/enigma/index.htm';" >Enigma</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Machines from Boris Hagelin and/or Crypto AG" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/hagelin/index.htm';" >Hagelin</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Soviet rotor-based cipher machine M-125, codenamed Fialka" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/fialka/index.htm';" >Fialka</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Rotor-based cipher machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/rotor.htm';" >Rotor</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Pin-and-lug cipher machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/pinwheel.htm';" >Pin-wheel</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tapeless Rotorless On-Line cipher machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/trol/index.htm';" >TROL</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Secure speech devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/voice.htm';" >Voice</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Telegraphy and computer data encryption" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/data.htm';" >Data</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Manual cipher systems" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/manual.htm';" >Hand</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="The unbreakable One-Time Pad" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/otp/index.htm';" >OTP</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Electronic Message Units" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/emu.htm';" >EMU</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Hardware Security Modules" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/hsm.htm';" >HSM</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines based on One-Time Tape encryption" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../../crypto/ott.htm';" >Mixers</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Secure telephones and privacy sets" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/phone.htm';" >Phones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Bulk encryptors and IP-based networks" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/ip.htm';" >Bulk</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Key transfer devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/fill.htm';" >FILL</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Codebooks, procedures and key distribution material" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/codebook/index.htm';" >Codebooks</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Public and secret algorithms used in cryptography" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/algo/index.htm';" >Algorithms</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cryptographic Processors" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/chips.htm';" >Chips</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cryptanalytic Machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../cam/index.htm';" >Cryptanalysis</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../crypto/toys.htm';" >Toys</div>
+          <div class="but sub" onClick="location.href='../../../crypto/ww2.htm';" >World War II</div>
+          <div class="spacer"></div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Countries
+          </div>
+          <div class="hidden">
+            <div class="but sub" onClick="location.href='../../../crypto/cs.htm';" >Czechoslovakia</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former East-Germany" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/ddr/index.htm';" >DDR</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/france/index.htm';" >France</div>
+            <div class="but sub" onClick="location.href='../../../crypto/germany/index.htm';" >Germany</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="The Netherlands, Holland" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/nl/index.htm';" >Netherlands</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/ru/index.htm';" >Russia</div>
+            <div class="but sub" onClick="location.href='../../../crypto/swiss/index.htm';" >Switzerland</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United Kingdom" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/uk/index.htm';" >UK</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United States of America" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/usa/index.htm';" >USA</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Soviet Union" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/ussr/index.htm';" >USSR</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former Yugoslav republic" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/yugo/index.htm';" >Yugoslavia</div>
+</div>
+          </div>
+          </div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Manufacturers
+          </div>
+          <div class="hidden">
+            <div class="but sub" onClick="location.href='../../../crypto/ant/index.htm';" >ANT</div>
+            <div class="but sub" onClick="location.href='../../../crypto/aristo/index.htm';" >Aristo</div>
+            <div class="but sub" onClick="location.href='../../../crypto/ascom/index.htm';" >Ascom</div>
+            <div class="but sub" onClick="location.href='../../../crypto/att/index.htm';" >AT&amp;T</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Brown, Boveri and Company" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/bbc/index.htm';" >BBC</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/bosch/index.htm';" >Bosch</div>
+            <div class="but sub" onClick="location.href='../../../crypto/compumatica/index.htm';" >Compumatica</div>
+            <div class="but sub" onClick="location.href='../../../crypto/hagelin/index.htm';" >Crypto AG</div>
+            <div class="but sub" onClick="location.href='../../../crypto/datotek/index.htm';" >Datotek</div>
+            <div class="but sub" onClick="location.href='../../../crypto/foxit/fffe/index.htm';" >Fox-IT</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="General Dynamics" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../manuf/gd/index.htm';" >GD</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../manuf/gemalto/index.htm';" >Gemalto</div>
+            <div class="but sub" onClick="location.href='../../../crypto/gretag/index.htm';" >Gretag</div>
+            <div class="but sub" onClick="location.href='../../../crypto/harris/index.htm';" >Harris</div>
+            <div class="but sub" onClick="location.href='../../../crypto/hell/index.htm';" >HELL</div>
+            <div class="but sub" onClick="location.href='../../../crypto/itt/index.htm';" >ITT</div>
+            <div class="but sub" onClick="location.href='../../../crypto/lorenz/index.htm';" >Lorenz</div>
+            <div class="but sub" onClick="location.href='../../../crypto/lugagne/index.htm';" >Lugagne</div>
+            <div class="but sub" onClick="location.href='../../../crypto/mel/index.htm';" >MEL</div>
+            <div class="but sub" onClick="location.href='../../../crypto/mils/index.htm';" >Mils</div>
+            <div class="but sub" onClick="location.href='../../../crypto/motorola/index.htm';" >Motorola</div>
+            <div class="but sub" onClick="location.href='../../../manuf/mykotronx/index.htm';" >Mykotronx</div>
+            <div class="but sub" onClick="location.href='../../../crypto/nokia/index.htm';" >Nokia</div>
+            <div class="but sub" onClick="location.href='../../../crypto/omi/index.htm';" >OMI</div>
+            <div class="but sub" onClick="location.href='../../../crypto/omnisec/index.htm';" >Omnisec</div>
+            <div class="but sel sub" onClick="location.href='../../../crypto/philips/index.htm';" >Philips</div>
+            <div class="but sub" onClick="location.href='../../../crypto/ptt/index.htm';" >PTT</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Rohde & Schwarz" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/rs/index.htm';" >R&S</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/racal/index.htm';" >Racal</div>
+            <div class="but sub" onClick="location.href='../../../crypto/randata/index.htm';" >RanData</div>
+            <div class="but sub" onClick="location.href='../../../crypto/raytheon/index.htm';" >Raytheon</div>
+            <div class="but sub" onClick="location.href='../../../crypto/rca/index.htm';" >RCA</div>
+            <div class="but sub" onClick="location.href='../../../manuf/safenet/index.htm';" >Safenet</div>
+            <div class="but sub" onClick="location.href='../../../manuf/secunet/index.htm';" >Secunet</div>
+            <div class="but sub" onClick="location.href='../../../crypto/siemens/index.htm';" >Siemens</div>
+            <div class="but sub" onClick="location.href='../../../crypto/stk/index.htm';" >STK</div>
+            <div class="but sub" onClick="location.href='../../../crypto/tadiran/index.htm';" >Tadiran</div>
+            <div class="but sub" onClick="location.href='../../../crypto/tait/index.htm';" >Tait</div>
+            <div class="but sub" onClick="location.href='../../../manuf/tcc/index.htm';" >TCC</div>
+            <div class="but sub" onClick="location.href='../../../crypto/telefunken/index.htm';" >Telefunken</div>
+            <div class="but sub" onClick="location.href='../../../crypto/telsy/index.htm';" >Telsy</div>
+            <div class="but sub" onClick="location.href='../../../crypto/teltron/index.htm';" >Teltron</div>
+            <div class="but sub" onClick="location.href='../../../crypto/thales/index.htm';" >Thales</div>
+            <div class="but sub" onClick="location.href='../../../manuf/tno/index.htm';" >TNO</div>
+            <div class="but sub" onClick="location.href='../../../crypto/transvertex/index.htm';" >Transvertex</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tele Security Timmann" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/tst/index.htm';" >TST</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/tutus/index.htm';" >Tutus Data AB</div>
+            <div class="but sub" onClick="location.href='../../../manuf/ultra/index.htm';" >Ultra Electronics</div>
+            <div class="but sub" onClick="location.href='../../../manuf/utimaco/index.htm';" >Utimaco</div>
+            <div class="but sub" onClick="location.href='../../../manuf/zellweger/index.htm';" >Zellweger</div>
+            <div class="but sub" onClick="location.href='../../../manuf/index.htm';" >OTHER</div>
+          </div>
+          </div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../../ott.htm"><div  data-balloon-pos="up" aria-label="Shortcut to One-Time Tape cipher machines (mixers)" class="key">OTT</div></a><a class="key" href="../../nl"><div  data-balloon-pos="up" aria-label="Shortcut to The Netherlands (Holland)" class="key">NL</div></a><a class="key" href="../../ptt"><div  data-balloon-pos="up" aria-label="Shortcut to State-owned company for Post, Telegraph and Telephone (Netherlands)" data-balloon-length="large" class="key">PTT</div></a><a class="key" href="../index.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Philps Usfa (later: Philps Crypto)" class="key">Philips</div></a><a class="key" href="../../../people/oberman/rmm.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Professor R.M.M. Oberman" class="key">Oberman</div></a>&nbsp;&nbsp;<a class="key" href="../ec3"><div  data-balloon-pos="up" aria-label="Forward to Ecolex III" class="key right">Ecolex III &rarr;</div></a><a class="key" href="../ec1mk2"><div  data-balloon-pos="up" aria-label="Back to Ecolex Mark 2, the valve-based predecessor of the Ecolex II" data-balloon-length="large" class="key right">&larr; Ecolex Mk 2</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Ecolex II 
+          &nbsp;<font color="#CCC">
+          US-8011</b>
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>One-time tape cipher machine</b>
+<br />
+<br />
+Ecolex-II is an online/offline
+<a href="../../ott.htm"><span data-balloon-pos="up" aria-label="More about: One-Time Tape (OTT) cipher machine">One-Time Tape (OTT) cipher machine</span></a>
+(<a href="../../mixer.htm"><span data-balloon-pos="up" aria-label="More about: mixer">mixer</span></a>)
+for digital <a href="../../../telex/index.htm"><span data-balloon-pos="up" aria-label="More about: teleprinter">teleprinter</span></a> communication,
+developed in 1954 by the <a href="../../ptt/index.htm"><span data-balloon-pos="up" aria-label="More about: Dutch Post Office (PTT)">Dutch Post Office (PTT)</span></a>
+and built between 1955 and 1963 by <a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: Philips Usfa NV">Philips Usfa NV</span></a>
+in Eindhoven (Netherlands), as the
+transistorized version of the valve-based <a href="../ec1mk2/index.htm"><span data-balloon-pos="up" aria-label="More about: Ecolex Mark II">Ecolex Mark II</span></a>
+of 1953.
+The machine is also known by the Philips designator <b>US-8011</b>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The machine was usually connected to a double tape reader
+ (a modified <a href="#tsend`77f"><span data-balloon-pos="up" aria-label="Jump to: Siemens T-send-77f">Siemens T-send-77f</span></a>), a
+<a href="../../../telex/index.htm"><span data-balloon-pos="up" aria-label="More about: teletypewriter">teletypewriter</span></a>
+(commonly a <a href="../../../telex/siemens/t68/index.htm"><span data-balloon-pos="up" aria-label="More about: Siemens T-68 telex">Siemens T-68 telex</span></a>)
+and the telex line (or a suitable radio interface).
+<br />
+<br />
+The image on the right shows a typical Ecolex II with model number
+US-8011/07, which reveals that quite a few
+<a href="#id"><span data-balloon-pos="up" aria-label="Jump to: variants">variants</span></a> were produced over
+the years. In this case, the <b>/07</b> suffix tells us that the device
+has non-standard military connectors.
+Furthermore it has a modified telex socket at the rear panel, as
+the <a href="#conn_line"><span data-balloon-pos="up" aria-label="Jump to: circular 6-pin socket">circular 6-pin socket</span></a>
+has been replaced by a contemporary 8-pin <a href="#ado8"><span data-balloon-pos="up" aria-label="Jump to: ADo8 socket">ADo8 socket</span></a>.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/302833/069/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Philips Ecolex-II with Siemens T-send-77b on top">
+<a href="img/302833/069/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Philips Ecolex-II with Siemens T-send-77b on top">
+            <img src="img/302833/069/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Philips Ecolex-II with Siemens T-send-77b on top"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The device measures 520 x 235 x 140 mm
+and weighs ~14 kg. It is constructed in such a way, that the
+<a href="#tsend77f"><span data-balloon-pos="up" aria-label="Jump to: double tape reader">double tape reader</span></a>
+could be placed on the top surface,
+but is was also possible to place it aside the base unit.
+The device is based on the so-called <a href="../../vernam.htm"><span data-balloon-pos="up" aria-label="More about: Vernam Cipher">Vernam Cipher</span></a>,
+in which two inputs (from the two tape readers) are added by means of
+a binary XOR <sup><font color="#FF8800">1</font></sup> operation. This is commonly known as <i>mixing</i>, which is why
+the machine is also known as a <a href="../../ott.htm"><span data-balloon-pos="up" aria-label="More about: ..."><i>mixer</i></span></a>.
+The main advantage is that the same
+operation is used for deciphering. When correctly applied,
+the cipher is unbreakable.
+<br />
+<br />
+The Ecolex II was developed by the <span class="short" aria-label="Staatsbedrijf der Posterijen, Telegrafie en Telefonie (state-owned company for post, telegraph and telephone)" data-balloon-pos="up"><a href="../../../manuf/ptt/index.htm" class="short" >PTT</a></span> during the course of 1954
+as the transistorised version of the short-lived valve-based
+<a href="../ec1mk2"><span data-balloon-pos="up" aria-label="More about: Ecolex Mark 2">Ecolex Mark 2</span></a>. In 1958 it was approved for <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span> traffic
+at all levels <a href="#ref_3">[3]</a>. Between 1955 and 1960, approx. 120 machines were
+manufactured by <a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: Philips Usfa">Philips Usfa</span></a>.
+Unlike its predecessor <a href="../ec1"><span data-balloon-pos="up" aria-label="More about: Ecolex I">Ecolex I</span></a>, which operated on the
+26-characters of the Latin alphabet only, the Ecolex II operates
+on all 32 characters of the <a href="../../../ref/ita2"><span data-balloon-pos="up" aria-label="More about: ITA-2 telegraph alphabet">ITA-2 telegraph alphabet</span></a>
+and is compatible with <a href="../../ott.htm"><span data-balloon-pos="up" aria-label="More about: mixers">mixers</span></a> from other manufacturers,
+like the <a href="../../stk/etcrrm"><span data-balloon-pos="up" aria-label="More about: Norwegian ETCRRM">Norwegian ETCRRM</span></a>.
+It was supposed to be succeeded by the <span class="short" aria-label="Staatsbedrijf der Posterijen, Telegrafie en Telefonie (state-owned company for post, telegraph and telephone)" data-balloon-pos="up"><a href="../../../manuf/ptt/index.htm" class="short" >PTT</a></span>-developed <a href="../ec3"><span data-balloon-pos="up" aria-label="More about: Ecolex III">Ecolex III</span></a>
+but this model was skipped in favour of the <a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: Philips">Philips</span></a>-developed
+<a href="../ec4"><span data-balloon-pos="up" aria-label="More about: Ecolex IV">Ecolex IV</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+<b>XOR</b> &equals; exclusive-or, also known as modulo-2 addition.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Bare Ecolex II with wiring">          <img src="img/302833/049/thumbnail.jpg"
+           alt="Bare Ecolex II with wiring"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/049"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Ecolex II cipher machine">          <img src="img/302833/050/thumbnail.jpg"
+           alt="Ecolex II cipher machine"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/050"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Philips Ecolex-II with Siemens T-send-77b on top">          <img src="img/302833/069/thumbnail.jpg"
+           alt="Philips Ecolex-II with Siemens T-send-77b on top"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/069"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Control panel">          <img src="img/302833/054/thumbnail.jpg"
+           alt="Control panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/054"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Close-up of the MODE selector">          <img src="img/302833/056/thumbnail.jpg"
+           alt="Close-up of the MODE selector"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/056"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Ecolex II seen from the rear right">          <img src="img/302833/043/thumbnail.jpg"
+           alt="Ecolex II seen from the rear right"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/043"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Rear panel">          <img src="img/302833/047/thumbnail.jpg"
+           alt="Rear panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/047"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Connectors">          <img src="img/302833/048/thumbnail.jpg"
+           alt="Connectors"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/048"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/302833/049/full.jpg" alt="Bare Ecolex II with wiring">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/302833/050/full.jpg" alt="Ecolex II cipher machine">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/302833/069/full.jpg" alt="Philips Ecolex-II with Siemens T-send-77b on top">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/302833/054/full.jpg" alt="Control panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/302833/056/full.jpg" alt="Close-up of the MODE selector">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/302833/043/full.jpg" alt="Ecolex II seen from the rear right">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/302833/047/full.jpg" alt="Rear panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/302833/048/full.jpg" alt="Connectors">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=ecolex2b></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The diagram below shows the various features of the Ecolex II. All user controls
+are on top of the device, close to the front edge. All connections
+are at the rear, with fixed cables for LINE and AC mains power.
+The machine is constructed in such a way, that the
+<a href="#tsend77f"><span data-balloon-pos="up" aria-label="Jump to: Siemens T-send-77f double tape ...">Siemens T-send-77f double tape reader</span></a>
+can be placed horizontally on the top surface.
+It has its own AC mains power cord.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Overview of controls and connections of the Ecolex II" data-balloon-length="large" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Overview of controls and connections of the Ecolex II" data-balloon-length="large" class="tooltip-red">
+            <img src="img/ec2_features.img"
+             style="
+            "
+             align="center"
+             width="605px"
+             vspace="4"
+             alt="Overview of controls and connections of the Ecolex II"
+             border=0
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The 30-pin socket on the left side of the double tape reader,
+is connected to the 30-pin socket at the rear of the Ecolex.
+It carries the 5-bit parallel digital data from both tape readers and
+supplies it to the Ecolex. It is also used by the Ecolex to send stepping
+commands to the tape readers.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Creating a ciphertext message" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Creating a ciphertext message" class="tooltip-red">
+            <img src="svg/ec2_tx.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="Creating a ciphertext message"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The simplified block diagram above explains how the Ecolex II works.
+At the left is the Siemens T-send-77f with its two tape readers. Tape 1 holds
+the plaintext. Tape 2 delivers the key stream. The outputs from the two
+tape readers are used as inputs to the Ecolex mixer, which
+does an XOR operation on the individual bits of the input signals.
+Note that all signals are processed in serial form (not parallel), so that
+only one XOR circuit is needed. The resulting signal is sent straight
+to the line.
+In <i>online</i> mode, the signal from Tape 1
+is replaced by the signal from a teletypewriter.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Deciphering a message" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Deciphering a message" class="tooltip-red">
+            <img src="svg/ec2_rx.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="Deciphering a message"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+When receiving an encrypted message, the data lines are rerouted so that the
+teleprinter and the line are swapped. In <i>online</i> mode, the line signal
+is used as one of the inputs to the mixer. The other input is provided by the key tape
+reader of the T-send-77f (Tape 2). In <i>offline</i> mode,
+the incoming data is first punched to paper tape, which is then played back
+on Tape reader 1.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=mode></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Mode of operation</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The required MODE of operation is set with the
+<a href="img/302833/056/full.jpg"><span data-balloon-pos="up" aria-label="More about: MODE selector">MODE selector</span></a> at the front edge of the device.
+It consists of five so-called <i>radio buttons</i> plus
+an ALARM push button. The leftmost button (RESET) puts the machine in the
+default state (plaintext on line). The following modes are available:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+        <table width=100% cellspacing=0 cellpadding=0>
+          <tr>
+          <td width=100%>
+          <table
+           class="table"
+           width=100% border=0 cellspacing=0 cellpadding=1 bgcolor=#FFFFFF>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="150" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Button</font></td></b><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Description</font></td></b><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Lamp</font></td></b><td bgcolor="#FFFFFF" align="left" valign="center" width="10" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>&#160;</font></td></b>            </tr>
+            <tr>
+            <td bgcolor=#FFFFFF colspan=4><font size=-1>
+            </font></td>
+            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="150" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>RESET</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Teletypewriter directly connected to line</font></td><td bgcolor=#FFFFFF align="center" valign="center" width="20"><img  src="status/y.png"></td>            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="150" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>LINE CRYPTO</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Ready to receive encrypted text</font></td><td bgcolor=#FFFFFF align="center" valign="center" width="20"><img  src="status/g.png"></td>            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="150" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>LOCAL PLAIN</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Ready for making plaintext tape (or copy)</font></td><td bgcolor=#FFFFFF align="center" valign="center" width="20"><img  src="status/g.png"></td><td bgcolor="#FFFFFF" align="left" valign="center" width="10" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><sup><font color="#FF8800">1</font></sup></font></td>            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="150" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>LOCAL CRYPTO</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Ready for encrypting or decrypting local tape</font></td><td bgcolor=#FFFFFF align="center" valign="center" width="20"><img  src="status/g.png"></td><td bgcolor="#FFFFFF" align="left" valign="center" width="10" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><sup><font color="#FF8800">1</font></sup></font></td>            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="150" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>TAPE PLAIN</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Ready for sending plaintext tape to the line</font></td><td bgcolor=#FFFFFF align="center" valign="center" width="20"><img  src="status/y.png"></td>            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="150" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>ALARM   &#160;</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Cause an alarm at the remote end</font></td><td bgcolor=#FFFFFF align="center" valign="center" width="20"><img  src="status/r.png"></td><td bgcolor="#FFFFFF" align="left" valign="center" width="10" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><sup><font color="#FF8800">2,3</font></sup></font></td>            </tr>
+          </table>
+<div style="height: 20px;"></div>        </td>
+        </tr></table>
+        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+In this mode, precautions are taken to ensure that no plaintext is sent to
+  the line.
+          </li>
+          <li>
+Local machine stays in current mode (with yellow or green lamp ON).
+          </li>
+          <li>
+Red lamp will be ON at remote end only. Press RESET to release the alarm state.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=setup></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Setup</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The diagram below shows the standard setup of an Ecolex II cipher system.
+The teletypewriter at the right &mdash; which is usually connected directly to the
+line &mdash; is rerouted via the Ecolex II. The double tape reader is connected to
+the 30-pin socket at the back of the Ecolex, and acts as the input device
+for the plaintext tape and key tape. It should be seen as one unit with the
+Ecolex II.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Ecolex II default setup (note that the T-send-77f is usually placed on top of the Ecolex II)" data-balloon-length="large" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Ecolex II default setup (note that the T-send-77f is usually placed on top of the Ecolex II)" data-balloon-length="large" class="tooltip-red">
+            <img src="svg/ec2_setup.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="Ecolex II default setup (note that the T-send-77f is usually placed on top of the Ecolex II)"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The double tape reader was usually placed on top of the Ecolex II, so that
+the complete system did not require much space. The system is suitable for
+any type of teletypewriter, but was often used in combination with the
+compact <a href="../../../telex/siemens/t68/index.htm"><span data-balloon-pos="up" aria-label="More about: Siemens T-68">Siemens T-68</span></a>,
+which was a popular machine at the time.
+The above setup is the most flexible one, as it allows the machine to be used
+in a an <b>online</b> and <b>offline</b> configuration. When deciphering a message,
+the teletypewriter is used as a printer.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Ecolex II in online configuration" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Ecolex II in online configuration" class="tooltip-red">
+            <img src="svg/ec2_online.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="Ecolex II in online configuration"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+When used <i>online</i>, the plaintext is entered directly on the keyboard of
+the teletypewriter and is encrypted and transmitted immediately by the
+Ecolex II. In this situation, the teletypewriter acts as the input device.
+Online operation is considered to be less secure than offline use, as the
+typing characteristics of the operator might reveal useful information to
+a potential eavesdropper.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Ecolex II in offline configuration" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Ecolex II in offline configuration" class="tooltip-red">
+            <img src="svg/ec2_offline.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="Ecolex II in offline configuration"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+When used <i>offline</i>, the plaintext is first stored on paper-tape (using the
+teletypewriter), and then played back on the plaintext reader of the Ecolex
+(i.e. the frontmost reader of the T-send-77f). In this configuration the
+tape reader acts as the input device and does not reveal any characteristics,
+as it sends the characters at a fixed speed. <i>Offline</i> is therefore
+considered to be the safest option. Note that in this mode the teletypewriter
+is still connected to the Ecolex, as it is used as a printer.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=tsend77f></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Double tape reader</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Siemens T-send-77f</b>
+<br />
+<br />
+A crucial part of the Ecolex II cipher machine is the double tape reader
+that is used for the two input streams of the Vernam Cipher. In this case,
+the Siemens T-send-77f was used, which was a standard component at the time.
+It was modified by Philips to make it suitable for the Ecolex II.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The T-send-77f was also used on other
+<a href="../../mixer.htm"><span data-balloon-pos="up" aria-label="More about: OTT cipher machines (mixers)">OTT cipher machines (mixers)</span></a>, such
+as Siemens' own <a href="../../siemens/d/index.htm"><span data-balloon-pos="up" aria-label="More about: ..."><i>Schl&#252;sselger&#228;t D</i></span></a>
+(cipher machine D), which is shown
+in the image on the right. It is placed on top of the actual cipher machine,
+which can be seen as the Siemens equivalent of the Ecolex II.
+<br />
+<br />
+The main difference between the Siemens and Philips cipher machines is that
+in the Siemens <i>Schl&#252;sselger&#228;t D</i> the XOR circuits are all relay-based,
+whilst in the Philips Ecolex II this is done by means of electronic XOR
+circuits, making the Ecolex more robust and also potentially faster.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../siemens/d/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Siemens Schlüsselgerät D">
+<a href="../../siemens/d/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Siemens Schlüsselgerät D">
+            <img src="../../siemens/d/img/302274/064/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Siemens Schlüsselgerät D"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Furthermore, the Siemens machine does not have an appropriate alarm function
+and is only suitable for offline use.
+The double tape reader is connected to the 30-pin socket at the rear of the
+Ecolex II. The rearmost reader is used for the key tape which provides the
+<i>key stream</i>. This is usually a
+<a href="../../ott.htm"><span data-balloon-pos="up" aria-label="More about: One-Time Tape (OTT)">One-Time Tape (OTT)</span></a>
+that is filled with truly random characters.
+This reader has a built-in knife that destroys the tape immediately after use.
+The tape reader at the front is used for the plaintext message (when encrypting)
+or for the received ciphertext message (when decrypting).
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=hist></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>History</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In 1954, mixer machines were not new. The principle behind them
+was invented in 1917 in the USA by
+<a href="../../vernam.htm#patent"><span data-balloon-pos="up" aria-label="More about: Gilbert Vernam">Gilbert Vernam</span></a>
+&mdash; hence the name <a href="../../vernam.htm"><span data-balloon-pos="up" aria-label="More about: Vernam Cipher">Vernam Cipher</span></a>
+&mdash; who is also the co-inventor of the
+<a href="../../otp/index.htm"><span data-balloon-pos="up" aria-label="More about: One-Time Pad (OTP)">One-Time Pad (OTP)</span></a>.
+The first mixers that made use of the
+<a href="../../ott.htm"><span data-balloon-pos="up" aria-label="More about:  One-Time Tape (OTT) principle"> One-Time Tape (OTT) principle</span></a>,
+were developed during <a href="../../glossary.htm#ww2"><span data-balloon-pos="up" aria-label="More about: WWII">WWII</span></a>
+for unbreakable communication at the highest
+level, independently and more or less simultaneously
+by the Germans (<a href="../../siemens/t43/index.htm"><span data-balloon-pos="up" aria-label="More about: Siemens T-43">Siemens T-43</span></a>)
+and the British (<a href="../../uk/rockex/index.htm"><span data-balloon-pos="up" aria-label="More about: Rockex">Rockex</span></a>
+and <a href="../../uk/5uco/index.htm"><span data-balloon-pos="up" aria-label="More about: 5-UCO">5-UCO</span></a>).
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Shortly after <a href="../../glossary.htm#ww2"><span data-balloon-pos="up" aria-label="More about: WWII">WWII</span></a>,
+in the early days of the <a href="../../glossary.htm#cold_war"><span data-balloon-pos="up" aria-label="More about: Cold War">Cold War</span></a>,
+mixers became popular items for protection of TOP SECRET
+information, such as the radio an telephone traffic between the Foreign Office
+and Embassies abroad, and strategic communication between the various
+<a href="../../glossary.htm#nato"><span data-balloon-pos="up" aria-label="More about: NATO">NATO</span></a>
+countries. Because of their size and lack of suitable components,
+they were constantly in short supply at the time.
+<br />
+<br />
+One of the first affordable and reasonably-sized mixers to arrive on the
+market in 1950, was the <a href="../ec1"><span data-balloon-pos="up" aria-label="More about: Philips Ecolex I">Philips Ecolex I</span></a>, followed in 1953
+by the smaller and cheaper <a href="../../stk/etcrrm/index.htm"><span data-balloon-pos="up" aria-label="More about: ETCRRM">ETCRRM</span></a>
+of the Norwegian <a href="../../../manuf/stk/index.htm"><span data-balloon-pos="up" aria-label="More about: STK">STK</span></a>.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/ec2_extra1_full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Early prototype with single Creed paper tape reader" data-balloon-length="large">
+<a href="img/ec2_extra1_full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Early prototype with single Creed paper tape reader" data-balloon-length="large">
+            <img src="img/ec2_extra1_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Early prototype with single Creed paper tape reader"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Both the <a href="../../stk/etcrrm"><span data-balloon-pos="up" aria-label="More about: ETCRRM">ETCRRM</span></a> and the
+<a href="../ec1/index.htm"><span data-balloon-pos="up" aria-label="More about: Ecolex I">Ecolex I</span></a> were made with thermionic valves (vacuum tubes).
+By 1955, the <a href="../../stk/etcrrm"><span data-balloon-pos="up" aria-label="More about: ETCRRM">ETCRRM</span></a> was produced at a rate of 200
+machines per month, at a unit cost of just US$ 1200. In 1963, the
+<a href="../../stk/etcrrm/index.htm"><span data-balloon-pos="up" aria-label="More about: ETCRRM">ETCRRM</span></a> was even used on the
+<a href="../../hotline/index.htm"><span data-balloon-pos="up" aria-label="More about: Washington-Moscow Hotline">Washington-Moscow Hotline</span></a>.
+In contrast: only 25 of the <a href="../ec1"><span data-balloon-pos="up" aria-label="More about: Ecolex I">Ecolex I</span></a> machines were ever built,
+at a unit price of US$ 6000; five times as much as the
+<a href="../../stk/etcrrm"><span data-balloon-pos="up" aria-label="More about: ETCRRM">ETCRRM</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In 1953, <a href="../../../people/oberman/rmm"><span data-balloon-pos="up" aria-label="More about: Dr. Ir. R.M.M. Oberman">Dr. Ir. R.M.M. Oberman</span></a> at
+the <a href="../../../manuf/ptt/neher.htm"><span data-balloon-pos="up" aria-label="More about: Dr. Neher Laboratory">Dr. Neher Laboratory</span></a>
+of the Dutch state-owned <span class="short" aria-label="Staatsbedrijf der Posterijen, Telegrafie en Telefonie (state-owned company for post, telegraph and telephone)" data-balloon-pos="up"><a href="../../../manuf/ptt/index.htm" class="short" >PTT</a></span> started the development of the valve-based
+<a href="../ec1mk2"><span data-balloon-pos="up" aria-label="More about: Ecolex Mark II">Ecolex Mark II</span></a>, which would be simpler, smaller and cheaper
+than the <a href="../ec1"><span data-balloon-pos="up" aria-label="More about: Ecolex I">Ecolex I</span></a> and would operate on all 32-characters of
+the <a href="../../../ref/ita2"><span data-balloon-pos="up" aria-label="More about: ITA-2 telegraph alphabet">ITA-2 telegraph alphabet</span></a>.
+In 1954 it became available for a unit price of just  US$ 3000 and was
+approved for <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span> traffic.
+<br />
+<br />
+Around the same time however, the (then) new transistor technology became
+available, and it was decided to redesign the machine completely
+and replace the 22 valves by 55 transistors.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/ec2_three_full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Three production versions of the Ecolex II on the test bench" data-balloon-length="large">
+<a href="img/ec2_three_full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Three production versions of the Ecolex II on the test bench" data-balloon-length="large">
+            <img src="img/ec2_three_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Three production versions of the Ecolex II on the test bench"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The new transistorized machine was named <b>Ecolex II</b> and was released by
+the <span class="short" aria-label="Staatsbedrijf der Posterijen, Telegrafie en Telefonie (state-owned company for post, telegraph and telephone)" data-balloon-pos="up"><a href="../../../manuf/ptt/index.htm" class="short" >PTT</a></span>'s <a href="../../../manuf/ptt/neher.htm"><span data-balloon-pos="up" aria-label="More about: Dr. Neher Laboratory">Dr. Neher Laboratory</span></a> in 1955,
+after which production was taken over by <a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: Philips Usfa">Philips Usfa</span></a>.
+A total of 120 Ecolex II units were built by <a href="../usfa.htm"><span data-balloon-pos="up" aria-label="More about: Philips Usfa">Philips Usfa</span></a>
+between 1955 and 1963 <a href="#ref_2">[2]</a>.
+They were sold to the Dutch Army and Navy, the Dutch Ministry of Foreign Affairs
+and the German Ministry of Foreign Affairs <a href="#ref_2">[2]</a>.
+In 1958, the Ecolex II was eventually approved for NATO traffic at all
+levels of classification <a href="#ref_3">[3]</a>.
+<br />
+<br />
+In the meantime, <a href="../../../people/oberman/rmm"><span data-balloon-pos="up" aria-label="More about: Oberman">Oberman</span></a>,
+who had meanwhile left the <span class="short" aria-label="Staatsbedrijf der Posterijen, Telegrafie en Telefonie (state-owned company for post, telegraph and telephone)" data-balloon-pos="up"><a href="../../../manuf/ptt/index.htm" class="short" >PTT</a></span> to become
+a fulltime professor at the Technical University of Delft (TU Delft),
+started the development of the <a href="../ec3"><span data-balloon-pos="up" aria-label="More about: next generation Ecolex III">next generation Ecolex III</span></a>,
+which featured improved synchronisation on noisy short-wave radio channels.
+This new machine, <a href="../ec3"><span data-balloon-pos="up" aria-label="More about: Ecolex III">Ecolex III</span></a>, was never released however,
+as <a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: Philips Usfa">Philips Usfa</span></a> had meanwhile also started development of a
+new machine. The two designs were finally merged and released in 1963
+as the <a href="../ec4"><span data-balloon-pos="up" aria-label="More about: Ecolex IV">Ecolex IV</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=class></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Classification
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Initially, Ecolex II was a classified as SECRET, but this
+was lowered to RESTRICTED on 9 November 1959 by the Dutch Prime Minister
+after consulting SECAN in Washington (USA) <a href="#ref_8">[8]</a>. In principle,
+un&#173;keyed <a href="../../ott.htm"><span data-balloon-pos="up" aria-label="More about: One-Time Tape (OTT) cipher machines">One-Time Tape (OTT) cipher machines</span></a>
+are UNCLASSIFIED, as they do not contain any secret com&#173;po&#173;nents or methods.
+Once the device is loaded with a (<span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span>) key tape, the complex (i.e. cipher machine
+plus key tape) becomes classified to the level of the key tape.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=75 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="">          <img src="img/ec2_three_thumbnail.jpg"
+           border="0" width=75 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # ec2_three_full.jpg"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="">          <img src="img/ec2_interior0_thumbnail.jpg"
+           border="0" width=68 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # ec2_interior0_full.jpg"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="">          <img src="img/ec2_interior1_thumbnail.jpg"
+           border="0" width=75 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # ec2_interior1_full.jpg"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="">          <img src="img/ec2_interior2_thumbnail.jpg"
+           border="0" width=67 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # ec2_interior2_full.jpg"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Unknown device 1">          <img src="img/ec2_extra1_thumbnail.jpg"
+           alt="Unknown device 1"
+           border="0" width=67 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # ec2_extra1_full.jpg"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Unknown device 2">          <img src="img/ec2_extra2_thumbnail.jpg"
+           alt="Unknown device 2"
+           border="0" width=67 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # ec2_extra2_full.jpg"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Ecolex-II, photo by Jan Lispet">          <img src="img/ec2_jl_thumbnail.jpg"
+           alt="Ecolex-II, photo by Jan Lispet"
+           border="0" width=67 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # ec2_jl_full.jpg"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'B'" onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">B</span></div></div><div style="height: 40px;"></div>
+<div id="slide_2" class="slide" onClick="slideClose('slide_2')"><span class="slide_close_left" onClick="slideClose('slide_2')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_2', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 1 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/ec2_three_full.jpg" alt="1 / 7">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 2 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/ec2_interior0_full.jpg" alt="2 / 7">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 3 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/ec2_interior1_full.jpg" alt="3 / 7">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 4 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/ec2_interior2_full.jpg" alt="4 / 7">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 5 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/ec2_extra1_full.jpg" alt="Unknown device 1">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 6 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/ec2_extra2_full.jpg" alt="Unknown device 2">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 7 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/ec2_jl_full.jpg" alt="Ecolex-II, photo by Jan Lispet">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_2', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_2', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=block></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Block diagram</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The block diagram below shows the operation of the complete
+machine, including the double tape reader. Central to the system are
+the MODE selector &mdash; used to select the desired input &mdash; an
+equalizer &mdash; used for re-shaping the signal &mdash; and the mixer (XOR).
+The output of the mixer is delivered to the outgoing TX line
+and to the receive circuit of the local teleprinter at the far right.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Ecolex II block diagram" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Ecolex II block diagram" class="tooltip-red">
+            <img src="svg/ec2_block.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="Ecolex II block diagram"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+At the left is the double tape reader, of which the KEY tape reader
+(Tape 2) is always connected to the mixer. The MODE switches are used
+to select the other input to the mixer: the incoming line,
+the output of the local teleprinter or the other tape reader (Tape 1).
+In the latter case, Tape 1 is either the plaintext tape (when ciphering
+a message) or the ciphertext tape (when deciphering).
+The timing of the entire system is controlled by the selected
+input signal (via the MODE selector).
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/302833/002/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Ecolex II interior">
+<a href="img/302833/002/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Ecolex II interior">
+            <img src="img/ec2_int.png"
+             style="
+            "
+             align="center"
+             width="611px"
+             vspace="4"
+             alt="Ecolex II interior"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=int></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Interior</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Getting access to the machine's interior is only possible with a
+<a href="img/302833/044/full.jpg"><span data-balloon-pos="up" aria-label="More about: physical key">physical key</span></a>
+that has to be inserted into a cylinder lock at the rear. The cylinder lock
+actuates a complex locking mechanism &ndash; using
+<a href="img/302833/029/full.jpg"><span data-balloon-pos="up" aria-label="More about: sideways rotating locks">sideways rotating locks</span></a> &ndash; that
+keeps the <a href="img/302833/032/full.jpg"><span data-balloon-pos="up" aria-label="More about: bottom panel">bottom panel</span></a>
+and the <a href="img/302833/042/full.jpg"><span data-balloon-pos="up" aria-label="More about: outer case shell">outer case shell</span></a> in place.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The machine consists of three basic mechanical parts: a bottom plate,
+a metal case shell, and a frame that holds the actual cipher machine.
+After <a href="img/302833/045/full.jpg"><span data-balloon-pos="up" aria-label="More about: rotating the key clockwise">rotating the key clockwise</span></a>,
+a metal pin &ndash; located below the lock &ndash;
+pops out and unlocks the case.
+<br />
+<br />
+The upper case shell <a href="img/302833/042/full.jpg"><span data-balloon-pos="up" aria-label="More about: can now be removed">can now be removed</span></a>,
+after which the <a href="img/302833/002/full.jpg"><span data-balloon-pos="up" aria-label="More about: interior">interior</span></a> is exposed,
+as shown in the image on the right.
+The machine is built on a strong metal frame, which can be divided into
+three sections: a <a href="img/302833/016/full.jpg"><span data-balloon-pos="up" aria-label="More about: power supply unit (PSU)">power supply unit (PSU)</span></a>
+at the rear, a <a href="img/302833/015/full.jpg"><span data-balloon-pos="up" aria-label="More about: control panel">control panel</span></a> at the
+front, and the <a href="img/302833/017/full.jpg"><span data-balloon-pos="up" aria-label="More about: digital electronic circuits">digital electronic circuits</span></a>
+with their wiring at the center.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/302833/000/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Interior - seen from the front left">
+<a href="img/302833/000/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Interior - seen from the front left">
+            <img src="img/302833/000/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Interior - seen from the front left"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The electronic circuit consist of 10 modules in a so-called cordwood <sup><font color="#FF8800">1</font></sup>
+construction, in which the components are mounted vertically between
+two printed circuit boards. Each cordwood module measures approximately
+185 x 55 x 25 mm
+and is mounted to the metal frame from left to right.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The wiring to the 10 modules is located at the top
+and is bundled towards the right side of the machine, so that each
+cord&shy;wood unit can easily be lifted from the frame in case of a repair.
+The bottom side of each cordwood module can be accessed from the bottom
+of the machine, after <a href="img/302833/039/full.jpg"><span data-balloon-pos="up" aria-label="More about: lifting the frame">lifting the frame</span></a>
+from the metal bottom plate.
+<br />
+<br />
+The image on the right shows a close-up of the cordwood modules, as seen from
+the left side of the machine. The brown parts are resistors, and the
+black ones are OA85 Germanium diodes. All transistors are held in
+a brown isolation sleeve.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/302833/018/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Cordwood circuit - close-up">
+<a href="img/302833/018/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Cordwood circuit - close-up">
+            <img src="img/302833/018/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Cordwood circuit - close-up"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The complete mixer consists of <a href="#circuits"><span data-balloon-pos="up" aria-label="Jump to: 30 sub-circuits">30 sub-circuits</span></a>
+&mdash; spread over the 10 cordwood
+modules &mdash; that are built from 62 Germanium transistors (OC76) and no less
+than 330 Germanium diodes (OA85). An overview of the 30 sub-circuits is given
+in the <a href="#circuits"><span data-balloon-pos="up" aria-label="Jump to: table below">table below</span></a>.
+The sub-circuits represent logical functions (e.g. AND,
+OR, XOR, etc.), switches and analogue power circuits. The circuit diagram
+plus a detailed technical description of each sub-circuit is
+available in the technical manual <a href="#doc_4">[D]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Cordwood modules, or <i>cordwood constructions</i>, refers to a manufacturing
+  method for electronic circuits, in which conventional parts
+  like resistors, capacitors, transistors and diodes, are mounted vertically
+  between to parallel printed circuit boards, with the aim to save space.
+  Cordwood structures are used for example in the
+  NSA's <a href="../../usa/kw7/flyball.htm"><span data-balloon-pos="up" aria-label="More about: FLYBALL modules">FLYBALL modules</span></a> -
+  used extensively in the <a href="../../usa/kw7/index.htm"><span data-balloon-pos="up" aria-label="More about: KW-7 cipher machine">KW-7 cipher machine</span></a> &ndash;
+  and CIA bugs like the <a href="../../../covert/bugs/ec/srt52/index.htm"><span data-balloon-pos="up" aria-label="More about: SRT-52">SRT-52</span></a>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Ecolex II cipher machine">          <img src="img/302833/050/thumbnail.jpg"
+           alt="Ecolex II cipher machine"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/050"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Case lock with key">          <img src="img/302833/044/thumbnail.jpg"
+           alt="Case lock with key"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/044"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Unlocking the case">          <img src="img/302833/045/thumbnail.jpg"
+           alt="Unlocking the case"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/045"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Top cover removed from the Ecolex II">          <img src="img/302833/042/thumbnail.jpg"
+           alt="Top cover removed from the Ecolex II"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/042"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Lifting the bottom panel">          <img src="img/302833/038/thumbnail.jpg"
+           alt="Lifting the bottom panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/038"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Bottom panel removed">          <img src="img/302833/039/thumbnail.jpg"
+           alt="Bottom panel removed"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/039"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior - seen from the front left">          <img src="img/302833/000/thumbnail.jpg"
+           alt="Interior - seen from the front left"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior seen from the front right">          <img src="img/302833/002/thumbnail.jpg"
+           alt="Interior seen from the front right"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/002"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Bottom panel (top)">          <img src="img/302833/032/thumbnail.jpg"
+           alt="Bottom panel (top)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 9);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/032"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Sideways locks">          <img src="img/302833/029/thumbnail.jpg"
+           alt="Sideways locks"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 10);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/029"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Bottom view">          <img src="img/302833/019/thumbnail.jpg"
+           alt="Bottom view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 11);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/019"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior - left side">          <img src="img/302833/021/thumbnail.jpg"
+           alt="Interior - left side"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 12);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/021"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel with hidden switches">          <img src="img/302833/015/thumbnail.jpg"
+           alt="Front panel with hidden switches"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 13);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/015"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PSU detail">          <img src="img/302833/016/thumbnail.jpg"
+           alt="PSU detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 14);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/016"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Cordwood circuits">          <img src="img/302833/017/thumbnail.jpg"
+           alt="Cordwood circuits"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 15);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/017"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Cordwood circuit - close-up">          <img src="img/302833/018/thumbnail.jpg"
+           alt="Cordwood circuit - close-up"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 16);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/018"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'C'" onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">C</span></div></div><div style="height: 40px;"></div>
+<div id="slide_3" class="slide" onClick="slideClose('slide_3')"><span class="slide_close_left" onClick="slideClose('slide_3')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_3', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 1 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/302833/050/full.jpg" alt="Ecolex II cipher machine">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 2 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/302833/044/full.jpg" alt="Case lock with key">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 3 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/302833/045/full.jpg" alt="Unlocking the case">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 4 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/302833/042/full.jpg" alt="Top cover removed from the Ecolex II">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 5 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/302833/038/full.jpg" alt="Lifting the bottom panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 6 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/302833/039/full.jpg" alt="Bottom panel removed">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 7 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/302833/000/full.jpg" alt="Interior - seen from the front left">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 8 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/302833/002/full.jpg" alt="Interior seen from the front right">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 9 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/302833/032/full.jpg" alt="Bottom panel (top)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 10 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/302833/029/full.jpg" alt="Sideways locks">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 11 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/302833/019/full.jpg" alt="Bottom view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 12 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/302833/021/full.jpg" alt="Interior - left side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 13 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/302833/015/full.jpg" alt="Front panel with hidden switches">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 14 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/302833/016/full.jpg" alt="PSU detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 15 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/302833/017/full.jpg" alt="Cordwood circuits">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 16 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/302833/018/full.jpg" alt="Cordwood circuit - close-up">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_3', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_3', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=circuits></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Sub-circuits
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is an overview of the functions of the 30 sub-circuits
+that are spread over the 10 cordwood modules. The first column
+shows which transistors are used for these circuits. In
+November 1960, small changes were made to some of the circuits, and the
+entire circuit diagram was reorganised. The second column gives the
+transistor numbers for Ecolex II versions <b>US 8011/08</b> and <b>/09</b>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:80px;">Tr 1</div><div style="display:inline-block; width:80px;">Tr 1-2</div>Text signal            <li><div style="display:inline-block; width:80px;">Tr 2-3</div><div style="display:inline-block; width:80px;">Tr 3-4</div>Tape reader control            <li><div style="display:inline-block; width:80px;">Tr 4-5</div><div style="display:inline-block; width:80px;">Tr 5-6</div>Delay circuit (alarm)            <li><div style="display:inline-block; width:80px;">Tr 6-8</div><div style="display:inline-block; width:80px;">Tr 7-9</div>Alarm circuit            <li><div style="display:inline-block; width:80px;">Tr 9-10</div><div style="display:inline-block; width:80px;">Tr 10-11</div>Check tape feed            <li><div style="display:inline-block; width:80px;">Tr 11-12</div><div style="display:inline-block; width:80px;">Tr 62-63</div>Break trigger            <li><div style="display:inline-block; width:80px;">Tr 13-14</div><div style="display:inline-block; width:80px;">Tr 12-13</div>Start/stop command            <li><div style="display:inline-block; width:80px;">Tr 15-16</div><div style="display:inline-block; width:80px;">Tr 42-43</div>Tape reader 1 command (plaintext)            <li><div style="display:inline-block; width:80px;">Tr 17-18</div><div style="display:inline-block; width:80px;">Tr 51-52</div>Tape reader 2 command (key)            <li><div style="display:inline-block; width:80px;">Tr 19-20</div><div style="display:inline-block; width:80px;">Tr 60-61</div>Speed check            <li><div style="display:inline-block; width:80px;">Tr 21-22</div><div style="display:inline-block; width:80px;">Tr 27-28</div>Selector command            <li><div style="display:inline-block; width:80px;">Tr 23-24</div><div style="display:inline-block; width:80px;">Tr 29-30</div>Square wave generator (clock)            <li><div style="display:inline-block; width:80px;">Tr 25-26</div><div style="display:inline-block; width:80px;">Tr 31-32</div>Generator buffer            <li><div style="display:inline-block; width:80px;">Tr 27-28</div><div style="display:inline-block; width:80px;">Tr 33-34</div>1st divider            <li><div style="display:inline-block; width:80px;">Tr 29-30</div><div style="display:inline-block; width:80px;">Tr 35-36</div>2nd divider            <li><div style="display:inline-block; width:80px;">Tr 31-32</div><div style="display:inline-block; width:80px;">Tr 37-38</div>3rd divider            <li><div style="display:inline-block; width:80px;">Tr 33-34</div><div style="display:inline-block; width:80px;">Tr 23-24</div>Regenerator (equalizer)            <li><div style="display:inline-block; width:80px;">Tr 35</div><div style="display:inline-block; width:80px;">Tr 22</div>Regenerator time pulse            <li><div style="display:inline-block; width:80px;">Tr 36-37</div><div style="display:inline-block; width:80px;">Tr 25-26</div>Transmit relay driver            <li><div style="display:inline-block; width:80px;">Tr 38-40</div><div style="display:inline-block; width:80px;">Tr 29-41</div>Teleprinter driver            <li><div style="display:inline-block; width:80px;">Tr 41-42</div><div style="display:inline-block; width:80px;">Tr 44-45</div>Tape reader 1 buffer (plaintext)            <li><div style="display:inline-block; width:80px;">Tr 43-44</div><div style="display:inline-block; width:80px;">Tr 46-47</div>5th element store (plaintext)            <li><div style="display:inline-block; width:80px;">Tr 45-47</div><div style="display:inline-block; width:80px;">Tr 48-50</div>Tape feed 1 (plaintext)            <li><div style="display:inline-block; width:80px;">Tr 48-49</div><div style="display:inline-block; width:80px;">Tr 53-54</div>Tape reader 2 buffer (key)            <li><div style="display:inline-block; width:80px;">Tr 50-51</div><div style="display:inline-block; width:80px;">Tr 55-56</div>5th element store (key)            <li><div style="display:inline-block; width:80px;">Tr 52-54</div><div style="display:inline-block; width:80px;">Tr 57-59</div>Tape feed 2 (key)            <li><div style="display:inline-block; width:80px;">Tr 55-56</div><div style="display:inline-block; width:80px;">Tr 14-15</div>5 ms delay            <li><div style="display:inline-block; width:80px;">Tr 57-58</div><div style="display:inline-block; width:80px;">Tr 16-17</div>20 ms delay            <li><div style="display:inline-block; width:80px;">Tr 59-60</div><div style="display:inline-block; width:80px;">Tr 18-19</div>Send/receive switch            <li><div style="display:inline-block; width:80px;">Tr 61-62</div><div style="display:inline-block; width:80px;">Tr 20-21</div>40 ms delay (or 170 ms)          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=rest></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Restoration</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+We currently have one Ecolex II in our collection. When we received
+this device, it was in unknown state and the
+<a href="#tsend77f"><span data-balloon-pos="up" aria-label="Jump to: T-send77f double tape reader">T-send77f double tape reader</span></a>
+was missing. We have since found a
+<a href="#tsend77f"><span data-balloon-pos="up" aria-label="Jump to: T-send-77f">T-send-77f</span></a> and have made a suitable
+interconnection cable to fit it to the Ecolex II.
+It is our intention to make it interoperable with the
+<a href="../ec4"><span data-balloon-pos="up" aria-label="More about: Ecolex IV">Ecolex IV</span></a> in our collection in due course.
+The restoration of the machine itself has meanwhile started.
+Below is the progress.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=mis></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Missing items
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+We are currently looking for the following items:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><s>Siemens T-send-77f double tape reader</s> (Philips designator US 8900/02).            <li><s>40-pin to 40-pin cable for connection of the T-send-77f to the Ecolex II.</s>            <li>Full service documentation (the one in <a href="#doc_4">[D]</a> is incomplete).            <li>Line connection and filter unit.          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Fixed
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>Case lock removed and replaced.            <li>Case realigned and paint restored.            <li>Locking mechanism repaired and realigned.            <li>Grommets of fixed cables at the rear replaced.            <li>Strain relief of power cable repaired.            <li>Rubber pads added at bottom to avoid scratches.            <li>One fuse holder repaired.            <li>Mains power switch replaced.          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          </td></tr>
+        </table>
+<br />        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          </td></tr>
+        </table>
+<br />        <a name=conn></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Connections</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <a name=conn_line></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Teletypewriter/Line
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+With the early Ecolex machines, the fixed line cord has a 6-pin
+circular plug at the end. It is wired as shown in the diagram below.
+At the rear of the machine is a female socket for connection of a
+teletypewriter, with the same layout. Below is the pinout when looking
+into the socket from the rear of the machine. Note that the socket has a
+micro-switch behind contact 1.
+When inserting a plug into the socket, pin 1 engages this switch,
+which interrupts the internal 200&Omega; terminator.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li>TX relay A (common)            <li>TX relay Z (mark)            <li>TX relay T (space)            <li>120&Omega; RX relay (with 6)            <li>Alarm contact (with 5)            <li>Alarm contact (with 4)            <li>120&Omega; RX relay (with 3)          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="svg/ec2_line.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table>        <div style="background-color: #EEEEEE; font-size: 8pt; padding: 12px; color: #777777; overflow: auto;">
+<li>Single-current: use TX contacts 1 and 2, set RX current to 40 mA.
+<li>Double-current: power supply via ballast lamps to pins 2 and 4, set line current to 20 mA.
+<li>2-wire operation: TX and RX contacts connected in series.
+<li>4-wire operation: TX and RX contacts connected separately.
+<li>The alarm contact is used to activate an external alarm circuit (e.g. lamp or bell).
+        </div>
+        <div class="clear_float"></div>
+<div style="height: 20px;"></div>        <a name=ado8></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Alternative ADo8 socket
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+On Ecolex II units, the existing 6-pin telex plug and socket (see above)
+was replaced by a more common 8-pin ADo 8 one. The diagram below shows
+the pinout for that connector type.
+At present the wiring of the alarm lines is unknown.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li>TX a (a1)            <li>TX b (b1)            <li>RX a (a2)            <li>RX b (b2)            <li>Bridge to 6 <sup><font color="#FF8800">1</font></sup>            <li>Bridge to 5 <sup><font color="#FF8800">1</font></sup>            <li>?            <li>?          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="../../../telex/svg/ADo8.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td width="20"><img src="../img/blank.gif" width="1" height="5"/></td>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+This is a bridge inside the socket (not the plug).
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=conn_line10></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Alternative 10-pin line plug
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In some cases the fixed cord for connection to the (telex) line
+does not have a standard 6-pin or ADo8 plug at the end.
+Instead, it might be fitted with a military 10-pin male plug,
+of which the wiring is given below, when looking into the socket.
+This plug was standard on the US 8011/07.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <li><div style="display:inline-block; width:120px;">TX a</div>blue            <li><div style="display:inline-block; width:120px;">Alarm a</div>yellow            <li><div style="display:inline-block; width:120px;">TX b</div>red            <li><div style="display:inline-block; width:120px;">Alarm b</div>green            <li><div style="display:inline-block; width:120px;">RX a</div>black            <li><div style="display:inline-block; width:120px;">RX b</div>grey            <li><i><font color=#F52E00>not connected</font></i>            <li>Ground            <li value="10"><i><font color=#F52E00>not connected</font></i>            <li><i><font color=#F52E00>not connected</font></i>          </ol type=A>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="svg/ec2_line10.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol type=A>
+</font></td></tr></table>        <a name=conn_ac></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          AC Mains
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Most Ecolex II units have a standard plug for connection to the
+AC mains wall socket. Some versions however, notably the US 8011/07,
+have a 6-pin military plug fitted to its mains cable. The pinout of
+this plug is given below, when looking into the socket.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <li>AC mains (A)            <li><i><font color=#F52E00>not connected</font></i>            <li>AC mains (B)            <li><i><font color=#F52E00>not connected</font></i>            <li>GND            <li>GND          </ol type=A>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="svg/ec2_ac.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol type=A>
+</font></td></tr></table><div style="height: 32px;"></div>        <a name=conf></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Configuration</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+At the front of the device, below the <a href="#mode"><span data-balloon-pos="up" aria-label="Jump to: MODE selectors">MODE selectors</span></a> and behind the
+top cover, are <a href="img/302833/059/full.jpg"><span data-balloon-pos="up" aria-label="More about: seven hidden switches">seven hidden switches</span></a>
+that can be used to alter the configuration
+of the machine. On some later units, an
+<a href="#th5tg"><span data-balloon-pos="up" aria-label="Jump to: extra configuration switch">extra configuration switch</span></a> is available
+on the <a href="img/302833/067/full.jpg"><span data-balloon-pos="up" aria-label="More about: FUSE-panel">FUSE-panel</span></a>
+of the internal power supply unit (PSU).
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li>LINE PLAIN on/off            <li>LINE CRYPTO on/off            <li>Invert output            <li>Teleprinter current 40/60 mA            <li>Line current single/double <sup><font color="#FF8800">5a</font></sup>            <li>Speed 45.5 or 50 baud            <li>250 Hz frequency adjust          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+<a href="img/302833/058/full.jpg">              <div style="position: relative;" data-balloon-pos="up" aria-label="Configuration switches at the front">
+<a href="img/302833/058/full.jpg">              <div style="position: relative;" data-balloon-pos="up" aria-label="Configuration switches at the front">
+              <img src="img/302833/058/small.jpg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               alt="Configuration switches at the front"
+               border=0
+               width=298 height=200
+               />
+              </div>
+              </a>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li style="margin-bottom: 6px;">
+This switch controls the possibility to send plaintext straight to the line.
+  In the UP position, with the MODE selector set to TAPE PLAIN,
+  the plaintext from reader 1 is sent straight to the line. In the DOWN
+  position, this operation is blocked. It is always possible to send
+  plaintext directly from the keyboard.
+          </li>
+          <li style="margin-bottom: 6px;">
+This switch controls the possibility to send ciphertext straight from the
+  keyboard of the connected teletypewriter.
+  In the UP position, with the MODE selector set to LINE CRYPTO,
+  ciphertext can be sent straight from the keyboard. In the DOWN position,
+  this operation is blocked.
+          </li>
+          <li style="margin-bottom: 6px;">
+This switch can be used to invert the output of the mixer.
+  In the DOWN position, the machine uses the XOR operation for mixing the
+  individual bits from the plaintext and keystream. In the UP position, the
+  output of the mixer is inverted (NOT-XOR). This was the default setting
+  for most Ecolex II machines.
+          </li>
+          <li style="margin-bottom: 6px;">
+This switch controls the line current that is used for the connected
+  teletypewriter. In the UP position, 40mA is used. In the DOWN position,
+  this is 60mA.
+          </li>
+          <li style="margin-bottom: 6px;">
+This switch controls the line configuration. The UP position selects
+  single-current operation. The DOWN position selects
+  double-current operation.
+  <font color=#F52E00>(5a)</font>
+  From version US 8011/08 onwards, switch 5 is used to delay the LINE CHECK
+  by 5 ms.
+          </li>
+          <li style="margin-bottom: 6px;">
+In the UP position, the machine is suitable for 50 baud signals. In the
+  DOWN position, a speed of 45.5 baud is selected, making the machine
+  compatible with American teletypewriters.
+          </li>
+          <li style="margin-bottom: 6px;">
+This is a TEST switch that should be used when adjusting the generator
+  frequency. In the UP position, a neon lamp is enabled. Using a
+  <a href="#fork"><span data-balloon-pos="up" aria-label="Jump to: 125 Hz tuning fork">125 Hz tuning fork</span></a>,
+  the generator frequency can be adjusted with the potentiometer
+  to the right of the switch. Once the frequency is correctly adjusted,
+  the switch should be returned to the DOWN position (more about this
+  procedure below).
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=fork></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Adjusting the 125 Hz generator
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The internal 125 Hz frequency generator of the Ecolex II
+can be adjusted easily and accurately,
+with the help of a <a href="img/302833/064/full.jpg"><span data-balloon-pos="up" aria-label="More about: 125 Hz tuning fork">125 Hz tuning fork</span></a>.
+After placing switch 7 in the UP
+position, a neon lamp (to the right of the switch) will light up at 125Hz.
+<br />
+<br />
+By looking at the neon lamp through the
+<a href="img/302833/066/full.jpg"><span data-balloon-pos="up" aria-label="More about: slit of an exited 125 Hz tuning ...">slit of an exited 125 Hz tuning fork</span></a>, the
+potentiometer at the right should be adjusted so that only one of the
+lamp's electrodes is lit. When the light alternates between the
+two electrodes, the 125 Hz generator has not been adjusted correctly.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../../telex/tools/fork/index.htm">More about tuning forks</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/302833/064/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Tuning fork used for adjustment of the internal generator" data-balloon-length="large">
+<a href="img/302833/064/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Tuning fork used for adjustment of the internal generator" data-balloon-length="large">
+            <img src="img/302833/064/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Tuning fork used for adjustment of the internal generator"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=th5tg></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Line interface
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+An <a href="img/302833/067/full.jpg"><span data-balloon-pos="up" aria-label="More about: extra switch">extra switch</span></a>
+is located on the internal PSU from model <b>US 8011/05</b> onwards.
+When set to the ON position, the Ecolex II is suitable for connection to a
+TH-5/TG telegraph/telephone terminal. Note that in this situation, the
+alarm function of the Ecolex II can only be used when it is connected in a
+4-wire configuration <a href="#doc_1">[A]</a>.
+<br />
+<br />
+The image on the right shows the TH-5/TG as it is shown on the front cover
+of its manual <a href="#doc_7">[G]</a>. The device is housed in a green metal enclosure and was
+used extensively by the US Army during the Vietnam war.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="files/TH5_TG_Manual.pdf">Download TH-5/TG manual</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/th5_tg_large.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/th5_tg_large.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/th5_tg_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=349
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Configuration switches at the front">          <img src="img/302833/058/thumbnail.jpg"
+           alt="Configuration switches at the front"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/058"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior - front view">          <img src="img/302833/059/thumbnail.jpg"
+           alt="Interior - front view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/059"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Sealed symmetry adjustment potentiometer">          <img src="img/302833/062/thumbnail.jpg"
+           alt="Sealed symmetry adjustment potentiometer"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/062"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="125 Hz generator frequency adjustment, consisting of Switch 7, a neon lamp and a potentiometer." data-balloon-length="large">          <img src="img/302833/063/thumbnail.jpg"
+           alt="125 Hz generator frequency adjustment, consisting of Switch 7, a neon lamp and a potentiometer."
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/063"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Toggle switch for enabling the external TH-5/TG interface" data-balloon-length="large">          <img src="img/302833/067/thumbnail.jpg"
+           alt="Toggle switch for enabling the external TH-5/TG interface"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/067"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="125 Hz generator frequency adjustment, consisting of Switch 7, a neon lamp and a potentiometer." data-balloon-length="large">          <img src="img/302833/063/thumbnail.jpg"
+           alt="125 Hz generator frequency adjustment, consisting of Switch 7, a neon lamp and a potentiometer."
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/063"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Tuning fork used for adjustment of the internal generator" data-balloon-length="large">          <img src="img/302833/064/thumbnail.jpg"
+           alt="Tuning fork used for adjustment of the internal generator"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/064"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="125 Hz tuning fork to be held in front of the neon lamp between switch 7 and the potentiometer" data-balloon-length="large">          <img src="img/302833/066/thumbnail.jpg"
+           alt="125 Hz tuning fork to be held in front of the neon lamp between switch 7 and the potentiometer"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302833/066"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'D'" onClick="slideOpen('slide_4'); slideCurrent('slide_4', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">D</span></div></div><div style="height: 40px;"></div>
+<div id="slide_4" class="slide" onClick="slideClose('slide_4')"><span class="slide_close_left" onClick="slideClose('slide_4')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_4', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/302833/058/full.jpg" alt="Configuration switches at the front">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/302833/059/full.jpg" alt="Interior - front view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/302833/062/full.jpg" alt="Sealed symmetry adjustment potentiometer">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/302833/063/full.jpg" alt="125 Hz generator frequency adjustment, consisting of Switch 7, a neon lamp and a potentiometer.">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/302833/067/full.jpg" alt="Toggle switch for enabling the external TH-5/TG interface">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/302833/063/full.jpg" alt="125 Hz generator frequency adjustment, consisting of Switch 7, a neon lamp and a potentiometer.">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/302833/064/full.jpg" alt="Tuning fork used for adjustment of the internal generator">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/302833/066/full.jpg" alt="125 Hz tuning fork to be held in front of the neon lamp between switch 7 and the potentiometer">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_4', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_4', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=spec></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Specifications</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Device</div><a href="../../ott.htm">One-Time Tape (OTT) cipher machine (mixer)</a>            <li><div style="display:inline-block; width:100px;">Purpose</div>Secure (diplomatic) communication            <li><div style="display:inline-block; width:100px;">Model</div>Ecolex II            <li><a href="#id"><div style="display:inline-block; width:100px;">Designators</div>3202, US 8011</a> <a href="#ref_7">[7]</a>.            <li><div style="display:inline-block; width:100px;">Inventor</div><a href="../../../people/oberman/rmm.htm">R.M.M. Oberman</a>            <li><div style="display:inline-block; width:100px;">Developer</div><a href="../../../manuf/ptt/neher.htm">Dr. Neher Laboratory</a>, <span class="short" aria-label="Staatsbedrijf der Posterijen, Telegrafie en Telefonie (state-owned company for post, telegraph and telephone)" data-balloon-pos="up"><a href="../../../manuf/ptt/index.htm" class="short" >PTT</a></span>            <li><div style="display:inline-block; width:100px;">Manufacturer</div><a href="../index.htm">Philips Usfa BV</a>            <li><div style="display:inline-block; width:100px;">Development</div>1954            <li><div style="display:inline-block; width:100px;">Production</div>1955-1963            <li><div style="display:inline-block; width:100px;">Users</div>Dutch Armed Forces, Foreign Office, German <span class="short tooltip-red" data-balloon-pos="up" aria-label="Foreign Office">FO</span>, <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span>            <li><div style="display:inline-block; width:100px;">Predecessor</div><a href="../ec1mk2">Ecolex I Mark 2</a>, <a href="../ec1">Ecolex I</a>            <li><div style="display:inline-block; width:100px;">Successor</div><a href="../ec3">Ecolex III</a>, <a href="../ec4">Ecolex IV</a>            <li><div style="display:inline-block; width:100px;">Alphabet</div>32 characters of <a href="../../../ref/ita2">ITA-2 alphabet</a>            <li><div style="display:inline-block; width:100px;">Baudrate</div>45.5, 50 baud            <li><div style="display:inline-block; width:100px;">Mode</div>Offline, online, 2-wire, 4-wire, single current, double current            <li><div style="display:inline-block; width:100px;">Tape reader</div>Double, Siemens T-send-77f or Creed 92            <li><div style="display:inline-block; width:100px;">Speed</div>50 baud, 45,5 baud            <li><div style="display:inline-block; width:100px;">Line</div>40 or 60 mA            <li><div style="display:inline-block; width:100px;">Transistors</div>55            <li><div style="display:inline-block; width:100px;">Power</div>110, 127 or 220V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> <sup><font color="#FF8800">1</font></sup> (selectable with internal voltage caroussel)            <li><div style="display:inline-block; width:100px;">Consumption</div>15 W            <li><div style="display:inline-block; width:100px;">Fuses</div>2 x 500 mA (internal)            <li><div style="display:inline-block; width:100px;">Dimensions</div>?            <li><div style="display:inline-block; width:100px;">Weight</div>?            <li><div style="display:inline-block; width:100px;">Quantity</div>120            <li><div style="display:inline-block; width:100px;">Price</div>USD 1180 <a href="#ref_6">[6]</a> <sup><font color="#FF8800">2</font></sup>          </ul>
+</font></td></tr></table>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td width="20"><img src="../img/blank.gif" width="1" height="5"/></td>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Extra taps are available on the mains transformer to adjust the
+  selected voltage by &#177;5.5V.
+          </li>
+          <li>
+NLG 4500 converted to USD 1180 with <a href="https://bit.ly/3SepKZq" target="_blank"><span data-balloon-pos="up" aria-label="bit.ly (off-site)">conversion rate</span></a>
+  of 1 August 1955.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Parts
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">US 8011</div>Philips Ecolex II cipher machine <font color="#E7E">&#10148;</font>&nbsp;<a href="#id">Versions</a>            <li><div style="display:inline-block; width:100px;">US 8900/02</div>Modified version of Siemens T-send-77f double tape reader (40mA)            <li><div style="display:inline-block; width:100px;">?</div>Line connection and filter unit          </ul>
+</font></td></tr></table>        <a name=id></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Designators
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../ec1mk2"><div style="display:inline-block; width:100px;">3201</div>First prototype with valves, made by PTT</a>            <li><div style="display:inline-block; width:100px;">3202</div>Prototype with transistors, made by <span class="short" aria-label="Staatsbedrijf der Posterijen, Telegrafie en Telefonie (state-owned company for post, telegraph and telephone)" data-balloon-pos="up"><a href="../../../manuf/ptt/index.htm" class="short" >PTT</a></span>            <li><div style="display:inline-block; width:100px;">US 8011/00</div>First production version made by Philips            <li><div style="display:inline-block; width:100px;">US 8011/01</div>Same as /00 but with 4-pin connectors            <li><div style="display:inline-block; width:100px;">US 8011/02</div>Version with improved line impedance matching            <li><div style="display:inline-block; width:100px;">US 8011/03</div>Version with improved alarm            <li><div style="display:inline-block; width:100px;">US 8011/04</div>Same as /03 but with 4-pin connectors            <li><div style="display:inline-block; width:100px;">US 8011/05</div>Partly with printed wiring, addition of TH-5/TG  switch            <li><div style="display:inline-block; width:100px;">US 8011/06</div>?            <li><div style="display:inline-block; width:100px;">US 8011/07</div>Military connectors (and modified Telex socket)            <li><div style="display:inline-block; width:100px;">US 8011/08</div>Upgraded circuits and new circuit diagram            <li><div style="display:inline-block; width:100px;">US 8011/09</div>Same as /08 but with 4-pin telex socket (rather than 6-pin)            <li><div style="display:inline-block; width:100px;">US 8011/50</div>Modified for use with Creed 92 tape reader          </ul>
+</font></td></tr></table>        <a name=nom></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Nomenclature
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>3202            <li>US 8011            <li>Ecolex II            <li>Ecolex Mark II B            <li>Ecolex Mark II Transistorized Version            <li>Ecolex Mark 2 B          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=lit></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Literature</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=a>
+            <a name="lit_1"></a>
+            <li><a href="../../../book/oberman/staatsgeheim.htm">Maarten Oberman, <i>Staatsgeheim, De Beveiliging van Overheidsberichten</i></a><br />
+State Secret, Government Communications Security (Dutch).<br />
+2022. ISBN 978-9-4644-8870-8.
+          </ol type=a>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=doc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Documentation</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <a name="doc_1"></a>
+            <li><a href="files/Ecolex_II_Manual_NL.pdf">Gebruiksaanwijzing voor het Philips Usfa vercijferapparaat Ecolex II Us 8011/05</a><br />
+Philips Usfa NV, 2 September 1958. Ecolex II User Manual (Dutch). Declassified.<br />
+CM-301190. VTH 11-956/1. KL/GGC-3010.
+            <p />
+            <a name="doc_2"></a>
+            <li><a href="files/Ecolex_II_Manual_NL_supp.pdf">Ecolex II User Manual, Supplement</a><br />
+Description of interoperability with Lorenz Mixer (Dutch).<br />
+Koninklijke Landmacht. 8A-II-IUB 504427. 15 April 1965.
+            <p />
+            <a name="doc_3"></a>
+            <li><a href="files/EC2_user_de.pdf">Bedienungsanweisung Chiffrier-Anlage 'ECO II'</a><br />
+Unknown author, User manual (German). BA-ECO II. Date unknown. 10 pages.
+            <p />
+            <a name="doc_4"></a>
+            <li><a href="files/EC2_tech_de.pdf">N&#228;here Beschreibung f&#252;r das Philips Usfa Chiffrierger&#228;t Ecolex II Us 8011</a><br />
+Philips Usfa, Technical description (German).
+May 1959. <font color=#F52E00>incomplete</font>
+            <p />
+            <a name="doc_5"></a>
+            <li><a href="files/EC2_08_09_de.pdf">Anlagen bei [D], Nr. 13351/D f&#252;r Typ Nr. Us 8011/08/09</a><br />
+Supplement to [D] for Ecolex II Us 8011/08 and Us 8011/09 (German).<br />
+Philips Usfa NV, November 1960.
+            <p />
+            <a name="doc_6"></a>
+<li><font color=#F52E00>Ecolex II, Us 8011, circuit diagrams</font><br />
+Philips Usfa NV, 1&mdash;25 May 1959.
+            <p />
+            <a name="doc_7"></a>
+            <li><a href="files/EC2_manual_FR.pdf">Ecolex II, User Manual (French)</a><br />
+Date unknown, but probably 1958. <sup><font color="#FF8800">1</font></sup>
+            <p />
+            <a name="doc_8"></a>
+            <li><a href="files/TH5_TG_Manual.pdf">Telegraph Terminal TH-5/RG and TH-5A/TG <sup><font color="#FF8800">2</font></sup> </a><br />
+Organisational Maintenance Manual.
+US Army, December 1982.
+          </ol type=A>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Obtained via Google Books, March 2018.
+          </li>
+          <li>
+Document kindly supplied by Maarten Oberman <a href="#ref_5">[5]</a>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=research></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Research</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=a>
+            <li><a href="../../../manuf/tno/files/19650501_TNO_tempest_IV_2.pdf">Elektromagnetische straling van crypto-apparatuur IV <sup><font color="#FF8800">1</font></sup> Part 2</a><br />
+Omvang van de stoorstraling (RFI). Ontstoring.<br />
+<span class="short" aria-label="National Security Organisation (part of TNO, Netherlands)" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >RVO-TNO</a></span>, 1 May 1965. Geheim (secret).<br />
+Crypto Museum Archive CM302983.
+            <p />
+            <li><a href="../../../manuf/tno/files/19650501_TNO_tempest_IV_2_3.pdf">Elektromagnetische straling van crypto-apparatuur IV <sup><font color="#FF8800">1</font></sup> Part 2<sub>3</sub></a><br />
+Appendix 3 of part 2.<br />
+<span class="short" aria-label="National Security Organisation (part of TNO, Netherlands)" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >RVO-TNO</a></span>, 1 May 1965. Geheim (secret).<br />
+Crypto Museum Archive CM302984.
+            <p />
+            <li><a href="../../../manuf/tno/files/19650501_TNO_tempest_IV_3.pdf">Elektromagnetische straling van crypto-apparatuur IV <sup><font color="#FF8800">1</font></sup> Part 3</a><br />
+Omvang van de informatiestraling (data leaks).<br />
+<span class="short" aria-label="National Security Organisation (part of TNO, Netherlands)" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >RVO-TNO</a></span>, 1 May 1965. Geheim (secret).<br />
+Crypto Museum Archive CM302985.
+            <p />
+            <li><a href="../../../manuf/tno/files/19650501_TNO_tempest_IV_3_2.pdf">Elektromagnetische straling van crypto-apparatuur IV <sup><font color="#FF8800">1</font></sup> Part 3<sub>2</sub></a><br />
+Appendix 2 of part 3.<br />
+<span class="short" aria-label="National Security Organisation (part of TNO, Netherlands)" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >RVO-TNO</a></span>, 1 May 1965. Geheim (secret).<br />
+Crypto Museum Archive CM302986.
+            <p />
+            <li><a href="../../../manuf/tno/files/19650501_TNO_tempest_IV_4.pdf">Elektromagnetische straling van crypto-apparatuur IV <sup><font color="#FF8800">1</font></sup> Part 4</a><br />
+Bestrijding van de informatiestraling (solutions).<br />
+<span class="short" aria-label="National Security Organisation (part of TNO, Netherlands)" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >RVO-TNO</a></span>, 1 May 1965. Geheim (secret).<br />
+Crypto Museum Archive CM302987.
+          </ol type=a>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Electromagnetic radiation of cryptographic equipment, volume IV.
+  A series of reports (in Dutch) about unwanted emanations (TEMPEST) of
+  an Ecolex II machine &ndash; resulting in data leaks &ndash; and possible solutions.
+  Written by the Dutch Research Laboratory <span class="short" aria-label="National Security Organisation (part of TNO, Netherlands)" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >RVO-TNO</a></span>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+<li><font color=#F52E00>Philips Usfa, Photographs of Ecolex II</font><br />
+Crypto Museum Archive CM300637.
+            <p />
+            <a name="ref_2"></a>
+            <li><a href="../files/19820823_philips_memo_AvdP.pdf">Andries van de Pas, <i>Crypto produkten, overzicht en vooruitzichten</i></a><br />
+L/5636/AvdP/JP.
+<a href="../index.htm">Philips Usfa</a> memorandum, 23 August 1982.
+Page 5.
+            <p />
+            <a name="ref_3"></a>
+            <li><a href="files/nato_19580523_ec2.pdf">NATO, <i>ECOLEX MARK II, Transistorized Version</i></a><br />
+SGM-318-58. 23 May 1958. <strike>NATO SECRET</strike>.<br />
+<small>Declassified by <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span> in 2006 (IMSM-0001-2006).</small>
+            <p />
+            <a name="ref_4"></a>
+<li><font color=#F52E00>Anonymous, Philips Ecolex II, Model Us 8011/07, S/N 205 &mdash; THANKS !</font><br />
+Crypto Museum. Received March 2018.
+            <p />
+            <a name="ref_5"></a>
+<li><font color=#F52E00>Maarten Oberman, Personal correspondence</font><br />
+June 2019. Crypto Museum, RMM Oberman archive.
+            <p />
+            <a name="ref_6"></a>
+            <li><a href="../../../book/oberman/staatsgeheim.htm">Maarten Oberman, <i>Staatsgeheim, De Beveiliging van Overheidsberichten</i></a><br />
+<i>State Secret, Government Communications Security</i> (Dutch).<br />
+2022. ISBN 978-9-4644-8870-8.
+            <p />
+            <a name="ref_7"></a>
+            <li><a href="../ec1/files/NLG_ecolex_types.pdf"><i>Survey of Versions of Ecolex I and Ecolex II equipments</i> <sup><font color="#FF8800">1</font></sup> </a><br />
+The Netherlands Government, 1 January 1959.
+            <p />
+            <a name="ref_8"></a>
+            <li><a href="../ec1/files/ptt_19600409_declas_ec1.pdf">PTT to CAC, <i>Verlaging rubricering (classificatie) ECOLEX I en ECOLEX II</i></a><br />
+About lowering the classification of Ecolex I and II at <a href="../index.htm">Philips Usfa</a>,
+on 9 November 1959 by the Dutch Prime Minister after
+consulting SECAN (Washington). In Dutch language.<br />
+<span class="short" aria-label="Staatsbedrijf der Posterijen, Telegrafie en Telefonie (state-owned company for post, telegraph and telephone)" data-balloon-pos="up"><a href="../../../manuf/ptt/index.htm" class="short" >PTT</a></span>, 6 April 1960. <sup><font color="#FF8800">1</font></sup>
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Document kindly provided by Maarten Oberman <a href="#ref_5">[5]</a>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../ec1mk2">Ecolex I Mark II, the forerunner</a><br />
+            <li><a href="../ec1/index.htm">Ecolex I, the predecessor</a><br />
+            <li><a href="../ec3/index.htm">Ecolex III, the proposed successor</a><br />
+            <li><a href="../ec4/index.htm">Ecolex IV, the successor</a><br />
+            <li><a href="http://jproc.ca/crypto/ecolex_02.html" target="_blank">Ecolex-II on Jerry Proc's crypto pages (off-site)</a><br />
+<br />
+            <li><a href="../../../telex/siemens/tsend77/index.htm">Siemens T-send-77 double tape reader</a><br />
+            <li><a href="../../vernam.htm">Vernam Cipher</a><br />
+            <li><a href="../usfa.htm">Philips Usfa</a><br />
+            <li><a href="../../../telex/index.htm">Teletypewriters (telex)</a><br />
+            <li><a href="../../ott.htm">Other One-Time Tape (OTT) machines (mixers)</a><br />
+            <li><a href="../index.htm">Other Philips cipher machines</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Friday 14 June 2013. Last changed: Wednesday, 05 November 2025 - 11:51 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

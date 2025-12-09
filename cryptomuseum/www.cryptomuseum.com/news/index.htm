@@ -1,0 +1,3437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>News</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../index.htm"><img src="../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but sub first sel" onClick="location.href='../news/index.htm';" >News</div>
+</div>
+          <div class="but sub" onClick="location.href='../news/2018.htm';" >2018</div>
+          <div class="but sub" onClick="location.href='../news/2017.htm';" >2017</div>
+          <div class="but sub" onClick="location.href='../news/2016.htm';" >2016</div>
+          <div class="but sub" onClick="location.href='../news/2015.htm';" >2015</div>
+          <div class="but sub" onClick="location.href='../news/2014.htm';" >2014</div>
+          <div class="but sub" onClick="location.href='../news/2013.htm';" >2013</div>
+          <div class="but sub" onClick="location.href='../news/2012.htm';" >2012</div>
+          <div class="but sub" onClick="location.href='../news/2011.htm';" >2011</div>
+          <div class="but sub" onClick="location.href='../news/2010.htm';" >2010</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../index.htm"><img src="../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="2018.htm"><div  data-balloon-pos="up" aria-label="Back to 2018" class="key">&larr; 2018</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Latest news</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+This page contains the latest news regarding the subjects on the Crypto
+Museum website. Important developments and crypto-related news will be
+reported here. We also send out Twitter notifications every now and
+then. Click the Twitter icon at the top of the page to read our tweets.
+<br />
+<br />
+Older news can be read by using the blue buttons on the left or the grey
+buttons at the top.
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=anbi></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Crypto Museum becomes registered charity</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>12 June 2025</b>
+<br />
+<br />
+Great new from the Dutch Tax Administration. Effective from 1 January
+2025, Crypto Museum has become a Public Benefit Organisation (PBO) &mdash;
+a registered charity. In The Netherlands this is known as an
+<i>Algemeen Nut Beogende Instelling</i> (<b>ANBI</b>), with a cultural status.
+This means that we no longer have to pay taxes over any gifts or inheritances.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../anbi">More information</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=aob></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Arthur Bauer dies as 82</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>8 February 2025</b>
+<br />
+<br />
+It is our sad duty to inform you that on Wednes&shy;day 5 February 2025
+our long time friend and co-collector Arthur O. Bauer unexpectedly
+pas&shy;sed away. Arthur was the driving force behind the
+<a href="https://www.cdvandt.org"><span data-balloon-pos="up" aria-label="www.cdvandt.org (off-site)">Museum for German Technology</span></a>
+in Duiven&shy;drecht (near Amsterdam) and was the author of several books
+and publications. He was
+also the inspirator of our series of mutual exhibitions under the name
+<a href="../events/2023/sc"><span data-balloon-pos="up" aria-label="More about: Secret Communications">Secret Communications</span></a>, which were held in
+<a href="../events/2013/sc"><span data-balloon-pos="up" aria-label="More about: 2013">2013</span></a>, <a href="../events/2016/sc"><span data-balloon-pos="up" aria-label="More about: 2016">2016</span></a>,
+<a href="../events/2019/sc"><span data-balloon-pos="up" aria-label="More about: 2019">2019</span></a> and <a href="../events/2023/sc"><span data-balloon-pos="up" aria-label="More about: 2023">2023</span></a>.
+<br />
+<br />
+Arthur is survived by his wife Karin. He leaves behind an enormous collection
+of interesting objects, historical artifacts and documentation, which will
+continue to be curated by the Museum Trust.
+We will miss his enthusiasm, his drive and his great technical and historical
+knowledge, but above all his warmth. Farewell dear friend.
+<br />
+<br />
+Marc & Paul
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="files/AOB_card.jpg">Announcement</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/AOB.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Arthur O. Bauer at the exhibition Secret Communications in 2019. Photograph by Gerard Vos." data-balloon-length="large">
+<a href="img/AOB.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Arthur O. Bauer at the exhibition Secret Communications in 2019. Photograph by Gerard Vos." data-balloon-length="large">
+            <img src="img/AOB_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Arthur O. Bauer at the exhibition Secret Communications in 2019. Photograph by Gerard Vos."
+             border=0
+             width=298 height=389
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=wende2024></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Exhibition at Wende Museum</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>13 October 2024</b>
+<br />
+<br />
+Today, a new exhibition opened at the Wende Museum in Culver City (Los
+Angeles), named Counter/Surveillance: Control, Privacy, Agency. It shows
+aspects of (mass) surveillance, counter&shy;surveillance and facial
+recognition,
+in Eastern Europe during the Cold War. It is often thought that these
+techniques are new, but they actually have a history that is too often
+forgotten.
+<br />
+<br />
+The exhibition shows a mixture of art and tech&shy;nology, and includes artifacts
+from the collec&shy;tions of Crypto Museum, the <span class="short" aria-label="National Cryptologic Museum (USA)" data-balloon-pos="up"><a href="http://www.nsa.gov/about/cryptologic-heritage/museum/" class="short" target="_blank" >NCM</a></span>, the Wende itself, and
+others. Open until 19 October 2025.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://wendemuseum.org" target="_blank">Link to Wende Museum</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://wendemuseum.org/exhibition/countersurveillance" target="_blank">More about the exhibition</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/wende_20241013_inside.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/wende_20241013_inside.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/wende_20241013_inside.jpg"
+             style="
+            "
+             align="left"
+             width="298px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=game2024></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>The International Cryptology Game</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>9 October 2024</b>
+<br />
+<br />
+Attention to all puzzle enthusiasts.
+The next edition of the international online contest <b>the CODEBREAKERS</b>
+will take off later this month. The game is dedicated to
+Polish mathematicians who broke the code of the well-known German
+<a href="../crypto/enigma/index.htm"><span data-balloon-pos="up" aria-label="More about: Enigma cipher machine">Enigma cipher machine</span></a> in December 1932 &mdash; now
+more than 90 years ago. The secret work of the Polish mathematicians
+contributed consi&shy;dera&shy;bly to the success and victory of the Allies
+during <span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../spy/glossary.htm#ww2" class="short" >WWII</a></span>.
+<br />
+<br />
+The game will be in English, but a trial is avai&shy;lable in these eight
+languages &mdash; English, French, Spanish, German, Polish, Portu&shy;gese, Russian and Ukrainian.
+It combines elements of mathematics, history and logic in an accessible manner.
+By learning about encryption and decryption methods,
+the participants solve virtual puzzles and break increasingly difficult
+secret messages.
+<br />
+<br />
+Crypto Museum is proud to be once again a supporting partner of this game.
+Click the poster on the right to learn more about the game.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://thecodebreakers.org">Sign up now</a>
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/codebr_2024_poster.pdf">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/codebr_2024_poster.pdf">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/codebr_2024_poster_small.jpg"
+             style="
+            "
+             align="left"
+             width="298px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+There are four levels of difficulty, starting at different dates:
+<ul>
+<li><b>TRIAL</b> &mdash; Now
+<li><b>BASIC</b> &mdash; 21 October
+<li><b>ADVENTURE</b> &mdash; 15 November
+<li><b>ENIGMA</b> &mdash; 19 November
+</ul>
+Prior knowlege about
+breaking ciphers is not required. Depending on the level of difficulty,
+each team may consists of 1, 2 or 3 people.
+<br />
+<br />
+Curious? Click the flyer on the right to learn more, or
+<a href="https://www.youtube.com/watch?v=U5Q6LOnl2QI" target="_blank"><span data-balloon-pos="up" aria-label="www.youtube.com (off-site)">whatch this video on YouTube</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://www.youtube.com/watch?v=U5Q6LOnl2QI" target="_blank">Introduction video</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="img/codebr_2024_poster.pdf">Download the poster</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="img/codebr_2024_flyer.pdf">Download the flyer</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/codebr_2024_flyer.pdf">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/codebr_2024_flyer.pdf">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/codebr_2024_flyer_small.jpg"
+             style="
+            "
+             align="left"
+             width="298px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=pagers></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Hezbollah pagers</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>21 September 2024</b>
+<br />
+<br />
+In an unparalled covert operation, the Israeli in&shy;telligence services
+managed to disrupt the com&shy;mu&shy;ni&shy;cations infrastructure of Lebanese
+terrorist organisation Hezbollah. On 17 September 2024, about 4000
+pagers carried by Hezbollah opera&shy;tives exploded more or less simultaneously.
+The following day, another 450 handheld radios also exploded.
+Here is what we know so far.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../covert/cases/pager">More information</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../covert/cases/pager">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="../covert/cases/pager">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="../covert/radio/apollo/ar924/img/ar924_exploded_small.jpg"
+             style="
+            "
+             align="left"
+             width="298px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=virtual_m209></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Virtual Hagelin M-209</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>6 June 2024</b>
+<br />
+<br />
+A fully operational 3-dimensional simulator of the
+<a href="../crypto/hagelin/m209"><span data-balloon-pos="up" aria-label="More about: Hagelin M-209">Hagelin M-209</span></a>
+has been released by Martin Gillow of
+<a href="https://www.virtualcolossus.co.uk" target="_blank"><span data-balloon-pos="up" aria-label="www.virtualcolossus.co.uk (off-site)">Virtual Colossus</span></a> fame.
+There is no need to install anything on your computer,
+as it runs entirely in the browser.
+<br />
+<br />
+Use your mouse to watch the machine from every angle, open the lid,
+rotate the rotors, select an input letter and rotate the encryption knob.
+Full instructions are on the website.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://m209.virtualcolossus.co.uk" target="_blank">Run Virtual M-209 (off-site)</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../crypto/hagelin/m209">More about the M-209</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="https://m209.virtualcolossus.co.uk" target="_blank">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="https://m209.virtualcolossus.co.uk" target="_blank">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="../crypto/hagelin/m209/img/virtual_m209.jpg"
+             style="
+            "
+             align="left"
+             width="298px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=ovcisklu_kl7></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>OVCISKLu donates KL-7 cipher machine</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>29 March 2024</b>
+<br />
+<br />
+Today, Crypto Museum received a generous gift in the form of a
+<a href="../crypto/usa/kl7"><span data-balloon-pos="up" aria-label="More about: KL-7 cipher machine">KL-7 cipher machine</span></a>, complete with all 12 rotors.
+The machine was donated by <a href="https://www.ovcisklu.nl" target="_blank"><span data-balloon-pos="up" aria-label="www.ovcisklu.nl (off-site)">OVCISKLu</span></a>
+&mdash; the Society of Former Signals and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Communications and Information Services">CIS</span> Officers of the Royal Dutch Air Force.
+<br />
+<br />
+The image on the right shows Paul Arts (left) on behalf of
+<a href="https://www.ovcisklu.nl" target="_blank"><span data-balloon-pos="up" aria-label="www.ovcisklu.nl (off-site)">OVCISKLu</span></a>
+and Paul Reuvers (right) on behalf of Crypto Museum, signing the
+official transfer agreement. Crypto Museum is most grateful and
+will do its best to restore the KL-7, so that it
+can be demonstrated to the public.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../crypto/usa/kl7">KL-7 rotor-based cipher machine</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://www.ovcisklu.nl" target="_blank">About OVCISKLu</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/20240329_kl7.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="OVCISKLu donates KL-7 to Crypto Museum. Photograph Nico Plasier, 29 March 2024." data-balloon-length="large">
+<a href="img/20240329_kl7.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="OVCISKLu donates KL-7 to Crypto Museum. Photograph Nico Plasier, 29 March 2024." data-balloon-length="large">
+            <img src="img/20240329_kl7_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="OVCISKLu donates KL-7 to Crypto Museum. Photograph Nico Plasier, 29 March 2024."
+             border=0
+             width=298 height=224
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=z340></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Zodiac Killer's message Z340 solved</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>27 March 2024</b>
+<br />
+<br />
+The case of the Zodiac Killer is one of the most widely known unsolved
+killer cases in history. In 1969, the killer communicated with the <span class="short" aria-label="Federal Bureau of Investigation (USA)" data-balloon-pos="up"><a href="../intel/fbi/index.htm" class="short" >FBI</a></span>
+in a series of ciphers, some of which remained unsolved to this day.
+After 51 years, David Oranchak, Sam Blake and Jarl Van Eycke have finally
+solved the 340-character cipher known as Z340, which appeared to be a
+combination of a transposition and a homophonic substitution cipher.
+Today, the authors have published their solution
+&ndash; which has meanwhile been confirmed by the <span class="short" aria-label="Federal Bureau of Investigation (USA)" data-balloon-pos="up"><a href="../intel/fbi/index.htm" class="short" >FBI</a></span> &ndash;
+in an <a href="https://arxiv.org/abs/2403.17350" target="_blank"><span data-balloon-pos="up" aria-label="arxiv.org (off-site)">extensive 61-page paper</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://arxiv.org/abs/2403.17350" target="_blank">Download the paper (off-site)</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=colossus1963></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Colossus in 1963</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>18 January 2024</b>
+<br />
+<br />
+To commemmorate the 80th birthday of one of Britain's best kept secrets:
+Colossus &ndash; the world's first electronic
+digital computer &ndash; the British intelligence service GCHQ has released
+hitherto undisclosed photographs that show a Colossus as late as 1963.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../crypto/colossus">New photographs</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../crypto/colossus">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="../crypto/colossus">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="../crypto/colossus/img/gchq_colossus_1963_left_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=168
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=ecase></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Metal enclosure for Enigma-E</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>16 October 2023</b>
+<br />
+<br />
+A new stock of Enigma-E self-build kits is now available.
+The first of these kits were sold more than 20 years ago.
+To commemorate this, a metal enclosure is now included with all kits
+sold from August 2023 onwards &mdash; for free!
+<br />
+<br />
+The image on the right shows the completed enclosure.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../kits/enigma/metal.htm">Assembly instructions</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../kits/enigma/index.htm">About the Enigma-E kit</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../kits/enigma/img/300686/092/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Enigma-E in metal enclosure">
+<a href="../kits/enigma/img/300686/092/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Enigma-E in metal enclosure">
+            <img src="../kits/enigma/img/300686/092/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Enigma-E in metal enclosure"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=tetra></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>TETRA TEA1 algorithm broken</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>9 August 2023</b>
+<br />
+<br />
+On 24 July, researchers of the Dutch security firm
+<a href="../manuf/midnightblue"><span data-balloon-pos="up" aria-label="More about: Midnight Blue">Midnight Blue</span></a>
+published details about five vulnerabilities they had found in the
+encryption algorithms of the <a href="../radio/tetra/index.htm"><span data-balloon-pos="up" aria-label="More about: TETRA radio network">TETRA radio network</span></a>.
+<a href="../radio/tetra/index.htm"><span data-balloon-pos="up" aria-label="More about: TETRA">TETRA</span></a> is used in many countries for the communication
+of public safety and emergency services.
+<br />
+<br />
+Today, <a href="../manuf/midnightblue"><span data-balloon-pos="up" aria-label="More about: Midnightblue">Midnightblue</span></a> is publishing the source
+code of the reverse-engineerd encryption algorithms, as part of their
+talk at the Black Hat 2023 conference. The sources are
+<a href="../radio/tetra.burst.htm"><span data-balloon-pos="up" aria-label="More about: published simultaneously by Crypto ...">published simultaneously by Crypto Museum</span></a>,
+along with a paper written by the researchers.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../radio/tetra/burst.htm">More about TETRA:BURST</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../radio/tetra/burst.htm#pub">Source codes and paper</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../radio/tetra/burst.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="../radio/tetra/burst.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="../radio/tetra/img/motorola_mtm5400_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=199
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=sc2023></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Secret Communications IV</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Following the success of our previous exhibition &ndash; which ended just
+before the start of the pandemic &ndash; Crypto Museum will be holding a series
+of exhibitions in the 2nd half of 2023.
+<br />
+<br />
+The event will take place at the
+<i>Foundation for German Technology</i> (CDV&T) in Duivendrecht (near
+Amsterdam, Netherlands). The first opening days will be on 23/24
+September 2023.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../events/2023/sc/index.htm">More information</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../events/2023/sc/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Enigma G interior">
+<a href="../events/2023/sc/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Enigma G interior">
+            <img src="../crypto/enigma/g/img/303828/076/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Enigma G interior"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=wl></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Bug in WikiLeaks CryptoPhone</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>22 march 2022</b>
+<br />
+<br />
+In March 2018 a sophisticated bug was found inside a
+<a href="../crypto/gsmk/ip19"><span data-balloon-pos="up" aria-label="More about: CryptoPhone IP-19">CryptoPhone IP-19</span></a> that had been used in London for
+several years by whistleblower platform WikiLeaks, in relation to
+the revelations of <span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../intel/nsa/index.htm" class="short" >NSA</a></span> whistleblower <a href="../people/snowden"><span data-balloon-pos="up" aria-label="More about: Edward Snowden">Edward Snowden</span></a>.
+<br />
+<br />
+It demonstrates the security of the CryptoPhone, which apparently was very
+good, but also shows how far certain
+intelligence services are prepared to go to achieve their goals.
+In this article, we review and analyse this high-tech bug.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../crypto/gsmk/ip19/implant.htm">More information</a>
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../crypto/gsmk/ip19/implant.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Implant with battery and amplifier circuit (metal cover removed)" data-balloon-length="large">
+<a href="../crypto/gsmk/ip19/implant.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Implant with battery and amplifier circuit (metal cover removed)" data-balloon-length="large">
+            <img src="../crypto/gsmk/ip19/img/303529/024/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Implant with battery and amplifier circuit (metal cover removed)"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=stg></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Dutch state secrets</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>17 February 2022</b> <br />
+<br />
+An interesting book for the Dutch-speaking community:
+<i>Staatsgeheim, De Beveiliging van Overheidsberichten</i>.
+This book describes the development of
+<a href="../crypto/nl"><span data-balloon-pos="up" aria-label="More about: cipher machines in The Netherlands">cipher machines in The Netherlands</span></a> in the post-<span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../spy/glossary.htm#ww2" class="short" >WWII</a></span> era,
+between 1945 and 1970. These machines were developed the author's father,
+<a href="../people/oberman/rmm.htm"><span data-balloon-pos="up" aria-label="More about: Professor R.M.M. (Roelof) Oberman">Professor R.M.M. (Roelof) Oberman</span></a>,
+at the time one of the leading scientists at the
+<a href="../manuf/ptt/neher.htm"><span data-balloon-pos="up" aria-label="More about: Dr. Neher Laboratory">Dr. Neher Laboratory</span></a> of the
+<a href="../manuf/ptt"><span data-balloon-pos="up" aria-label="More about: Dutch state-owned telecom provider ...">Dutch state-owned telecom provider PTT</span></a>.
+<br />
+<br />
+The book is unique in that
+it is the first to describe the era <u>after</u> the
+<a href="../crypto/rotor.htm"><span data-balloon-pos="up" aria-label="More about: rotor-based cipher machines">rotor-based cipher machines</span></a>
+and <u>before</u> software-based solutions.
+The era of the unbreakable <a href="../crypto/otp"><span data-balloon-pos="up" aria-label="More about: One-Time Pad (OTP)">One-Time Pad (OTP)</span></a>
+and of cipher machines that were based on non-linear
+feedback shift registers (NLFSR).
+The book is based on R.M.M. Oberman's personal archive, complemented by
+documents found in the Dutch National Archives and in the archives
+of the <a href="../intel/aivd"><span data-balloon-pos="up" aria-label="More about: Dutch General Intelligence Service ...">Dutch General Intelligence Service AIVD</span></a>,
+most of which were classified until now, and have never been seen by
+the public before.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../book/oberman/staatsgeheim.htm">More information</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../book/oberman/staatsgeheim.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="../book/oberman/staatsgeheim.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="../book/oberman/img/oberman_stg.jpg"
+             style="
+            "
+             align="left"
+             width="298px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=spellmaster></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>SpellMaster algorithm</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>3 August 2022</b>
+<br />
+<br />
+A few weeks ago we received a small
+<a href="../crypto/franklin/spellmaster"><span data-balloon-pos="up" aria-label="More about: SpellMaster pocket computer">SpellMaster pocket computer</span></a>
+from the mid-1980s as a gift from one of our readers. This device has a
+built-in encryption function of which the algorithm was unknown. On 26
+July, we asked our readers to reconstruct the algorithm, based on a set
+of known PT/CT pairs, in combination with a code snippet that was
+published in the original patent.
+<br />
+<br />
+Today, we are happy to announce that the first solutions were reported
+just three days later and that working code examples are now available
+in <a href="../crypto/franklin/spellmaster/code_1.htm"><span data-balloon-pos="up" aria-label="More about: Phython">Phython</span></a>,
+<a href="../crypto/franklin/spellmaster/code_2.htm"><span data-balloon-pos="up" aria-label="More about: C">C</span></a>
+and <a href="../crypto/franklin/spellmaster/code_3.htm"><span data-balloon-pos="up" aria-label="More about: BBC BASIC">BBC BASIC</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../crypto/franklin/spellmaster">About the Franklin SpellMaster</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../crypto/franklin/spellmaster/code.htm">Analysis of the algorithm</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../crypto/franklin/spellmaster/code.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Franklin SpellMaster QE-103">
+<a href="../crypto/franklin/spellmaster/code.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Franklin SpellMaster QE-103">
+            <img src="../crypto/franklin/spellmaster/img/303817/002/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Franklin SpellMaster QE-103"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=hc2022></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>HistoCrypt 2022</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          20-22 June 2022, Amsterdam (Netherlands)
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The International Conference on Historical Cryptology 2022 will be
+held in Amsterdam (Nether&shy;lands) towards the end of June. This three day
+event is open to anyone, and touches a plethora of subjects related to
+cryptology and its history. One of the key speakers on the first day
+will be Maarten Oberman, who has rewritten the post-<span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../spy/glossary.htm#ww2" class="short" >WWII</a></span> cryptographic
+history of The Netherlands.
+<br />
+<br />
+On the second day, Crypto Museum's Paul Reuvers and Marc Simons will
+give a detailed account on
+<a href="../intel/cia/rubicon.htm"><span data-balloon-pos="up" aria-label="More about: Operation RUBICON">Operation RUBICON</span></a>
+&mdash; a covert operation of
+the American <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../intel/cia/index.htm" class="short" >CIA</a></span> and the German <span class="short" aria-label="Bundesnachrichtendienst (Germany)" data-balloon-pos="up"><a href="../intel/bnd/index.htm" class="short" >BND</a></span> in which they secretly purchased
+a large crypto-manufacturer in neutral Switserland
+&ndash; <a href="../manuf/crypto"><span data-balloon-pos="up" aria-label="More about: Crypto AG (Hagelin)">Crypto AG (Hagelin)</span></a> &ndash;
+and used it to read the diplomatic traffic of more than 130 countries until 2018.
+<br />
+<br />
+On the third day, key speaker Gerhard Strasser will take us back several
+centuries to show how sign language and other forms of non-verbal communication
+were once used for passing secret messages. In addition there will be sessions
+on cipher machines, historical documents, machine learning, tools, resources
+and more.
+<br />
+<br />
+Registration is open until 12 June 2022.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://www.histocrypt.org/2022/program.html" target="_blank">Check out the program</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://www.histocrypt.org" target="_blank">HistoCrypt 2022 website</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=spion2></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Minifon, Der Spion in der Tasche</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>10 April 2022</b>
+<br />
+<br />
+Roland Schellin has just published a new book about the Minifon
+covert wire and tape recorders of the 1950s and 60s. This book is
+a complete rewrite of his earlier book of 2001 with the same title,
+and contains lots of new information and high-quality colour images.
+A must-have for collectors and everyone who is interested in the
+early history of covert recording devices.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../book/schellin/spion2.htm">More information</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../book/schellin/spion2.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="../book/schellin/spion2.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="../book/schellin/img/303772/001/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=thing_fbi></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>FBI releases file about the Great Seal Bug</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>16 March 2022</b>
+<br />
+<br />
+In 2015 we published the most complete tear down of the Great Seal Bug,
+a.k.a. The Thing &mdash;
+a covert listening device that was developed by the Russians and planted
+in the study of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span> Ambassador in Moscow. It was used to eavesdrop on
+the Ambassador for more than 7 years.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+At the time, we used partly declassified reports and correspondense
+of the <span class="short" aria-label="Federal Bureau of Investigation (USA)" data-balloon-pos="up"><a href="../intel/fbi/index.htm" class="short" >FBI</a></span>, and
+undisclosed files from the <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../intel/cia/index.htm" class="short" >CIA</a></span>, and combined it to make a best educated
+guess on how the bug might have worked. At the time, the full
+technical report of the <span class="short" aria-label="Federal Bureau of Investigation (USA)" data-balloon-pos="up"><a href="../intel/fbi/index.htm" class="short" >FBI</a></span> about the device was still classified.
+<br />
+<br />
+Apparently, our efforts have payed off, as the <span class="short" aria-label="Federal Bureau of Investigation (USA)" data-balloon-pos="up"><a href="../intel/fbi/index.htm" class="short" >FBI</a></span> has finally decided to
+disclose their full technical report, including photographs and technical
+drawings of the device. We have updated our page about this passive bug
+accordingly.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../covert/bugs/thing">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="../covert/bugs/thing">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="../covert/bugs/thing/img/thing_expl_small.png"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+            
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The release of the report also puts and end to the discussion about
+the frequency on which the device worked, and whether or not the activation
+signal used the same frequency as the signal that was (re)transmitted
+by the device. It appears that we were right all along &#128522;.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../covert/bugs/thing">Read the full story</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../covert/bugs/thing/files/GREAT_SEAL_BUG.pdf">Read the full FBI report</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=stef></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>NSA algorithm for the PX-1000Cr broken</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>16 February 2022</b>
+<br />
+<br />
+In 1983, a small Dutch company by the name of
+<a href="../manuf/texttell"><span data-balloon-pos="up" aria-label="More about: Text Lite">Text Lite</span></a> introduced
+the PX-1000 &mdash; a small pocket computer with built-in modem that was
+able to send <span class="short" aria-label="Data Encryption Standard" data-balloon-pos="up"><a href="../crypto/algo/des" class="short" >DES</a></span> encrypted texts through an analog telephone line.
+The device was dubbed <i>Pocket Telex</i>, and was also sold by
+<a href="../manuf/philips"><span data-balloon-pos="up" aria-label="More about: Philips">Philips</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In April 2019 we revealed that in 1984, the <span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../intel/nsa/index.htm" class="short" >NSA</a></span> persuaded
+Philips to buy the entire stock from Text Lite and replace <span class="short" aria-label="Data Encryption Standard" data-balloon-pos="up"><a href="../crypto/algo/des" class="short" >DES</a></span>
+by an alternative encryption algorithm that was supplied by the <span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../intel/nsa/index.htm" class="short" >NSA</a></span>.
+At the time we assumed, of course,  that the <span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../intel/nsa/index.htm" class="short" >NSA</a></span> algorithm
+was weaker than <span class="short" aria-label="Data Encryption Standard" data-balloon-pos="up"><a href="../crypto/algo/des" class="short" >DES</a></span>, but we were never able to prove that.
+Until now.
+<br />
+<br />
+Yesterday, computer scientist Stefan Marsiske published a lengthy
+article in which he shows how he can break any message created on
+the PX-1000Cr in less than 4 seconds on a laptop,
+with no more than 17 characters of ciphertext.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../crypto/philips/px1000/nsa.htm#stef">            <div style="position: relative;" data-balloon-pos="up" aria-label="Original PX-1000 made in 1983">
+<a href="../crypto/philips/px1000/nsa.htm#stef">            <div style="position: relative;" data-balloon-pos="up" aria-label="Original PX-1000 made in 1983">
+            <img src="../crypto/philips/px1000/img/301454/007/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Original PX-1000 made in 1983"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+For his break, he used the description of the algorithm
+published by Crypto Museum in January 2016, in combination with
+a disassembly of the code he made with IDA Pro. After creating
+a functional replica of the algorithm in C, he was able to use a
+number of of-the-shelf software frameworks to solve the problem.
+This proves that the algorithm is (much) weaker than <span class="short" aria-label="Data Encryption Standard" data-balloon-pos="up"><a href="../crypto/algo/des" class="short" >DES</a></span>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../crypto/philips/px1000/stef.htm">Read the full article</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../crypto/philips/px1000/index.htm">About the PX-1000</a>
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=rudi></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Rudi Staritz dies at 99</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>24 July 2021</b>
+<br />
+<br />
+We have just received the sad new that this afternoon
+<a href="../people/staritz/rudolf.htm"><span data-balloon-pos="up" aria-label="More about: Rudolf Staritz">Rudolf Staritz</span></a>
+has died at the age of 99. Rudi was the last
+surviving eyewitness who worked on and with the
+<a href="../spy/de.htm"><span data-balloon-pos="up" aria-label="More about: German spy radio sets">German spy radio sets</span></a> of
+<a href="../spy/glossary.htm#ww2"><span data-balloon-pos="up" aria-label="More about: World War II">World War II</span></a>.
+In the 1970s and 80s he published a large number of articles on this subject.
+<br />
+<br />
+With his bright mind and sparkling personality he was a tree of knowledge
+for many radio HAMs, collectors, researchers and museums, ourselves included.
+In November 2019 he was the Guest of Honour during our exhibition
+<a href="../events/2019/sc/index.htm"><span data-balloon-pos="up" aria-label="More about: Secret Communications 3">Secret Communications 3</span></a>.
+He will be missed dearly.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="img/rudi_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             border=0
+             width=298 height=330
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=ncm1></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Machines rediscovered at the NCM</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>2 July 2021</b>
+<br />
+<br />
+The COVID-19 pandemic has kept many of us at home for the past year or so,
+whilst all public activities were cancelled.
+But it also has a positive side. Whilst the National Cryptologic Museum (NCM)
+&mdash; the <span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../intel/nsa/index.htm" class="short" >NSA</a></span>'s museum at Fort Meade (USA) &mdash; was closed to the public and plans
+for a new building were put on ice, it was decided to take the
+opportunity to renovate the existing building.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The renovation works are currently underway, whilst the curators and registrars
+are combing through the entire collection to see if any objects require
+maintenance or special attention. And their efforts have already payed off.
+Last month, the museum registrar rediscovered two machines that had not been
+spotted before or that had been forgotten, probably because no
+information was available about them when they were acquired.
+<br />
+<br />
+The image on the right shows an extremely rare
+<a href="../crypto/ussr/k37/index.htm"><span data-balloon-pos="up" aria-label="More about: Russian K-37 cipher machine">Russian K-37 cipher machine</span></a>
+&ndash; probably the only surviving one &ndash; that was rediscovered last month.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../crypto/ussr/k37/img/500607/000/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Russian K-37 cipher machine in the collection of the NCM" data-balloon-length="large">
+<a href="../crypto/ussr/k37/img/500607/000/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Russian K-37 cipher machine in the collection of the NCM" data-balloon-length="large">
+            <img src="../crypto/ussr/k37/img/500607/000/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Russian K-37 cipher machine in the collection of the NCM"
+             border=0
+             width=290 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The machine had probably been captured during World War II, and was used by the
+<span class="short" aria-label="Armed Forces Security Agency (predecessor of the NSA)" data-balloon-pos="up"><a href="../intel/index.htm#afsa" class="short" >AFSA</a></span> &ndash; the forerunner of the <span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../intel/nsa/index.htm" class="short" >NSA</a></span> &ndash; for analysis and codebreaking.
+The <a href="../crypto/ussr/k37/index.htm"><span data-balloon-pos="up" aria-label="More about: K-37">K-37</span></a> was a copy of the
+<a href="../crypto/hagelin/b211/index.htm"><span data-balloon-pos="up" aria-label="More about: Hagelin B-211">Hagelin B-211</span></a>
+and was adapted for the Cyrillic
+alphabet. It is shown here with the external plugboard in a wooden box
+attached to it. This is the first time a colour photograph of this machine
+is made public. Interestingly, the black & white photograph of a K-37
+that was shown in Boris Hagelin's memoirs &mdash; the only existing photograph
+of a K-37 until now &mdash; was made of <u>this</u> very machine.
+<br />
+<br />
+In addition to the K-37, the people at the <span class="short" aria-label="National Cryptologic Museum (USA)" data-balloon-pos="up"><a href="http://www.nsa.gov/about/cryptologic-heritage/museum/" class="short" target="_blank" >NCM</a></span> also found a complete
+and intact <a href="../crypto/omi/criptograph/index.htm"><span data-balloon-pos="up" aria-label="More about: OMI Criptograph">OMI Criptograph</span></a>,
+an Italian cipher machine that was made around
+1954 and that was based on the design of the
+<a href="../crypto/enigma/index.htm"><span data-balloon-pos="up" aria-label="More about: German Enigma">German Enigma</span></a>.
+It was believed that none of the original machines had survived and all that
+was left was a black & white photograph in a 1954 <span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../intel/nsa/index.htm" class="short" >NSA</a></span> report that was
+declassified in May 2014.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../crypto/ussr/k37/index.htm">Russian K-37 cipher machine</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../crypto/omi/criptograph/index.htm">OMI Criptograph</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=ciag_dismantling></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>The final curtain?</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>14 June 2021</b>
+<br />
+<br />
+It a sad picture. The once so big and famous Swiss company
+<a href="../manuf/crypto/index.htm"><span data-balloon-pos="up" aria-label="More about: Crypto AG">Crypto AG</span></a> &mdash; once the pride of the Swedish inventor
+<a href="../people/hagelin/boris.htm"><span data-balloon-pos="up" aria-label="More about: Boris Hagelin">Boris Hagelin</span></a>,
+and succeeded in 2018 by Swedish entrepreneurs Andreas and Emma Linde
+under the name <a href="../manuf/ciag/index.htm"><span data-balloon-pos="up" aria-label="More about: Crypto International AG">Crypto International AG</span></a> &mdash;
+has dimissed nearly all of its staff and has moved its legal seat to the nearby
+town of H&#252;nenberg. It seems that the curtain is falling.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Following the revelations of the American, German and Swiss media &mdash;
+the Washington Post, ZDF and SRF &mdash; in February 2020, that Crypto AG was
+owned from 1970 onwards b the German BND and the American CIA, and from
+1994 onwards solely by the CIA, the Swiss Parliament ordered an official
+investigation.
+<br />
+<br />
+As fall-out of the news, the Swiss Government withdrew
+the export licence of the company, and Linde was left no other choice than
+to layoff the entire workforce in July of last year. Alledgedly they
+filed for bankruptcy the following month.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../manuf/ciag/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="1 April 2021 - the CRYPTO logo is removed from the building in Steinhausen. © Copyright Patrick Hürlimann Fotografie [17]." data-balloon-length="large">
+<a href="../manuf/ciag/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="1 April 2021 - the CRYPTO logo is removed from the building in Steinhausen. © Copyright Patrick Hürlimann Fotografie [17]." data-balloon-length="large">
+            <img src="../manuf/ciag/img/303633/000/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="1 April 2021 - the CRYPTO logo is removed from the building in Steinhausen. © Copyright Patrick Hürlimann Fotografie [17]."
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+With only two remaining staff members, the company left the
+buildings in Steinhausen early this year and moved its legal seat to nearby
+H&#252;nenberg.
+A few months ago, on 1 April, professional photographer
+Patrick H&#252;rlimann of Steinhausen took the photograph shown above.
+The buildings are now abandonned and will soon be taken down to make
+room for hausing development.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../manuf/ciag/index.htm">Read the full story</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=bw_cx52></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>C-52 and CX-52 uncovered</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>24 February 2021</b>
+<br />
+<br />
+After more than two years of researching the wide variety of Hagelin
+<a href="../crypto/hagelin/c52/index.htm"><span data-balloon-pos="up" aria-label="More about: C-52">C-52</span></a>
+and <a href="../crypto/hagelin/cx52/index.htm"><span data-balloon-pos="up" aria-label="More about: CX-52">CX-52</span></a>
+cipher machines in collections, museums and auctions,
+Bart Wessel has just published his long awaited technical paper on these
+unique machines.
+<br />
+<br />
+He explains the many types, models, versions, variants and other
+differences, and gives a detailed account of how they work.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../pub/index.htm#bw_c52_cx52">Download the paper</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../crypto/hagelin/cx52/index.htm">About the CX-52</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../pub/index.htm#bw_c52_cx52">            <div style="position: relative;" data-balloon-pos="up" aria-label="CX-52 parts">
+<a href="../pub/index.htm#bw_c52_cx52">            <div style="position: relative;" data-balloon-pos="up" aria-label="CX-52 parts">
+            <img src="../crypto/hagelin/cx52/img/300244/086/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="CX-52 parts"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=sg41></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>SG-41 uncovered</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>6 February 2021</b>
+<br />
+<br />
+At last a detailed technical description of the operating principle of
+<a href="../crypto/sg41/index.htm"><span data-balloon-pos="up" aria-label="More about: Schl&#252;sselger&#228;t-41">Schl&#252;sselger&#228;t-41</span></a>,
+also known as <a href="../crypto/sg41/index.htm"><span data-balloon-pos="up" aria-label="More about: SG-41">SG-41</span></a>
+or <a href="../crypto/sg41/index.htm"><span data-balloon-pos="up" aria-label="More about: Hitlerm&#252;hle (Hitler Mill)">Hitlerm&#252;hle (Hitler Mill)</span></a>,
+is now available in a paper by Klaus Kopacz and Paul Reuvers.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../pub/files/CM_SG41.pdf" target="_blank">Download the SG-41 paper</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../pub/index.htm#cm_sg41">Visit our publications page</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../crypto/sg41/index.htm">Visit the SG-41 page</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="SG-41 in 'folded' condition" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="SG-41 in 'folded' condition" class="tooltip-red">
+            <img src="../crypto/sg41/img/303278/000/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="SG-41 in 'folded' condition"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=icch></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>ICCH website goes live</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>5 February 2021</b>
+<br />
+<br />
+The
+<a href="https://www.cryptologichistory.org/" target="_blank"><span data-balloon-pos="up" aria-label="www.cryptologichistory.org (off-site)">International Conference on Cryptologic History (ICCH)</span></a>
+is a forum
+for the discussion of cryptologic history. Established in 2004 as
+'Crypto Collectors', the group includes members located in many
+countries around the world. ICCH holds events - both online and
+in-person &ndash; and has an
+<a href="https://groups.io/g/cryptocollectors/" target="_blank"><span data-balloon-pos="up" aria-label="groups.io (off-site)">e-mail list for general discussion</span></a>.
+As of today, the ICCH has an
+<a href="https://www.cryptologichistory.org/" target="_blank"><span data-balloon-pos="up" aria-label="www.cryptologichistory.org (off-site)">official website</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://www.cryptologichistory.org/" target="_blank">Visit the ICCH website</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="https://www.cryptologichistory.org/" target="_blank">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="https://www.cryptologichistory.org/" target="_blank">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="../events/2014/hr/img/fh2014_014_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Fialka Manual free of charge</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>6 January 2021</b>
+<br />
+<br />
+To provide a little bit of comfort in these difficult COVID-19 times,
+we have decided to make the Fialka Reference Manual available free of
+charge.
+<br />
+<br />
+This manual, that was first released in 2005, contains detailed
+information and drawings of the Russian M-125 (Fialka) cipher machine.
+It used to be available in printed form for EUR 55 from our museum shop,
+but is now totally free. However, if you appreciate our work, you might
+want to consider <a href="../donate.htm"><span data-balloon-pos="up" aria-label="More about: making a small donation">making a small donation</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../crypto/fialka/man.htm">Download the manual</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../crypto/fialka/man.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="../crypto/fialka/man.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="../crypto/fialka/img/man_10154_s.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=198
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=mjc2020></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Objects from Museum Jan Corver for sale</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>14 December 2020</b>
+<br />
+<br />
+After 25 years, Museum Jan Corver, the HAM radio museum of The Netherlands, is
+closing its doors, due to the high age of the owner and the lack of a
+successor. For the core collection, the museum foundation is still
+looking for a successor. All items related to espionage have been handed
+over to Crypto Museum.
+<br />
+<br />
+The remaining objects &ndash; thousands of radio-related items &ndash;
+have been handed over to
+<a href="https://onterfdgoed.nl" target="_blank"><span data-balloon-pos="up" aria-label="onterfdgoed.nl (off-site)">Stichting Onterfd Goed</span></a>
+in Eind&shy;hoven (Netherlands), where
+<a href="https://onterfdgoed.nl/product-categorie/museum-jan-corver/" target="_blank"><span data-balloon-pos="up" aria-label="onterfdgoed.nl (off-site)">they are now for sale</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://onterfdgoed.nl/product-categorie/museum-jan-corver/" target="_blank">Onterfd Goed website</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Photograph " class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Photograph " class="tooltip-red">
+            <img src="img/mjc2020_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Photograph "
+             border=0
+             width=298 height=199
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=rmm></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Professor Oberman</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>14 December 2020</b>
+<br />
+<br />
+Currently in preparation is a paper about the Dutch
+<a href="../people/oberman/rmm.htm"><span data-balloon-pos="up" aria-label="More about: Professor Oberman">Professor Oberman</span></a> and his
+crypto-related work during the years 1946-1965,
+which will be presented at the forthcoming
+HistoCrypt Conference, that will be held in The Netherlands in September 2021
+(subject to Corona crisis developments).
+<br />
+<br />
+People who have background information or (better) documentation
+about Professor Oberman's crypto-related work, or who have
+worked with him in the past on the subject,
+are kindly invited to <a href="mailto:info@cryptomuseum.com"><span data-balloon-pos="up" aria-label="Send e-mail to: info@cryptomuseum.com">contact us</span></a>.
+Also, if you have a specific question about Professor Oberman's
+crypto-related work,
+that could assist the research,
+we would like to hear from you.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../people/oberman/rmm.htm">About Professor Oberman</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="mailto:info@cryptomuseum.com">Contact us</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../people/oberman/rmm.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="../people/oberman/rmm.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="../people/oberman/img/rmm_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=299 height=324
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Swiss neutrality</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>26 November 2020</b>
+<br />
+<br />
+Following the revelation of <a href="../intel/cia/rubicon.htm"><span data-balloon-pos="up" aria-label="More about: Operation Rubicon">Operation Rubicon</span></a>
+in February of this year, and the subsequent Swiss parliametary
+investigation that
+<a href="../intel/cia/rubicon.htm#gpdel"><span data-balloon-pos="up" aria-label="More about: published its results">published its results</span></a>
+earlier this month, the Swiss
+television program Rundschau now reveals that another Swiss manufacturer
+of high-end crypto gear, <a href="../manuf/omnisec/index.htm"><span data-balloon-pos="up" aria-label="More about: Omnisec AG">Omnisec AG</span></a>,
+was also in the pocket of the <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../intel/cia/index.htm" class="short" >CIA</a></span>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../manuf/omnisec/index.htm">Read the full story</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../manuf/omnisec/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="../manuf/omnisec/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="../manuf/omnisec/img/omnisec_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=199
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=game2020></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>The International Cryptology Game</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>25 October 2020</b>
+<br />
+<br />
+Great news from Poland. The next edition of the CODEBREAKERS
+International Cryptology Game is about to start. The game is dedicated to
+Polish mathematicians who broke the code of the well-known German
+<a href="../crypto/enigma/index.htm"><span data-balloon-pos="up" aria-label="More about: Enigma cipher machine">Enigma cipher machine</span></a>, which is now
+88 years ago. The secret work of the Polish mathematicians contributed
+considerably to the success and victory of the Allies during <span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../spy/glossary.htm#ww2" class="short" >WWII</a></span>.
+<br />
+<br />
+The game will be released in six languages &mdash; English, French, Spanish, German,
+Polish and Russian &mdash; and combines elements of history, mathematics and logic
+in an accessible way. By learning about encryption and decryption methods,
+the participants solve virtual puzzles and break increasingly difficult
+secret messages.
+<br />
+<br />
+It is worth noting that <b>everyone</b> can enter the game, as long as they can read.
+There are three
+levels of difficulty: <b>TRIAL</b>, <b>BASIC</b>, <b>ADVENTURE</b>. Prior knowlege about
+breaking ciphers is not required. Depending on the level of difficulty,
+each team may consists of 1, 2 or 3 people.
+<br />
+<br />
+Sign up now:
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://thecodebreakers.org/page/info">https://thecodebreakers.org/page/info</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="img/codebr_2020_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             border=0
+             width=298 height=419
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=crypto_bankruptcy></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Crypto International AG files for bankruptcy</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>27 August 2020</b>
+<br />
+<br />
+Following the news of early last month (see below), that
+<a href="../manuf/ciag/index.htm"><span data-balloon-pos="up" aria-label="More about: Crypto International AG">Crypto International AG</span></a>
+&mdash; the successor to <a href="../manuf/crypto/index.htm"><span data-balloon-pos="up" aria-label="More about: Crypto AG">Crypto AG</span></a> &mdash;
+was about to dismiss most of its workforce,
+the Swiss newspaper NZZ has just announced that the company
+has filed for bankruptcy.
+<br />
+<br />
+The activities will be taken over by the Swedish company
+<a href="../manuf/asperiq/index.htm"><span data-balloon-pos="up" aria-label="More about: Asperiq Group AB">Asperiq Group AB</span></a>,
+which is also owned by Andreas and Emma Linde.
+A few weeks ago, on 7 August, the Linde family also registered
+a new company by the name of
+<a href="../manuf/asperiq/index.htm"><span data-balloon-pos="up" aria-label="More about: Asperiq AG">Asperiq AG</span></a> with the Swiss chamber
+of commerce.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://bit.ly/3gztWOX" target="_blank">Read the NZZ article</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="../manuf/crypto/svg/logo_h.svg"
+             style="
+            "
+             align="left"
+             width="200px"
+             vspace="4"
+             border=0
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=crypto_layoffs></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Mass layoffs at Crypto International AG</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>4 July 2020</b>
+<br />
+<br />
+According to the Swiss newspaper <i>Neue Z&#252;richer Zeitung</i> (NZZ),
+<a href="../manuf/ciag/index.htm"><span data-balloon-pos="up" aria-label="More about: Crypto International AG (CIAG)">Crypto International AG (CIAG)</span></a>,
+announced yesterday that it will lay off 83 of its
+85 staff, which is nearly the entire work&shy;force.
+CIAG was established two years ago by Swedish entrepreneurs
+Emma and Andreas Linde, when they
+purchased part of the product portfolio of the former
+<a href="../manuf/crypto/index.htm"><span data-balloon-pos="up" aria-label="More about: Crypto AG (Hagelin)">Crypto AG (Hagelin)</span></a>.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="../manuf/crypto/svg/logo_h.svg"
+             style="
+            "
+             align="left"
+             width="200px"
+             vspace="4"
+             border=0
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In February, journalists from the Washington Post, German televion ZDF and
+Swiss television SRF, had revealed that for many years, the
+<a href="../crypto/hagelin/index.htm"><span data-balloon-pos="up" aria-label="More about: equipment from Crypto AG">equipment from Crypto AG</span></a>
+has been manipulated by <a href="../intel/bnd/index.htm"><span data-balloon-pos="up" aria-label="More about: BND">BND</span></a>
+and <a href="../intel/cia/index.htm"><span data-balloon-pos="up" aria-label="More about: CIA">CIA</span></a>, under the name
+<a href="https://www.cryptomuseum.com/intel/cia/rubicon.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">Operation RUBICON</span></a>.
+Following these revelations,
+the Swiss Government has withdrown the export licence of
+<a href="../manuf/ciag/index.htm"><span data-balloon-pos="up" aria-label="More about: CIAG">CIAG</span></a>
+and has announced a formal criminal investigation.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://bit.ly/3dWWlgn" target="_blank">Read the NZZ article</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=5i></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Maximator: European five-eyes revealed</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>7 April 2020</b>
+<br />
+<br />
+In an article in Intelligence and National Security, Dutch Professor of
+computer security Bart Jacobs reveals the existence of a secret signals
+intelligence partnership that can be seen as the European equivalent of
+the UKUSA Five Eyes. The partnership
+&mdash; known as <a href="../intel/maximator/index.htm"><span data-balloon-pos="up" aria-label="More about: MAXIMATOR">MAXIMATOR</span></a>
+&mdash; started in the late 1970s and comprises Denmark, Sweden, Germany, the
+Netherlands and France. It is believed that it is still active today.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://www.tandfonline.com/doi/full/10.1080/02684527.2020.1743538" target="_blank">Full article</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://www.vpro.nl/argos/lees/nieuws/2020/Nederland-maakt-deel-uit-van-geheime-Europese-afluisteralliantie-.html" target="_blank">Argos Radio (Dutch)</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../intel/maximator/index.htm">About MAXIMATOR</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../intel/maximator/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="../intel/maximator/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="../intel/maximator/img/maximator_beer.jpg"
+             style="
+            "
+             align="left"
+             width="50px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=minerva></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Operation RUBICON</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>19 March 2020</b>
+<br />
+<br />
+The full story of Operation RUBICON &mdash; the secret purchase of
+<a href="../crypto/hagelin/index.htm"><span data-balloon-pos="up" aria-label="More about: Crypto AG (Hagelin)">Crypto AG (Hagelin)</span></a> by the American CIA and the
+German BND &mdash; is now available on the Crypto Museum website.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../intel/cia/rubicon.htm">Read the full story</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../intel/cia/rubicon_media.htm">In the media</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="https://www.cryptomuseum.com/intel/cia/rubicon.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="https://www.cryptomuseum.com/intel/cia/rubicon.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="../intel/cia/img/rubicon_small.png"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+            
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=aroflex></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Philips helped the CIA to spy on T&#252;rkiye</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>20 February 2020</b>
+<br />
+<br />
+Today, the Dutch newspaper De Volkskrant, revealed how Philips
+created a superchip to eavesdrop on the diplomatic traffic of many
+countries, including T&#252;rkiye.
+This was done by supplying these countries with a
+<i>rigged</i> version of the
+<a href="../crypto/philips/aroflex/index.htm"><span data-balloon-pos="up" aria-label="More about: Aroflex cipher machine">Aroflex cipher machine</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://bit.ly/43MecSY" target="_blank">Volkskrant website</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../crypto/philips/aroflex/index.htm">More about Aroflex</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../crypto/philips/aroflex/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Philips Aroflex">
+<a href="../crypto/philips/aroflex/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Philips Aroflex">
+            <img src="../crypto/philips/aroflex/img/302827/025/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Philips Aroflex"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=rubicon></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>The intelligence coup of the century</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>11 February 2020</b>
+<br />
+<br />
+For many years it has been speculated that the cipher machines of
+<a href="../crypto/hagelin/index.htm"><span data-balloon-pos="up" aria-label="More about: Crypto AG (Hagelin)">Crypto AG (Hagelin)</span></a>
+have exploitable weaknesses (backdoors)
+that can be used by Western intelligence services to break encrypted messages.
+From the Friedman Collection we already knew that a secret unwritten
+<a href="../manuf/crypto/friedman.htm"><span data-balloon-pos="up" aria-label="More about: Gentleman's Agreement">Gentleman's Agreement</span></a> existed between
+Hagelin and the American <a href="../intel/nsa/index.htm"><span data-balloon-pos="up" aria-label="More about: NSA">NSA</span></a> from 1951 onwards.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+But the actual story is almost unimaginable. Investigative journalists
+of the German TV station ZDF, and the American newspaper Washington
+Post, have now discovered that in 1970,
+<a href="../manuf/crypto/index.htm"><span data-balloon-pos="up" aria-label="More about: Crypto AG">Crypto AG</span></a> was
+<b>secretly purchased</b> by the German
+<a href="../intel/bnd/index.htm"><span data-balloon-pos="up" aria-label="More about: Bundesnachrichtendienst (BND)">Bundesnachrichtendienst (BND)</span></a> and the American
+<a href="../intel/cia./index.htm"><span data-balloon-pos="up" aria-label="More about: Central Intelligence Agency (CIA)">Central Intelligence Agency (CIA)</span></a> in a covert operation named
+<a href="../intel/cia/rubicon.htm"><span data-balloon-pos="up" aria-label="More about: RUBICON">RUBICON</span></a>.
+For several decades it enabled NSA &ndash; and its German sister ZfCh -
+to read nearly all diplomatic traffic
+of the countries that were on the CIA/NSA target list.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../intel/cia/rubicon.htm">Learn more</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="https://www.cryptomuseum.com/intel/cia/rubicon.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="https://www.cryptomuseum.com/intel/cia/rubicon.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="../intel/cia/img/rubicon_small.png"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+            
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Over the course of the next few days and weeks, several news media will
+report about Operation RUBICON, starting tonight with the German ZDF
+television program Frontal-21, And tomorrow morning, the US newspaper
+The Washington Post will give a detailed account of the operation.
+Crypto Museum will provide detailed technical backgrounds at a later
+moment. <a href="https://www.cryptomuseum.com/intel/cia/rubicon.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">Coming soon...</span></a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=marek></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Enigma. We have got news.</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>6 December 2019</b>
+<br />
+<br />
+It is widely known that the Poles were the first to break the
+<a href="../crypto/enigma/index.htm"><span data-balloon-pos="up" aria-label="More about: Enigma cipher">Enigma cipher</span></a>,
+and that &ndash; just before the outbreak of WWII &ndash; they shared their
+know&shy;ledge with French and British intelligence,
+during a secret meeting in Pyry (Poland).
+However, the exact details of the Pyry meeting have so
+far never been found in French or British archives.
+<br />
+<br />
+In this video, Polish writer Marek Grajek presents new facts about
+the breaking of Enigma, based on files disclosed by French intelligence
+in 2016, and comments on it together with Sir Dermot Turing and Prof. Philippe
+Guillot.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://www.youtube.com/watch?v=HarioLuqCoA">Watch the video (English subtitles)</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://www.youtube.com/watch?v=uuEcPvHJ9EM">Same video with French subtitles</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="https://www.youtube.com/watch?v=HarioLuqCoA" target="_blank">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="https://www.youtube.com/watch?v=HarioLuqCoA" target="_blank">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/marek.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=sc3></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Secret Communications 3</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>4 June 2019</b>
+<br />
+<br />
+Following the success of our earlier exhibitions in
+<a href="../events/2013/sc/index.htm"><span data-balloon-pos="up" aria-label="More about: 2013">2013</span></a>
+and <a href="../events/2013/sc/index.htm"><span data-balloon-pos="up" aria-label="More about: 2016">2016</span></a>,
+Crypto Museum has once again teamed up with Athur Bauer's
+Foundation for German Communication
+in Duivendrecht (Netherlands) for an exhibition that will
+open in November of this year.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../events/2019/sc/index.htm">More information</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../events/2019/sc/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Resonant cavity microphone for 360 MHz">
+<a href="../events/2019/sc/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Resonant cavity microphone for 360 MHz">
+            <img src="../covert/bugs/ec/cavity/img/302584/000/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Resonant cavity microphone for 360 MHz"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=nsa_philips></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>NSA intervention in The Netherlands</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>20 April 2019</b>
+<br />
+<br />
+The Dutch investigative
+<a href="https://www.nporadio1.nl/argos" target="_blank"><span data-balloon-pos="up" aria-label="www.nporadio1.nl (off-site)">radio program Argos</span></a>
+will today reveal how the
+<a href="../intel/nsa/index.htm"><span data-balloon-pos="up" aria-label="More about: NSA">NSA</span></a>
+changed the algorithm of an existing consumer encryption device,
+with help from multinational electronics giant
+<a href="../manuf/philips/index.htm"><span data-balloon-pos="up" aria-label="More about: Philips">Philips</span></a>.
+<br />
+<br />
+The story, which dates back to 1983, involves a
+<a href="../crypto/philips/px1000/index.htm"><span data-balloon-pos="up" aria-label="More about: pocket computer with built-in DES ...">pocket computer with built-in DES encryption</span></a>,
+and even <a href="../crypto/philips/px1000/index.htm#vula"><span data-balloon-pos="up" aria-label="More about: Nelson Mandela">Nelson Mandela</span></a>.
+Discover how the
+<a href="../crypto/philips/px1000/index.htm"><span data-balloon-pos="up" aria-label="More about: PX-1000">PX-1000</span></a>
+&ndash; developed by Text Lite and marketed as a <i>pocket telex</i> &ndash; was weakened to give the NSA an advantage over other agencies.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://www.nporadio1.nl/argos/uitzendingen/656628-2019-04-20" target="_blank">Replay the broadcast</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../crypto/philips/px1000/index.htm">About the PX-1000</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../crypto/philips/px1000/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Original PX-1000 made in 1983">
+<a href="../crypto/philips/px1000/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Original PX-1000 made in 1983">
+            <img src="../crypto/philips/px1000/img/301454/007/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Original PX-1000 made in 1983"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <a name=kgb2></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>KGB Spy Museum opens in New York City</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>17 January 2019</b>
+<br />
+<br />
+Today, the exciting new <a href="../links/kgb/index.htm"><span data-balloon-pos="up" aria-label="More about: KGB Spy Museum">KGB Spy Museum</span></a>
+in Manhattan (New York) opens its doors
+to the press. Over the past few months Lithuanian collector Julius Urbaitis
+and his daughter Agne have been working hard to bring an interesting and
+diverse collection of Cold War Spy gadgets together in their new
+4000 square-feet museum at 245 West 14th Street in New York.
+<br />
+<br />
+The museum will be dedicated to the history of the KGB and its far-reaching
+operations over the years. There are many artifacts, including spy cameras,
+spy radios, concealment devices, cipher machines, etc.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../links/kgb/index.htm">More about the museum</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="http://www.kgbspymuseum.org" target="_blank">KGB Spy Museum website</a>
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../links/kgb/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="../links/kgb/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="../links/kgb/img/ksm_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+            
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 2px solid #FFBB00;"></div>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2018.htm">News in 2018</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Last changed: Thursday, 04 September 2025 - 05:47 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../index.htm"><img src=../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

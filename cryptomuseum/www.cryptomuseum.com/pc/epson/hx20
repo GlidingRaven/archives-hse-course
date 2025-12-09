@@ -1,0 +1,3676 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>HX-20</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cryptomuseum">
+    <meta name="twitter:url" content="https://www.cryptomuseum.com/pc/epson/hx20/index.htm">
+    <meta name="twitter:image" content="https://www.cryptomuseum.com/pc/epson/hx20/img/304434/028/full.jpg">
+    <meta name="twitter:title" content="EPSON HX-20 portable computer">
+    <meta name="twitter:description" content="The worlds first laptop computer, introduced in 1982, was used by the East-German Stasi for controlling a secret spy radio network.">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../pc/glossary.htm';" >Glossary</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../pc/termite/index.htm';" >Termite</div>
+          <div class="but sub" onClick="location.href='../../../pc/drs/index.htm';" >DRS LXI</div>
+          <div class="but sub" onClick="location.href='../../../pc/drs/tcq.htm';" >DRS TCQ</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>HX-20</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Notebook computer &#183; 1982</b>
+<br />
+<br />
+<b>HX-20</b>, also known as <b>HC-20</b>, was the world's first laptop <a href="../../index.htm"><span data-balloon-pos="up" aria-label="More about: computer">computer</span></a>,
+released in 1982 by Seiko Epson <sup><font color="#FF8800">1</font></sup> in Japan <a href="#ref_1">[1]</a>.
+It didn't become very popular in the emerging homecomputer market of the 1980s,
+but did find its way into a number of professional applications and turn-key
+solutions.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The device has a footprint roughly the size of a piece of A4 paper and weighs
+1.6 kg. It has a full size keyboard, a built-in 120 &#215; 32 pixel <span class="short tooltip-red" data-balloon-pos="up" aria-label="Liquid Crystal Display">LCD</span> screen,
+a small dot-matrix printer, and a micro&#173;cassette recorder for storing
+programs and data.
+<br />
+<br />
+The device runs on two Hitachi HD6301 <sup><font color="#FF8800">2</font></sup> 8-bit single-chip microcomputer units
+(<span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span>), each of which holds a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Central Processing Unit">CPU</span>, on-chip <span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span>, parallel <span class="short tooltip-red" data-balloon-pos="up" aria-label="Input/Output (interface)">I/O</span>,
+serial communications interface (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Serial Communication Interface">SCI</span>) and timers. One is the <b>main</b> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Central Processing Unit">CPU</span>,
+whilst the other is the <b>slave</b>. Both processors run at 614 kHz.
+The device also has a 4-octave sound generator.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304434/028/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="EPSON HX-20 portable computer">
+<a href="img/304434/028/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="EPSON HX-20 portable computer">
+            <img src="img/304434/028/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="EPSON HX-20 portable computer"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The concept for the HX-20 was developed in July 1980 by Yokio Yokozawa at
+Suwa Seikosha (to&#173;day known as Seiko Epson), at which time a patent was
+filed <a href="#pat_1">[I]</a>. A patent for the enclosure design was filed in November
+1982 by Masaki Kurihara on behalf of Epson <a href="#pat_2">[II]</a>.
+The HX-20 was announ&#173;ced in Japan in 1981 as the <b>HC-20</b>, and was first shown in
+North America as the <b>HX-20</b> at the COMDEX 1981 show in Las Vegas.
+It was officially launched the following year in July 1982.
+<br />
+<br />
+Although the HX-20 was not widely accepted in the home computer market, largely
+because of lack of add-ons and software titles, it became a popular device in
+machine control and turn-key solutions. A large number of HX-20 units were used
+for artillery by the German Air Force (Luft&#173;waffe). The design of the later
+<font color=#F52E00>Tandy TRS-80 Model 100</font>, introduced in 1983 and much more popular in the
+United States, is thought to be largely based on the design of the HX-20 <a href="#ref_5">[5]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=spy></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          HX-20 in espionage
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+It is little known that the repressive intelligence service of the for&#173;mer
+<a href="../../../spy/ddr.htm"><span data-balloon-pos="up" aria-label="More about: DDR (East-Germany)">DDR (East-Germany)</span></a> &mdash; the <a href="../../../intel/stasi"><span data-balloon-pos="up" aria-label="More about: Stasi">Stasi</span></a>
+(<span class="short" aria-label="Ministerium f&#252;r Staatssicherheit (Ministry for State Security (DDR))" data-balloon-pos="up"><a href="../../../intel/stasi" class="short" >MfS</a></span>) &mdash; used the HX-20 in 1988 as a con&#173;trol&#173;ler for its se&#173;cret
+<a href="../../../spy/grenze"><span data-balloon-pos="up" aria-label="More about: cross-border communication network ...">cross-border communication network 'GRENZE' (Border)</span></a>.
+The HX-20 was cho&#173;sen because it was small, consumed little power
+and could be purchased and used unobtrusively in Western coun&#173;tries.
+The program for con&#173;trol&#173;ling the agent transmitter was stored on a
+micro&#173;cassette.
+Pro&#173;duc&#173;tion of <a href="../../../spy/grenze"><span data-balloon-pos="up" aria-label="More about: GRENZE">GRENZE</span></a>
+started in early 1989, but due to the
+<a href="../../../spy/glossary.htm#berlin_wall"><span data-balloon-pos="up" aria-label="More about: Fall of the Berlin Wall">Fall of the Berlin Wall</span></a>
+in November of that year, it was never deployed.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../../spy/grenze">More about GRENZE</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../../spy/grenze">            <div style="position: relative;" data-balloon-pos="up" aria-label="Complete GRENZE system, with TSE-2, TSS-2 and EPSON HX-20" data-balloon-length="large">
+<a href="../../../spy/grenze">            <div style="position: relative;" data-balloon-pos="up" aria-label="Complete GRENZE system, with TSE-2, TSS-2 and EPSON HX-20" data-balloon-length="large">
+            <img src="../../../spy/grenze/img/304432/055/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Complete GRENZE system, with TSE-2, TSS-2 and EPSON HX-20"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+At the time known as Shinshu Seiki Co. Ltd. In 1982 it was renamed
+  Epson Corporation.
+          </li>
+          <li>
+The Hitachi HD6301 is code-compatible with the Motorola 6801 and
+  HMCS6800 microprocessors.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Plastic storage case">          <img src="img/304434/046/thumbnail.jpg"
+           alt="Plastic storage case"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/046"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="EPSON HX-20 in storage case">          <img src="img/304434/047/thumbnail.jpg"
+           alt="EPSON HX-20 in storage case"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/047"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="EPSON HX-20 in plastic storage case">          <img src="img/304434/048/thumbnail.jpg"
+           alt="EPSON HX-20 in plastic storage case"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/048"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="EPSON HX-20 portable computer">          <img src="img/304434/028/thumbnail.jpg"
+           alt="EPSON HX-20 portable computer"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/028"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="HX-20 seen from the rear right">          <img src="img/304434/029/thumbnail.jpg"
+           alt="HX-20 seen from the rear right"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/029"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Microcassettes">          <img src="img/304434/052/thumbnail.jpg"
+           alt="Microcassettes"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/052"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Firmware in ROMs">          <img src="img/304434/045/thumbnail.jpg"
+           alt="Firmware in ROMs"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/045"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Secondary processor">          <img src="img/304434/044/thumbnail.jpg"
+           alt="Secondary processor"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/044"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304434/046/full.jpg" alt="Plastic storage case">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304434/047/full.jpg" alt="EPSON HX-20 in storage case">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304434/048/full.jpg" alt="EPSON HX-20 in plastic storage case">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304434/028/full.jpg" alt="EPSON HX-20 portable computer">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304434/029/full.jpg" alt="HX-20 seen from the rear right">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304434/052/full.jpg" alt="Microcassettes">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304434/045/full.jpg" alt="Firmware in ROMs">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304434/044/full.jpg" alt="Secondary processor">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=features></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image below provides an overview of the features of the HX-20.
+The device has the size of an A4 sheet of paper and is approx. 4.5 cm high.
+As it fits a regular attach&#233; case, it was the ideal companion for business
+men on the move.
+It features a full-size keyboard, with four addi&#173;ti&#173;o&#173;nal cursor control keys,
+five function keys and three special keys. Above the keyboard is a 120 &#215; 32
+pixel liquid crystal display that can display 4 lines of
+20 characters each. There is also a 57 mm wide ticket printer and an (optional)
+microcassette device for storage of data and programs.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304434/029/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304434/029/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/hx20_features.png"
+             style="
+            "
+             align="center"
+             width="608px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+At the rear are connections for the <a href="#mains"><span data-balloon-pos="up" aria-label="Jump to: battery charger">battery charger</span></a>, a reguar
+<a href="#conn_rs232"><span data-balloon-pos="up" aria-label="Jump to: RS232C serial port">RS232C serial port</span></a> and a <a href="#conn_ser"><span data-balloon-pos="up" aria-label="Jump to: high-speed serial port">high-speed serial port</span></a>.
+The latter can be used for a video display unit or a floppy disk drive.
+At the right side are the jack sockets of the audio interface, a reset button,
+the on/off switch and the contrast adjust&#173;ment of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Liquid Crystal Display">LCD</span>.
+After power ON, the display offers the choice between
+(1) MONITOR and (2) BASIC. MONITOR privides direct access to the memory,
+whilst <span class="short tooltip-red" data-balloon-pos="up" aria-label="Beginners All Purpose Scientific Instruction Code (programming language)" data-balloon-length="large">BASIC</span> gives access to the built-in Microsoft <span class="short tooltip-red" data-balloon-pos="up" aria-label="Beginners All Purpose Scientific Instruction Code (programming language)" data-balloon-length="large">BASIC</span> interpreter.
+Programs can be written in <span class="short tooltip-red" data-balloon-pos="up" aria-label="Beginners All Purpose Scientific Instruction Code (programming language)" data-balloon-length="large">BASIC</span> or in 6801 assembler.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Power consumption
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Most of the device &ndash; including the two processors and the memory &ndash;
+is constructed with <span class="short tooltip-red" data-balloon-pos="up" aria-label="Complementary Metal-Oxide Semiconductor">CMOS</span> technology. This results in a very low
+power consumption that is proportional to the clock speed. At the chosen
+clock speed of 614 kHz, the device can therefore run up to 50 hours from
+a single charge of the internal <span class="short tooltip-red" data-balloon-pos="up" aria-label="Nickel-Cadmium (batteries)">NiCd</span> battery pack. Of course this will
+be less when the built-in printer and microcassette drive are used,
+but it still allows many hours of uninterrupted operation.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=store></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Program storage
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+User programs can be stored/loaded in the following ways:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>Micro Cassette Drive with microcassettes            <li>Internal ROM socket (empty socket next to the BASIC ROMs)            <li>External ROM cartridge (installed in place of the micro cassette drive)            <li>TP-20 floppy disc drive (connected to high-speed serial port)          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Models
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:60px;">HC-20</div>Japanese model with Katakana/Latin keyboard            <li><div style="display:inline-block; width:60px;">HX-20</div>American/European model (with country variants)          </ul>
+</font></td></tr></table>        <a name=ver></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Versions
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Although there was only one model of the HX-20, there are several
+keyboard layouts and character sets, each matching the requirements
+for a specific country. Furthermore, some manufacturing
+changes were made over time.
+These differences are currently known:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>HC-20 or HX-20            <li>Silver or cream enclosure            <li>Grey or brown carrying case            <li><a href="#dip">Eight country variants (keyboard layout and character set), defined with DIP-switches</a>            <li>Extra service panel at the bottom for access to second <span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span>            <li>Micro Cassette Drive was later included as standard            <li>Different keyboard construction          </ul>
+</font></td></tr></table><div style="height: 24px;"></div>        <a name=parts></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Parts</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=#case>
+<div  data-balloon-pos="up" aria-label="Plastic storage case">          <img src="img/304434/046/thumbnail.jpg"
+           alt="Plastic storage case"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#case>Case</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#hx20>
+<div  data-balloon-pos="up" aria-label="EPSON HX-20 portable computer">          <img src="img/304434/028/thumbnail.jpg"
+           alt="EPSON HX-20 portable computer"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#hx20>Computer</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#mains>
+<div  data-balloon-pos="up" aria-label="Mains power adapter/charger">          <img src="img/304434/055/thumbnail.jpg"
+           alt="Mains power adapter/charger"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#mains>Mains</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#tape>
+<div  data-balloon-pos="up" aria-label="Micro Cassette Drive (tape unit)">          <img src="img/304434/058/thumbnail.jpg"
+           alt="Micro Cassette Drive (tape unit)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#tape>Drive</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#cass>
+<div  data-balloon-pos="up" aria-label="Microcassettes">          <img src="img/304434/049/thumbnail.jpg"
+           alt="Microcassettes"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#cass>Cassette</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#paper>
+<div  data-balloon-pos="up" aria-label="Printer paper (non-thermal)">          <img src="img/304434/053/thumbnail.jpg"
+           alt="Printer paper (non-thermal)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#paper>Paper</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#ribbon>
+<div  data-balloon-pos="up" aria-label="Ink ribbon (for printer)">          <img src="img/304434/056/thumbnail.jpg"
+           alt="Ink ribbon (for printer)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#ribbon>Ribbon</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <a name=case></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Storage case
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The HX-20 comes with a grey or brown poly&#173;pro&#173;py&#173;lene (PP, plastic)
+storage case that also has space for the accessories, supplies
+and manuals. It has a grip at the top, allowing the computer to
+be carried safely and dry when in transit.
+<br />
+<br />
+Besides the computer, the case has dedicated slots for the micro&#173;
+cassettes, printer paper rolls and the mains adapter/charger.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304434/046/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Plastic storage case">
+<a href="img/304434/046/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Plastic storage case">
+            <img src="img/304434/046/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Plastic storage case"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=hx20></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Computer 
+          &nbsp;<font color="#CCC">
+          HX-20
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The actual HX-20 computer is shown on the right.
+In Japan it is known as HC-20. The com&#173;pu&#173;ter can be expanded
+internally by adding a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span> chip, or externally by connecting
+peripheral devices to the serial interfaces at the rear, or to the
+parallel docking connector at the left side.
+<br />
+<br />
+The HX-20 was available in two colours: silver and cream.
+Early prototypes were reportedly dark grey or even black.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304434/028/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="EPSON HX-20 portable computer">
+<a href="img/304434/028/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="EPSON HX-20 portable computer">
+            <img src="img/304434/028/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="EPSON HX-20 portable computer"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=mains></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Mains power adapter
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The internal <span class="short tooltip-red" data-balloon-pos="up" aria-label="Nickel-Cadmium (batteries)">NiCd</span> batteries can be charged with the supplied
+mains power adapter. A full char&#173;ging cycle takes approximately 8 hours,
+after which the device <b>must</b> be unplugged from the mains in order to
+prevent over-charging.
+<br />
+<br />
+The device can be used when battery charging is in progress.
+Once fully charged, the device can run from the internal batteries
+for up to 50 hours, depending on the use of the cassette player,
+the printer and connected peripherals.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304434/055/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Mains power adapter (charger)">
+<a href="img/304434/055/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Mains power adapter (charger)">
+            <img src="img/304434/055/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Mains power adapter (charger)"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=tape></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Micro cassette drive
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The HX-20 has an expansion bay at the rear right of the top surface.
+This bay allows easy installation of an expansion cartridge, such as
+the Micro Cassette Drive shown on the right.
+<br />
+<br />
+Initially, the cassette drive was an option, but it was later supplied
+as a standard pre-installed item. The drive accepts
+standard <a href="#cass"><span data-balloon-pos="up" aria-label="Jump to: microcassettes">microcassettes</span></a> which were also used with the Olympus
+pocket memo recorders of the era <a href="#ref_4">[4]</a>.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304434/058/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Micro Cassette Drive (tape unit)">
+<a href="img/304434/058/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Micro Cassette Drive (tape unit)">
+            <img src="img/304434/058/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Micro Cassette Drive (tape unit)"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=cass></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Microcassette
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Programs written in 6801 assembler or <span class="short tooltip-red" data-balloon-pos="up" aria-label="Beginners All Purpose Scientific Instruction Code (programming language)" data-balloon-length="large">BASIC</span> could be stored on the
+built-in <a href="#tape"><span data-balloon-pos="up" aria-label="Jump to: micro cassette drive">micro cassette drive</span></a>, which uses micro&#173;cassettes as
+the storage medium. Alternatively, an external floppy disc drive was
+available as an add-on option.
+<br />
+<br />
+The microcassette format was introduced in 1969 by Olympus, and was
+often used for (ana&#173;logue audio) pocket memo recorders <a href="#ref_4">[4]</a>. It should
+not be confused with the similar (but incompatible) mini-cassette
+from Philips.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304434/049/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Microcassette in plastic storage box">
+<a href="img/304434/049/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Microcassette in plastic storage box">
+            <img src="img/304434/049/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Microcassette in plastic storage box"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=paper></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Print paper
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The HX-20 features a built-in ticket printer to the left of the
+display. It prints directly to a 57 mm wide roll of <b>regular</b> paper
+and produces a more durable print than a regular thermal ticket
+printer. For this, it requires a special ink ribbon car&#173;tridge that
+could be obtained from EPSON.
+<br />
+<br />
+Standard 57 mm wide paper rolls are widely available, although the roll
+will be generally be too thick for the HX-20. It can simply be wound
+manually onto an empty core.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304434/053/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Paper roll">
+<a href="img/304434/053/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Paper roll">
+            <img src="img/304434/053/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Paper roll"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=ribbon></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Ink ribbon
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image on the right shows the mi&#173;nia&#173;ture ink ribbon
+cartridge for the <a href="#paper"><span data-balloon-pos="up" aria-label="Jump to: built-in ticket printer">built-in ticket printer</span></a>.
+This is a standard part that is also used in other
+non-thermal EPSON ticket printers (ERC-09 B).
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304434/056/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Ink ribbon">
+<a href="img/304434/056/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Ink ribbon">
+            <img src="img/304434/056/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Ink ribbon"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Plastic storage case">          <img src="img/304434/046/thumbnail.jpg"
+           alt="Plastic storage case"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/046"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="EPSON HX-20 in storage case">          <img src="img/304434/047/thumbnail.jpg"
+           alt="EPSON HX-20 in storage case"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/047"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="EPSON HX-20 in plastic storage case">          <img src="img/304434/048/thumbnail.jpg"
+           alt="EPSON HX-20 in plastic storage case"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/048"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="EPSON HX-20 portable computer">          <img src="img/304434/028/thumbnail.jpg"
+           alt="EPSON HX-20 portable computer"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/028"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Mains power adapter (charger)">          <img src="img/304434/055/thumbnail.jpg"
+           alt="Mains power adapter (charger)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/055"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Removing the tape recorder">          <img src="img/304434/036/thumbnail.jpg"
+           alt="Removing the tape recorder"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/036"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Tape recorder removed">          <img src="img/304434/037/thumbnail.jpg"
+           alt="Tape recorder removed"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/037"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Micro Cassette Drive (tape unit)">          <img src="img/304434/058/thumbnail.jpg"
+           alt="Micro Cassette Drive (tape unit)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/058"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Microcassette in plastic storage box">          <img src="img/304434/049/thumbnail.jpg"
+           alt="Microcassette in plastic storage box"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 9);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/049"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Microcassettes">          <img src="img/304434/052/thumbnail.jpg"
+           alt="Microcassettes"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 10);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/052"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Inserting a microcassette">          <img src="img/304434/041/thumbnail.jpg"
+           alt="Inserting a microcassette"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 11);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/041"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Microcassette being loaded into the built-in cassette recorder" data-balloon-length="large">          <img src="img/304434/040/thumbnail.jpg"
+           alt="Microcassette being loaded into the built-in cassette recorder"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 12);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/040"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Paper roll">          <img src="img/304434/054/thumbnail.jpg"
+           alt="Paper roll"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 13);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/054"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Paper roll">          <img src="img/304434/053/thumbnail.jpg"
+           alt="Paper roll"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 14);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/053"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Ink ribbon">          <img src="img/304434/056/thumbnail.jpg"
+           alt="Ink ribbon"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 15);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/056"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Ink ribbons">          <img src="img/304434/057/thumbnail.jpg"
+           alt="Ink ribbons"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 16);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/057"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'B'" onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">B</span></div></div><div style="height: 40px;"></div>
+<div id="slide_2" class="slide" onClick="slideClose('slide_2')"><span class="slide_close_left" onClick="slideClose('slide_2')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_2', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 1 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304434/046/full.jpg" alt="Plastic storage case">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 2 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304434/047/full.jpg" alt="EPSON HX-20 in storage case">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 3 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304434/048/full.jpg" alt="EPSON HX-20 in plastic storage case">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 4 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304434/028/full.jpg" alt="EPSON HX-20 portable computer">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 5 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304434/055/full.jpg" alt="Mains power adapter (charger)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 6 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304434/036/full.jpg" alt="Removing the tape recorder">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 7 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304434/037/full.jpg" alt="Tape recorder removed">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 8 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304434/058/full.jpg" alt="Micro Cassette Drive (tape unit)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 9 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304434/049/full.jpg" alt="Microcassette in plastic storage box">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 10 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304434/052/full.jpg" alt="Microcassettes">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 11 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304434/041/full.jpg" alt="Inserting a microcassette">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 12 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304434/040/full.jpg" alt="Microcassette being loaded into the built-in cassette recorder">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 13 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304434/054/full.jpg" alt="Paper roll">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 14 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304434/053/full.jpg" alt="Paper roll">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 15 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304434/056/full.jpg" alt="Ink ribbon">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 16 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304434/057/full.jpg" alt="Ink ribbons">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_2', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_2', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=arch></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Architecture</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <a name=mpu></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Microcomputer Unit
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the internal block diagram of the Hitachi HD6301 Microcomputer
+Unit (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span>). The Epson HX-20 has two such processors, that are used as
+<b>master</b> and <b>slave</b> respectively. Each <span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span> con&#173;sists of a
+Central Processing Unit (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Central Processing Unit">CPU</span>), parallel <span class="short tooltip-red" data-balloon-pos="up" aria-label="Input/Output (interface)">I/O</span> ports, a high-speed
+Serial Com&#173;mu&#173;ni&#173;ca&#173;tion Interface (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Serial Communication Interface">SCI</span>), several timers,
+128 bytes <span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span> and 4 KB masked <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span>. It has 8 different modes of
+operation (0-7), determined by the state of P20, P21 and P22 immediately
+after a reset (MODE).
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/hx20_mpu.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The <b>main</b> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span> starts up in mode 4, which means it can address external
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span>. The <b>slave</b> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span> runs in mode 7, which is known as
+the <i>single chip mode</i>. This means that
+it only has access to the internal <span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span> (128 bytes) and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span> (4 KB).
+The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span> contains firmware for serial communication with the main <span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span>
+and for driving its parallel ports under control of the main <span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span>.
+The masked <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span> is 'programmed' at manufacturing time. For this reason, the two <span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span>s
+each have a different part number &mdash; main <span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span>: <b>C63010CA</b>, slave <span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span>:
+<b>C63010CB</b>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../../data/ic/HD6301V1.pdf">HD6301 datasheet</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=block></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          HX-20 Block diagram
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the block diagram of the HX-20, which shows its dual-<span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span> architecture.
+At the left are the two <span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span>'s: the <b>main</b> one at the top and the <b>slave</b> at
+the bottom, both running at 614 kHz.
+The <b>main</b> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span> is responsible for the the memory bus, which is
+connected to the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span>, real time clock (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Real Time Clock">RTC</span>), keyboard, liquid crystal
+display (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Liquid Crystal Display">LCD</span>) and the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span> expansion bus.
+The <b>slave</b> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span> is configured as general purpose <span class="short tooltip-red" data-balloon-pos="up" aria-label="Input/Output (interface)">I/O</span> (GPIO), and acts
+merely as an I/O expander.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/hx20_block.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The two <span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span>s are interconnected by means of a high-speed serial bus running at
+34,800 baud. This bus is shared with the <b>fast serial port</b> that is available on
+the <a href="#conn_ser"><span data-balloon-pos="up" aria-label="Jump to: 5-pin DIN socket">5-pin DIN socket</span></a> at the rear of the com&#173;pu&#173;ter.
+It is used for the connection of a video display unit (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Video Display Unit">VDU</span>) and up to four
+external TF-20 floppy disk drives.
+The rest of the interfaces are divided over the two <span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span>s, but note that some
+interfaces &ndash; in particular the ones with complex signals &ndash; are connected to both
+processors.
+<br />
+<br />
+The <b>slave</b> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span> is responsible for power control (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span>), microcassette
+drive, buzzer, audio in&#173;ter&#173;face and partly for the other interfaces as well.
+The items shown in blue are internal parts, whilst the yellow items are external
+options. The regular <a href="#conn_rs232"><span data-balloon-pos="up" aria-label="Jump to: RS232 serial port on the 8-pin DIN ...">RS232 serial port on the 8-pin DIN socket</span></a>
+can be used for variety of devices, including a printer, CX-20 acoustic modem,
+terminal and <a href="../../index.htm"><span data-balloon-pos="up" aria-label="More about: personal com&#173;pu&#173;ter">personal com&#173;pu&#173;ter</span></a> (<span class="short" aria-label="Personal Computer" data-balloon-pos="up"><a href="../../index.htm" class="short" >PC</a></span>).
+The <b>cartridge interface</b> controls the microcassette drive, which can be
+swap&#173;ped for a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span>-cartridge. The audio interface can be used for an external
+audio cassette recorder with start/stop control. It can be used for saving and
+loading programs onto regular audio cassettes.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=map></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Main memory map
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the memory map of the <b>main</b> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span> that runs the user's program(s).
+The total addressable memory space is 64 KB. The lower 16 KB holds the
+internal <span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span> of which the lower 256 bytes &mdash; shown at the right &mdash;
+are reserved for the internal registers, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Input/Output (interface)">I/O</span> select, real time clock (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Real Time Clock">RTC</span>)
+and internal RAM (128 bytes). The rest of the 16 KB of external <span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span> is
+available for user programs.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/hx20_mem.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The upper 32 KB are taken by the four standard <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span>s, consisting of
+the Monitor <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span> (0), the Utility <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span> (1) and two <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span>s with the
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Beginners All Purpose Scientific Instruction Code (programming language)" data-balloon-length="large">BASIC</span> interpreter (2 and 3). <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span> 4 is a spare 8 KB socket
+(Option <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span>). Below <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span> 4 is an 8 KB slot (EXP) into which the expansion
+socket is map&#173;ped. It allows 8 KB of memory to be map&#173;ped into the address
+space 0x4000 - 0x6000. It can be ex&#173;pan&#173;ded to 16 KB by taking the space
+reserved for <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span> 4 as well. The expansion unit also has space for two
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span>s. When present they will be mapped into the space that is normally
+taken by the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Beginners All Purpose Scientific Instruction Code (programming language)" data-balloon-length="large">BASIC</span> interpreter (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span>s 2 and 3). In the diagram above,
+this is shown in the second column.
+<br />
+<br />
+The highest 16 bytes in <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span> 0 (0xFFF0 - 0xFFFF) hold the interrupt vector
+table (8 entries), the highest of which (0xFFFE - 0xFFFF) hold the start
+address. When the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Central Processing Unit">CPU</span> is started, it jumps to the address specified at
+this location, which is <b>0xE000</b> &mdash; the start of <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span> 0.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Slave memory map
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the memory map of the <b>slave</b> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span>. It is much simpler, as the
+processor is configured in MODE 7, also known as the <i>single chip mode</i>.
+In this mode, only the lower 256 bytes and the up&#173;per 4096 bytes of the 64 KB
+addressable memory space are used. This means that the slave pro&#173;cessor only
+has access to its internal 128 bytes RAM and 4 KB ROM. The rest is not accessible.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/hx20_slave.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The firmware of this processor &ndash; held in the 4 KB internal <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span> &ndash; is
+responsible for com&#173;mu&#173;ni&#173;ca&#173;tion with the <b>main</b> processor &mdash; through its
+high-speed serial port (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Serial Communication Interface">SCI</span>) &mdash; and for handling the inputs and outputs of its <span class="short tooltip-red" data-balloon-pos="up" aria-label="Input/Output (interface)">I/O</span>
+ports, under control of the <b>main</b> processor. It also handles the RX part and some
+control lines of the regular RS232 port,
+which is implemented entirely in software.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304434/017/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="EPSON HX-10 motherboard (MOSU)">
+<a href="img/304434/017/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="EPSON HX-10 motherboard (MOSU)">
+            <img src="img/hx20_main.png"
+             style="
+            "
+             align="center"
+             width="586px"
+             vspace="4"
+             alt="EPSON HX-10 motherboard (MOSU)"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </font>
+          </td></tr>
+        </table>
+        <a name=int></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Interior</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The HX-20 is housed in a plastic enclosure that consists of two case shells.
+The upper case shell holds the keyboard and the display, whilst the lower
+shell holds the main <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> (the motherboard).
+The interior can be accessed by removing 6 crosshead screws from the
+<a href="img/304434/042/full.jpg"><span data-balloon-pos="up" aria-label="More about: bottom">bottom</span></a>, after which the
+<a href="img/304434/000/full.jpg"><span data-balloon-pos="up" aria-label="More about: bottom case shell can be removed">bottom case shell can be removed</span></a>.
+Note that the upper shell
+is connected to the lower shell by means of three short flat cables.
+Remove these cables carefully by
+<a href="img/304434/010/full.jpg"><span data-balloon-pos="up" aria-label="More about: raising the plastic cradle first">raising the plastic cradle first</span></a>.
+<br />
+<br />
+The lower case shell holds the
+<a href="img/304434/002/full.jpg"><span data-balloon-pos="up" aria-label="More about: motherboard (covered by a ...">motherboard (covered by a con&#173;duc&#173;tive sheet)</span></a>,
+the battery pack and the printer.
+<a href="img/304434/005/full.jpg"><span data-balloon-pos="up" aria-label="More about: Disconnect the battery pack first">Disconnect the battery pack first</span></a>.
+<a href="img/304434/011/full.jpg"><span data-balloon-pos="up" aria-label="More about: Remove the printer">Remove the printer</span></a> (two screws) and the
+<a href="img/304434/012/full.jpg"><span data-balloon-pos="up" aria-label="More about: con&#173;duc&#173;tive sheet">con&#173;duc&#173;tive sheet</span></a> (another two screws).
+This <a href="img/304434/014/full.jpg"><span data-balloon-pos="up" aria-label="More about: reveals the MOSU motherboard">reveals the MOSU motherboard</span></a>, held in
+place by 4 screws. After removing these screws, the motherboard &mdash; shown
+in the image above &mdash; can be removed.
+<br />
+<br />
+The device is extremely well built, especially when considering that it
+was made in 1982, at a time when the first homecomputers were beginning
+to appear on the market. The motherboard has a professional layout and
+the choice of components is excellent. The same can be said about the
+miniature printer and the Micro Cassette Drive, both of which were
+also made by EPSON.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Bottom view">          <img src="img/304434/042/thumbnail.jpg"
+           alt="Bottom view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/042"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Open enclosure with the two case halfs separated">          <img src="img/304434/000/thumbnail.jpg"
+           alt="Open enclosure with the two case halfs separated"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Bottom case half seen from the rear">          <img src="img/304434/002/thumbnail.jpg"
+           alt="Bottom case half seen from the rear"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/002"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Serial port and power connectors at the rear">          <img src="img/304434/003/thumbnail.jpg"
+           alt="Serial port and power connectors at the rear"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/003"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Rechargable NiCd pack">          <img src="img/304434/004/thumbnail.jpg"
+           alt="Rechargable NiCd pack"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/004"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Disconnecting the batteries">          <img src="img/304434/005/thumbnail.jpg"
+           alt="Disconnecting the batteries"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/005"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Built-in printer">          <img src="img/304434/006/thumbnail.jpg"
+           alt="Built-in printer"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/006"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Disconnecting the printer">          <img src="img/304434/010/thumbnail.jpg"
+           alt="Disconnecting the printer"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/010"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Disconnected printer removed from main board">          <img src="img/304434/011/thumbnail.jpg"
+           alt="Disconnected printer removed from main board"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 9);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/011"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Conductive sheet removed from main board">          <img src="img/304434/012/thumbnail.jpg"
+           alt="Conductive sheet removed from main board"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 10);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/012"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Rechargable NiCd batteries removed from the case">          <img src="img/304434/013/thumbnail.jpg"
+           alt="Rechargable NiCd batteries removed from the case"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 11);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/013"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Main board (solder side)">          <img src="img/304434/014/thumbnail.jpg"
+           alt="Main board (solder side)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 12);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/014"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Main board removed from the bottom case shell">          <img src="img/304434/015/thumbnail.jpg"
+           alt="Main board removed from the bottom case shell"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 13);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/015"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Main board (component side)">          <img src="img/304434/016/thumbnail.jpg"
+           alt="Main board (component side)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 14);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/016"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Main board (component side)">          <img src="img/304434/017/thumbnail.jpg"
+           alt="Main board (component side)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 15);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/017"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Main board (component side)">          <img src="img/304434/018/thumbnail.jpg"
+           alt="Main board (component side)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 16);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/018"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="BASIC ROMs">          <img src="img/304434/019/thumbnail.jpg"
+           alt="BASIC ROMs"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 17);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/019"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="RAMs">          <img src="img/304434/020/thumbnail.jpg"
+           alt="RAMs"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 18);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/020"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="RAMs">          <img src="img/304434/021/thumbnail.jpg"
+           alt="RAMs"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 19);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/021"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Primary and secondary CPU">          <img src="img/304434/022/thumbnail.jpg"
+           alt="Primary and secondary CPU"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 20);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/022"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Cassette and audio interface">          <img src="img/304434/023/thumbnail.jpg"
+           alt="Cassette and audio interface"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 21);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/023"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Corroded legs of one of the BASIC ROMs">          <img src="img/304434/024/thumbnail.jpg"
+           alt="Corroded legs of one of the BASIC ROMs"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 22);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/024"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="BASIC ROMs (legs partly corroded)">          <img src="img/304434/025/thumbnail.jpg"
+           alt="BASIC ROMs (legs partly corroded)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 23);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/025"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Audio circuit">          <img src="img/304434/026/thumbnail.jpg"
+           alt="Audio circuit"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 24);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304434/026"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'C'" onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">C</span></div></div><div style="height: 40px;"></div>
+<div id="slide_3" class="slide" onClick="slideClose('slide_3')"><span class="slide_close_left" onClick="slideClose('slide_3')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_3', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 1 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/042/full.jpg" alt="Bottom view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 2 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/000/full.jpg" alt="Open enclosure with the two case halfs separated">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 3 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/002/full.jpg" alt="Bottom case half seen from the rear">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 4 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/003/full.jpg" alt="Serial port and power connectors at the rear">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 5 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/004/full.jpg" alt="Rechargable NiCd pack">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 6 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/005/full.jpg" alt="Disconnecting the batteries">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 7 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/006/full.jpg" alt="Built-in printer">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 8 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/010/full.jpg" alt="Disconnecting the printer">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 9 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/011/full.jpg" alt="Disconnected printer removed from main board">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 10 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/012/full.jpg" alt="Conductive sheet removed from main board">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 11 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/013/full.jpg" alt="Rechargable NiCd batteries removed from the case">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 12 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/014/full.jpg" alt="Main board (solder side)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 13 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/015/full.jpg" alt="Main board removed from the bottom case shell">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 14 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/016/full.jpg" alt="Main board (component side)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 15 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/017/full.jpg" alt="Main board (component side)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 16 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/018/full.jpg" alt="Main board (component side)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 17 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/019/full.jpg" alt="BASIC ROMs">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 18 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/020/full.jpg" alt="RAMs">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 19 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/021/full.jpg" alt="RAMs">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 20 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/022/full.jpg" alt="Primary and secondary CPU">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 21 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/023/full.jpg" alt="Cassette and audio interface">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 22 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/024/full.jpg" alt="Corroded legs of one of the BASIC ROMs">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 23 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/025/full.jpg" alt="BASIC ROMs (legs partly corroded)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 24 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304434/026/full.jpg" alt="Audio circuit">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_3', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_3', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=rest></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Restoration</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+We found our HX-20 on eBay in November 2025. When it arrived, the batteries were
+flat (as ex&#173;pec&#173;ted), but after charging it for half an hour, we were able to power
+it up. The buzzer sounded a short beep (as expected) and the display showed the
+expected items (<div style="display:inline-block; font-family:monospace; font-size:14px;">1 MONITOR, 2 BASIC</div>) followed by garbage. Selecting one of the
+two options resulted in a <font color=red><div style="display:inline-block; font-family:monospace; font-size:14px;">Trap!</div></font> error,
+after which the machine appeared to be stuck.
+In a first attempt to get it going, we took the device apart, un&#173;plug&#173;ged the battery
+pack, and removed and reseated the four <span class="short tooltip-red" data-balloon-pos="up" aria-label="Beginners All Purpose Scientific Instruction Code (programming language)" data-balloon-length="large">BASIC</span> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span>s and the two <span class="short tooltip-red" data-balloon-pos="up" aria-label="Micro Computer Unit">MCU</span>s.
+<br />
+<br />
+After this, the garbage on the display was gone, but the startup menu now showed
+three items: <div style="display:inline-block; font-family:monospace; font-size:14px;">1 MONITOR, 2 BASIC, 3 BASIC</div>. Selecting option 2 (BASIC) did not
+enter the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Beginners All Purpose Scientific Instruction Code (programming language)" data-balloon-length="large">BASIC</span> in&#173;ter&#173;pre&#173;ter as expected, but caused the device to hang completely.
+After searching the internet for pos&#173;si&#173;ble solutions, we decided to issue
+a machine initialisation as suggested by <a href="#ref_7">[7]</a>. This procedure is described below
+and fixed all our problems. It is worth trying this before taking the device apart.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=rest_init></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Initialisation procedure
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+After powering up, the buzzer beeps shortly and the display should show the following:
+<br />
+<br />
+<pre>
+   CTRL/&#64; Initialize
+   1 MONITOR
+   2 BASIC
+</pre>
+<br />
+On the German version of the HX-20 (with doesn't have an &#64;-sign), the display
+reads:
+<br />
+<br />
+<pre>
+   CTRL/&#167; Initialize
+   1 MONITOR
+   2 BASIC
+</pre>
+<br />
+Note that the &#64;-sign (and the &#167;-sign) are above the numbers, so SHIFT has to
+be pressed as well.
+If nothing is shown on the display, try adjusting the contrast with the
+knob at the right side of the machine. Note that the contrast setting alters the
+viewing angle of the display.
+<br />
+<br />
+If the menu doesn't start <span class="short tooltip-red" data-balloon-pos="up" aria-label="Beginners All Purpose Scientific Instruction Code (programming language)" data-balloon-length="large">BASIC</span>, or displays garbage, or shows more than two
+items, or ex&#173;hi&#173;bits strange behavior, press <div style="display:inline-block; font-family:monospace; font-size:14px;">CTRL-&#64;</div> (<div style="display:inline-block; font-family:monospace; font-size:14px;">CTRL-&#167;</div> on the
+German version) to set the date and time, and clear the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span>. Note that you
+can only do this directly after pressing RESET or MENU, so you may have to try
+it a couple of times <a href="#ref_7">[7]</a>. In our case, this fixed all issues.
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Beginners All Purpose Scientific Instruction Code (programming language)" data-balloon-length="large">BASIC</span> now works correctly:
+<br />
+<br />
+<pre>
+   EPSON BASIC V-1.0
+   Copyright 1982 by
+   Microsoft & Epson
+   P1:         0 bytes
+   >
+</pre>
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=rest_tape></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Micro Cassette Drive
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Not yet fixed.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Problems
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><s>Doesn't start BASIC</s>            <li><s>Produces only Trap! error</s>            <li>NiCd battery pack doubtful            <li>Ink cartridge worn out            <li>Rubber feet missing            <li>Cassette not running          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Fixed
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>Exterior cleaned            <li>ROMs removed and reseated            <li><a href="#rest_init">Initialisation carried out (see above)</a>          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=dip></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>DIP-switch settings</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The HX-20 has one <span class="short tooltip-red" data-balloon-pos="up" aria-label="Dual In-line Package">DIP</span>-switch consisting of 4 individual on/off switches,
+located <a href="img/304434/045/full.jpg"><span data-balloon-pos="up" aria-label="More about: to the left of the ROM bank">to the left of the ROM bank</span></a>
+and accessible via the large <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span>
+access panel at the bottom of the device. The switches are numbered 1 to 4.
+The first three switches (1-3) define which keyboard layout is used, as shown
+in the table below (0 &equals; off, 1 &equals; on). Switch 4 selects the startup
+medium. The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Dual In-line Package">DIP</span>-switch in the example below is set to German (101) and starts
+from the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Beginners All Purpose Scientific Instruction Code (programming language)" data-balloon-length="large">BASIC</span> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span> (0).
+          </font>
+          </td></tr>
+        </table>
+<br />        <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+        <table width=100% cellspacing=0 cellpadding=0>
+          <tr>
+          <td width=100%>
+          <table
+           class="table"
+           width=100% border=0 cellspacing=0 cellpadding=1 bgcolor=#FFFFFF>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="30" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>&#160;</font></td></b><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>1</font></td></b><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>2</font></td></b><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>3</font></td></b><td bgcolor="#FFFFFF" align="left" valign="center" width="120" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Country</font></td></b><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>4</font></td></b><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Startup from</font></td></b>            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="30" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>0</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>0</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>0</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="120" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Spain</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>0</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>BASIC ROM</font></td>            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="30" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>0</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>0</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="120" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>UK</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Floppy drive</font></td>            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="30" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>0</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>0</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="120" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Sweden</font></td>            <td bgcolor=#FFFFFF>&nbsp;</td>
+            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="30" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>0</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="120" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>France</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>0 &equals; off</font></td>            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="30" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>0</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>0</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="120" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Italy</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1 &equals; on</font></td>            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="30" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>0</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="120" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Germany</font></td>            <td bgcolor=#FFFFFF>&nbsp;</td>
+            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="30" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>0</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="120" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Denmark</font></td>            <td bgcolor=#FFFFFF>&nbsp;</td>
+            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="30" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="120" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>USA</font></td>            <td bgcolor=#FFFFFF>&nbsp;</td>
+            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+          </table>
+<div style="height: 20px;"></div>        </td>
+        <td align="left" valign="middle">
+        <img style=" width: ;" src="svg/DIP4.svg"
+        >
+        </td>
+        </tr></table>
+        <a name=conn></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Connections</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <a name=conn_pwr></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Power
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The power socket is located at the rear of the device, next to the two
+serial ports. It is a regular power connector, but <font color=#F52E00>note</font> that the
+(-) terminal is at the centre and the (+) terminal is the outer ring.
+This is the other way around as with most European devices.
+The power socket is not in&#173;tended for powering the device but rather for
+charging the internal battery pack (8 hours max.).
+<font color=#F52E00>Also note</font> that the battery is part of the power circuit. It <b>must</b> be
+present for correct operation.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">GND</div>Ground (0V)            <li><div style="display:inline-block; width:60px;">PWR</div>+6V DC          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="../../../ref/conn/pwr/svg/pwr_rev.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=conn_rs232></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          RS-232 serial port
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The HX-20 has a full RS-232 port with all modem signals, brought out on
+an 8-pin DIN con&#173;nec&#173;tor. The port offers a maximum speed of 4800 baud
+and uses the 8N1 or 8N2 word format. Below is the pinout when looking into the socket
+on the HX-20. Note that the cable shield should be connected to the shield
+of the plug.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">GND</div>Signal ground            <li><div style="display:inline-block; width:60px;">TXD</div>Data out            <li><div style="display:inline-block; width:60px;">RXD</div>Data in            <li><div style="display:inline-block; width:60px;">RTS</div>Requent To Send            <li><div style="display:inline-block; width:60px;">CTS</div>Clear To Send            <li><div style="display:inline-block; width:60px;">DSR</div>Data Set Ready            <li><div style="display:inline-block; width:60px;">DTR</div>Data Terminal Ready            <li><div style="display:inline-block; width:60px;">CD</div>Carrier Detect          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="../../../ref/conn/din/svg/din8_270.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=conn_ser></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          High speed serial port
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+An additional high-speed serial port is available for connection
+of an external video display unit (VDU) or a floppy disk drive.
+The port has a fixed speed of 38.400 baud. The pinout of the
+con&#173;nector is given below. Note that the cable shield must be
+connected to the shield of the plug.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">black</div>Signal ground            <li><div style="display:inline-block; width:60px;">PTX</div>red            <li><div style="display:inline-block; width:60px;">PRX</div>white            <li><div style="display:inline-block; width:60px;">POUT</div>yellow            <li><div style="display:inline-block; width:60px;">PIN</div>green          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="../../../ref/conn/din/svg/din5_180.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Connectors at the right side
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+At the right side of the device are four jack sockets, as shown in the
+mage below. One of these is a 2.5 mm jack (REM). The others are all 3.5 mm.
+<b>MIC</b> is a mono audio input. It can be used to load a program from an external
+cassette recorder, or from a computer emulating such a device.
+<b>EAR</b> is an output on which the 4-octave sound generator is available.
+It can be used for storing programs on an external cassette recorder.
+<b>REM</b> is an isolated relay contact that is closed when the externally
+connected cassette recorder must start. <b>BARCODE</b> is further discussed below.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/hx20_jack.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=conn_barcode></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Barcode reader
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The rearmost 3.5 mm jack socket at the right side of the device is
+for connection of a barcode reader. Below is the pinout of this interface.
+Note tat this is a one-way interface.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">DATA</div>Data input            <li><div style="display:inline-block; width:60px;">PWR</div>+5V DC            <li><div style="display:inline-block; width:60px;">GND</div>Ground          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="../../../ref/conn/jack/svg/jack_2.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=spec></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Specifications</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Device</div>Portable (notebook size) computer            <li><div style="display:inline-block; width:100px;">Purpose</div>Personal computing, home, business, machine control            <li><div style="display:inline-block; width:100px;">Model</div>HX-20 (HC-20)            <li><div style="display:inline-block; width:100px;">Manufacturer</div>Seiko Epson            <li><div style="display:inline-block; width:100px;">Year</div>1982            <li><div style="display:inline-block; width:100px;">Country</div>Japan            <li><div style="display:inline-block; width:100px;">Successor</div>PX-4            <li><div style="display:inline-block; width:100px;">Processor</div>2 &#215; Hitachi HD6301            <li><div style="display:inline-block; width:100px;">Speed</div>614 kHz            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Operating System">OS</span></div>Proprietary (Monitor, BASIC)            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span></div>16 KB (expandable to 32 KB)            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Read-Only Memory">ROM</span></div>32 KB (expanable to 64 KB)            <li><div style="display:inline-block; width:100px;">Display</div>120 &#215; 32 pixel <span class="short tooltip-red" data-balloon-pos="up" aria-label="Liquid Crystal Display">LCD</span> (4 lines &#215; 20 chars)            <li><div style="display:inline-block; width:100px;">Printer</div>Dot-matrix            <li><div style="display:inline-block; width:100px;">Ink ribbon</div>ERC-09 B            <li><div style="display:inline-block; width:100px;">Paper</div>57 mm wide (1&#188;)            <li><div style="display:inline-block; width:100px;">Interfaces</div>1. RS232 serial port, 4,800 baud (modem, serial printer)<br /><div style="display:inline-block; width:100px;"></div>2. RS232 serial port, 38,400 baud (external floppy, video display)<br /><div style="display:inline-block; width:100px;"></div>3. Parallel port (docking connector)            <li><div style="display:inline-block; width:100px;">Storage</div>Microcassette drive            <li><div style="display:inline-block; width:100px;">Language</div>6801 Assembler, Microsoft Extended BASIC            <li><div style="display:inline-block; width:100px;">Power</div>6V DC (4V needed to retain memory contents)            <li><div style="display:inline-block; width:100px;">Battery</div>Rechargeable NiCd            <li><div style="display:inline-block; width:100px;">Duration</div>&le; 50 hrs            <li><div style="display:inline-block; width:100px;">Temperature</div>-5&#176;C to +40&#176;C            <li><div style="display:inline-block; width:100px;">Storage</div>-20&#176;C to +60&#176;C            <li><div style="display:inline-block; width:100px;">Dimensions</div>45 &#215; 290 &#215; 220 mm (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Height-Width-Depth">HWD</span>)            <li><div style="display:inline-block; width:100px;">Weight</div>1600 g            <li><div style="display:inline-block; width:100px;">Quantity</div>250,000            <li><div style="display:inline-block; width:100px;">Price</div>USD 795 (1982)          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Options
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:60px;">?</div>Micro Cassette Drive (USD 160)            <li><div style="display:inline-block; width:60px;">H20EU</div>Expansion unit with 16 KB additional <span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span>            <li><div style="display:inline-block; width:60px;">CX-20</div>300 baud acoustic coupler (modem)            <li><div style="display:inline-block; width:60px;">TF-20</div>External floppy drive            <li><div style="display:inline-block; width:60px;">?</div>Augmentative Communication Device (ACD) 'RealVoice'            <li><div style="display:inline-block; width:60px;">DT-20</div>Carrying bag for basic unit            <li><div style="display:inline-block; width:60px;">DTE-20</div>Carrying bag for expanded unit            <li><div style="display:inline-block; width:60px;">?</div>Barcode reader (probably from HP)          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=data></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Datasheets</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=a>
+            <a name="data_1"></a>
+            <li><a href="../../../data/ic/HD6301V1.pdf">HD6301V1, CMOS MCU</a><br />
+Hitachi. Undated.
+            <p />
+            <a name="data_2"></a>
+            <li><a href="../../../data/ic/HD146818.pdf">HD146818, RTC (Real Time Clock plus RAM)</a><br />
+Hitachi. Undated.
+            <p />
+            <a name="data_3"></a>
+            <li><a href="../../../data/ic/UPD449.pdf">&#181;PD449 - 2,048 &#215; 8-bit Static CMOS RAM</a><br />
+Equivalent of EPSON M16010C (8 pieces are used).<br />
+NEC Electronics Inc. Undated.
+          </ol type=a>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=pat></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Related patents</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=I>
+            <a name="pat_1"></a>
+            <li><a href="files/FR2487094.pdf">French Patent FR 2,487,094 - Portable computer of small size</a><br />
+Yukio Yokozawa on behalf of Kabushiki Kaisha Suwa Seikosha (EPSON), Japan.<br />
+Filed 8 July 1981 (Priority 16 July 1980, Japan).
+            <p />
+            <a name="pat_2"></a>
+            <li><a href="files/USD282843.pdf">United States Patent USD 282,843 - Case design</a><br />
+Masaki Kurihara on behalf of Epson Corporation, Japan.<br />
+Filed 19 May 1983 (Priority 22 November 1982, Japan).
+          </ol type=I>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=doc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Documentation</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <a name="doc_1"></a>
+            <li><a href="files/HX20_leaflet.pdf">EPSON HX-20 - Leaflet</a><br />
+EPSON Corporation (Japan), 16 September 1982.
+            <p />
+            <a name="doc_2"></a>
+            <li><a href="files/HX20_brochure.pdf">EPSON HX-20 Brochure</a><br />
+EPSON Corporation (Japan), 23 November 1982.
+            <p />
+            <a name="doc_3"></a>
+            <li><a href="files/HX20_brochure_UK.pdf">EPSON HX-20 Brochure</a><br />
+Epson UK Ltd. Undated.
+            <p />
+            <a name="doc_4"></a>
+            <li><a href="files/HX20_quick.pdf">EPSON HX-20 Quick Reference</a><br />
+HD-001. Epson America, Inc., 1982.
+            <p />
+            <a name="doc_5"></a>
+            <li><a href="files/HX20_user.pdf">EPSON HX-20 Operations Manual</a><br />
+Kenneth Skier, Skysoft, Inc. (Cambridge, Massachusetts, USA).<br />
+EPSON America Inc., 1982.
+            <p />
+            <a name="doc_6"></a>
+            <li><a href="files/HX20_BASIC.pdf">Portable Computer HX-20 BASIC Reference Manual</a><br />
+EPSON Corporation, Nagano (Japan), 1982.
+            <p />
+            <a name="doc_7"></a>
+            <li><a href="files/HX20_SRM.pdf">Epson HX-20 Software Reference Manual</a><br />
+EPSON Corporation,
+Remastered by Jos&#233; M. T&#233;var, 2021.
+            <p />
+            <a name="doc_8"></a>
+            <li><a href="files/HX20_tech.pdf">Technical Manual HX-20 Portable Computer</a><br />
+<b>With full circuit diagrams and exploded views.</b><br />
+EPSON Corporation. Undated.
+            <p />
+            <a name="doc_9"></a>
+            <li><a href="files/HX20_1985_Balkan.pdf">Using and programming the Epson HX-20 portable computer</a><br />
+Eric Balkan, 1985. ISBN 978-0-442-30650-2.<br />
+DOI 10.1007/978-94-009-4862-4.
+            <p />
+            <a name="doc_10"></a>
+            <li><a href="files/HX20_TRM.pdf">HX-20 Technical Reference Manual</a><br />
+EPSON Corporation, Nagano (Japan), 1983.
+            <p />
+            <a name="doc_11"></a>
+            <li><a href="files/HX20_TSM.pdf">HX-20 - Technical Support Manual</a><br />
+Collection of Technical Support Documents, compiled and<br />
+edited by Esther Bayer, EPSON UK Ltd., 1 March 1985.
+          </ol type=A>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+            <li><a href="https://en.wikipedia.org/wiki/Epson_HX-20" target="_blank">Wikipedia, <i>Epson HX-20</i></a><br />
+Visited 25 July 2025.
+            <p />
+            <a name="ref_2"></a>
+            <li><a href="https://frigolit.net/resources/hx-20/" target="_blank">HX-20 emulator, documentation, firmware</a><br />
+Frigolit.net. Visited 25 July 2025.
+            <p />
+            <a name="ref_3"></a>
+            <li><a href="http://www.vintagecomputer.net/fjkraan/comp/hx20" target="_blank">FJ Kraan, <i>Yet another computer museum - The Epson HX-20</i></a><br />
+Updated 14 March 2020. Visited 9 November 2025.
+            <p />
+            <a name="ref_4"></a>
+            <li><a href="https://en.wikipedia.org/wiki/Microcassette" target="_blank">Wikipedia, <i>Microcassette</i></a><br />
+Visited 15 November 2025.
+            <p />
+            <a name="ref_5"></a>
+            <li><a href="https://www.homecomputermuseum.nl/collectie/epson/epson-hx-20/" target="_blank">Home Computer Museum, <i>Epson HX-20M</i></a><br />
+Helmond (Netherlands). Visited on-line 16 November 2025.
+            <p />
+            <a name="ref_6"></a>
+            <li><a href="https://feertech.com/legion/retro/computer/2021/07/12/epson-hx20.html" target="_blank">Feersum Technology, <i>The EPSON HX-20 - A Contrarian's View</i></a><br />
+Legion CPU (website), 12 July 2021.
+            <p />
+            <a name="ref_7"></a>
+            <li><a href="http://oldcomputer.info/8bit/hx20/index.htm" target="_blank">MCbx Old Computer Collection, <i>Epson HX-20</i></a><br />
+Visited 18 November 2025.
+            <p />
+            <a name="ref_8"></a>
+            <li><a href="https://www.mh-aerotools.de/hp/hx-20/Epson%20HX-20%20-%20Tips%20and%20Tricks.pdf">Martin Hepperle, <i>Epson HX-20 Tops and Tricks</i></a><br />
+November 2018 &mdash; January 2024.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../../../spy/grenze">GRENZE spy radio set (DDR)</a><br />
+            <li><a href="../../index.htm">Other computers</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Friday 25 July 2025. Last changed: Friday, 21 November 2025 - 21:16 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

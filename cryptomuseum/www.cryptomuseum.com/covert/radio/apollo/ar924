@@ -1,0 +1,2035 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>AR-924</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="Keywords" content="Hezbollah, Gold Apollo, Pagers, Exploding, BAC Consulting">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../../index.htm"><img src="../../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of covert-related items" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../../covert/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../../covert/glossary.htm';" >Glossary</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../../../covert/camera/index.htm';" >Cameras</div>
+          <div class="but sub" onClick="location.href='../../../../covert/rec/index.htm';" >Recorders</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Concealed radios" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../../../covert/radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Covert listening devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../../covert/bugs/index.htm';" >Bugs</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../../covert/mic/index.htm';" >Microphones</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Covert wired and wireless earphones" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../../covert/ear/index.htm';" >Earpieces</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Free Space Optics and optoelectronics" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../../covert/opto/index.htm';" >Optics</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Concealment devices and microcaches" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../../covert/conceal/index.htm';" >Concealments</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Dead letter boxes" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../../covert/deaddrop/index.htm';" >Dead drops</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tools used in the espionage trade" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../../covert/tools/index.htm';" >Tools</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Spy-related stories and covert operations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../../covert/cases/index.htm';" >Stories</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../../covert/sw/index.htm';" >Software</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="tracking devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../../covert/tracking/index.htm';" >Tracking</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../../index.htm"><img src="../../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>AR-924</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Rigged explosive radio pager</b>
+<font color=#F52E00>- wanted item</font>
+<br />
+<br />
+<b>AR-924</b> is an alphanumeric pager for the 460 MHz band, marketed
+between 2022 and 2024 by
+BAC Consulting Ktf. in Budapest (Hungary) under the <a href="#apollo"><span data-balloon-pos="up" aria-label="Jump to: Gold Apollo">Gold Apollo</span></a> brand,
+licenced from the Tai&shy;wan&shy;ese company <a href="#apollo"><span data-balloon-pos="up" aria-label="Jump to: Gold Apollo">Gold Apollo</span></a> in 2021.
+Around 5000 AR-924 pagers were supplied to the
+Leba&shy;nese terrorist organisation Hezbollah, where they were used for
+high-level one-way communi&shy;cation. On 17 September 2024, about 4000 AR-924
+units exploded almost simultaneously <a href="#ref_3">[3]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+According to the supplier/manufacturer, it is a ruggedised version of the well-known
+AL-924 that was marketed by <a href="#apollo"><span data-balloon-pos="up" aria-label="Jump to: Gold Apollo">Gold Apollo</span></a>. It comes in a strong IP67-rated
+enclosure and has a <a href="#batt"><span data-balloon-pos="up" aria-label="Jump to: USB-C rechargeable battery">USB-C rechargeable battery</span></a> that lasts for up to 85 days.
+<br />
+<br />
+Unlike other Apollo pagers, that were developed and marketed by <a href="#apollo"><span data-balloon-pos="up" aria-label="Jump to: Gold Apollo">Gold Apollo</span></a>
+in Taiwan, the AR-924 was developed by or on behalf of the Hun&shy;ga&shy;rian
+company <a href="#bac"><span data-balloon-pos="up" aria-label="Jump to: BAC Consulting Kft. in Budapest">BAC Consulting Kft. in Budapest</span></a>. The devices were sold however under
+the <a href="#apollo"><span data-balloon-pos="up" aria-label="Jump to: Gold Apollo">Gold Apollo</span></a> brand, which had been licenced to them.
+It is currently unclear where they were made.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/AR924_pager.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="AR-924 pager as used by Hezbollah">
+<a href="img/AR924_pager.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="AR-924 pager as used by Hezbollah">
+            <img src="img/AR924_pager_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="AR-924 pager as used by Hezbollah"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Pagers were popular in the 1980s and 90s, but their function has mostly been
+superseded by the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Short Message Service">SMS</span> facility of mobile phones. Nevertheless, they are
+still widely used, in particular by closed groups like the emergency services.
+In some countries, paging services are still offered by com&shy;mer&shy;cial service
+providers. Although paging services can be operated in several
+fre&shy;quen&shy;cy bands &mdash; notably 100-174, 400-470 and 929-932 MHz &mdash; the
+150-174 band is the most popular one, as its signals penetrate concreate more
+easily. A pager will generally work in situations where a mobile phone
+has no coverage, <sup><font color="#FF8800">1</font></sup> such as in basements.
+In addition, a pager uses far less energy. It runs for weeks
+on a single battery charge, whereas a mobile phone must be recharged daily.
+<br />
+<br />
+Unlike a mobile phone, which allows two-way traffic, a pager is a one-way device.
+It can only receive and display messages sent through a (local) infrastructure.
+It cannot confirm the receipt of a message and, hence, does not reveal its location.
+In addition, the infra&shy;structure needed for a paging network, is usually
+separate from the mobile telephone network. in some cases though, a gateway
+allows messages to be sent to a pager from a telephone or from a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Personal Computer">PC</span>
+via the internet.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Generally speaking, the higher the frequency, the more difficult it is
+  for the signal to penetrate obstacles. As mobile phone providers keep
+  raising the frequency (to gain more bandwidth) it will be increasingly
+  diffult to use 4G and 5G phones in a basement, unless additional nodes
+  are placed in its vicinity.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=features></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image below provides a quick overview of the controls and features
+of the AR-924 pager. The device is housed in a plastic enclosure with
+rounded corners, that measures 73 &#215; 50 &#215; 27 mm and weighs 95 grams,
+<a href="#batt"><span data-balloon-pos="up" aria-label="Jump to: battery">battery</span></a> included. The device can run for 85 days on a single battery charge,
+which is why the <a href="#batt"><span data-balloon-pos="up" aria-label="Jump to: battery">battery</span></a> takes up about half the available space. It can
+be charged from the USB-C port of a PC or laptop, or with a standard battery
+charger with a USB-C connector.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/AR924_front.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Front panel of the AR-924 pager">
+<a href="img/AR924_front.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Front panel of the AR-924 pager">
+            <img src="img/AR924_ext.png"
+             style="
+            "
+             align="center"
+             width="528px"
+             vspace="4"
+             alt="Front panel of the AR-924 pager"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+A large part of the frontpanel is taken up by the transflective
+backlit 144 &#215; 64 pixel liquid crystal display (LCD). Four push-buttons
+are integrated with the lower edge of the enclosure. A buzzer is located
+to the right of the display. Also present, but not visible, is an
+integrated vibrator.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Features
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>Strong buzzer            <li>Improved user interface            <li>85 day battery life            <li>USB-C battery charging in 2.5 hours            <li>4-button operation            <li>Mesage preview (scroll-down list)            <li>Battery level indicator            <li>Signal strength indicator            <li>Stopwatch function            <li>Backlit <span class="short tooltip-red" data-balloon-pos="up" aria-label="Liquid Christal Display">LCD</span> display            <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Personal Computer">PC</span> programmable and hand programmable          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=batt></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Battery
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+According to the website <a href="#ref_13">[13]</a>, the device had spring-loaded contacts for a
+replaceable Lithium battery, which
+could be recharged in 2.5 hours, and power the device for no less than 85 days.
+It was probably created especially for this purpose and is likely to have
+cointained the explosives.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+According to the specifications, it measures 40 &#215; 34 &#215; 18 mm and weighs 35 g.
+It delivers 7.4V and has a capacity of 300 mAh (2.2 Wh).
+The image on the right shows the battery as it was offered on the Apollo System HK
+website <a href="#ref_15">[15]</a>.
+<br />
+<br />
+The battery has four gold-plated contacts that mate with the four gold-plated spring
+contacts inside the pager. The two outer contacts are the (-) and (+) terminals
+of the battery. The remai&shy;ning two contacts are connected to the built-in Protection Circuit
+Module (PCM). A <span class="short tooltip-red" data-balloon-pos="up" aria-label="Protection Circuit Module">PCM</span> is nor&shy;mal&shy;ly used to prevent the battery from over&shy;charging,
+overheating and deep-discharging.
+In this case it also triggered the explosive charge.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/LIBT783_batt1.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/LIBT783_batt1.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/LIBT783_batt1.jpg"
+             style="
+            "
+             align="left"
+             width="298px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The battery is large enough to house a high-capacity Li-ion battery, plus a detonator
+and an explosive charge. The trick was in this case, to conceal the exposive charge in
+such a way that it would not be noticed with an x-ray scan. This means that it was
+probably embedded within the layers of the battery, and that the markers that are
+usually present to reveal plastic explosives like PETN and RDX (the ingrediants of Semtex)
+during an x-ray scan, were deliberately omitted.
+<br />
+<br />
+The battery is clearly different from the ones that were used by Gold Apollo.
+These were always regular AA-size batteries.
+According to the text on the battery, it was MADE IN CHINA, but there is no
+sign of a manufacturer name.
+To alleviate potential concerns about the uncommon battery, Mossad posted
+questions about them in two online forums in January and February 2023.
+At least one of the questions received an
+<a href="img/LIBT783_forum.png"><span data-balloon-pos="up" aria-label="More about: answer by a newly registered user">answer by a newly registered user</span></a>
+in April 2023 <a href="#ref_17">[17]</a>:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+<div class="quote">          
+          Sometimes there's no brand name on batteries. I know this product.
+          It's got a great datasheet and a great performance. Maybe you could
+          ask the company to send you these batteries with your own branding.
+          
+</div>          </td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Also in September and October 2023, two (probably fake) online battery
+webshops came online, both offering the LI-BT783 <a href="#ref_14">[14]</a><a href="#ref_16">[16]</a>.
+This was probably enough to satisfy Hezbollah. Both web&#173;shops have since
+disappeared.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=64 height=50>
+          <tr><td width=1 height=4><img src="../../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="LI-BT783 battery showing its 4 gold-plated contacts" data-balloon-length="large">          <img src="img/LIBT783_batt1_thumb.jpg"
+           alt="LI-BT783 battery showing its 4 gold-plated contacts"
+           border="0" width=64 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # LIBT783_batt1.jpg"
+           /></div>
+          </td>
+          <td width=4><img src="../../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="LI-BT783 battery">          <img src="img/LIBT783_batt2_thumb.jpg"
+           alt="LI-BT783 battery"
+           border="0" width=47 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # LIBT783_batt2.jpg"
+           /></div>
+          </td>
+          <td width=4><img src="../../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="LI-BT783 battery">          <img src="img/LIBT783_batt3_thumb.jpg"
+           alt="LI-BT783 battery"
+           border="0" width=66 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # LIBT783_batt3.jpg"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 3</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/LIBT783_batt1.jpg" alt="LI-BT783 battery showing its 4 gold-plated contacts">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 3</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/LIBT783_batt2.jpg" alt="LI-BT783 battery">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 3</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/LIBT783_batt3.jpg" alt="LI-BT783 battery">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Hezbollah</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The Lebanese terrorist organisation Hezbollah started using the old-school
+pagers around 2021, after the suspcion arose that arch enemy Israel
+was not only able to intercept their communi&shy;ca&shy;tions, but could also
+deter&shy;mine their location and could potentially manipulate the devices.
+This is not unfounded, as much of the software for (lawful) telephone
+interception is developed in Israel. Furthermore, Israeli companies like
+<a href="../../../../manuf/nso"><span data-balloon-pos="up" aria-label="More about: NSO Group">NSO Group</span></a>,
+have been in the news regularly for rigging mobile phones, including Apple's iPhone.
+Such parties are generally linked to Israeli intelligence.
+<br />
+<br />
+By using old technology, Hezbollah thought to have found a more secure way
+of communicating with its operatives. This was amplified by Hezbollah leader
+Hassan Nasrallah, when in early 2023 he called upon his followers to throw
+away their mobile phones and buy a pager instead. As a result, the organisation
+needed more pagers, which were obtained through <a href="#bac"><span data-balloon-pos="up" aria-label="Jump to: BAC Consulting">BAC Consulting</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          The attack
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+On 17 September 2024 at 15.30 local time, a message was sent to all 5000 pagers
+of the Hez&shy;bollah group. The message appeared to come from Hezbollah leadership.
+Seconds later, approx. 4000 of the devices exploded, killing several people
+and injuring thousands others. Among the victims were not only Hezbollah operatives,
+but also innocent bystanders and even children.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the hours after the attack, several picures of the remains of exploded
+AR-924 devices were posted on the internet, such as the one shown in the image
+on the right. The images and the live footage from several security cameras,
+confirm that the blasts were not caused by overheated Lithium batteries,
+but by explosive devices.
+<br />
+<br />
+Several sources confirmed that explosives like RDX and PETN had been
+found, both of which are the core ingredients of Semtex.
+Only a small amount of RDX or PETN is needed for a lethal explosion
+like the ones in the published footage.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/ar924_exploded.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="The remains of an AR-924 pager after it had exploded - Arab News, 17 September 2024" data-balloon-length="large">
+<a href="img/ar924_exploded.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="The remains of an AR-924 pager after it had exploded - Arab News, 17 September 2024" data-balloon-length="large">
+            <img src="img/ar924_exploded_small.jpg"
+             style="
+            "
+             align="left"
+             width="298px"
+             vspace="4"
+             alt="The remains of an AR-924 pager after it had exploded - Arab News, 17 September 2024"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+A day after the incident with the Apollo pagers &ndash; on the 18th &ndash;
+a similar thing happened to the
+handheld two-way radios that were also used by Hezbollah <a href="#ref_6">[6]</a>. In this
+case it reportedly involved the IC-V82 handheld radio &mdash; a 20 year old model
+from the Japanese manufacturer ICOM. It works in the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Very High Frequency (30-300 MHz)">VHF</span> radio band,
+and is independent of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Ultra High Frequency (300-3000 MHz)">UHF</span> paging network used by Hezbollah.
+Production of the IC-V82 was abandoned 10 years prior to the attack (2014),
+but counterfeit reproductions &ndash; presumably from China &ndash; were still widely available
+from various outlets in Asia.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=grim></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Operation Grim Beeper
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Although it is currently unknown who was responsible for the exploding devices,
+it is widely spe&shy;cu&shy;lated and believed by experts,
+that an Israeli intelligence service
+was behind it &mdash; most likely the Mossad &mdash; in cooperation with the Israeli
+Armed Forces (IAF). In a carefully planned and executed covert operation, they
+had not only managed to infiltrate the supply chain, but had also been
+able to take over the manufacturing of the devices. This enabled them to
+embed a small but powerful explosive device inside the existing design, in such a way
+that it would not be noticed by ser&shy;vice personnel. It is likely that they
+had also manipulated the device's firmware, so that the explosive device would
+detonate upon receipt of a specially crafted message.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../../cases/pager">More about the covert operation</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Mossad
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In a remarkable interview with Lesley Stahl of the CBS News program '60 Minutes'
+on 22 Decem&shy;ber 2024, two anonymous Mossad officers admitted that Mossad was indeed
+behind the opera&shy;tion <a href="#ref_18">[18]</a>. The officers, who wore masks and had their voices
+altered, give a detailed description of how the operation was planned (10 years
+earlier) and executed. They confirmed that the pagers as well as the walkie-talkies
+had been manufactured in Israel.
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="background-color: #EEEEEE; font-size: 8pt; padding: 12px; color: #777777; overflow: auto;">
+<font color=#F52E00>Crypto Museum comment &mdash;</font>
+At present,
+we have our reservations about some of the claims made during the interview.
+For example: Mossad officer 'Michael' claims that the explosive device was
+hidden inside the battery of the ICOM IC-V82 handheld radio.
+We find this unlikely. The available photographic evidence suggests that
+the explosion came from inside the radio itself and that the battery was
+blown off, not the other way around.
+        </div>
+        <div class="clear_float"></div>
+<div style="height: 20px;"></div>        <a name=manuf></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Manufacturer</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <a name=apollo></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Gold Apollo 
+          &nbsp;<font color="#CCC">
+          Taiwan
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Gold Apollo is a Taiwanese company that manufactures a range of pagers,
+and sells them world&shy;wide. The AR-924 seems to be a ruggedised version
+of the AL-924 &mdash; at one time Apollo's most popular model that has meanwhile
+been discontinued. Immediately after the incident with the exploding
+Hezbollah pagers, Apollo's founder and president &ndash; Hsu Ching-kuang &ndash;
+told the press that his company had nothing to do with the AR-924 model <a href="#ref_4">[4]</a>.
+It was not manufactured by his company and had not been supplied by
+them either. Instead, he claimed, the device was made the Hungarian
+firm <a href="#bac"><span data-balloon-pos="up" aria-label="Jump to: BAC Consulting">BAC Consulting</span></a>, to whom they had licenced the design and
+the brand name.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Apollo Systems Ltd. 
+          &nbsp;<font color="#CCC">
+          Taiwan, HongKong
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Sales and marketing of the AR-924 were handled by a company in Hong Kong
+by the name of the <b>Apollo Systems HK Ltd</b>. Its (now defunct) website
+featured the AR-924 pager <a href="#ref_13">[13]</a>, along with an
+<a href="#video_intro"><span data-balloon-pos="up" aria-label="Jump to: accompanying video on YouTube">accompanying video on YouTube</span></a>.
+Apparently, this company was
+a subsidary of Applo Systems Ltd. in Taiwan, which was headed by Theresa Wu,
+a former employee of Gold Apollo. Apollo Sys&shy;tems Ltd. was reportedly a
+subsidary of <a href="#bac"><span data-balloon-pos="up" aria-label="Jump to: BAC Con&shy;sul&shy;ting">BAC Con&shy;sul&shy;ting</span></a> in Hungary &mdash; the licence holder.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://web.archive.org/web/20240917160632/https://apollosystemshk.com/product/42.html" target="_blank">See the (removed) AR-924 product page</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="#video_intro">Watch the video</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=bac></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          BAC Consulting Kft. 
+          &nbsp;<font color="#CCC">
+          Hungary
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+BAC Consulting Ktf., abbreviated BAC, was an Hungarian company,
+founded on 5 May 2022 and located in Budapest (Hungary).
+According to <a href="#apollo"><span data-balloon-pos="up" aria-label="Jump to: Gold Apollo">Gold Apollo</span></a>, they were involved in the production
+and sales of the AR-924 pager &mdash; a rugged version of the AL-924 &mdash;
+for which it had purchased the rights to pager's design and to the use
+of the company's name and its logo.
+A day after the incident, a representative of the Hungarian president
+Viktor Orb&#225;n, told the press that the pagers had never actually been
+in Hungary, and that BAC merely acted as an intermediary <a href="#ref_7">[7]</a>.
+<br />
+<br />
+When reporters visited the company at its registered address <a href="#ref_5">[5]</a>,
+no BAC representative was available for comment. At the address &ndash;
+a modest office building in the outskirts of Budapest &ndash; several other
+(unrelated) companies are housed, and no one had seen the BAC
+director since the pager attacks on 17 September <a href="#ref_8">[8]</a>.
+According to several media, the
+company's registered owner has been placed under protection of the
+Hungarian security services since the pager attacks <a href="#ref_8">[8]</a>.
+<br />
+<br />
+It is possible, if not likely, that BAC and Apollo Systems Ltd. were
+shell companies,
+created specifically for supplying the rigged pagers to Hezbollah.
+So far, it remains a mystery where the pagers were actually made,
+but it is possible that they were manufactured by Apollo Systems in Hong Kong
+and supplied to Hezbollah either directly or through yet another shell company.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Norta Global Ltd. 
+          &nbsp;<font color="#CCC">
+          Bulgaria
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Two days after the attacks, on 19 September 2024, Bulgarian authorities
+started an investigation into a company that they thought might have
+facilitated  the sale of the pagers to Hezbollah. Although the name of
+that company wasn't revealed, Bulgarian media discovered
+it was Norta Global Ltd. in Sofia (Bulgaria) <a href="#ref_10">[10]</a><a href="#ref_11">[11]</a>.
+This company, owned by Norwegian citizen Rinson Jose, was founded
+in April 2022, just weeks before BAC Consulting was founded in Hungary.
+Like BAC, Norta has its headquarters in a local office building
+along with 196 other (unrelated) companies.
+In a preliminary statement, the Bulgarian state security service DANS
+said that it had not detected any shipments of the pagers on Bulgarian
+territory <a href="#ref_12">[12]</a>.  It was revealed though, that Norta had payed a substancial
+amount of money to <a href="#bac"><span data-balloon-pos="up" aria-label="Jump to: BAC Consulting">BAC Consulting</span></a>, amounting to more than EUR 1 million.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../../cases/pager">More about exploding Hezbollah devices</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=video></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Video</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <a name=video_intro></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Introduction
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+This clip was found on the YouTube channel of Apollo Systems HK in 2023.
+It shows the AR-924 pager in operation and highlights its
+<a href="#features"><span data-balloon-pos="up" aria-label="Jump to: unique fea&shy;tures">unique fea&shy;tures</span></a>, like the improved user inter&shy;face and the
+85 day battery life.
+Note that the name of the origi&shy;nal manufacturer &ndash; Gold Apollo &ndash; is used
+in the video, although in reality it was Apollo Systems HK that was
+responsible for the design and sales.
+<br />
+<br />
+<b>Source</b><br />
+YouTube, Apollo Systems HK
+<br />
+<br />
+<b>Date</b><br />
+13 December 2022
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign="top">
+          <iframe width="298" height="200" src="https://www.youtube.com/embed/x50wwGjX2Ao" frameborder="0" allowfullscreen></iframe>
+        </td></tr></table>
+        </td></tr>
+      </table>
+<br />      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+        </font>
+        </td></tr>
+      </table>
+<br />      <a name=block></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Block diagram</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the block diagram of the AR-924 pager.
+At the centre is the micro&shy;controller (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Central Processing Unit">CPU</span>) that forms the
+heart of the device. It is driven by internally stored software
+(firm&shy;ware) and has inter&shy;faces to the controls, display, vibrator,
+buzzer and radio modem. It also has a USB-C connection for altering the settings
+from a regular <span class="short tooltip-red" data-balloon-pos="up" aria-label="Personal Computer">PC</span>, and to charge the internal Lithium-ion battery.
+<br />
+        <br />
+        <table 
+         border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+          <div style="position: relative;" data-balloon-pos="up" aria-label="Block diagram of the rigged AR-924 pager" class="tooltip-red">
+          <div style="position: relative;" data-balloon-pos="up" aria-label="Block diagram of the rigged AR-924 pager" class="tooltip-red">
+          <img src="../../../cases/pager/svg/pager_block.svg"
+           style="
+           max-width: 618px;
+          "
+           align="center"
+           vspace="4"
+           alt="Block diagram of the rigged AR-924 pager"
+           border=0
+          
+           />
+          </div>
+          </td></tr><tr><td align=center>
+        </td></tr></table>
+<br />
+The battery is at the bottom. It was developed especially for this
+project and consists of a Li-ion battery with a Protection Circuit Module (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Protection Circuit Module">PCM</span>),
+a detonator and an explosive charge. It is likely that the explosive charge was
+embedded within the layers of the battery, so that it would not be noticed
+in an x-ray scan. The detonator was probably integrated with the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Protection Circuit Module">PCM</span>.
+<br />
+<br />
+        </font>
+        </td></tr>
+      </table>
+<br />      <a name=int></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Interior</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+As far as we know there are currently no photographs of the interior
+of te AR-924, apart from a few fragments that were photographed
+immediately after the atacks. Below is an educated guess of the
+internal construction of the device, based on an analysis of
+Raphael Wimmer on Mastodon <a href="#ref_14">[14]</a>, complemented by our own observations and
+insights. The enclosure consists of two plastic case shells, held
+together by screws that are inserted from the rear. The upper case
+shell contains the display window, the four knobs and holes
+for the buzzer, the lanyard and the USB-C socket.
+<br />
+        <br />
+        <table 
+         border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+          <div style="position: relative;" data-balloon-pos="up" aria-label="Educated guess of the construction of the AR-924 (Copyright Crypto Museum 2024) Version 2.0 - 8 October 2024" data-balloon-length="large" class="tooltip-red">
+          <div style="position: relative;" data-balloon-pos="up" aria-label="Educated guess of the construction of the AR-924 (Copyright Crypto Museum 2024) Version 2.0 - 8 October 2024" data-balloon-length="large" class="tooltip-red">
+          <img src="svg/ar924_exp.svg"
+           style="
+           max-width: 618px;
+          "
+           align="center"
+           vspace="4"
+           alt="Educated guess of the construction of the AR-924 (Copyright Crypto Museum 2024) Version 2.0 - 8 October 2024"
+           border=0
+          
+           />
+          </div>
+          </td></tr><tr><td align=center>
+        </td></tr></table>
+<br />
+There are two printed circuit boards (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>s). The upper one holds the
+microcontroller, the display, the controls, the buzzer and the radio
+interface. The latter is probably fitted at the bottom of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>,
+below the display.
+The lower board holds the USB-C socket and the battery contacts.
+It is constructed in such a way that the battery contacts align with
+the spring contacts on the board. It is likely that the vibrator (a small
+motor) is also fitted on the lower board.
+<br />
+<br />
+        </font>
+        </td></tr>
+      </table>
+<br />      <a name=spec></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Specifications</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td valign="">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li><div style="display:inline-block; width:100px;">Device</div>Pager          <li><div style="display:inline-block; width:100px;">Purpose</div>One-way closed-group wireless messaging          <li><div style="display:inline-block; width:100px;">Model</div>AR-924          <li><div style="display:inline-block; width:100px;">Supplier</div><a href="#bac">BAC Consulting Kft.</a>, Hungary          <li><div style="display:inline-block; width:100px;">Brand</div><a href="#apollo">Gold Apollo</a>          <li><div style="display:inline-block; width:100px;">Supplier</div>Apollo Systems Ltd.          <li><div style="display:inline-block; width:100px;">Manufacturer</div>?          <li><div style="display:inline-block; width:100px;">Year</div>2022-2024          <li><div style="display:inline-block; width:100px;">Frequency</div>450-470 MHz          <li><div style="display:inline-block; width:100px;">Spacing</div>25 kHz          <li><div style="display:inline-block; width:100px;">Deviation</div>4.5 kHz          <li><div style="display:inline-block; width:100px;">Rejection</div>&gt; 40dB          <li><div style="display:inline-block; width:100px;">Protocol</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Post Office Code Standardisation Advisory Group (paging protocol from the UK)" data-balloon-length="large">POCSAG</span>          <li><div style="display:inline-block; width:100px;">Data rate</div>512, 1200, 2400 baud          <li><div style="display:inline-block; width:100px;">Sensitivity</div>-110dBm (512 baud), -108dBm (1200 baud), -106dBm (2400 baud)          <li><div style="display:inline-block; width:100px;">Capcodes</div>8, frame independent          <li><div style="display:inline-block; width:100px;">Messages</div>30          <li><div style="display:inline-block; width:100px;">Characters</div>100 per message          <li><div style="display:inline-block; width:100px;">Display</div>146 &#215; 64 pixels <span class="short tooltip-red" data-balloon-pos="up" aria-label="Liquid Christal Display">LCD</span> <sup><font color="#FF8800">1</font></sup>          <li><div style="display:inline-block; width:100px;">Language</div>English          <li><div style="display:inline-block; width:100px;">Battery</div>LI-BT783 rechargeable Li-ion          <li><div style="display:inline-block; width:100px;">Duration</div>85 days          <li><div style="display:inline-block; width:100px;">Charging</div>USB-C (2.5 hours)          <li><div style="display:inline-block; width:100px;">Resistance</div>IP67          <li><div style="display:inline-block; width:100px;">Shock</div>1.5 m          <li><div style="display:inline-block; width:100px;">Approval</div>CE          <li><div style="display:inline-block; width:100px;">Temperature</div>-10&#176;C to +50&#176;C          <li><div style="display:inline-block; width:100px;">Dimensions</div>(<span class="short tooltip-red" data-balloon-pos="up" aria-label="Height, Width, Depth">HWD</span>) 50 &#215; 73 &#215; 27 mm          <li><div style="display:inline-block; width:100px;">Weight</div>95 g        </ul>
+</font></td></tr></table><div style="height: 20px;"></div>      <table width="50" cellspacing="0" cellpadding="0"><tr>
+      <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+      </tr></table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr><td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+        <ol>
+        <li>
+The horizontal resolution of 146 pixels is highly unlikely as it is not
+  a multiple of 8. It is probably a typo and should be 144 pixels.
+        </ol>
+        </small></font></td></tr>
+      </table>
+<div style="height: 20px;"></div>      <a name=doc></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Documentation</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ol type=A>
+          <a name="doc_1"></a>
+          <li><a href="https://web.archive.org/web/20240917160632/https://apollosystemshk.com/product/42.html" target="_blank">Gold Apollo Rugged Pager AR924 (archived)</a><br />
+Product page on Apollo Systems Hong Kong website (meanwhile taken down).<br />
+Apollo Systems HK, 17 September 2024 (via <a href="https://archive.org">WayBack Machine</a>).
+          <p />
+          <a name="doc_2"></a>
+          <li><a href="files/AL924_spec.pdf">AL-924 Specifications</a><br />
+Apollo. Undated.
+          <p />
+          <a name="doc_3"></a>
+          <li><a href="files/AL924_manual.pdf">AL-914e User Manual</a><br />
+Apollo. Undated.
+          <p />
+          <a name="doc_4"></a>
+          <li><a href="files/Apollo_prog.pdf">Apollo Pagers Programming Instructions</a><br />
+Apollo. Undated.
+        </ol type=A>
+      </font></td></tr></table>
+<div style="height: 14px;"></div>      <a name=ref></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>References</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ol>
+          <a name="ref_1"></a>
+          <li><a href="https://en.wikipedia.org/wiki/Gold_Apollo_AR924" target="_blank">Wikipedia, <i>Gold Apollo AR924</i></a><br />
+Visited 20 September 2024.
+          <p />
+          <a name="ref_2"></a>
+          <li><a href="https://en.wikipedia.org/wiki/2024_Lebanon_pager_explosions" target="_blank">Wikipedia, <i>2024 Lebanon pager explosions</i></a><br />
+Visited 21 September 2024.
+          <p />
+          <a name="ref_3"></a>
+          <li><a href="https://www.nytimes.com/live/2024/09/17/world/israel-hamas-war-news#here-are-the-latest-developments" target="_blank"><i>Pagers Explode Across Lebanon in Apparent Attack on Hezbollah</i></a><br />
+New York Times, 17 September 2024.
+          <p />
+          <a name="ref_4"></a>
+          <li><a href="https://reut.rs/3ZsKrX2" target="_blank">Gold Apollo says Budapest-based BAC produces model of pagers used in Lebanon blast</a><br />
+Reuters, Ben Blanchard. 18 September 2024.
+          <p />
+          <a name="ref_5"></a>
+          <li><a href="https://www.ceginformacio.hu/cr9312263144_DE" target="_blank">Chamber of Commerce, company information</a><br />
+Visited 18 September 2024.
+          <p />
+          <a name="ref_6"></a>
+          <li><a href="../../../cases/pager"><i>Exploding Hezbollah devices</i></a><br />
+Crypto Museum, 17 September 2024.
+          <p />
+          <a name="ref_7"></a>
+          <li><a href="https://www.politico.eu/article/hungary-exploding-pages-never-country-hezbollah-viktor-orban/" target="_blank"><i>Orb&#225;n rep says Hezbollah exploding pagers were 'never' in Hungary</i></a><br />
+Politico, 19 September 2024.
+          <p />
+          <a name="ref_8"></a>
+          <li><a href="https://bit.ly/3XQ6Xrs" target="_blank"><i>The mystery woman whose company BAC Consulting is linked to exploding pagers</i></a><br />
+CNA, 21 September 2024.
+          <p />
+          <a name="ref_9"></a>
+          <li><a href="https://bit.ly/4e7Uq8A"><i>CEO of company linked to Hezbollah pagers being guarded by Hungarian secret services</i></a><br />
+Justin Spike, Paolo Santalucia and Sarah el Deeb,<br />
+The Times of Israel/AP. 20 September 2024.
+          <p />
+          <a name="ref_10"></a>
+          <li><a href="https://bit.ly/4guKIyM"><i>Bulgarije onderzoekt nu bedrijf gelinkt aan exploderende biepers</i></a><br />
+Bulgaria investigating company linked to exploding pagers (Dutch).<br />
+HLN, 19 September 2024.
+          <p />
+          <a name="ref_11"></a>
+          <li><a href="https://breakingthenews.net/Article/Bulgaria-to-probe-local-firm's-links-to-Lebanon-pagers/62749173" target="_blank"><i>Bulgaria to probe local firm's links to Lebanon pagers</i></a><br />
+Baha Breaking News, Christian Baha/RR. 19 September 2024.
+          <p />
+          <a name="ref_12"></a>
+          <li><a href="https://thecradle.co/articles-id/26929" target="_blank"><i>Bulgaria opens probe into local company linked to Israeli-tampered pagers</i></a><br />
+The Cradle, News Desk. 19 September 2024.
+          <p />
+          <a name="ref_13"></a>
+          <li><a href="https://web.archive.org/web/20240917160632/https://apollosystemshk.com/product/42.html" target="_blank"><i>Gold Apollo Rugged Pager AR924</i> (archived)</a><br />
+Product page on Apollo Systems Hong Kong website (meanwhile taken down).<br />
+Apollo Systems HK, 17 September 2024 (via <a href="https://archive.org">WayBack Machine</a>).
+          <p />
+          <a name="ref_14"></a>
+          <li><a href="https://hci.social/@RaphaelWimmer/113205588929860457" target="_blank">Raphael Wimmer, <i>A small #OSINT thread about the AR-924 pager...</i></a><br />
+Mastodon, 26 September 2024.
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://x.com/RaphaselWimmer/status/1839273973613281501" target="_blank">Similar thread on X (Twitter)</a>
+          <p />
+          <a name="ref_15"></a>
+          <li><a href="https://web.archive.org/web/20240917160618/https://www.apollosystemshk.com/html/202309/49.html" target="_blank"><i>LI-BT783 Lithium-ion Battery pack</i></a><br />
+Apollo Systems HK, 17 September 2024 (Retrieved via <a href="https://archive.org">WayBack Machine</a>).
+          <p />
+          <a name="ref_16"></a>
+          <li><a href="https://web.archive.org/web/20240718192542/https://www.electronicspower-batteries.com/">LI-BT783 Lithium-Ion Battery pack</a><br />
+Electronics Power, 18 July 2024 (Retrieved via <a href="https://archive.org">WayBack Machine</a>).
+          <p />
+          <a name="ref_17"></a>
+          <li><a href="https://www.reuters.com/graphics/ISRAEL-PALESTINIANS/HEZBOLLAH-PAGERS/mopawkkwjpa/" target="_blank"><i>How Israel's bulky pager fooled Hezbollah</i></a><br />
+Maya Gebeily, James Pearson and David Gauthier-Villars.<br />
+Reuters, 16 October 2024.
+          <p />
+          <a name="ref_18"></a>
+          <li><a href="https://bit.ly/3W87S5k" target="_blank"><i>Former agents from Israel's Mossad detail how they built and sold<br />explosive pagers to Hezbollah terrorists</i></a><br />
+Lesley Stahl, 22 December 2024.
+          <p />
+          <a name="ref_19"></a>
+          <li><a href="https://bit.ly/41W0f5T" target="_blank"><i>The Real Reason Why Israel's Mossad Cooperated With<br />'60 Minutes' Tell-all on Hezbollah Pagers Attack</i></a><br />
+Yossi Melman, Haaretz, 24 December 2024.
+        </ol>
+      </font></td></tr></table>
+<div style="height: 14px;"></div>      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Further information</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li><a href="../../../cases/pager">Covert operation 'Grim Beeper'</a><br />
+          <li><a href="../../index.htm">Other covert radios</a><br />
+        </ul>
+      </font></td></tr></table>
+<div style="height: 14px;"></div>      </td></tr>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr><td colspan=3 width=100%>
+      <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+      </table>
+      </td></tr>
+      <tr>
+      <td align=center width=100%>
+      <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+      Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+      If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+       
+      © Crypto Museum. Last changed: Wednesday, 05 November 2025 - 11:45 CET.
+      <br />
+      </font
+      </td>
+      </tr>
+      <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+      <tr><td align=center>
+      <a href="../../../../index.htm"><img src=../../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+      </td></tr>
+    </table>
+    </td></tr>
+  </table>
+  </font>
+</td>
+</tr></table>
+</body>
+</html>

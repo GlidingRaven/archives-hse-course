@@ -1,0 +1,2575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>T-109</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cryptomuseum">
+    <meta name="twitter:url" content="https://www.cryptomuseum.com/telex/siemens/t109/index.htm">
+    <meta name="twitter:image" content="https://www.cryptomuseum.com/telex/siemens/t109/img/304020/018/full.jpg">
+    <meta name="twitter:title" content="Siemens T-109">
+    <meta name="twitter:description" content="Test device for Siemens polar relays, issued in 1961.">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of telegraphic equipment" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../telex/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tools used in combination with telegraphic equipment" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../telex/tools/index.htm';" >Tools</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../../telex/creed/index.htm';" >Creed</div>
+          <div class="but sub" onClick="location.href='../../../telex/gretag/etk47/index.htm';" >Gretag</div>
+          <div class="but sub" onClick="location.href='../../../telex/hell/index.htm';" >HELL</div>
+          <div class="but sub" onClick="location.href='../../../telex/sagem/index.htm';" >Sagem</div>
+          <div class="but sel sub" onClick="location.href='../../../telex/siemens/index.htm';" >Siemens</div>
+          <div class="but sub" onClick="location.href='../../../telex/telefunken/index.htm';" >Telefunken</div>
+          <div class="but sub" onClick="location.href='../../../telex/teletype/index.htm';" >Teletype</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../index.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Siemens & Halske" class="key">Siemens</div></a>&nbsp;&nbsp;<a class="key" href="../../polar.htm"><div  data-balloon-pos="up" aria-label="Forward to Polar relays" class="key right">Polar relays &rarr;</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>T-109</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Polar relay tester</b>
+<br />
+<br />
+<b>9.T.mse.190a</b>, abbreviated <b>T-109</b>, <sup><font color="#FF8800">1</font></sup> is a relay tester (German: Relaispr&#252;fer)
+with built-in <span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Ray Tube (display)">CRT</span>, introduced around 1961 by
+<a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: Siemens & Halske">Siemens & Halske</span></a> in M&#252;nchen (Germany). It is suitable
+for testing and aligning most popular Siemens
+<a href="../../polar.htm"><span data-balloon-pos="up" aria-label="More about: polar relays">polar relays</span></a> that were manufactured between 1930 and 1980.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The device is housed in a two-part <a href="img/304020/001/full.jpg"><span data-balloon-pos="up" aria-label="More about: grey">grey</span></a>
+or <a href="img/304241/003/full.jpg"><span data-balloon-pos="up" aria-label="More about: black">black</span></a>
+<a href="img/304020/000/full.jpg"><span data-balloon-pos="up" aria-label="More about: metal enclosure">metal enclosure</span></a> that measures
+265 &#215; 190 &#215; 180 mm and weighs 7.3 kg. The upper part is a hin&shy;ged cover, that can
+be opened by releasing the lock at the front. All controls and connections are at
+the <a href="#features"><span data-balloon-pos="up" aria-label="Jump to: top panel">top panel</span></a>. The power cable is stowed in the lid.
+It is suitable for 110-240V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> mains.
+<br />
+<br />
+At the front are <a href="img/304020/004/full.jpg"><span data-balloon-pos="up" aria-label="More about: two relay sockets">two relay sockets</span></a>:
+for for the <a href="img/304020/010/full.jpg"><span data-balloon-pos="up" aria-label="More about: older 8-pin types (right)">older 8-pin types (right)</span></a>
+and one for <a href="img/304020/007/full.jpg"><span data-balloon-pos="up" aria-label="More about: modern Siemens relays (left)">modern Siemens relays (left)</span></a>.
+For each relay type, a
+<a href="#plugin"><span data-balloon-pos="up" aria-label="Jump to: plug-in (containing a resistor)">plug-in (containing a resistor)</span></a>
+should be installed in the 3-pin socket marked
+<a href="img/304020/014/full.jpg"><span data-balloon-pos="up" aria-label="More about: ..."><i>Vorsteckwiderstand</i></span></a>.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304020/018/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="T-109 with plug-in and relay-under-test">
+<a href="img/304020/018/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="T-109 with plug-in and relay-under-test">
+            <img src="img/304020/018/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="T-109 with plug-in and relay-under-test"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Once the <i>relay under test</i> and the correct <a href="#plugin"><span data-balloon-pos="up" aria-label="Jump to: plug-in resistor">plug-in resistor</span></a> have
+been installed, the device can be switched on. The relay will be tested with a
+switching frequency of 25 Hz (half the 50Hz of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> mains network),
+and the result is shown on the circular cathode ray tube (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Ray Tube (display)">CRT</span>) at the top left.
+The <a href="#timing"><span data-balloon-pos="up" aria-label="Jump to: display simultaneously shows">display simultaneously shows</span></a> the relay's transition time, the
+distortion and the contact bounce. <sup><font color="#FF8800">2</font></sup>
+By reversing the polarity (Umpolung) it is possible to check the symmetry
+of the relay under test.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Also known as <b>Kathodenstrahl-Relaispr&#252;fer 109</b> (cathode ray tube relay tester 109).
+          </li>
+          <li>
+In German specified as: Umschlagzeit, Neutralverzerrung und Prellung.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="T-109 in closed case">          <img src="img/304020/000/thumbnail.jpg"
+           alt="T-109 in closed case"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="T-109 with opened lid">          <img src="img/304020/001/thumbnail.jpg"
+           alt="T-109 with opened lid"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/001"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="T-109 relay tester with open lid">          <img src="img/304020/003/thumbnail.jpg"
+           alt="T-109 relay tester with open lid"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/003"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="T-109 with plug-in and relay-under-test">          <img src="img/304020/018/thumbnail.jpg"
+           alt="T-109 with plug-in and relay-under-test"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/018"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="T-109 without lid">          <img src="img/304020/013/thumbnail.jpg"
+           alt="T-109 without lid"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/013"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="T-109 with plug-in and relay-under-test">          <img src="img/304020/019/thumbnail.jpg"
+           alt="T-109 with plug-in and relay-under-test"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/019"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Case lid">          <img src="img/304020/011/thumbnail.jpg"
+           alt="Case lid"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/011"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Inside the case lid">          <img src="img/304020/012/thumbnail.jpg"
+           alt="Inside the case lid"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/012"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Two relay sockets">          <img src="img/304020/004/thumbnail.jpg"
+           alt="Two relay sockets"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 9);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/004"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="CRT display">          <img src="img/304020/005/thumbnail.jpg"
+           alt="CRT display"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 10);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/005"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel">          <img src="img/304020/006/thumbnail.jpg"
+           alt="Front panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 11);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/006"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Old type relays">          <img src="img/304020/010/thumbnail.jpg"
+           alt="Old type relays"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 12);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/010"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="New type relays">          <img src="img/304020/007/thumbnail.jpg"
+           alt="New type relays"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 13);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/007"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Plug-in installed">          <img src="img/304020/014/thumbnail.jpg"
+           alt="Plug-in installed"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 14);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/014"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Collection of plug-ins">          <img src="img/304244/007/thumbnail.jpg"
+           alt="Collection of plug-ins"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 15);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304244/007"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Black version of the T-109">          <img src="img/304241/003/thumbnail.jpg"
+           alt="Black version of the T-109"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 16);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304241/003"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304020/000/full.jpg" alt="T-109 in closed case">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304020/001/full.jpg" alt="T-109 with opened lid">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304020/003/full.jpg" alt="T-109 relay tester with open lid">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 4 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304020/018/full.jpg" alt="T-109 with plug-in and relay-under-test">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 5 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304020/013/full.jpg" alt="T-109 without lid">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 6 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304020/019/full.jpg" alt="T-109 with plug-in and relay-under-test">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 7 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304020/011/full.jpg" alt="Case lid">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 8 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304020/012/full.jpg" alt="Inside the case lid">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 9 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304020/004/full.jpg" alt="Two relay sockets">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 10 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304020/005/full.jpg" alt="CRT display">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 11 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304020/006/full.jpg" alt="Front panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 12 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304020/010/full.jpg" alt="Old type relays">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 13 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304020/007/full.jpg" alt="New type relays">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 14 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304020/014/full.jpg" alt="Plug-in installed">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 15 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304244/007/full.jpg" alt="Collection of plug-ins">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 16 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304241/003/full.jpg" alt="Black version of the T-109">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=features></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image below shows the control panel of the T-109, which is located at the
+top of the device. All controls and connections are on this panel. Before
+using the device, it's important to check the setting of the mains voltage
+selector at the bottom right. For continental Europe, it should be set to
+240V. Next, the correct <a href="#plugin"><span data-balloon-pos="up" aria-label="Jump to: plug-in">plug-in</span></a> for the <i>relay under test</i> should
+be <a href="img/304020/014/full.jpg"><span data-balloon-pos="up" aria-label="More about: installed in the socket">installed in the socket</span></a>
+mar&shy;ked <i>Vorsteckwiderstand</i>. If this
+plug-in is missing, it can <a href="#plugin"><span data-balloon-pos="up" aria-label="Jump to: easily be created as described ...">easily be created as described below</span></a>.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304020/006/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304020/006/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/t109_front.png"
+             style="
+            "
+             align="center"
+             width="562px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+At the bottom are two different sockets, one of which should be
+suitable for the <i>relay under test</i>. Old <a href="../../polar.htm"><span data-balloon-pos="up" aria-label="More about: polar relay">polar relay</span></a>
+types with eight 4 mm pins at the bottom, such as the
+<a href="../../polar.htm#trls43a"><span data-balloon-pos="up" aria-label="More about: Trls-43a">Trls-43a</span></a>, can be in&shy;stal&shy;led
+in the rightmost socket. <sup><font color="#FF8800">1</font></sup> Modern relays, like the
+<a href="../../polar.htm#trls63a"><span data-balloon-pos="up" aria-label="More about: Trls-63a">Trls-63a</span></a>, are installed
+in the leftmost one.
+          <a name=timing></a>
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/t109_timing.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+When testing a relay, the display shows the voltage on the central
+contact of the relay's <span class="short tooltip-red" data-balloon-pos="up" aria-label="Single-Pole Double-Throw (switch)">SPDT</span> switch whilst it toggles between
+MARK (-30V) and SPACE (+30V) at 25 Hz. For clarity, we have shown
+the MARK signal in blue and the SPACE signal in red, in the diagram above.
+In reality the display shows them as two alternating green lines.
+If you only want to see only one of the two signals, set the switch
+<i>Verzerrung</i> to the upper position (SPACE) or the lower position (MARK).
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Note that the 8-pin socket for the older relay types might be missing
+  from certain versions of the device, such as the English labelled variant
+  of the 5634/10-V.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=plugin></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Plug-ins</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+For each type of <a href="../../polar.htm"><span data-balloon-pos="up" aria-label="More about: polar relay">polar relay</span></a>, a matching plug-in should
+be installed in the socket marked <i>Vorsteckwiderstand</i>, at the upper
+edge of the <a href="#features"><span data-balloon-pos="up" aria-label="Jump to: control panel">control panel</span></a>. The plug-in consists of a power
+resistor, that is housed inside a Siemens TF-plug (German: TF-Stecker),
+as shown below.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+One side of the plug shows the ordering number (e.g. 9T Bv 39/2406), whilst
+the other one shows the type of relay it should be paired with &mdash; for example:
+<b>T.rls.64</b>.
+The plug has three pins, but only two are used. These are the two adjacent
+pins with the largest spacing. The third pin is not connected and is used
+as a mounting stub only.
+<br />
+<br />
+The plug <a href="img/304020/021/full.jpg"><span data-balloon-pos="up" aria-label="More about: contains a power resistor">contains a power resistor</span></a>
+ of a specific value, that is connected
+in series with the coil of the <i>relay under test</i>. Without the plug-in,
+it will not work, as there will be no current flowing through the relay
+(see the <a href="#circuit"><span data-balloon-pos="up" aria-label="Jump to: circuit diagram">circuit diagram</span></a>).
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304020/016/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Program plugs">
+<a href="img/304020/016/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Program plugs">
+            <img src="img/304020/016/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Program plugs"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+If a suitable plug-in is missing, it can easily be created from
+an old TF-plug in which a resistor is soldered across the two pins with the
+largest spacing, using the drawing and the table below as a guide.
+As TF-plugs are hard to find these days, it can be replaced by two
+regular banana plugs.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/t109_plugin.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The diagram above shows the internal construction of a plug-in. It bascially
+contains a single resistor (R) that is connected to the rightmost two pins.
+However, as the required value has to be met relatively accurately, it is
+in most cases constructed from two resistors (R1 and R2) that are connected
+in series. As the leftmost contact is unused &mdash; it is not wired inside the
+T-109 &mdash; it is used as a mounting stub for both resistors. The table below
+shows the known plug-ins with the value of the resistors (R &equals; R1 + R2).
+The value of R1 is &#177;0.2%, whilst the value of R2 is &#177;0.5%.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+        <table width=100% cellspacing=0 cellpadding=0>
+          <tr>
+          <td width=100%>
+          <table
+           class="table"
+           width=100% border=0 cellspacing=1 cellpadding=2 bgcolor=#FFFFFF>
+            <tr><td colspan=10>
+            <table width=100% border=0 cellspacing=0 cellpadding=0><tr><td>&nbsp;</td></tr><tr><td>
+            <table width=100% border=0 cellspacing=0 cellpadding=0>
+              <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+              <tr>
+              <td align="left" valign="center" width=100%>
+              <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+              Old types
+              </font>
+              </td>
+              </tr>
+              <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+              <tr><td height=4></td></tr>
+            </table>
+            </td></tr></table>
+            </td></tr>
+            <tr>
+<td bgcolor="#E0E0E0" align="left" valign="top" width="75" colspan=2 style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Relay</font></td></b><td bgcolor="#E0E0E0" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>&#35; of</font></td></b><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>&#160;</font></td></b><td bgcolor="#E0E0E0" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Plug-in</font></td></b><td bgcolor="#E0E0E0" align="center" valign="top" width="40" colspan=3><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Resistor [&Omega;]</font></td></b><td bgcolor="#E0E0E0" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Example</font></td></b>            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+            <tr>
+<td bgcolor="#E0E0E0" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Model</font></td><td bgcolor="#E0E0E0" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Version</font></td><td bgcolor="#E0E0E0" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>coils</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#E0E0E0" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Type</font></td><td bgcolor="#E0E0E0" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>R</font></td><td bgcolor="#E0E0E0" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>R1</font></td><td bgcolor="#E0E0E0" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>R2</font></td><td bgcolor="#E0E0E0" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Used in ...</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><sup><font color="#FF8800">1</font></sup></font></td>            </tr>
+            <tr>
+            <td bgcolor=#FFFFFF colspan=10><font size=-1>
+            </font></td>
+            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.39b2</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T Bv 4/155</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href="../t36"><span data-balloon-pos="up" aria-label="More about: T-36">T-36</span></a></font></td>            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.39b2</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T Bv 4/266</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href="../t36"><span data-balloon-pos="up" aria-label="More about: T-36">T-36</span></a></font></td>            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.43a</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.Bv.4/302</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td>            <td bgcolor=#F4F4F4>&nbsp;</td>
+            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.43a</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.Bv.4/308</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href="../../../crypto/siemens/t52"><span data-balloon-pos="up" aria-label="More about: T-52">T-52</span></a></font></td>            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+            <tr><td colspan=10>
+            <table width=100% border=0 cellspacing=0 cellpadding=0><tr><td>&nbsp;</td></tr><tr><td>
+            <table width=100% border=0 cellspacing=0 cellpadding=0>
+              <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+              <tr>
+              <td align="left" valign="center" width=100%>
+              <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+              New types
+              </font>
+              </td>
+              </tr>
+              <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+              <tr><td height=4></td></tr>
+            </table>
+            </td></tr></table>
+            </td></tr>
+            <tr>
+<td bgcolor="#E0E0E0" align="left" valign="top" width="75" colspan=2 style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Relay</font></td></b><td bgcolor="#E0E0E0" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>&#35; of</font></td></b><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>&#160;</font></td></b><td bgcolor="#E0E0E0" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Plug-in</font></td></b><td bgcolor="#E0E0E0" align="center" valign="top" width="40" colspan=3><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Resistor [&Omega;]</font></td></b><td bgcolor="#E0E0E0" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Example</font></td></b>            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+            <tr>
+<td bgcolor="#E0E0E0" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Model</font></td><td bgcolor="#E0E0E0" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Version</font></td><td bgcolor="#E0E0E0" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>coils</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#E0E0E0" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Type</font></td><td bgcolor="#E0E0E0" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>R</font></td><td bgcolor="#E0E0E0" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>R1</font></td><td bgcolor="#E0E0E0" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>R2</font></td><td bgcolor="#E0E0E0" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Used in ...</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><sup><font color="#FF8800">1</font></sup></font></td>            </tr>
+            <tr>
+            <td bgcolor=#FFFFFF colspan=10><font size=-1>
+            </font></td>
+            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.63a</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T Bv 3302/1</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>7</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9T Bv 39/2417</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1k4</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1k</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>400</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#10004;</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.63a</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T Bv 3302/5</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9T Bv 39/2441</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>11k6</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>10k</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1k6</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#10004;</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.63a</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T Bv 3302/19</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9T Bv 39/2422</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2k83</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2k</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>845</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#10004;</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.63a</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T Bv 3302/21</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9T Bv 39/2423</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>4k8</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>4k</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>800</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#10004;</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.63a</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T Bv 3302/36</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9T Bv 39/2405</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1k</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>600</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>400</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href="../t56"><span data-balloon-pos="up" aria-label="More about: T-56">T-56</span></a></font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#10004;</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.63a</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T Bv 3302/37</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9T Bv 39/2425</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3k45</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3k</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>450</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#10004;</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.63a</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T Bv 3302/63</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9T Bv 39/2406</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1k</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>600</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>400</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#10004;</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.63a</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T Bv 3302/81</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9T Bv 39/2430</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1k</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>600</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>400</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#10004;</font></td>            </tr>
+            <tr>
+            <td bgcolor=#FFFFFF colspan=10><font size=-1>
+            </font></td>
+            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.64a</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T Bv 3402/1</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>7</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9T Bv 39/2404</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9k6</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>8k</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1k6</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href="../t56"><span data-balloon-pos="up" aria-label="More about: T-56">T-56</span></a></font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#10004;</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.64a</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T Bv 3402/7</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9T Bv 39/2408</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>18k5</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>16k</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2k5</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T-109</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#10004;</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.64a</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T Bv 3402/14</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9T Bv 39/2410</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>43k</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>40k</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3k</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#10004;</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.64a</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T Bv 3402/24</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9T Bv 39/2413</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>64k</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>60k</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>4k</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#10004;</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.64a</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T Bv 3402/35</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9T Bv 39/2414</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>59k</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>50k</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9k</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#10004;</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.64a</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T Bv 3418/65</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9T Bv 39/2438</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>25k5</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>25k</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>500</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#10004;</font></td>            </tr>
+            <tr>
+            <td bgcolor=#FFFFFF colspan=10><font size=-1>
+            </font></td>
+            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="left" valign="top" width="75" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T.rls.67a</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="95" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T Bv 3702/5</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="center" valign="top" width="2"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="left" valign="top" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9T Bv 39/2417</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1k4</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1k</font></td><td bgcolor="#F4F4F4" align="center" valign="top" width="40"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>400</font></td>            <td bgcolor=#F4F4F4>&nbsp;</td>
+            <td bgcolor=#FFFFFF>&nbsp;</td>
+            </tr>
+          </table>
+<div style="height: 8px;"></div>        </td>
+        </tr></table>
+        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+The rightmost column shows the plug-ins that we have in our collection.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Old relay types (the 43-series) are usually beyond repair. This is caused by ageing and
+loss of magneti&shy;sa&shy;tion. Although it is possible to re-adjust such relays
+within the specified boundaries, they will usually lose
+their alignment within days or even hours. In such cases it is
+recommended to replace it with a solid state polar relay, such as the
+one <a href="../../../pub/cm/trls43a"><span data-balloon-pos="up" aria-label="More about: described here">described here</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../../pub/cm/trls43a">Solid state replacement for the Trls-43a</a>
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="T-109 with plug-in and relay-under-test">          <img src="img/304020/020/thumbnail.jpg"
+           alt="T-109 with plug-in and relay-under-test"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/020"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Plug-in installed">          <img src="img/304020/014/thumbnail.jpg"
+           alt="Plug-in installed"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/014"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Three different plug-ins">          <img src="img/304020/015/thumbnail.jpg"
+           alt="Three different plug-ins"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/015"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front and back of a plug-in">          <img src="img/304020/016/thumbnail.jpg"
+           alt="Front and back of a plug-in"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/016"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Plug-in resistor">          <img src="img/304020/028/thumbnail.jpg"
+           alt="Plug-in resistor"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/028"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Inside the plug-in">          <img src="img/304020/021/thumbnail.jpg"
+           alt="Inside the plug-in"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304020/021"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Collection of plug-ins">          <img src="img/304244/007/thumbnail.jpg"
+           alt="Collection of plug-ins"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304244/007"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'B'" onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">B</span></div></div><div style="height: 40px;"></div>
+<div id="slide_2" class="slide" onClick="slideClose('slide_2')"><span class="slide_close_left" onClick="slideClose('slide_2')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_2', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 1 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304020/020/full.jpg" alt="T-109 with plug-in and relay-under-test">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 2 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304020/014/full.jpg" alt="Plug-in installed">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 3 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304020/015/full.jpg" alt="Three different plug-ins">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 4 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304020/016/full.jpg" alt="Front and back of a plug-in">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 5 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304020/028/full.jpg" alt="Plug-in resistor">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 6 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304020/021/full.jpg" alt="Inside the plug-in">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 7 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304244/007/full.jpg" alt="Collection of plug-ins">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_2', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_2', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=circuit></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Circuit diagram</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is a simplified circuit diagram of the T-109. At the left is
+the mains power transformer, which has three secondary windings &mdash;
+one for each of the sub-circuits. The first sub-circuit is the
+f &rarr; f/2 converter that provides the 25 Hz switching frequency.
+This is done by dividing the 50 Hz mains frequency by two, by means
+of an <a href="img/304020/023/full.jpg"><span data-balloon-pos="up" aria-label="More about: internal polar relay">internal polar relay</span></a>. The 25 Hz voltage is
+filtered (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Low-Pass Filter">LPF</span>) and then fed &mdash; via plug-in resistor <i>R<sub>p</sub></i> &mdash; to the coil
+of the relay under test, at the far right.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/t109_circuit.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The second sub-circuit is a power supply unit (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span>) that provides
+the voltages (Vy) for the vertical de&shy;flection of the oscilloscope.
+It is passed through the single-pole double-throw (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Single-Pole Double-Throw (switch)">SPDT</span>) switch of
+the relay under test. As the relay's coil is driven at 25 Hz,
+the switch alternates at 25 Hz as well.
+<br />
+<br />
+The third sub-circuit controls the horizontal deflection of the
+oscilloscope (Vx). It determines the phase reference for the test. A full
+description of the sub-circuits is beyond the scope of this web page. It
+can be found in the <a href="files/T109_manual_DE.pdf"><span data-balloon-pos="up" aria-label="More about: manuals">manuals</span></a> <a href="#doc_1">[A]</a><a href="#doc_2">[B]</a>.
+Note that apart from the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Ray Tube (display)">CRT</span> and several diodes, the device is entirely
+built with passive components &mdash; there are no valves (tubes) or transistors.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="files/T109_manual_DE.pdf">German manual</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="files/T109_manual_EN.pdf">English manual</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=video></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Video</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Good relay
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+This short video clip shows what a good polar re&shy;lay should look like
+on the Siemens T-109 relay tester. In this case, the curve is perfect
+and al&shy;most symmetric. This relay is suitable for use in teleprinters and
+other telegraphic equipment.
+<br />
+<br />
+<b>Source</b><br />
+Crypto Museum
+<br />
+<br />
+<b>Date</b><br />
+16 September 2024
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign="top">
+          <iframe width="298" height="200" src="https://www.youtube.com/embed/Y5MY_R9AhME" frameborder="0" allowfullscreen></iframe>
+        </td></tr></table>
+        </td></tr>
+      </table>
+<br />      <div style="height: 18px; border-top: 1px solid #ccc;"></div>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Dodgy relay
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+This short video clip shows what a dodgy polar relay looks like
+on the Siemens T-109 relay tes&shy;ter. In this case, the relay is far
+from symmetric, and one of the contact bounces heavily.
+It might not be good enough for use in teleprinters and teleprinter
+connection devices.
+<br />
+<br />
+<b>Source</b><br />
+Crypto Museum
+<br />
+<br />
+<b>Date</b><br />
+16 September 2024
+<br />
+<br />
+        </font></td>
+        <td>&nbsp;&nbsp;</td>
+        <td align=center valign=top width=100>
+        <table border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign="top">
+        <iframe width="298" height="200" src="https://www.youtube.com/embed/AH8Ap_ei1mo" frameborder="0" allowfullscreen></iframe>
+      </td></tr></table>
+      </td></tr>
+    </table>
+<br />    <div style="height: 18px; border-top: 1px solid #ccc;"></div>
+    <table width=100% border=0 cellpadding=0 cellspacing=0>
+      <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      <tr>
+      <td align="left" valign="center">
+      <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+      Bad relay
+      </font>
+      </td>
+      </tr>
+      <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+      <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+    </table>
+    <table width=100% border=0 cellspacing=0 cellpadding=0>
+      <tr>
+      <td valign=top align=left>
+      <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+This short video clip shows the behaviour of an old Siemens T.rls.43a relay,
+taken from a <a href="../../../crypto/siemens/t52"><span data-balloon-pos="up" aria-label="More about: T-52 (Geheim&shy;schreiber)">T-52 (Geheim&shy;schreiber)</span></a>.
+In this case, the relay is so bad that is is unusable. T.rls.43a relays are known
+to behave badly after so many years. They are notorious for problems with
+teleprinters like the <a href="../t36"><span data-balloon-pos="up" aria-label="More about: T-36">T-36</span></a> and cipher machines like the
+<a href="../../../crypto/siemens/t52"><span data-balloon-pos="up" aria-label="More about: T-52">T-52</span></a>.
+<br />
+<br />
+<b>Source</b><br />
+Crypto Museum
+<br />
+<br />
+<b>Date</b><br />
+16 September 2024
+<br />
+<br />
+      </font></td>
+      <td>&nbsp;&nbsp;</td>
+      <td align=center valign=top width=100>
+      <table border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign="top">
+      <iframe width="298" height="200" src="https://www.youtube.com/embed/y_dKYaQXewA" frameborder="0" allowfullscreen></iframe>
+    </td></tr></table>
+    </td></tr>
+  </table>
+<br />  <div style="height: 18px; border-top: 1px solid #ccc;"></div>
+  <table width=100% border=0 cellpadding=0 cellspacing=0>
+    <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+    <tr>
+    <td align="left" valign="center">
+    <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+    Teardown
+    </font>
+    </td>
+    </tr>
+    <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+    <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+  </table>
+  <table width=100% border=0 cellspacing=0 cellpadding=0>
+    <tr>
+    <td valign=top align=left>
+    <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In this YouTube clip, Thomes Scherrer (OZ2CPU) does a teardown of the
+T-109 in his collection.  This variant of type 5634/10-V, has English
+and German labelling, but is suitable for the newer relay types only.
+The 8-pin socket for the older relay types is omitted.
+<br />
+<br />
+<b>Source</b><br />
+YouTube, Thomas Scherrer (OZ2CPU)
+<br />
+<br />
+<b>Date</b><br />
+25 September 2023
+<br />
+<br />
+    </font></td>
+    <td>&nbsp;&nbsp;</td>
+    <td align=center valign=top width=100>
+    <table border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign="top">
+    <iframe width="298" height="200" src="https://www.youtube.com/embed/ONzcN1XBlkc" frameborder="0" allowfullscreen></iframe>
+  </td></tr></table>
+  </td></tr>
+</table>
+<br /><table width=100% border=0 cellspacing=0 cellpadding=0>
+  <tr>
+  </td></tr>
+</table>
+<br /><div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+  <tr>
+  <td valign=top align=left>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+  </font>
+  </td></tr>
+</table>
+<br /><a name=int></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  <b>Interior</b>
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+  <tr>
+  <td valign=top align=left>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The interior of the T-109 can be accessed by removing the four screws
+from the corners of the control panel, after which the case shell can be
+removed. All parts are fitted to a sub-frame that is mounted to the control
+panel. The images below show the interior from all directions.
+  </font>
+  </td></tr>
+</table>
+<br /><div style="position: relative;"><div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+  <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+  <tr>
+  <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior seen from the bottom left">  <img src="img/304020/022/thumbnail.jpg"
+   alt="Interior seen from the bottom left"
+   border="0" width=74 height=50
+   onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"
+   style="
+   cursor: pointer;"
+   max-width: 618px;
+  "
+   title="image # 304020/022"
+   /></div>
+  </td>
+  <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+  <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior seen from the rear top">  <img src="img/304020/024/thumbnail.jpg"
+   alt="Interior seen from the rear top"
+   border="0" width=74 height=50
+   onClick="slideOpen('slide_3'); slideCurrent('slide_3', 2);"
+   style="
+   cursor: pointer;"
+   max-width: 618px;
+  "
+   title="image # 304020/024"
+   /></div>
+  </td>
+  <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+  <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior seen from the bottom right">  <img src="img/304020/026/thumbnail.jpg"
+   alt="Interior seen from the bottom right"
+   border="0" width=74 height=50
+   onClick="slideOpen('slide_3'); slideCurrent('slide_3', 3);"
+   style="
+   cursor: pointer;"
+   max-width: 618px;
+  "
+   title="image # 304020/026"
+   /></div>
+  </td>
+  <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+  <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior - side panel">  <img src="img/304020/025/thumbnail.jpg"
+   alt="Interior - side panel"
+   border="0" width=74 height=50
+   onClick="slideOpen('slide_3'); slideCurrent('slide_3', 4);"
+   style="
+   cursor: pointer;"
+   max-width: 618px;
+  "
+   title="image # 304020/025"
+   /></div>
+  </td>
+  <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+  <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Internal T.rls.64a relay">  <img src="img/304020/023/thumbnail.jpg"
+   alt="Internal T.rls.64a relay"
+   border="0" width=74 height=50
+   onClick="slideOpen('slide_3'); slideCurrent('slide_3', 5);"
+   style="
+   cursor: pointer;"
+   max-width: 618px;
+  "
+   title="image # 304020/023"
+   /></div>
+  </td>
+  <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+  <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Plug-in socket (seen from the inside)">  <img src="img/304020/027/thumbnail.jpg"
+   alt="Plug-in socket (seen from the inside)"
+   border="0" width=74 height=50
+   onClick="slideOpen('slide_3'); slideCurrent('slide_3', 6);"
+   style="
+   cursor: pointer;"
+   max-width: 618px;
+  "
+   title="image # 304020/027"
+   /></div>
+  </td>
+  </tr>
+  <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+</table>
+<div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'C'" onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">C</span></div></div><div style="height: 40px;"></div>
+<div id="slide_3" class="slide" onClick="slideClose('slide_3')"><span class="slide_close_left" onClick="slideClose('slide_3')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_3', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 1 / 6</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304020/022/full.jpg" alt="Interior seen from the bottom left">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 2 / 6</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304020/024/full.jpg" alt="Interior seen from the rear top">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 3 / 6</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304020/026/full.jpg" alt="Interior seen from the bottom right">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 4 / 6</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304020/025/full.jpg" alt="Interior - side panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 5 / 6</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304020/023/full.jpg" alt="Internal T.rls.64a relay">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 6 / 6</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304020/027/full.jpg" alt="Plug-in socket (seen from the inside)">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_3', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_3', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+<a name=conn></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  <b>Connections</b>
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<a name=conn_16></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  16-pin relays
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+  <tr>
+  <td valign=top align=left>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The leftmost socket at the front panel is intended for the newer type
+of Siemens <a href="../../polar.htm"><span data-balloon-pos="up" aria-label="More about: polar relays">polar relays</span></a>.
+At the left are two holes for the guide pins
+of the relay. The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Single-Pole Double-Throw (switch)">SPDT</span> switch is connected to pins T, A and Z.
+Regardless the configuration of the coils, only the two primary coils
+are used. These are connected to pins 1,4 and 5,8 respectively.
+Below is the pinout when looking into the socket.
+Note that the socket has bridges between pins 2 and 3, and between
+pins 4 and 5.
+  </font>
+  </td></tr>
+</table>
+<br /><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+<table width=100% cellspacing=0 cellpadding=0>
+  <tr>
+  <td width=100%>
+  <table
+   class="table"
+   width=100% border=0 cellspacing=0 cellpadding=1 bgcolor=#FFFFFF>
+    <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="90" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Coil (with 4)</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>w1a</font></td>    </tr>
+    <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="90" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Bridge to 3</font></td>    <td bgcolor=#FFFFFF>&nbsp;</td>
+    </tr>
+    <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="90" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Bridge to 2</font></td>    <td bgcolor=#FFFFFF>&nbsp;</td>
+    </tr>
+    <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>4</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="90" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Coil (with 1)</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>w1b</font></td>    </tr>
+    <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>5</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="90" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Coil (with 8)</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>w2a</font></td>    </tr>
+    <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>8</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="90" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Coil (with 5)</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>w2b</font></td>    </tr>
+    <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Z</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="90" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Zeichen</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>MARK (M)</font></td>    </tr>
+    <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>A</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="90" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Allgemein</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Common (C)</font></td>    </tr>
+    <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>T</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="90" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Trennung</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>SPACE (S)</font></td>    </tr>
+  </table>
+<div style="height: 20px;"></div></td>
+<td align="left" valign="top">
+<div  data-balloon-pos="up" aria-label="16-pin socket for newer relay types. Pinout when looking into the socket." data-balloon-length="large"><img style=" width: ;" src="svg/t109_conn_16.svg"
+>
+</td>
+</tr></table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+  <tr>
+  <td valign=top align=left>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+  </font>
+  </td></tr>
+</table>
+<br /><a name=conn_8></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  8-pin relays
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+  <tr>
+  <td valign=top align=left>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The rightmost socket (when present) is intended for the older types of
+Siemens polar relays, manufacturered from 1930 onwards.
+Below is the pinout when looking into the socket.
+Note that the socket has a bridge between pins 1 and 2.
+This means that the two coils are series connected.
+  </font>
+  </td></tr>
+</table>
+<br /><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+<table width=100% cellspacing=0 cellpadding=0>
+  <tr>
+  <td width=100%>
+  <table
+   class="table"
+   width=100% border=0 cellspacing=0 cellpadding=1 bgcolor=#FFFFFF>
+    <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="90" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Bridge to 2</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>w1b</font></td>    </tr>
+    <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="90" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Bridge to 1</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>w2a</font></td>    </tr>
+    <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="90" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Unused</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>n.c.</font></td>    </tr>
+    <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>4</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="90" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Allgemein (A)</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Common (C)</font></td>    </tr>
+    <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>5</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="90" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Coil (with 1)</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>w1a</font></td>    </tr>
+    <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>6</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="90" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Coil (with 2)</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>w2b</font></td>    </tr>
+    <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>7</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="90" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Zeichen (Z)</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>MARK (M)</font></td>    </tr>
+    <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="20" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="20"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>8</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="90" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Trennung (T)</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>SPACE (S)</font></td>    </tr>
+  </table>
+<div style="height: 20px;"></div></td>
+<td align="left" valign="top">
+<div  data-balloon-pos="up" aria-label="8-pin socket for older relay types. Pinout when looking into the socket." data-balloon-length="large"><img style=" width: ;" src="svg/t109_conn_8.svg"
+>
+</td>
+</tr></table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+  <tr>
+  <td valign=top align=left>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+<br />
+  </font>
+  </td></tr>
+</table>
+<br /><a name=spec></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  <b>Specifications</b>
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+  <tr>
+  <td valign="">
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+  <ul>
+    <li><div style="display:inline-block; width:100px;">Device</div><a href="../../index.htm#test">Relay tester</a>    <li><div style="display:inline-block; width:100px;">Purpose</div>Testing of Siemens polar relays (old and new type)    <li><div style="display:inline-block; width:100px;">Model</div>9.T.mse.109a (T-109)    <li><div style="display:inline-block; width:100px;">Manufacturer</div><a href="../index.htm">Siemens & Halske</a>    <li><div style="display:inline-block; width:100px;">Country</div>Germany    <li><div style="display:inline-block; width:100px;">Year</div>1961    <li><div style="display:inline-block; width:100px;">Designator</div>Fs Sk 5634/10-III    <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="NATO Stock Number (National Stock Number)">NSN</span></div>6625-12-121-5754    <li><div style="display:inline-block; width:100px;">Order no.</div>N24991 9260 5449    <li><div style="display:inline-block; width:100px;">Users</div>German Post Office, German Army, US Army    <li><div style="display:inline-block; width:100px;">CRT</div>Siemens DG7-6    <li><div style="display:inline-block; width:100px;">Power</div>110/125/150/220/240V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span>    <li><div style="display:inline-block; width:100px;">Colour</div><a href="img/304020/001/full.jpg">Grey</a>, <a href="img/304241/003/full.jpg">black</a>    <li><div style="display:inline-block; width:100px;">Dimensions</div>180 &#215; 265 &#215; 190 (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Height-Width-Depth">HWD</span>)    <li><div style="display:inline-block; width:100px;">Weight</div>7.3 kg  </ul>
+</font></td></tr></table><a name=spec_ver></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  Versions
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+  <tr>
+  <td valign="">
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+  <ul>
+    <li><div style="display:inline-block; width:100px;">5634/10-III</div>German labelling, both relay types    <li><div style="display:inline-block; width:100px;">5634/10-IV</div>German labelling, both relay types    <li><div style="display:inline-block; width:100px;">5634/10-V</div>English and German labelling, new model relays only  </ul>
+</font></td></tr></table><table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  Relays
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+  <tr>
+  <td valign="">
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+  <ul>
+    <li><div style="display:inline-block; width:100px;">T.rls.43</div>Older type, known as <i>Flachrelais</i> (flattened relay)    <li><div style="display:inline-block; width:100px;">T.rls.63/64</div>Newer type, many versions and variants  </ul>
+</font></td></tr></table><table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  Nomenclature
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+  <tr>
+  <td valign="">
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+  <ul>
+    <li>9.T.mse.109a    <li>T-109    <li>Kathodenstrahl-Relaispr&#252;fer 109    <li>5634/10  </ul>
+</font></td></tr></table><div style="height: 14px;"></div><a name=lit></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  <b>Literature</b>
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+  <tr>
+  <td>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+  <ol type=a>
+    <a name="lit_1"></a>
+<li><font color=#F52E00>Dr.-Ing. Fritz Schiweck, <i>Fernschreibtechnik</i></font><br />
+Lehrb&#252;cher der Feinwerktechnik, Band 9.<br />
+CFW Leipzig (Germany), 1942.
+  </ol type=a>
+</font></td></tr></table>
+<div style="height: 14px;"></div><a name=doc></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  <b>Documentation</b>
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+  <tr>
+  <td>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+  <ol type=A>
+    <a name="doc_1"></a>
+    <li><a href="files/CM304242_19671000_T109_manual_DE.pdf">Kathodenstrahlrelaispr&#252;fer - 9 T mse 109a</a><br />
+Fs Bs, Ba 5634/10. Beschreibung, Betriebsanleiting (German).<br />
+<a href="../index.htm">Siemens AG</a>. M&#252;nchen (Germany), October 1967.
+CM#304242.
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="files/CM304242_19671000_T109_circuit_only.pdf">Circuit diagrams only</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="files/T109_manual_DE.pdf">Version of February 1967</a> <sup><font color="#FF8800">1</font></sup>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="files/T109_manual_DE_196507.pdf">Version of July 1965</a> <sup><font color="#FF8800">2</font></sup>
+    <p />
+    <a name="doc_2"></a>
+    <li><a href="files/T109_manual_EN.pdf">Cathode Ray Relay Tester - 9 T mse 109a</a><br />
+Fs Bs and Ba 5634/10 engl. Operating instructions and circuit diagram (English).<br />
+<a href="../index.htm">Siemens & Halske</a>. M&#252;nchen (Germany), January 1961. <sup><font color="#FF8800">1</font></sup>
+    <p />
+    <a name="doc_3"></a>
+    <li><a href="files/t109_cal.pdf">Calibration procedure for the Siemens 9Tmse109</a><br />
+TB 11-6625-2932-35 (page 1 and 2 only).<br />
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span> Army, 4 August 1980.
+    <p />
+    <a name="doc_4"></a>
+<li><font color=#F52E00>T-Relais 63 und 64 - Pr&#252;f- und Einstellvorschriften</font><br />
+Test and calibration procedures (German).<br />
+DK 621.318.562.08. Deutsche Bundespost, May 1972.
+    <p />
+    <a name="doc_5"></a>
+    <li><a href="files/T_relais_Siemens.pdf">Pr&#252;fvorschriften fur Telegraphenrelais (incomplete)</a><br />
+Siemens & Halske, undated.
+    <p />
+    <a name="doc_6"></a>
+    <li><a href="files/t63a_reg_SE.pdf">Relays T rls 63a, 64a and 67c - Supervisory regulation (Swedish)</a><br />
+F&#246;rsvarets Materielverk, Teknisk Order MT 857-176.
+26 April 1976.
+    <p />
+    <a name="doc_7"></a>
+    <li><a href="../../files/PolRel_63_69.pdf">Die gepolten Relais T rls 63...69</a><br />
+Reprinted from <i>Postleitfaden Band 6 - Fernmeldetechnischen Atlas</i>.<br />
+Rel 3101. Siemens & Halske. Undated (but pre-1966).
+  </ol type=A>
+</font></td></tr></table>
+<div style="height: 14px;"></div><table width="50" cellspacing="0" cellpadding="0"><tr>
+<td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+</tr></table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+  <tr><td>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+  <ol>
+  <li>
+Document obtained from <a href="https://oscilloscopemuseum.org" target="_blank"><span data-balloon-pos="up" aria-label="oscilloscopemuseum.org (off-site)">Oscilloscope Museum</span></a>,
+  Berkshires, (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Massachusetts">MA</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>).
+  </li>
+  <li>
+Document kindly provided by Heinz Blumberg <a href="#ref_1">[1]</a>.
+  </ol>
+  </small></font></td></tr>
+</table>
+<div style="height: 20px;"></div><a name=ref></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  <b>References</b>
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+  <tr>
+  <td>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+  <ol>
+    <a name="ref_1"></a>
+<li><font color=#F52E00>Heinz Blumberg, T-109 relay tester - THANKS !</font><br />
+Museum der Sammlungen. Germany, April 2023.
+  </ol>
+</font></td></tr></table>
+<div style="height: 14px;"></div><table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  <b>Further information</b>
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+  <tr>
+  <td>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+  <ul>
+    <li><a href="../../polar.htm">Polar relays</a><br />
+    <li><a href="../../../pub/cm/trls43a">Solid state replacement for Trls-43a</a><br />
+    <li><a href="../../index.htm#test">Other test equipment</a><br />
+    <li><a href="../index.htm">Other Siemens equipment</a><br />
+    <li><a href="../../index.htm">Main telex page</a><br />
+  </ul>
+</font></td></tr></table>
+<div style="height: 14px;"></div></td></tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td colspan=3 width=100%>
+<div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+</table>
+</td></tr>
+<tr>
+<td align=center width=100%>
+<font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+ 
+© Crypto Museum. Created: Thursday 12 September 2024. Last changed: Wednesday, 05 November 2025 - 12:14 CET.
+<br />
+</font
+</td>
+</tr>
+<tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+<tr><td align=center>
+<a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+</td></tr>
+</table>
+</td></tr>
+</table>
+</font>
+</td>
+</tr></table>
+</body>
+</html>

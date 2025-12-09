@@ -1,0 +1,1406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>Myosotis</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of cryptographic devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/glossary.htm';" >Glossary</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="The ENIGMA cipher machine" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/enigma/index.htm';" >Enigma</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Machines from Boris Hagelin and/or Crypto AG" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/hagelin/index.htm';" >Hagelin</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Soviet rotor-based cipher machine M-125, codenamed Fialka" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/fialka/index.htm';" >Fialka</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Rotor-based cipher machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/rotor.htm';" >Rotor</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Pin-and-lug cipher machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/pinwheel.htm';" >Pin-wheel</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tapeless Rotorless On-Line cipher machines" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../../crypto/trol/index.htm';" >TROL</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Secure speech devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/voice.htm';" >Voice</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Telegraphy and computer data encryption" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../../crypto/data.htm';" >Data</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Manual cipher systems" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/manual.htm';" >Hand</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="The unbreakable One-Time Pad" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/otp/index.htm';" >OTP</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Electronic Message Units" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/emu.htm';" >EMU</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Hardware Security Modules" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/hsm.htm';" >HSM</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines based on One-Time Tape encryption" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/ott.htm';" >Mixers</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Secure telephones and privacy sets" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/phone.htm';" >Phones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Bulk encryptors and IP-based networks" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/ip.htm';" >Bulk</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Key transfer devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/fill.htm';" >FILL</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Codebooks, procedures and key distribution material" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/codebook/index.htm';" >Codebooks</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Public and secret algorithms used in cryptography" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/algo/index.htm';" >Algorithms</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cryptographic Processors" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/chips.htm';" >Chips</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cryptanalytic Machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../cam/index.htm';" >Cryptanalysis</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../crypto/toys.htm';" >Toys</div>
+          <div class="but sub" onClick="location.href='../../../crypto/ww2.htm';" >World War II</div>
+          <div class="spacer"></div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Countries
+          </div>
+          <div class="hidden">
+            <div class="but sub" onClick="location.href='../../../crypto/cs.htm';" >Czechoslovakia</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former East-Germany" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/ddr/index.htm';" >DDR</div>
+</div>
+            <div class="but sel sub" onClick="location.href='../../../crypto/france/index.htm';" >France</div>
+            <div class="but sub" onClick="location.href='../../../crypto/germany/index.htm';" >Germany</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="The Netherlands, Holland" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/nl/index.htm';" >Netherlands</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/ru/index.htm';" >Russia</div>
+            <div class="but sub" onClick="location.href='../../../crypto/swiss/index.htm';" >Switzerland</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United Kingdom" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/uk/index.htm';" >UK</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United States of America" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/usa/index.htm';" >USA</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Soviet Union" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/ussr/index.htm';" >USSR</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former Yugoslav republic" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/yugo/index.htm';" >Yugoslavia</div>
+</div>
+          </div>
+          </div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Manufacturers
+          </div>
+          <div class="hidden">
+            <div class="but sub" onClick="location.href='../../../crypto/ant/index.htm';" >ANT</div>
+            <div class="but sub" onClick="location.href='../../../crypto/aristo/index.htm';" >Aristo</div>
+            <div class="but sub" onClick="location.href='../../../crypto/ascom/index.htm';" >Ascom</div>
+            <div class="but sub" onClick="location.href='../../../crypto/att/index.htm';" >AT&amp;T</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Brown, Boveri and Company" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/bbc/index.htm';" >BBC</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/bosch/index.htm';" >Bosch</div>
+            <div class="but sub" onClick="location.href='../../../crypto/compumatica/index.htm';" >Compumatica</div>
+            <div class="but sub" onClick="location.href='../../../crypto/hagelin/index.htm';" >Crypto AG</div>
+            <div class="but sub" onClick="location.href='../../../crypto/datotek/index.htm';" >Datotek</div>
+            <div class="but sub" onClick="location.href='../../../crypto/foxit/fffe/index.htm';" >Fox-IT</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="General Dynamics" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../manuf/gd/index.htm';" >GD</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../manuf/gemalto/index.htm';" >Gemalto</div>
+            <div class="but sub" onClick="location.href='../../../crypto/gretag/index.htm';" >Gretag</div>
+            <div class="but sub" onClick="location.href='../../../crypto/harris/index.htm';" >Harris</div>
+            <div class="but sub" onClick="location.href='../../../crypto/hell/index.htm';" >HELL</div>
+            <div class="but sub" onClick="location.href='../../../crypto/itt/index.htm';" >ITT</div>
+            <div class="but sub" onClick="location.href='../../../crypto/lorenz/index.htm';" >Lorenz</div>
+            <div class="but sub" onClick="location.href='../../../crypto/lugagne/index.htm';" >Lugagne</div>
+            <div class="but sub" onClick="location.href='../../../crypto/mel/index.htm';" >MEL</div>
+            <div class="but sub" onClick="location.href='../../../crypto/mils/index.htm';" >Mils</div>
+            <div class="but sub" onClick="location.href='../../../crypto/motorola/index.htm';" >Motorola</div>
+            <div class="but sub" onClick="location.href='../../../manuf/mykotronx/index.htm';" >Mykotronx</div>
+            <div class="but sub" onClick="location.href='../../../crypto/nokia/index.htm';" >Nokia</div>
+            <div class="but sub" onClick="location.href='../../../crypto/omi/index.htm';" >OMI</div>
+            <div class="but sub" onClick="location.href='../../../crypto/omnisec/index.htm';" >Omnisec</div>
+            <div class="but sub" onClick="location.href='../../../crypto/philips/index.htm';" >Philips</div>
+            <div class="but sub" onClick="location.href='../../../crypto/ptt/index.htm';" >PTT</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Rohde & Schwarz" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/rs/index.htm';" >R&S</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/racal/index.htm';" >Racal</div>
+            <div class="but sub" onClick="location.href='../../../crypto/randata/index.htm';" >RanData</div>
+            <div class="but sub" onClick="location.href='../../../crypto/raytheon/index.htm';" >Raytheon</div>
+            <div class="but sub" onClick="location.href='../../../crypto/rca/index.htm';" >RCA</div>
+            <div class="but sub" onClick="location.href='../../../manuf/safenet/index.htm';" >Safenet</div>
+            <div class="but sub" onClick="location.href='../../../manuf/secunet/index.htm';" >Secunet</div>
+            <div class="but sub" onClick="location.href='../../../crypto/siemens/index.htm';" >Siemens</div>
+            <div class="but sub" onClick="location.href='../../../crypto/stk/index.htm';" >STK</div>
+            <div class="but sub" onClick="location.href='../../../crypto/tadiran/index.htm';" >Tadiran</div>
+            <div class="but sub" onClick="location.href='../../../crypto/tait/index.htm';" >Tait</div>
+            <div class="but sub" onClick="location.href='../../../manuf/tcc/index.htm';" >TCC</div>
+            <div class="but sub" onClick="location.href='../../../crypto/telefunken/index.htm';" >Telefunken</div>
+            <div class="but sub" onClick="location.href='../../../crypto/telsy/index.htm';" >Telsy</div>
+            <div class="but sub" onClick="location.href='../../../crypto/teltron/index.htm';" >Teltron</div>
+            <div class="but sub" onClick="location.href='../../../crypto/thales/index.htm';" >Thales</div>
+            <div class="but sub" onClick="location.href='../../../manuf/tno/index.htm';" >TNO</div>
+            <div class="but sub" onClick="location.href='../../../crypto/transvertex/index.htm';" >Transvertex</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tele Security Timmann" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/tst/index.htm';" >TST</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/tutus/index.htm';" >Tutus Data AB</div>
+            <div class="but sub" onClick="location.href='../../../manuf/ultra/index.htm';" >Ultra Electronics</div>
+            <div class="but sub" onClick="location.href='../../../manuf/utimaco/index.htm';" >Utimaco</div>
+            <div class="but sub" onClick="location.href='../../../manuf/zellweger/index.htm';" >Zellweger</div>
+            <div class="but sub" onClick="location.href='../../../manuf/index.htm';" >OTHER</div>
+          </div>
+          </div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Myosotis</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Tapeless rotorless online cipher machine (TROL)</b>
+<font color=#F52E00>- this page is a stub</font>
+<br />
+<br />
+<b>Myosotis</b> is a <a href="../../trol"><span data-balloon-pos="up" aria-label="More about: tapeless rotorless online cipher ...">tapeless rotorless online cipher machine</span></a>
+for telegraphy (<span class="short" aria-label="Tapeless Rotorless On-Line (cipher machine)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span>), developed between 1961 and 1963 by <span class="short" aria-label="Thomson-CSF (now: Thales)" data-balloon-pos="up"><a href="../../../manuf/thales" class="short" >CSF</a></span>
+(now: <a href="../../../manuf/thales"><span data-balloon-pos="up" aria-label="More about: Thales">Thales</span></a>) in <a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: France">France</span></a>
+for use by the French armed forces and by <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span>.
+Although the <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span> evaluation was lost to
+the <a href="../../uk/bid610"><span data-balloon-pos="up" aria-label="More about: British ALVIS">British ALVIS</span></a>, it was taken into production in 1966.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The device was developed as a move away from earlier
+<a href="../../index.htm"><span data-balloon-pos="up" aria-label="More about: cipher machines">cipher machines</span></a> that were either based on
+<a href="../../rotor.htm"><span data-balloon-pos="up" aria-label="More about: rotors">rotors</span></a>, such as the <a href="../../enigma"><span data-balloon-pos="up" aria-label="More about: Enigma">Enigma</span></a> and
+<a href="../../hagelin"><span data-balloon-pos="up" aria-label="More about: Hagelin">Hagelin</span></a> ma&#173;chines, or on
+<a href="../../ott.htm"><span data-balloon-pos="up" aria-label="More about: one-time tape">one-time tape</span></a> (OTT), such as the
+<a href="../../philips/ec2"><span data-balloon-pos="up" aria-label="More about: Philips Ecolex II">Philips Ecolex II</span></a> and
+<a href="../../hagelin/ules64"><span data-balloon-pos="up" aria-label="More about: Hagelin ULES 64">Hagelin ULES 64</span></a> mixers.
+<br />
+<br />
+The image on the right shows a complete Myosotis installation
+as it was presented in 2022 by Jean-Lous Desvignes in
+<i>Bulletin de l'<span class="short tooltip-red" data-balloon-pos="up" aria-label="Association des R&#233;servistes due Chiffre et de la S&#233;curit&#233; de l'Information" data-balloon-length="large">ARCSI</span></i> <a href="#ref_3">[3]</a>.
+The device consists of two 19" rackmountable enclosures:
+a 3U unit that contains the interface to the line and the teleprinter,
+and a 7U unit that contains the actual cipher unit.
+At the bottom left of the cipher unit are two pluggable blocks:
+a 10 unit one, and one that is 11 units wide.
+<br />
+<br />
+The cipher unit is covered by a hinged lid at the front.
+Once the key is setup, this lid should be closed.
+For further information about the device, please refer to the
+article <i>Histoire de la machine Myosotis</i>,
+that was published in 2004 by some of the original developers:
+Xavier Ameil, Jean-Pierre Vasseur and Gilles Ruggiu
+(<span class="short tooltip-red" data-balloon-pos="up" aria-label="Association des R&#233;servistes due Chiffre et de la S&#233;curit&#233; de l'Information" data-balloon-length="large">ARCSI</span> members) <a href="#ref_1">[1]</a>.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/myosotis_large.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Complete MYOSOTIS cipher system. Photograph provided by Jean-Louis Desvignes (ARCSI) [3]." data-balloon-length="large">
+<a href="img/myosotis_large.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Complete MYOSOTIS cipher system. Photograph provided by Jean-Louis Desvignes (ARCSI) [3]." data-balloon-length="large">
+            <img src="img/myosotis_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Complete MYOSOTIS cipher system. Photograph provided by Jean-Louis Desvignes (ARCSI) [3]."
+             border=0
+             width=298 height=358
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The exact operation of the device is still unknown, but according to
+a description by the former developers, it is based on pseudo-randomly
+generated alphabets, although it is not clear what is meant by this <a href="#ref_1">[1]</a>.
+In any case, it is not based on linear feedback shift registers (LSFR).
+<br />
+<br />
+Approx. 1500 units were made between 1966 and 1974
+for the French Armed Forces and the Foreign Office.
+Despite foreign interest, MYOSOTIS was never sold to other countries.
+This was caused by lack of export licence policy, and also lack of funding for
+developing a non-national encryption device. Instead it was dediced to
+classify the machine as well as its name 'MYSOTIS'.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=hist></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>History</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In 1958, <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span> announced that it was looking for a
+<a href="../../trol"><span data-balloon-pos="up" aria-label="More about: tapeless rotorless on-line cipher ...">tapeless rotorless on-line cipher machine</span></a> (<span class="short" aria-label="Tapeless Rotorless On-Line (cipher machine)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span>)
+to replace the ageing <a href="../../rotor.htm"><span data-balloon-pos="up" aria-label="More about: rotor">rotor</span></a> and
+<a href="../../ott.htm"><span data-balloon-pos="up" aria-label="More about: one-time tape">one-time tape</span></a> machines.
+<span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span> countries were invited to submit designs for a <span class="short" aria-label="Tapeless Rotorless On-Line (cipher machine)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span>-competition
+that would start in July 1962, with a deadline in February 1963.
+Competing countries were <span class="short" aria-label="United States of America" data-balloon-pos="up"><a href="../../usa" class="short" >USA</a></span> (<a href="../../usa/kw7"><span data-balloon-pos="up" aria-label="More about: KW-7">KW-7</span></a>),
+<span class="short" aria-label="United Kingdom (Great Britain)" data-balloon-pos="up"><a href="../../uk" class="short" >UK</a></span> (<a href="../../uk/bid610"><span data-balloon-pos="up" aria-label="More about: ALVIS">ALVIS</span></a>), <a href="../../germany"><span data-balloon-pos="up" aria-label="More about: Germany">Germany</span></a>
+(<a href="../../elcro"><span data-balloon-pos="up" aria-label="More about: Elcro&#173;tel">Elcro&#173;tel</span></a>) and <a href="../../nl"><span data-balloon-pos="up" aria-label="More about: the Netherlands">the Netherlands</span></a>
+(<a href="../../philips/trol"><span data-balloon-pos="up" aria-label="More about: Ecolex V">Ecolex V</span></a>).
+France was relatively late to enter the race just before the deadline,
+with MYOSOTIS and another French machine: ULYSSE II.
+The latter was backward compatible with <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span>'s <a href="../../usa/kl7"><span data-balloon-pos="up" aria-label="More about: KL-7">KL-7</span></a>.
+<br />
+<br />
+As France was relatively late to submit a <span class="short" aria-label="Tapeless Rotorless On-Line (cipher machine)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span>-design,
+it had to be developed in a rush <a href="#ref_1">[1]</a>. Despite good intentions,
+the competition was lost to the
+<a href="../../uk/bid610"><span data-balloon-pos="up" aria-label="More about: British ALVIS (BID/610)">British ALVIS (BID/610)</span></a> (and at a later stage also to
+the <a href="../../usa/kw7"><span data-balloon-pos="up" aria-label="More about: American KW-7">American KW-7</span></a>), in what was thought to be a political
+decision.
+Nevertheless, it won from its national competitors VIOLET and ULYSSE II,
+and was choosen as the common ma&#173;chi&#173;ne for the French Armed Forces
+(Navy, Air Force and Army) and the French Ministry of Foreign Affairs.
+MYOSOTIS was taken into production in 1966, and by 1974, 1500 units
+had been made.
+<br />
+<br />
+Although Silicon transistors had become available by the time MYOSOTIS
+was taken into mass production (1966), it was too late to change the design,
+as a result of which MYOSOTIS was build with Germanium transistors.
+Approx. 20 years later, at the request of the Ministry of Foreign Affairs,
+the machine was redesigned with silicon-based large-scale integrated
+circuits (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Very large Scale Integration">VLSI</span>).
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../trol">More about the TROL competition</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=spec></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Specifications</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Device</div>Teleprinter encryption/decription device            <li><div style="display:inline-block; width:100px;">Purpose</div>Secure on-line/off-line teleprinter traffic            <li><div style="display:inline-block; width:100px;">Category</div><a href="../../trol">Tapeless Rotorless On-Line (TROL)</a>            <li><div style="display:inline-block; width:100px;">Name</div>Myosotis <sup><font color="#FF8800">1</font></sup>            <li><div style="display:inline-block; width:100px;">Manufacturer</div><span class="short" aria-label="Thomson-CSF (now: Thales)" data-balloon-pos="up"><a href="../../../manuf/thales" class="short" >CSF</a></span> <sup><font color="#FF8800">2</font></sup> (with SEFT)            <li><div style="display:inline-block; width:100px;">Production</div><span class="short" aria-label="Thomson-CSF (now: Thales)" data-balloon-pos="up"><a href="../../../manuf/thales" class="short" >CSF</a></span> (parts by <span class="short" aria-label="Soci&#233;t&#233; G&#233;n&#233;rales d'&#201;lectricit&#233; et de la M&#233;canique" data-balloon-pos="up"><a href="../../../manuf/sagem" class="short" >SAGEM</a></span>)            <li><div style="display:inline-block; width:100px;">Development</div>1961-1963            <li><div style="display:inline-block; width:100px;">Production</div>1966-1974            <li><div style="display:inline-block; width:100px;">Country</div><a href="../index.htm">France</a>            <li><div style="display:inline-block; width:100px;">Users</div>French Army, Navy, Air Force, Foreign Ministry            <li><div style="display:inline-block; width:100px;">Parts</div>2 (Control block, Cipher block)            <li><div style="display:inline-block; width:100px;">Algorithm</div>Proprietary, non-linear            <li><div style="display:inline-block; width:100px;">Period</div>Minimum: ~ 3.2 &#215; 10<sup>9</sup>, average: ~ 3 &#215; 10<sup>12</sup>            <li><div style="display:inline-block; width:100px;">Clock</div>1 MHz            <li><div style="display:inline-block; width:100px;">Transistors</div>1000            <li><div style="display:inline-block; width:100px;">Diodes</div>4000            <li><div style="display:inline-block; width:100px;">Dimensions</div>see below            <li><div style="display:inline-block; width:100px;">Weight</div>see below            <li><div style="display:inline-block; width:100px;">Quantity</div>1500            <li><div style="display:inline-block; width:100px;">Price</div>FFR 250,000 (1970) <sup><font color="#FF8800">3</font></sup>          </ul>
+</font></td></tr></table>        <a name=spec_ctrl></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Control unit
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Dimensions</div>390 &#215; 200 &#215; 420 mm (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Height-Width-Depth">HWD</span>) <sup><font color="#FF8800">4</font></sup>            <li><div style="display:inline-block; width:100px;">Weight</div>19 kg          </ul>
+</font></td></tr></table>        <a name=spec_cipher></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Cipher unit
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Dimensions</div>340 &#215; 455 &#215; 370 mm (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Height-Width-Depth">HWD</span>) <sup><font color="#FF8800">4</font></sup>            <li><div style="display:inline-block; width:100px;">Weight</div>48 kg          </ul>
+</font></td></tr></table>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Myosotis is the French name of a Forget-Me-Not (flower).
+          </li>
+          <li>
+In 1968, <span class="short" aria-label="Thomson-CSF (now: Thales)" data-balloon-pos="up"><a href="../../../manuf/thales" class="short" >CSF</a></span>
+  merged with Thomson to become <a href="../../../manuf/thales"><span data-balloon-pos="up" aria-label="More about: Thomson-CSF">Thomson-CSF</span></a>.
+  Today it is known as <a href="../../../manuf/thales"><span data-balloon-pos="up" aria-label="More about: Thales">Thales</span></a>.
+          </li>
+          <li>
+Including wired modem.
+          </li>
+          <li>
+These dimensions, taken from <a href="#ref_1">[1]</a>, are believed to be incorrect.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+            <li><a href="https://www.aconit.org/histoire/colloques/colloque_2004/ruggiu.pdf" target="_blank"><i>Histoire de la machine Myosotis</i></a><br />
+Xavier Ameil, Jean-Pierre Vasseur and Gilles Ruggiu (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Association des R&#233;servistes due Chiffre et de la S&#233;curit&#233; de l'Information" data-balloon-length="large">ARCSI</span>) (in French language).<br />
+Proceedings of the 7th Conference on the History of Computing and Transmission.<br />
+Aconit Grenoble, 2004. pp. 95&mdash;125.
+            <div class="grey">
+This article contains some factual mistakes and omissions. It gives an incorrect
+description of the <a href="../../usa/kl7">KL-7 rotor machine</a> and claims that the
+other French <span class="short" aria-label="Tapeless Rotorless On-Line (cipher machine)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span> design (ULYSSE II) was never submitted to <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span>, which
+is contradicted by <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span> documents <a href="#ref_4">[4]</a>. Furthermore it does not list the
+<a href="../../philips/trol">Ecolex V</a> (submitted by
+<a href="../../nl">the Netherlands</a>) as a competitor, whilst the entries
+from USA, UK and Germany are acknowledged.
+            </div>
+            <p />
+            <a name="ref_2"></a>
+            <li><a href="https://www.aicprat.fr/news/la-belle-histoire-de-thalses-episode-3-11977" target="_blank">AICPRAT, <i>La belle histoire de Thales - &#201;pisode 3</i></a><br />
+19 March 2023.
+            <p />
+            <a name="ref_3"></a>
+            <li><a href="files/ARCSI_2022_pp43-51.pdf">Jean-Louis Desvignes, <i>De la C-36 &#224; la carte CP8</i></a><br />
+Bulletin de l'ARCSI, volume 48, 2022. pp. 43-51.
+            <p />
+            <a name="ref_4"></a>
+            <li><a href="../../trol/files/19650201_NATO_TROL.pdf">Ernst Ferber,  <i>Selection of Standard NATO on-line Teleprinter Cryptographic Equipment</i></a><br />
+Preliminary choice of preferred TROL equipment by the Standing Group of the Military Committee.<br />
+<span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span>, 1 February 1965.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../../trol">Other TROL developments</a><br />
+            <li><a href="../../index.htm">Other cipher systems</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Saturday 04 October 2025. Last changed: Sunday, 05 October 2025 - 12:43 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

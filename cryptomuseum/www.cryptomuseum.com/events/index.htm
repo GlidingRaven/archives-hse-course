@@ -1,0 +1,2662 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>Events</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../index.htm"><img src="../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../events/index.htm';" >Events</div>
+</div>
+          <div class="but sel sub" onClick="location.href='../events/index.htm';" >Index</div>
+          <div class="but sub" onClick="location.href='../events/lectures.htm';" >Lectures</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../index.htm"><img src="../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Events</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+This page provides background information on past and upcoming events
+that are related to Crypto Museum activities or to objects described
+on this website. Click any of the items below for further information,
+or return to the <a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: homepage">homepage</span></a>.
+You may also book us for a <a href="lectures.htm"><span data-balloon-pos="up" aria-label="More about: lecture">lecture</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Upcoming events</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>27-31 Oct 2025 - IEEE RFID Conference in Valence (France)            <li>11 Oct 2025 - Mini exhibition Royal Dutch Air Force (closed event)            <li>27-28 Mar 2026 - ICCH Conference in Charlotte (NC, USA)            <li>t.b.a. 2026 Secret Communications 5          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2025</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>21 Aug 2025 - CyberSquad 2025 in Den Haag (Netherlands)            <li>27-29 Jun 2025 - HAM Radio 2025 in Friedrichshafen (Germany)            <li>16-18 Jun 2025 - HistoCrypt 2025 in Poznan (Poland)            <li>6 Jun 2025 - Ei/Psi - Security in Times of Surveillance at TU/e Eindhoven            <li>5 Jun 2025 - Connect2Trust tour <font color=#F52E00>(closed group)</font>            <li>31 May-1 Jun 2025 - T-Dose Festival in Geldrop (Netherlands)            <li>11 May 2025 - Wiskunde Festival (Netherlands)            <li><s>30 Apr to 1 May 2025 - Symposium for Cryptologic History (USA)</s> <font color=#F52E00>cancelled</font>            <li>7-9 March 2025 - AATiS congress in Goslar (Germany)            <li>22 Feb 2025 - Enigma day at Enter museum in Soloturm (Switzerland)          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2024</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>13 Oct 2024 - Opening exhibition COUNTERSURVEILLANCE at Wende Museum (USA)            <li>4-6 Oct 2024 - Radioactivity at Funktreffen Erzgebirge            <li>1-2 Oct 2024 - The One Conference - Operation Rubicon            <li>22 Sep 2024 - Enigma demonstration at Budel Libaration Festival            <li>19 Sep 2024 - Fialka lecture at Design Acadamy (Eindhoven)            <li>22 Aug 2024 - Cipher History lecture at Cybersquad Event (Den Haag)            <li>30 July 2024 - Operation Gladio (Dutch Stay-Behind) at NVHR Radio Caf&#233; (Driebergen, NL)            <li>28-30 Jun 2024 - HAM Radio 2024            <li>25-27 Jun 2024 - HistoCrypt 2024 (we will not be present)            <li><a href="https://www.tscmi.org" target="_blank">3 and 4 June 2024 - Project EASY CHAIR at TSCMi conference, London</a>            <li><a href="https://www.win.tue.nl/eipsi/surveillance.html" target="_blank">31 May 2024 - Security in Times of Surveillance, at TU/e Eindhoven</a>            <li>5 Apr 2024 - Nationale Wiskunde Dagen (Noordwijkerhout, NL) - Enigma demo            <li>8-10 Mar 2024 - AATiS Bundeskongres - Radioactivity            <li><a href="http://www.grannysauction.net">28 Jan - 4 Feb 2024 - Auction with several cipher machines at Granny's Auction House</a>            <li>26 Jan 2024 - CWI Amsterdam - Enigma demo          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2023</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="2023/sc/index.htm">17 Dec 2023 - Secret Communications 4</a>            <li>6 Dec 2023 - Secret Communications 4 <font color=#F52E00>(closed group)</font>            <li><a href="2023/sc/index.htm">3 Dec 2023 - Secret Communications 4</a>            <li><a href="2023/sc/index.htm">2 Dec 2023 - Secret Communications 4</a>            <li>29 Nov 2023 - Undisclosed presentation at NATO            <li>15 Nov 2023 - Secret Communications 4 <font color=#F52E00>(closed group)</font>            <li><a href="2023/sc/index.htm">11 Nov 2023 - Secret Communications 4</a>            <li>1 Nov 2023 - Secret Communications 4 <font color=#F52E00>(closed group)</font>            <li><a href="2023/sc/index.htm">15 Oct 2023 - Secret Communications 4</a>            <li>12 Oct 2023 - Secret Communications 4 <font color=#F52E00>(closed group)</font>            <li>11 Oct 2023 - Secret Communications 4 <font color=#F52E00>(closed group)</font>            <li>6-8 Oct 2023 - AATiS congress (Erzgebirge, Germany)            <li><a href="https://www.nvhr.nl/frameset.htm?agenda.asp&ContentFrame" target="_blank">26 Sep 2023 &ndash; NVHR Radio Caf&#233;, Driebergen (Netherlands)</a>            <li><a href="2023/sc/index.htm">24 Sep 2023 - Secret Communications 4</a>            <li><a href="2023/sc/index.htm">23 Sep 2023 - Secret Communications 4</a>            <li>19-20 Sep 2023 - <a href="https://www.cryptovision.com/en/mindshare-2023-2/" target="_blank">Mindshare 2023 (Germany)</a>            <li>23-25 Jun 2023 - HAM Radio (Friedrichshafen, Germany)            <li>20-22 Jun 2023 - Histocrypt 2023 (M&#252;nchen, Germany)            <li>20 May 2023 - HELL Meeting (Duivendrecht, Netherlands)            <li>11 May 2023 - Operation Rubicon, NLUUG conference (Utrecht, Netherlands)            <li>6 May 2023 - Open day at Arthur Bauer's museum (Duivendrecht, Netherlands)            <li>21 April 2023 - Leve de Wiskunde (UvA, Amsterdam) - Enigma demo            <li>11 March 2023 - AATiS Bundescongress, (Goslar, Germany)            <li>1 March 2023 - Lions Club (Oosterhout, Netherlands) &ndash; <a href="../intel/cia/rubicon.htm">Operation Rubicon</a> (closed group)            <li>7 February 2023 - KIVI crypto lecture at TU/e &ndash; <a href="../intel/cia/rubicon.htm">Operation Rubicon</a>          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2022</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>24 November 2022 - Mini-exhibition at RVO in The Hague (Netherlands)            <li>15 October 2022 - Geschiedenisdag, Haarlem (Netherlands)            <li>13 October 2022 - Enigma lecture - Maczek Memorial, Breda (Netherlands)            <li>5-6 October 2022 - TSCM Conference, London, UK            <li>1 October 2022 - <i>Afluisterapparatuur van Nederlandse Bodem</i> - <a href="https://www.nvhr.nl/frameset.htm?agenda.asp&ContentFrame" target="_blank">NVHR, Egmond (NL)</a>            <li><a href="2022/wpw.htm">4-9 July 2022 - IEEE WPW conference, Bordeaux (France)</a>            <li>24-26 June 2022 - HAM Radio Friedrichshafen (Germany)            <li><a href="https://www.histocrypt.org/2022/" target="_blank">20-22 June 2022 - HistoCrypt 2022 - Amsterdam (Netherlands)</a>            <li>19-20 May 2022 - Mindshare/Crypto Cave <font color="#E7E">&#10148;</font>&nbsp;<a href="https://youtu.be/VRG_A9WhCTE" target="_blank">YouTube</a> <font color="#E7E">&#10148;</font>&nbsp;<a href="https://bit.ly/3sSyuJ5" target="_blank">LinkedIn</a>            <li>11-12 May 2022 - 18th Cryptologic History Symposium (USA)            <li>18-20 March 2022 - AATiS Bundescongress, Goslar (Germany)          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2021</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>2 October 2021 - Erzgebirge (Germany) - Wanzen des Kalten Krieges            <li>21 August 2021 - AATiS Bundeskongres - Operation RUBICON            <li><strike><a href="https://bit.ly/3cxEoVd" target="_blank">June 2021 - HAM Radio 2021, Friedrichshafen</a></strike> <font color=#F52E00>- cancelled due to COVID-19</font>          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2020</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>3 October 2020 - Erzgebirge (Germany) - Operation RUBICON            <li>2 October 2020 - Erzgebirge (Germany) - Technik der Spione            <li><strike><a href="https://bit.ly/3cxEoVd" target="_blank">26-28 June 2020 - HAM Radio 2020, Friedrichshafen</a></strike> <font color=#F52E00>- cancelled due to COVID-19</font>            <li><strike>30 May - 3 April 2020 - Radiointeressekreis</strike> <font color=#F52E00>- cancelled due to COVID-19</font>            <li><strike>13-15 March 2020 - AATiS Bundeskongres</strike> <font color=#F52E00>- cancelled due to COVID-19</font>            <li><a href="https://hack42.nl/wiki/Operatie_Rubikon" target="_blank">21 February 2020 - Operation RUBICON, at #Hack42</a>            <li><a href="2019/sc/index.htm">12 January 2020 - Secret Communications III (exhibition)</a>          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2019</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="2019/sc/index.htm">22 December 2019 - Secret Communications III (closed group)</a>            <li><a href="2019/sc/index.htm">21 December 2019 - Secret Communications III (exhibition)</a>            <li><a href="2019/sc/index.htm">18 December 2019 - Secret Communications III (closed group)</a>            <li><a href="2019/sc/index.htm">11 December 2019  - Secret Communications III (closed group)</a>            <li><a href="2019/sc/index.htm">7 December 2019  - Secret Communications III (exhibition)</a>            <li><a href="2019/sc/index.htm">4 December 2019  - Secret Communications III (closed group)</a>            <li><a href="2019/sc/index.htm">23 November 2019 - Secret Communications III (exhibition)</a>            <li><a href="2019/sc/index.htm">16 November 2019 - Secret Communications III (exhibition)</a>            <li>15 November 2019 - Mini-exhibition Geheim Agenten op de veluwe            <li><a href="2019/sc/index.htm">6 November 2019 - Secret Communications III (closed group)</a>            <li>28 June 2019 - Security in Times of Surveillance, at TU/e Eindhoven (CIA bugs)            <li>21-22 June 2019 - HAM Radio 2019 in Friedrichshafen (Germany)            <li>13 April 2019 - CIA bugs, SRS dag, Kootwijkerbroek (Netherlands)            <li>11 April 2019 - CIA bugs, Rohde & Schwarz (internal presentation)            <li><a href="https://www.deutsches-spionagemuseum.de/event/die-entdeckte-cia-spionagetechnik/" target="_blank">12 March 2019 - CIA bugs, Spionage Museum Berlin (Germany)</a>          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2017</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../links/poznan/index.htm"><b>20 November 2017</b> - mini conference in Poznan, Poland</a>            <li><a href="http://www.pvib.nl/actueel/evenementen/lustrum-bijeenkomst#tab-samenvatting"><b>28 September 2017</b> - IB-festival, Fort Voordorp, Utrecht</a>            <li><b>29 May - 31 July 2017</b>- Mini-exhibition at TU/e Eindhoven Metaforum            <li><a href="../news/index.htm#tue2017"><b>29 May 2017</b>- Security in Times of Surveillance, at TU/e Eindhoven</a>            <li><a href="2016/sc/index.htm"><b>14 January 2017</b> - Secret Communications 2 (exhibition)</a>          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2016</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="2016/sc/index.htm"><b>12 and 19 November 2016</b> - Secret Communications 2 (exhibition)</a>            <li><a href="2016/sc/index.htm"><b>3 December 2016</b> - Secret Communications 2 (exhibition)</a>            <li><a href="2016/hr/index.htm"><b>24-26 June 2016</b> - HAM Radio 2016 in Friedrichshafen (Germany)</a>            <li><b>15 April 2016</b> - Stay-behind lecture in Haelen (Netherlands)            <li><a href="http://www.cryptosymposium.com"><b>24-26 March 2016</b> - Charlotte International Crypto Symposium (North Carolina, USA)</a>            <li><b>11-13 March 2016</b> - Enigma lecture at AATiS Bundeskongres in Goslar (Germany)          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2015</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><b>21 November 2015</b> - <a href="http://www.cdvandt.org">Open day at Stg. CDV&amp;T in Diemen (Netherlands)</a>            <li><b>17 November 2015</b> - Stay-Behind lecture in Culemborg (Netherlands)            <li><b>5 November 2015</b> - Stay-Behind lecture (Dutch Signals Corps officers)            <li><b>27 October 2015</b> - Stay-Behind lecture in Hilversum (Netherlands)            <li><a href="https://hark24.nl"><b>17 October 2015</b> - Stay-Behind lecture in Arnhem (Netherlands)</a>            <li><b>26 June 2015</b> - 'Enigma Family' lecture in Friedrichshafen (Germany)            <li><a href="2015/hr/index.htm"><b>26-28 June 2015</b> - HAM Radio 2015 in Friedrichshafen (Germany)</a>            <li><b>24 April 2015</b> - Stay-Behind lecture in Germany            <li><b>12 April 2015</b> - Stay-Behind lecture in Soesterberg (Netherlands)            <li><b>5 and 6 February 2015</b> - Consultancy for 'Snowden The Movie'            <li><b>10 January 2015</b> - Interview 'Een Vandaag' for Dutch Television          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2014</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><b>21 November 2014</b> - Fialka lecture in Haelen            <li><a href="2014/fox/index.htm"><b>20-21 August 2014</b> - Press event 'The Americans'</a>            <li><a href="2014/hr/index.htm"><b>27-29 June 2014</b> - Ham Radio 2014 Friedrichshafen</a>            <li><b>19 February 2014</b> - Fialka lecture in Schmimmert          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2013</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="2013/sc/index.htm"><b>15 December 2013</b> - Secret Communications (exhibition)</a>            <li><a href="2013/sc/index.htm"><b>16, 23 and 30 November</b> - Secret Communications (exhibition)</a>            <li><b>25 October 2013</b> - Enigma workshop at OMO in Den Bosch            <li><b>4 October 2013</b> - Enigma lecture in Den Bosch            <li><a href="#fadh"><b>25 August 2013</b> - Enigma demonstration at <i>Fort aan den Ham</i> in Uitgeest</a>            <li><a href="#hr2013"><b>28-30 June 2013</b> - Ham Radio 2013</a>            <li><a href="#galileo"><b>21 June 2013</b> - Pro Sieben - Galileo - Geheimcodes</a>            <li><a href="#metze"><b>14 March 2013 - 2 April 2013</b> - Mini-exhibition at Eindhoven City Library</a>            <li><a href="#metze"><b>15 March 2013</b> - Lecture about Philips' role during WWII, by Marcel Metze</a>            <li><a href="../links/mvd/index.htm"><b>18 February 2013</b> - New premises for the Dutch Signals Corps Museum</a>          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2012</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="2012/radboud/index.htm"><b>24 November 2012</b> (OPEN END)- Mini-exhibition at Radboud University</a>            <li><a href="2012/vovklict/index.htm"><b>8 November 2012</b> - Enigma lecture for officers of the Dutch Signals Corps</a>            <li><a href="2012/h221/index.htm"><b>1 August 2012</b> - Rediscovery of Enigma H-221</a>            <li><a href="2012/hr/index.htm"><b>22-24 June 2012</b> - Ham Radio Friedrichshafen (Germany)</a>            <li><b>15 June 2012</b> - Enigma lecture at Hack42 in Arnhem (Netherlands)            <li><b>7 June 2012</b> - Crypto Experts Meeting with David Kahn            <li><a href="2012/fht/index.htm"><b>26-28 April 2012</b> - Enigma lecture in Dresden (Germany)</a>            <li><a href="2012/turing/index.htm"><b>16 April 2012</b> - Masterclass Turing</a>            <li><a href="2012/nvhr/index.htm"><b>23-24 March 2012</b> - Enigma lecture, NVHR weekend</a>          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2011</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="2011/govcert/index.htm"><b>15 and 16 November 2011</b> - GOVCERT Symposium 2011</a>            <li><b>5 October 2011</b> - Crypto Customer Day at Fox-IT in Delft.            <li><a href="2011/maczek/index.htm"><b>3 July - 15 September 2011</b> - Enigma, deciphered victory (Maczek Museum, Breda, NL).</a>            <li><b>13 May 2011</b> - Enigma Lecture in Amersfoort            <li><b>20 January 2011</b> - Enigma Lecture in Culemborg            <li><a href="2010/tr/index.htm"><b>15 October 2010 to 19 January 2011</b> - <i>Tijdrekken</i> (Buying Time)</a>          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2010</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><b>19 October 2010</b> - Enigma lecture in Leiden            <li><a href="2010/tr/index.htm"><b>15 October 2010 to 19 January 2011</b> - <i>Tijdrekken</i> (Buying Time)</a>            <li><b>13 October 2010</b> - Enigma Lecture at the TU/e (Netherlands)            <li><b>2 September 2010</b> - Enigma talk at <a href="http://english.nctb.nl">NCTb (The Hague, Netherlands)</a>            <li><b>22 April 2010</b> - History of Enigma, British Embassy The Hague (Netherlands)            <li><b>21 April 2010</b> - History of Enigma, British Embassy Brussels (Belgium)            <li><b>16 April 2010</b> - Enigma Lecture in Haelen (Netherlands)            <li><a href="2010/tue/index.htm"><b>8-12 February 2010</b> - SuperTU/esday in Eindhoven</a>          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2009</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><b>2 December 2009</b> - Enigma lecture at Lions Club in Dongen            <li><b>17 November 2009</b> - Enigma lecture in Helmond            <li><b>3 November 2009</b> - Enigma lecture in Wageningen            <li><a href="2009/er/index.htm"><b>6 September 2009</b> - Z&#228;hlwerk Enigma, The Missing Link. Lecture at BP</a>            <li><a href="2009/er/index.htm"><b>5 and 6 September 2009</b> - Enigma Reunion 2009 at Bletchley Park (UK)</a>            <li><b>19 August 2009</b> - Enigma lecture in Schimmert            <li><a href="../crypto/enigma/g111/index.htm"><b>1 July 2009</b> - Investigation of Enigma G-111 in Munchen (Germany)</a>            <li><b>9 June 2009</b> - Enigma lecture in Nederhorst den Berg            <li><b>19 May 2009</b> - Enigma lecture in Diemen            <li><b>18 April 2009</b> - Enigma lecure at the SRS meeting in Kootwijkerbroek            <li><b>5 April 2009</b> - Enigma lecture at the OTC in Soesterberg            <li><b>7 March 2009</b> - Enigma lecture at the RQM event            <li><a href="2008/sm/index.htm"><b>1 January to 29 February 2009</b> - Exhibition 'Secret Messages'</a>          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2008</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><b>18 November 2008</b> - Enigma lecture in Delft            <li><a href="2008/mythos/index.htm"><b>8 November 2008</b> - Book presentation 'Mythos Enigma'</a>            <li><a href="2008/sm/index.htm"><b>1 October to 31 December 2008</b> - Exhibition Secret Messages</a>            <li><b>25 February 2008</b> - Enigma lecture in Eindhoven            <li><b>4 Februari 2008</b> - Enigma Lecture in Hoogeveen          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2007</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><b>17 April 2007</b> - Fialka lecture at Bletchley Park (UK).          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2005</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><b>8 September 2005</b> - Enigma lecture in Amsterdam          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2004</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><b>1 September 2004</b> - Enigma lecture in Oss            <li><b>11 June 2004</b> - Enigma lecture in Hasselt (Belgium)          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Past events in 2003</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="2003/www/index.htm"><b>6 November 2003</b> - Introduction of the Enigma-E at Bletchley Park (UK)</a>            <li><b>4 October 2003</b> - Enigma presentation at the HELL meeting in Budel          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          </td></tr>
+        </table>
+<br />        <a name=2017_poznan></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Enigma conference Pozna&#324; 2017
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+At a special mini-conference held in Poznan (Poland) on Monday
+20 November 2017, it was announced that the plans for creating
+an Enigma Education Centre, commemorating the work of Polish
+codebreakers over the years, had been approved. The centre will
+open in 2019.
+<br />
+<br />
+At the conference, Crypto Museum was present to share its experiences
+with its collection, its website, its exhibitions and other activities.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../links/poznan/index.htm">More information</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../links/poznan/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="../links/poznan/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="../links/poznan/img/poznan_sign2_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Secret Communications 2
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Following the success of the exhibition
+<a href="../events/2013/sc/index.htm"><span data-balloon-pos="up" aria-label="More about: Secret Communications">Secret Communications</span></a>,
+now three years ago, Crypto Museum has teamed up once again with the <a href="http://www.cdvandt.org"><span data-balloon-pos="up" aria-label="www.cdvandt.org (off-site)">Foundation for German Communication (CDV&T)</span></a>,
+for the exhibition <a href="../events/2016/sc/index.htm"><span data-balloon-pos="up" aria-label="More about: Secret Communications 2">Secret Communications 2</span></a>,
+in which we will be showing an exciting selection of cipher machines
+and spy radio sets, some of which have not been exhibited before.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../events/2016/sc/index.htm">Read the announcement</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../events/2016/sc/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Typex Mark 23">
+<a href="../events/2016/sc/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Typex Mark 23">
+            <img src="../crypto/uk/typex/img/300703/181/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Typex Mark 23"
+             border=0
+             width=298 height=198
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          HAM Radio 2016
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+This year was the 10th time that we were present at the HAM Radio in
+Friedrichshafen (Germany). It was also the 4th Enigma Formum on which
+we spoke about the British Typex machine, which is a close
+relative of the Enigma.
+<br />
+<br />
+We had a few extremely busy days at our tables, but nevertheless
+we found some interesting new collector's items.
+Read the <a href="2016/hr/index.htm"><span data-balloon-pos="up" aria-label="More about: full story">full story</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2016/hr/index.htm">Full review</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2016/hr/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="2016/hr/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="2016/hr/img/FH2016_07_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=198
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          HAM Radio 2015
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+From 26 to 29 June 2015, the annual HAM Radio in Friedrichshafen was held.
+Although this is actually a typical Radio Amateur event, in recent years
+it has also become a crypto meeting place for collectors from all over the
+world.
+<br />
+<br />
+We found a number of desirable collectables and on Friday Marc and Paul
+held a talk about the Enigma Family Tree at the 3rd Annual Crypto Conference.
+Read the <a href="2015/hr/index.htm"><span data-balloon-pos="up" aria-label="More about: full story">full story</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2015/hr/index.htm">Full review</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2015/hr/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="2015/hr/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="2015/hr/img/FH2015_Small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          The Americans
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+On 20 and 21 August 2014, the DVD box of the popular TV series
+<i>The Americans</i> was released in The Netherlands and Belgium.
+For the press events on both days, Crypto Museum supplied a range
+of gadgets that are featured in the show.
+<br />
+<br />
+In the series we follow the lives of Elizabeth and Philip Jennings,
+a seemingly normal American couple who are actually highly trained
+KGB spies with fake identities; the so-called 'illegals'.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2014/fox/index.htm">More information</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2014/fox/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="2014/fox/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="2014/fox/img/screen_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=199
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=hr2014></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Ham Radio 2014
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+This year's HAM Radio 2014 in Friedrichshafen (Germany) was a great success.
+The event was held from 27 to 29 June 2014 and attracted Radio Hams and
+cipher collectors from all over the world. As usual, Crypto Museum was
+present at the Enigma stand, which was even larger than the previous year.
+As usual, many historians, collectors and cipher enthusiasts met here
+and many rare items changed hands.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2014/hr/index.htm">More information</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2014/hr/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="2014/hr/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="2014/hr/img/fh2014_015_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=198
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=sc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Secret Communications
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In November and December 2013, Crypto Museum organized a special exhibition
+that focussed on <b>Secret Communication</b>. Many items were on public
+display for the first time.
+For this event, Crypto Museum had teamed up with the
+<b>Foundation for German Technology</b> in Diemen (Amsterdam, Netherlands).
+The event was open to the general public on three Saturdays
+in November and one Sunday in December 2013.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2013/sc/index.htm">More information</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2013/sc/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Enigma M4 with Schreibmax">
+<a href="2013/sc/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Enigma M4 with Schreibmax">
+            <img src="../crypto/enigma/schreibmax/img/301500/025/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Enigma M4 with Schreibmax"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=fadh></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Fort aan den Ham
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+On Sunday 25 August 2013, historian Henk van Stigt will conduct
+an Enigma lecture at <i>Fort aan den Ham</i> in Uitgeest (near
+Amsterdam, Netherlands) during an Open Day. Crypto Museum will
+be present with a real functional Enigma Machine and some
+accessories.
+<br />
+<br />
+At the same time, professional safe-cracker Barry Wels will try
+to open an 'unbreakable' safe that was found inside the fort.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2013/fadh/index.htm">Full story</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2013/fadh/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="2013/fadh/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="2013/fadh/img/fadh.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=galileo></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Galileo - Geheimcodes
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+On 21 June 2013, a TV crew of the popular German science program
+Galileo, visited Crypto Museum in order to shoot footage for their
+documentary <i>Geheimcodes</i> (secret codes).
+<br />
+<br />
+In the program, presenter Matthias Fiedler has to solve three
+encrypted riddles in order to find AES inventor Joan Daemen.
+We helped him to solve the third riddle.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2013/galileo/index.htm">Full review</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2013/galileo/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="2013/galileo/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="2013/galileo/img/500442/006/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=hr2013></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Ham Radio 2013
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Every year Crypto Museum makes its appearance at the ENIGMA stand at
+the HAM Radio show in Friedrichshafen (Germany). Although officially not a
+crypto event, it has become the 'place to be' for crypto collectors
+and historians from all over the world.
+<br />
+<br />
+As usual, our stand was shared by a number of historians and collectors
+and this year our stand was bigger than ever...
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2013/hr/index.htm">Full review</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2013/hr/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="2013/hr/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="2013/hr/img/fh2013_1_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=metze></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Exhibition at Eindhoven City Library
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+At the event of the <b>Week of the Book</b>, the City Library of Eindhoven
+(Netherlands) has invited research journalist Marcel Metze
+to talk about the role that Philips managers played in WWII.
+<br />
+<br />
+To highlight this event, Crypto Museum has set up a mini-exhibition at
+the library's first floor, showing a number of secret devices that Philips
+has manufactured over the years.
+The exhibition will remain at the library until 2 April 2013.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2013/bieb/index.htm">Full review</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2013/bieb/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Mini-exhibition in Eindhoven City Library">
+<a href="2013/bieb/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Mini-exhibition in Eindhoven City Library">
+            <img src="img/500398/010/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Mini-exhibition in Eindhoven City Library"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Exhibition at Radboud University
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+At the event of the 55th anniversary of the Faculty of Science of
+the Radboud University in Nijmegen (Netherlands), an open day was
+held on Saturday 24 November 2012.
+<br />
+<br />
+At this event, Crypto Museum was
+present with a nice collection of historical cipher equipment, ranging
+from WW-II to the present day.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2012/radboud/index.htm">Full review</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2012/radboud/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="2012/radboud/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="2012/radboud/img/cm_radboud_display_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Signals Corps Officers
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+On 8 November 2012, Crypto Museum was asked to hold a talk on Enigma
+and wartime crypto, for the (former) Signals Corps Officers prior
+to their annual dinner. The presentation was met with great enthusiasm
+and most of the attendees felt the available time was too short...
+<br />
+<br />
+Besides a working wartime <a href="../crypto/enigma.i/index.htm"><span data-balloon-pos="up" aria-label="More about: Enigma-I">Enigma-I</span></a>
+machine, we also brought two contemporary machines: the Russian
+<a href="../crypto/fialka/index.htm"><span data-balloon-pos="up" aria-label="More about: Fialka">Fialka</span></a>
+and the American <a href="../crypto/usa/kl7/index.htm"><span data-balloon-pos="up" aria-label="More about: KL-7">KL-7</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2012/vovklict/index.htm">Full review</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2012/vovklict/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="KL-7, Fialka and Enigma, side-by-side">
+<a href="2012/vovklict/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="KL-7, Fialka and Enigma, side-by-side">
+            <img src="2012/vovklict/img/500059/019/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="KL-7, Fialka and Enigma, side-by-side"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Rediscovery of Enigma H-221
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+On 1 August 2012, Crypto Museum was invited at the Museum for
+Military History in Budapest (Hungary) where we rediscovered
+an extremely rare Enigma-variant: a printing Enigma Model H29
+with serial number H-221.
+<br />
+<br />
+The machine had been on public display in the past, but has
+since been locked away in the Hungarian archives.
+Until now that is...
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2012/h221/index.htm">Full review</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2012/h221/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="View of the controls of the Enigma H29 with serial number H-221" data-balloon-length="large">
+<a href="2012/h221/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="View of the controls of the Enigma H29 with serial number H-221" data-balloon-length="large">
+            <img src="../crypto/enigma/h/img/301622/016/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="View of the controls of the Enigma H29 with serial number H-221"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Ham Radio 2012
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Like in previous years, Crypto Museum has attended the
+Ham Radio 2012 in Friedrichshafen (Germany).
+It was held from 22 to 24 June.
+<br />
+<br />
+Us usual, we shared our tables with Prof. Tom Perera
+and many other crypto-enthusiasts, making our stand the ENIGMA meeting point.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2012/hr/index.htm">Full review</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2012/hr/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="2012/hr/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="2012/hr/img/fh2012_2_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=198
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Funkhistorisches Treffen 2012
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Since 1994, a small German group of people,
+interested in the history of radio
+and related subjects, organizes an annual meeting packed with demonstrations,
+lectures and excursions.
+<br />
+<br />
+This year, the historical city of Dresden was selected as main location
+and Crypto Museum was invited to give an Enigma-talk.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2012/fht/index.htm">Full reivew</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2012/fht/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="2012/fht/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="2012/fht/img/fht_2012_city_view_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=198
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Masterclass Turing
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Because of the importance of his work, 2012 has been internationally
+proclaimed The Alan Turing Year.
+Many activities will be organized world-wide to
+celebrate the 100th birthday of this codebreaker and
+mathematical genious.
+<br />
+<br />
+In the Netherlands, the <a href="http://www.ru.nl/"><span data-balloon-pos="up" aria-label="www.ru.nl (off-site)">Radboud University</span></a>
+of Nijmegen has organized
+a masterclass for pre-university students, called
+<i>Machines Maken en Breken</i> (making and breaking machines).
+Crypto Museum was present to give a talk on Enigma and
+demonstrate a real
+<a href="../crypto/enigma/i/index.htm"><span data-balloon-pos="up" aria-label="More about: war-time machine">war-time machine</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2012/turing/index.htm">More information</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2012/turing/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Masterclass Turing. 16 April 2012. Click for more information." data-balloon-length="large">
+<a href="2012/turing/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Masterclass Turing. 16 April 2012. Click for more information." data-balloon-length="large">
+            <img src="2012/turing/img/turing_year.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Masterclass Turing. 16 April 2012. Click for more information."
+             border=0
+             width=298 height=235
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          NVHR Weekend 2012
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+From Friday 23 to Sunday 25 March 2012, Crypto Museum was the guest of the
+NVHR, the Dutch Society for the History of Radio, at the event of their
+35th anniversary.
+<br />
+<br />
+Crypto Museum had been asked to give a series of Enigma lectures, which
+we did. More importantly, we brought a range of different Enigma models
+and accessories...
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2012/nvhr/index.htm">Full review</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2012/nvhr/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Different Enigma models side-by-side">
+<a href="2012/nvhr/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Different Enigma models side-by-side">
+            <img src="2012/nvhr/img/500352/000/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Different Enigma models side-by-side"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          GOVCERT Symposium 2011
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+On 15 and 16 November 2011, Crypto Museum hosted a large exhibition
+of historical cipher machines at the 10th annual GOVCERT.NL
+symposium at the World Trade Center in Rotterdam (Netherlands).
+<br />
+<br />
+Over 50 divices and documents were displayed in a series of large
+showcases, spread around the circumfere of the main hall.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2011/govcert/index.htm">Full review</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2011/govcert/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="2011/govcert/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="2011/govcert/img/govcert_overview_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Enigma, deciphered victory
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+A great exhibition about the groundbreaking work of the Poles,
+when breaking the <a href="../crypto/enigma/index.htm"><span data-balloon-pos="up" aria-label="More about: Enigma">Enigma</span></a>
+codes during WWII. Although most people will
+be familiar with the British (and later American) codebreaking efforts
+during the war, the important role of the Poles is often forgotten.
+<br />
+<br />
+Between 3 July and 14 September 2011, the Polish codebreakers were the
+highlights of the exhibition
+<a href="2011/maczek/index.htm"><span data-balloon-pos="up" aria-label="More about: ..."><i>Enigma, deciphered victory</i></span></a>
+in the General Maczek Museum in Breda (Netherlands).
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2011/maczek/index.htm">More information</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2011/maczek/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="2011/maczek/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="2011/maczek/img/maczek_1_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=198
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=tr></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Tijdrekken (Buying Time)
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Between 15 October 2010 and 19 January 2011 we helped
+Scryption in Tilburg (Netherlands) organising an
+exhibition on how cryptography is used to 'buy' time.
+The exhibition was a close co-operation between Scryption,
+Crypto Museum and the <a href="../intel/index.htm#aivd"><span data-balloon-pos="up" aria-label="More about: AIVD">AIVD</span></a>.
+<br />
+<br />
+Many historical cipher machines were on public display, such as Enigma,
+Fialka and Hagelin, but also some rare machines such as the American
+KL-7 and a full range of Hagelin machines.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2010/tr/index.htm">More information</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2010/tr/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="2010/tr/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="2010/tr/img/scryption_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=st2010></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          SuperTU/esday
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Between 8 and 12 February 2010, the Eindhoven University of Technology
+(<a href="http://www.tue.nl/"><span data-balloon-pos="up" aria-label="www.tue.nl (off-site)">TU/e</span></a>), organised a special week on Digital Security, called
+<a href="http://www.win.tue.nl/supertuesday/"><span data-balloon-pos="up" aria-label="www.win.tue.nl (off-site)">SuperTU/esday</span></a>.
+Apart from lectures and workshops, there was a unique exhibition of
+historical cipher machines from the collections of
+Scryption and <b>Crypto Museum</b>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2010/tue/index.htm">Full review</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2010/tue/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="2010/tue/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="2010/tue/img/0037_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=188
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=er2009></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Enigma Reunion 2009
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+On 5 and 6 September 2009, the annual Enigma Reunion was held at
+<a href="../bp/index.htm"><span data-balloon-pos="up" aria-label="More about: Bletchley Park">Bletchley Park</span></a> in the UK.
+This year was special, as it was the 70th anniversary of the
+arrival of top codebreakers Alan Turing and Gordon Welchman
+at Bletchley Park on 4 September 1939.
+<br />
+<br />
+To commemorate the anniversary, the largest-ever exhibition
+of <a href="../crypto/enigma/index.htm"><span data-balloon-pos="up" aria-label="More about: Enigma">Enigma</span></a>
+and <a href="../crypto/index.htm"><span data-balloon-pos="up" aria-label="More about: other cipher machines">other cipher machines</span></a> was held
+during the reunion weekend.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2009/er/index.htm">Full review</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2009/er/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="2009/er/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="2009/er/img/tent_01_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=mythos></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Mythos Enigma
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+On 8 November 2008 we were invited at the presentation of Dominik Landwehr's
+new book <b>Mythos Enigma</b>. The book also acted as Dominik's dissertation
+in 2007 at the Faculty of Philosophy and History of the Basel University.
+<br />
+<br />
+At the event, we demonstrated the famous
+<a href="../crypto/fialka/index.htm"><span data-balloon-pos="up" aria-label="More about: Russian Fialka">Russian Fialka</span></a> and the rare
+<a href="../crypto/enigma/g/index.htm"><span data-balloon-pos="up" aria-label="More about: Z&#228;hlwerk Enigma">Z&#228;hlwerk Enigma</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2008/mythos/index.htm">Full review</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2008/mythos/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="2008/mythos/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="2008/mythos/img/mythos_9_s.htm"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=199
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=sm></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Exhibition Secret Messages
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Between 1 October 2008 and 29 February 2009, Crypto Museum helped
+organising a large exhibition at the Dutch Ham Radio Museum
+<a href="http://www.cryptomuseum.nl/jancorver"><span data-balloon-pos="up" aria-label="www.cryptomuseum.nl (off-site)">Jan Corver</span></a> in The Netherlands.
+<br />
+<br />
+Numerous objects from the collection of the Jan Corver Museum,
+the Crypto Museum and many others, were brought together for this
+unique five-month event.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2008/sm/index.htm">Full review</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2008/sm/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="2008/sm/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="2008/sm/img/jc01_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=199
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=enigmae></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Introduction of the Enigma-E
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+On 5 November 2003 the Enigma-E self build kit was first
+introduced at Bletchley Park. The introduction coincided
+with the opening a new exhibition called
+'Wizards, Widgets and Weird Inventions'.
+<br />
+<br />
+It marks the start of a successful co-operation between
+BP and the Crypto Museum, and the Enigma-E has become a
+most-wanted gadget ever since.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="2003/www/index.htm">Full review</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="2003/www/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="2003/www/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="2003/www/img/031106_1_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=224
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Last changed: Friday, 22 August 2025 - 20:52 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../index.htm"><img src=../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

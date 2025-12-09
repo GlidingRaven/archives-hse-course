@@ -1,0 +1,2654 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>Bugs</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="Keywords" content="spy, bug, bugging, bugged, wanze, wanzen, radio bugs, stasi, kgb, stb,cia, fbi, secret service, covert listening devices">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../index.htm"><img src="../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of covert-related items" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../covert/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../covert/glossary.htm';" >Glossary</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../covert/camera/index.htm';" >Cameras</div>
+          <div class="but sub" onClick="location.href='../../covert/rec/index.htm';" >Recorders</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Concealed radios" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../covert/radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Covert listening devices" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../covert/bugs/index.htm';" >Bugs</div>
+</div>
+          <div class="but sub" onClick="location.href='../../covert/mic/index.htm';" >Microphones</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Covert wired and wireless earphones" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../covert/ear/index.htm';" >Earpieces</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Free Space Optics and optoelectronics" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../covert/opto/index.htm';" >Optics</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Concealment devices and microcaches" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../covert/conceal/index.htm';" >Concealments</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Dead letter boxes" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../covert/deaddrop/index.htm';" >Dead drops</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tools used in the espionage trade" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../covert/tools/index.htm';" >Tools</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Spy-related stories and covert operations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../covert/cases/index.htm';" >Stories</div>
+</div>
+          <div class="but sub" onClick="location.href='../../covert/sw/index.htm';" >Software</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="tracking devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../covert/tracking/index.htm';" >Tracking</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../index.htm"><img src="../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Bugs</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Covert listening devices</b>
+<br />
+<br />
+This part of the website is dedicated to small devices that are used
+to <a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: covertly">covertly</span></a>
+record or intercept a conversation. Such devices are commonly
+known as <b>bugs</b> and are usually hidden inside the room where a conversation
+takes place, but may also be hidden inside a wall or work through it.
+<br />
+<br />
+According to Wikipedia, a bug is a <i>covert listening device</i> <a href="#ref_1">[1]</a>.
+Although many bugs have a built-in transmitter (radio bug), this is by
+no means mandatory. They can also be wire-based (wire bugs) or connected
+to existing devices (wire tap bugs). Some bugs are in fact recording devices
+that are collected after the conversation has taken place.
+Some modern bugs have a built-in video camera and a TV-transmitter,
+allowing the conversation to be viewed in a nearby room as well.
+Some devices are available from commercial shops and websites,
+such as The Spy Shop and eBay,
+whilst others are made especially for
+<a href="../../intel/index.htm"><span data-balloon-pos="up" aria-label="More about: government agencies">government agencies</span></a> and are not
+available to the general public.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Bugs on this website
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0">
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=thing/index.htm>
+<div  data-balloon-pos="up" aria-label="The Thing, also known as The Great Seal Bug, planted by the USSR in the office of the American Ambassador." data-balloon-length="large">          <img src="thing/img/thing_thumb1.png"
+           alt="The Thing, also known as The Great Seal Bug, planted by the USSR in the office of the American Ambassador."
+           border="0"
+           style="
+           max-height: 50px;
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=thing/index.htm>The Thing</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=satyr/index.htm>
+<div  data-balloon-pos="up" aria-label="British resonant cavity microphone, similar to The Thing" data-balloon-length="large">          <img src="satyr/img/umbrella_thumb.jpg"
+           alt="British resonant cavity microphone, similar to The Thing"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=satyr/index.htm>SATYR</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/index.htm>
+<div  data-balloon-pos="up" aria-label="Secret CIA research project to develop Passive Bugs, carried out by the NRP in The Netherlands" data-balloon-length="large">          <img src="ec/ec1/img/302580/011/thumbnail.jpg"
+           alt="Secret CIA research project to develop Passive Bugs, carried out by the NRP in The Netherlands"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/index.htm>Easy Chair</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=st2a/index.htm>
+<div  data-balloon-pos="up" aria-label="Hybrid mains-powered CIA surveillance transmitter ST-2A (bug)" data-balloon-length="large">          <img src="st2a/img/303471/015/thumbnail.jpg"
+           alt="Hybrid mains-powered CIA surveillance transmitter ST-2A (bug)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=st2a/index.htm>ST-2A</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=kgb/index.htm>
+<div  data-balloon-pos="up" aria-label="Transistorized Russian bug used by the KGB around 1964" data-balloon-length="large">          <img src="kgb/img/301672/006/thumbnail.jpg"
+           alt="Transistorized Russian bug used by the KGB around 1964"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=kgb/index.htm>KGB bug</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/cavity/index.htm>
+<div  data-balloon-pos="up" aria-label="Easy Chair resonant cavity microphone">          <img src="ec/cavity/img/302584/000/thumbnail.jpg"
+           alt="Easy Chair resonant cavity microphone"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/cavity/index.htm>Cavity</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=nera/vr2b>
+<div  data-balloon-pos="up" aria-label="NERA VR-2B microwave receiver for passive listening device" data-balloon-length="large">          <img src="nera/vr2b/img/304036/003/thumbnail.jpg"
+           alt="NERA VR-2B microwave receiver for passive listening device"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=nera/vr2b>VR-2</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/srt52/index.htm>
+<div  data-balloon-pos="up" aria-label="290 MHz bug with TP audio masking">          <img src="ec/srt52/img/302615/021/thumbnail.jpg"
+           alt="290 MHz bug with TP audio masking"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srt52/index.htm>SRT-52</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=ec/srt56/index.htm>
+<div  data-balloon-pos="up" aria-label="350 MHz bug with RP audio masking">          <img src="ec/srt56/img/302620/000/thumbnail.jpg"
+           alt="350 MHz bug with RP audio masking"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srt56/index.htm>SRT-56</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/srt56f/index.htm>
+<div  data-balloon-pos="up" aria-label="Rectangular version of SRT-56">          <img src="ec/srt56f/img/302570/004/thumbnail.jpg"
+           alt="Rectangular version of SRT-56"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srt56f/index.htm>SRT-56-F</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/srt107/index.htm>
+<div  data-balloon-pos="up" aria-label="1500 MHz bug with RP audio masking">          <img src="ec/srt107/img/302455/011/thumbnail.jpg"
+           alt="1500 MHz bug with RP audio masking"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srt107/index.htm>SRT-107</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/srt90/index.htm>
+<div  data-balloon-pos="up" aria-label="Low-power version of the SRT-91">          <img src="ec/srt90/img/302506/013/thumbnail.jpg"
+           alt="Low-power version of the SRT-91"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srt90/index.htm>SRT-90</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/srt91/index.htm>
+<div  data-balloon-pos="up" aria-label="Miniature 350 MHz transmitter (bug) with Dirty Pulse (DP) audio masking" data-balloon-length="large">          <img src="ec/srt91/img/302502/007/thumbnail.jpg"
+           alt="Miniature 350 MHz transmitter (bug) with Dirty Pulse (DP) audio masking"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srt91/index.htm>SRT-91</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=srt105/index.htm>
+<div  data-balloon-pos="up" aria-label="Subcarrier modulated bug from another contractor">          <img src="srt105/img/srt105_penny_thumb.jpg"
+           alt="Subcarrier modulated bug from another contractor"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=srt105/index.htm>SRT-105</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/srs153/srt153.htm>
+<div  data-balloon-pos="up" aria-label="Minature 290 MHz transmitter (bug) with SC audio masking" data-balloon-length="large">          <img src="ec/srs153/img/302521/036/thumbnail.jpg"
+           alt="Minature 290 MHz transmitter (bug) with SC audio masking"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srs153/srt153.htm>SRT-153</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/srs153/qrr153.htm>
+<div  data-balloon-pos="up" aria-label="Minature 70 MHz switch-receiver">          <img src="ec/srs153/img/302487/034/thumbnail.jpg"
+           alt="Minature 70 MHz switch-receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srs153/qrr153.htm>QRR-153</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=ec/sp/index.htm>
+<div  data-balloon-pos="up" aria-label="Subminiature transmitter developed as part of the Super Pulse project" data-balloon-length="large">          <img src="ec/sp/img/302708/063/thumbnail.jpg"
+           alt="Subminiature transmitter developed as part of the Super Pulse project"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/sp/index.htm>SRT-SP</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=selectric/index.htm>
+<div  data-balloon-pos="up" aria-label="Soviet bug inside IBM Selectric typewriter - Operation GUNMAN" data-balloon-length="large">          <img src="selectric/img/302227/046/thumbnail.jpg"
+           alt="Soviet bug inside IBM Selectric typewriter - Operation GUNMAN"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=selectric/index.htm>Selectric</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/wec1/index.htm>
+<div  data-balloon-pos="up" aria-label="Using a regular telephone set as a bug - even when the handset is 'on-hook'" data-balloon-length="large">          <img src="../../phone/heemaf/1955/img/302601/008/thumbnail.jpg"
+           alt="Using a regular telephone set as a bug - even when the handset is 'on-hook'"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/wec1/index.htm>Phone</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=simple/index.htm>
+<div  data-balloon-pos="up" aria-label="Simple commercial and self-build FM radio bugs">          <img src="simple/img/301716/006/thumbnail.jpg"
+           alt="Simple commercial and self-build FM radio bugs"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=simple/index.htm>FM bugs</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=tms/tm104/index.htm>
+<div  data-balloon-pos="up" aria-label="TMS TM-104 wireless contact microphone">          <img src="tms/tm104/img/303131/000/thumbnail.jpg"
+           alt="TMS TM-104 wireless contact microphone"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=tms/tm104/index.htm>TM-104</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ps002/index.htm>
+<div  data-balloon-pos="up" aria-label="TMS TM-105 sugar cube bug">          <img src="ps002/img/300498/014/thumbnail.jpg"
+           alt="TMS TM-105 sugar cube bug"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ps002/index.htm>TM-105</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=mike/index.htm>
+<div  data-balloon-pos="up" aria-label="Telephone element bug">          <img src="mike/img/300515/013/thumbnail.jpg"
+           alt="Telephone element bug"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mike/index.htm>TM-106</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ps006/index.htm>
+<div  data-balloon-pos="up" aria-label="TMS TM-109 ballpoint transmitter">          <img src="ps006/img/300497/000/thumbnail.jpg"
+           alt="TMS TM-109 ballpoint transmitter"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ps006/index.htm>TM-109</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=necktie/index.htm>
+<div  data-balloon-pos="up" aria-label="Subminiture transmitter that can be hidden in the knot of a necktie" data-balloon-length="large">          <img src="necktie/img/300517/029/thumbnail.jpg"
+           alt="Subminiture transmitter that can be hidden in the knot of a necktie"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=necktie/index.htm>Necktie</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=atet/s35.htm>
+<div  data-balloon-pos="up" aria-label="A.T.E.T. S-35 subminiature covert listening transmitter (radio bug)" data-balloon-length="large">          <img src="atet/img/300516/038/thumbnail.jpg"
+           alt="A.T.E.T. S-35 subminiature covert listening transmitter (radio bug)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=atet/s35.htm>ATET S35</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=audiotel/scx/index.htm>
+<div  data-balloon-pos="up" aria-label="Audiotel SCX subcarrier radio bug">          <img src="audiotel/scx/img/300514/014/thumbnail.jpg"
+           alt="Audiotel SCX subcarrier radio bug"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=audiotel/scx/index.htm>SCX</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=mactron/index.htm>
+<div  data-balloon-pos="up" aria-label="Professional crystal-based Mactron FM radio bug">          <img src="mactron/img/300518/004/thumbnail.jpg"
+           alt="Professional crystal-based Mactron FM radio bug"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mactron/index.htm>Mactron</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=mactron/index.htm#mk2>
+<div  data-balloon-pos="up" aria-label="Mactron Mark II bug with built-in microphone pre-amplifier" data-balloon-length="large">          <img src="mactron/img/301736/004/thumbnail.jpg"
+           alt="Mactron Mark II bug with built-in microphone pre-amplifier"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mactron/index.htm#mk2>Mark II</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=mactron/index.htm#beacon>
+<div  data-balloon-pos="up" aria-label="Mactron Beacon for tracking and tracing">          <img src="mactron/img/301737/001/thumbnail.jpg"
+           alt="Mactron Beacon for tracking and tracing"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mactron/index.htm#beacon>Beacon</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=mactron/index.htm#phone>
+<div  data-balloon-pos="up" aria-label="Telephone line bug based on a Mactron FM transmitter" data-balloon-length="large">          <img src="mactron/img/301717/004/thumbnail.jpg"
+           alt="Telephone line bug based on a Mactron FM transmitter"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mactron/index.htm#phone>Phone bug</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=diode/index.htm>
+<div  data-balloon-pos="up" aria-label="Dummy bug, formed by a silicium ciode, in the shape of a hockey puck" data-balloon-length="large">          <img src="diode/img/300512/007/thumbnail.jpg"
+           alt="Dummy bug, formed by a silicium ciode, in the shape of a hockey puck"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=diode/index.htm>Puck</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=audiotel/mcx/index.htm>
+<div  data-balloon-pos="up" aria-label="Audiotel MCX Power Line Bug">          <img src="audiotel/mcx/img/300494/000/thumbnail.jpg"
+           alt="Audiotel MCX Power Line Bug"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=audiotel/mcx/index.htm>MCX</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=adapter/index.htm>
+<div  data-balloon-pos="up" aria-label="Professional RF bug hidden inside the enclosure of a power adapter" data-balloon-length="large">          <img src="adapter/img/301739/000/thumbnail.jpg"
+           alt="Professional RF bug hidden inside the enclosure of a power adapter"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=adapter/index.htm>Adapter</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=audiotel/probe/index.htm>
+<div  data-balloon-pos="up" aria-label="Audiotel wall probe microphone with extremely sensitive amplifier" data-balloon-length="large">          <img src="audiotel/probe/img/301408/010/thumbnail.jpg"
+           alt="Audiotel wall probe microphone with extremely sensitive amplifier"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=audiotel/probe/index.htm>Probe</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=stenice/index.htm>
+<div  data-balloon-pos="up" aria-label="Czechoslovakian radio bug">          <img src="stenice/img/302168/005/thumbnail.jpg"
+           alt="Czechoslovakian radio bug"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=stenice/index.htm>&#352;t&#283;nice</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=opec/index.htm>
+<div  data-balloon-pos="up" aria-label="Sophisticated masked subcarrier bug found at an OPEC conference in the late 1970s" data-balloon-length="large">          <img src="opec/img/302391/010/thumbnail.jpg"
+           alt="Sophisticated masked subcarrier bug found at an OPEC conference in the late 1970s"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=opec/index.htm>OPEC</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=bodil/index.htm>
+<div  data-balloon-pos="up" aria-label="Bulgarian telephone line-carrier bug">          <img src="bodil/img/302866/001/thumbnail.jpg"
+           alt="Bulgarian telephone line-carrier bug"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=bodil/index.htm>Bodil B1</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=bremen20/index.htm>
+<div  data-balloon-pos="up" aria-label="East German wired audio bug 'Bremen 20' used by the Stasi" data-balloon-length="large">          <img src="bremen20/img/302865/004/thumbnail.jpg"
+           alt="East German wired audio bug 'Bremen 20' used by the Stasi"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=bremen20/index.htm>Bremen 20</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=33014/index.htm>
+<div  data-balloon-pos="up" aria-label="DDR telephone line carrier bug">          <img src="33014/img/302933/001/thumbnail.jpg"
+           alt="DDR telephone line carrier bug"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=33014/index.htm>33014</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=31550-6/index.htm>
+<div  data-balloon-pos="up" aria-label="Stasi wired audio bug (NF)">          <img src="31550-6/img/302877/002/thumbnail.jpg"
+           alt="Stasi wired audio bug (NF)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=31550-6/index.htm>31550-6</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=31211/5.htm>
+<div  data-balloon-pos="up" aria-label="Long-range DDR miniature 375 MHz radio bug with microphone" data-balloon-length="large">          <img src="31211/img/302923/001/thumbnail.jpg"
+           alt="Long-range DDR miniature 375 MHz radio bug with microphone"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=31211/5.htm>31211-5</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=31216/index.htm>
+<div  data-balloon-pos="up" aria-label="Short-range DDR miniature 950 MHz radio bug with built-in microphone" data-balloon-length="large">          <img src="31216/img/302904/000/thumbnail.jpg"
+           alt="Short-range DDR miniature 950 MHz radio bug with built-in microphone"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=31216/index.htm>31216</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=31217/index.htm>
+<div  data-balloon-pos="up" aria-label="Medium-range DDR miniature 950 MHz radio bug with pre-amplifer" data-balloon-length="large">          <img src="31217/img/302905/007/thumbnail.jpg"
+           alt="Medium-range DDR miniature 950 MHz radio bug with pre-amplifer"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=31217/index.htm>31217</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=31218/index.htm>
+<div  data-balloon-pos="up" aria-label="Long-range DDR miniature 950 MHz radio bug with power amplifier" data-balloon-length="large">          <img src="31218/img/302906/003/thumbnail.jpg"
+           alt="Long-range DDR miniature 950 MHz radio bug with power amplifier"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=31218/index.htm>31218</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=kos11/index.htm>
+<div  data-balloon-pos="up" aria-label="Mobile 972 MHz bug with subcarrier audio-masking (DDR & Bulgaria)" data-balloon-length="large">          <img src="kos11/img/302907/017/thumbnail.jpg"
+           alt="Mobile 972 MHz bug with subcarrier audio-masking (DDR & Bulgaria)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=kos11/index.htm>KOS-11</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=31217-132/index.htm>
+<div  data-balloon-pos="up" aria-label="RF bug 31217-132 (Botond) concealed in piece of wood" data-balloon-length="large">          <img src="31217-132/img/302916/050/thumbnail.jpg"
+           alt="RF bug 31217-132 (Botond) concealed in piece of wood"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=31217-132/index.htm>Botond</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=stopfen/index.htm>
+<div  data-balloon-pos="up" aria-label="Stopfen RF bug 31217-111 (Stasi) with microphone in wooden plug (960 MHz)" data-balloon-length="large">          <img src="stopfen/img/302917/014/thumbnail.jpg"
+           alt="Stopfen RF bug 31217-111 (Stasi) with microphone in wooden plug (960 MHz)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=stopfen/index.htm>Stopfen</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=holzwurm/index.htm>
+<div  data-balloon-pos="up" aria-label="Holzwurm (woodworm) RF bug 31217-1 (Stasi) in vertical stick (960 MHz)" data-balloon-length="large">          <img src="holzwurm/img/302931/004/thumbnail.jpg"
+           alt="Holzwurm (woodworm) RF bug 31217-1 (Stasi) in vertical stick (960 MHz)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=holzwurm/index.htm>Holzwurm</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=securitate/index.htm>
+<div  data-balloon-pos="up" aria-label="Room audio bug used by the Romanian Securitate">          <img src="securitate/img/303400/016/thumbnail.jpg"
+           alt="Room audio bug used by the Romanian Securitate"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=securitate/index.htm>Securitate</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=uwb300/index.htm>
+<div  data-balloon-pos="up" aria-label="High-performance mercury batteries developed for the CIA's bugs" data-balloon-length="large">          <img src="uwb300/img/uwb302_thumb.jpg"
+           alt="High-performance mercury batteries developed for the CIA's bugs"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=uwb300/index.htm>UWB-300</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=cot/pager/index.htm>
+<div  data-balloon-pos="up" aria-label="Crystal-controlled transmitter (bug) with Motorola pager as switch receiver" data-balloon-length="large">          <img src="cot/pager/img/303344/000/thumbnail.jpg"
+           alt="Crystal-controlled transmitter (bug) with Motorola pager as switch receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=cot/pager/index.htm>Pager</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=cot/pots/index.htm>
+<div  data-balloon-pos="up" aria-label="Telephone line bug (POTS)">          <img src="cot/pots/img/303351/002/thumbnail.jpg"
+           alt="Telephone line bug (POTS)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=cot/pots/index.htm>POTS</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=cot/tracker/index.htm>
+<div  data-balloon-pos="up" aria-label="Telemetry transmitter used as vehicle tracker">          <img src="cot/tracker/img/303352/004/thumbnail.jpg"
+           alt="Telemetry transmitter used as vehicle tracker"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=cot/tracker/index.htm>Tracker</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=nsaant/loudauto/index.htm>
+<div  data-balloon-pos="up" aria-label="OUDAUTO audio-based RF retro reflective covert listening device (bug)" data-balloon-length="large">          <img src="nsaant/loudauto/img/loudauto_1_thumb.jpg"
+           alt="OUDAUTO audio-based RF retro reflective covert listening device (bug)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=nsaant/loudauto/index.htm>Loudauto</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=nsaant/firewalk/index.htm>
+<div  data-balloon-pos="up" aria-label="FIREWALK gigabit ethernet implant">          <img src="nsaant/firewalk/img/firewalk_thumb.png"
+           alt="FIREWALK gigabit ethernet implant"
+           border="0"
+           style="
+           max-height: 50px;
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=nsaant/firewalk/index.htm>Firewalk</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=mike/kapsel.htm>
+<div  data-balloon-pos="up" aria-label="Homemade RF transmitter hidden in a telephone microphone element" data-balloon-length="large">          <img src="mike/img/303346/000/thumbnail.jpg"
+           alt="Homemade RF transmitter hidden in a telephone microphone element"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mike/kapsel.htm>Kapsel</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=bicho/index.htm>
+<div  data-balloon-pos="up" aria-label="Spanish valve-based bug 'BICHO' from 1953">          <img src="bicho/img/303625/029/thumbnail.jpg"
+           alt="Spanish valve-based bug 'BICHO' from 1953"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=bicho/index.htm>Bicho</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=au015>
+<div  data-balloon-pos="up" aria-label="Crystal controlled UHF FM transmitter (bug)">          <img src="au015/img/300500/009/thumbnail.jpg"
+           alt="Crystal controlled UHF FM transmitter (bug)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=au015>AU-015</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=au018>
+<div  data-balloon-pos="up" aria-label="Crystal controlled UHF FM bug receiver">          <img src="au018/img/303651/003/thumbnail.jpg"
+           alt="Crystal controlled UHF FM bug receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=au018>AU-018</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=au020>
+<div  data-balloon-pos="up" aria-label="Free-running telephone bug for 100-140 MHz">          <img src="au020/img/303771/000/thumbnail.jpg"
+           alt="Free-running telephone bug for 100-140 MHz"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=au020>AU-020</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../crypto/gsmk/ip19/implant.htm>
+<div  data-balloon-pos="up" aria-label="CIA bug implanted in a CryptoPhone IP-19 used by WikiLeaks" data-balloon-length="large">          <img src="../../crypto/gsmk/ip19/img/303529/002/thumbnail.jpg"
+           alt="CIA bug implanted in a CryptoPhone IP-19 used by WikiLeaks"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../crypto/gsmk/ip19/implant.htm>Implant</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=aid/tx788>
+<div  data-balloon-pos="up" aria-label="LEA-AID covert listening device disguised as Motorola pager" data-balloon-length="large">          <img src="../../img/thumb.jpg"
+           alt="LEA-AID covert listening device disguised as Motorola pager"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=aid/tx788>TX-788</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=aid/tx916>
+<div  data-balloon-pos="up" aria-label="TX-916 body transmitter 1W with scrambler">          <img src="aid/tx916/img/304127/006/thumbnail.jpg"
+           alt="TX-916 body transmitter 1W with scrambler"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=aid/tx916>TX-916</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=aid/tx922>
+<div  data-balloon-pos="up" aria-label="TX-922 two-channel body transmitter 1W">          <img src="aid/tx922/img/304276/001/thumbnail.jpg"
+           alt="TX-922 two-channel body transmitter 1W"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=aid/tx922>TX-922</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <img src="../../img/blank.gif" width=1 height=2>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../list.htm#bugs">Index of bugs</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../df/index.htm">Bug finding equipment</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=surv></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Complete surveillance systems
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=srs35/index.htm>
+<div  data-balloon-pos="up" aria-label="CIA surveillance system SRS-35">          <img src="srs35/img/srr35_1_thumb.jpg"
+           alt="CIA surveillance system SRS-35"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=srs35/index.htm>SRS-35</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/srs52/index.htm>
+<div  data-balloon-pos="up" aria-label="CIA surveillance system SRS-52">          <img src="ec/srt52/img/302615/021/thumbnail.jpg"
+           alt="CIA surveillance system SRS-52"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srs52/index.htm>SRS-52</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/srs56/index.htm>
+<div  data-balloon-pos="up" aria-label="CIA surveillance system SRS-56">          <img src="ec/srt56/img/302620/031/thumbnail.jpg"
+           alt="CIA surveillance system SRS-56"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srs56/index.htm>SRS-56</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/srs91/index.htm>
+<div  data-balloon-pos="up" aria-label="CIA surveillance system SRS-91">          <img src="ec/srt91/img/302502/007/thumbnail.jpg"
+           alt="CIA surveillance system SRS-91"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srs91/index.htm>SRS-91</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/srs153/index.htm>
+<div  data-balloon-pos="up" aria-label="CIA surveillance system SRS-153">          <img src="ec/srs153/img/302521/061/thumbnail.jpg"
+           alt="CIA surveillance system SRS-153"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srs153/index.htm>SRS-153</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/urs1/index.htm>
+<div  data-balloon-pos="up" aria-label="Path loss survey system">          <img src="ec/urs1/img/302441/004/thumbnail.jpg"
+           alt="Path loss survey system"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/urs1/index.htm>URS-1</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/urs3/index.htm>
+<div  data-balloon-pos="up" aria-label="Path loss survey system (wideband)">          <img src="ec/urs3/img/302515/017/thumbnail.jpg"
+           alt="Path loss survey system (wideband)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/urs3/index.htm>URS-3</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/urs4/index.htm>
+<div  data-balloon-pos="up" aria-label="Path loss survey system (narrowband)">          <img src="ec/urs4/img/302709/034/thumbnail.jpg"
+           alt="Path loss survey system (narrowband)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/urs4/index.htm>URS-4</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../../df/aid/unitel225>
+<div  data-balloon-pos="up" aria-label="United 225 Intelligence kit (body transmitter and briefcase receiver)" data-balloon-length="large">          <img src="../../df/aid/unitel225/img/304126/008/thumbnail.jpg"
+           alt="United 225 Intelligence kit (body transmitter and briefcase receiver)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../df/aid/unitel225>Unitel 225</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Related subjects
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0">
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../../intel/cia/index.htm>
+<div  data-balloon-pos="up" aria-label="Central Intelligence Agency (USA)">          <img src="../../intel/cia/img/cia_logo_thumb.png"
+           alt="Central Intelligence Agency (USA)"
+           border="0"
+           style="
+           max-height: 50px;
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../intel/cia/index.htm>CIA</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../intel/nsa/index.htm>
+<div  data-balloon-pos="up" aria-label="National Security Agency">          <img src="../../crypto/usa/img/nsa_logo_thumbnail.png"
+           alt="National Security Agency"
+           border="0"
+           style="
+           max-height: 50px;
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../intel/nsa/index.htm>NSA</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../df/hmgcc/mlf>
+<div  data-balloon-pos="up" aria-label="Power line receiver">          <img src="../../df/hmgcc/mlf/img/304161/014/thumbnail.jpg"
+           alt="Power line receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../df/hmgcc/mlf>PLR</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/srr52/index.htm>
+<div  data-balloon-pos="up" aria-label="SRR-52 listening post receiver">          <img src="ec/srr52/img/302488/014/thumbnail.jpg"
+           alt="SRR-52 listening post receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srr52/index.htm>SRR-52</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/srr56/index.htm>
+<div  data-balloon-pos="up" aria-label="SRR-56 listening post receiver">          <img src="ec/srr56/img/srr56_thumb.jpg"
+           alt="SRR-56 listening post receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srr56/index.htm>SRR-56</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/srr90/index.htm>
+<div  data-balloon-pos="up" aria-label="Improved modular surveillance receiver (vertical model)" data-balloon-length="large">          <img src="ec/srr90/img/302492/016/thumbnail.jpg"
+           alt="Improved modular surveillance receiver (vertical model)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srr90/index.htm>SRR-90A</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/srr90/index.htm>
+<div  data-balloon-pos="up" aria-label="Improved modular surveillance receiver (horizontal model)" data-balloon-length="large">          <img src="ec/srr90/img/302493/022/thumbnail.jpg"
+           alt="Improved modular surveillance receiver (horizontal model)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srr90/index.htm>SRR-90B</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/srr91/index.htm>
+<div  data-balloon-pos="up" aria-label="Modular surveillance receiver for RP and DP masked bugs" data-balloon-length="large">          <img src="ec/srr91/img/302498/048/thumbnail.jpg"
+           alt="Modular surveillance receiver for RP and DP masked bugs"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srr91/index.htm>SRR-91</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=ec/srr145/index.htm>
+<div  data-balloon-pos="up" aria-label="SRR-145 down-converter">          <img src="ec/srr145/img/302473/000/thumbnail.jpg"
+           alt="SRR-145 down-converter"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srr145/index.htm>SRR-145</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ec/srs153/srr153.htm>
+<div  data-balloon-pos="up" aria-label="SRR-153 surveillance receiver">          <img src="ec/srs153/img/302486/000/thumbnail.jpg"
+           alt="SRR-153 surveillance receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ec/srs153/srr153.htm>SRR-153</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../df/rs/eb100/index.htm>
+<div  data-balloon-pos="up" aria-label="Rohde &amp; Schwarz EB-100 portable surveillance receiver" data-balloon-length="large">          <img src="../../df/rs/eb100/img/300144/012/thumbnail.jpg"
+           alt="Rohde &amp; Schwarz EB-100 portable surveillance receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../df/rs/eb100/index.htm>EB-100</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../df/rs/eb200/index.htm>
+<div  data-balloon-pos="up" aria-label="Rohde & Schwarz EB-200 Monitoring Receiver 10 kHz - 3 GHz" data-balloon-length="large">          <img src="../../df/rs/eb200/img/302944/013/thumbnail.jpg"
+           alt="Rohde & Schwarz EB-200 Monitoring Receiver 10 kHz - 3 GHz"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../df/rs/eb200/index.htm>EB-200</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../spy/bodrog/index.htm>
+<div  data-balloon-pos="up" aria-label="Czechoslovakian VHF or UHF bug receiver">          <img src="../../spy/bodrog/img/302197/007/thumbnail.jpg"
+           alt="Czechoslovakian VHF or UHF bug receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../spy/bodrog/index.htm>Bodrog</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=bodil/b2.htm>
+<div  data-balloon-pos="up" aria-label="Special receiver for BODIL B1 carrier bug">          <img src="bodil/img/302914/001/thumbnail.jpg"
+           alt="Special receiver for BODIL B1 carrier bug"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=bodil/b2.htm>Bodil B2</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../df/wired.htm>
+<div  data-balloon-pos="up" aria-label="Wire tapping (eavesdropping on landlines)">          <img src="ec/wec1/img/302445/001/thumbnail.jpg"
+           alt="Wire tapping (eavesdropping on landlines)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../df/wired.htm>Wired</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../mic/index.htm>
+<div  data-balloon-pos="up" aria-label="Concealed microphones">          <img src="../mic/typeb/img/302603/012/thumbnail.jpg"
+           alt="Concealed microphones"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../mic/index.htm>Mic</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <a name=masking></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Audio masking</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Professional radio bugs often feature a technique known as
+<a href="masking/index.htm"><span data-balloon-pos="up" aria-label="More about: ..."><i>audio masking</i></span></a>,
+or just <a href="masking/index.htm"><span data-balloon-pos="up" aria-label="More about: ..."><i>masking</i></span></a>,
+to hide the intelligence from
+casual eavesdroppers as well as professional sweep teams. Masking
+commonly involves techniques like subcarrier modulation and
+Pulse Position Modulation (PPM).
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="masking/index.htm">More about audio masking</a>
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="masking/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Example of subcarrier modulation (SC). Click for further information." data-balloon-length="large">
+<a href="masking/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Example of subcarrier modulation (SC). Click for further information." data-balloon-length="large">
+            <img src="masking/svg/sc_mod.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="Example of subcarrier modulation (SC). Click for further information."
+             border=0
+            
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Help us expand this section</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+This section of the website is by no means finished or complete.
+We are still looking for additional bugs to expand our collection and
+show them on the website. We are particularly interested in bugs
+that were used by the Stasi, the secret police of the former DDR (East Germany).
+If you have any bugs or related devices that are not shown here, please
+<a href="mailto:info@cryptomuseum.com"><span data-balloon-pos="up" aria-label="Send e-mail to: info@cryptomuseum.com">contact us</span></a>.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Four different versions. From front to rear: the original Mactron, the Beacon, the Mark II and a prototype of the Mark III" data-balloon-length="large" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Four different versions. From front to rear: the original Mactron, the Beacon, the Mark II and a prototype of the Mark III" data-balloon-length="large" class="tooltip-red">
+            <img src="mactron/img/301737/010/wide.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="Four different versions. From front to rear: the original Mactron, the Beacon, the Mark II and a prototype of the Mark III"
+             border=0
+             width=618 height=464
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=lit></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Literature</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=a>
+            <a name="lit_1"></a>
+            <li><a href="files/gudgeon_thesis_2020.pdf">Looking towards the future: the changing nature of intrusive<br />surveillance and technical attacks against high-profile targets</a><br />
+Thesis 2020, Imperial College London, Department of Computing.<br />
+Jonathan Gudgeon, November 2019.
+          </ol type=a>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+            <li><a href="http://en.wikipedia.org/wiki/Covert_listening_device">Wikipedia, <i>Covert listening device</i></a><br />
+Retrieved April 2013.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../list.htm#bugs">Index of bugs</a><br />
+            <li><a href="../../df/index.htm">Bug-finding equipment</a><br />
+            <li><a href="../rec.htm">Covert recording devices</a><br />
+            <li><a href="../index.htm">Other covert equipment</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Monday 29 April 2013. Last changed: Thursday, 02 October 2025 - 10:06 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../index.htm"><img src=../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

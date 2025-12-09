@@ -1,0 +1,2588 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>TH-3676</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cryptomuseum">
+    <meta name="twitter:url" content="https://www.cryptomuseum.com/telex/telefunken/th3676/index.htm">
+    <meta name="twitter:image" content="https://www.cryptomuseum.com/telex/telefunken/th3676/img/304278/012/full.jpg">
+    <meta name="twitter:title" content="TH-3676">
+    <meta name="twitter:description" content="Teleprinter connection device with FSK modem.">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of telegraphic equipment" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../telex/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tools used in combination with telegraphic equipment" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../telex/tools/index.htm';" >Tools</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../../telex/creed/index.htm';" >Creed</div>
+          <div class="but sub" onClick="location.href='../../../telex/gretag/etk47/index.htm';" >Gretag</div>
+          <div class="but sub" onClick="location.href='../../../telex/hell/index.htm';" >HELL</div>
+          <div class="but sub" onClick="location.href='../../../telex/sagem/index.htm';" >Sagem</div>
+          <div class="but sub" onClick="location.href='../../../telex/siemens/index.htm';" >Siemens</div>
+          <div class="but sel sub" onClick="location.href='../../../telex/telefunken/index.htm';" >Telefunken</div>
+          <div class="but sub" onClick="location.href='../../../telex/teletype/index.htm';" >Teletype</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../../index.htm#tcd"><div  data-balloon-pos="up" aria-label="Shortcut to Teleprinter Connection Device" class="key">TCD</div></a><a class="key" href="../../../crypto/philips/ec4"><div  data-balloon-pos="up" aria-label="Shortcut to Ecolex 4 encryption/decryption unit" class="key">Ecolex IV</div></a><a class="key" href="../../../crypto/philips/ec10"><div  data-balloon-pos="up" aria-label="Shortcut to Ecolex 10 encryption/decryption unit" class="key">Ecolex X</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>TH-3676</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Teleprinter connection device with FSK modem</b>
+<br />
+<br />
+TH-3676 <sup><font color="#FF8800">1</font></sup> is a military
+<a href="../../index.htm#tcd"><span data-balloon-pos="up" aria-label="More about: teleprinter connection device">teleprinter connection device</span></a> (<span class="short" aria-label="Teleprinter Connection Device" data-balloon-pos="up"><a href="../../index.htm#tcd" class="short" >TCD</a></span>) with built-in
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency-Shift Keying">FSK</span> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Modulator/Demodulator">modem</span>, developed around 1964 by <a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: Telefunken">Telefunken</span></a>
+in Germany. The device was used by the Dutch and German armies for interfacing
+a 2-wire or 4-wire military <a href="../../index.htm"><span data-balloon-pos="up" aria-label="More about: teletypewriter">teletypewriter</span></a>
+to the civil (public) 2-wire or 4-wire <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency-Shift Keying">FSK</span>
+<a href="../../index.htm"><span data-balloon-pos="up" aria-label="More about: telex network">telex network</span></a> of the Dutch <span class="short" aria-label="Dutch Post Office" data-balloon-pos="up"><a href="../../../manuf/ptt" class="short" >PTT</a></span>
+and the German <span class="short tooltip-red" data-balloon-pos="up" aria-label="Deutsche Bundespost (German Post Office)">DBP</span>. It was also used for con&shy;necting the
+Philips <a href="../../../crypto/philips/ec4"><span data-balloon-pos="up" aria-label="More about: Ecolex IV">Ecolex IV</span></a> and
+<a href="../../../crypto/philips/ec10"><span data-balloon-pos="up" aria-label="More about: Ecolex X">Ecolex X</span></a> cipher machines to a wired
+<a href="../../index.htm"><span data-balloon-pos="up" aria-label="More about: telex network">telex network</span></a>, or to a <span class="short tooltip-red" data-balloon-pos="up" aria-label="High Frequency (3-30 MHz)">HF</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Very High Frequency (30-300 MHz)">VHF</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Ultra High Frequency (300-3000 MHz)">UHF</span> radio set.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The device converts standard current-based tele&shy;printer signals into
+tone-modulated <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency-Shift Keying">FSK</span> signals and vice versa.
+It is housed in a rugge&shy;dized military enclosure that measures
+150 &#215; 300 &#215; 283 mm and weighs 11.5 kg. All con&shy;nec&shy;tions,
+controls and indicators are at the front panel,
+which can be covered with a sealed lid.
+A mains power cord can be stowed inside the lid.
+<br />
+<br />
+The image on the right shows the TH-3676A, which is slightly different from the
+standard TH-3676, in that it is suitable for the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency-Shift Keying">FSK</span> networks of
+the Dutch and German telecom providers.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304278/012/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="TH-3676A telex modem">
+<a href="img/304278/012/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="TH-3676A telex modem">
+            <img src="img/304278/012/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="TH-3676A telex modem"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The advantage of using <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency-Shift Keying">FSK</span> over current-based telegraphy, is that
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency-Shift Keying">FSK</span> is far less sensitive to dis&shy;tortions on the line, as a result of which it
+can be used more reliably on bad quality lines. In addi&shy;tion, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency-Shift Keying">FSK</span>
+enables the use of Telex-Over-Radio (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Telex Over Radio">TOR</span>) via <span class="short tooltip-red" data-balloon-pos="up" aria-label="High Frequency (3-30 MHz)">HF</span> radio, and also via
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Very High Frequency (30-300 MHz)">VHF</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Ultra High Frequency (300-3000 MHz)">UHF</span> Line-of-Sight (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Line Of Sight (point-to-point)">LOS</span>) links.
+In circuit diagrams, the TH-3676 can be depicted by the following symbol:
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/tty_fsk_modem.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+In The Netherlands, the <b>TH-3676</b> was first used with the
+<a href="../../../crypto/philips/ec4"><span data-balloon-pos="up" aria-label="More about: Ecolex 4 cipher machine">Ecolex 4 cipher machine</span></a> (1964), in particular
+in mobile setups.
+The special versions <b>TH-3676A</b> and <b>TH-3676B</b> were later developed for use
+with public <span class="short" aria-label="Dutch Post Office" data-balloon-pos="up"><a href="../../../manuf/ptt" class="short" >PTT</a></span> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Deutsche Bundespost (German Post Office)">DBP</span> networks, and with the
+<a href="../../../crypto/philips/ec10"><span data-balloon-pos="up" aria-label="More about: Philips Ecolex X encryptor">Philips Ecolex X encryptor</span></a>.
+The device is sometimes erroneously
+referred to as <i>Deksel Kast</i> (Lid, Case) after the
+<a href="img/304278/016/full.jpg"><span data-balloon-pos="up" aria-label="More about: label on the case lid">label on the case lid</span></a>. <sup><font color="#FF8800">2</font></sup>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li style="margin-bottom: 6px;">
+There are three versions.
+  On this page, the notation <b>TH-3676(A)</b> means <b>TH-3676</b> and <b>TH-3676A</b>.<br />
+  <b>TH-3676A/B</b> means <b>TH-3676A</b> and <b>TH-3676B</b>.
+  <b>TH-3676(A/B)</b> means all versions.
+          </li>
+          <li style="margin-bottom: 6px;">
+The actual <a href="img/304278/017/full.jpg"><span data-balloon-pos="up" aria-label="More about: model/serial number label">model/serial number label</span></a>
+  is at the right side of the enclosure.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Closed device in upright position">          <img src="img/304278/015/thumbnail.jpg"
+           alt="Closed device in upright position"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/015"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TH-3676A with case lid">          <img src="img/304278/014/thumbnail.jpg"
+           alt="TH-3676A with case lid"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/014"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TH-3676A telex modem">          <img src="img/304278/012/thumbnail.jpg"
+           alt="TH-3676A telex modem"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/012"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel">          <img src="img/304278/013/thumbnail.jpg"
+           alt="Front panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/013"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Removing the FSK module">          <img src="img/304278/011/thumbnail.jpg"
+           alt="Removing the FSK module"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/011"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Spare lamps and lamp pulling tool, stowed inside compartment in the case lid." data-balloon-length="large">          <img src="img/304278/025/thumbnail.jpg"
+           alt="Spare lamps and lamp pulling tool, stowed inside compartment in the case lid."
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/025"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="ID plate">          <img src="img/304278/017/thumbnail.jpg"
+           alt="ID plate"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/017"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Mains cable stowed inside the case lid">          <img src="img/304278/028/thumbnail.jpg"
+           alt="Mains cable stowed inside the case lid"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/028"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Mains power connector">          <img src="img/304278/029/thumbnail.jpg"
+           alt="Mains power connector"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 9);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/029"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Mains cable winding scheme">          <img src="img/304278/027/thumbnail.jpg"
+           alt="Mains cable winding scheme"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 10);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/027"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 10</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304278/015/full.jpg" alt="Closed device in upright position">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 10</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304278/014/full.jpg" alt="TH-3676A with case lid">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 10</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304278/012/full.jpg" alt="TH-3676A telex modem">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 4 / 10</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304278/013/full.jpg" alt="Front panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 5 / 10</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304278/011/full.jpg" alt="Removing the FSK module">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 6 / 10</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304278/025/full.jpg" alt="Spare lamps and lamp pulling tool, stowed inside compartment in the case lid.">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 7 / 10</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304278/017/full.jpg" alt="ID plate">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 8 / 10</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304278/028/full.jpg" alt="Mains cable stowed inside the case lid">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 9 / 10</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304278/029/full.jpg" alt="Mains power connector">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 10 / 10</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304278/027/full.jpg" alt="Mains cable winding scheme">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image below shows the front panel of the TH-3676A. The device consists
+of 5 functional blocks, or modules, designated A, B, C, D and E respectively.
+Mains power is connected to the <a href="#conn_mains"><span data-balloon-pos="up" aria-label="Jump to: 3-way receptacle">3-way receptacle</span></a> at the left (A).
+Ensure that the mains voltage selector (S4) is correctly configured.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304278/013/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304278/013/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/th3676_ext.png"
+             style="
+            "
+             align="center"
+             width="562px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The local device is connected to the jack socket(s) on the rightmost module
+(E). For 2-wire setup, only the upper jack is used. For 4-wire setup, the
+lower two jacks are used. Select the appropriate local line current with the
+rotary knob (S3) of the Local Current Source (B). The line (or radio) is
+connected to the 4 banana sockets at the far right.
+The Line Mode (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency-Shift Keying">FSK</span>) is set with selector S1.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Versions
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+<li><font color=#F52E00>TH-3676</font><br />
+Standard version, suitable for local devices with single-current only,
+in 2- or 4-wire configuration. The line (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency-Shift Keying">FSK</span>) can be 2- or 4-wire, but can
+also be connected to an external field telephone, whilst the device is
+disconnected from the line. In 2-wire mode, the device also provides
+echo-cancellation.
+            <p />
+<li><font color=#F52E00>TH-3676A</font><br />
+Special version suitable for connection to the Dutch <span class="short" aria-label="Dutch Post Office" data-balloon-pos="up"><a href="../../../manuf/ptt" class="short" >PTT</a></span> or the German
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Deutsche Bundespost (German Post Office)">DBP</span>. Local devices can be 2- or 4-wire, with single- or double-current.
+The device featured here is of this type.
+For further information see
+<a href="../../../crypto/philips/ec10/files/EC10_IK11_519_3.pdf">Instruction Card IK11-519/3</a>
+<a href="#doc_5">[E]</a>.
+            <p />
+<li><font color=#F52E00>TH-3676B</font><br />
+This version was made especially for connecting the
+<a href="../../../crypto/philips/ec10">Ecolex X encryptor</a>
+to a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Single Side Band">SSB</span> radio. In particular module (E) is different. It has a 10-way
+connector for the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Single Side Band">SSB</span> radio, and a relay contact for the Ecolex X.
+This contact takes over the function of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="push-to-talk">ptt</span>-switch of the radio.
+For further information see
+<a href="files/IK11_519_4.pdf">Instruction Card IK11-519/4</a> <a href="#doc_6">[F]</a>.
+          </ul>
+        </font></td></tr></table>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Line mode (S1) 
+          &nbsp;<font color="#CCC">
+          FSK
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Switch S1 on module E is used to select the Line Mode.
+The following settings are available:
+<ol>
+<li>
+          <img src="svg/4w.svg" style="position:relative; width:px; bottom:px;" />
+&nbsp;&nbsp;4-wire
+<li>
+          <img src="svg/2w.svg" style="position:relative; width:px; bottom:px;" />
+&nbsp;&nbsp2-wire
+<li>
+          <img src="svg/phone.svg" style="position:relative; width:px; bottom:px;" />
+&nbsp;&nbspField telephone connected to the line (device disconnected)
+</ol>
+          </font>
+          </td></tr>
+        </table>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Local mode (S3)
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The mode of operation of the locally connected teleprinter is selected with the
+rotary switch (S3) on module B. The following settings are available on <b>TH-3676</b>:
+<ol>
+<li>
+          <img src="svg/2w.svg" style="position:relative; width:px; bottom:px;" />
+&nbsp;&nbsp2-wire
+<li>
+          <img src="svg/4w.svg" style="position:relative; width:px; bottom:px;" />
+&nbsp;&nbsp;4-wire
+</ol>
+On the <b>TH-3676A</b> (featured here) and <b>TH-3676B</b> &mdash; both of which are always in
+4-wire mode &mdash; this switch has a different function. It has three positions:
+<ol>
+<li>
+          <img src="svg/1c.svg" style="position:relative; width:px; bottom:px;" />
+&nbsp;&nbsp;Single current 40 mA
+<li>
+          <img src="svg/2c.svg" style="position:relative; width:px; bottom:px;" />
+&nbsp;&nbsp;Double current 12.5 mA
+<li>
+          <img src="svg/2c.svg" style="position:relative; width:px; bottom:px;" />
+&nbsp;&nbsp;Double current 20 mA
+</ol>
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=setup></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Setup</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the simplest configuration, the TH-3676(A) was used to connect
+a teleprinter directly to a telephone line, as shown in the diagram below.
+In most cases a <a href="../../siemens/t100"><span data-balloon-pos="up" aria-label="More about: Siemens T-100 teleprinter">Siemens T-100 teleprinter</span></a> was used.
+Both devices (teleprinter and TH-3676) are powered individually from the
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> mains.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/th3676_setup.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+For secure communication, a cipher machine can be connected between the
+teleprinter and the modem. In most cases, this was a
+<a href="../../../crypto/philips/ec4"><span data-balloon-pos="up" aria-label="More about: Philips Ecolex IV">Philips Ecolex IV</span></a> or
+<a href="../../../crypto/philips/ec10"><span data-balloon-pos="up" aria-label="More about: Ecolex X">Ecolex X</span></a> telegraphy encryptor.
+The diagram below shows how the <a href="../../../crypto/philips/ec10"><span data-balloon-pos="up" aria-label="More about: Ecolex X">Ecolex X</span></a> is
+connected to a telephone line via the TH-3676(A).
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/th3676_setup_ec10.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+When the TH-3676(A) must be connected to a radio instead of the telephone
+line, the additional <a href="../th4179"><span data-balloon-pos="up" aria-label="More about: TH-4179 radio adapter">TH-4179 radio adapter</span></a> is needed. It converts
+the signal levels and takes over the push-to-talk (<span class="short tooltip-red" data-balloon-pos="up" aria-label="push-to-talk">ptt</span>) contact of the radio.
+The diagram below shows a typical setup in which the
+<a href="../th4179"><span data-balloon-pos="up" aria-label="More about: TH-4179 radio adapter">TH-4179 radio adapter</span></a> is connected between a
+<a href="../../../radio/rt3600"><span data-balloon-pos="up" aria-label="More about: Philips RT-3600 VHF/FM radio">Philips RT-3600 VHF/FM radio</span></a> and its handset.
+If no encryption device is used, an extra TX/RX switch unit has to be added
+to take of the function of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="push-to-talk">ptt</span>.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/th3676_setup_radio.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+Note that the TH-4179 is not needed when the TH-3676<b>B</b> is used, as the latter
+is modified for direct connection to a radio, and has support for taking over
+the <span class="short tooltip-red" data-balloon-pos="up" aria-label="push-to-talk">ptt</span>-contact.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=block></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Block diagram</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <a name=block_th3676></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          TH-3676
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the block diagram of the TH-3676. At the left are the
+local connections. At the right are the line connections.
+The upper branch is the transmitter. It converts the single-current signal
+from the teleprinter first to double-current and then converts it to an <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency-Shift Keying">FSK</span>
+signal that is sent to the line.
+The lower branch is the receiver. It converts the
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency-Shift Keying">FSK</span> signal from the line into a double-current signal. This is
+then converted to a single-current signal and sent to the teleprinter.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Block diagram of the TH-3676 teleprinter modem. Switch S1 is shown in 2-wire line mode. Move the mouse out of the diagram to see 4-wire line mode." data-balloon-length="large" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Block diagram of the TH-3676 teleprinter modem. Switch S1 is shown in 2-wire line mode. Move the mouse out of the diagram to see 4-wire line mode." data-balloon-length="large" class="tooltip-red">
+            <img src="svg/th3676_block.svg"
+             style="
+             max-width: 618px;
+            "
+             onmouseover="this.src='svg/th3676_block_1.svg'"
+             onmouseout="this.src='svg/th3676_block.svg'"
+             align="center"
+             vspace="4"
+             alt="Block diagram of the TH-3676 teleprinter modem. Switch S1 is shown in 2-wire line mode. Move the mouse out of the diagram to see 4-wire line mode."
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+            <div style="margin-top: 4px; margin-bottom: 4px;">
+            <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+            <b>
+            <center>TH-3676 in 4-wire line mode. Move the mouse over the diagram to see 2-wire line mode.</center>
+            </b>
+            </font>
+            </div>
+          </td></tr></table>
+<br />
+Switch S1 sets the line mode. It has three positions: (1) 4-wire, (2) 2-wire
+and (3) field telephone. In the latter case, the field telephone is connected
+directly to the 2-wire line, whilst the device is disconnected from the line.
+S1 is shown here in the 4-wire line mode, as illustrated below:
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/th3676_block_legend.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+Move the mouse over the diagram, to see S1 in 2-wire line mode.
+Switch S3 set the local mode. It has two positions: (1) 2-wire and (2) 4-wire.
+It is shown here in 4-wire mode. In this mode, the teleprinter
+does not produce a local copy of the outgoing text, as <span class="short tooltip-red" data-balloon-pos="up" aria-label="Transmitter">TX</span> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Receiver">RX</span>
+circuits are fully se&shy;parated. In that case, the only way to get a local copy
+is to set the line (S1) to 2-wire mode.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=block_th3676a></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          TH-3676A
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Note that the above block diagram
+is for the TH-3676, which is different from the TH-3676A, in particular as
+far as S3 is concerned. On the TH-3676A &ndash; which has a different local
+inter&shy;face &ndash; the local side is <b>always in 4-wire mode</b>, whilst S3 is a 3-position
+switch, used to select the current:
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/th3676a_block_legend.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+In position (1), the unit works in the same way as the TH-3676, but locally
+<b>only in 4-wire mode</b>, whilst the required current for <span class="short tooltip-red" data-balloon-pos="up" aria-label="Transmitter">TX</span> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Receiver">RX</span> are
+provided by the internal <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span>. In settings (2) and (3), only the current for the
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Transmitter">TX</span> side is provided by the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span>, whilst the current for the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Receiver">RX</span> path
+is pro&shy;vided by the line. As the local interface is always in 4-wire
+configuration, the only way to produce a local copy is to set the line (S1)
+to 2-wire mode. When used with an encryption device like the
+<a href="../../../crypto/philips/ec10"><span data-balloon-pos="up" aria-label="More about: Philips Ecolex X">Philips Ecolex X</span></a>,
+both interfaces must be in 4-wire mode, as a local copy would produce garbage.
+<br />
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304278/007/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="The five modules of the TH-3676">
+<a href="img/304278/007/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="The five modules of the TH-3676">
+            <img src="img/th3676a_modules.png"
+             style="
+            "
+             align="center"
+             width="557px"
+             vspace="4"
+             alt="The five modules of the TH-3676"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </font>
+          </td></tr>
+        </table>
+        <a name=int></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Interior</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The TH-3676 is housed in a
+<a href="img/304278/001/full.jpg"><span data-balloon-pos="up" aria-label="More about: ruggedized green military enclosure">ruggedized green military enclosure</span></a> that also acts as
+the transport case. All controls and connections are at the front. The device consists of <a href="img/304278/007/full.jpg"><span data-balloon-pos="up" aria-label="More about: five modules">five modules</span></a> that are slotted into a
+<a href="img/304278/000/full.jpg"><span data-balloon-pos="up" aria-label="More about: backplane">backplane</span></a>. Each module is held in
+place by four <a href="img/304278/010/full.jpg"><span data-balloon-pos="up" aria-label="More about: tension bush screws">tension bush screws</span></a> at the corners.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+After loosening the four screws, the module can be
+<a href="img/304278/011/full.jpg"><span data-balloon-pos="up" aria-label="More about: pulled out of the case">pulled out of the case</span></a>.
+Each module consists of two <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>s and is
+<a href="img/304278/005/full.jpg"><span data-balloon-pos="up" aria-label="More about: covered by metal shields">covered by metal shields</span></a>.
+<br />
+<br />
+After <a href="img/304278/005/full.jpg"><span data-balloon-pos="up" aria-label="More about: removing the outer shields">removing the outer shields</span></a>,
+the <a href="img/304278/020/full.jpg"><span data-balloon-pos="up" aria-label="More about: solder side of the PCBs">solder side of the PCBs</span></a> becomes visible.
+Each <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> is held in place by 4 of 5 screws. After removing these, plus the
+centre shield, the <a href="img/304278/021/full.jpg"><span data-balloon-pos="up" aria-label="More about: component side of the boards">component side of the boards</span></a>
+becomes visible. As an exam&shy;ple, the two <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>s of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency-Shift Keying">FSK</span> Receiver
+(module D) are shown in the image on the right.
+The leftmost board is only <a href="img/304278/024/full.jpg"><span data-balloon-pos="up" aria-label="More about: partly populated">partly populated</span></a> and holds
+the amplifier. At the right side is the 3-position level setting (S2).
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304278/021/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="FSK Receiver taken apart">
+<a href="img/304278/021/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="FSK Receiver taken apart">
+            <img src="img/304278/021/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="FSK Receiver taken apart"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <a href="img/304278/023/full.jpg"><span data-balloon-pos="up" aria-label="More about: rightmost board">rightmost board</span></a> holds the rest of the receiver
+circuitry. The two large cans towards the right are transformers or inductors
+and may be part of the tone decoding circuit.
+This board holds an <a href="img/304278/022/full.jpg"><span data-balloon-pos="up" aria-label="More about: indicator lamp (La3)">indicator lamp (La3)</span></a>,
+which lights up when the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Receiver">RX</span> level is low or idle.
+Spare indicators lamps are
+<a href="img/304278/025/full.jpg"><span data-balloon-pos="up" aria-label="More about: stowed inside a compartment">stowed inside a compartment</span></a>
+inside the case lid. It also holds a
+<a href="img/304278/026/full.jpg"><span data-balloon-pos="up" aria-label="More about: plastic tool">plastic tool</span></a> for removing and inserting the lamp.
+It allows a broken lamp to be replaced without opening the module.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="All modules removed from the case">          <img src="img/304278/001/thumbnail.jpg"
+           alt="All modules removed from the case"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/001"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Backplane">          <img src="img/304278/000/thumbnail.jpg"
+           alt="Backplane"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="All five modules (A-E)">          <img src="img/304278/007/thumbnail.jpg"
+           alt="All five modules (A-E)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/007"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Module A- PSU (here shown upside down)">          <img src="img/304278/002/thumbnail.jpg"
+           alt="Module A- PSU (here shown upside down)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/002"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Module B - Local Current Source">          <img src="img/304278/003/thumbnail.jpg"
+           alt="Module B - Local Current Source"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/003"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Module C - FSK Transmitter">          <img src="img/304278/004/thumbnail.jpg"
+           alt="Module C - FSK Transmitter"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/004"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Module D - FSK Receiver">          <img src="img/304278/005/thumbnail.jpg"
+           alt="Module D - FSK Receiver"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/005"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Module E - Connection Unit">          <img src="img/304278/006/thumbnail.jpg"
+           alt="Module E - Connection Unit"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/006"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="FSK Receiver (module D) with shielding removed - right side" data-balloon-length="large">          <img src="img/304278/019/thumbnail.jpg"
+           alt="FSK Receiver (module D) with shielding removed - right side"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 9);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/019"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="FSK Receiver (module D) with shielding removed - left side" data-balloon-length="large">          <img src="img/304278/020/thumbnail.jpg"
+           alt="FSK Receiver (module D) with shielding removed - left side"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 10);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/020"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Tone filter section">          <img src="img/304278/023/thumbnail.jpg"
+           alt="Tone filter section"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 11);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/023"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Close-up of the indicator lamp">          <img src="img/304278/022/thumbnail.jpg"
+           alt="Close-up of the indicator lamp"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 12);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/022"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="FSK Receiver taken apart">          <img src="img/304278/021/thumbnail.jpg"
+           alt="FSK Receiver taken apart"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 13);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/021"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Amplifier with 3-way selector for setting the RX level" data-balloon-length="large">          <img src="img/304278/024/thumbnail.jpg"
+           alt="Amplifier with 3-way selector for setting the RX level"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 14);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/024"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Tension bush screws">          <img src="img/304278/010/thumbnail.jpg"
+           alt="Tension bush screws"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 15);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/010"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Lamp pulling tool">          <img src="img/304278/026/thumbnail.jpg"
+           alt="Lamp pulling tool"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 16);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304278/026"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'B'" onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">B</span></div></div><div style="height: 40px;"></div>
+<div id="slide_2" class="slide" onClick="slideClose('slide_2')"><span class="slide_close_left" onClick="slideClose('slide_2')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_2', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 1 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304278/001/full.jpg" alt="All modules removed from the case">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 2 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304278/000/full.jpg" alt="Backplane">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 3 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304278/007/full.jpg" alt="All five modules (A-E)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 4 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304278/002/full.jpg" alt="Module A- PSU (here shown upside down)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 5 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304278/003/full.jpg" alt="Module B - Local Current Source">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 6 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304278/004/full.jpg" alt="Module C - FSK Transmitter">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 7 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304278/005/full.jpg" alt="Module D - FSK Receiver">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 8 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304278/006/full.jpg" alt="Module E - Connection Unit">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 9 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304278/019/full.jpg" alt="FSK Receiver (module D) with shielding removed - right side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 10 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304278/020/full.jpg" alt="FSK Receiver (module D) with shielding removed - left side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 11 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304278/023/full.jpg" alt="Tone filter section">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 12 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304278/022/full.jpg" alt="Close-up of the indicator lamp">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 13 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304278/021/full.jpg" alt="FSK Receiver taken apart">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 14 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304278/024/full.jpg" alt="Amplifier with 3-way selector for setting the RX level">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 15 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304278/010/full.jpg" alt="Tension bush screws">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 16 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304278/026/full.jpg" alt="Lamp pulling tool">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_2', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_2', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=conn></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Connections</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <a name=conn_mains></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Mains
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The TH-3676 has an unusual and rare power receptacle at its
+front panel. It is made by <a href="../../../ref/conn/mil/files/souriau_847.pdf"><span data-balloon-pos="up" aria-label="More about: Souriau">Souriau</span></a>
+and has 3 pins.
+It accepts a female cable part, such as the Souriau <b>84725F547N002</b>
+or <b>Souriau 8400.90</b>.
+Below is the pinout when looking into the receptacle.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="../../../ref/conn/mil/files/souriau_847.pdf">Souriau catalogue</a>
+          </font>
+          </td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li>220V AC (1)            <li>220V AC (2)            <li>GND          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;" data-balloon-pos="up" aria-label="Souriau male receptacle 84725R. Pinout when looking into the receptacle." data-balloon-length="large" class="tooltip-red">
+              <div style="position: relative;" data-balloon-pos="up" aria-label="Souriau male receptacle 84725R. Pinout when looking into the receptacle." data-balloon-length="large" class="tooltip-red">
+              <img src="../../../ref/conn/mil/svg/souriau_84725R.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               alt="Souriau male receptacle 84725R. Pinout when looking into the receptacle."
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=conn_line></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Line interface
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+At the far right of the front panel are four vertically aligned banana sockets.
+These sockets are used for connection of the subscriber line or a radio. They
+can be used in 2-wire or 4-wire mode. Note that, when connecting to a radio,
+the line interface must always be used in 4-wire mode.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/th3676_line.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+In 2-wire mode, the upper two banana sockets are used for connection to the
+line, whilst the lower two sockets can be used for the connection of an
+(optional) field telephone. When switch S1 is in the centre position, the
+teleprinter is connected to the line. When S1 is set to 'telephone', the
+field telephone is connected directly to the line, whilst
+device and teleprinter are disconnected.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=conn_local></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Local interface
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Three 6 mm jack sockets are available for connection of the teleprinter or an
+encryption device. These sockets are located on the rightmost module (E), just
+left of the banana sockets of the line interface. In 4-wire mode (see below),
+ the teleprinter is connected to the lower two sockets:
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/th3676_local_4.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+In 2-wire mode &mdash; which is only available on the TH-3676 and not on the A
+and B versions &mdash; the teleprinter should be connected to the upper socket
+as shown in the diagram below.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/th3676_local_2.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+Note that the upper two jack sockets are connected in series and that
+these sockets are shorted automatically when the plug is removed. This
+allows an additional device, such as a tape reader, to be connected in
+series with the transmitter contact of the teleprinter.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          TH-3676(A) to Ecolex X
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When connecting the Ecolex X encryption/decryption device (Dutch: <span class="short tooltip-red" data-balloon-pos="up" aria-label="Vercijfer/Ontcijfer Toestel (Encryption/Decryption Device)" data-balloon-length="large">VOT</span>) to
+the TH-3676(A), the two jacks from the cable of the Ecolex X should be
+connected to the lower two jack sockets of the device, as shown in the
+diagram below. In this example, the local interface (i.e. the four banana
+sockets at the right) are used in 2-wire mode. This means that only the
+upper two sockets are used to connect the device to the subscriber line,
+or to a TH-3676(A) at a different location.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/th3676_ec10.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+In this configuration, it is possible to connect a regular (analogue) field telephone
+to the lower two banana terminals. This telephone can be used for verbal
+liasion with the exchange, by placing the mode-selector on module (E)
+in the telephone position (i.e. fully clockwise). This connects the telephone
+directly to the line, and disconnects the TH-3676 completely.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../../crypto/philips/ec10/index.htm#conn">More about connecting the Ecolex X</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          TH-4179 radio adapter
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When the TH-3676(A) had to be connected to a radio set, e.g., the
+<a href="../../../radio/rt3600"><span data-balloon-pos="up" aria-label="More about: Philips RT-3600 VHF/FM set">Philips RT-3600 VHF/FM set</span></a>, it was necessary
+to use the additional <a href="../th4179"><span data-balloon-pos="up" aria-label="More about: TH-4179 radio adapter">TH-4179 radio adapter</span></a> shown in the
+image on the right.
+<br />
+<br />
+This passive device &mdash; it is not powered &mdash; con&#173;verts the signal levels
+and allows control over the push-to-talk (<span class="short" aria-label="Dutch Post Office" data-balloon-pos="up"><a href="../../../manuf/ptt" class="short" >PTT</a></span>) contact of the radio
+(the two red sockets).
+When the TH-3676<b>B</b> is used, the TH-4179 radio adapter is not needed.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../th4179">More information</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="TH-4179 radio adapter unit" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="TH-4179 radio adapter unit" class="tooltip-red">
+            <img src="../th4179/img/304330/010/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="TH-4179 radio adapter unit"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Specifications</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Device</div><a href="../../index.htm#tcd">Telex Connection Device (TCD)</a> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Modulator/Demodulator">MODEM</span> (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency-Shift Keying">FSK</span>)            <li><div style="display:inline-block; width:100px;">Purpose</div>Military wired and wireless telegraphy (telex)            <li><div style="display:inline-block; width:100px;">Model</div>TH-3676 (<a href="#spec_ver">see below</a>)            <li><div style="display:inline-block; width:100px;">Manufacturer</div><a href="../index.htm">Telefunken</a>            <li><div style="display:inline-block; width:100px;">Country</div>Germany            <li><div style="display:inline-block; width:100px;">Year</div>1964 ~            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="National Stock Number (NATO Stock Number)">NSN</span></div>5805-17-036-0253            <li><div style="display:inline-block; width:100px;">Users</div>Germany, Netherlands            <li><div style="display:inline-block; width:100px;">Network</div><span class="short" aria-label="Dutch Post Office" data-balloon-pos="up"><a href="../../../manuf/ptt" class="short" >PTT</a></span> (Netherlands), <span class="short tooltip-red" data-balloon-pos="up" aria-label="Deutsche Bundespost (German Post Office)">DBP</span> (Germany)            <li><div style="display:inline-block; width:100px;">Line</div>2-wire, 4-wire            <li><div style="display:inline-block; width:100px;">Local</div>2-wire, 4-wire (TH-3676)<br /><div style="display:inline-block; width:100px;"></div>4-wire, single-current 40mA, double-current 12.5/20mA (TH-3676A)            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency-Shift Keying">FSK</span></div>Mark: 1325 Hz, Space: 1225 Hz            <li><div style="display:inline-block; width:100px;">Power</div>11, 127 or 220V AC &#177;10%. 47 - 63 Hz            <li><div style="display:inline-block; width:100px;">Dimensions</div>150 &#215; 300 &#215; 283 mm (HWD)            <li><div style="display:inline-block; width:100px;">Weight</div>11.5 kg          </ul>
+</font></td></tr></table>        <a name=spec_ver></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Versions
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">TH-3676</div>(1964) Standard version (local: single current only, 2- or 4-wire)            <li><div style="display:inline-block; width:100px;">TH-3676A</div>(1975) <span class="short" aria-label="Dutch Post Office" data-balloon-pos="up"><a href="../../../manuf/ptt" class="short" >PTT</a></span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Deutsche Bundespost (German Post Office)">DBP</span> version (local: single/double-current, 4-wire) <a href="#doc_5">[E]</a>            <li><div style="display:inline-block; width:100px;">TH-3676B</div>(1976) Same as A-version, but with 10-way connector for <span class="short tooltip-red" data-balloon-pos="up" aria-label="Single Side Band">SSB</span> radio <a href="#doc_6">[F]</a>          </ul>
+</font></td></tr></table>        <a name=spec_mod></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Modules
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <li><div style="display:inline-block; width:100px;">5 NG 62</div>Power Supply Unit (PSU)            <li><div style="display:inline-block; width:100px;">5 Trs 626</div>Local Current Source            <li><div style="display:inline-block; width:100px;">5 Trs 624</div>FSK Transmitter            <li><div style="display:inline-block; width:100px;">5 Trs 625</div>FSK Receiver            <li><div style="display:inline-block; width:100px;">5 Trs 621</div>Line Interface          </ol type=A>
+</font></td></tr></table><div style="height: 20px;"></div>        <a name=doc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Documentation</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <a name="doc_1"></a>
+            <li><a href="files/LS31_2_1.pdf">LS 31-2/1 - Introduction TH-3676 (Dutch) <sup><font color="#FF8800">1</font></sup> </a><br />
+Training instruction book (Lesstencil).
+CM-304279/B.<br />
+Royal Dutch Army Signal Corps Training Centre. 1 August 1988.
+            <p />
+            <a name="doc_2"></a>
+            <li><a href="files/LS31_2_5.pdf">LS 31-2/5 - Terminating Unit TH-3676 (Dutch) <sup><font color="#FF8800">1</font></sup> </a><br />
+Training instruction book (Lesstencil).
+CM-304279/C.<br />
+Royal Dutch Army Signal Corps Training Centre. 1 August 1988.
+            <p />
+            <a name="doc_3"></a>
+            <li><a href="files/IK11_519_1.pdf">IK 11-519/1, Instruction card 1 (Dutch)</a><br />
+Describes connected of the TH-3676 to the Ecolex IV cipher machine.<br />
+Date and contents currently unknown.
+            <p />
+            <a name="doc_4"></a>
+            <li><a href="files/IK11_519_2.pdf">IK 11-519/2, Instruction card 2 (Dutch)</a><br />
+Describes connected of the TH-3676 to the Ecolex IV cipher machine.<br />
+Date and contents currently unknown.
+            <p />
+            <a name="doc_5"></a>
+            <li><a href="../../../crypto/philips/ec10/files/EC10_IK11_519_3.pdf">IK 11-519/3, Instruction card 3 (Dutch)</a><br />
+Describes connection of the TH-3676(A) to 2- or 4-wire line.<br />
+CM-300667. Dutch Army, 27 September 1976.
+            <p />
+            <a name="doc_6"></a>
+            <li><a href="files/IK11_519_4.pdf">IK 11-519/4, Instruction card 4 (Dutch) <sup><font color="#FF8800">1</font></sup> </a><br />
+Describes connection of the TH-3676B to an SSB radio.<br />
+CM-304279/A. Dutch Army, 9 April 1979.<br />
+<small>Replaces IK11-519/4 of 27 September 1976.</small>
+            <p />
+            <a name="doc_7"></a>
+            <li><a href="files/IK11_519_5.pdf">IK 11-519/5, Instruction card 5 (Dutch) <sup><font color="#FF8800">2</font></sup> </a><br />
+Connecting TH-3676 or TH-3676A  to teleprinter and/or Ecolex X.<br />
+Dutch Army, 22 September 1980.
+            <p />
+            <a name="doc_8"></a>
+            <li><a href="files/TH3676_det.pdf">Detaillijst Eindinstallatie, Telegrafie, TH3676, TH3676A, TH3676B</a><br />
+Checklist Terminating Unit, Telegraphy, TH-3676 (Dutch).<br />
+1/2 DL 5805-17-032-3082. 25 July 1977.
+          </ol type=A>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Document kindly provided by Bart Wessel <a href="#ref_1">[1]</a>.
+          </li>
+          <li>
+Document kindly provided by Kees Raaymakers.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+<li><font color=#F52E00>Bart Wessel, TH-3676A and documentation - THANKS !</font><br />
+Crypto Museum, December 2024.
+            <p />
+            <a name="ref_2"></a>
+            <li><a href="files/ms_1975_3_124.pdf">JRF Peters, <i>Evolutie in AM-radioapparatuur bij de Koninklijke Landmacht</i></a><br />
+Militaire Spectator, March 1975, Volume 3. Page 128.
+          </ol>
+        </font></td></tr></table>
+        <a name=contr></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Contributors
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>Kees Raaymakers            <li>Paul Reuvers            <li>Marc Simons            <li>Bart Wessel          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../../../crypto/philips/ec4">Philips Ecolex IV encryptor</a><br />
+            <li><a href="../../../crypto/philips/ec10">Philips Ecolex X encryptor</a><br />
+            <li><a href="../th4179">TH-4179 radio adapter</a><br />
+            <li><a href="../../../manuf/telefunken/index.htm">Telefunken, the manufacturer</a><br />
+            <li><a href="../../index.htm">Other telegraphy equipment</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Sunday 29 December 2024. Last changed: Wednesday, 05 November 2025 - 12:15 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

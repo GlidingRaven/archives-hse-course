@@ -1,0 +1,2545 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>About</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="index.htm"><img src="svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but sub first sel" onClick="location.href='mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+        <a href="https://enigmamuseum.com/em.htm" id="cryptotour"">
+          <div  data-balloon-pos="left" aria-label="Crypto Museum is a member of the worldwide CRYPTO TOUR. Click this icon to visit the next crypto-related website." data-balloon-length="medium" style="margin-top: 10px; width: 72px;">
+            <img class="tour" style="width: 70px;" src="svg/logo/cryptotour_logo.svg">
+          </div>
+          <div  data-balloon-pos="left" aria-label="Crypto Museum is a member of the worldwide CRYPTO TOUR. Click this icon to visit the next crypto-related website." data-balloon-length="medium" style="margin-top: 10px; width: 72px;">
+            <img style="width: 70px;" src="svg/logo/cryptotour_text.svg">
+          </div>
+        </a>
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="index.htm"><img src="svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>About us</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Stichting Cryptomuseum
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Crypto Museum is a nonprofit organisation, registered with the Chamber of
+Commerce in the Netherlands as <b>Stichting Cryptomuseum</b> (Eng: Crypto Museum
+Trust) under registration number <b>82568111</b>, with its legal seat in
+Eindhoven (Netherlands). Since 1 January 2025, it is also a
+<a href="anbi"><span data-balloon-pos="up" aria-label="More about: Public Benefit Organisation (PBO) ...">Public Benefit Organisation (PBO) &mdash; a registered charity &mdash;</span></a>
+in The Netherlands known as an <a href="anbi"><span data-balloon-pos="up" aria-label="More about: ANBI">ANBI</span></a>.
+<br />
+<br />
+The museum was founded in 2003 at the initiative of Paul Reuvers and
+Marc Simons, with the goal to collect, restore and preserve
+a wide collection of
+cryptographic items, historical cipher machines, communications equipment,
+espionage attributes and related items and documents, and describe their
+technical and historical context. All information is provided free of charge.
+<br />
+<br />
+Most items are part of a physical collection,
+which is publicly disclosed via <a href="index.htm"><span data-balloon-pos="up" aria-label="More about: this website">this website</span></a>, through
+<a href="events/lectures.htm"><span data-balloon-pos="up" aria-label="More about: lectures, exhibitions,">lectures, exhibitions,</span></a>
+in <a href="pub/index.htm"><span data-balloon-pos="up" aria-label="More about: official publications">official publications</span></a> and in cooperation
+with other museums. An overview of the events in which Crypto Museum has
+participated in the past, can be found in the
+<a href="events/index.htm"><span data-balloon-pos="up" aria-label="More about: Events section on this website">Events section on this website</span></a>.
+Since Crypto Museum is a <a href="#anbi"><span data-balloon-pos="up" aria-label="Jump to: nonprofit ANBI">nonprofit ANBI</span></a>, any <a href="donate.htm"><span data-balloon-pos="up" aria-label="More about: donations">donations</span></a>
+will be used solely for the acquisition, restoration and preservation of the
+collection. All work is carried out by the board members and volunteers free of
+charge. No salaries are payed to anyone.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="anbi">Public information about the Crypto Museum Trust</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          </td></tr>
+        </table>
+<br />        <a name=mission></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Mission statement</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Why we do this
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is a rather lengthy story, in which we try to explain why we have created
+Crypto Museum and what goals we have set ourselves. If you can find the time,
+please read it and feel free to comment. If you don't want to read it all,
+please read at least the abstract in the grey cadre below.
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="background-color: #EEEEEE; font-size: 8pt; padding: 12px; color: #777777; overflow: auto;">
+<font color=#F52E00>ABSTRACT</font>
+<br />
+<br />
+Cryptography - or crypto for short - is all around us: in our credit card,
+in our car keys, as part of electronic banking and even in our web browser.
+Crypto is generally used to exchange secret information.
+In a war it is important that secrets are kept secret, which is why
+cryptography plays an important role in the military world.
+That was the case during <a href="spy/glossary.htm#ww2"><span data-balloon-pos="up" aria-label="More about: WWII">WWII</span></a>
+and during the dark days of the <a href="spy/glossary.htm#cold_war"><span data-balloon-pos="up" aria-label="More about: Cold War">Cold War</span></a>,
+and that is still the case today.
+But crypto also plays an important part in our personal life today.
+<br />
+<br />
+By collecting crypto equipment, we try to capture an important part of
+our history. A part that has been kept secret for a long time.
+If we don't act now, we might lose this part of our history forever.
+This website is our attempt to
+describe the equipment to the best of our abilities.
+Whenever possible, we will also try to explain the operating principles and
+the underlying history.
+If we succeed in this mission, we may all learn from it.
+<br />
+<br />
+Nearly all objects in our collection are in full working condition and
+we are doing our very best to repair and restore any broken or incomplete
+devices, so that we can demonstrate them to the public.
+Although at present Crypto Museum is a virtual museum, we want to share our knowledge with as many people as possible. We will therefore
+cooperate with other museums whenever possible.
+At the same time we are trying to raise the profile of technology and
+engineering in general;
+a discipline than tends to be snowed under.
+<br />
+<br />
+<i>Paul Reuvers &amp; Marc Simons</i>
+<br />
+Eindhoven (The Netherlands)
+        </div>
+        <div class="clear_float"></div>
+<div style="height: 20px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>About the founders</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Crypto Museum is an initiative of Paul Reuvers and Marc Simons,
+both self-employed electronics engineers from Eindhoven (Netherlands).
+Paul established his company &ndash; X-Ample Technology BV &ndash; in 1986
+and has specialized in the development of embedded software
+and user interfaces for health-care and agriculture.
+<br />
+<br />
+Marc founded his company YiG Engineering BV in 2000 and
+specializes in the development of electronic circuits, also known as
+<i>hardware</i>, for a variety of applications ranging from the
+Senseo coffee machine to state-of-the-art FPGA designs, for companies such as
+Philips and Xilinx. He also developed the control system for a well-known
+old people's scooter brand.
+One of his latest projects is an intelligent weed-control system that he
+developed in close cooperation with Paul.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Crazy about technology
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+We started building the Crypto Museum collection in 2004, but our interest in
+technology dates back a lot further, to our early childhood.
+Already at an early age we were considered 'strange people'.
+Always busy with wires and a soldering iron. Building model trains,
+transmitters, audio amplifiers and eventually becoming radio hams
+and ultimately electronics engineers.
+<br />
+<br />
+Later in life we both independently took the step to establish our own
+company and become self-employed. To do things our own way.
+It gave us the liberty to take on the projects that we really cared about,
+but also brought great responsibility.
+After all, we want our customers to be happy, as at the end of the day,
+they pay the bills.
+Today, we both have a well running enterprise, but to our dismay we see the interest
+in technology from young people declining rapidly.
+As if everyone wants to become a manager these days...
+Please do not forget that our society has an enormous need for new
+technicians with fresh and challenging ideas. Perhaps now more then ever.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Bletchley Park
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+It all started in 2001 when a good friend &mdash; Nanno van Haaften &mdash; lent us
+Rober Harris' novel <i><b>'Enigma'</b></i>.
+Reading is not the most favorite activity of most engineers, but
+he insisted that we'd read the book as, according to him, it was a most intreguing
+and appealing story...
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+And he was right. Although it was a novel, it was most fascinating. How was it
+possible that the British broke the <a href="crypto/enigma/index.htm"><span data-balloon-pos="up" aria-label="More about: Enigma">Enigma</span></a> codes
+during <span class="short" aria-label="World War II" data-balloon-pos="up"><a href="crypto/glossary.htm#ww2" class="short" >WWII</a></span> ?
+And why was its history kept secret until 1974?
+<br />
+<br />
+And where was this place <i><a href="bp/index.htm"><span data-balloon-pos="up" aria-label="More about: Bletchley Park">Bletchley Park</span></a></i> ? Did it still
+exist? In fact we were so fascinated about it, that a few weeks later
+we booked a ferry to the <span class="short" aria-label="United Kingdom" data-balloon-pos="up"><a href="crypto/uk/index.htm" class="short" >UK</a></span> to spend our holidays at Bletchley Park (BP).
+When we arrived at <span class="short" aria-label="Bletchley Park" data-balloon-pos="up"><a href="bp/index.htm" class="short" >BP</a></span>, we saw buildings in decay and an improvised museum.
+But despite all that, we were presented with a complete and clear picture of
+what had happened there during <span class="short" aria-label="World War II" data-balloon-pos="up"><a href="crypto/glossary.htm#ww2" class="short" >WWII</a></span>.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="bp/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="The Mansion at Bletchley Park">
+<a href="bp/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="The Mansion at Bletchley Park">
+            <img src="bp/img/500006/001/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="The Mansion at Bletchley Park"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+We walked the so-called <i>Crypto Trail</i> and were educated with all
+stages of a secret German message. From its origin, through interception, to
+the breaking of the codes and finally the intelligence derrived from it.
+At the end of the trail there even was a real
+<a href="crypto/enigma/m3/index.htm"><span data-balloon-pos="up" aria-label="More about: Enigma M3 machine">Enigma M3 machine</span></a>!
+<br />
+<br />
+We were overwelmed; what a beautiful place this was. We spent three full days
+at the museum and soaked up every piece of information that our limited brains
+could handle. The smell of the old huts, the old cipher equipment
+and perhaps even the Enigma-ghost.
+And it matched Robert Harris' book even in the finest details, making it feel almost
+like a <i>deja-vu</i>.
+<br />
+<br />
+One of the nicest things about British people is that, as soon as they notice
+your interest, they are prepaired to explain things in great detail.
+From the intercept stations &mdash; the so-called <i>Y-Service</i> &mdash; to the
+Bombe machines that were used for breaking the Enigma messages.
+In many ways, the items described in Robert Harris' book,
+came alive before our very eyes.
+<br />
+<br />
+Apart from the Crypto Trail, <span class="short" aria-label="Bletchley Park" data-balloon-pos="up"><a href="bp/index.htm" class="short" >BP</a></span> had a lot of other interesting stuff to offer. Many historical cipher machines and methods
+were on display, and the principles
+behind codemaking and codebreaking were explained and demonstrated.
+We came to realise that there was a complete business behind this hush-hush
+crypto stuff. (If you search the internet, you will soon realise that this
+is still the case today.)
+The technology behind the cipher machines is really fascinating.
+From a mechanical point of view, some of these machines are real marvels
+of human engineering.
+<br />
+<br />
+A fews days later we were on the ferry back to The Netherlands. We booked
+a cabin, so that we could sleep during the 10 hour trip, but the Enigma kept
+us awake. We spend the entire night day-dreaming about how wonderful it would
+be to posess our own <a href="crypto/enigma/index.htm"><span data-balloon-pos="up" aria-label="More about: Enigma machine">Enigma machine</span></a>.
+<br />
+<br />
+When we arrived home, we immediately started to work out the concept of an
+electronic version of the Enigma. It would give us &ndash; and everybody else &ndash; the
+ability to own an affordable Enigma machine. The results of our efforts were an
+<a href="crypto/enigma/sim/riscos.htm"><span data-balloon-pos="up" aria-label="More about: Enigma computer simulation for ...">Enigma computer simulation for RISC OS computers</span></a>
+(Acorn) and the now famous <a href="kits/enigma/index.htm"><span data-balloon-pos="up" aria-label="More about: Enigma-E self-build kit">Enigma-E self-build kit</span></a>.
+Both 100% compatible with real war-time Enigma machines.
+And from that moment on, we were infested by the Crypto-Virus...
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          First contact
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the summer of 2003 we went back to <a href="bp/index.htm"><span data-balloon-pos="up" aria-label="More about: Bletchley Park">Bletchley Park</span></a>.
+This time with a working prototype
+of the <a href="kits/enigma/index.htm"><span data-balloon-pos="up" aria-label="More about: Enigma-E">Enigma-E</span></a> under our arm.
+We wanted to show it to people at <span class="short" aria-label="Bletchley Park" data-balloon-pos="up"><a href="bp/index.htm" class="short" >BP</a></span> and to find out whether it would be an
+interesting product for the museum shop. It was just a gamble as we were not
+certain whether or not a self-build electronics kit would actually be of interest
+to the public.
+<br />
+<br />
+We were lucky, as we happened to have picked the weekend of the annual Enigma
+Reunion and the park was crowded with people 'in the know'. On the first day we
+met well-known Enigma researcher
+David Hamer
+with whom we had so far only exchanged
+e-mails. David noticed the small wooden box under Marc's arm and asked what it was.
+We demonstrated the Enigma-E and David immediately fell in love with it.
+He insisted that we would talk to the <span class="short" aria-label="Bletchley Park" data-balloon-pos="up"><a href="bp/index.htm" class="short" >BP</a></span> director.
+<br />
+<br />
+Although it was an extremely busy weekend, David had successfully persuaded
+<span class="short" aria-label="Bletchley Park" data-balloon-pos="up"><a href="bp/index.htm" class="short" >BP</a></span> director Christine Large to grant us a five minute slot. The rest is
+history. Christine spent more than an hour with us and the Enigma-E, and
+immediately recognised its promotional potential. And it wouldn't be long
+before the first batch of kits became available through the <span class="short" aria-label="Bletchley Park" data-balloon-pos="up"><a href="bp/index.htm" class="short" >BP</a></span> shop.
+<br />
+<br />
+That night, David invited us to a closed meeting of the American Cryptogram
+Association (ACA) that was held at <span class="short" aria-label="Bletchley Park" data-balloon-pos="up"><a href="bp/index.htm" class="short" >BP</a></span> that weekend as well.
+The ACA is a group of interesting people who share the same 'strange' hobby.
+Many of them are collectors of cryptographic items and related equipment.
+It was a real eye-opener and we immediately felt comfortable in this
+company of like-minded. The next day we had to admit to ourselves that the
+Crypto-Virus had really gotten under our skin.
+<br />
+<br />
+We became regular visitors of <a href="bp/index.htm"><span data-balloon-pos="up" aria-label="More about: Bletchley Park (BP)">Bletchley Park (BP)</span></a>
+and of <a href="links/tnmoc/index.htm"><span data-balloon-pos="up" aria-label="More about: The National Museum of Computing ...">The National Museum of Computing (TNMOC)</span></a>,
+where we spoke with veterans and made many new friends. We came in contact with
+other visitors and collectors, and even after all these years, it still is an
+inspiring place to be.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>The birth of Crypto Museum</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the spring of 2004, the first small cipher machine crossed our path.
+On a local aution website, we found our first
+<a href="crypto/hagelin/c446"><span data-balloon-pos="up" aria-label="More about: Hagelin C-446">Hagelin C-446</span></a>, which a few days later we
+showed it to our good friend Cor Moerman. Cor, who is the curator of the
+<a href="http://www.cryptomuseum.nl/jancorver"><span data-balloon-pos="up" aria-label="www.cryptomuseum.nl (off-site)">Dutch Ham Radio Museum</span></a>, immediately recognised our enthusiasm and told us
+that he also had a 'forgotten' Hagelin that was dusting away somewhere
+on a shelf. It didn't fit in with his collection, he explained.
+And then we had two Hagelins.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+He also jokingly warned us about collecting. "If this really takes off", he said,
+"you will need more space and eventually you may have to establish a real
+'Crypto Museum' in due course".
+At the time, we didn't have a clue what he was talking about
+and didn't think that one day we would have
+to acknowledge his insights.
+<br />
+<br />
+After a few years of collecting equipment and stories, Crypto Museum suddenly
+became reality in 2008. Cor came up with the idea for a special
+temporary exhibition about
+'<a href="events/2008/sm/index.htm"><span data-balloon-pos="up" aria-label="More about: secret messages">secret messages</span></a>',
+and wanted to know if we were interested.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="crypto/hagelin/c446/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="The standard C-446A (right) and the special C-446/RT (left) side-by-side" data-balloon-length="large">
+<a href="crypto/hagelin/c446/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="The standard C-446A (right) and the special C-446/RT (left) side-by-side" data-balloon-length="large">
+            <img src="crypto/hagelin/c446/img/300024/008/Small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="The standard C-446A (right) and the special C-446/RT (left) side-by-side"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Many objects from our collection were given on loan to his museum,
+complemented by items from Cor's own collection,
+the collections of Jan Rijnders, Arthur Bauer and several organisations.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+It was merely a gamble, but turned out to be an enourmous
+success: there were days that people left the building because
+it was too crowded!
+A huge compliment to us all, but especially to the museum volunteers
+and the visitors who shared their fascinating stories with us.
+The event brought us in contact with many new people and they in turn
+brought us numerous new objects.
+<br />
+<br />
+By the end of 2008 we had registered the Crypto Museum website and at the
+beginning of 2009 we started to upload detailed descriptions of the
+most important items we had in our collection.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="events/2008/sm/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="events/2008/sm/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="events/2008/sm/img/jc01_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=199
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+We felt the urge to share our knowledge and let the world enjoy the things
+we love so much. With the website,
+we have effectively established a virtual museum. It is open 24/7 and
+gives us the ability to exhibit our collection permanently,
+regardless of distance, pandemics and lockdowns.
+<br />
+<br />
+One of the goals of a museum is to share knowledge. This can be out of personal
+interest or as part of a research project. And it seems to work: we get frequent
+requests from students needing help with their talks, or from former employees
+of the Department of Defence who want to see 'their old kit' again.
+In addition we give about 10 to 15
+<a href="events/lectures.htm"><span data-balloon-pos="up" aria-label="More about: talks on the subject">talks on the subject</span></a> every year and are
+working together with other museums when setting up
+<a href="events/index.htm"><span data-balloon-pos="up" aria-label="More about: new exhibitions">new exhibitions</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Fascination for cryptology
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The techniques behind cryptography are truly fascinating.
+Early systems, like the <a href="crypto/caesar/cipher.htm"><span data-balloon-pos="up" aria-label="More about: Caesar Cipher">Caesar Cipher</span></a>
+and the <a href="crypto/vigenere/index.htm"><span data-balloon-pos="up" aria-label="More about: Vigen&#232;re Cipher">Vigen&#232;re Cipher</span></a>,
+were mainly based on simple <i>alphabet transposition</i>.
+Who hasn't used these seemingly 'unbreakable' methods as a child
+to exchange secret messages with a friend?
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the 20th century, the first mechanical cipher machines appeared.
+Big names in Europe in those days were
+<a href="crypto/enigma/index.htm#manuf"><span data-balloon-pos="up" aria-label="More about: Chiffriermaschinen AG (Enigma)">Chiffriermaschinen AG (Enigma)</span></a>
+and <a href="crypto/hagelin/index.htm"><span data-balloon-pos="up" aria-label="More about: Boris Hagelin">Boris Hagelin</span></a>.
+Such machines are often called
+<a href="crypto/rotor.htm"><span data-balloon-pos="up" aria-label="More about: rotor machines">rotor machines</span></a>
+as most of them consist of
+a series of rotating (electro) mechanical wheels.
+<br />
+<br />
+Rotor machines have become extremely popular among collectors (including
+ourselves), mainly because they are the last generation of cipher machines were
+you can actually <i>see</i> how they work. Furthermore they are relatively easy
+to understand, repair, maintain and demonstrate.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="crypto/enigma/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Pressing the wheels together">
+<a href="crypto/enigma/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Pressing the wheels together">
+            <img src="crypto/enigma/i/img/300002/038/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Pressing the wheels together"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+With <a href="crypto/rotor.htm"><span data-balloon-pos="up" aria-label="More about: rotor machines">rotor machines</span></a>,
+the cryptographic <i>key</i> is largely based on the
+settings of the rotors at the beginning of a message.
+They are based on <i>symmetric key cryptography</i>, as the keys for coding and
+decoding are identical. The advantage of such systems, is that the key is much
+shorter than the actual message, effectively replacing a large secret by a
+smaller one, that is easier to handle.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          The unbreakable code
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The early 1950s saw the rise of <a href="telex/index.htm"><span data-balloon-pos="up" aria-label="More about: digital telegraphy">digital telegraphy</span></a>,
+also known as <a href="telex/index.htm"><span data-balloon-pos="up" aria-label="More about: teletype">teletype</span></a>
+or <a href="telex/index.htm"><span data-balloon-pos="up" aria-label="More about: telex">telex</span></a>. It replaced earlier systems that relied
+on <a href="radio/morse/index.htm"><span data-balloon-pos="up" aria-label="More about: Morse Code">Morse Code</span></a>.
+With <a href="telex/index.htm"><span data-balloon-pos="up" aria-label="More about: teletype">teletype</span></a>, letters were transmitted as digital bits,
+and messages were stored on so-called punched paper tape.
+It allowed larger messages to be sent at much higher speed,
+resulting in the need for faster - more versatile -
+<a href="crypto/index.htm"><span data-balloon-pos="up" aria-label="More about: cipher machines">cipher machines</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+For military applications, an ancient &ndash; and truly unbreakable &ndash;
+cipher was given a new lease
+of life: the <a href="crypto/otp/index.htm"><span data-balloon-pos="up" aria-label="More about: One Time Pad (OTP)">One Time Pad (OTP)</span></a>.
+It was adapted for use with <a href="telex/index.htm"><span data-balloon-pos="up" aria-label="More about: telex">telex</span></a>
+and became the heart of so-called
+<a href="crypto/ott.htm"><span data-balloon-pos="up" aria-label="More about: One-Time Tape machines (OTT)">One-Time Tape machines (OTT)</span></a>
+or <a href="crypto/mixer.htm"><span data-balloon-pos="up" aria-label="More about: mixers">mixers</span></a>, such as the
+<a href="crypto/philips/ec4/index.htm"><span data-balloon-pos="up" aria-label="More about: Philips Ecolex 4">Philips Ecolex 4</span></a>
+and the <a href="crypto/siemens/m190/index.htm"><span data-balloon-pos="up" aria-label="More about: Siemens M-190">Siemens M-190</span></a>.
+<br />
+<br />
+Imagine a noise generator that produces truly random (and therefore
+unpredicatable) numbers that are written to a punched paper tape.
+Only one copy of that random tape is made.
+It is sent to the other end of the communication link by means of a
+(secure and trusted) courier.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="crypto/otp/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="OTP with random 5-number groups">
+<a href="crypto/otp/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="OTP with random 5-number groups">
+            <img src="crypto/otp/ddr/img/301099/045/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="OTP with random 5-number groups"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+Plaintext from the sender is 'mixed' with the key-tape using the
+<a href="crypto/vernam.htm"><span data-balloon-pos="up" aria-label="More about: Vernam Cipher">Vernam Cipher</span></a> principle (XOR).
+The key-tape is used only once, and is destroyed immediately after use.
+This way, a secret will remain secret forever.
+The disadvantage of <span class="short" aria-label="One-Time Pad" data-balloon-pos="up"><a href="crypto/otp/index.htm" class="short" >OTP</a></span> and <span class="short" aria-label="One-Time Tape" data-balloon-pos="up"><a href="crypto/ott.htm" class="short" >OTT</a></span>
+systems however, is that the key must be at least as long as
+the message itself in order to prevent repeats in the cipher stream.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+For the same reason, an <span class="short" aria-label="One-Time Pad" data-balloon-pos="up"><a href="crypto/otp/index.htm" class="short" >OTP</a></span> can only be used once.
+A drawback of this system is the problem of key distribution.
+Both sides need a sufficient supply of key tapes and you have to
+know in advance who you want to contact. In practice, it
+appeared to be too cumbersome for field use.
+<br />
+<br />
+Nevertheless, it remained in use for a long time for messages at the highest level in
+situations where secrecy was paramount.
+During the <a href="spy/glossary.htm#cold_war"><span data-balloon-pos="up" aria-label="More about: Cold War">Cold War</span></a>,
+the Americans and the Russians exchanged confidential messages with
+each other via the <a href="crypto/hotline/index.htm"><span data-balloon-pos="up" aria-label="More about: Moscow-Washington hotline">Moscow-Washington hotline</span></a>
+using this principle.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="crypto/mixer.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Siemens M-190 mixer machine">
+<a href="crypto/mixer.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Siemens M-190 mixer machine">
+            <img src="crypto/siemens/m190/img/300029/005/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Siemens M-190 mixer machine"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Have you ever heard the endless sequences of
+<a href="spy/owvl/index.htm"><span data-balloon-pos="up" aria-label="More about: seemingly random numbers">seemingly random numbers</span></a>,
+read by a German woman on the <i>short wave bands</i> during the
+<a href="spy/glossary.htm#cold_war"><span data-balloon-pos="up" aria-label="More about: Cold War">Cold War</span></a>?
+Well, they were actually secret messages
+for foreign spies operating in our countries. And they
+were encrypted with the <a href="crypto/otp/index.htm"><span data-balloon-pos="up" aria-label="More about: unbreakable OTP">unbreakable OTP</span></a>.
+For this reason you will also find non-crypto equipment on this website,
+such as <a href="spy/index.htm"><span data-balloon-pos="up" aria-label="More about: spy radio sets">spy radio sets</span></a> and <a href="burst/index.htm"><span data-balloon-pos="up" aria-label="More about: burst encoders">burst encoders</span></a>.
+Surprisingly, several <a href="spy/owvl/index.htm"><span data-balloon-pos="up" aria-label="More about: numbers stations">numbers stations</span></a>
+are still active today (2021)...
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Asymmetric key cryptography
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the 1970s, digital microprocessors became widely available and it
+wasn't before long that they were used in a new generation of cryptographic
+equipment. In 1976, Whitfield Diffie and Martin Hellman introduced a new method
+for safely exchanging message keys over an insecure channel:
+<i>asymmetric key cryptography</i>.
+It is entirely based on mathematics, and consists of a <i>public key</i>
+that is derived from a chosen <i>private key</i>.
+Both parties can freely exchange their public keys.
+<br />
+<br />
+Once the keys have been exchanged with this asymmetric method, the message
+itself can be transmitted by means of existing symmetric cryptography.
+With this method, it is impossible to reconstruct the private keys from the
+public keys. Unknown to Diffie and Hellman at the time,
+the same method had already been invented independently a few years earlier by
+the British <span class="short" aria-label="Government Communiations Headquarters (UK)" data-balloon-pos="up"><a href="intel/gchq/index.htm" class="short" >GCHQ</a></span>.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=black></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>The black box era</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In recent years, the internet has become increasingly popular for exchanging
+messages, even within the Department of Defense.
+Cryptographic systems have changed into 'black boxes' that allow secure
+systems to exchange information over insecure networks.
+Such boxes only have a handful of connectors, switches and indicator lights
+and there is not much to see anymore.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Inside the boxes are extremely powerfull digital processors and
+<i>Field Programmable Gate Arrays</i> (FPGAs),
+executing serious crypto-algorithms.
+<br />
+<br />
+Over the years, cryptography has evolved from simple mechanics to pure mathematics
+at the highest possible level. Only a handful of people are capable of developing new
+cryptographic techniques.
+At the same time, codebreaking, or cryptanalysis, has become a serious business
+as well. With the ever increasing computing power it is now possible to break
+a cipher that was believed to be unbreakable just 10 years ago.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="crypto/gretag/720/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Gretacoder 720">
+<a href="crypto/gretag/720/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Gretacoder 720">
+            <img src="crypto/gretag/720/img/301821/000/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Gretacoder 720"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The rate at which cryptographic systems can be broken <i>increases</i>
+every day, which means that the live span of
+encryption devices <i>decreases</i> equally fast.
+In the past, crypto systems were thought to be safe for, say, 15 to 20 years.
+By 2010 however, systems were considered safe for just a couple of years,
+with a maximum of 10 years for military equipment. And it is dropping
+rapidly.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/mission/nerd.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Cryptography as a weapon
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+During <a href="spy/glossary.htm#ww2"><span data-balloon-pos="up" aria-label="More about: WWII">WWII</span></a>,
+the German Army used the
+<a href="crypto/enigma/index.htm"><span data-balloon-pos="up" aria-label="More about: Enigma cipher machine">Enigma cipher machine</span></a>
+to secure their radio traffic. It helped them fighting an efficient
+and effective <i>Blitzkrieg</i>,
+which no doubt has cost thousands of lives.
+It shows that cryptography can be used as a effective tactical and
+strategic weapon.
+A single nerdy mathematician can beat an army
+of a thousand muscular Rambos. Isn't that fascinating?
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+At the same time, mathematicians can save lives. Take, for example,
+the brilliant <a href="people/alan_turing.htm"><span data-balloon-pos="up" aria-label="More about: Alan Turing">Alan Turing</span></a> who worked at
+<span class="short" aria-label="Bletchley Park" data-balloon-pos="up"><a href="bp/index.htm" class="short" >BP</a></span> and saved numerous lives by using
+<a href="crypto/bombe/index.htm"><span data-balloon-pos="up" aria-label="More about: cryptanalysis">cryptanalysis</span></a>
+to break the German codes.
+<br />
+<br />
+Today, cryptography is everywhere. Our credit cards, debit cards, ATM machines,
+computers, car keys, weapon systems and communication between
+embassies: they all involve some kind of cryptography.
+Even the Vatican has secrets and uses cryptography to keep them secret.
+Cryptography helps to protect a secret only
+for a certain period of time; it is used to 'buy time'.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Echelon operation at Menwith Hill, Harrogate, UK. Copyright BBC." data-balloon-length="large" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Echelon operation at Menwith Hill, Harrogate, UK. Copyright BBC." data-balloon-length="large" class="tooltip-red">
+            <img src="intel/gchq/img/echelon_1.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Echelon operation at Menwith Hill, Harrogate, UK. Copyright BBC."
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Cryptanalysis, the art of codebreaking, is also everywhere.
+Think of the <a href="intel/nsa/index.htm"><span data-balloon-pos="up" aria-label="More about: NSA">NSA</span></a>,
+Echelon, <a href="intel/gchq/index.htm"><span data-balloon-pos="up" aria-label="More about: GCHQ">GCHQ</span></a>
+and (in The Netherlands) the <a href="intel/aivd/index.htm"><span data-balloon-pos="up" aria-label="More about: AIVD">AIVD</span></a>
+and <a href="intel/index.htm#mivd"><span data-balloon-pos="up" aria-label="More about: MIVD">MIVD</span></a>; they have become experts in large scale
+<a href="df/index.htm"><span data-balloon-pos="up" aria-label="More about: interception">interception</span></a>,
+deciphering and interpretation of encrypted data.
+And don't underestimate the codebreaking ambitions from countries like
+India, Iran, China and Russia. They too are after your secrets.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/mission/moore.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Obsolete equipment
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+One of the problems we faced when creating the Crypto Museum website, was that
+we were not always certain about whether or not we were allowed to reveal
+certain information.
+Some devices might still be 'classified', but there is no way to verify
+that, as the 'list of classified equipment' is classified itself.
+Fortunately, this problem seems to have solved itself over time.
+Through our exhibitions and lectures, we've met a variety of people
+who helped us to make those decisions.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+After 15 years, a crypto system will be obsolete. In practice,
+the live span of an encryption device is even shorter than that.
+According to the Moorse/House Law, the available processing power
+nearly doubles every 18 months. <sup><font color="#FF8800">1</font></sup>
+<br />
+<br />
+As a result, one continuously has to evaluate the current cryptographic
+systems that are in use. As all systems are digital nowadays,
+it is fairly easy to increase complexity when there is sufficient processing
+power. This is directly related to the number of bits that is often quoted,
+e.g.: 56 or 64-bit <a href="crypto/algo/des/index.htm"><span data-balloon-pos="up" aria-label="More about: DES">DES</span></a>,
+128-bit <font color=#F52E00>AES</font>
+or 128-bit <a href="crypto/usa/saville.htm"><span data-balloon-pos="up" aria-label="More about: SAVILLE">SAVILLE</span></a>.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="crypto/utimaco/cryptware/img/301863/002/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The computing power that is available to code-makers, is also available
+to code-breakers.
+If we apply Moore's Law to the above, it means that we only have to add a single
+<i>bit</i> every 18 months. Each <i>bit</i> doubles the number of possibilities.
+It represents a gained time of 18 months.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+According to Moore's Law, the number of transistors on integrated circuits
+doubles every two years. It is an observation (rather then an real law)
+named after Intel co-founder Gordon E. Moore.
+A variation to this law, which is often mistakenly attributed
+to Moore, was defined by Intel executive David House, who said that
+processing power doubles every 18 months (the combined effect
+of more transistors and their being faster).
+<br />
+<br />
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=kerckhoffs></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Kerckhoffs's Law 
+          &nbsp;<font color="#CCC">
+          Shannon's Maxim</b>
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Back in the 19th century, Auguste Kerckhoffs stated that any cipher system
+should be secure even if everything about the system, except the key,
+is public knowledge. This statement of 1883 &mdash; known as
+<a href="http://en.wikipedia.org/wiki/Kerckhoffs'_principle" target="_blank"><span data-balloon-pos="up" aria-label="en.wikipedia.org (off-site)">Kerchoffs's Principle</span></a> &mdash;
+rejects inferior systems that provide <i>security by obscurity</i>. <sup><font color="#FF8800">1</font></sup>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Military organisations and governments worldwide
+are often frantic about collectors
+trying to obtain military encryption devices, claiming that it enables
+them to read military traffic and expose state secrets.
+Neither of this is true, of course, but it is caused by
+by the hierarchial structure of armies in general and lack of knowledge about
+the underlying principle.
+<br />
+<br />
+In the real world,
+all encryption devices used by the army, <u>must</u> (and do)
+comply with Kerckhoffs's
+Principle, as they are likely to fall into enemy hands during a conflict.
+For this reason, military cipher machines always have a so-called ZEROIZE-button,
+allowing the operator to purge all keys if security is compromised.
+Preventing serious collectors from possessing such machines therefore
+makes no sense at all, as long as they are not given the original keys
+that were used to encrypt the original messages.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="img/kerkhoffs_small1.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             border=0
+             width=144 height=200
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Kerckhoffs's principle was later reformulated by Claude Shannon (1916-2001)
+<br />as <i>'The enemy knows the system'</i>. It this form it is known as Shannon's Maxim.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=rest></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Restoring and preserving</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+What is the best way to obtain encryption devices? Most of the items shown
+on this website have been found in surplus stores or have been swapped with
+other collectors.
+Auction sites like eBay
+are also good sources for affordable items,
+but crypto-material is often difficult to recognise.
+<br />
+<br />
+Security agencies and defense organisations are often not amused when cipher
+machines and other cryptographic material appears on the surplus market.
+In many cases the items should have
+been destroyed, but have accidentally (or intentionally) escaped demolition.
+The official policy of these organisations is that they don't want
+to inform any 'enemies' about their current state-of-technology;
+something that no longer makes sense in this rapidly changing 'open'
+digital society.
+<br />
+<br />
+The fact that cipher machines sometimes accidentally appear on the surplus market is,
+of course, not our fault. But we don't want to step on any toes either.
+Luckily, we are blessed with a good 'common sense'.
+We observe, combine, recombine, think and re-think before we act.
+But at the end of the day, we <u>must</u> save the items from demolition.
+Losing history is simply not an option.
+<br />
+<br />
+Many of our fellow museums and collectors, endorse this view.
+They too are doing their very best to ensure that history is preserved and
+shared with the general public. Technically interested people, students
+and even new cryptologists can learn quite a lot from studying historical
+cipher methods and machines. Old cipher machines are easily explained,
+and the security issues and human mistakes surrounding key management
+haven't really changed that much over the years.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+From the start, we have built a good reputation with 'the
+agencies' and with our Department of Defense. They endorse that ignorance is a
+bigger threat than the necessity to destroy equipment that is no longer in use
+and is rendered obsolete.
+<br />
+<br />
+We do know our boundaries, of course.
+We never publish any information on our website before carefully considering
+any security issues, as we don't want to endanger any person, organisation or
+mission; civil or military.
+We only publish the information if we know that the equipment is no longer used,
+is obsolete or was never classified.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Restoring and preserving historical cipher machines" data-balloon-length="large" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Restoring and preserving historical cipher machines" data-balloon-length="large" class="tooltip-red">
+            <img src="crypto/hagelin/cd57/img/301856/032/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Restoring and preserving historical cipher machines"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Because of our backgrounds in mechanics and electronics,
+we are able to repair and preserve most of the items in our collection.
+Over the years, we have assembled a large network
+of experts and specialists that we can always call on.
+And that includes the authorities.
+It is our intention to eventually be able to show and demonstrate
+as many (working) objects as is technically possible.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/mission/worry.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=naive></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Indifferent or naive?
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Another reason for providing information on the Crypto Museum website
+is to warn against indifference and naivity.
+Not many  people have heard about cryptography,
+and very few realise the danger of putting personal information on public
+websites.
+Just look around you: people share their entire lifes on sites like
+Facebook and Linked-in.
+Google has been spying on our wireless networks and links all possible kinds of
+information together. Very convenient if you want to check someone's credentials, but
+also very helpful to criminals wanting to steal your identity.
+Can you blame them for it?
+After all, you shared it on the world-wide web yourself.
+<br />
+<br />
+We are becoming increasingly dependant on modern digital networks,
+but how safe are these systems? If you only knew how often people
+forget to change the network computer's default ADMIN password...
+And this is just <i>one</i> example.
+How many people use their birth date or their postcode as a password,
+or the secret number of their credit card for the burglar alarm system?
+<br />
+<br />
+Consider this: the city of Eindhoven (where we live) has 250,000 inhibitants.
+The PIN-code (secret number) of a bank card only has 4 digits.
+Have you ever realised how many people in your city share the same PIN code?
+If you are serious about protecting your secrets, safety is paramount.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/mission/hide.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Naive or just stupid?
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Luckily, the Cold War is now over. But does that mean that there are no more threats? Certainly not.
+Our biggest 'enemies' might even be our closest (international)
+business relations. The European national security agencies are constantly warning us for
+industrial espionage. It seems to be our biggest threat right now.
+Perhaps this is best illustrated by a couple of examples:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+<li><font color=#F52E00>Remote access</font><br />
+Some large companies are currently outsourcing the software maintenance of their PCs.
+All PCs in the corporate network are managed remotely from a far away country.
+Do you think this is wise? Perhaps not.
+A third party gets access to the complete administration of the
+company, its strategic partners and, worse, the company's intellectial property (IP).
+            <p />
+<li><font color=#F52E00>Internet Switch</font><br />
+A big international company has developed a new Internet Security Switch.
+They have decided to move the production of the new switch to a low-wage country.
+Apart from the list of materials, they also give them the design files
+and the source code of the software,
+so that the production company can provide a 'better' service. Do you think this is smart?
+            <p />
+<li><font color=#F52E00>Information gathering</font><br />
+A civil service needs to collect information about its nationals. They have contracted
+an external party to do this on their behalf.
+This external party is located in a
+far-away country. Nobody in the civil service knows exactly how it works, but
+everyone is satisfied with the results, because it 'seems to work well'.
+Do you think this is smart?
+          </ol>
+        </font></td></tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+People often say: <i>"If you have nothing to hide, you have nothing to fear"</i>.
+We completely disagree with that. What a dull life you have if you have
+nothing to hide.
+Companies have their intellectual property (IP) and their
+industrial interests to protect.
+Individuals should protect their passwords, financial data
+and their identity,
+but most of all their privacy, their thoughts and their freedom.
+At the end of the day, all of us &mdash; and vulnerable minorities in particular &mdash;
+have something to hide.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/mission/privacy.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=future></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>The future</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Modern cryptographic equipment consists of nothing more than a 'black box'
+with powerful digital processors and complex mathematical algorithms.
+There is not much to see, and there are definitely no moving parts.
+We realize that this is probably where our collection
+of historical cipher equipment will end.
+However, there are numerous earlier cipher methods and
+machines, much of which are still undiscovered.
+'New' old machines will, no doubt, pup-up and many side-tracks will be walked.
+Furthermore, the history of some famous cipher machines is still very clouded,
+leaving much to be researched and much to be discovered in the years to come.
+<br />
+<br />
+On the Crypto Museum website, we have done our best to raise an interest in
+historical cipher machines, cryptography in general, and many related subjects.
+Where possible, we will give as much background information as we technically
+and legally can.
+Perhaps one day, you too will be infested by the Crypto Virus.
+If it happens, be careful as it might get under your skin.
+<br />
+<br />
+August 2010,<br>
+<i>Paul Reuvers &amp; Marc Simons</i>
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 1px solid #ccc;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Disclaimer
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+To the best of our knowledge, this site only contains information that is
+either available in the <b>public domain</b>,
+that is <b>unclassified</b>,
+or that has been <b>officially declassified</b>.
+Whenever possible, the source of the information will be credited in
+the <i>References</i> section at the bottom of each page.
+In cases where the <i>classification status</i> is not entirely
+clear &mdash; there is no list of <i>classified items</i> in the public domain &mdash;
+we will try to follow the rules of common sense.
+If you come across any information that you think is still classified,
+please <a href="mailto:info@cryptomuseum.com"><span data-balloon-pos="up" aria-label="Send e-mail to: info@cryptomuseum.com">let us know</span></a>.
+<br />
+<br />
+Please note that we are neither cryptologists nor mathematicians.
+We do not develop new cryptographic methods or systems, and we do not
+break codes.
+Also note that some of the objects shown on this website are still restricted
+items. We are not in the position to release classified information about such
+items.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          </td></tr>
+        </table>
+<br />        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+            <li><a href="files/aivd/spionageenveiligheidsrisicos_juli2005.pdf">Algemene Inlichtingen en Veiligheidsdienst (AIVD), <i>Spionage- en Veiligheidsrisico's</i></a><br />
+Espionage and safety risks (Dutch).<br />
+The Netherlands, July 2005, 2nd issue.
+            <p />
+            <a name="ref_2"></a>
+            <li><a href="files/aivd/spionageinnederland.pdf">Algemene Inlichtingen en Veiligheidsdienst (AIVD), <i>Spionage in Nederland.</i></a><br />
+Espionage in The Netherlands. What is the risk? (Dutch)<br />
+The Netherlands, 4 February 2010.
+            <p />
+            <a name="ref_3"></a>
+            <li><a href="files/aivd/spionagebijreizennaarhetbuitenland.pdf">Algemene Inlichtingen en Veiligheidsdienst (AIVD),<br><i>Spionage bij reizen naar het buitenland.</i></a><br />
+Espionage when travelling abroad. What is the risk? (Dutch)<br />
+The Netherlands, 4 February 2010.
+            <p />
+            <a name="ref_4"></a>
+            <li><a href="files/aivd/digitalespionage.pdf">Algemene Inlichtingen en Veiligheidsdienst (AIVD), <i>Digitale spionage.</i></a><br />
+Digital espionage. What is the risk? (Dutch)<br />
+The Netherlands, 4 February 2010.
+            <p />
+            <a name="ref_5"></a>
+            <li><a href="files/aivd/kwetsbaarheidsanalysespionageapril2010.pdf">Algemene Inlichtingen en Veiligheidsdienst (AIVD), <i>Kwetsbaarheidsanalyse Spionage</i></a><br />
+Espionage risks and national safety (Dutch)<br />
+The Netherlands, 1 April 2010.
+            <p />
+            <a name="ref_6"></a>
+            <li><a href="https://www.mi5.gov.uk/counter-espionage">British National Security Service MI5, <i>Counter-espionage</i></a><br />
+The threat of espionage did not end with the collapse of Soviet communism...<br />
+UK, January 2010.
+            <p />
+            <a name="ref_7"></a>
+            <li><a href="files/BfV/thema_0811_spionage.pdf">Bundesamt f&#252;r Verfassungsschutz (BfV), <i>Spionage gegen Deutschland</i></a><br />
+Espionage against Germany (German).<br />
+Germany, November 2008.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="intel/aivd/index.htm">Dutch intelligence service AIVD</a><br />
+            <li><a href="intel/index.htm">Overview of intelligence agencies</a><br />
+            <li><a href="index.htm">Back to the homepage</a><br />
+            <li><a href="crypto/index.htm">Main Crypto page</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Sunday 01 August 2010. Last changed: Wednesday, 11 June 2025 - 19:33 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="index.htm"><img src=svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

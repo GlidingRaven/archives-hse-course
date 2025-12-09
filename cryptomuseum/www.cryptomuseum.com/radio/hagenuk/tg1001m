@@ -1,0 +1,3348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>TG-1001M</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cryptomuseum">
+    <meta name="twitter:url" content="https://www.cryptomuseum.com/radio/hagenuk/tg1001m/index.htm">
+    <meta name="twitter:image" content="https://www.cryptomuseum.com/radio/hagenuk/tg1001m/img/304293/012/full.jpg">
+    <meta name="twitter:title" content="Tastgerät TG-1001M">
+    <meta name="twitter:description" content="Hagenuk FSK and FAX demodulator for HF telegraphy.">
+    <meta name="Keywords" content="TF1001M, TG 1001M,FSK,decoder,demodulator,antenna diversity,hagenuk,teltron">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of military radio equipment and radio-related subjects" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../radio/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../radio/glossary.htm';" >Glossary</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../../radio/sincgars/index.htm';" >SINCGARS</div>
+          <div class="but sub" onClick="location.href='../../../radio/zodiac/index.htm';" >ZODIAC</div>
+          <div class="but sub" onClick="location.href='../../../radio/titaan/index.htm';" >TITAAN</div>
+          <div class="but sub" onClick="location.href='../../../radio/bams/index.htm';" >BAMS</div>
+          <div class="but sub" onClick="location.href='../../../radio/clansman/index.htm';" >Clansman</div>
+          <div class="but sub" onClick="location.href='../../../radio/bowman/index.htm';" >Bowman</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Terrestrial Trunked Radio" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../radio/tetra/index.htm';" >TETRA</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Morse Code" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../radio/morse/index.htm';" >Morse</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../radio/morse/keys/index.htm';" >Morse keys</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Quartz Crystals" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../radio/xtal/index.htm';" >Crystals</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../../radio/siemens/chx200/index.htm';" >CHX-200</div>
+          <div class="but sub" onClick="location.href='../../../radio/rt1439/index.htm';" >RT-1439</div>
+          <div class="but sub" onClick="location.href='../../../radio/rt3600/index.htm';" >RT-3600</div>
+          <div class="but sub" onClick="location.href='../../../radio/se6861/index.htm';" >SE-6861</div>
+          <div class="but sub" onClick="location.href='../../../radio/mel/prc319/index.htm';" >PRC-319</div>
+          <div class="but sub" onClick="location.href='../../../radio/spider/index.htm';" >SPIDER</div>
+          <div class="but sub" onClick="location.href='../../../radio/ussr/r142/index.htm';" >R-142</div>
+          <div class="but sub" onClick="location.href='../../../radio/selex/index.htm';" >Selex PRR</div>
+          <div class="but sub" onClick="location.href='../../../radio/fug8/index.htm';" >FuG-8</div>
+          <div class="spacer"></div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Countries
+          </div>
+          <div class="hidden">
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former Soviet Union" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../radio/ussr/index.htm';" >USSR</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former Yugoslav Republic" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../radio/yugo/index.htm';" >Yugoslavia</div>
+</div>
+          </div>
+          </div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../../../telex"><div  data-balloon-pos="up" aria-label="Shortcut to Telex" class="key">Telex</div></a><a class="key" href="../../../df/mon.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Monitoring" class="key">Monitoring</div></a><a class="key" href="../../../manuf/teltron"><div  data-balloon-pos="up" aria-label="Shortcut to Teltron" class="key">Teltron</div></a><a class="key" href="../../../manuf/hagenuk"><div  data-balloon-pos="up" aria-label="Shortcut to Hagenuk" class="key">Hagenuk</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>TG 1001 M</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>RTTY demodulator/diversity unit</b>
+<br />
+<br />
+<b>TG 1001 M</b> is a demodulator for <a href="../../../telex"><span data-balloon-pos="up" aria-label="More about: radio teletype">radio teletype</span></a> (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Teletype">RTTY</span>) and
+facsimile (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Facsimile">FAX</span>) signals (German: Tast&#173;ger&#228;t) with integrated antenna and
+receiver diversity unit,
+developed around 1987 by <a href="../../../manuf/teltron"><span data-balloon-pos="up" aria-label="More about: Teltron">Teltron</span></a> in M&#252;nchen (Germany)
+as an <span class="short tooltip-red" data-balloon-pos="up" aria-label="Original Equipment Manufacturer">OEM</span> product for <a href="../../../manuf/hagenuk"><span data-balloon-pos="up" aria-label="More about: ..."><b>Hagenuk</b></span></a> in Kiel
+(Germany) <a href="#ref_1">[1]</a>.
+It was used by the German Navy (Bundes&#173;marine), often in combination with a
+<a href="../rx1001m"><span data-balloon-pos="up" aria-label="More about: Hagenuk RX-1001M HF receiver">Hagenuk RX-1001M HF receiver</span></a> <a href="#ref_2">[2]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The device is housed in a 1U 19" rackmountable enclosure that measures
+484 &#215; 435 &#215; 44 mm and weighs ~ 6 kg. All controls are nice&#173;ly arran&#173;ged
+at the clear grey front panel, whilst all con&#173;nec&#173;tions are available at the rear.
+The device can be powered from the 115V or 230V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> mains, <sup><font color="#FF8800">1</font></sup> or by a 24V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span>
+source, such as a truck battery.
+<br />
+<br />
+At the centre of the front panel is a small catho&#173;de ray tube (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Ray Tube">CRT</span>) that
+can be used as a tuning aid when selecting the parameters for the re&#173;cep&#173;tion
+of telegraphy or facsimile signals. Note that the baudrate cannot be set from
+the front panel.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304293/012/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Hagenuk TG-1001M">
+<a href="img/304293/012/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Hagenuk TG-1001M">
+            <img src="img/304293/012/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Hagenuk TG-1001M"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The device has two receiver inputs (RX 1 and RX 2), each of which can be configured
+for <span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span> or <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span> signals. Like the baudrate, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span> selection
+is not available from the front panel. Instead, baud&#173;rate and input type
+are <a href="#conf_s1"><span data-balloon-pos="up" aria-label="Jump to: selected with a rotary switch (S1)">selected with a rotary switch (S1)</span></a>, accessible through a
+<a href="img/304293/013/full.jpg"><span data-balloon-pos="up" aria-label="More about: hole in the top panel">hole in the top panel</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Selectable with a switch inside the device.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="#conf_mains">More</a>
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Hagenuk TG-1001M">          <img src="img/304293/012/thumbnail.jpg"
+           alt="Hagenuk TG-1001M"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/012"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Settings S1 and S2 in the top cover">          <img src="img/304293/013/thumbnail.jpg"
+           alt="Settings S1 and S2 in the top cover"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/013"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel">          <img src="img/304293/014/thumbnail.jpg"
+           alt="Front panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/014"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Rear panel">          <img src="img/304293/015/thumbnail.jpg"
+           alt="Rear panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/015"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Cable between Telefunken E-1800 receiver and Hagenuk TG-1001M FSK demodulator" data-balloon-length="large">          <img src="img/304293/026/thumbnail.jpg"
+           alt="Cable between Telefunken E-1800 receiver and Hagenuk TG-1001M FSK demodulator"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/026"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Cable between TG-1001M and GA-082">          <img src="img/304293/030/thumbnail.jpg"
+           alt="Cable between TG-1001M and GA-082"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/030"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Mains power cable">          <img src="img/304293/034/thumbnail.jpg"
+           alt="Mains power cable"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/034"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304293/012/full.jpg" alt="Hagenuk TG-1001M">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304293/013/full.jpg" alt="Settings S1 and S2 in the top cover">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304293/014/full.jpg" alt="Front panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 4 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304293/015/full.jpg" alt="Rear panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 5 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304293/026/full.jpg" alt="Cable between Telefunken E-1800 receiver and Hagenuk TG-1001M FSK demodulator">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 6 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304293/030/full.jpg" alt="Cable between TG-1001M and GA-082">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 7 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304293/034/full.jpg" alt="Mains power cable">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the front panel of the TG-1001M.
+At the far left is the ON/OFF switch. At the left are also the push-buttons
+for selecting the signal polarity (normal or inverted) and the desired
+tone shift for the reception of <span class="short tooltip-red" data-balloon-pos="up" aria-label="Facsimile">FAX</span> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Teletype">RTTY</span> signals.
+ At the centre is a low-profile
+cathode ray tube (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Ray Tube">CRT</span>) on which the incoming signal is displayed. It
+can be used as a tuning aid when interpreting the signal.
+To the left of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Ray Tube">CRT</span> are controls for setting the brightness of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Ray Tube">CRT</span>
+and the red <span class="short tooltip-red" data-balloon-pos="up" aria-label="Light Emitting Diode">LED</span>s.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304293/014/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304293/014/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/tg1001m_front.png"
+             style="
+            "
+             align="center"
+             width="591px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+To the right of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Ray Tube">CRT</span> are four push-buttons for selecting the desired
+<a href="#mode"><span data-balloon-pos="up" aria-label="Jump to: mode of operation">mode of operation</span></a>. At the far right are six push-buttons for controlling
+the diversity features. The device supports <b>receiver diversity</b> and well as
+<b>antenna diversity</b>. The buttons can also be used for selecting two different receivers
+(connected to the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Normal Frequenz (Audio Frequency, AF)">NF</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Zwitchen Frequenz (Intermediate Frequency, IF)">ZF</span> inputs) and/or two antennas (connected
+to ANT1 and ANT2).
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304293/015/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304293/015/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/tg1001m_rear.png"
+             style="
+            "
+             align="center"
+             width="567px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+All connections of the TG-1001M are at the rear panel, shown in the image above.
+At the far left is the rather unusual receptacle for <a href="#conn_ac"><span data-balloon-pos="up" aria-label="Jump to: connection to the mains">connection to the mains</span></a>.
+The device can also be powered by a 24V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span> source. At the centre are the input
+and output connectors.  Note that the device has two <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span> demodulators, which allows
+two receivers to be connected simultaneously. The buttons at the front panel can be
+used to select either receiver, or use <b>receiver diversity</b>.
+At the far right are three antenna connectors (two inputs and one output).
+The buttons at the front panel can be used to select either antenna, or use
+<b>antenna diversity</b>. The <a href="#conn_data"><span data-balloon-pos="up" aria-label="Jump to: 9-pin DE9 socket marked 'DATEN'">9-pin DE9 socket marked 'DATEN'</span></a> allows the
+device to be controlled remotely from a <a href="../rx1001m"><span data-balloon-pos="up" aria-label="More about: compatible receiver">compatible receiver</span></a>,
+using a proprietary protocol.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=mode></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Modes
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">DAUERSTR.</div>Continuous current (used for quieting the teleprinter)            <li><div style="display:inline-block; width:100px;">SCHREIBEN</div>Enable teleprinter output            <li><div style="display:inline-block; width:100px;">FAX BILD</div>Receive facsimile with grey tone image            <li><div style="display:inline-block; width:100px;">FAX TEXT</div>Receive facsimile with 2-tone (black/white) image          </ul>
+</font></td></tr></table>        <a name=func></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Functions
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span> demodulation            <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Teletype">RTTY</span> decoding (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span>)            <li>Facsimile decoding (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Facsimile">FAX</span>)            <li>Antenna diversity            <li>Receiver diversity            <li>Built-in self test (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Built-in test equipment">BITE</span>)          </ol>
+</font></td></tr></table>        <a name=opr></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Operation
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Setting up the TG-1001M is not difficult but might appear a bit counterintuitive
+at first.  Note that it is <b>not</b> an <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span> analyzer, and that it does not
+adjust itself to the intercepted <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span> signal. If nothing is known about a particular
+signal, inspect it first by means of an <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span> analyzer, such as the
+<a href="../../../telex/rs/ga082"><span data-balloon-pos="up" aria-label="More about: Rohde & Schwarz GA-082">Rohde & Schwarz GA-082</span></a>. Once the signal parameters
+are known, configure the TG-1001M accordingly.
+<br />
+<br />
+As an example, we assume that the signal we are receiving has a data rate of
+50 baud with a &#177;425 kHz shift,
+and that we are applying the  <span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span> signal from our receiver to the
+<a href="#conn_nf1"><span data-balloon-pos="up" aria-label="Jump to: NF1 connector at the rear">NF1 connector at the rear</span></a>.
+Set <a href="#conf_s1"><span data-balloon-pos="up" aria-label="Jump to: both rotary selectors (S1">both rotary selectors (S1</span></a> and <a href="#conf_s2"><span data-balloon-pos="up" aria-label="Jump to: S2">S2</span></a>) &mdash; accessible
+through <a href="img/304293/013/full.jpg"><span data-balloon-pos="up" aria-label="More about: two holes in the top cover">two holes in the top cover</span></a>
+&mdash; to '0' (i.e. fully counter-clockwise). Now do the following:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li>Switch the device on            <li>Ensure that some LEDs light up. If they don't, adjust the LED brightness (HELLIGKEIT)            <li>Select POLARITAT <b>NORM</b>            <li>To the left of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Ray Tube">CRT</span>, select <b>&#177;425 Hz</b> shift (the lower LED should light up)            <li>To the right of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Ray Tube">CRT</span>, select <b>SCHREIBEN</b>            <li>Tune the receiver to a known <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span> weather station (e.g. 10100.8 kHz) <sup><font color="#FF8800">1</font></sup>            <li>Adjust the receiver's <span class="short tooltip-red" data-balloon-pos="up" aria-label="Beat Frequency Oscillator">BFO</span> to approx. 1500 Hz          </ol>
+</font></td></tr></table>        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+After turning the device on, wait 15 seconds for the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Ray Tube">CRT</span> to warm up.
+The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Ray Tube">CRT</span> should now show a horizontal green bar <font color=#F52E00>(1)</font>.
+If it doesn't, increase display brightness.
+Next, apply an <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span> signal from your receiver to <a href="#conn_nf1"><span data-balloon-pos="up" aria-label="Jump to: NF1">NF1</span></a>, and
+adjust the receiver's <span class="short tooltip-red" data-balloon-pos="up" aria-label="Beat Frequency Oscillator">BFO</span> to the point where the display produces a
+valid image <font color=#F52E00>(2)</font> or <font color=#F52E00>(3)</font>.
+When the intercepted station transmits a continuous IDLE tone se&#173;quen&#173;ce,
+you are likely to see only two narrow signal bars on the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Ray Tube">CRT</span> <font color=#F52E00>(4)</font>.
+If the signal is inverted <font color=#F52E00>(5)</font>, press '<b>INVER</b>' at the front panel
+to make it decodable <font color=#F52E00>(2)</font>.
+Below are some examples of possible <span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Ray Tube">CRT</span> displays.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/tg1001m_crt.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+It should be noted that the TG-1001M was designed for permanent 24/7
+use in fixed instal&#173;la&#173;tions, such as aboard Naval vessels. In most cases
+a dedicated TG-1001M unit was used for each FSK and/or FAX station and/or
+frequency that had to be monitored around the clock.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Weather station <i>Deutscher Wetterdienst Offenbach</i> can be received
+  at 10100.8 kHz, 4583 kHz and 7646 kHz. Callsign: <div style="display:inline-block; font-family:monospace; font-size:14px;">DDH</div> or <div style="display:inline-block; font-family:monospace; font-size:14px;">DDK</div> <a href="#ref_5">[5]</a>.
+  <font color="#E7E">&#10148;</font>&nbsp;<a href="https://weather.mailasail.com/Franks-Weather/Radio-Teletype-Weather-Broadcasts" target="_blank">More stations</a>
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=setup></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Setup</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the simplest setup, a single antenna is connected to a receiver, of which
+the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span> or 30 kHz <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span> output is fed to the <a href="#conn_nf1"><span data-balloon-pos="up" aria-label="Jump to: NF1 or ZF1 input">NF1 or ZF1 input</span></a> of the TG-1001M.
+The device's output can then directly be used to <a href="#conn_fs"><span data-balloon-pos="up" aria-label="Jump to: drive a teleprinter">drive a teleprinter</span></a>
+(line current or V.24) or a <a href="#conn_fax"><span data-balloon-pos="up" aria-label="Jump to: fax device">fax device</span></a> (black & white or grey scale).
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Simplest setup with a single antenna and a single receiver" data-balloon-length="large" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Simplest setup with a single antenna and a single receiver" data-balloon-length="large" class="tooltip-red">
+            <img src="svg/tg1001m_setup.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="Simplest setup with a single antenna and a single receiver"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+When <b>antenna diversity</b> is used, two antennas (ANT1 and ANT2) should be connected
+to the TG-1001M. The antenna output from the device is then fed to the receiver,
+whilst the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span> or <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span> output from the receiver is fed back to the TG-1001M.
+When <b>antenna diversity</b> is enabled, as shown below, the device automatically
+selects the antenna on which the strongest signal is available.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Antenna diversity setup" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Antenna diversity setup" class="tooltip-red">
+            <img src="svg/tg1001m_setup_ant.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="Antenna diversity setup"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+When <b>receiver diversity</b> is used, the two antennas (ANT1 and ANT2) are connected
+to two individual receivers. The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span> or <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span> outputs from the two receivers
+are then fed to the inputs of the TG-1001M. When <b>receiver diversity</b> is enabled,
+the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Central Processing Unit">CPU</span> of the TG-1001M automatically selects the receiver with the best signal.
+This works best when using <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span> signals.
+Note that for FAX signals, the receiver(s) must be connected via the intermediate
+frequency (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span>) rather than using <span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span> signals.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Receiver diversity setup" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Receiver diversity setup" class="tooltip-red">
+            <img src="svg/tg1001m_setup_rec.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="Receiver diversity setup"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=block></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Block diagram</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the block diagram of the TG-1001M. The various functional blocks
+are indexed with red numbers that correspond to the <a href="#func"><span data-balloon-pos="up" aria-label="Jump to: list of functions">list of functions</span></a>
+above. The device has 3 demodulators: two for (diversity) reception of
+teleprinter signals <font color=#F52E00>(1)</font> and one for reception of facsimile signals <font color=#F52E00>(3)</font>.
+The antenna diversity <font color=#F52E00>(4)</font> and receiver diversity <font color=#F52E00>(5)</font> circuits can also
+be used as manual selectors. All sub-circuits are under control of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Central Processing Unit">CPU</span>
+<font color=#F52E00>(6)</font>, which is also responsible for the self-test (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Built-in test equipment">BITE</span>).
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/tg1001m_block.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=int></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Interior</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The interior of the TG-1001M can only be accessed from the top.
+After removing <a href="img/304293/012/full.jpg"><span data-balloon-pos="up" aria-label="More about: no less than 27 recessed screws">no less than 27 recessed screws</span></a>,
+the cover can be taken off.
+This reveals the interior as shown in the image below (here seen from
+the rear). At the centre is the cathode ray rube (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Ray Tube">CRT</span>) &mdash;
+housed in a metal en&#173;clo&#173;sure &mdash; with supporting electronics.
+At the left side is the power supply unit (PSU), which
+con&#173;sists of a toroidal transformer and a switched mode DC/DC converter
+that provides the required vol&#173;tages. The six socketed fuses are located
+on a board that is fitted to the side of the converter.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304293/031/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Hagenuk TG-1001M interior">
+<a href="img/304293/031/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Hagenuk TG-1001M interior">
+            <img src="img/tg1001m_int.png"
+             style="
+            "
+             align="center"
+             width="589px"
+             vspace="4"
+             alt="Hagenuk TG-1001M interior"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+At the right side are two large printed circuit boards (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>s).
+The <a href="img/304293/001/full.jpg"><span data-balloon-pos="up" aria-label="More about: lower one">lower one</span></a> holds the Z80 <span class="short tooltip-red" data-balloon-pos="up" aria-label="Central Processing Unit">CPU</span> and
+its peripheral controllers (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Parallel Inout/Output">PIO</span>s).
+It handles the push-buttons and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Light Emitting Diode">LED</span>s on the front panel, and the
+com&#173;mu&#173;nication with the <a href="../rx1001m"><span data-balloon-pos="up" aria-label="More about: Hagenuk RX-1001M receiver">Hagenuk RX-1001M receiver</span></a> (when present).
+The firmware is held in a 2732 <span class="short tooltip-red" data-balloon-pos="up" aria-label="Erasable Programmable Read-Only Memory">EPROM</span>.
+A battery backed <span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span> retains the current settings when the device is
+switched off.
+<br />
+<br />
+On top of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Central Processing Unit">CPU</span> board is the interface board &mdash; in the manual identified
+as the FS-FAX-Analog board &mdash; built around a field-programmable gate array
+(<span class="short tooltip-red" data-balloon-pos="up" aria-label="Field-Programmable Gate Array">FPGA</span>) marked 'TELTRON', with its own Z80 microprocessor and the firmware
+held in a 2764 <span class="short tooltip-red" data-balloon-pos="up" aria-label="Erasable Programmable Read-Only Memory">EPROM</span>.
+It is basically a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Modulator/Demodulator">MODEM</span> of which only one half is used.
+This part of the hardware is very similar to the
+<a href="../../../crypto/teltron/telsec02"><span data-balloon-pos="up" aria-label="More about: TELSEC 02 voice scrambler">TELSEC 02 voice scrambler</span></a>
+that was also developed by <a href="../../../manuf/teltron"><span data-balloon-pos="up" aria-label="More about: Teltron">Teltron</span></a>.
+The same 'TELTRON' <span class="short tooltip-red" data-balloon-pos="up" aria-label="Field-Programmable Gate Array">FPGA</span> <sup><font color="#FF8800">1</font></sup> is present on
+<font color="#E7E">&#10148;</font>&nbsp;<a href="../../../crypto/teltron/telsec02/img/303101/005/full.jpg">its digital board</a>.
+<br />
+<br />
+At the rear of the device are 3 shielded and filtered compartments.
+The one at the right holds the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span> power connectors. At the centre
+are the sockets for the various inputs, outputs and controls.
+At the left is the antenna diversity system, which is a more or less
+stand-alone circuit.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+In the manual, the <b>Teltron 337021</b> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Field-Programmable Gate Array">FPGA</span> is identified as a
+  <b>Xilinx XC2064</b> Field Programmable Gate Array (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Field-Programmable Gate Array">FPGA</span>).
+  It features 64 Logic Blocks and 600 gates, and is clocked at
+  70 MHz <a href="#ref_6">[6]</a>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TG-1001M interior">          <img src="img/304293/031/thumbnail.jpg"
+           alt="TG-1001M interior"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/031"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TG-1001M interior">          <img src="img/304293/028/thumbnail.jpg"
+           alt="TG-1001M interior"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/028"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Mains PSU">          <img src="img/304293/005/thumbnail.jpg"
+           alt="Mains PSU"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/005"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="115 or 230V mains AC voltage selector">          <img src="img/304293/023/thumbnail.jpg"
+           alt="115 or 230V mains AC voltage selector"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/023"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Fuses">          <img src="img/304293/004/thumbnail.jpg"
+           alt="Fuses"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/004"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Power inlet">          <img src="img/304293/033/thumbnail.jpg"
+           alt="Power inlet"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/033"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interface wiring and filtering">          <img src="img/304293/007/thumbnail.jpg"
+           alt="Interface wiring and filtering"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/007"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Power electronics">          <img src="img/304293/011/thumbnail.jpg"
+           alt="Power electronics"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/011"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Antenna diversity switching unit">          <img src="img/304293/008/thumbnail.jpg"
+           alt="Antenna diversity switching unit"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 9);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/008"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interface board (FS-FAX-Analog)">          <img src="img/304293/025/thumbnail.jpg"
+           alt="Interface board (FS-FAX-Analog)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 10);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/025"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Baudrate and input selector S1 on the interface board" data-balloon-length="large">          <img src="img/304293/020/thumbnail.jpg"
+           alt="Baudrate and input selector S1 on the interface board"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 11);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/020"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="S2 on the interface board">          <img src="img/304293/019/thumbnail.jpg"
+           alt="S2 on the interface board"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 12);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/019"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="3 kHz or 5 kHz settings (FAX)">          <img src="img/304293/021/thumbnail.jpg"
+           alt="3 kHz or 5 kHz settings (FAX)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 13);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/021"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="MIL-188 or RS232 setting">          <img src="img/304293/022/thumbnail.jpg"
+           alt="MIL-188 or RS232 setting"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 14);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/022"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="CPU board">          <img src="img/304293/001/thumbnail.jpg"
+           alt="CPU board"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 15);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/001"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Address selectors on the CPU board">          <img src="img/304293/024/thumbnail.jpg"
+           alt="Address selectors on the CPU board"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 16);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/024"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'B'" onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">B</span></div></div><div style="height: 40px;"></div>
+<div id="slide_2" class="slide" onClick="slideClose('slide_2')"><span class="slide_close_left" onClick="slideClose('slide_2')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_2', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 1 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304293/031/full.jpg" alt="TG-1001M interior">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 2 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304293/028/full.jpg" alt="TG-1001M interior">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 3 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304293/005/full.jpg" alt="Mains PSU">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 4 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304293/023/full.jpg" alt="115 or 230V mains AC voltage selector">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 5 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304293/004/full.jpg" alt="Fuses">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 6 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304293/033/full.jpg" alt="Power inlet">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 7 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304293/007/full.jpg" alt="Interface wiring and filtering">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 8 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304293/011/full.jpg" alt="Power electronics">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 9 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304293/008/full.jpg" alt="Antenna diversity switching unit">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 10 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304293/025/full.jpg" alt="Interface board (FS-FAX-Analog)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 11 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304293/020/full.jpg" alt="Baudrate and input selector S1 on the interface board">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 12 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304293/019/full.jpg" alt="S2 on the interface board">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 13 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304293/021/full.jpg" alt="3 kHz or 5 kHz settings (FAX)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 14 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304293/022/full.jpg" alt="MIL-188 or RS232 setting">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 15 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304293/001/full.jpg" alt="CPU board">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 16 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304293/024/full.jpg" alt="Address selectors on the CPU board">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_2', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_2', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=rest></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Restoration</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When we received the TG-1001M units in our collection, they were all labelled
+as <i>defective</i>. The reason for this is that the Error LED (FEHLER) blinks when
+the unit is switched on. A closer in&#173;spec&#173;tion however, showed that the units
+were not really broken, but that the lithium backup bat&#173;te&#173;ry was completely
+empty. We exchanged the obsolete 3V battery by a modern socketed alternative.
+<br />
+<br />
+When replacing the battery, be extremely careful, as the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> is very fragile
+in this position. We decided to use a <b>Keystone KS1025</b> battery holder and a
+<b>CR2450</b> lithium button battery.
+Re&#173;move the existing fixed battery and carefully clear the
+holes by means of solder wick or a pro&#173;fes&#173;sional de&#173;soldering station. Be careful
+not to apply any physical force to the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>.
+Next, make the pins of the battery holder thinner with a file, so that they
+fit the holes in the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>. When inserting the bat&#173;te&#173;ry holder into the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>,
+do not apply force, as this is likely to damage the through-plated holes.
+<br />
+<br />
+After inserting the battery holder into the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>, solder the pins.
+Next insert the CR2450 battery into the hol&#173;der with the (+) side up.
+Do not touch the battery with the bare hands, as this will reduce the battery's
+life. Now turn on the device and verify that the FEHLER <span class="short tooltip-red" data-balloon-pos="up" aria-label="Light Emitting Diode">LED</span> stays off.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Problems
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><s>No mains cables</s>            <li><s>Error on startup</s>          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Fixed
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="img/304293/034/full.jpg">New mains power cables made</a>            <li><a href="img/304293/003/full.jpg">Lithium backup battery replaced</a>          </ul>
+</font></td></tr></table><div style="height: 14px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Original (soldered) backup battery versus new (socketed) one" data-balloon-length="large">          <img src="img/304293/003/thumbnail.jpg"
+           alt="Original (soldered) backup battery versus new (socketed) one"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/003"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="New backup battery in holder">          <img src="img/304293/002/thumbnail.jpg"
+           alt="New backup battery in holder"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/002"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'C'" onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">C</span></div></div><div style="height: 40px;"></div>
+<div id="slide_3" class="slide" onClick="slideClose('slide_3')"><span class="slide_close_left" onClick="slideClose('slide_3')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_3', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 1 / 2</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304293/003/full.jpg" alt="Original (soldered) backup battery versus new (socketed) one">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 2 / 2</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304293/002/full.jpg" alt="New backup battery in holder">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_3', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_3', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=conn></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Connections</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the pinout of each connector at the rear of the TG-1001M.
+Please note that incorrect pinouts are circulating on the internet,
+which are probably based on an earlier version of the <a href="#doc"><span data-balloon-pos="up" aria-label="Jump to: service manual">service manual</span></a>.
+The pinouts given below have been verified against an actual device.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=conn_ac></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Mains power 
+          &nbsp;<font color="#CCC">
+          NETZ 115V/230V AC
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The mains power receptacle is a rather unusual connector, but is
+nevertheless an (old) industry standard in Germany. It is made by Hirschmann
+and accepts a <b>GDME-311</b> female cable part, also known as <b>GDME-3011</b>
+and <b>DIN 43650A</b>. Below is the pinout when looking into the
+panel mount part. Note that the desired mains voltage (115V or 230V) must
+be set with an <a href="#conf_mains"><span data-balloon-pos="up" aria-label="Jump to: internal switch">internal switch</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li value="0"><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">Gn/Ye</div>Ground            <li><div style="display:inline-block; width:60px;">Phase</div><div style="display:inline-block; width:60px;">Brown</div>0V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> <sup><font color="#FF8800">1</font></sup>            <li><div style="display:inline-block; width:60px;">Null</div><div style="display:inline-block; width:60px;">Blue</div>115V-230V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> <sup><font color="#FF8800">1</font></sup>            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div><font color=#F52E00><i>not present</i></font>          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;" data-balloon-pos="up" aria-label="GDME-311 male chassis part" class="tooltip-red">
+              <div style="position: relative;" data-balloon-pos="up" aria-label="GDME-311 male chassis part" class="tooltip-red">
+              <img src="../../../ref/conn/mains/svg/gdme311.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               alt="GDME-311 male chassis part"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+The Phase and Null wires are reversible.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <div style="height: 18px; border-top: 1px solid #ccc;"></div>
+        <a name=conn_dc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Battery power 
+          &nbsp;<font color="#CCC">
+          24V BATT
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The TG-1001M can also be powered by a 24V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span> source, such as the
+battery of a truck. Below is the pinout when looking into the military
+3-pin male receptacle. Note that the polarity of the 24V (at pins A and B)
+may be reversed.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <li><div style="display:inline-block; width:60px;">24V</div><div style="display:inline-block; width:60px;">In</div>24V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span> (+) or (-) <sup><font color="#FF8800">1</font></sup>            <li><div style="display:inline-block; width:60px;">24V</div><div style="display:inline-block; width:60px;">In</div>24V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span> (+) or (-) <sup><font color="#FF8800">1</font></sup>            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div>Ground          </ol type=A>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;" data-balloon-pos="up" aria-label="Military 3-pin male chassis part" class="tooltip-red">
+              <div style="position: relative;" data-balloon-pos="up" aria-label="Military 3-pin male chassis part" class="tooltip-red">
+              <img src="../../../ref/conn/mil/svg/10_3P.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               alt="Military 3-pin male chassis part"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol type=A>
+</font></td></tr></table>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+The two 24V input lines are reversible.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <div style="height: 18px; border-top: 1px solid #ccc;"></div>
+        <a name=conn_fax></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Fax output 
+          &nbsp;<font color="#CCC">
+          FAX-VIDEO
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">AF a</div><div style="display:inline-block; width:60px;">Out</div>Fax audio 600&Omega; (balanced with 2)            <li><div style="display:inline-block; width:60px;">AF b</div><div style="display:inline-block; width:60px;">Out</div>Fax audio 600&Omega; (balanced with 1)            <li><div style="display:inline-block; width:60px;">-</div><div style="display:inline-block; width:60px;">-</div><font color=#F52E00><i>unused</i></font>            <li><div style="display:inline-block; width:60px;">VIDEO</div><div style="display:inline-block; width:60px;">Out</div>Fax video            <li><div style="display:inline-block; width:60px;">-</div><div style="display:inline-block; width:60px;">-</div><font color=#F52E00><i>unused</i></font>            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div>Ground          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;" data-balloon-pos="up" aria-label="Pinout when looking into the DIN 6-pin 240° socket" class="tooltip-red">
+              <div style="position: relative;" data-balloon-pos="up" aria-label="Pinout when looking into the DIN 6-pin 240° socket" class="tooltip-red">
+              <img src="../../../ref/conn/din/svg/din6_240.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               alt="Pinout when looking into the DIN 6-pin 240° socket"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <div style="height: 18px; border-top: 1px solid #ccc;"></div>
+        <a name=conn_fs></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Teleprinter output 
+          &nbsp;<font color="#CCC">
+          FS MIL-188C
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+This connector is intended for connection of a teleprinter
+(German: Fernschreiber). Two signal types are available:
+Digital data (pin 1) and <span class="short" aria-label="Teletype" data-balloon-pos="up"><a href="../../../telex" class="short" >TTY</a></span> line current (pin 5).
+The digital data standard is MIL-STD-188C (6V) or RS232 (12V),
+<a href="img/304293/022/full.jpg"><span data-balloon-pos="up" aria-label="More about: selectable with a wire strap">selectable with a wire strap</span></a>
+at the centre of the Fax/Analog <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>.
+Below is the pinout when looking into the
+<a href="../../../ref/conn/din/index.htm#din_45322"><span data-balloon-pos="up" aria-label="More about: 6-pin 240&#176; DIN socket">6-pin 240&#176; DIN socket</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">DATA</div><div style="display:inline-block; width:60px;">Out</div>MIL-188C or RS232C <sup><font color="#FF8800">1</font></sup>            <li><div style="display:inline-block; width:60px;">-</div><div style="display:inline-block; width:60px;">-</div><font color=#F52E00><i>unused</i></font>            <li><div style="display:inline-block; width:60px;">-</div><div style="display:inline-block; width:60px;">-</div><font color=#F52E00><i>unused</i></font>            <li><div style="display:inline-block; width:60px;">-</div><div style="display:inline-block; width:60px;">-</div><font color=#F52E00><i>unused</i></font>            <li><div style="display:inline-block; width:60px;">TTY</div><div style="display:inline-block; width:60px;">Out</div><span class="short" aria-label="Teletype" data-balloon-pos="up"><a href="../../../telex" class="short" >TTY</a></span> line current (80V/40mA) <sup><font color="#FF8800">2</font></sup>            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div>Ground          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;" data-balloon-pos="up" aria-label="Pinout when looking into the DIN 6-pin 240° socket" class="tooltip-red">
+              <div style="position: relative;" data-balloon-pos="up" aria-label="Pinout when looking into the DIN 6-pin 240° socket" class="tooltip-red">
+              <img src="../../../ref/conn/din/svg/din6_240.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               alt="Pinout when looking into the DIN 6-pin 240° socket"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+The desired standard (MIL-188C or RS232) is selected with a
+  <a href="#conf_v24"><span data-balloon-pos="up" aria-label="Jump to: wire strap at the centre of the ...">wire strap at the centre of the upper PCB</span></a>.
+          </li>
+          <li>
+Adjustable between 20 mA and 60 mA.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <div style="height: 18px; border-top: 1px solid #ccc;"></div>
+        <a name=conn_nf1></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Audio input 1 
+          &nbsp;<font color="#CCC">
+          NF 1
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The TG-1001M can handle two receivers, which is particularly useful
+when using <b>receiver diversity</b>. Each receiver can be connected via the
+audio input (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Normal Frequenz (Audio Frequency, AF)">NF</span>) or the intermediate frequency input (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Zwitchen Frequenz (Intermediate Frequency, IF)">ZF</span>).
+These two inputs are mutually exclusive. The desired input is selected
+&mdash; along with the baudrate &mdash; with <a href="#conf_s1"><span data-balloon-pos="up" aria-label="Jump to: selector ...">selector <b>S1</b></span></a> at the top
+of the device. Below is the pinout of Audio Input 1 (NF1), when looking
+into the <a href="../../../ref/conn/din/index.htm#din_45322"><span data-balloon-pos="up" aria-label="More about: 6-pin 240&#176; DIN socket">6-pin 240&#176; DIN socket</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">AF1 a</div><div style="display:inline-block; width:60px;">In</div>600&Omega; (balanced with 2)            <li><div style="display:inline-block; width:60px;">AF1 b</div><div style="display:inline-block; width:60px;">In</div>600&Omega; (balanced with 1)            <li><div style="display:inline-block; width:60px;">-</div><div style="display:inline-block; width:60px;">-</div><font color=#F52E00><i>unused</i></font>            <li><div style="display:inline-block; width:60px;">AGC1</div><div style="display:inline-block; width:60px;">In</div>Automatic Gain Control            <li><div style="display:inline-block; width:60px;">-</div><div style="display:inline-block; width:60px;">-</div><font color=#F52E00><i>unused</i></font>            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div>Ground          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;" data-balloon-pos="up" aria-label="Pinout when looking into the DIN 6-pin 240° socket" class="tooltip-red">
+              <div style="position: relative;" data-balloon-pos="up" aria-label="Pinout when looking into the DIN 6-pin 240° socket" class="tooltip-red">
+              <img src="../../../ref/conn/din/svg/din6_240.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               alt="Pinout when looking into the DIN 6-pin 240° socket"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=conn_zf1></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Intermediate frequency input 1 
+          &nbsp;<font color="#CCC">
+          ZF1
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">IF1</div><div style="display:inline-block; width:60px;">In</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span> 30 kHz            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div>Ground          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="../../../ref/conn/bnc/svg/BNC.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <div style="height: 18px; border-top: 1px solid #ccc;"></div>
+        <a name=conn_nf2></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Audio input 2 
+          &nbsp;<font color="#CCC">
+          NF 2
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the pinout of Audio Input 2 (NF2), when looking
+into the <a href="../../../ref/conn/din/index.htm#din_45322"><span data-balloon-pos="up" aria-label="More about: 6-pin 240&#176; DIN socket">6-pin 240&#176; DIN socket</span></a>.
+This in&#173;put is mutually exclusive with the <b>ZF2</b> intermediate frequency input.
+The desired input is selected &mdash; along with the baudrate &mdash; with
+<a href="#conf_s1"><span data-balloon-pos="up" aria-label="Jump to: selector ...">selector <b>S1</b></span></a> at the top of the device.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">AF2 a</div><div style="display:inline-block; width:60px;">In</div>600&Omega; (balanced with 2)            <li><div style="display:inline-block; width:60px;">AF2 b</div><div style="display:inline-block; width:60px;">In</div>600&Omega; (balanced with 1)            <li><div style="display:inline-block; width:60px;">-</div><div style="display:inline-block; width:60px;">-</div><font color=#F52E00><i>unused</i></font>            <li><div style="display:inline-block; width:60px;">AGC2</div><div style="display:inline-block; width:60px;">In</div>Automatic Gain Control            <li><div style="display:inline-block; width:60px;">-</div><div style="display:inline-block; width:60px;">-</div><font color=#F52E00><i>unused</i></font>            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div>Ground          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;" data-balloon-pos="up" aria-label="Pinout when looking into the DIN 6-pin 240° socket" class="tooltip-red">
+              <div style="position: relative;" data-balloon-pos="up" aria-label="Pinout when looking into the DIN 6-pin 240° socket" class="tooltip-red">
+              <img src="../../../ref/conn/din/svg/din6_240.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               alt="Pinout when looking into the DIN 6-pin 240° socket"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=conn_zf2></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Intermediate frequency input 2 
+          &nbsp;<font color="#CCC">
+          ZF2
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">IF2</div><div style="display:inline-block; width:60px;">In</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span> 30 kHz            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div>Ground          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="../../../ref/conn/bnc/svg/BNC.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <div style="height: 18px; border-top: 1px solid #ccc;"></div>
+        <a name=conn_data></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Remote control 
+          &nbsp;<font color="#CCC">
+          DATEN
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Some functions of the TG-1001M can be controlled remotely from a Hagenuk
+<b>RX-1001M</b> or <b>RX-1001F</b> receiver via the 9-pin D-sub socket marked DATEN.
+This socket carries a proprietary bi&#173;directional interface that is compatible
+with the forementioned receivers. At present, we have no description of this
+interface and its protocol, as this is missing from the manual in our collection.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:80px;">D0</div><div style="display:inline-block; width:80px;">I/O</div>Data bit 0            <li><div style="display:inline-block; width:80px;">D2</div><div style="display:inline-block; width:80px;">I/O</div>Data bit 2            <li><div style="display:inline-block; width:80px;">RESET</div>In            <li><div style="display:inline-block; width:80px;">/FAXCON</div><div style="display:inline-block; width:80px;">?</div>Fax connected?            <li><div style="display:inline-block; width:80px;">DIR</div><div style="display:inline-block; width:80px;">In</div>Data direction            <li><div style="display:inline-block; width:80px;">D1</div><div style="display:inline-block; width:80px;">I/O</div>Data bit 1            <li><div style="display:inline-block; width:80px;">D3</div><div style="display:inline-block; width:80px;">I/O</div>Data bit 3            <li><div style="display:inline-block; width:80px;">STROBE</div><div style="display:inline-block; width:80px;">I/O</div>Depending on DIR            <li><div style="display:inline-block; width:80px;">GND</div><div style="display:inline-block; width:80px;">-</div>Ground          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="../../../ref/conn/dsub/svg/DE9_F_wide.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <div style="height: 18px; border-top: 1px solid #ccc;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Antenna input/output
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When antenna diversity is used, two antennnas may be connected to the
+N-connectors of the ANT1 and ANT2 inputs respectively. The output of
+the diversity system is available on the middle N-connector (ANT AUSG),
+which should be connected to the antenna input of the receiver.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">ANT1</div><div style="display:inline-block; width:60px;">In</div>Antenna 1, 50&Omega;            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div>Ground<br /><br />            <li value="1"><div style="display:inline-block; width:60px;">ANT2</div><div style="display:inline-block; width:60px;">In</div>Antenna 2, 50&Omega;            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div>Ground<br /><br />            <li value="1"><div style="display:inline-block; width:60px;">AUSG.</div><div style="display:inline-block; width:60px;">Out</div>To receiver antenna input, 50&Omega;            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div>Ground          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;" data-balloon-pos="up" aria-label="N-connector" class="tooltip-red">
+              <div style="position: relative;" data-balloon-pos="up" aria-label="N-connector" class="tooltip-red">
+              <img src="../../../ref/conn/n/svg/N0.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               alt="N-connector"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          </td></tr>
+        </table>
+<br />        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=cables></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Cables</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          E-1800 receiver (via AF input)
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the wiring of the cable that is used to connect
+the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span> output of the DE-1710 de&#173;mo&#173;du&#173;la&#173;tor of the
+<a href="../../../df/telefunken/e1800"><span data-balloon-pos="up" aria-label="More about: Telefunken E-1800 receiver">Telefunken E-1800 receiver</span></a>
+to the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span>-input (NF1) of the Hagenuk TG-1001M.
+Note that both devices have the same
+<a href="../../../ref/conn/din/index.htm#din_45322"><span data-balloon-pos="up" aria-label="More about: 5-pin 240&#176; DIN connector">5-pin 240&#176; DIN connector</span></a>,
+but with a <u>different pinout</u>.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/tg1001m_e1800_nf.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="height: 18px; border-top: 1px solid #ccc;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          GA-082 FSK analyzer
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When connecting a
+<a href="../../../telex/rs/ga082"><span data-balloon-pos="up" aria-label="More about: Rohde & Schwarz GA-082 FSK Analyzer">Rohde & Schwarz GA-082 FSK Analyzer</span></a> to the
+TG-1001M, the coaxial cable below should be used to connect the
+<a href="#conn_fax"><span data-balloon-pos="up" aria-label="Jump to: FAX-VIDEO output">FAX-VIDEO output</span></a> of the TG-1001M (6-pin DIN 240&#176;) to the
+<a href="../../../telex/rs/ga082/index.htm#conn_demod"><span data-balloon-pos="up" aria-label="More about: FSK input (BNC)">FSK input (BNC)</span></a>
+of the <a href="../../../telex/rs/ga082"><span data-balloon-pos="up" aria-label="More about: GA-082">GA-082</span></a>. Note that this is a
+single-ended (unbalanced) output with a level of &#177;6V (MIL-188) or
+&#177;12V (RS232). It is best to <a href="#conf_v24"><span data-balloon-pos="up" aria-label="Jump to: configure the device for RS232">configure the device for RS232</span></a>
+(&#177;12V).
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/tg1001m_ga082.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          </td></tr>
+        </table>
+<br />        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=conf></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Configuration</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <a name=conf_mains></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Select mains voltage
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="../../../img/blank.gif"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             border=0
+             width=1 height=1
+             />
+            <img src="../../../stamp/danger.svg" style="position: absolute; top: 15px; left: 630px;" 
+            />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+The device is suitable for connection to the 115V <u>or</u> 230V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> mains,
+selectable with a <a href="img/304293/023/full.jpg"><span data-balloon-pos="up" aria-label="More about: slide switch inside the device">slide switch inside the device</span></a>.
+Ensure that the appropriate voltage is selected <b>before</b> connecting the
+device to the mains. Also note that mains voltages are potentially lethal.
+Always disconnect the device from the mains before opening it. Open the
+device <b>only</b> if you know exactly what you are doing.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="img/304293/023/full.jpg">115/230V selector</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=conf_s1></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Input selection and baud rate 
+          &nbsp;<font color="#CCC">
+          S1
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The desired input (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span> or <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span>) and baudrate, are selected with a
+<a href="img/304293/020/full.jpg"><span data-balloon-pos="up" aria-label="More about: 16-position rotary switch">16-position rotary switch</span></a> that is accessible
+through a <a href="img/304293/013/full.jpg"><span data-balloon-pos="up" aria-label="More about: hole (marked S1) in the top panel">hole (marked S1) in the top panel</span></a>
+of the device. Use a screwdriver to set the switch to the desired position
+(0-9 and A-F), according to the table below.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+        <table width=100% cellspacing=0 cellpadding=0>
+          <tr>
+          <td width=100%>
+          <table
+           class="table"
+           width=450 border=0 cellspacing=1 cellpadding=2 bgcolor=#FFFFFF>
+            <tr>
+<td bgcolor="#FFFFFF" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>&#160;</font></td></b><td bgcolor="#E0E0E0" align="center" valign="center" colspan=4><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Inputs</font></td></b>            </tr>
+            <tr>
+<td bgcolor="#E0E0E0" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Baud</font></td></b><td bgcolor="#E0E0E0" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>NF1/NF2</font></td></b><td bgcolor="#E0E0E0" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>ZF1/NF2</font></td></b><td bgcolor="#E0E0E0" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>NF1/ZF2</font></td></b><td bgcolor="#E0E0E0" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>ZF1/ZF2</font></td></b>            </tr>
+            <tr>
+            <td bgcolor=#FFFFFF colspan=5><font size=-1>
+            </font></td>
+            </tr>
+            <tr>
+<td bgcolor="#E0E0E0" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>50</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>0</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>4</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>8</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>C</font></td>            </tr>
+            <tr>
+<td bgcolor="#E0E0E0" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>75</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>5</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>D</font></td>            </tr>
+            <tr>
+<td bgcolor="#E0E0E0" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>100</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>6</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>A</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>E</font></td>            </tr>
+            <tr>
+<td bgcolor="#E0E0E0" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>200</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>7</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>B</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>F</font></td>            </tr>
+          </table>
+<div style="height: 32px;"></div>        </td>
+        <td align="center" valign="middle">
+        <img style=" width: ;" src="svg/swhex4_sm.svg"
+        >
+        </td>
+        </tr></table>
+        <div style="height: 18px; border-top: 1px solid #ccc;"></div>
+        <a name=conf_s2></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Data type 
+          &nbsp;<font color="#CCC">
+          S2
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When using <span class="short tooltip-red" data-balloon-pos="up" aria-label="Central Processing Unit">CPU</span>-controlled diversity, it is necessary to tell the system
+whether synchronous or asynchronous signals are being used.
+The <a href="img/304293/019/full.jpg"><span data-balloon-pos="up" aria-label="More about: rotary selector S2 on the ...">rotary selector S2 on the interface board</span></a>
+should be set accordingly. Normal <span class="short" aria-label="Teletype" data-balloon-pos="up"><a href="../../../telex" class="short" >TTY</a></span> signals
+using the <a href="../../../ref/ita2"><span data-balloon-pos="up" aria-label="More about: ITA2 (Baudot) standard">ITA2 (Baudot) standard</span></a> are <b>asynchronous</b>.
+In that case, the selector should be set to <b>0</b> (as shown here).
+<b>Synchronous</b> signals are only used with certain types of encryption devices,
+in which case the selector should be set to <b>8</b>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li value="0"><div style="display:inline-block; width:100px;"><b>Async</b></div>Asynchronous. Regular Baudot TTY            <li value="8"><div style="display:inline-block; width:100px;">Sync</div>Synchronous. Certain encryption devices          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="svg/swhex4_sm.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <div style="height: 18px; border-top: 1px solid #ccc;"></div>
+        <a name=conf_v24></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Serial data output
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The serial output on pin 1 of the <a href="#conn_fs"><span data-balloon-pos="up" aria-label="Jump to: FS MIL-188C connector">FS MIL-188C connector</span></a> can be
+configured for <b>MIL-STD-188C</b> (&#177;6V) or <b>RS232</b> (&#177;12V). This is done with a
+<a href="img/304293/022/full.jpg"><span data-balloon-pos="up" aria-label="More about: wire strap at the center of the ...">wire strap at the center of the Fax/Analog board</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;"><b>MIL 188</b></div>MIL-STD-188C (&#177;6 V) <a href="#ref_3">[3]</a><a href="#ref_4">[4]</a>            <li><div style="display:inline-block; width:100px;">RS 232</div>RS232C, V.24 (&#177;12 V)          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <div style="height: 18px; border-top: 1px solid #ccc;"></div>
+        <a name=conf_fax></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Fax carrier frequency
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When sending the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Facsimile">FAX</span> output signal over a wire line, the fax signal
+is <span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span>-modulated onto a 3 kHz or 5 kHz carrier, selectable with a
+<a href="img/304293/021/full.jpg"><span data-balloon-pos="up" aria-label="More about: wire strap at the front edge of ...">wire strap at the front edge of the Fax/Analog board</span></a>.
+When using an analogue telephone line (<span class="short" aria-label="Public Switched Telephone Network" data-balloon-pos="up"><a href="../../../phone" class="short" >PSTN</a></span>), 3 kHz must be selected.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">3 kHz</div>Suitable for analogue telephone lines            <li><div style="display:inline-block; width:100px;"><b>5 kHz</b></div>Default setting          </ul>
+</font></td></tr></table><div style="height: 14px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Settings S1 and S2 in the top cover">          <img src="img/304293/013/thumbnail.jpg"
+           alt="Settings S1 and S2 in the top cover"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/013"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Baudrate and input selector S1 on the interface board" data-balloon-length="large">          <img src="img/304293/020/thumbnail.jpg"
+           alt="Baudrate and input selector S1 on the interface board"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/020"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="S2 on the interface board">          <img src="img/304293/019/thumbnail.jpg"
+           alt="S2 on the interface board"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/019"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="3 kHz or 5 kHz settings (FAX)">          <img src="img/304293/021/thumbnail.jpg"
+           alt="3 kHz or 5 kHz settings (FAX)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/021"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="MIL-188 or RS232 setting">          <img src="img/304293/022/thumbnail.jpg"
+           alt="MIL-188 or RS232 setting"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/022"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="115 or 230V mains AC voltage selector">          <img src="img/304293/023/thumbnail.jpg"
+           alt="115 or 230V mains AC voltage selector"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/023"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Address selectors on the CPU board">          <img src="img/304293/024/thumbnail.jpg"
+           alt="Address selectors on the CPU board"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304293/024"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'D'" onClick="slideOpen('slide_4'); slideCurrent('slide_4', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">D</span></div></div><div style="height: 40px;"></div>
+<div id="slide_4" class="slide" onClick="slideClose('slide_4')"><span class="slide_close_left" onClick="slideClose('slide_4')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_4', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 1 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304293/013/full.jpg" alt="Settings S1 and S2 in the top cover">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 2 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304293/020/full.jpg" alt="Baudrate and input selector S1 on the interface board">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 3 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304293/019/full.jpg" alt="S2 on the interface board">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 4 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304293/021/full.jpg" alt="3 kHz or 5 kHz settings (FAX)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 5 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304293/022/full.jpg" alt="MIL-188 or RS232 setting">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 6 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304293/023/full.jpg" alt="115 or 230V mains AC voltage selector">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 7 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304293/024/full.jpg" alt="Address selectors on the CPU board">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_4', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_4', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=sped></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Specifications</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Device</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Facsimile">FAX</span> demodulator and antenna/receiver diversity unit            <li><div style="display:inline-block; width:100px;">Purpose</div>Decoding <span class="short tooltip-red" data-balloon-pos="up" aria-label="High Frequency (3-30 MHz)">HF</span> teleprinter (telex) and facsimile (fax) signals            <li><div style="display:inline-block; width:100px;">Model</div>TG-1001M            <li><div style="display:inline-block; width:100px;">Manufacturer</div><a href="../../../manuf/teltron">Teltron</a>            <li><div style="display:inline-block; width:100px;">Reseller</div><a href="../../../manuf/hagenuk">Hagenuk</a>            <li><div style="display:inline-block; width:100px;">Year</div>1987 ~            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="National Stock Number (Nato Stock Number)">NSN</span></div>5820-12-310-9950            <li><div style="display:inline-block; width:100px;">Inputs</div>2 &#215; <span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span>, 2 x <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span>, 2 x antenna            <li><div style="display:inline-block; width:100px;">Outputs</div>TTY, RS232/MIL188, Fax 2-tone, Fax grey-scale            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span></div>30 kHz            <li><div style="display:inline-block; width:100px;">Power</div>&bullet; Mains 230 V/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> (22 W)<br /><div style="display:inline-block; width:100px;"></div>&bullet; 24 V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span> (18 W)            <li><div style="display:inline-block; width:100px;">Temperature</div>-10&#176;C to +55&#176;C            <li><div style="display:inline-block; width:100px;">Storage</div>-40&#176;C to +70&#176;C            <li><div style="display:inline-block; width:100px;">Humidity</div>95% &#64; +40&#176;C, non-condensing            <li><div style="display:inline-block; width:100px;">Dimensions</div>484 &#215; 435 &#215; 44.2 mm            <li><div style="display:inline-block; width:100px;">Weight</div>6212 g          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          FSK interface
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Inputs</div>NF1, NF2, ZF1, ZF2, AGC1, AGC2            <li><div style="display:inline-block; width:100px;">Outputs</div>TTY 40 mA single current (1k&Omega;), Serial MIL-188-C (&#177;6V) or RS232 (&#177;12V)            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span></div>30 kHz            <li><div style="display:inline-block; width:100px;">Shift</div>&bullet; &#177;42.5 kHz<br /><div style="display:inline-block; width:100px;"></div>&bullet; &#177;85 kHz<br /><div style="display:inline-block; width:100px;"></div>&bullet; &#177;425 kHz            <li><div style="display:inline-block; width:100px;">Baudrate</div>&lt; 600 baud            <li><div style="display:inline-block; width:100px;">Modes</div>&bullet; NORM, INVERT<br /><div style="display:inline-block; width:100px;"></div>&bullet; Quiescent current          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          FAX interface
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Inputs</div>ZF1, ZF2            <li><div style="display:inline-block; width:100px;">Outputs</div>&bullet; <span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span>, 5 kHz <span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span> 600&Omega; balanced, -30 dBm to 0 dBm<br /><div style="display:inline-block; width:100px;"></div>&bullet; Video, 5V &#177;1V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span>, 20 k&Omega;            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span></div>30 kHz            <li><div style="display:inline-block; width:100px;">Shift</div>&bullet; &#177;150 Hz<br /><div style="display:inline-block; width:100px;"></div>&bullet; &#177;400 Hz            <li><div style="display:inline-block; width:100px;">Baudrate</div>&lt; 2400 baud            <li><div style="display:inline-block; width:100px;">Modes</div>&bullet; Text (black and white)<br /><div style="display:inline-block; width:100px;"></div>&bullet; Grey scale image          </ul>
+</font></td></tr></table>        <a name=doc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Documentation</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <a name="doc_1"></a>
+            <li><a href="files/TG1001M_manual_DE.pdf">TG-1001M Service Manual</a><br />
+Hagenuk. Undated. 256 pages A4.
+            <p />
+            <a name="doc_2"></a>
+            <li><a href="files/TG1001M_interface.jpg">Interface board (FS-FAX-Analog) circuit diagram</a><br />
+Assembled from A4 copies extracted from <a href="#doc_1">[A]</a>.
+          </ol type=A>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+            <li><a href="https://www.qrz.com/db/hs0zhk" target="_blank">Helmut 'Jim' Meyer, <i>My way to Ham - Radio and beyond</i></a><br />
+Visited January 2020.
+            <p />
+            <a name="ref_2"></a>
+<li><font color=#F52E00>Dr. Torsten M&#228;hl, Personal correspondence</font><br />
+May 2025.
+            <p />
+            <a name="ref_3"></a>
+            <li><a href="../../../ref/milstd/MIL-STD-188C.pdf">Military Standard MIL-STD-188C</a><br />
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span> Department of Defense, 24 November 1969.<br />
+Obtained from <a href="http://everyspec.com/MIL-STD/MIL-STD-0100-0299/MIL-STD-188C_16263/" target="_blank">EverySpec</a>.
+            <p />
+            <a name="ref_4"></a>
+            <li><a href="https://en.wikipedia.org/wiki/MIL-STD-188" target="_blank">Wikipedia, <i>MIL-STD-188</i></a><br />
+Visited 18 May 2025.
+            <p />
+            <a name="ref_5"></a>
+            <li><a href="https://weather.mailasail.com/Franks-Weather/Radio-Teletype-Weather-Broadcasts" target="_blank">Franks Weather, <i>Radio Teletye (RTTY) Weather Forecasts</i></a><br />
+The Weather Window. Visited 10 June 2025.
+            <p />
+            <a name="ref_6"></a>
+            <li><a href="https://semiwiki.com/fpga/290990-reverse-engineering-the-first-fpga-chip-xilinx-xc2064/" target="_blank">Ken Shiriff, <i>Reverse-engineering the First FPGA Chip Xilinx XC2064</i?</a><br />
+<a href="https://semiwiki.com" target="_blank">SemiWiki website</a>, 16 September 2020.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../../../manuf/teltron">Teltron, the manufacturer</a><br />
+            <li><a href="../../../manuf/hagenuk">Hagenuk, the reseller</a><br />
+            <li><a href="../../index.htm">Other radio equipment</a><br />
+            <li><a href="../../../telex">Other telegraphy equipment</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Wednesday 07 May 2025. Last changed: Friday, 13 June 2025 - 10:55 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

@@ -1,0 +1,2011 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>TetraBurst</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../index.htm"><img src="../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of military radio equipment and radio-related subjects" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../radio/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../radio/glossary.htm';" >Glossary</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../radio/sincgars/index.htm';" >SINCGARS</div>
+          <div class="but sub" onClick="location.href='../../radio/zodiac/index.htm';" >ZODIAC</div>
+          <div class="but sub" onClick="location.href='../../radio/titaan/index.htm';" >TITAAN</div>
+          <div class="but sub" onClick="location.href='../../radio/bams/index.htm';" >BAMS</div>
+          <div class="but sub" onClick="location.href='../../radio/clansman/index.htm';" >Clansman</div>
+          <div class="but sub" onClick="location.href='../../radio/bowman/index.htm';" >Bowman</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Terrestrial Trunked Radio" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../radio/tetra/index.htm';" >TETRA</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Morse Code" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../radio/morse/index.htm';" >Morse</div>
+</div>
+          <div class="but sub" onClick="location.href='../../radio/morse/keys/index.htm';" >Morse keys</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Quartz Crystals" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../radio/xtal/index.htm';" >Crystals</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../radio/siemens/chx200/index.htm';" >CHX-200</div>
+          <div class="but sub" onClick="location.href='../../radio/rt1439/index.htm';" >RT-1439</div>
+          <div class="but sub" onClick="location.href='../../radio/rt3600/index.htm';" >RT-3600</div>
+          <div class="but sub" onClick="location.href='../../radio/se6861/index.htm';" >SE-6861</div>
+          <div class="but sub" onClick="location.href='../../radio/mel/prc319/index.htm';" >PRC-319</div>
+          <div class="but sub" onClick="location.href='../../radio/spider/index.htm';" >SPIDER</div>
+          <div class="but sub" onClick="location.href='../../radio/ussr/r142/index.htm';" >R-142</div>
+          <div class="but sub" onClick="location.href='../../radio/selex/index.htm';" >Selex PRR</div>
+          <div class="but sub" onClick="location.href='../../radio/fug8/index.htm';" >FuG-8</div>
+          <div class="spacer"></div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Countries
+          </div>
+          <div class="hidden">
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former Soviet Union" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../radio/ussr/index.htm';" >USSR</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former Yugoslav Republic" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../radio/yugo/index.htm';" >Yugoslavia</div>
+</div>
+          </div>
+          </div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../index.htm"><img src="../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="index.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Terrestrial Trunked Radio" class="key">TETRA</div></a>&nbsp;&nbsp;<a class="key" href="../../crypto/algo/tea/1.htm"><div  data-balloon-pos="up" aria-label="Forward to TETRA Encryption Algorithm 1" class="key right">TEA1 &rarr;</div></a><a class="key" href="../../crypto/algo/taa"><div  data-balloon-pos="up" aria-label="Forward to TETRA Authentication Algorithm" class="key right">TAA &rarr;</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <div style="background-color: #EEEEEE; font-size: 8pt; padding: 12px; color: #777777; overflow: auto;">
+<font color=#F52E00>9 August 2023 &mdash;</font>
+We are now able to share the reverse-engineered <a href="#pub"><span data-balloon-pos="up" aria-label="Jump to: C-source code">C-source code</span></a> of
+the <span class="short" aria-label="TETRA Authentication Algorithm" data-balloon-pos="up"><a href="../../crypto/algo/taa" class="short" >TAA1</a></span>, <span class="short" aria-label="TETRA Encryption Algorithm 1" data-balloon-pos="up"><a href="../../crypto/algo/tea/1.htm" class="short" >TEA1</a></span>, <span class="short" aria-label="TETRA Encryption Algorithm 2" data-balloon-pos="up"><a href="../../crypto/algo/tea/2.htm" class="short" >TEA2</a></span> and <span class="short" aria-label="TETRA Encryption Algorithm 3" data-balloon-pos="up"><a href="../../crypto/algo/tea/3.htm" class="short" >TEA3</a></span> algorithms. This clearly shows
+the weakness in <span class="short" aria-label="TETRA Encryption Algorithm 1" data-balloon-pos="up"><a href="../../crypto/algo/tea/1.htm" class="short" >TEA1</a></span>. Also published is a paper on TETRA:BURST,
+written by the Midnight Blue researchers Carlo Meijer, Wouter Bokslag
+and Jos Wetzels.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="#pub">More</a>
+        </div>
+        <div class="clear_float"></div>
+<div style="height: 20px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>TETRA:BURST</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Vulnerabilities in TETRA radio networks</b>
+<br />
+<br />
+On 24 July 2023, researchers of the Dutch security firm
+<a href="../../manuf/midnightblue"><span data-balloon-pos="up" aria-label="More about: Midnight Blue">Midnight Blue</span></a> revealed
+that they had found five vulnerabilities in the authentication and
+encryption algorithms of the <span class="short" aria-label="Terrestrial Trunked Radio" data-balloon-pos="up"><a href="index.htm" class="short" >TETRA</a></span> radio network, which is used in
+the critical infrastructure of more than 100 countries.
+Two of the vulnerabilities are deemed critical. One of them
+appears to be an intentional <i><span class="short" aria-label="deliberate weaking of a cipher system with the aim to provide covert access" data-balloon-pos="up"><a href="../../intel/nsa/backdoor.htm" class="short" >backdoor</a></span></i> <a href="#ref_1">[1]</a>.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/tetraburst.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The vulnerabilities were discovered during the course of 2020, and were
+reported to the <span class="short" aria-label="National Cyber Security Centre (Netherlands)" data-balloon-pos="up"><a href="../../intel/index.htm#ncsc" class="short" >NCSC</a></span> in the Netherlands in December of that year. It was
+decided to hold off public disclosure until July 2023, to give emergency
+services and equipment suppliers the ability to patch the equipment.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Reverse-engineering 
+          &nbsp;<font color="#CCC">
+          RE:TETRA</b>
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Several algorithm suites and cryptographic primitives are used at the
+core of the TETRA protocol, in particular <span class="short" aria-label="TETRA Authentication Algorithm" data-balloon-pos="up"><a href="../../crypto/algo/taa" class="short" >TAA</a></span> for authentication,
+and <span class="short" aria-label="TETRA Encryption Algorithm" data-balloon-pos="up"><a href="../../crypto/algo/tea" class="short" >TEA</a></span> for encryption.
+As these algorithms are secret, they have never been
+publicly disclosed and, hence, have never been subjected to in-depth
+public scrutiny. In order to find any vulnerabilities in the
+code, the researchers therefore first had to <i>reverse-engineer</i> the
+<span class="short" aria-label="TETRA Authentication Algorithm" data-balloon-pos="up"><a href="../../crypto/algo/taa" class="short" >TAA</a></span> and <span class="short" aria-label="TETRA Encryption Algorithm" data-balloon-pos="up"><a href="../../crypto/algo/tea" class="short" >TEA</a></span> algorithms, which appeared to be not trivial at all.
+<br />
+<br />
+The reverse-engineering project &mdash; codenamed RE:TETRA &mdash; was started
+on 1 January 2020, with funding from the non-profit
+<a href="https://nlnet.nl" target="_blank"><span data-balloon-pos="up" aria-label="nlnet.nl (off-site)">NLnet foundation</span></a>, as part of the latter's
+European Commission supported <a href="https://nlnet.nl/PET/" target="_blank"><span data-balloon-pos="up" aria-label="nlnet.nl (off-site)">NGI0 PET fund</span></a>.
+Once the reverse-engineering was completed, the researchers were
+able to isolate and analyse the cryptographic functions.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=platform></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Platform</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+For reverse-engineering, a <a href="../../crypto/motorola/mtm5400"><span data-balloon-pos="up" aria-label="More about: Motorola MTM-5400">Motorola MTM-5400</span></a>
+commercial off-the-shelf (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Commercial Off-The-Shelf">COTS</span>) mobile radio was used,
+along with associated firmware upgrades obtained through
+amateur radio forums. Reading the contents of a firmware upgrade
+is not trivial though, as it is heavily encrypted and relies
+on a Trusted Execution Environment (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Trusted Execution Environment">TEE</span>), embedded in
+the core processor of the radio.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <a href="../../crypto/motorola/mtm5400"><span data-balloon-pos="up" aria-label="More about: MTM-5000 series">MTM-5000 series</span></a>
+is built around a Texas Instruments
+<a href="https://www.ti.com/product/OMAP-L138" target="_blank"><span data-balloon-pos="up" aria-label="www.ti.com (off-site)">OMAP-L138</span></a>
+System on Chip (<span class="short tooltip-red" data-balloon-pos="up" aria-label="System on Chip">SoC</span>), which contains an
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Advanced RISC Machines">ARM</span> core and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Texas Instruments">TI</span> C6748 <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>.
+It offers secure boot by means of <span class="short tooltip-red" data-balloon-pos="up" aria-label="Trusted Execution Environment">TEE</span>,
+as a result of which confidential code can be loaded
+and executed without revealing its implementation.
+This is how the <span class="short" aria-label="Terrestrial Trunked Radio" data-balloon-pos="up"><a href="index.htm" class="short" >TETRA</a></span> algorithms are protected.
+<br />
+<br />
+In order to execute arbitrary code on the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Advanced RISC Machines">ARM</span> core,
+the researchers first had to exploit another series of
+known vulnerabilities, using a serial AT command interface
+as the attack surface and performing a cache-timing side
+channel attack.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../crypto/motorola/mtm5400">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="../../crypto/motorola/mtm5400">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/motorola_mtm5400_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=199
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+With the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Advanced RISC Machines">ARM</span> core and the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span> now firmly under control of the attackers,
+the <a href="../../crypto/motorola/mtm5400"><span data-balloon-pos="up" aria-label="More about: MTM-5000 series">MTM-5000 series</span></a>
+can be used as a development platform for researchers,
+allowing in-depth security research into <span class="short" aria-label="Terrestrial Trunked Radio" data-balloon-pos="up"><a href="index.htm" class="short" >TETRA</a></span>, which will hopefully
+improve overall <span class="short" aria-label="Terrestrial Trunked Radio" data-balloon-pos="up"><a href="index.htm" class="short" >TETRA</a></span> security.
+The <a href="../../manuf/midnightblue"><span data-balloon-pos="up" aria-label="More about: Midnight Blue">Midnight Blue</span></a> researchers have announced
+that they will publicly release the tools for unpacking Motorola
+firmware upgrade packages, as well as utilities for instrumenting, debugging,
+monitoring and packet injection.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Vulnerabilities 
+          &nbsp;<font color="#CCC">
+          TETRA:BURST</b>
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Once the software had been reverse-engineered, the researchers were
+able to do in-depth security research with the aim to find vulnerabilities
+and ultimately mount an attack. Over the course of one year,
+the following vulnerabilities were discovered:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><a href="#flaw1">Dependence on network time</a><br />
+The Air Interface Encryption (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Air Interface Encryption">AIE</span>) keystream relies on network time,
+which is publicly broadcast in an unauthenticated manner. This allows
+for <i>decryption oracle attacks</i> and may lead to loss of
+confidentiality and authenticity. This vulnerability is deemed critical.
+<br />
+            <div class="grey">
+<b>CVE-2022-24401 &#183;</b>
+This problem can be fixed by installing a firmware upgrade.
+<div class="right tred">&starf;&starf;&starf;&starf;&starf;</div>
+            </div>
+            <p />
+            <li><a href="#flaw2">Backdoor in TEA1</a><br />
+The TEA1 algorithm has a <i><span class="short" aria-label="deliberate weaking of a cipher system with the aim to provide covert access" data-balloon-pos="up"><a href="../../intel/nsa/backdoor.htm" class="short" >backdoor</a></span></i> that reduces the original
+80-bit key to a size which is trivially brute-forceable on consumer
+hardware in minutes. This is a critical flaw that leads to loss of
+confidentiality and authenticity. The researchers believe that this
+is a deliberately created weakness to provide intelligence services
+access to the traffic.
+<br />
+            <div class="grey">
+<b>CVE-2022-24402 &#183;</b>
+This problem can be fixed by using <span class="short tooltip-red" data-balloon-pos="up" aria-label="end-to-end encryption">E2EE</span> on top of TEA1.
+<div class="right tred">&starf;&starf;&starf;&starf;&starf;</div>
+            </div>
+            <p />
+<li><font color=#F52E00>Lack of ciphertext authentication</font><br />
+The lack of ciphertext authentication of <span class="short tooltip-red" data-balloon-pos="up" aria-label="Air Interface Encryption">AIE</span> allows for
+malleability attacks. This may eventually lead to loss of authenticity.
+<br />
+            <div class="grey">
+<b>CVE-2022-24404 &#183;</b>
+This problem can be fixed by installing a firmware upgrade.
+<div class="right tred">&starf;&starf;&starf;&starf;</div>
+            </div>
+            <p />
+<li><font color=#F52E00>Weak anonymisation</font><br />
+The cryptographic scheme used to obfuscate radio identities, has a weak
+design that allows attackers to deanonymize and track users.
+<br />
+            <div class="grey">
+<b>CVE-2022-24403 &#183;</b>
+This problem can be fixed by using <span class="short tooltip-red" data-balloon-pos="up" aria-label="end-to-end encryption">E2EE</span> on top of TEA1.
+<div class="right tred">&starf;&starf;&starf;</div>
+            </div>
+            <p />
+<li><font color=#F52E00>DCK can be set to 0</font><br />
+A flaw in the authentication algorithm allows attackers to set the
+Derived Cipher Key (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Derived Cipher Key">DCK</span>) to 0.
+This may lead to loss of authenticity and partial loss of confidentially.
+<br />
+            <div class="grey">
+<b>CVE-2022-24400 &#183;</b>
+This problem can be fixed by migrating to TAA2 (long-term).
+<div class="right tred">&starf;</div>
+            </div>
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=etsi></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          ETSI's reply 
+          &nbsp;<font color="#CCC">
+          24 Aug 2023
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <span class="short" aria-label="Terrestrial Trunked Radio" data-balloon-pos="up"><a href="index.htm" class="short" >TETRA</a></span> encryption algorithms were implemented in 1996 and 1997 by
+or on behalf of the
+<a href="../../org/etsi/index.htm#sage"><span data-balloon-pos="up" aria-label="More about: Security Experts Group">Security Experts Group</span></a> of the
+<a href="../../org/etsi/index.htm"><span data-balloon-pos="up" aria-label="More about: European Telecommunications ...">European Telecommunications Standards Insitute</span></a>
+(<span class="short" aria-label="ETSI Security Algorithms Group of Experts" data-balloon-pos="up"><a href="../../org/etsi/index.htm#sage" class="short" >ETSI-SAGE</a></span>).
+It is ETSI's policy not to disclose their cryptographic algorithms
+and not to submit them to public in-depth security research,
+other than validation by the other <span class="short" aria-label="ETSI Security Algorithms Group of Experts" data-balloon-pos="up"><a href="../../org/etsi/index.htm#sage" class="short" >ETSI-SAGE</a></span> members, claiming that
+<i>obscurity</i> is also a form of <i>security</i> <a href="#ref_7">[7]</a>. Researchers
+often see this as a violation of <i>Kerckhoffs's Principle</i> however <a href="#ref_5">[5]</a>,
+which in the long run can potentially lead to weak exploitable systems.
+<br />
+<br />
+On the day of the TETRA:BURST disclosures,
+<span class="short" aria-label="European Telecommunications Standards Institute" data-balloon-pos="up"><a href="../../org/etsi/index.htm" class="short" >ETSI</a></span> issued a press statement in which the findings of the
+researchers were largely downplayed, claiming that improvements
+were already underway and that no actual exploitations of operational
+networks were known at the time <a href="#ref_6">[6]</a>.
+<br />
+<br />
+The Midnight Blue researchers have since demonstrated real-life
+exploitations of some of the vulnerabilities, for example at the
+2023 Blackhat Conference in Las Vegas (USA). They have shown that
+<span class="short" aria-label="Terrestrial Trunked Radio" data-balloon-pos="up"><a href="index.htm" class="short" >TETRA</a></span> communications secured with the <span class="short" aria-label="TETRA Encryption Algorithm 1" data-balloon-pos="up"><a href="../../crypto/algo/tea/1.htm" class="short" >TEA1</a></span> encryption algorithm
+can be broken in one minute on a regular commercial laptop and in 12 hours
+on a classic laptop from 1998 <a href="#pub_3">[III]</a>.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=demo></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Demonstrations</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <a name=flaw1></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          1. Dependence on network time
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<font color=#F52E00>&starf;&starf;&starf;&starf;&starf;</font> CVE-2022-24401
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the video below, the first critical vulnerability (CVE-2022-24401) is
+demonstrated. It shows a <i>decryption oracle attack</i> that is based on the
+fact that the Air Interface Encryption (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Air Interface Encryption">AIE</span>) keystream relies on network time,
+which is publicly broad&shy;cast in an unauthenticated manner. The video shows a
+lab setup in which an instrumented base station is used as an attacker platform.
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign="top">
+          <iframe width="298" height="200" src="https://www.youtube.com/embed/oJjTiO6C9xs" frameborder="0" allowfullscreen></iframe>
+        </td></tr></table>
+        </td></tr>
+      </table>
+<br />      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        </td></tr>
+      </table>
+<br />      <a name=flaw2></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        2. Backdoor in TEA1
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<font color=#F52E00>&starf;&starf;&starf;&starf;&starf;</font> CVE-2022-24402
+        </font>
+        </td></tr>
+      </table>
+<br />      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Midnight Blue researchers discovered a <i><span class="short" aria-label="deliberate weaking of a cipher system with the aim to provide covert access" data-balloon-pos="up"><a href="../../intel/nsa/backdoor.htm" class="short" >backdoor</a></span></i> in the <span class="short" aria-label="TETRA Encryption Algorithm 1" data-balloon-pos="up"><a href="../../crypto/algo/tea/1.htm" class="short" >TEA1</a></span>
+encryption algorithm, which had clearly been added deliberately, probably
+to give inteligence services access to the system.
+In the video below, the <span class="short" aria-label="TETRA Encryption Algorithm 1" data-balloon-pos="up"><a href="../../crypto/algo/tea/1.htm" class="short" >TEA1</a></span> backdoor is demonstrated on a real network.
+After breaking the initial key &mdash; one minute on a regular laptop &mdash;
+the rest of the traffic can be read without any problems.
+<br />
+        </font></td>
+        <td>&nbsp;&nbsp;</td>
+        <td align=center valign=top width=100>
+        <table border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign="top">
+        <iframe width="298" height="200" src="https://www.youtube.com/embed/-m9UTJLt4uw" frameborder="0" allowfullscreen></iframe>
+      </td></tr></table>
+      </td></tr>
+    </table>
+<br />    <table width=100% border=0 cellspacing=0 cellpadding=0>
+      <tr>
+      </td></tr>
+    </table>
+<br />    <table width=100% border=0 cellpadding=0 cellspacing=0>
+      <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+      <tr>
+      <td align="left" valign="center">
+      <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+      3. Breaking TEA1 on a 1998 laptop
+      </font>
+      </td>
+      </tr>
+      <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+      <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+    </table>
+    <table width=100% border=0 cellspacing=0 cellpadding=0>
+      <tr>
+      <td valign=top align=left>
+      <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<font color=#F52E00>&starf;&starf;&starf;&starf;&starf;</font> CVE-2022-24401
+      </font>
+      </td></tr>
+    </table>
+<br />    <table width=100% border=0 cellspacing=0 cellpadding=0>
+      <tr>
+      <td valign=top align=left>
+      <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+After the TETRA:BURST vulnerabilities were dis&shy;closed on 24 July 2023,
+the European standards body <span class="short" aria-label="European Telecommunications Standards Institute" data-balloon-pos="up"><a href="../../org/etsi/index.htm" class="short" >ETSI</a></span> downplayed the
+discoveries, saying that the short <span class="short" aria-label="TETRA Encryption Algorithm 1" data-balloon-pos="up"><a href="../../crypto/algo/tea/1.htm" class="short" >TEA1</a></span> key is not a real <span class="short" aria-label="deliberate weaking of a cipher system with the aim to provide covert access" data-balloon-pos="up"><a href="../../intel/nsa/backdoor.htm" class="short" >backdoor</a></span>,
+and that a key length of 32 bits was appropriate when the standard was
+issued in the late 1990s.
+<br />
+<br />
+To bust these claims, the researchers have run their <span class="short" aria-label="TETRA Encryption Algorithm 1" data-balloon-pos="up"><a href="../../crypto/algo/tea/1.htm" class="short" >TEA1</a></span> cracking
+tool on an old 1998 Toshiba laptop, running Microsoft Windows 95
+on a Pentium II at 266 MHz. The key was found after 12.5 hours,
+which demonstrates that even in the late 1990s an attack would
+have been realistic.
+<br />
+      </font></td>
+      <td>&nbsp;&nbsp;</td>
+      <td align=center valign=top width=100>
+      <table border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign="top">
+      <iframe width="298" height="200" src="https://www.youtube.com/embed/u2pbCu7zDrA" frameborder="0" allowfullscreen></iframe>
+    </td></tr></table>
+    </td></tr>
+  </table>
+<br />  <table width=100% border=0 cellspacing=0 cellpadding=0>
+    <tr>
+    </td></tr>
+  </table>
+<br />  <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+  <table width=100% border=0 cellspacing=0 cellpadding=0>
+    <tr>
+    <td valign=top align=left>
+    <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+    </font>
+    </td></tr>
+  </table>
+<br />  <a name=tea></a>
+  <table width=100% border=0 cellpadding=0 cellspacing=0>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+    <tr>
+    <td align="left" valign="center">
+    <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+    <b>TETRA Encryption Algorithms 
+    &nbsp;<font color="#CCC">
+    TEA</b>
+    </font>
+    </font>
+    </td>
+    </tr>
+    <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  </table>
+  <table width=100% border=0 cellspacing=0 cellpadding=0>
+    <tr>
+    <td valign=top align=left>
+    <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<span class="short" aria-label="TETRA Encryption Algorithm" data-balloon-pos="up"><a href="../../crypto/algo/tea" class="short" >TEA</a></span> is a set of encryption algorithms that can be used for
+Air Interface Encryption (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Air Interface Encryption">AIE</span>) in the <span class="short" aria-label="Terrestrial Trunked Radio" data-balloon-pos="up"><a href="index.htm" class="short" >TETRA</a></span> communications system.
+It consists of four variants (<span class="short" aria-label="TETRA Encryption Algorithm 1" data-balloon-pos="up"><a href="../../crypto/algo/tea/1.htm" class="short" >TEA1</a></span>, <span class="short" aria-label="TETRA Encryption Algorithm 2" data-balloon-pos="up"><a href="../../crypto/algo/tea/2.htm" class="short" >TEA2</a></span>, <span class="short" aria-label="TETRA Encryption Algorithm 3" data-balloon-pos="up"><a href="../../crypto/algo/tea/3.htm" class="short" >TEA3</a></span> and <span class="short" aria-label="TETRA Encryption Algorithm 4" data-balloon-pos="up"><a href="../../crypto/algo/tea/4.htm" class="short" >TEA4</a></span>), with
+differing levels of security, depending on the application. The algorithms
+are simple yet strong, and can easily be implemented in both hard- and
+software. All <span class="short" aria-label="TETRA Encryption Algorithm" data-balloon-pos="up"><a href="../../crypto/algo/tea" class="short" >TEA</a></span> variants use an 80-bit key.
+<br />
+<br />
+The structure of the <span class="short" aria-label="TETRA Authentication Algorithm" data-balloon-pos="up"><a href="../../crypto/algo/taa" class="short" >TAA</a></span> and <span class="short" aria-label="TETRA Encryption Algorithm" data-balloon-pos="up"><a href="../../crypto/algo/tea" class="short" >TEA</a></span> algorithms, including the
+HURDLE block cipher used in <span class="short" aria-label="TETRA Authentication Algorithm" data-balloon-pos="up"><a href="../../crypto/algo/taa" class="short" >TAA</a></span>, is described in detail in a paper
+by Carlo Meijer, Wouter Bokslag and Jos Wetzels &mdash; all
+involved in the TETRA:BURST vulnerability research at
+<a href="../../manuf/midnightblue"><span data-balloon-pos="up" aria-label="More about: Midnight Blue">Midnight Blue</span></a> <a href="#pub_1">[I]</a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="files/tetra_paper.pdf">Read the paper</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="files/tetracrypto.zip">Reverse-engineered source code</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../crypto/algo/tea">Overview of TEA algorithms</a>
+<br />
+<br />
+    </font>
+    </td></tr>
+  </table>
+<br />  <a name=tea1></a>
+  <table width=100% border=0 cellpadding=0 cellspacing=0>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+    <tr>
+    <td align="left" valign="center">
+    <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+    TEA1 algorithm
+    </font>
+    </td>
+    </tr>
+    <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  </table>
+  <table width=100% border=0 cellspacing=0 cellpadding=0>
+    <tr>
+    <td valign=top align=left>
+    <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <span class="short" aria-label="TETRA Encryption Algorithm 1" data-balloon-pos="up"><a href="../../crypto/algo/tea/1.htm" class="short" >TEA1</a></span> algorithm was intended for commercial applications and
+restricted export.
+Its structure is very similar to <a href="#tea2"><span data-balloon-pos="up" aria-label="Jump to: TEA2">TEA2</span></a>,
+but the 80-bit key is manipulated in such a way that it becomes
+a 32-bit key, which can be broken with a brute-force attack
+on a regular commercial laptop in around one minute.
+The source code snippet below shows how the key length is reduced.
+    </font>
+    </td></tr>
+  </table>
+<br />  <table width=100% border=0 cellspacing=0 cellpadding=0><tr><td>
+    <pre>
+     int32_t tea1_init_key_register(const uint8_t *lpKey) {
+         int32_t dwResult = 0;
+         for (int i = 0; i &lt; 10; i++) {
+             dwResult = (dwResult &lt;&lt; 8) |
+             g_abTea1Sbox[((dwResult &gt;&gt; 24) ^ lpKey[i] ^ dwResult) &amp; 0xff];
+         }
+         return dwResult;
+     }
+     
+    </pre>
+</td></tr></table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+  <tr>
+  <td valign=top align=left>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The key consists of 80 bits, which is equal to 10 bytes.
+In the above code, the 10 bytes are processed one at a time, and then shifted
+into the result (<div style="display:inline-block; font-family:monospace; font-size:14px;">dwResult</div>) register. However, as the <div style="display:inline-block; font-family:monospace; font-size:14px;">dwResult</div>
+register is only 32 bits wide, the first 48 bits are shifted out
+and the key consists of the last 32 bits only, which is trivially
+short for a brute-force attack.
+<br />
+<br />
+Although the short key length can be seen as a <i><span class="short" aria-label="deliberate weaking of a cipher system with the aim to provide covert access" data-balloon-pos="up"><a href="../../intel/nsa/backdoor.htm" class="short" >backdoor</a></span></i>
+&mdash; it is a deliberate weakening &mdash;
+this is disputed by one of the original developers &mdash; Cees Jansen &mdash;
+as it was done in plain sight and not hidden in some complex code,
+function or table <a href="#ref_9">[9]</a>.
+The short key length was simply an <span class="short" aria-label="European Telecommunications Standards Institute" data-balloon-pos="up"><a href="../../org/etsi/index.htm" class="short" >ETSI</a></span> requirement.
+Any company that had to implement the algorithm in its equipment,
+had access to the design specification and must have been aware
+of the limitation <a href="#ref_3">[3]</a>.
+This is corroborated by Gert Roelofsen in an interview with
+De Volkskrant on 29 July 2023, in which he states that the government
+had been aware of it for the past 30 years <a href="#ref_2">[2]</a>. At the time, Roelofsen
+was on the <span class="short" aria-label="European Telecommunications Standards Institute" data-balloon-pos="up"><a href="../../org/etsi/index.htm" class="short" >ETSI</a></span> experts team on behalf of the major Dutch telecom
+provider <span class="short" aria-label="Koninklijke PTT Nederland" data-balloon-pos="up"><a href="../../../manuf/ptt" class="short" >KPN</a></span>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../crypto/algo/tea/1.htm">More about TEA1</a>
+<br />
+<br />
+  </font>
+  </td></tr>
+</table>
+<br /><a name=tea2></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  TEA2 algorithm
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+  <tr>
+  <td valign=top align=left>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<span class="short" aria-label="TETRA Encryption Algorithm 2" data-balloon-pos="up"><a href="../../crypto/algo/tea/2.htm" class="short" >TEA2</a></span> was developed for European emergency services, and is arguably
+the strongest of the four algorithms. It uses the full 80-bit key
+length. If we assume that a 32-bit key can be broken in one
+minute &ndash; as with <a href="#tea1"><span data-balloon-pos="up" aria-label="Jump to: TEA1">TEA1</span></a> above &ndash; we can calculate how long it would take
+to brute-force an 80-bit key. As each bit doubles the required time,
+the total time needed is:
+<br />
+<br />
+<center>
+60 &#215; 2<sup>48</sup> [sec] &asymp; <b>535 milion years</b>
+</center>
+  </font>
+  </td></tr>
+</table>
+<br /><table width=100% border=0 cellspacing=0 cellpadding=0>
+  <tr>
+  <td valign=top align=left>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+If there is no known way to break the cipher other than by means of
+a brute-force attack, this algorithm can be assumed secure.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../crypto/algo/tea/2.htm">More about TEA2</a>
+<br />
+<br />
+  </font>
+  </td></tr>
+</table>
+<br /><a name=tea3></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  TEA3 algorithm
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+  <tr>
+  <td valign=top align=left>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<span class="short" aria-label="TETRA Encryption Algorithm 3" data-balloon-pos="up"><a href="../../crypto/algo/tea/3.htm" class="short" >TEA3</a></span> is intended for emergency services outside Europe.
+It is similar to <span class="short" aria-label="TETRA Encryption Algorithm 2" data-balloon-pos="up"><a href="../../crypto/algo/tea/2.htm" class="short" >TEA2</a></span> and does not have the weakness of
+<span class="short" aria-label="TETRA Encryption Algorithm 1" data-balloon-pos="up"><a href="../../crypto/algo/tea/1.htm" class="short" >TEA1</a></span> (i.e. the reduced key length). Although it is likely that
+<span class="short" aria-label="TETRA Encryption Algorithm 3" data-balloon-pos="up"><a href="../../crypto/algo/tea/3.htm" class="short" >TEA3</a></span> is stronger than <span class="short" aria-label="TETRA Encryption Algorithm 1" data-balloon-pos="up"><a href="../../crypto/algo/tea/1.htm" class="short" >TEA1</a></span> and <span class="short" aria-label="TETRA Encryption Algorithm 4" data-balloon-pos="up"><a href="../../crypto/algo/tea/4.htm" class="short" >TEA4</a></span>, it is also likely
+that it is weaker than <span class="short" aria-label="TETRA Encryption Algorithm 2" data-balloon-pos="up"><a href="../../crypto/algo/tea/2.htm" class="short" >TEA2</a></span>. So far, the researchers have not found
+any weaknesses in this cipher, but acknowledge the need for further
+research.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../crypto/algo/tea/3.htm">More about TEA3</a>
+<br />
+<br />
+  </font>
+  </td></tr>
+</table>
+<br /><a name=tea4></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  TEA4 algorithm
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+  <tr>
+  <td valign=top align=left>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <span class="short" aria-label="TETRA Encryption Algorithm 4" data-balloon-pos="up"><a href="../../crypto/algo/tea/4.htm" class="short" >TEA4</a></span> algorithm is intended for commercial use and restricted
+access, just like <span class="short" aria-label="TETRA Encryption Algorithm 1" data-balloon-pos="up"><a href="../../crypto/algo/tea/1.htm" class="short" >TEA1</a></span>, which suggests that it also has a
+built-in weakness. However, as no implementation of this
+cipher was available on the Motorola target MTM-5400 platform,
+the researchers were unable to review the algorithm.
+It seems likely though, that it has similar weaknesses to <span class="short" aria-label="TETRA Encryption Algorithm 1" data-balloon-pos="up"><a href="../../crypto/algo/tea/1.htm" class="short" >TEA1</a></span>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../crypto/algo/tea/4.htm">More about TEA4</a>
+<br />
+<br />
+  </font>
+  </td></tr>
+</table>
+<br /><table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  <b>Exploitation</b>
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+  <tr>
+  <td valign=top align=left>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Although there is no direct proof of actual exploitation of a <span class="short" aria-label="Terrestrial Trunked Radio" data-balloon-pos="up"><a href="index.htm" class="short" >TETRA</a></span>
+network, it seems likely that malicious parties are interested in reading
+or interfering with <span class="short" aria-label="Terrestrial Trunked Radio" data-balloon-pos="up"><a href="index.htm" class="short" >TETRA</a></span> traffic. The simple fact that no exploitations
+are known <a href="#ref_6">[6]</a>, does not mean that they do not exist.
+The TETRA:BURST
+project shows that reverse-engineering of the cryptographic primitives
+is feasible with limited resources.
+<br />
+<br />
+A weakness like the reduced key
+length of <a href="#tea1"><span data-balloon-pos="up" aria-label="Jump to: TEA1">TEA1</span></a> is so obvious that it will certainly have been
+noticed and exploited. Apart from the possibility of reverse-engineering,
+an adversary would not be hampered by legal restrictions,
+and might use leaked or stolen documentation instead.
+<br />
+<br />
+  </font>
+  </td></tr>
+</table>
+<br /><table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  <b>Responsible disclosure</b>
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+  <tr>
+  <td valign=top align=left>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is a timeline of events since the start of the reverse-engineering
+project RE:TETRA on 1 January 2021 and the first public disclosure on 24 July
+2023. The Dutch <span class="short" aria-label="National Cyber Security Centre (Netherlands)" data-balloon-pos="up"><a href="../../intel/index.htm#ncsc" class="short" >NCSC</a></span> (<span class="short" aria-label="National Cyber Security Centre (Netherlands)" data-balloon-pos="up"><a href="../../intel/index.htm#ncsc" class="short" >NCSC-NL</a></span>) was informed in December 2021, after which
+meetings were held with the law enforcement and intelligence communities,
+as well as with <span class="short" aria-label="European Telecommunications Standards Institute" data-balloon-pos="up"><a href="../../org/etsi/index.htm" class="short" >ETSI</a></span> and the vendors. Shortly afterwards, on 2 February 2022,
+preliminary advice was distributed to the various stakeholders and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Computer Emergency Respnse Team">CERT</span>s.
+The remainder of 2022 and the first half of 2023 were used for coordination
+and advisory sessions with stake&shy;holders, allowing manufacturers to come
+up with firmware patches, updates or workarounds.
+<br />
+  <br />
+  <table 
+   border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+    <div style="position: relative;">
+    <div style="position: relative;">
+    <img src="svg/tetraburst_timeline.svg"
+     style="
+     max-width: 618px;
+    "
+     align="center"
+     vspace="4"
+     border=0
+    
+     />
+    </div>
+    </td></tr><tr><td align=center>
+  </td></tr></table>
+<br />
+The time between the first contact with <span class="short" aria-label="National Cyber Security Centre (Netherlands)" data-balloon-pos="up"><a href="../../intel/index.htm#ncsc" class="short" >NCSC-NL</a></span> and the public disclosure
+of the vulnerabilities, is a carefully chosen tradeoff between giving
+asset owners as much time as possible and the right of the public to know.
+The 1.5+ years inbetween were used to find as many stakeholders as
+possible and inform/advice them, so that software updates and mitigations
+could be devoloped.
+<br />
+<br />
+  </font>
+  </td></tr>
+</table>
+<br /><a name=events></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  <b>Events</b>
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+  <tr>
+  <td valign=top align=left>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The Midnight Blue researchers will present their finding at the following
+events and conferences:
+  </font>
+  </td></tr>
+</table>
+<br /><table width=100% border=0 cellspacing=0 cellpadding=4>
+  <tr>
+  <td valign="">
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+  <ul>
+    <li><a href="https://www.blackhat.com/us-23/" target="_blank"><div style="display:inline-block; width:130px;"><s>2023 Aug 9</div>Blackhat 2023, Las Vegas (USA)</s></a>    <li><a href="https://www.usenix.org/conference/usenixsecurity23" target="_blank"><div style="display:inline-block; width:130px;"><s>2023 Aug 11</div>Usenix Security, Anaheim (Germany)</s></a>    <li><a href="https://defcon.org/html/defcon-31/dc-31-index.html" target="_blank"><div style="display:inline-block; width:130px;"><s>2023 Aug 13</div>DEF CON, Las Vegas (USA)</s></a>    <li><a href="https://events.ccc.de/camp/2023/infos/" target="_blank"><div style="display:inline-block; width:130px;"><s>2023 Aug 15-19</div>CCC summer camp, Berlin (Germany)</s></a>    <li><a href="https://one-conference.nl" target="_blank"><div style="display:inline-block; width:130px;"><s>2023 Oct 3</div>ONE conference, The Hague (Netherlands)</s></a>    <li><a href="https://insightevents.dk/isc-cph/program/" target="_blank"><div style="display:inline-block; width:130px;"><s>2023 Nov 14</div>ISC, Copenhagen (Denmark)</s></a>    <li><a href="https://www.win.tue.nl/eipsi/surveillance.html" target="_blank"><div style="display:inline-block; width:130px;"><s>2024 May 31</div>Security in Times of Surveillance, TU/e, Eindhoven (Netherlands)</s></a>  </ul>
+</font></td></tr></table><div style="height: 14px;"></div><a name=pub></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  <b>Publications</b>
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+  <tr>
+  <td>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+  <ol type=I>
+    <a name="pub_1"></a>
+    <li><a href="files/tetra_paper.pdf">Carlo Meijer, Wouter Bokslag and Jos Wetzels,<br /><i>All cops are broadcasting: TETRA under scrutiny</i></a><br />
+Paper submitted to Crypto Museum. 9 August 2023.
+    <p />
+    <a name="pub_2"></a>
+    <li><a href="files/tetracrypto.zip">Full source code of TAA1, TEA1, TEA2 and TEA3 algorithms in C</a><br />
+Reverse-engineered and used for analysis and real life tests.<br />
+Midnight Blue, 9 August 2023.
+    <p />
+    <a name="pub_3"></a>
+    <li><a href="files/tetra_pres_20230809.pdf"><i>All Cops Are Broadcasting, Breaking TETRA after decades in the shadows</i></a><br />
+Presentation by Jos Wetzels, Carlo Meijer and Wouter Bokslag at Black Hat 2023.<br />
+Midnight Blue, 9 August 2023
+  </ol type=I>
+</font></td></tr></table>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  Further source codes on GitHub
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+  <tr>
+  <td>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+  <ul>
+    <li><a href="https://github.com/MidnightBlueLabs/TETRA_burst" target="_blank">Midnight Blue, TETRA burst sources</a><br />
+  </ul>
+</font></td></tr></table>
+<div style="height: 14px;"></div><a name=data></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  <b>Datasheets</b>
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+  <tr>
+  <td>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+  <ol type=a>
+    <a name="data_1"></a>
+    <li><a href="https://www.ti.com/product/OMAP-L138" target="_blank">OMAP-L138 processor documentation</a><br />
+Texas Instruments website.
+    <p />
+    <a name="data_2"></a>
+    <li><a href="https://www.ti.com/product/TMS320C6748" target="_blank">TMS320 DSP documentation</a><br />
+Texas Instruments website.
+  </ol type=a>
+</font></td></tr></table>
+<div style="height: 14px;"></div><a name=ref></a>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  <b>References</b>
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+  <tr>
+  <td>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+  <ol>
+    <a name="ref_1"></a>
+    <li><a href="https://www.midnightblue.nl/tetraburst" target="_blank">TETRA:BURST</a><br />
+Midnight Blue, 24 July 2023.
+    <p />
+    <a name="ref_2"></a>
+    <li><a href="https://bit.ly/43UXoYd" target="_blank">Huib Modderkolk, <i>Overheid weet al dertig jaar van 'achterdeur' in beveiliging radiocommunicatie</i></a><br />
+De Volkskrant, 29 July 2023.
+    <p />
+    <a name="ref_3"></a>
+    <li><a href="https://ceesjansen.nl/category/nieuws" target="_blank">Cees Jansen, TEA co-developer at Philips Crypto BV</a><br />
+Personal correspondence.
+Crypto Museum, 2 August 2023.
+    <p />
+    <a name="ref_4"></a>
+    <li><a href="https://ref2014impact.azurewebsites.net/casestudies2/refservice.svc/GetCaseStudyPDF/30193" target="_blank">Royal Holloway, University of London, <i>Impact case study (REF3b)</i></a><br />
+<i><a href="https://ref2014impact.azurewebsites.net/casestudies2/refservice.svc/GetCaseStudyPDF/30193" target="_blank">Design of a block cipher used in TETRA secure radio.</a></i><br />
+REF2014. Undated but probably 2014.
+    <p />
+    <a name="ref_5"></a>
+    <li><a href="https://en.wikipedia.org/wiki/Kerckhoffs's_principle" target="_blank">Wikipedia, <i>Kerckhoffs's principle</i></a><br />
+Retrieved 5 August 2023.
+    <p />
+    <a name="ref_6"></a>
+    <li><a href="https://bit.ly/447xMaw" target="_blank">ETSI and TCCA Statement to<br />TETRA Security Algorithms Research Findings Publication on 24 July 2023</a><br />
+<span class="short" aria-label="European Telecommunications Standards Institute" data-balloon-pos="up"><a href="../../org/etsi/index.htm" class="short" >ETSI</a></span>/TCCA. Sophia Antipolis, 24 July 2023.
+    <p />
+    <a name="ref_7"></a>
+    <li><a href="https://bit.ly/4bUkVgy" target="_blank">Kim Zetter, <i>Interview with the ETSI Standards Organisation That Created TETRA "Backdoor"</i></a><br />
+Interview between Kim Zetter and Brian Murgatroyd, Chairman  ETSI TC TETRA.<br />
+Zero Day website, 25 July 2023. <sup><font color="#FF8800">1</font></sup>
+    <p />
+    <a name="ref_8"></a>
+    <li><a href="https://bit.ly/447xMaw" target="_blank">ETSI and TCCA Statement to<br />TETRA Security Algorithms Research Findings Publication on 24 July 2023</a><br />
+<span class="short" aria-label="European Telecommunications Standards Institute" data-balloon-pos="up"><a href="../../org/etsi/index.htm" class="short" >ETSI</a></span>/TCCA. Sophia Antipolis, 24 July 2023.
+    <p />
+    <a name="ref_9"></a>
+    <li><a href="https://www.ceesjansen.nl/de-crypto-van-c2000">Cees Jansen, <i>De Crypto van C2000</i></a><br />
+2 August 2023.
+  </ol>
+</font></td></tr></table>
+<div style="height: 14px;"></div><table width="50" cellspacing="0" cellpadding="0"><tr>
+<td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+</tr></table>
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+  <tr><td>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+  <ol>
+  <li>
+Original page no longer available in 2024. Archived via
+  <a href="https://www.archive.org" target="_blank"><span data-balloon-pos="up" aria-label="www.archive.org (off-site)">WayBack Machine</span></a>
+  from the original URL:
+  <a href=https://zetter.substack.com/p/interview-with-the-etsi-standards>https://zetter.substack.com/p/interview-with-the-etsi-standards</a>
+  </ol>
+  </small></font></td></tr>
+</table>
+<div style="height: 20px;"></div><table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  <b>Further information</b>
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+  <tr>
+  <td>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+  <ul>
+    <li><a href="../../crypto/algo/taa">TAA algorithm</a><br />
+    <li><a href="../../crypto/algo/tea">TEA algorithms</a><br />
+    <li><a href="index.htm">TETRA radio network</a><br />
+    <li><a href="../../manuf/midnightblue">About Midnight Blue</a><br />
+  </ul>
+</font></td></tr></table>
+<table width=100% border=0 cellpadding=0 cellspacing=0>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  <tr>
+  <td align="left" valign="center">
+  <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+  Other websites
+  </font>
+  </td>
+  </tr>
+  <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+  <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+</table>
+<table width=100% border=0 cellspacing=0 cellpadding=4>
+  <tr>
+  <td>
+  <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+  <ul>
+    <li><a href="https://www.rtl-sdr.com/tetra-kit-a-new-open-source-tetra-decoder" target="_blank">TETRA Kit, open source TETRA decoder for RTL-SDR</a><br />
+  </ul>
+</font></td></tr></table>
+<div style="height: 14px;"></div></td></tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td colspan=3 width=100%>
+<div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+</table>
+</td></tr>
+<tr>
+<td align=center width=100%>
+<font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+ 
+© Crypto Museum. Created: Tuesday 08 August 2023. Last changed: Tuesday, 11 June 2024 - 09:22 CET.
+<br />
+</font
+</td>
+</tr>
+<tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+<tr><td align=center>
+<a href="../../index.htm"><img src=../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+</td></tr>
+</table>
+</td></tr>
+</table>
+</font>
+</td>
+</tr></table>
+</body>
+</html>

@@ -1,0 +1,2366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>PBJ</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cryptomuseum">
+    <meta name="twitter:url" content="https://www.cryptomuseum.com/crypto/pbj/index.htm">
+    <meta name="twitter:image" content="https://www.cryptomuseum.com/crypto/pbj/img/pbj_x.jpg">
+    <meta name="twitter:title" content="Condenser PBJ">
+    <meta name="twitter:description" content="This is the first rotor-based cipher machine used in Czechoslovakia, developed between 1922 and 1924 and used until 1934.">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../index.htm"><img src="../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of cryptographic devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/glossary.htm';" >Glossary</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="The ENIGMA cipher machine" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/enigma/index.htm';" >Enigma</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Machines from Boris Hagelin and/or Crypto AG" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/hagelin/index.htm';" >Hagelin</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Soviet rotor-based cipher machine M-125, codenamed Fialka" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/fialka/index.htm';" >Fialka</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Rotor-based cipher machines" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../crypto/rotor.htm';" >Rotor</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Pin-and-lug cipher machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/pinwheel.htm';" >Pin-wheel</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tapeless Rotorless On-Line cipher machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/trol/index.htm';" >TROL</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Secure speech devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/voice.htm';" >Voice</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Telegraphy and computer data encryption" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/data.htm';" >Data</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Manual cipher systems" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/manual.htm';" >Hand</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="The unbreakable One-Time Pad" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/otp/index.htm';" >OTP</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Electronic Message Units" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/emu.htm';" >EMU</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Hardware Security Modules" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/hsm.htm';" >HSM</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines based on One-Time Tape encryption" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/ott.htm';" >Mixers</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Secure telephones and privacy sets" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/phone.htm';" >Phones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Bulk encryptors and IP-based networks" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/ip.htm';" >Bulk</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Key transfer devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/fill.htm';" >FILL</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Codebooks, procedures and key distribution material" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/codebook/index.htm';" >Codebooks</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Public and secret algorithms used in cryptography" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/algo/index.htm';" >Algorithms</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cryptographic Processors" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../crypto/chips.htm';" >Chips</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cryptanalytic Machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../cam/index.htm';" >Cryptanalysis</div>
+</div>
+          <div class="but sub" onClick="location.href='../../crypto/toys.htm';" >Toys</div>
+          <div class="but sub" onClick="location.href='../../crypto/ww2.htm';" >World War II</div>
+          <div class="spacer"></div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Countries
+          </div>
+          <div class="hidden">
+            <div class="but sel sub" onClick="location.href='../../crypto/cs.htm';" >Czechoslovakia</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former East-Germany" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../crypto/ddr/index.htm';" >DDR</div>
+</div>
+            <div class="but sub" onClick="location.href='../../crypto/france/index.htm';" >France</div>
+            <div class="but sub" onClick="location.href='../../crypto/germany/index.htm';" >Germany</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="The Netherlands, Holland" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../crypto/nl/index.htm';" >Netherlands</div>
+</div>
+            <div class="but sub" onClick="location.href='../../crypto/ru/index.htm';" >Russia</div>
+            <div class="but sub" onClick="location.href='../../crypto/swiss/index.htm';" >Switzerland</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United Kingdom" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../crypto/uk/index.htm';" >UK</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United States of America" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../crypto/usa/index.htm';" >USA</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Soviet Union" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../crypto/ussr/index.htm';" >USSR</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former Yugoslav republic" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../crypto/yugo/index.htm';" >Yugoslavia</div>
+</div>
+          </div>
+          </div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Manufacturers
+          </div>
+          <div class="hidden">
+            <div class="but sub" onClick="location.href='../../crypto/ant/index.htm';" >ANT</div>
+            <div class="but sub" onClick="location.href='../../crypto/aristo/index.htm';" >Aristo</div>
+            <div class="but sub" onClick="location.href='../../crypto/ascom/index.htm';" >Ascom</div>
+            <div class="but sub" onClick="location.href='../../crypto/att/index.htm';" >AT&amp;T</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Brown, Boveri and Company" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../crypto/bbc/index.htm';" >BBC</div>
+</div>
+            <div class="but sub" onClick="location.href='../../crypto/bosch/index.htm';" >Bosch</div>
+            <div class="but sub" onClick="location.href='../../crypto/compumatica/index.htm';" >Compumatica</div>
+            <div class="but sub" onClick="location.href='../../crypto/hagelin/index.htm';" >Crypto AG</div>
+            <div class="but sub" onClick="location.href='../../crypto/datotek/index.htm';" >Datotek</div>
+            <div class="but sub" onClick="location.href='../../crypto/foxit/fffe/index.htm';" >Fox-IT</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="General Dynamics" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../manuf/gd/index.htm';" >GD</div>
+</div>
+            <div class="but sub" onClick="location.href='../../manuf/gemalto/index.htm';" >Gemalto</div>
+            <div class="but sub" onClick="location.href='../../crypto/gretag/index.htm';" >Gretag</div>
+            <div class="but sub" onClick="location.href='../../crypto/harris/index.htm';" >Harris</div>
+            <div class="but sub" onClick="location.href='../../crypto/hell/index.htm';" >HELL</div>
+            <div class="but sub" onClick="location.href='../../crypto/itt/index.htm';" >ITT</div>
+            <div class="but sub" onClick="location.href='../../crypto/lorenz/index.htm';" >Lorenz</div>
+            <div class="but sub" onClick="location.href='../../crypto/lugagne/index.htm';" >Lugagne</div>
+            <div class="but sub" onClick="location.href='../../crypto/mel/index.htm';" >MEL</div>
+            <div class="but sub" onClick="location.href='../../crypto/mils/index.htm';" >Mils</div>
+            <div class="but sub" onClick="location.href='../../crypto/motorola/index.htm';" >Motorola</div>
+            <div class="but sub" onClick="location.href='../../manuf/mykotronx/index.htm';" >Mykotronx</div>
+            <div class="but sub" onClick="location.href='../../crypto/nokia/index.htm';" >Nokia</div>
+            <div class="but sub" onClick="location.href='../../crypto/omi/index.htm';" >OMI</div>
+            <div class="but sub" onClick="location.href='../../crypto/omnisec/index.htm';" >Omnisec</div>
+            <div class="but sub" onClick="location.href='../../crypto/philips/index.htm';" >Philips</div>
+            <div class="but sub" onClick="location.href='../../crypto/ptt/index.htm';" >PTT</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Rohde & Schwarz" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../crypto/rs/index.htm';" >R&S</div>
+</div>
+            <div class="but sub" onClick="location.href='../../crypto/racal/index.htm';" >Racal</div>
+            <div class="but sub" onClick="location.href='../../crypto/randata/index.htm';" >RanData</div>
+            <div class="but sub" onClick="location.href='../../crypto/raytheon/index.htm';" >Raytheon</div>
+            <div class="but sub" onClick="location.href='../../crypto/rca/index.htm';" >RCA</div>
+            <div class="but sub" onClick="location.href='../../manuf/safenet/index.htm';" >Safenet</div>
+            <div class="but sub" onClick="location.href='../../manuf/secunet/index.htm';" >Secunet</div>
+            <div class="but sub" onClick="location.href='../../crypto/siemens/index.htm';" >Siemens</div>
+            <div class="but sub" onClick="location.href='../../crypto/stk/index.htm';" >STK</div>
+            <div class="but sub" onClick="location.href='../../crypto/tadiran/index.htm';" >Tadiran</div>
+            <div class="but sub" onClick="location.href='../../crypto/tait/index.htm';" >Tait</div>
+            <div class="but sub" onClick="location.href='../../manuf/tcc/index.htm';" >TCC</div>
+            <div class="but sub" onClick="location.href='../../crypto/telefunken/index.htm';" >Telefunken</div>
+            <div class="but sub" onClick="location.href='../../crypto/telsy/index.htm';" >Telsy</div>
+            <div class="but sub" onClick="location.href='../../crypto/teltron/index.htm';" >Teltron</div>
+            <div class="but sub" onClick="location.href='../../crypto/thales/index.htm';" >Thales</div>
+            <div class="but sub" onClick="location.href='../../manuf/tno/index.htm';" >TNO</div>
+            <div class="but sub" onClick="location.href='../../crypto/transvertex/index.htm';" >Transvertex</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tele Security Timmann" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../crypto/tst/index.htm';" >TST</div>
+</div>
+            <div class="but sub" onClick="location.href='../../crypto/tutus/index.htm';" >Tutus Data AB</div>
+            <div class="but sub" onClick="location.href='../../manuf/ultra/index.htm';" >Ultra Electronics</div>
+            <div class="but sub" onClick="location.href='../../manuf/utimaco/index.htm';" >Utimaco</div>
+            <div class="but sub" onClick="location.href='../../manuf/zellweger/index.htm';" >Zellweger</div>
+            <div class="but sub" onClick="location.href='../../manuf/index.htm';" >OTHER</div>
+          </div>
+          </div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../index.htm"><img src="../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../rotor.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Rotor-based cipher machines" class="key">Rotor</div></a><a class="key" href="../cs.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Chechoslovak cipher machines" class="key">Czech</div></a>&nbsp;&nbsp;<a class="key" href="../stolba"><div  data-balloon-pos="up" aria-label="Forward to &#352;tolba cipher machine" class="key right">&#352;tolba &rarr;</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Condenser PBJ</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Message condenser and cipher machine</b>
+<br />
+<br />
+<b>Condenser PBJ</b> <sup><font color="#FF8800">1</font></sup> was a <a href="../rotor.htm"><span data-balloon-pos="up" aria-label="More about: rotor-based cipher machine">rotor-based cipher machine</span></a>,
+developed between 1922 and 1924 by Paval Bar&#225;&#269;ek-Jacquier (1885-1969) and
+used by the Czechoslovak diplomatic service until 1934 <a href="#ref_1">[1]</a>.
+It's a polyalphabetic
+substitution cipher/autokey cipher that generates 10-letter code&shy;words
+consisting of alternating <span class="short tooltip-red" data-balloon-pos="up" aria-label="All letter of the Latin alphabet (A-Z) except for the vowels (a, e, i, o, u) and the letter 'y'" data-balloon-length="large">consonants</span> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="The letters a, e, i, o and u">vowels</span>. It was the first
+<a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: cipher machine">cipher machine</span></a> developed in <a href="../cs.htm"><span data-balloon-pos="up" aria-label="More about: Czechoslovakia">Czechoslovakia</span></a>. <sup><font color="#FF8800">2</font></sup>
+To our knowlege, there are no surviving samples or photographs of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Paval Bar&#225;&#269;ek-Jacquier (cipher machine)">PBJ</span>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image on the right therefore shows an educated guess of the machine's
+exterior, based on the descriptions in the surviving manual <a href="#ref_3">[3]</a>.
+<br />
+<br />
+The device is housed in a metal enclosure with an extension at the front.
+At the top surface are 10 <a href="#strips"><span data-balloon-pos="up" aria-label="Jump to: removable paper strips">removable paper strips</span></a>, each with 10
+<i><a href="#glos_tuple"><span data-balloon-pos="up" aria-label="Jump to: tuples">tuples</span></a></i>.
+To the right of each strip is a selector that is used to set one
+<b>input character</b>. The extension at the front houses 10 <a href="#rotors"><span data-balloon-pos="up" aria-label="Jump to: rotors">rotors</span></a>,
+each of which has 10 faces. The face at the top is visible through a
+narrow window. This is the <b>output character</b>.
+After entering 10 characters with the selectors, the crank must be turned
+clockwise, after which 10 output characters appear in the windows.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/pbj_x.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/pbj_x.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="svg/pbj_plain.svg"
+             style="
+            "
+             align="left"
+             width="298px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+At the beginning of a message, a unique <a href="#iv"><span data-balloon-pos="up" aria-label="Jump to: initialisation vector">initialisation vector</span></a> (<span class="short" aria-label="Initialisation Vector" data-balloon-pos="up"><a href="#iv" class="short" >IV</a></span>) must
+be set. It defines the initial state of the rotors and is sent <i>in clear</i>.
+Each time the crank is turned, the <i>value</i> of the input letter (set with the
+selector) is added to the corresponding rotor. This is done by advancing
+the rotor a number of steps equal to the <i>value</i>. Due to the circular nature
+of the rotor, this is a modulo 10 addition.
+The reset lever puts all 10 rotors in their neutral state.
+A full description of the machine, including the reconstructed
+encryption algorithm and cryptanalysis, can be found in
+<a href="files/Condenser_PBJ.pdf"><span data-balloon-pos="up" aria-label="More about: ..."><i>The Conden&shy;ser PBJ cipher machine</i></span></a>
+by Eugen Antal, Paul Reuvers and Pavol Zajac in Cryptologia (2024) <a href="#ref_1">[1]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li style="margin-bottom: 6px;">
+The name <b>PBJ</b> is derived from the initials of the inventor
+  <u>P</u>aval <u>B</u>ar&#225;&#269;ek-<u>J</u>acquier.
+          </li>
+          <li style="margin-bottom: 6px;">
+In the 2021 Cryptologia article <i>The First Czechoslovak cipher machine</i>
+  <a href="#ref_2">[2]</a>, <a href="../stolba"><span data-balloon-pos="up" aria-label="More about: &#352;tolba">&#352;tolba</span></a> was presented
+  as the first Czechoslovak cipher machine, introduced around 1935. It
+  has since become clear that it was preceeded by <b>Condenser PBJ</b>,
+  and that <a href="../stolba"><span data-balloon-pos="up" aria-label="More about: &#352;tolba">&#352;tolba</span></a> was probably the second cipher machine
+  developed in <a href="../cs.htm"><span data-balloon-pos="up" aria-label="More about: Czechoslovakia">Czechoslovakia</span></a>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <div style="background-color: #EEEEEE; font-size: 8pt; padding: 12px; color: #777777; overflow: auto;">
+<font color=#F52E00>MAIN ARTICLE &mdash;</font>
+The text on this page is largely based on the article
+<a href="files/Condenser_PBJ.pdf"><span data-balloon-pos="up" aria-label="More about: ..."><i>The Condenser PBJ Cipher Machine</i></span></a>
+written by Eugen Antal, Paul Reuvers and Pavol Zajac
+and published in Cryptologia (2024) <a href="#ref_1">[1]</a>.
+For a mathematical description of this machine, the message format,
+message examples and a discussion on the cryptanalysis, please read
+the original article.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="files/Condenser_PBJ.pdf">Download the article</a>
+        </div>
+        <div class="clear_float"></div>
+<div style="height: 20px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+A detailed description of the machine can be found in the
+<a href="files/pbj_manual_1924.pdf"><span data-balloon-pos="up" aria-label="More about: original operating instructions">original operating instructions</span></a>
+of 1934, along with a sketch of its exterior <a href="#ref_3">[3]</a>.
+From this document we've been able to make an educated guess of the machine's
+exterior and controls, which is reflected in the artist's impression below.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/pbj_closed.svg"
+             style="
+            "
+             align="center"
+             width="550px"
+             vspace="4"
+             border=0
+             />
+            </div>
+            </td></tr><tr><td align=center>
+            <div style="margin-top: 4px; margin-bottom: 4px;">
+            <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+            <b>
+            <center>Educated guess of the machine's exterior</center>
+            </b>
+            </font>
+            </div>
+          </td></tr></table>
+<br />
+The device consists of the following main parts:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <li><div style="display:inline-block; width:100px;">Body</div>Metal unit with 10 mechanical adding machines            <li><div style="display:inline-block; width:100px;">Strips</div>10 removable paper strips with letters and figures            <li><div style="display:inline-block; width:100px;">Selectors</div>10 letter selection knobs (aside the strips)            <li><div style="display:inline-block; width:100px;">Rotors</div>10 removable rotors, each with 10 faces (steps)            <li><div style="display:inline-block; width:100px;">Reset</div>Spring-loaded reset lever            <li><div style="display:inline-block; width:100px;">Crank</div>Removable crank for advancing the internal state            <li><div style="display:inline-block; width:100px;">Windows</div>10 windows through which the rotor positions are visible            <li><div style="display:inline-block; width:100px;">Lock</div>Paper strip locking knob          </ol type=A>
+</font></td></tr></table>        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <a href="#strips"><span data-balloon-pos="up" aria-label="Jump to: ..."><i>strips</i></span></a> (B) and the <a href="#rotors"><span data-balloon-pos="up" aria-label="Jump to: ..."><i>rotors</i></span></a> (D)
+are the secret elements.
+When the machine was not in use, these elements had to be stored in a
+safe. Once the secret elements had been removed, the machine was no
+longer considered a controlled cryptographic item (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Controlled Cryptographic Item">CCI</span>) and could be
+handled by an unauthorised person, for example for repair.
+The following KEY elements were used:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="#annual_key"><b>Annual key</b></a><br />
+This key was changed only once a year, and consists of a set of
+10 paper <a href="#strips">strips</a> printed with 10
+<a href="#glos_tuple">tuples</a> each, and 10
+<a href="#rotors">rotors</a> engraved with the same
+<a href="#glos_tuple">tuples</a>.
+The contents of the <a href="#glos_tuple">tuples</a> and their order is
+determined by the annual key.
+            <p />
+            <li><a href="#daily_key"><b>Daily key</b></a><br />
+This key was changed every 24 hours, and defines the order in which the
+strips and the rotors must be placed in the machine.
+            <p />
+            <li><a href="#iv"><b>Initialisation Vector (IV)</b></a><br />
+This is a specially constructed 10-letter group that defines the initial
+state of the machine before starting encryption. It consists of an
+indicator, the date and the message ID. The <span class="short" aria-label="Initialisation Vector" data-balloon-pos="up"><a href="#iv" class="short" >IV</a></span> is sent <i>in clear</i>
+at the beginning of a message.
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=glos></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Definitions</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the context of the Condenser PBJ cipher machine, the following expressions are used:
+          </font>
+          </td></tr>
+        </table>
+<br />
+
+<div style="height: 4px;"></div>        <table width=100% border="0" cellpadding=0 cellspacing=0 >
+        <tr>
+        <td width="80" align="right" valign="top">
+        <a name="glos_cons"></a>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#FF8800><b>Consonant</b></font>
+        </td>
+        <td width="6">&nbsp;</td>
+        <td valign="top">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>One of the letters B, C, D, F, G, H, J, K, L, M, N, P, Q, R, S, T, V, W, X, Z</b>
+        <br />
+The machine recognises 20 consonants. Note that the letter 'Y' is omitted (which in
+the Czech language is actually a vowel). It is replaced by the similar sounding 'I'.
+Each <a href="#glos_strip"><span data-balloon-pos="up" aria-label="Jump to: strip">strip</span></a> holds 10 <a href="#glos_tuple"><span data-balloon-pos="up" aria-label="Jump to: tuples">tuples</span></a>, with two consonants each.
+Consonant strips may only be installed in odd slot positions.
+
+<div style="height: 12px;"></div>        </font></td></tr>
+        <tr>
+        <td width="80" align="right" valign="top">
+        <a name="glos_iv"></a>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#FF8800><b>IV</b></font>
+        </td>
+        <td width="6">&nbsp;</td>
+        <td valign="top">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Initialisation Vector</b>
+        <br />
+Specially constructed 10-letter group which is sent <i>in clear</i>
+at the begining of the message, and which defines the initial state of
+the cipher. The <span class="short" aria-label="Initialisation Vector" data-balloon-pos="up"><a href="#iv" class="short" >IV</a></span> holds a message indicator, the date and the message ID.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="#iv">More</a>
+
+<div style="height: 12px;"></div>        </font></td></tr>
+        <tr>
+        <td width="80" align="right" valign="top">
+        <a name="rotor"></a>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#FF8800><b>Rotor</b></font>
+        </td>
+        <td width="6">&nbsp;</td>
+        <td valign="top">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Cipher wheel with 10 faces</b>
+        <br />
+A rotor is a circular device with 10 faces, equivalent to 10 steps, that is
+mounted on a shaft. It is driven by the adding mechanism inside the body of
+the machine. Each face contains a <a href="#cons_tuple"><span data-balloon-pos="up" aria-label="Jump to: tuple">tuple</span></a>, which is identical
+to the corresponding tuple on the <a href="#glos_strip"><span data-balloon-pos="up" aria-label="Jump to: strip">strip</span></a> with the same ID.
+The upper face is visible through a window in the protective cover.
+There are 10 rotors, which are installed at the front of the machine.
+The rotors are part of the secret elements.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="#rotors">More</a>
+
+<div style="height: 12px;"></div>        </font></td></tr>
+        <tr>
+        <td width="80" align="right" valign="top">
+        <a name="glos_slot"></a>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#FF8800><b>Slot</b></font>
+        </td>
+        <td width="6">&nbsp;</td>
+        <td valign="top">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b></b>
+A slot is a rectangular space at the top surface of the machine, into which
+a <a href="#glos_strip"><span data-balloon-pos="up" aria-label="Jump to: strip">strip</span></a> is installed. Strips can only be installed or
+removed, when the <i>strip access flap</i> is unlocked first.
+
+<div style="height: 12px;"></div>        </font></td></tr>
+        <tr>
+        <td width="80" align="right" valign="top">
+        <a name="strip"></a>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#FF8800><b>Strip</b></font>
+        </td>
+        <td width="6">&nbsp;</td>
+        <td valign="top">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Input field</b>
+        <br />
+A strip is a vertical list of 10 <a href="#glos_tuple"><span data-balloon-pos="up" aria-label="Jump to: tuples">tuples</span></a> with a pointed bottom
+end, that can be inserted into a <a href="#glos_slot"><span data-balloon-pos="up" aria-label="Jump to: slot">slot</span></a>. There are 10 slots: 5 for
+<a href="#glos_cons"><span data-balloon-pos="up" aria-label="Jump to: consonant strips">consonant strips</span></a> and 5 for <a href="#glos_vowel"><span data-balloon-pos="up" aria-label="Jump to: vowel strips">vowel strips</span></a>. They
+are held in place by a strip access flap at the rear of the
+device. This access flap can be locked. <a href="#glos_cons"><span data-balloon-pos="up" aria-label="Jump to: Consonant strips">Consonant strips</span></a>
+and <a href="#glos_vowel"><span data-balloon-pos="up" aria-label="Jump to: vowel strips">vowel strips</span></a> must be alternated, starting with a
+<a href="#glos_cons"><span data-balloon-pos="up" aria-label="Jump to: consonant strip">consonant strip</span></a>. Each strip is numbered (0-9) and is part
+of the machine's secret elements.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="#strips">More</a>
+
+<div style="height: 12px;"></div>        </font></td></tr>
+        <tr>
+        <td width="80" align="right" valign="top">
+        <a name="glos_syl"></a>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#FF8800><b>Syllable</b></font>
+        </td>
+        <td width="6">&nbsp;</td>
+        <td valign="top">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>A consonant followed by a vowel</b>
+        <br />
+In the context of this cipher machine, A syllable is a letter-pair consisting
+of a <a href="#glos_cons"><span data-balloon-pos="up" aria-label="Jump to: consonant">consonant</span></a> followed by a <a href="#glos_vowel"><span data-balloon-pos="up" aria-label="Jump to: vowel">vowel</span></a>.
+
+<div style="height: 12px;"></div>        </font></td></tr>
+        <tr>
+        <td width="80" align="right" valign="top">
+        <a name="glos_tuple"></a>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#FF8800><b>Tuple</b></font>
+        </td>
+        <td width="6">&nbsp;</td>
+        <td valign="top">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Datastructure with different elements</b>
+        <br />
+Each <a href="#glos_strip"><span data-balloon-pos="up" aria-label="Jump to: strip">strip</span></a> holds 10 <i>tuples</i>, or <i>cells</i>, each of
+which holds a figure (0-9) and one or two letters. One of the letters
+may be printed in red.
+
+
+<div style="height: 12px;"></div>        </font></td></tr>
+        <tr>
+        <td width="80" align="right" valign="top">
+        <a name="glos_vowel"></a>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#FF8800><b>Vowel</b></font>
+        </td>
+        <td width="6">&nbsp;</td>
+        <td valign="top">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>One of the letters A, E, I, O, U</b>
+        <br />
+There are 5 vowels, each of which appears twice on a vowel strip: once in white
+and once in red. In the Czech language, the letter 'Y' is also a vowel, but it
+is omitted here.
+Vowel strips may only be installed in even slot positions.
+
+<div style="height: 12px;"></div>        </font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=cond></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Code condenser</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Paval Bar&#225;&#269;ek-Jacquier (cipher machine)">PBJ</span> machine serves two purposes: (1) it is a code condenser
+and (2) it is a cipher machine. The first purpose &ndash; the condenser &ndash;
+may need some explanation. In radio telegraphy, telegrams were
+transferred either verbally, by means of <a href="../../radio/morse"><span data-balloon-pos="up" aria-label="More about: morse code">morse code</span></a>
+or by <a href="../../telex"><span data-balloon-pos="up" aria-label="More about: teletypewriter (telex)">teletypewriter (telex)</span></a>. This means that the message had to be
+retyped a number of times before it reached its final destination.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the 1920s, telegrams were usually charged per word. In order to
+reduce cost, various <a href="../codebook"><span data-balloon-pos="up" aria-label="More about: code&shy;books">code&shy;books</span></a> had appeared on
+the market, such as the
+<a href="../codebook/peterson"><span data-balloon-pos="up" aria-label="More about: ..."><i>Peterson International Code</i></span></a> of 1929 <a href="#ref_7">[7]</a>. It
+trans&shy;lated frequently used sentences into a single 5-letter code word,
+which was cheaper to send.
+In practice, real words (e.g. VEHICLE) were easier for the
+operator to memorise and handle than arbitrary code words like PBQFZ.
+The reason for this is that real words are made of a mixture of
+<a href="#glos_cons"><span data-balloon-pos="up" aria-label="Jump to: consonants">consonants</span></a> and <a href="#glos_vowel"><span data-balloon-pos="up" aria-label="Jump to: vowels">vowels</span></a>, which make them
+pro&shy;nounceable. Such words are easier for the ope&shy;ra&shy;tor to handle with
+lower chance of mistakes.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../codebook/peterson">            <div style="position: relative;" data-balloon-pos="up" aria-label="Example of a page from the Peterson International Code, with an original telegram. Click for further details." data-balloon-length="large">
+<a href="../codebook/peterson">            <div style="position: relative;" data-balloon-pos="up" aria-label="Example of a page from the Peterson International Code, with an original telegram. Click for further details." data-balloon-length="large">
+            <img src="../codebook/peterson/img/303829/003/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Example of a page from the Peterson International Code, with an original telegram. Click for further details."
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+As a result, the telegraphic
+regulations were altered in such a way, that real words were cheaper
+to send than arbitrary code words.
+Arbitrary words were charged at full rate, whilst pronounce&shy;able words
+received a discount. It was also allowed to use
+non-existing 'invented' code words, such as OXIDONU, to quality for
+a discount, as long as they were pronounceable. This led to a range of
+new codebooks that had 5-letter code words that contained one or two
+vowels. <sup><font color="#FF8800">1</font></sup>
+The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Paval Bar&#225;&#269;ek-Jacquier (cipher machine)">PBJ</span> cipher machine offers a similar solution, by forcing a message
+format in which consonants and vowels are alternated. This makes the
+code words pronounceable and therefore cheaper.
+<br />
+<br />
+Ciphertexts are usually formatted in groups of 5 letters. The reason
+for that is that most people can memorise arbitrary 5-letter groups
+easier than longer sequences. But as the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Paval Bar&#225;&#269;ek-Jacquier (cipher machine)">PBJ</span> machine forces
+the use of alternating <a href="#glos_cons"><span data-balloon-pos="up" aria-label="Jump to: consonants">consonants</span></a> and <a href="#glos_vowel"><span data-balloon-pos="up" aria-label="Jump to: vowels">vowels</span></a>,
+it appears possible to memorise 5 <u><a href="#glos_syl"><span data-balloon-pos="up" aria-label="Jump to: syllables">syllables</span></a></u> instead of
+just 5 letters.
+For this reason, 10-letter code words, such as XOBURATEMU, are used on
+the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Paval Bar&#225;&#269;ek-Jacquier (cipher machine)">PBJ</span>. Although the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Paval Bar&#225;&#269;ek-Jacquier (cipher machine)">PBJ</span> machine is presented as a <b>condenser</b>,
+it doesn't really com&shy;press the text &mdash; it actually makes the text longer &mdash;
+but was merely used as a cost-reduction tool.
+When encrypting the plaintext on a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Paval Bar&#225;&#269;ek-Jacquier (cipher machine)">PBJ</span> machine, these properties are
+retained, as the message format remains unaltered: a consonant is replaced
+by a consonant, and a vowel is replaced by a vowel.
+<br />
+<br />
+On 1 January 1934, the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Paval Bar&#225;&#269;ek-Jacquier (cipher machine)">PBJ</span> machine was abandoned when the new
+<a href="../../manuf/gpo/files/ITC_reg_1932.pdf"><span data-balloon-pos="up" aria-label="More about: Telegraphic Regulations">Telegraphic Regulations</span></a>
+came into effect <a href="#ref_4">[4]</a>. Two articles of these
+regulations may have been responsible for this. Article 10 &#167;2 restricts
+the length of a code word to 5 letters. This could have been circumvented
+easily though, by sending each 10-letter code word as two 5-letter groups.
+Article 11 &#167;2 is more restrictive, as it forbids the use of figures in the
+ciphertext, which was possible on he <span class="short tooltip-red" data-balloon-pos="up" aria-label="Paval Bar&#225;&#269;ek-Jacquier (cipher machine)">PBJ</span> machine.
+It is also possible that better cipher machines had meanwhile become
+available in Czechoslovakia.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+In addition, some codebooks allowed built-in redundancy, which
+enabled error-detection and in some cases even error-correction.
+A good example is <a href="../codebook/boe"><span data-balloon-pos="up" aria-label="More about: ..."><i>The New Boe Code</i></span></a> of 1937 <a href="#ref_8">[8]</a>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=desc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Description</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <i>body</i> (A) forms the base of the machine. It holds 10 mechanical adding
+machines. Before encryption or decription, the secret components &ndash; the strips
+(B) and the rotors (D) &ndash; are inserted in a given order, indicated by the daily
+key. The 10 strips are installed into the 10 rectangular slots at the top
+surface of the machine, accessible through a lockable flap at the rear edge (K).
+To the right of each slot is a sliding <i>selector</i> (C) that must be used
+to select the desired input letter.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/pbj_open.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+            <div style="margin-top: 4px; margin-bottom: 4px;">
+            <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+            <b>
+            <center>Condenser PBJ with open rotor compartment and strips partially removed</center>
+            </b>
+            </font>
+            </div>
+          </td></tr></table>
+<br />
+At the front of the machine are 10  <i>rotors</i> (D), of which the current
+positions are readable through 10 rectangular windows in the top of their
+protective cover. These are the output characters. The machine operates on 10
+characters simultaneously. The spring-loaded <i>reset lever</i> (E) is used to
+clear the machine's internal state at the beginning of the encryption process,
+after entering the <a href="#iv"><span data-balloon-pos="up" aria-label="Jump to: Initialisation Vector (IV)">Initialisation Vector (IV)</span></a> with the selectors (C).
+By pushing this lever to the right, all rotors are set to their neutral position.
+To the right of the strips is a removable crank that is used to
+advance the internal state of the cipher. It always has to make a full 360&#176;
+turn, either left or right.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/pbj_crank.svg"
+             style="
+            "
+             align="center"
+             width="250px"
+             vspace="4"
+             border=0
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+When encrypting, the crank always has to be turned right. This adds the value
+of the selectors (C) to the position of the rotors (D). When decrypting, the
+crank has to be turned left to subtract the value of the selectors from the
+current rotor position.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=strips></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Strips
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the input field of the machine, 10 paper strips are installed.
+Together with the <a href="#rotors"><span data-balloon-pos="up" aria-label="Jump to: rotors">rotors</span></a> they form the secret components
+of the machine. There are five strips with <a href="#glos_cons"><span data-balloon-pos="up" aria-label="Jump to: consonants">consonants</span></a> and five with
+<a href="#glos_vowels"><span data-balloon-pos="up" aria-label="Jump to: vowels">vowels</span></a> (a, e, i, o, u) which have to be alternated, starting
+with a consonant strip. Each strip has 10 lines, or <i>tuples</i>, each
+with a figure and one or two letters.
+The consonant strips have one figure and one letter printed in white,
+plus a letter printed in red.
+The vowel strips have a figure and a vowel, printed in white.
+As there are only 5 vowels and 10 positions, the lower half of each vowel
+strip hold a figure in white and a vowel in red.
+Here is an example of a consonant and a vowel strip:
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Strips 7 (consonants) and 6 (vowels). For clarity, the letters are shown in black and read. In reality they are white and red." data-balloon-length="large" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Strips 7 (consonants) and 6 (vowels). For clarity, the letters are shown in black and read. In reality they are white and red." data-balloon-length="large" class="tooltip-red">
+            <img src="svg/pbj_strip.svg"
+             style="
+            "
+             onmouseover="this.src='svg/pbj_strip_inv.svg'"
+             onmouseout="this.src='svg/pbj_strip.svg'"
+             align="center"
+             width="100px"
+             vspace="4"
+             alt="Strips 7 (consonants) and 6 (vowels). For clarity, the letters are shown in black and read. In reality they are white and red."
+             border=0
+             />
+            </div>
+            </td></tr><tr><td align=center>
+            <div style="margin-top: 4px; margin-bottom: 4px;">
+            <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+            <b>
+            <center>Layout of strips 7 (consonants) and 6 (vowels)</center>
+            </b>
+            </font>
+            </div>
+          </td></tr></table>
+<br />
+At the bottom of each strip is its identification number in the
+range 0-9. Note that the bot&shy;tom end of the strip is pointed somewhat. This is
+done to make it easier to insert the strip into a slot.
+Although only the contents of strip 7 are specified in the manual <a href="#ref_3">[3]</a>, the other
+strips could be reconstructed from the preserved plaintext-ciphertext pairs <a href="#ref_1">[1]</a>.
+Here is the full set:
+          <a name=strips_table></a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+        <table width=100% cellspacing=0 cellpadding=0>
+          <tr>
+          <td width=100%>
+          <table
+           class="table"
+           width=100% border=0 cellspacing=1 cellpadding=2 bgcolor=#FFFFFF>
+            <tr>
+<td bgcolor="#FFFFFF" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>&#160;</font></td></b><td bgcolor="#FFFFFF" align="center" valign="center" width="1"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>&#160;</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="50" colspan=10><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Strip ID</font></td></b>            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="center" valign="center"><font size=-1 face="courier" color=#555555><b>Value</font></td></b><td bgcolor="#FFFFFF" align="center" valign="center" width="1"><font size=-1 face="courier" color=#555555><b>&#160;</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555><b>7</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555><b>6</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555><b>5</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555><b>0</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555><b>3</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555><b>2</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555><b>9</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555><b>4</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555><b>1</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555><b>8</font></td></b>            </tr>
+            <tr>
+            <td bgcolor=#FFFFFF colspan=12><font size=-1>
+            </font></td>
+            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 face="courier" color=#555555>0</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="1"><font size=-1 face="courier" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>4M<font color=#F52E00>N</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>8U</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>OK<font color=#F52E00>X</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>2I</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>5G<font color=#F52E00>Q</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>7E</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>3D<font color=#F52E00>T</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>3A</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>7F<font color=#F52E00>V</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>5O</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 face="courier" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="1"><font size=-1 face="courier" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>1H<font color=#F52E00>Z</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>5O</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>2B<font color=#F52E00>P</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>7E</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>3D<font color=#F52E00>T</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>8U</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>8J<font color=#F52E00>W</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>2I</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>9L<font color=#F52E00>R</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>3A</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 face="courier" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="1"><font size=-1 face="courier" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>OK<font color=#F52E00>X</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>2I</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>7F<font color=#F52E00>V</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>3A</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>6C<font color=#F52E00>S</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>50</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>1H<font color=#F52E00>Z</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>7E</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>3D<font color=#F52E00>T</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>8U</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 face="courier" color=#555555>3</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="1"><font size=-1 face="courier" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>2B<font color=#F52E00>P</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>3A</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>9L<font color=#F52E00>R</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>8U</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>7F<font color=#F52E00>V</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>2I</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>4M<font color=#F52E00>N</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>50</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>1H<font color=#F52E00>Z</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>7E</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 face="courier" color=#555555>4</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="1"><font size=-1 face="courier" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>3D<font color=#F52E00>T</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>7E</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>5G<font color=#F52E00>Q</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>5O</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>4M<font color=#F52E00>N</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>3A</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>9L<font color=#F52E00>R</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>8U</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>6C<font color=#F52E00>S</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>2I</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 face="courier" color=#555555>5</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="1"><font size=-1 face="courier" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>5G<font color=#F52E00>Q</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>0<font color=#F52E00>A</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>3D<font color=#F52E00>T</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>6<font color=#F52E00>O</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>1H<font color=#F52E00>Z</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>9<font color=#F52E00>I</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>2B<font color=#F52E00>P</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>9<font color=#F52E00>I</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>OK<font color=#F52E00>X</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>1<font color=#F52E00>E</font></font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 face="courier" color=#555555>6</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="1"><font size=-1 face="courier" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>8J<font color=#F52E00>W</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>1<font color=#F52E00>E</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>6C<font color=#F52E00>S</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>0<font color=#F52E00>A</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>8J<font color=#F52E00>W</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>6<font color=#F52E00>O</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>7F<font color=#F52E00>V</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>4<font color=#F52E00>U</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>4M<font color=#F52E00>N</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>9<font color=#F52E00>I</font></font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 face="courier" color=#555555>7</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="1"><font size=-1 face="courier" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>9L<font color=#F52E00>R</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>6<font color=#F52E00>O</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>8J<font color=#F52E00>W</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>1<font color=#F52E00>E</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>OK<font color=#F52E00>X</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>4<font color=#F52E00>U</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>6C<font color=#F52E00>S</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>0<font color=#F52E00>A</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>2B<font color=#F52E00>P</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>4<font color=#F52E00>U</font></font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 face="courier" color=#555555>8</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="1"><font size=-1 face="courier" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>6C<font color=#F52E00>S</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>9<font color=#F52E00>I</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>1H<font color=#F52E00>Z</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>4<font color=#F52E00>U</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>9L<font color=#F52E00>R</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>0<font color=#F52E00>A</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>OK<font color=#F52E00>X</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>1<font color=#F52E00>E</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>5G<font color=#F52E00>Q</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>6<font color=#F52E00>O</font></font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 face="courier" color=#555555>9</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="1"><font size=-1 face="courier" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>7F<font color=#F52E00>V</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>4<font color=#F52E00>U</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>4M<font color=#F52E00>N</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>9<font color=#F52E00>I</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>2B<font color=#F52E00>P</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>1<font color=#F52E00>E</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>5G<font color=#F52E00>Q</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>6<font color=#F52E00>O</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>8J<font color=#F52E00>W</font></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="50"><font size=-1 face="courier" color=#555555>0<font color=#F52E00>A</font></font></td>            </tr>
+            <tr>
+            <td bgcolor=#FFFFFF colspan=12><font size=-1>
+            </font></td>
+            </tr>
+            <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" colspan=2 style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Type:</b></font></td><td bgcolor="#FFE0BB" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Cons.</font></td><td bgcolor="#FFE0BB" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Vowel</font></td><td bgcolor="#FFE0BB" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Cons.</font></td><td bgcolor="#FFE0BB" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Vowel</font></td><td bgcolor="#FFE0BB" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Cons.</font></td><td bgcolor="#FFE0BB" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Vowel</font></td><td bgcolor="#FFE0BB" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Cons.</font></td><td bgcolor="#FFE0BB" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Vowel</font></td><td bgcolor="#FFE0BB" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Cons.</font></td><td bgcolor="#FFE0BB" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Vowel</font></td>            </tr>
+          </table>
+<div style="height: 20px;"></div>        </td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<center><b>Overview of the <a href="#glos_tuple"><span data-balloon-pos="up" aria-label="Jump to: tuples">tuples</span></a> on the strips
+and rotors</b></center}
+<br />
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=rotors></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Rotors
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Like the strips, the <b>rotors</b> belong to the secret components of the PBJ machine.
+They must be stored in a safe when the machine is not in use.
+There are 10 rotors which are installed at the front of the machine, behind
+a protective cover. Each rotor has 10 faces that are printed with the same
+<a href="#glos_tuple"><span data-balloon-pos="up" aria-label="Jump to: tuples">tuples</span></a> as the corresponding strip. Although this is not described
+in the manual, it is likely that due to space restrictions, the tuples are
+printed vertically on the faces of the rotor as shown below. The faces are removable
+so that new ones can be installed as part of the annual key.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="This drawing shows how the rotors were probably installed in the machine" data-balloon-length="large" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="This drawing shows how the rotors were probably installed in the machine" data-balloon-length="large" class="tooltip-red">
+            <img src="svg/pbj_rotor.svg"
+             style="
+            "
+             align="center"
+             width="550px"
+             vspace="4"
+             alt="This drawing shows how the rotors were probably installed in the machine"
+             border=0
+             />
+            </div>
+            </td></tr><tr><td align=center>
+            <div style="margin-top: 4px; margin-bottom: 4px;">
+            <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+            <b>
+            <center>Educated guess of the rotor construction</center>
+            </b>
+            </font>
+            </div>
+          </td></tr></table>
+<br />
+Based on the original operating instructions <a href="#ref_3">[3]</a>, an educated guess about the
+construction of the rotors can be made, as shown in the image above. Each rotor
+has its own construction. It consists of a vertical metal mounting plate with
+a bearing that holds a hollow horizontal shaft. One side of the shaft &mdash; we have
+assumed the right side &mdash; is for mounting the rotor. It has an index pin that
+mates with an index notch at the inside of the rotor. This is done to ensure
+that the rotor is always mounted with the correct face up (i.e. visible
+through the window in the protective cover).
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/pbj_rotors.svg"
+             style="
+            "
+             align="center"
+             width="550px"
+             vspace="4"
+             border=0
+             />
+            </div>
+            </td></tr><tr><td align=center>
+            <div style="margin-top: 4px; margin-bottom: 4px;">
+            <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+            <b>
+            <center>Rotors 7 (installed) and 6 (removed) seen from the top</center>
+            </b>
+            </font>
+            </div>
+          </td></tr></table>
+<br />
+It is likely that the rotor is driven by a cogwheel that is mounted on the
+same shaft, at the other side of the mounting plate. This cogwheel is then
+driven by the adding mechanism inside the body (here shown in red).
+The image above shows two rotors (7 and 6) as seen from the top of the
+machine, with the second one (6) removed from the shaft.
+Note the index pin.
+It is likely that a rotor carried the same identification number as the
+corresponding strip with identical tuples.
+The construction is similar to the rotor mechanism of
+the later <a href="../hagelin/cx52/index.htm#overview"><span data-balloon-pos="up" aria-label="More about: Hagelin CX-52 cipher machine">Hagelin CX-52 cipher machine</span></a>.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/pbj_awl_0.svg"
+             style="
+             max-width: 618px;
+            "
+             onmouseover="this.src='svg/pbj_awl_1.svg'"
+             onmouseout="this.src='svg/pbj_awl_0.svg'"
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+            <div style="margin-top: 4px; margin-bottom: 4px;">
+            <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+            <center><b>Stretching the rotor shaft with a blunt awl</b> (move mouse over image)</center>
+            </font>
+            </div>
+          </td></tr></table>
+<br />
+To ensure that the rotor does not come off when it rotates, part of the shaft
+is embossed. The manual describes that if it does fall off, the supplied
+<i>blunt awl</i> must be used to strech the shaft somewhat <a href="#ref_3">[3]</a>. This is
+illustrated above. Move the mouse over the image to see the effect.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=format></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Message format</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <a name=annual_key></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Annual key
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The annual key consisted of the the order and contents of the
+<a href="#glos_tuple"><span data-balloon-pos="up" aria-label="Jump to: tuples">tuples</span></a> that were printed on the <a href="#strips"><span data-balloon-pos="up" aria-label="Jump to: strips">strips</span></a> and the
+<a href="#rotors"><span data-balloon-pos="up" aria-label="Jump to: rotors">rotors</span></a>. New strips and rotor faces were supplied once a year. They were
+regarded as secret components, which had to be kept in a safe when the machine
+was not in use. One <a href="#strips_table"><span data-balloon-pos="up" aria-label="Jump to: complete annual key">complete annual key</span></a>
+was reconstructed by <a href="#ref_1">[1]</a> from examples in the original manual <a href="#ref_3">[3]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=daily_key></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Daily key
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The daily key must be constructed in such a way that consonant and vowel strips
+are alternated, starting with a consonant strip. The rotors must be installed
+at the front, in the same order as the strips. The daily key that was
+reconstructed from the examples in the manual is as follows:
+<br />
+<br />
+<center>7650329418</center>
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=iv></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Initialisation Vector 
+          &nbsp;<font color="#CCC">
+          IV
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The first 10-letter group of the ciphertext is the initialisation vector
+(<span class="short" aria-label="Initialisation Vector" data-balloon-pos="up"><a href="#iv" class="short" >IV</a></span>). It is used in the encryption/decryption process to define the
+initial state of the cipher machine (i.e. the state of the 10 adding machines
+at the start of the procedure).
+The <span class="short" aria-label="Initialisation Vector" data-balloon-pos="up"><a href="#iv" class="short" >IV</a></span> must be properly constructed with respect to the consonant and
+vowel alternation, and is formatted as follows:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">2 syllables</div>Indicator (syllables in the range SA to ZU) <sup><font color="#FF8800">1</font></sup>            <li><div style="display:inline-block; width:100px;">1 syllable</div>Day of the month (01 to 31)            <li><div style="display:inline-block; width:100px;">2 Syllables</div>Message ID in the range 0001 to 9999          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <span class="short" aria-label="Initialisation Vector" data-balloon-pos="up"><a href="#iv" class="short" >IV</a></span> consists of syllables only, which means that the date and the
+message id have to be converted into letters first. The input numbers are
+always processed in pairs (i.e. two digits). If necessary, leading zeros
+should be inserted (e.g. 1 &rarr; 01, 113 &rarr; 01 13). Each 2-digit number
+<div style="display:inline-block; font-family:serif; font-size:16px;"><i>x<sub>1</sub>x<sub>2</sub></i></div> is converted into a 2-letter syllable <div style="display:inline-block; font-family:serif; font-size:16px;"><i>y<sub>1</sub>y<sub>2</sub></i></div> using  one of the
+tables below, depending on the value of <div style="display:inline-block; font-family:serif; font-size:16px;"><i>x<sub>2</sub></i></div>.
+Further details about Date and Message ID format, can be found in <a href="#ref_1">[1]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+        <table width=100% cellspacing=0 cellpadding=0>
+          <tr>
+          <td width=100%>
+          <table
+           class="table"
+           width=100% border=0 cellspacing=1 cellpadding=2 bgcolor=#FFFFFF>
+            <tr>
+<td bgcolor="#FFFFFF" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="18" colspan=10><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>if <div style="display:inline-block; font-family:serif; font-size:16px;"><i>x<sub>2</sub></i></div> is in the range 1 to 5:</font></td><td bgcolor="#FFFFFF" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="18" colspan=10><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>otherwise:</font></td>            </tr>
+            <tr>
+<td bgcolor="#D3E3F3" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b><div style="display:inline-block; font-family:serif; font-size:16px;"><i>x<sub>1</sub>/x<sub>2</sub></i></div></font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>1</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>2</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>3</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>4</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>5</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>6</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>7</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>8</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>9</font></td></b><td bgcolor="#D3E3F3" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>0</font></td></b><td bgcolor="#FFFFFF" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>&#160;</font></td></b><td bgcolor="#FFDDDD" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b><div style="display:inline-block; font-family:serif; font-size:16px;"><i>x<sub>1</sub>/x<sub>2</sub></i></div></font></td></b><td bgcolor="#FFDDDD" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>1</font></td></b><td bgcolor="#FFDDDD" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>2</font></td></b><td bgcolor="#FFDDDD" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>3</font></td></b><td bgcolor="#FFDDDD" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>4</font></td></b><td bgcolor="#FFDDDD" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>5</font></td></b><td bgcolor="#FFDDDD" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>6</font></td></b><td bgcolor="#FFDDDD" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>7</font></td></b><td bgcolor="#FFDDDD" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>8</font></td></b><td bgcolor="#FFDDDD" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>9</font></td></b><td bgcolor="#FFDDDD" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>0</font></td></b>            </tr>
+            <tr>
+            <td bgcolor=#FFFFFF colspan=23><font size=-1>
+            </font></td>
+            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><div style="display:inline-block; font-family:serif; font-size:16px;"><i>y<sub>1</sub></i></div></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>b</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>c</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>d</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>f</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>g</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>h</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>j</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>k</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>l</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>m</font></td><td bgcolor="#FFFFFF" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><div style="display:inline-block; font-family:serif; font-size:16px;"><i>y<sub>1</sub></i></div></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>n</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>p</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>q</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>r</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>s</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>t</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>v</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>w</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>x</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>z</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><div style="display:inline-block; font-family:serif; font-size:16px;"><i>y<sub>2</sub></i></div></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>u</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>o</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>i</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>e</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>a</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>u</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>o</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>i</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>e</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>a</font></td><td bgcolor="#FFFFFF" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#F4F4F4" align="center" valign="center"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><div style="display:inline-block; font-family:serif; font-size:16px;"><i>y<sub>2</sub></i></div></font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>u</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>o</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>i</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>e</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>a</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>u</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>o</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>i</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>e</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="18"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>a</font></td>            </tr>
+          </table>
+<div style="height: 20px;"></div>        </td>
+        </tr></table>
+        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Two syllables from the same group must be choosen. The second one is
+  redundant. Syllables in the range BE to RU are reserved for other cipher
+  types.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=rules></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Formatting rules
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Based on the original manual <a href="#ref_3">[3]</a>, the following rules had to be obeyed
+when creating a message. Note that all diacritical characters and
+punctuation marks must be removed from the plaintext.
+<ol>
+<li>Numbers in the text must be formatted as follows (except for the first group, the IV):
+<br />
+<br />
+<ul>
+<li> Insert the word <div style="display:inline-block; font-family:monospace; font-size:14px;">NUME</div> before the number
+<li> Insert the number of digits of the number
+<li> Write the numerical value of the number
+<li> Insert the checksum (sum of digits <div style="display:inline-block; font-family:monospace; font-size:14px;">mod</div> 10)
+</ul>
+<br />
+<li>Selected bigrams, letters and special characters are replaced:
+<br />
+<br />
+<ul>
+<li> p&#345;, pr &rarr; f
+<li> &#353;t, st &rarr; q
+<li> ch &rarr; g
+<li> &#353;k, sk, &#269;k, ck &rarr; w
+<li> y &rarr; i
+<li> <i>dot</i> and <i>comma</i> characters &rarr; ko
+<li> ? &rarr; co
+</ul>
+<br />
+<li> Alternation of <a href="#glos_cons"><span data-balloon-pos="up" aria-label="Jump to: consonants">consonants</span></a> and <a href="#glos_vowel"><span data-balloon-pos="up" aria-label="Jump to: vowels">vowels</span></a>.
+This is known as a <a href="#glos_syl"><span data-balloon-pos="up" aria-label="Jump to: syllable">syllable</span></a>.<br />
+If there are two adjacent consonants, the vowel 'U' must be placed between
+them. If there are two adjacent vowels, the consonant 'X' must be placed
+between them. In this case, the letters X and U are nulls, but note that
+they can still be used in other parts of the text. This means that their
+nature as nulls must be deduced/guessed from the text.
+<br />
+<br />
+<li> If the text begins with a vowel, consonant 'X' must be inserted
+before it. If the text ends with a consonant, the vowel 'U' must be added
+at the end.
+<br />
+<br />
+<li> If the length of the last group is less than 10 characters after
+application of rule (4), additional characters must be added. This can be
+done by repeating the last syllable.
+</ol>
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=end></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Encryption
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Before encrypting a message, the cipher machine must be set up. This is done
+by inserting the <a href="#strips"><span data-balloon-pos="up" aria-label="Jump to: strips">strips</span></a> and installing the <a href="#rotors"><span data-balloon-pos="up" aria-label="Jump to: rotors">rotors</span></a> in the
+order specified by the <a href="#daily_key"><span data-balloon-pos="up" aria-label="Jump to: daily key">daily key</span></a>. Each rotor must be installed
+directly under the strip with the same identification number.
+Next, the crank is mounted on the top surface of the machine. It will be used
+to advance the machine to the next state. Turning the crank <i>right</i> means
+rotating it 360&#176; clockwise. Turning it <i>left</i> meas rotating the crank
+360&#176; counter clockwise. To encrypt, do the following:
+<ol>
+<li>Format the plaintext as described in the <a href="#rules"><span data-balloon-pos="up" aria-label="Jump to: formatting rules">formatting rules</span></a>
+<li>Construct the <a href="#iv"><span data-balloon-pos="up" aria-label="Jump to: initialisation vector (IV)">initialisation vector (IV)</span></a>
+<li>Enter the <span class="short" aria-label="Initialisation Vector" data-balloon-pos="up"><a href="#iv" class="short" >IV</a></span> by means of the selectors
+<li>Engage the reset lever, release it, and turn the crank right
+<li>Set the 10 letters of the first plaintext group usig the selectors
+<li>Turn the crank right
+<li>Read 10 output characters from the windows
+<li>For the remaining groups repeat:
+<br />
+<br />
+<ol type="a">
+<li>Set the 10 letters of the next plaintext group using the selectors
+<li>Turn the crank right
+<li>Read the new ciphertext group from the windows
+</ol>
+</ol>
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=dec></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Decryption
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The decryption procedure is very similar to the encryption procedure, except
+for the following:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>Because the ciphertext is already formatted, step (1) is skipped.            <li>In steps <b>4</b> and <b>8b</b>, the crank must be turned <b>left</b> instead of right.            <li>Note that in step 6, the crank must still be turned <b>right</b>.          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Note that encryption and decryption can also be done with pencil and paper,
+without using the machine. This is described in Appendix B of <a href="#ref_1">[1]</a>.
+The machine is merely an aid to do it faster and with less chance of making
+mistakes.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=doc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Documentation</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <a name="doc_1"></a>
+            <li><a href="files/pbj_manual_1924.pdf">Instruckce k &#353;ifrov&#233;mu stoji 'Condenser PBJ'</a><br />
+Instructions for Cipher Machine Condenser PBJ (in Czech language) <s><span class="short tooltip-red" data-balloon-pos="up" aria-label="For Official Use Only">FOUO</span></s> <a href="#ref_3">[3]</a>.
+            <div class="grey">
+Note that the drawing in the original manual contains a mistake.
+It shows 11 windows instead of 10.
+            </div>
+          </ol type=A>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=lit></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Literature</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=a>
+            <a name="lit_1"></a>
+            <li><a href="files/Condenser_PBJ.pdf">The Condenser PBJ cipher machine</a><br />
+Eugen Antal, Paul Reuvers, Pavol Zajac.<br />
+Cryptologia. Forthcoming publication. Author's copy.
+          </ol type=a>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+            <li><a href="files/Condenser_PBJ.pdf">Eugen Antal, Paul Reuvers, Pavol Zajac, <i>The Condenser PBJ cipher machine</i></a><br />
+Cryptologia. Forthcoming publication. Author's copy.
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="https://www.tandfonline.com/doi/full/10.1080/01611194.2024.2372254" target="_blank">Published online: 1 August 2024</a>.<br />
+            <p />
+            <a name="ref_2"></a>
+            <li><a href="https://doi.org/10.1080/01611194.2021.1998809" target="_blank">Eugen Antal &amp; Pavol Zajac (2021): <i>The first Czechoslovak cipher machine</i></a><br />
+Cryptologia, DOI: 1080/01611194.201.1998809. 28 December 2021.
+            <p />
+            <a name="ref_3"></a>
+            <li><a href="files/pbj_manual_1924.pdf"><i>Instruckce k &#353;ifrov&#233;mu stoji 'Condenser PBJ'</i></a><br />
+Instructions for Cipher Machine Condenser PBJ (in Czech language) <s><span class="short tooltip-red" data-balloon-pos="up" aria-label="For Official Use Only">FOUO</span></s>.<br />
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="National Archives and Records Administration (USA)">NARA</span>, 1924. Document n. 2251/Ic/24. Record Group 457,
+Entry UD-22D 21, in the series: Archival and Historian's Source Files, box 4.
+            <div class="grey">
+Note that the drawing in the original manual contains a mistake.
+It shows 11 windows instead of 10.
+            </div>
+            <p />
+            <a name="ref_4"></a>
+            <li><a href="../../manuf/gpo/files/ITC_reg_1932.pdf">Final Protocol to the Telegraph Regulations - Madrid 1932</a><br />
+International Telecommunication Convention (ITC, now: <span class="short tooltip-red" data-balloon-pos="up" aria-label="International Telecommunication Union">ITU</span>). Madrid, 1932.<br />
+43-152-2. Translated and issued by the <span class="short" aria-label="General Post Office (UK)" data-balloon-pos="up"><a href="../../manuf/gpo" class="short" >GPO</a></span>, London, 1933.
+            <p />
+            <a name="ref_5"></a>
+            <li><a href="https://www.jmcvey.net/cable/condensers/index.htm" target="_blank">John McVey, <i>Condensers</i></a><br />
+22 July 2013. Visited 9 December 2023.
+            <p />
+            <a name="ref_6"></a>
+            <li><a href="http://cryptiana.web.fc2.com/code/figure_e.htm" target="_blank"><i>Figure Codes and Code Condensers</i></a><br />
+S. Tomokyo, 20 September 2014 - 5 March 2020.
+            <p />
+            <a name="ref_7"></a>
+            <li><a href="../codebook/peterson">Ernest. E. Peterson, <i>Peterson International Code</i></a><br />
+3rd Edition, 1929.
+            <p />
+            <a name="ref_8"></a>
+            <li><a href="../codebook/boe">Conrad Boe, <i>The New Boe Code</i></a><br />
+Oslo, Norway, 1937.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../stolba">Stolba cipher machine</a><br />
+            <li><a href="../cs.htm">Other Czechoslovak cipher machines</a><br />
+            <li><a href="../index.htm">Other cipher machines</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Friday 08 December 2023. Last changed: Friday, 02 August 2024 - 16:14 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../index.htm"><img src=../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

@@ -1,0 +1,1782 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>Hans Bühler</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="Keywords" content="Hans Buehler, Hans Buhler, Crypto AG, Hagelin, Iran, Persia, Hans Buhler, Backdoor, CIA, NSA">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../index.htm"><img src="../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../index.htm"><img src="../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Hans B&#252;hler</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Former sales representative of Crypto AG</b>
+<br />
+<br />
+Hans Werner B&#252;hler (12 July 1941 - 27 July 2018)
+was one of the top sales representatives of
+<a href="../../manuf/crypto/index.htm"><span data-balloon-pos="up" aria-label="More about: Crypto AG (Hagelin)">Crypto AG (Hagelin)</span></a> in Zug
+(Switzerland), and also a Radio HAM &mdash; HB9XJ <a href="#ref_4">[4]</a>.
+For <span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span>, he frequently travelled the Arab countries
+and Western Asia, selling cipher machines to countries like Saudi Arabia
+and in particular Iran.
+In March 1992, he was arrested in Iran on dubious grounds,
+and was released 9 months later, in January 1993 after a bail
+of US$ 1,000,000 had been payed.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the past, B&#252;hler has repeatedly accused his former employer
+of selling rigged equipment
+&ndash; in popular terms: machines with a <span class="short" aria-label="exploitable weaknesses" data-balloon-pos="up"><a href="../../intel/nsa/backdoor.htm" class="short" >backdoor</a></span> &ndash;
+in interviews, television programs and charges with the
+Swiss police. <span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span> has always firmly denied any manipulation
+with the machines, despite very strong indications to the contrary.
+<br />
+<br />
+After his release from prison, he appeared to be traumatised.
+He was convinced that <span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span> had not done enough to enforce
+his release, although evidence to the contrary has meanwhile surfaced.
+But he did not know the entire story.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/500237/002/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Hans Bühler visiting the Crypto Museum stand and the HAM RADIO show in Friedrichshafen (Germany) in 2014" data-balloon-length="large">
+<a href="img/500237/002/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Hans Bühler visiting the Crypto Museum stand and the HAM RADIO show in Friedrichshafen (Germany) in 2014" data-balloon-length="large">
+            <img src="img/500237/002/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Hans Bühler visiting the Crypto Museum stand and the HAM RADIO show in Friedrichshafen (Germany) in 2014"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In March 1994, Swiss investigative journalist Res Strehle published the book
+<b>'Verschl&#252;sselt, Der Fall Hans B&#252;hler'</b> (Encrypted, the case of Hans B&#252;hler)
+in which he gives a detailed account of B&#252;hler's imprisonment, the
+interrogations, the bail of US$ 1,000,000 and his subsequent release nine
+months later. The book coincided with broadcasts on Swiss and Austrian
+national televison.
+<br />
+<br />
+Unknown to B&#252;hler, the company for which he worked so many years, had been
+jointly purchased in 1970, by the German
+<a href="../../intel/bnd/index.htm"><span data-balloon-pos="up" aria-label="More about: Bundesnachrichtendienst (BND)">Bundesnachrichtendienst (BND)</span></a> and
+the American <a href="../../intel/cia/index.htm"><span data-balloon-pos="up" aria-label="More about: Central Intelligence Agency (CIA)">Central Intelligence Agency (CIA)</span></a>,
+in a secret transaction that has meanwhile become known as
+<a href="../../intel/cia/rubicon.htm"><span data-balloon-pos="up" aria-label="More about: Operation RUBICON">Operation RUBICON</span></a>.
+This was done specifically to influence the cryptographic
+algorithms of the equipment that was used by countries that were seen
+by the intelligence services as valuable intelligence targets.
+Unfortunately, Hans Werner B&#252;hler would never learn the full story &mdash; he died
+on 27 July 2018.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>The Hans B&#252;hler Affair 
+          &nbsp;<font color="#CCC">
+          HYDRA</b>
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          A trip to Tehran
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Hans B&#252;hler was a highly valued sales representative at <span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span>.
+He knew his way in the Arab world.
+According to a former CEO, he belonged to the top ten of the company.
+On 14 March 1992, B&#252;hler
+&ndash; then 51 years old &ndash; left on a plane to Tehran (Iran) to do business
+as usual. He had a return ticket and was to fly back six days later,
+on 20 March 1992. But it was not to be.
+<br />
+<br />
+Iran had always been one of <span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span>'s most loyal customers, despite
+the fact that in 1979 the regime had changed, and despite recurring
+rumours that American intelligence was reading <span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span> equipment.
+They had questioned B&#252;hler on several occasions, such as after the
+La Belle Disco incident <sup><font color="#FF8800">1</font></sup> in 1986, but there had never been any real trouble
+with the Iranian authorities.
+<br />
+<br />
+When B&#252;hler did not return home on 20 March, the company started
+making inquiries, and on 31 March they were informed by the Swiss Embassy
+in Tehran, that B&#252;hler had been arrested with three others <sup><font color="#FF8800">2</font></sup> on the
+grounds of spying, bribery, illegal contacts and illegal use of alcohol.
+There was no mention of the suspicion of rigged <span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span> equipment whatsoever
+(nor would there be later).
+<br />
+<br />
+<span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span> later figured out, that B&#252;hler had probably been a 'random' target,
+as 'ransom' for an Iranian citizen <sup><font color="#FF8800">3</font></sup> that had recently been arrrested
+in Switzerland. When B&#252;hler was first visited by Swiss consular officials
+on 20 April, he was in bad mental condition.
+<span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span> had no idea what B&#252;hler knew about the <span class="short" aria-label="Bundesnachrichtendienst (Germany)" data-balloon-pos="up"><a href="../../intel/bnd/index.htm" class="short" >BND</a></span>/<span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span> involvement,
+and was afraid that he would make incriminating statements.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li style="margin-bottom: 6px;">
+<b>La Belle</b> was a discotheque in West Berlin, where on 4 April 1986
+  a bomb exploded, that had alledgedly been planted by Lybian agents.
+  The bomb killed two and left 79 injured.
+  <font color="#E7E">&#10148;</font>&nbsp;<a href="https://en.wikipedia.org/wiki/West_Berlin_discotheque_bombing" target="_blank">Wikipedia</a>
+          </li>
+          <li style="margin-bottom: 6px;">
+Salimi Nejad (the owner of Hasliran &ndash; CAGs distributor in Iran),
+  Nejad's brother-in-law and an unnamed Iranian military officer.
+          </li>
+          <li style="margin-bottom: 6px;">
+The Swiss had arrested an Iranian man by the name of Zeyal Sarhadi,
+  who had been accused of assasinating Shapour Baktiar &ndash; the former
+  Iranian Prime Minister &ndash; in France.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          The bail
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+This situation lasted until 8 September 1992, when his bail was set
+at <b>US$ 1,000,000</b> pending further investigations. It allowed him to
+leave the country, but he would have to return to Iran for his trial later.
+<span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span> tried to bargain down the hight of the bail. The company was in no way
+able to raise that much cash.
+The <span class="short" aria-label="Bundesnachrichtendienst (Germany)" data-balloon-pos="up"><a href="../../intel/bnd/index.htm" class="short" >BND</a></span> was prepared to raise the US$ 1,000,000, as long as it would be
+split 50/50 with the <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span>.
+But <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span> officials were hesistant and were
+afraid that it might be illegal. <sup><font color="#FF8800">1</font></sup>
+On 6 October, <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span> agreed to pay their 50% share,
+but the White House rejected it the next day.
+<br />
+<br />
+In the end, the <span class="short" aria-label="Bundesnachrichtendienst (Germany)" data-balloon-pos="up"><a href="../../intel/bnd/index.htm" class="short" >BND</a></span> raised the entire sum, <sup><font color="#FF8800">2</font></sup> and transferred it to
+<span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span>,
+through their covert mechanism, the Bundes&shy;verm&#246;gens&shy;verwaltung (BVV).
+On 5 November 1992, B&#252;hler was officially charged by the Iranians.
+Two months later, on 5 January 1993, he arrived safely at Z&#252;rich airport.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li style="margin-bottom: 6px;">
+As a matter of principle, the American government never pays ransom.
+  However, Congress had never passed a law about it, as a result of
+  which is was simply a policy matter.
+          </li>
+          <li style="margin-bottom: 6px;">
+BND had settled the matter in the hope to get half of it back from the
+  CIA at a later date, but this never happened. On the contrary: it led
+  to serious friction between the two parties.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Release
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+At the airport, he had a brief encounter with a journalist, who suggested
+that something was clearly wrong with <span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span> equipment. Unknown to B&#252;hler at
+the time, he managed to slip a card with a phone number into B&#252;hler's pocket.
+B&#252;hler was clearly traumatised by his time in the Iranian prison, where he
+had been interrogated three times a day for the entire nine months. He had
+told them everything about his Iranian contacts, which eventually led to
+another 15 arrests.
+<br />
+<br />
+B&#252;hler felt that <span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span> had not fought hard enough for his release. <sup><font color="#FF8800">1</font></sup>
+Despite a non-disclosure agreement with <span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span>, he started talking to the
+press and accused <span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span> of providing back&shy;doors in their equipment
+to the advantage of German and American intelligence.
+At one point he even claimed that <span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span> wanted him to repay the US$ 1,000,000
+bail, but withdrew that later.
+<br />
+<br />
+Eventually he was fired by the <span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span>
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Chief Executive Officer (director)">CEO</span> on 10 March 1993, much against the will of the <span class="short" aria-label="Bundesnachrichtendienst (Germany)" data-balloon-pos="up"><a href="../../intel/bnd/index.htm" class="short" >BND</a></span>/<span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span>.
+They felt it would have been better to keep him close.
+And they turned out to be right.
+On 17 March, B&#252;hler found the phone number is is pocket and rang it.
+The call was answered by Peter Frutiger, the former head of research and
+development at <span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span>, who had been fired 16 years earlier (to the day),
+after improving algorithms against the will of his superiors
+(<span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../../intel/nsa/index.htm" class="short" >NSA</a></span>/<span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span>).
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+The CIA thinks that his wife Vreni Blumer was behind this.
+  There is no evidence to support B&#252;hlers claim. On the contrary;
+  occording to the files, CAG had done everything they could to
+  get B&#252;hler released.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Police investigation
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When Frutiger was fired (on 10 March 1977), he had &ndash; unknown to <span class="short" aria-label="Bundesnachrichtendienst (Germany)" data-balloon-pos="up"><a href="../../intel/bnd/index.htm" class="short" >BND</a></span>
+and <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span> &ndash; raised charges
+of manupulation of <span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span> equipment to the Swiss Ministry of Justice.
+Although declining a formal investigation, the head of the Swiss
+Bundespolizei (BuPo) quietly arranged to examine some <span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span> equipment.
+They found that the algorithms were not what they should be, but it wasn't
+enough to take the matter to court. It was clear though, that Frutiger's
+charges were valid.
+<br />
+<br />
+After the phone conversation with Frutiger, B&#252;hler also decided to go to
+the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Bundespolizei (Switzerland)">BuPo</span> &mdash; the Swiss federal police &mdash; who contacted Swiss military
+intelligence. Apparently certain high officials in the Swiss military
+intelligence were aware of the German (<span class="short" aria-label="Bundesnachrichtendienst (Germany)" data-balloon-pos="up"><a href="../../intel/bnd/index.htm" class="short" >BND</a></span>) and American
+(<span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span>)
+role in <span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span> and took a hand in protecting the relationship.
+One of the officials informed the <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span> that he had:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+<div class="quote">          
+          "the ability to ensure that the official results of any<br />
+          investigation will show no manipulation of the gear"
+          
+</div>          </td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+They also informed <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span> that, should the investigation be subcontracted
+to <span class="short tooltip-red" data-balloon-pos="up" aria-label="University of Science and Technology (Switzerland)">ETH</span>, they could <i>handle</i> four of the five cryptomathematicians
+who could become involved in the investigation. <span class="short tooltip-red" data-balloon-pos="up" aria-label="Bundespolizei (Switzerland)">BuPo</span> officers later
+visited the <span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span>
+factory and spoke with the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Chief Executive Officer (director)">CEO</span>. They didn't probe
+too deep and considered B&#252;hler somewhat nutty.
+On 15 November, B&#252;hler informed <span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span> that he wanted to settle.
+He received CHF 250,000 and had to sign an agreement that he would
+not press for more money. It did not say anything about talking to
+the press. B&#252;hler signed it on 10 December 1993.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Publicity
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+But the settlement was not the end of it. On the contrary.
+Later that month, <span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span> discovered that Swiss investigative journalist
+Res Strehle was writing a book about the affair, and had asked for an interview
+with the company's CEO &ndash; Michael Grupe. But Grupe turned him down.
+<br />
+<br />
+In the meantime, B&#252;hler kept talking to (former) <span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span> employees,
+and even contacted the former CEO, Heinz Wagner, who was very worried
+that the operation was in danger and that even certain company
+assets &ndash; such as the cryptomathematician ATHENA (cryptonym) &ndash; could
+be exposed.
+In early 1994, B&#252;hler began claiming that the true owner of <span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span>
+was not <a href="../../manuf/siemens/index.htm"><span data-balloon-pos="up" aria-label="More about: Siemens">Siemens</span></a>,
+but the German <span class="short" aria-label="Bundesnachrichtendienst (Germany)" data-balloon-pos="up"><a href="../../intel/bnd/index.htm" class="short" >BND</a></span>, through an organisation called
+the Bundesverm&#246;genverwaltung (BVV). This worried <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span>, as <span class="short tooltip-red" data-balloon-pos="up" aria-label="Bundesverm&#246;gensverwaltung">BVV</span>
+was indeed the mechanism that <span class="short" aria-label="Bundesnachrichtendienst (Germany)" data-balloon-pos="up"><a href="../../intel/bnd/index.htm" class="short" >BND</a></span> used to channel money to
+<span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span> and to other clandestine operations. The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Bundesverm&#246;gensverwaltung">BVV</span> had also
+transferred <b>US$ 1,000,000</b> to <span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span>, to pay for B&#252;hler's bail in Iran.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In early March 1994, <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span> learned that B&#252;hler was about to
+publicly disclose the secret relationship between <span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span> and
+Western intelligence. The program would be aired on
+Swiss and Austrian national televison on 23 March 1994.
+<br />
+<br />
+The publication of Strehle's book:
+<i>Verschl&#252;sselt, Der Fall Hans B&#252;hler</i>
+(Encrypted, the case of Hans B&#252;hler),
+would coincide with the broadcast, to attract maximum attention.
+<span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span>'s CEO Michael Grupe decided to face the charges head-on,
+and agreed to be interviewed for the TV program, much against the
+will of the <span class="short" aria-label="Bundesnachrichtendienst (Germany)" data-balloon-pos="up"><a href="../../intel/bnd/index.htm" class="short" >BND</a></span>.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Cover of the book 'Verschlüsselt, Der Fall Hans Bühler'" data-balloon-length="large" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Cover of the book 'Verschlüsselt, Der Fall Hans Bühler'" data-balloon-length="large" class="tooltip-red">
+            <img src="../../people/buehler/img/301319/002/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Cover of the book 'Verschlüsselt, Der Fall Hans Bühler'"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+On 23 March 1994,
+B&#252;hler appeared on Austrian and Swiss television,
+with an account of his treatment in the Iranian prison.
+The program went on to explain that <span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span> equipment had been
+manipulated by the Germans and Americans. Peter Frutiger was
+interviewed, although only his silhouette was visible and his voice
+had been distorted. He stated that his life might be in danger.
+<br />
+<br />
+Next, Grupe was interviewed by a Swiss journalist. He denied all
+allegations and dismissed them as <i>warmed-over claims by
+disgruntled employees</i>. The claim that the Germans were manipulating
+the equipment was dismissed as <i>insanity</i>. After all, <span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span>
+sold equipment to the German and Swiss governments and they
+would never buy it, if it had been rigged by them.
+And yes, foreign intelligence agencies had been visiting the company.
+They were customers, and very good ones.
+<br />
+<br />
+Grupe's appearance on TV was strong enough to cast doubt over the
+allegations made by B&#252;hler and Frutiger. On 7 April, B&#252;hler repeated
+his claims on Swiss radio, but the whole thing gradually slipped
+into the background. The impact of Strehle's book was also muted,
+by the sensational nature of some allegations, such as the
+suspicious death of Bo Hagelin &ndash; the son of <span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span> founder
+<a href="../hagelin/boris.htm"><span data-balloon-pos="up" aria-label="More about: Boris Hagelin">Boris Hagelin</span></a>.
+With such unsupported claims, the book lost much of its credibility.
+<br />
+<br />
+The <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span>
+and <span class="short" aria-label="Bundesnachrichtendienst (Germany)" data-balloon-pos="up"><a href="../../intel/bnd/index.htm" class="short" >BND</a></span> were now facing a dilemma. They could start a lawsuit
+against B&#252;hler, in order to stop him from making 'false' claims,
+but they could also settle it with B&#252;hler out-of-court. But the latter
+option would be seen by customers as an admission of guilt. It would
+be more credible to proceed with the lawsuit, but that could endanger
+and eventually expose the entire operation.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Another investigation
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Triggered by the overheated media attention of March 1994, the Swiss police
+initiated yet another investigation of the company.
+They visited <span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span>, obtained the official denials from the CEO,
+and urged the company to let its salesmen stay out of trouble
+during the investigation.
+<br />
+<br />
+In the meantime, on 15 July 1994, <span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span> lawyers asked the Swiss court
+for a restraining order against B&#252;hler, so that he could no longer make
+'false' charges against the company. On 19 July the restraining order
+was issued. It was a temporary measure, pending a lawsuit against
+B&#252;hler.
+<br />
+<br />
+The police interrogated Frutiger, as he was B&#252;hler's primary source.
+But by the time they got to him, Frutiger had become an erratic
+witness. Frutiger explained his well-founded suspicions about the
+integrety of the firm. He told them that when he studied at the <span class="short tooltip-red" data-balloon-pos="up" aria-label="University of Science and Technology (Switzerland)">ETH</span>
+during the 1960s, it had been a public secret that the firm was
+compromised by Western intelligence. He spoke about the interventions
+by <span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../../intel/nsa/index.htm" class="short" >NSA</a></span>
+and <span class="short" aria-label="Zentralstelle fur das Chiffrierwesen" data-balloon-pos="up"><a href="../../intel/zfch/index.htm" class="short" >ZfCh</a></span> people
+&mdash; he even mentioned <span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../../intel/nsa/index.htm" class="short" >NSA</a></span>'s Nora Mackebee <sup><font color="#FF8800">1</font></sup> &mdash;
+when&shy;ever he tried to implement his own algorithms.
+However, he was not able to provide any evidence.
+<br />
+<br />
+Eventually, Frutiger got cold feet and started to alter his
+statements. He said that the silhouette that was shown in the
+television program was not his, and that the interview was a fraude.
+He was put under pressure and claimed (again) that his life
+was in danger. In the end, the police
+came to believe that he had been throwing around false allegations,
+and dismissed him as a witness.
+<br />
+<br />
+But there were other former employees that agreed to cooperate with
+the police. One former engineer &mdash; who had worked for the company for
+27 years &mdash; claimed to have proof for <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span>
+and <span class="short" aria-label="Bundesnachrichtendienst (Germany)" data-balloon-pos="up"><a href="../../intel/bnd/index.htm" class="short" >BND</a></span> manipulation with
+respect to the
+<a href="../../crypto/hagelin/mcc314/index.htm"><span data-balloon-pos="up" aria-label="More about: MCC-314 bulk encryptor">MCC-314 bulk encryptor</span></a>
+(of which the forward
+synchroni&shy;sation system had indeed been rigged), but
+claimed he was unable to produce the evidence, due to his
+non-disclosure agreement with <span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span>.
+Another one claimed that the algorithm of the
+<a href="../../crypto/hagelin/crm008/index.htm"><span data-balloon-pos="up" aria-label="More about: CRM-008 voice encryptor">CRM-008 voice encryptor</span></a>
+had been rigged by the German <span class="short" aria-label="Zentralstelle fur das Chiffrierwesen" data-balloon-pos="up"><a href="../../intel/zfch/index.htm" class="short" >ZfCh</a></span>, and called
+it <i>cryptographic castration</i>.
+<br />
+<br />
+The investigation went on, and even <span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span> board members were interrogated.
+But on 20 December 1994, the police chief reported to the Ministry of
+Justice, that there were no grounds for further investigation.
+As far as the Swiss government was concerned, the B&#252;hler case was closed.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Nora Mackebee was indeed one of the NSA's experts who had visited
+  Crypto AG, under the cover of
+  <a href="../../manuf/ia/index.htm"><span data-balloon-pos="up" aria-label="More about: Intercom Associates">Intercom Associates</span></a>, which was a
+  <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span> cover company, staffed by CIA and NSA people.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          The lawsuit
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the meantime, <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span> was still reluctant to start with a lawsuit
+against B&#252;hler &mdash; it could expose the entire operation &mdash; but on
+11 August 1994 they finally decided to proceed. The strategy was to
+draw out the process for years, in the hope that B&#252;hler would eventually
+become exhausted &ndash; or out of money &ndash; and settle out-of-court.
+Almost a year later, in July 1995, the Swiss court ruled that both
+sides had to prove their points. B&#252;hler had to prove his allegations,
+and <span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span> had to prove that their equipment had never been
+manipulated by Western intelligence services.
+<br />
+<br />
+But then, in late September 1995, <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span> got an unexpected break.
+B&#252;hler had been interviewed by American journalist Scott Shane of
+The Baltimore Sun, who was doing a series of articles about the
+<span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../../intel/nsa/index.htm" class="short" >NSA</a></span>. This was clear violation of B&#252;hler's restraining order,
+and opened the door to an out-of-court settlement.
+B&#252;hler hesitated, but finally gave in. From now on he had to
+stay away from the press; every violation would cost him CHF 100,000.
+He would declare that there were no grounds for his accusation
+that <span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span> had been involved in intelligence activities.
+<span class="short" aria-label="Crypto AG (abbreviation)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >CAG</a></span> would pay his legal bills up to a maximum of CHF 150,000.
+With the settlement, Hans B&#252;ler had been silenced.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="http://baltimoresun.com" target="_blank">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="http://baltimoresun.com" target="_blank">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="../../intel/cia/img/BaltimoreSun_logo.png"
+             style="
+            "
+             align="center"
+             width="250px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          The Baltimore Sun
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+But even with B&#252;hler out of the way, the matter wasn't over.
+Scott Shane &ndash; the journalist of The Baltimore Sun &ndash; continued to probe
+(former) <span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span> employees for further information.
+And he was about to expose one of the most secret US intelligence operations
+to the American public.
+<br />
+<br />
+On 10 December 1995, the article appeared in The Baltimore Sun,
+the home newspaper of many <span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../../intel/nsa/index.htm" class="short" >NSA</a></span> employees who lived in Maryland.
+It was just as damaging as <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span>
+and <span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../../intel/nsa/index.htm" class="short" >NSA</a></span> had feared.
+It even mentioned Nora Mackebee &mdash; a former <span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../../intel/nsa/index.htm" class="short" >NSA</a></span> officer &mdash;
+and linked here to <a href="../../manuf/ia/index.htm"><span data-balloon-pos="up" aria-label="More about: Intercom Associates">Intercom Associates</span></a>,
+a <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span> cover company under which
+<span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../../intel/nsa/index.htm" class="short" >NSA</a></span>
+and <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span> people had operated in relation to the
+<span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span> business. She (and others) had visited the company to
+give 'advise' on cryptographic algorithms.
+<br />
+<br />
+At <span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../../intel/nsa/index.htm" class="short" >NSA</a></span> headquarters in Fort Meade, it was the talk of the town for
+many days. It is rumoured that lower <span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../../intel/nsa/index.htm" class="short" >NSA</a></span> staff bought extra copies of
+the newspaper, to read what they were not supposed to know.
+<span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span>'s CEO Michael Grupe, issued the usual public denial statements.
+He attributed the allegations to 'disgruntled employees' and claimed
+that everything was 'pure invention'.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Conclusion
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The Hans B&#252;hler Affair &mdash; within <span class="short" aria-label="Bundesnachrichtendienst (Germany)" data-balloon-pos="up"><a href="../../intel/bnd/index.htm" class="short" >BND</a></span>
+and <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span> known by the codename
+<b>HYDRA</b>  &mdash;
+was by far the most damaging
+one in the history of <a href="../../intel/cia/rubicon.htm"><span data-balloon-pos="up" aria-label="More about: Operation RUBICON">Operation RUBICON</span></a>. <sup><font color="#FF8800">1</font></sup>
+Not only for the secret that <span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span>
+&mdash; codenamed  <span class="short" aria-label="Crypto AG (CIA cryptonym)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >MINERVA</a></span> &mdash;
+was actually owned by <span class="short" aria-label="Bundesnachrichtendienst (Germany)" data-balloon-pos="up"><a href="../../intel/bnd/index.htm" class="short" >BND</a></span>
+and <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span>,
+but also for the relationship between these two services.
+It caused the <span class="short" aria-label="Bundesnachrichtendienst (Germany)" data-balloon-pos="up"><a href="../../intel/bnd/index.htm" class="short" >BND</a></span> to reconsider its position, and has contributed to
+the <span class="short" aria-label="Bundesnachrichtendienst (Germany)" data-balloon-pos="up"><a href="../../intel/bnd/index.htm" class="short" >BND</a></span>'s decision in December 1993, to terminate the joint
+venture with the <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span> immediately. <sup><font color="#FF8800">2</font></sup> From 4 July 1994 to 2019
+the Swiss company <span class="short" aria-label="Crypto AG (Hagelin)" data-balloon-pos="up"><a href="../../manuf/crypto/index.htm" class="short" >Crypto AG</a></span> was solely owned
+by the American <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../intel/cia/rubicon.htm">More about Operation RUBICON</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+The operation was initially known as THESAURUS, but in 1987,
+  this was changed to RUBICON.
+          </li>
+          <li>
+Note that this happened <u>during</u> the course of the B&#252;hler Affair.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=audio></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Interview</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <ul>
+        <table width=100% border=0 cellspacing=0 cellpadding=2>
+          <tr>
+          <td valign=middle width=1>
+          <a href=https://www.prosefights2.org/irp2014/p051315/swissradio.mp3><img src=../../img/filetype/mp3.gif border="0" hspace="4"></a>
+          </td>
+          <td valign="middle" colspan="2">
+          <table width="100%" cellspacing="0" cellpadding="2" border="0">
+            <tr><td>
+            <a href=https://www.prosefights2.org/irp2014/p051315/swissradio.mp3><font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif">
+            <b>Interview with Hans Bühler</b>
+            </font></a>
+            </td></tr>
+            <tr><td width="1" height="1">
+            <audio controls>
+            <source src="https://www.prosefights2.org/irp2014/p051315/swissradio.mp3" type="audio/mpeg" />
+            Audio format not supported by your browser
+            </audio>
+            </td></tr>
+            <tr><td>
+            <font color=#555555 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif">
+            Swiss Radio International, 9 September 2009.
+            </font></td></tr>
+          </table>
+          </td></tr>
+        </table>
+        </ul>
+<div style="height: 20px;"></div>        <a name=pub></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Publications</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=I>
+            <a name="pub_1"></a>
+            <li><a href="../../book/strehle/files/strehle_verschluesselt.pdf" target="_blank">Verschl&#252;sselt, Der Fall Hans B&#252;hler</a><br />
+ISBN 3-85932-141-2. 1994.
+          </ol type=I>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+            <li><a href="../../intel/cia/rubicon.htm">Crypto Museum, <i>Operation RUBICON</i></a><br />
+February 2020.
+            <p />
+            <a name="ref_2"></a>
+            <li><a href="https://www.sigs.ch/zuerisee_news.aspx" target="_blank">Zum Gedenken an Hans B&#252;hler (1941-2018)</a><br />
+Retrieved January 2020.
+            <p />
+            <a name="ref_3"></a>
+            <li><a href="https://archive.org/details/verschlusseltder00stre" target="_blank">Verschl&#252;sselt, Der Fall Hans B&#252;hler</a><br />
+ISBN 3-85932-141-2. 1994.
+            <p />
+            <a name="ref_4"></a>
+            <li><a href="files/hans_buehler_todesanzeige.png">Hans B&#252;hler, <i>Todesanzeige</i></a><br />
+Retrieved January 2020.
+            <p />
+            <a name="ref_5"></a>
+            <li><a href="https://www.prosefights2.org/irp2014/p051315/swissradio.mp3" target="_blank">Swiss Radio International, Interview with Hans B&#252;hler</a><br />
+Radio broadcast, 9 September 2009.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../../crypto/hagelin/index.htm">Crypto AG (Hagelin)</a><br />
+            <li><a href="../../manuf/crypto/friedman.htm">Secret NSA/Hagelin deal</a><br />
+            <li><a href="../index.htm">Index of people</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Tuesday 12 January 2016. Last changed: Sunday, 31 August 2025 - 09:28 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../index.htm"><img src=../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

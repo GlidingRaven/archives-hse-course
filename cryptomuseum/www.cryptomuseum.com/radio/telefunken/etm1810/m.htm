@@ -1,0 +1,3056 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>ETM-1810/M</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of military radio equipment and radio-related subjects" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../radio/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../radio/glossary.htm';" >Glossary</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../../radio/sincgars/index.htm';" >SINCGARS</div>
+          <div class="but sub" onClick="location.href='../../../radio/zodiac/index.htm';" >ZODIAC</div>
+          <div class="but sub" onClick="location.href='../../../radio/titaan/index.htm';" >TITAAN</div>
+          <div class="but sub" onClick="location.href='../../../radio/bams/index.htm';" >BAMS</div>
+          <div class="but sub" onClick="location.href='../../../radio/clansman/index.htm';" >Clansman</div>
+          <div class="but sub" onClick="location.href='../../../radio/bowman/index.htm';" >Bowman</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Terrestrial Trunked Radio" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../radio/tetra/index.htm';" >TETRA</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Morse Code" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../radio/morse/index.htm';" >Morse</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../radio/morse/keys/index.htm';" >Morse keys</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Quartz Crystals" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../radio/xtal/index.htm';" >Crystals</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../../radio/siemens/chx200/index.htm';" >CHX-200</div>
+          <div class="but sub" onClick="location.href='../../../radio/rt1439/index.htm';" >RT-1439</div>
+          <div class="but sub" onClick="location.href='../../../radio/rt3600/index.htm';" >RT-3600</div>
+          <div class="but sub" onClick="location.href='../../../radio/se6861/index.htm';" >SE-6861</div>
+          <div class="but sub" onClick="location.href='../../../radio/mel/prc319/index.htm';" >PRC-319</div>
+          <div class="but sub" onClick="location.href='../../../radio/spider/index.htm';" >SPIDER</div>
+          <div class="but sub" onClick="location.href='../../../radio/ussr/r142/index.htm';" >R-142</div>
+          <div class="but sub" onClick="location.href='../../../radio/selex/index.htm';" >Selex PRR</div>
+          <div class="but sub" onClick="location.href='../../../radio/fug8/index.htm';" >FuG-8</div>
+          <div class="spacer"></div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Countries
+          </div>
+          <div class="hidden">
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former Soviet Union" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../radio/ussr/index.htm';" >USSR</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former Yugoslav Republic" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../radio/yugo/index.htm';" >Yugoslavia</div>
+</div>
+          </div>
+          </div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../../../crypto/telefunken/index.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Crypto" class="key">Crypto</div></a><a class="key" href="../../../crypto/data.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Data" class="key">Data</div></a><a class="key" href="../../../manuf/telefunken/index.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Telefunken" class="key">Telefunken</div></a>&nbsp;&nbsp;<a class="key" href="../etm1820/index.htm"><div  data-balloon-pos="up" aria-label="Forward to ETM-1820/M" class="key right">ETM-1820/M &rarr;</div></a><a class="key" href="../etm1810/index.htm"><div  data-balloon-pos="up" aria-label="Back to ETM-1810" class="key right">&larr; ETM-1810</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>ETM-1810/M</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>ECHOTEL modem for HF radio</b>
+<br />
+<br />
+<b>ETM-1810/M</b> is a high-end <span class="short tooltip-red" data-balloon-pos="up" aria-label="High Frequency (3-30 MHz)">HF</span> <a href="../../index.htm"><span data-balloon-pos="up" aria-label="More about: radio modem">radio modem</span></a>
+with features like Forward Error Cor&#173;rec&#173;tion (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Forward Error Correction">FEC</span>), Automatic Repeat Request
+(<span class="short tooltip-red" data-balloon-pos="up" aria-label="Automatic Repeat Request">ARQ</span>) and echo-cancelling,
+introduced in 1998 by <a href="../../../manuf/telefunken/index.htm"><span data-balloon-pos="up" aria-label="More about: AEG Telefunken">AEG Telefunken</span></a> <sup><font color="#FF8800">1</font></sup>
+in Ulm (Ger&shy;ma&shy;ny). It is part of the ECHOTEL family and was used
+by the German Army and <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span>.
+It supports various data modes and waveforms, and uses multiple Digital Signal
+Processors (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>).
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The ETM-1810/M is <a href="#diff"><span data-balloon-pos="up" aria-label="Jump to: entirely different">entirely different</span></a> from its predecessor,
+the <a href="index.htm"><span data-balloon-pos="up" aria-label="More about: ETM-1810">ETM-1810</span></a>. The hardware is completely redesigned
+and comprises three <span class="short tooltip-red" data-balloon-pos="up" aria-label="Texas Instruments (USA)">TI</span> Digi&shy;tal Signal Processors (DSPs)
+plus a separate Motorola microcontroller. Contrary to its prede&shy;cessor,
+it supports multiple waveforms that can be selected via the display
+at the front panel.
+<br />
+<br />
+By default, the device supports <span class="short" aria-label="NATO Standardization Agreement 4285 (waveform)" data-balloon-pos="up"><a href="../../../intel/nato/stanag/index.htm#s4285" class="short" >STANAG 4285</a></span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Multiple Adaptive HF Radio System">MAHRS</span>, MSK-LF,
+NARROW and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Military Standard">MILSTD</span>. Other waveforms may be added by updating the firmware,
+or by soft-loading them, or by instal&#173;ling an expansion card with
+two additional <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>s.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304292/002/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="ETM-1810/M">
+<a href="img/304292/002/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="ETM-1810/M">
+            <img src="img/304292/002/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="ETM-1810/M"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The device can be
+<a href="cmd.htm"><span data-balloon-pos="up" aria-label="More about: controlled from a special ...">controlled from a special communication processor or a regular computer</span></a>
+(<span class="short tooltip-red" data-balloon-pos="up" aria-label="Personal Computer">PC</span>). The German Army (Bundeswehr) commonly used the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Multiple Adaptive HF Radio System">MAHRS</span> waveform, which
+is a special variant of <span class="short" aria-label="NATO Standardization Agreement 4285 (waveform)" data-balloon-pos="up"><a href="../../../intel/nato/stanag/index.htm#s4285" class="short" >STANAG 4285</a></span> with <span class="short tooltip-red" data-balloon-pos="up" aria-label="Quadrature Phase-Shift Keying">QPSK</span>
+in the upper sideband (USB) and suppressed carrier (J2D).
+Data trans&shy;missions
+generally took place in 3.2 sec frames at a speed of 2400 baud.
+In such cases it was used with the ARCOTEL ACT-1810 radio processor,
+as part of <span class="short tooltip-red" data-balloon-pos="up" aria-label="Fast Adaptive HF Radio Communication System">FARCOS</span> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Multiple Adaptive HF Radio System">MAHRS</span> radio systems.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/etm1810m_setup_act.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+It is known that ECHOTEL modems were also used
+with a number of Cold War radio systems, including the
+<a href="../../hf7000/index.htm"><span data-balloon-pos="up" aria-label="More about: HF-7000 special forces radio system">HF-7000 special forces radio system</span></a>,
+and as part of the base station of the pan-European
+<a href="../../../spy/fs5000/index.htm"><span data-balloon-pos="up" aria-label="More about: stay-behind radio system FS-5000 ...">stay-behind radio system FS-5000 (HARPOON)</span></a>.
+At the time of its introduction, the ETM-1810/M was available
+for a price of EUR 47,550.
+It was succeeded by the <a href="../etm1820"><span data-balloon-pos="up" aria-label="More about: ETM-1820/M">ETM-1820/M</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="cmd.htm">Control protocol</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Due to company takeovers, the ETM-1810 was also sold under the names
+  AEG, Telefunken System Technik (TST), DASA, EADS, Racoms, EADS Racoms,
+  Daimler Benz Aerospace and Telefunken Racoms.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="ETM-1810/M">          <img src="img/304292/002/thumbnail.jpg"
+           alt="ETM-1810/M"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304292/002"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="ETM-1810/M front panel">          <img src="img/304292/006/thumbnail.jpg"
+           alt="ETM-1810/M front panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304292/006"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="ETM-1810 rear panel">          <img src="img/304292/007/thumbnail.jpg"
+           alt="ETM-1810 rear panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304292/007"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 3</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304292/002/full.jpg" alt="ETM-1810/M">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 3</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304292/006/full.jpg" alt="ETM-1810/M front panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 3</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304292/007/full.jpg" alt="ETM-1810 rear panel">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=features></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the front panel of the ETM-1810/M. It has 6 buttons, 4 <span class="short tooltip-red" data-balloon-pos="up" aria-label="Light Emitting Diode">LED</span>
+indicators, and a 2 &#215; 16 character <span class="short tooltip-red" data-balloon-pos="up" aria-label="Liqid Crystal Display">LCD</span> display.
+On power up, the device shows the version number of the firmware, and then
+performs a self-test (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Built-In Test Equipment">BITE</span>). Once the test has completed (GO),
+the device is ready for use.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304292/006/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304292/006/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/etm1810m_front.png"
+             style="
+            "
+             align="center"
+             width="548px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The device can be configured via the display in combination with the
+four push-buttons to its right. It is possible to select the desired waveform
+(communication standard or protocol) along with many of its parameters. It is also
+possible to set the baudrate and data format of the RS232 ports at the rear.
+Note that the front panel can be grey (as shown here), cream or olive green.
+<br />
+<br />
+The rear panel is shown in the image below.
+It has three D-sub sockets, marked X1, X2 and X3.
+The <a href="#conn_x1"><span data-balloon-pos="up" aria-label="Jump to: leftmost one (X1)">leftmost one (X1)</span></a>
+is a configurable (a)synchronous serial port which carries the decoded
+data from the receiver, and the data to the transmitter.
+It can be connected to a computer.
+The radio itself is connected to the <a href="#conn_x3"><span data-balloon-pos="up" aria-label="Jump to: rightmost connector (X3)">rightmost connector (X3)</span></a>.
+The <a href="#conn_x2"><span data-balloon-pos="up" aria-label="Jump to: middle connector (X2)">middle connector (X2)</span></a> carries a standard serial RS232 port that
+can be used to <a href="cmd.htm"><span data-balloon-pos="up" aria-label="More about: control the modem">control the modem</span></a>, independently from the data port.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304292/007/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304292/007/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/etm1810m_rear.png"
+             style="
+            "
+             align="center"
+             width="532px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+To the right of the D-sub sockets is a small ground connector (X4), which can
+be used to properly ground the unit. It can be a banana-type socket or a screw
+terminal. At the far right is the <a href="#conn_mains"><span data-balloon-pos="up" aria-label="Jump to: mains power receptacle (X5)">mains power receptacle (X5)</span></a>,
+with built in 2.5A fuse and mains filter.
+Note that on some versions X5 is omit&shy;ted, in which case
+it is replaced by a <a href="#conn_dc"><span data-balloon-pos="up" aria-label="Jump to: 3-pin XLR male receptacle">3-pin XLR male receptacle</span></a>
+that accepts 18-32V/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current (battery)">DC</span>.
+Be&shy;low is an overview of the versions we've recorded so far, with the firmware
+version (when known):
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=ver></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Versions
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+<li><font color=#F52E00>ETM-1810</font><br />
+This is the <b>single-waveform</b> version. It can only be controlled remotely
+from an ARCOTEL ACT-1810 radio processor using a proprietary protocol.
+It has no front panel controls, other than the ON/OFF and TEST buttons.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="index.htm">More</a>
+            <p />
+<li><font color=#F52E00>ETM-1810/M</font><br />
+This is a full redesigned version of the modem, developed around 1998, that
+supports <b>multiple waveforms</b>.
+It has a front panel with a 2-line <span class="short tooltip-red" data-balloon-pos="up" aria-label="Liqid Crystal Display">LCD</span> display and additional push-buttons,
+and can be controlled from the front panel as well as via the
+<a href="#conn_x2">CONTROL interface</a> at the rear using a
+<a href="cmd.htm">simple protocol</a>.
+A typical firmware version number for this variant is <b><div style="display:inline-block; font-family:monospace; font-size:14px;">M9IQ</div></b>.
+One of the devices in our collection is of this type.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="#int_1810m">Look inside</a>
+            <p />
+<li><font color=#F52E00>ETM-1810/M-A</font><br />
+This is an enhanced version of the ETM-1810/M above. It is fully
+compatible, but has an extra <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> with two additional <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>s,
+that provides additional waveforms such as <span class="short tooltip-red" data-balloon-pos="up" aria-label="Independent Side Band">ISB</span> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Multi Frequency Shift Keying">MFSK</span> (4-<span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span>).
+Typical firmware version numbers found in this version are
+<b><div style="display:inline-block; font-family:monospace; font-size:14px;">JET</div></b> and <b><div style="display:inline-block; font-family:monospace; font-size:14px;">7JO</div></b>.
+The device featured here is of this type.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="#int_1810ma">Look inside</a>
+          </ul>
+        </font></td></tr></table>
+        <a name=diff></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Differences with the ETM-1810
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Compared to the ETM-1810, the ETM-1810/M exhibits the following differences:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Liqid Crystal Display">LCD</span> display with associated controls            <li>Multiple waveforms (instead of just <span class="short tooltip-red" data-balloon-pos="up" aria-label="Multiple Adaptive HF Radio System">MAHRS</span>)            <li>Complete hardware redesign (single board)            <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Industry Standard Architecture">ISA</span> bus connector            <li>Three <span class="short tooltip-red" data-balloon-pos="up" aria-label="Texas Instruments (USA)">TI</span> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>s instead of two Motorola <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>s            <li>Motorola microcontroller instead of <span class="short tooltip-red" data-balloon-pos="up" aria-label="Texas Instruments (USA)">TI</span> TMS320 <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>            <li><a href="cmd.htm">Simplified CONTROL protocol</a>            <li>Socket for expansion card (with two additional <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>s)            <li>More advanced <span class="short tooltip-red" data-balloon-pos="up" aria-label="Built-In Test Equipment">BITE</span>            <li>Single internal power connector            <li>Higher baudrates          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Extra in ETM-1810/M-A
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>Extension board with two additional <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>s            <li>Firmware in <span class="short tooltip-red" data-balloon-pos="up" aria-label="Electrically Erasable Programmable Read-Only Memory" data-balloon-length="large">EEPROM</span> (upgradable)            <li>Support for 2 channels (in/out) (e.g. <span class="short tooltip-red" data-balloon-pos="up" aria-label="Independent Side Band">ISB</span>)            <li>Soft-loadable waveforms          </ul>
+</font></td></tr></table>        <a name=wf></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Waveforms
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+All ETM-1810/M versions support at least these waveforms:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../../../intel/nato/stanag/index.htm#s4285">4285-C</a>            <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span>            <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Multiple Adaptive HF Radio System">MAHRS</span>            <li>MSK-LF          </ul>
+</font>        </td><td width="50%"
+         valign="top"
+        >
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li>NARROW          <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Military Standard">MILSTD</span>          <li><a href="../../../intel/nato/stanag/index.htm#s4285">4285-U</a>        </ul>
+</font></td></tr></table>      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<a href="cmd.htm#wfver"><span data-balloon-pos="up" aria-label="More about: Additional waveforms">Additional waveforms</span></a> can be added by replacing the firmware (in <span class="short tooltip-red" data-balloon-pos="up" aria-label="Erasable Programmable Read-Only Memory">EPROM</span>)
+or by adding an optio&shy;nal extension board with two additional <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>s.
+The firmware of the extension board is stored in two onboard <span class="short tooltip-red" data-balloon-pos="up" aria-label="Electrically Erasable Programmable Read-Only Memory" data-balloon-length="large">EEPROM</span>s,
+and can be updated by means of special software (not available).
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="cmd.htm#wfver">Waveforms per version</a>
+<br />
+<br />
+        </font>
+        </td></tr>
+      </table>
+<br />      <a name=rem></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Remote control
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The ETM-1810/M can be controlled remotely via the
+<a href="#conn_x2"><span data-balloon-pos="up" aria-label="Jump to: CONTROL port (X2) at the rear">CONTROL port (X2) at the rear</span></a>. This is a regular RS232 serial port
+that can be connected to a personal computer (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Personal Computer">PC</span>). Unfortunately,
+<a href="../../../manuf/telefunken"><span data-balloon-pos="up" aria-label="More about: Telefunken">Telefunken</span></a> has never published the control protocol,
+and according to former Telefunken personnel, it is pro&shy;prietary and difficult
+to understand <a href="#ref_5">[5]</a>. Luckily, with help from an anonymous contributor, we've been able
+to unlock the CONTROL port and most of the protocol (2025) <a href="#ref_4">[4]</a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="cmd.htm">ETM-1810/M control protocol</a>
+<br />
+<br />
+        </font>
+        </td></tr>
+      </table>
+<br />      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Related equipment
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The following equipment is known to be associated with ECHOTEL:
+        </font>
+        </td></tr>
+      </table>
+<br />      <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+      <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+        <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        <tr>
+        <td align=center valign=top>
+        <a href=../../../df/telefunken/e1800/index.htm>
+<div  data-balloon-pos="up" aria-label="High-end VLF-HF receiver">        <img src="../../../df/telefunken/e1800/img/304305/124/thumbnail.jpg"
+         alt="High-end VLF-HF receiver"
+         border="0" width=74 height=50
+         style="
+         max-width: 618px;
+        "
+         /></div>
+        </a>
+        <div style="padding-top: 4px;">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../df/telefunken/e1800/index.htm>E-1800</a></font>
+        </div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+        <a href=../etm1820>
+<div  data-balloon-pos="up" aria-label="Successor to the ETM-1810/M">        <img src="img/304292/002/thumbnail.jpg"
+         alt="Successor to the ETM-1810/M"
+         border="0" width=74 height=50
+         style="
+         max-width: 618px;
+        "
+         /></div>
+        </a>
+        <div style="padding-top: 4px;">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../etm1820>ETM-1820 /M</a></font>
+        </div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+        <a href=../../../crypto/tst/4045/index.htm>
+<div  data-balloon-pos="up" aria-label="HF modem with integrated voice encryption, made by TeleSecurity Timmann" data-balloon-length="large">        <img src="../../../crypto/tst/4045/img/301959/050/thumbnail.jpg"
+         alt="HF modem with integrated voice encryption, made by TeleSecurity Timmann"
+         border="0" width=74 height=50
+         style="
+         max-width: 618px;
+        "
+         /></div>
+        </a>
+        <div style="padding-top: 4px;">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../crypto/tst/4045/index.htm>TST-4045</a></font>
+        </div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+        <a href=../../../spy/fs5000>
+<div  data-balloon-pos="up" aria-label="HARPOON stay-behind communication system">        <img src="../../../spy/fs5000/img/300436/030/thumbnail.jpg"
+         alt="HARPOON stay-behind communication system"
+         border="0" width=74 height=50
+         style="
+         max-width: 618px;
+        "
+         /></div>
+        </a>
+        <div style="padding-top: 4px;">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../../spy/fs5000>FS-5000 HARPOON</a></font>
+        </div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+        <a href=../../hf7000>
+<div  data-balloon-pos="up" aria-label="Military communication system">        <img src="../../../crypto/ant/tcu7000/img/304223/024/thumbnail.jpg"
+         alt="Military communication system"
+         border="0" width=74 height=50
+         style="
+         max-width: 618px;
+        "
+         /></div>
+        </a>
+        <div style="padding-top: 4px;">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../hf7000>HF-7000</a></font>
+        </div>
+        </td>
+        </tr>
+        <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+      </table>
+      <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>      <a name=int></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Interior</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The ETM-1810 is housed in a 19" 1U rackmountable enclosure. Its interior can be
+accessed from the top, by removing five recessed screws from the top panel and
+lifting the top panel upwards. Note that the top panel is tightly fitted at
+the sides by means of two rows of <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span>-shielding contact strips.
+The basic unit contains a single <span class="short tooltip-red" data-balloon-pos="up" aria-label="Industry Standard Architecture">ISA</span>-bus board, with three Texas Instruments
+(<span class="short tooltip-red" data-balloon-pos="up" aria-label="Texas Instruments (USA)">TI</span>) TMS320 <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>s, plus a Moto&shy;rola MC69302 microcontroller.
+The firmware is held in two <span class="short tooltip-red" data-balloon-pos="up" aria-label="Erasable Programmable Read-Only Memory">EPROM</span>s.
+<br />
+<br />
+Around 2002, an extra <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> was developed which can optionally be fitted
+on top of the existing <span class="short tooltip-red" data-balloon-pos="up" aria-label="Industry Standard Architecture">ISA</span>-bus card. It holds two additional <span class="short tooltip-red" data-balloon-pos="up" aria-label="Texas Instruments (USA)">TI</span> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>s
+with support for additional waveforms like <span class="short tooltip-red" data-balloon-pos="up" aria-label="Independent Side Band">ISB</span>. The firmware on the extra
+board is held in two <span class="short tooltip-red" data-balloon-pos="up" aria-label="Electrically Erasable Programmable Read-Only Memory" data-balloon-length="large">EEPROM</span>s
+Below are some examples.
+        </font>
+        </td></tr>
+      </table>
+<br />      <a name=int_1810m></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        ETM-1810/M
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image below shows the interior of the ETM-1810/M from our collection,
+which is clearly much newer that the
+<a href="index.htm#int"><span data-balloon-pos="up" aria-label="More about: interior of the earlier ETM-1810">interior of the earlier ETM-1810</span></a>.
+According to the date codes on the com&#173;po&#173;nents, it was built
+around 1999 and appears to be a complete redesign, that replaces both of
+the earlier boards. It holds <a href="img/304292/019/full.jpg"><span data-balloon-pos="up" aria-label="More about: three TMS320C31">three TMS320C31</span></a>
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>s, a separate
+<a href="img/304292/022/full.jpg"><span data-balloon-pos="up" aria-label="More about: Motorola MC69302 mi...">Motorola MC69302 micro&shy;controller</span></a>
+and two Lattice ispLSI Complex Programmable Logic Devices (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Complex Programmable Logic Device">CPLD</span>s)
+with glue logic.
+<br />
+        <br />
+        <table 
+         border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304292/012/full.jpg">          <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304292/012/full.jpg">          <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+          <img src="img/etm1810m_int.png"
+           style="
+          "
+           align="center"
+           width="618px"
+           vspace="4"
+           alt="Click to see more"
+           border=0
+           />
+          </div>
+          </a>
+          </td></tr><tr><td align=center>
+        </td></tr></table>
+<br />
+The main board also holds a reference oscillator in the form of a
+<a href="img/304292/023/full.jpg"><span data-balloon-pos="up" aria-label="More about: 10.368 MHz Temperat...">10.368 MHz Temperature-Com&shy;pensated Crystal Oscillator (TCXO)</span></a>.
+Note the <a href="img/304292/024/full.jpg"><span data-balloon-pos="up" aria-label="More about: gold-plated card contacts">gold-plated card contacts</span></a>
+at the side of the board, which allows the board to be fitted to the
+card edge connector (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Industry Standard Architecture">ISA</span>-bus) of a contemporary <span class="short tooltip-red" data-balloon-pos="up" aria-label="Personal Computer">PC</span>.
+Also note the <a href="img/304292/024/full.jpg"><span data-balloon-pos="up" aria-label="More about: four shorting jumpers">four shorting jumpers</span></a>
+in the expansion connector, which must be present.
+These jumpers are removed when the <a href="#int_1801ma"><span data-balloon-pos="up" aria-label="Jump to: expansion DSP board">expansion DSP board</span></a>
+is installed on top of the main board.
+        </font>
+        </td></tr>
+      </table>
+<br /><div style="position: relative;">      <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+      <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+        <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        <tr>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PSU">        <img src="img/304292/018/thumbnail.jpg"
+         alt="PSU"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304292/018"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior - rear angle view">        <img src="img/304292/012/thumbnail.jpg"
+         alt="Interior - rear angle view"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 2);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304292/012"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior - front angle view">        <img src="img/304292/013/thumbnail.jpg"
+         alt="Interior - front angle view"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 3);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304292/013"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Main PCB">        <img src="img/304292/014/thumbnail.jpg"
+         alt="Main PCB"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 4);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304292/014"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Main PCB">        <img src="img/304292/015/thumbnail.jpg"
+         alt="Main PCB"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 5);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304292/015"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Main board">        <img src="img/304291/015/thumbnail.jpg"
+         alt="Main board"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 6);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304291/015"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="DSP 1">        <img src="img/304292/019/thumbnail.jpg"
+         alt="DSP 1"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 7);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304292/019"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="DSP 2">        <img src="img/304292/020/thumbnail.jpg"
+         alt="DSP 2"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 8);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304292/020"
+         /></div>
+        </td>
+        </tr>
+      </table>
+      <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+        <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        <tr>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="DSP 3">        <img src="img/304292/021/thumbnail.jpg"
+         alt="DSP 3"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 9);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304292/021"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Motorola MC68302 CPU and glue logic">        <img src="img/304292/022/thumbnail.jpg"
+         alt="Motorola MC68302 CPU and glue logic"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 10);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304292/022"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="10.368 MHz TXCO">        <img src="img/304292/023/thumbnail.jpg"
+         alt="10.368 MHz TXCO"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 11);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304292/023"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Card edge connector">        <img src="img/304292/024/thumbnail.jpg"
+         alt="Card edge connector"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 12);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304292/024"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Transformer">        <img src="img/304292/026/thumbnail.jpg"
+         alt="Transformer"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 13);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304292/026"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel PCB">        <img src="img/304292/025/thumbnail.jpg"
+         alt="Front panel PCB"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 14);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304292/025"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel">        <img src="img/304291/021/thumbnail.jpg"
+         alt="Front panel"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 15);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304291/021"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel board connected to main board">        <img src="img/304291/020/thumbnail.jpg"
+         alt="Front panel board connected to main board"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 16);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304291/020"
+         /></div>
+        </td>
+        </tr>
+        <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+      </table>
+      <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'B'" onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">B</span></div></div><div style="height: 40px;"></div>
+<div id="slide_2" class="slide" onClick="slideClose('slide_2')"><span class="slide_close_left" onClick="slideClose('slide_2')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_2', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 1 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304292/018/full.jpg" alt="PSU">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 2 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304292/012/full.jpg" alt="Interior - rear angle view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 3 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304292/013/full.jpg" alt="Interior - front angle view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 4 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304292/014/full.jpg" alt="Main PCB">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 5 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304292/015/full.jpg" alt="Main PCB">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 6 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304291/015/full.jpg" alt="Main board">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 7 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304292/019/full.jpg" alt="DSP 1">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 8 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304292/020/full.jpg" alt="DSP 2">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 9 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304292/021/full.jpg" alt="DSP 3">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 10 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304292/022/full.jpg" alt="Motorola MC68302 CPU and glue logic">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 11 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304292/023/full.jpg" alt="10.368 MHz TXCO">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 12 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304292/024/full.jpg" alt="Card edge connector">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 13 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304292/026/full.jpg" alt="Transformer">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 14 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304292/025/full.jpg" alt="Front panel PCB">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 15 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304291/021/full.jpg" alt="Front panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 16 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304291/020/full.jpg" alt="Front panel board connected to main board">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_2', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_2', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+      <a name=int_1810ma></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        ETM-1810/M-A
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image below shows the interior of the ETM-1810/M/1-A from our collection,
+which appears to be an enhanced version of the
+<a href="#int_1810m"><span data-balloon-pos="up" aria-label="Jump to: ETM-1810/M shown above">ETM-1810/M shown above</span></a>.
+The interior is identical to the ETM-1810/M, but an
+<a href="img/304291/016/full.jpg"><span data-balloon-pos="up" aria-label="More about: extra PCB">extra PCB</span></a> <font color=#F52E00>(3)</font> is fitted on top of the
+<a href="img/302845/015/full.jpg"><span data-balloon-pos="up" aria-label="More about: main board">main board</span></a> <font color=#F52E00>(1)</font>. It holds two additional
+Texas Instru&shy;ments <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>s. Furthermore, the main power connector
+is routed via the <a href="img/304291/013/full.jpg"><span data-balloon-pos="up" aria-label="More about: expansion board">expansion board</span></a> <font color=#F52E00>(3)</font>.
+<br />
+        <br />
+        <table 
+         border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304291/009/full.jpg">          <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304291/009/full.jpg">          <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+          <img src="img/etm1810ma_int.png"
+           style="
+          "
+           align="center"
+           width="618px"
+           vspace="4"
+           alt="Click to see more"
+           border=0
+           />
+          </div>
+          </a>
+          </td></tr><tr><td align=center>
+        </td></tr></table>
+<br />
+The expansion board is connected to the main board by means of two
+connectors: (1) the large expansion connector at the centre, and (2) a
+<a href="img/304291/013/full.jpg"><span data-balloon-pos="up" aria-label="More about: 20-wire ribbon cable close to the ...">20-wire ribbon cable close to the rear edge of the PCB</span></a>.
+At the <a href="img/304291/017/full.jpg"><span data-balloon-pos="up" aria-label="More about: bottom of this board">bottom of this board</span></a>
+are four additional audio transformers.
+According to the date codes on the components, the expansion board was
+made around 2002.
+The image above also shows the <a href="img/304291/020/full.jpg"><span data-balloon-pos="up" aria-label="More about: front panel PCB">front panel PCB</span></a>
+with the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Liqid Crystal Display">LCD</span> display at the far end.
+It is <a href="img/304291/020/full.jpg"><span data-balloon-pos="up" aria-label="More about: connected to the main board">connected to the main board</span></a>.
+        </font>
+        </td></tr>
+      </table>
+<br /><div style="position: relative;">      <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+      <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+        <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        <tr>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="ETM-1810/M1-A interior">        <img src="img/304291/002/thumbnail.jpg"
+         alt="ETM-1810/M1-A interior"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304291/002"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="ETM-1810/M1-A interior">        <img src="img/304291/003/thumbnail.jpg"
+         alt="ETM-1810/M1-A interior"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 2);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304291/003"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="ETM-1810/M1-A interior">        <img src="img/304291/009/thumbnail.jpg"
+         alt="ETM-1810/M1-A interior"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 3);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304291/009"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="ETM-1810/M1-A interior">        <img src="img/304291/022/thumbnail.jpg"
+         alt="ETM-1810/M1-A interior"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 4);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304291/022"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Two sandwiched boards">        <img src="img/304291/012/thumbnail.jpg"
+         alt="Two sandwiched boards"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 5);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304291/012"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Main board">        <img src="img/304291/015/thumbnail.jpg"
+         alt="Main board"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 6);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304291/015"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Expansion board tilted over">        <img src="img/304291/014/thumbnail.jpg"
+         alt="Expansion board tilted over"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 7);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304291/014"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="20-wire connection between expansion board and main board" data-balloon-length="large">        <img src="img/304291/013/thumbnail.jpg"
+         alt="20-wire connection between expansion board and main board"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 8);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304291/013"
+         /></div>
+        </td>
+        </tr>
+      </table>
+      <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+        <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        <tr>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Transformer and connector at the bottom of the expansion board" data-balloon-length="large">        <img src="img/304291/019/thumbnail.jpg"
+         alt="Transformer and connector at the bottom of the expansion board"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 9);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304291/019"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Expansion board - top side">        <img src="img/304291/016/thumbnail.jpg"
+         alt="Expansion board - top side"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 10);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304291/016"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Expansion board - bottom side">        <img src="img/304291/017/thumbnail.jpg"
+         alt="Expansion board - bottom side"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 11);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304291/017"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="DSPs">        <img src="img/304291/008/thumbnail.jpg"
+         alt="DSPs"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 12);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304291/008"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Cut-outs for the wiring">        <img src="img/304291/006/thumbnail.jpg"
+         alt="Cut-outs for the wiring"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 13);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304291/006"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel PCB">        <img src="img/304292/025/thumbnail.jpg"
+         alt="Front panel PCB"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 14);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304292/025"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel">        <img src="img/304291/021/thumbnail.jpg"
+         alt="Front panel"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 15);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304291/021"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel board connected to main board">        <img src="img/304291/020/thumbnail.jpg"
+         alt="Front panel board connected to main board"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 16);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 304291/020"
+         /></div>
+        </td>
+        </tr>
+        <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+      </table>
+      <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'C'" onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">C</span></div></div><div style="height: 40px;"></div>
+<div id="slide_3" class="slide" onClick="slideClose('slide_3')"><span class="slide_close_left" onClick="slideClose('slide_3')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_3', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 1 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304291/002/full.jpg" alt="ETM-1810/M1-A interior">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 2 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304291/003/full.jpg" alt="ETM-1810/M1-A interior">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 3 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304291/009/full.jpg" alt="ETM-1810/M1-A interior">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 4 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304291/022/full.jpg" alt="ETM-1810/M1-A interior">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 5 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304291/012/full.jpg" alt="Two sandwiched boards">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 6 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304291/015/full.jpg" alt="Main board">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 7 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304291/014/full.jpg" alt="Expansion board tilted over">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 8 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304291/013/full.jpg" alt="20-wire connection between expansion board and main board">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 9 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304291/019/full.jpg" alt="Transformer and connector at the bottom of the expansion board">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 10 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304291/016/full.jpg" alt="Expansion board - top side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 11 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304291/017/full.jpg" alt="Expansion board - bottom side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 12 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304291/008/full.jpg" alt="DSPs">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 13 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304291/006/full.jpg" alt="Cut-outs for the wiring">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 14 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304292/025/full.jpg" alt="Front panel PCB">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 15 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304291/021/full.jpg" alt="Front panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 16 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304291/020/full.jpg" alt="Front panel board connected to main board">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_3', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_3', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+      <a name=conn></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Connections</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <a name=conn_x1></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Data 
+        &nbsp;<font color="#CCC">
+        X1
+        </font>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The DATA port (X1) is a bidirectional modem port. It allows data to and from a
+computer to be passed to and from the radio. It is a standard asynchronous
+RS232 (V.24) serial port, for which a regular <b>DB25/M to DE9/F</b> cable can
+be used. Note that the baudrate and the data format are different for each
+waveform. For example: the default setting for <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span> is 50 baud 5N3
+(3 means 1.5 stop-bit).
+The default setting for <span class="short tooltip-red" data-balloon-pos="up" aria-label="Standardization Agreement (NATO)">STANAG</span> is 38400 baud 8N1.
+Switching from <span class="short tooltip-red" data-balloon-pos="up" aria-label="Reception">RX</span> to <span class="short tooltip-red" data-balloon-pos="up" aria-label="Transmission">TX</span> can be done by raising the RTS/DTS lines.
+This will activate the TX indicator at the front panel.
+<br />
+<br />
+Below is the pinout of the DB25 socket (X1) when looking into it. The
+first column of the table below holds the pin number of the
+<a href="../../../ref/conn/dsub/index.htm#db25"><span data-balloon-pos="up" aria-label="More about: DB25 connector">DB25 connector</span></a>.
+The second column shows the corresponding pin on the
+<a href="../../../ref/conn/dsub/index.htm#de9"><span data-balloon-pos="up" aria-label="More about: DE9 connector">DE9 connector</span></a>
+at the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Personal Computer">PC</span>-side.
+        </font>
+        </td></tr>
+      </table>
+<br />      <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+      <table width=100% cellspacing=0 cellpadding=0>
+        <tr>
+        <td width=100%>
+        <table
+         class="table"
+         width=100% border=0 cellspacing=0 cellpadding=1 bgcolor=#FFFFFF>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>X1</font></td></b><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>DE9</font></td></b><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Name</font></td></b><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Description</font></td></b>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>TXD</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Transmitted data</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>RXD</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Received data</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>4</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>7</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>RTS</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Request To Send</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>5</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>8</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>CTS</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Clear To Send</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>6</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>6</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>DSR</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Data Set Ready</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>7</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>5</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>GND</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Ground</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>8</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>DCD</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Data Carrier Detect</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>20</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>4</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>DTR</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Data Terminal Ready</font></td>          </tr>
+        </table>
+<div style="height: 20px;"></div>      </td>
+      <td align="right" valign="top">
+<div  data-balloon-pos="up" aria-label="Pinout of the DB-25 socket (CONTROL) when looking into the socket" data-balloon-length="large">      <img style=" width: ;" src="../../../ref/conn/dsub/svg/DB25_F.svg"
+      >
+      </td>
+      </tr></table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        </td></tr>
+      </table>
+<br />      <div style="background-color: #EEEEEE; font-size: 8pt; padding: 12px; color: #777777; overflow: auto;">
+<font color=#F52E00>USB dongles &mdash;</font>
+An RS232-to-USB dongle may be needed for connection to a modern <span class="short tooltip-red" data-balloon-pos="up" aria-label="Personal Computer">PC</span>,
+but it should be noted that not all dongles support all baudrates. Furthermore,
+the dongle may not support all control lines (DCD, CTS, DTR) and handshake options.
+For proper operation of the ETM-1810, all baudrates, control lines and handshake
+options are needed. Cheap dongles should be avoided.
+      </div>
+      <div class="clear_float"></div>
+<div style="height: 20px;"></div>      <a name=conn_x2></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Control 
+        &nbsp;<font color="#CCC">
+        X2
+        </font>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The modem can be <a href="cmd.htm"><span data-balloon-pos="up" aria-label="More about: controlled from a regular PC">controlled from a regular PC</span></a>, using the CONTROL port
+(X2). This is a regular RS232 (V.24) asynchronous serial port, for which a
+standard <b>DB25/M-to-DE9/F</b> cable can be used.
+By default, the speed for this port is set at <b>19200 baud 8N1</b>,
+but this can be changed via the front panel settings.
+Below is the pinout of the DB25 socket (X2) when looking into it. The
+first column of the table below holds the pin number of the
+<a href="../../../ref/conn/dsub/index.htm#db25"><span data-balloon-pos="up" aria-label="More about: DB25 connector">DB25 connector</span></a>.
+The second column shows the corresponding pin on the
+<a href="../../../ref/conn/dsub/index.htm#de9"><span data-balloon-pos="up" aria-label="More about: DE9 connector">DE9 connector</span></a>
+at the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Personal Computer">PC</span>-side.
+        </font>
+        </td></tr>
+      </table>
+<br />      <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+      <table width=100% cellspacing=0 cellpadding=0>
+        <tr>
+        <td width=100%>
+        <table
+         class="table"
+         width=100% border=0 cellspacing=0 cellpadding=1 bgcolor=#FFFFFF>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>X2</font></td></b><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>DE9</font></td></b><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Name</font></td></b><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Description</font></td></b>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>TXD</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Transmitted data</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>RXD</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Received data</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>4</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>7</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>RTS</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Request To Send</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>5</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>8</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>CTS</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Clear To Send</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>6</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>6</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>DSR</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Data Set Ready</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>7</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>5</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>GND</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Ground</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>8</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>DCD</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Data Carrier Detect</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>20</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>4</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>DTR</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Data Terminal Ready</font></td>          </tr>
+        </table>
+<div style="height: 20px;"></div>      </td>
+      <td align="right" valign="top">
+<div  data-balloon-pos="up" aria-label="Pinout of the DB-25 socket (CONTROL) when looking into the socket" data-balloon-length="large">      <img style=" width: ;" src="../../../ref/conn/dsub/svg/DB25_F.svg"
+      >
+      </td>
+      </tr></table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+Local control of the device (via the front panel buttons) can be disabled by
+raising the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Data Terminal Ready">DTR</span> line. This will activate the REMOTE indicator <div class="legend" style="background: #888; width: 20px; color: white;">R</div>
+in the upper left corner of the display. Any attempt to use the front panel
+buttons, will now result in the message: <div style="display:inline-block; font-family:monospace; font-size:14px; color: red;">Remote control keys disabled</div>.
+The front panel can be re-enabled by dropping the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Data Terminal Ready">DTR</span> line again.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="cmd.htm">ETM-1810/M control protocol</a>
+<br />
+<br />
+        </font>
+        </td></tr>
+      </table>
+<br />      <a name=conn_x3></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Radio 
+        &nbsp;<font color="#CCC">
+        X3
+        </font>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <a href="../../../ref/conn/dsub/index.htm#da15"><span data-balloon-pos="up" aria-label="More about: DA-15 socket">DA-15 socket</span></a> marked RADIO (X3)
+is for connection of the ETM-1810 to a receiver or a trans&shy;ceiver.
+Below is the pinout when looking into the socket,
+as far as it is currently known.
+<b>X3</b> is the connector at the rear. <b>X152</b> is the internal connector with the
+ribbon cable.
+Note that this in&shy;for&shy;mation is obtained by
+reverse engineering the device <a href="#ref_4">[4]</a>. Consequently, there may be mistakes or
+omissions. If you find any errors or have additional remarks,
+<a href="mailto:info@cryptomuseum.com"><span data-balloon-pos="up" aria-label="Send e-mail to: info@cryptomuseum.com">please let us know</span></a>.
+        </font>
+        </td></tr>
+      </table>
+<br />      <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+      <table width=100% cellspacing=0 cellpadding=0>
+        <tr>
+        <td width=100%>
+        <table
+         class="table"
+         width=100% border=0 cellspacing=0 cellpadding=1 bgcolor=#FFFFFF>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>X3</font></td></b><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>X152</font></td></b><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Name</font></td></b><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Description</font></td></b>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>IN</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Audio from receiver (600&Omega;)</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>IN</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Audio from receiver (600&Omega;)</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>5</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>GND</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Ground</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>4</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>7</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>4.25V (PTT?)</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>5</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>to L4, 0|12V, possibly RS232 (DTR?)</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>6</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>11</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>to L8, -12V, possibly RS232 (TX or RTS?)</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>7</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>13</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>to L6, -12V, possibly RS232 (TX or RTS?)</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>8</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>15</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Transformers TR3 and TR4</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>9</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>GND</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Ground</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>10</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>4</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>OUT</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Audio to transmitter (600&Omega;)</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>11</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>6</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>OUT</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Audio to transmitter (600&Omega;)</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>12</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>8</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Transformer TR3</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>13</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>10</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Transformer TR2</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>14</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>12</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Transformer TR4</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="50" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>15</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>14</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="50"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Transformer TR2</font></td>          </tr>
+        </table>
+<div style="height: 20px;"></div>      </td>
+      <td align="right" valign="top">
+<div  data-balloon-pos="up" aria-label="Pinout of the DA-15 socket (RADIO) when looking into the socket" data-balloon-length="large">      <img style=" width: ;" src="../../../ref/conn/dsub/svg/DA15_F.svg"
+      >
+      </td>
+      </tr></table>
+      <a name=conn_x4></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Ground 
+        &nbsp;<font color="#CCC">
+        X4
+        </font>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+A regular 4 mm banana-type bus (X4) is available for grounding the
+device. Note that on some devices this may be a screw terminal.
+        </font>
+        </td></tr>
+      </table>
+<br />      <a name=conn_mains></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Mains power input 
+        &nbsp;<font color="#CCC">
+        X5
+        </font>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Devices with an <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current (mains)">AC</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current (battery)">DC</span>-type <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span> (ETM-1810/M/<font color=#F52E00>1</font>) can be powered
+from the 115 V or 230 V/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current (mains)">AC</span> mains, using a common Euro-style power cable.
+Below is the pinout when looking into the receptacle.
+        </font>
+        </td></tr>
+      </table>
+<br />      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td valign="">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ol>
+          <li><div style="display:inline-block; width:60px;">LIVE</div><div style="display:inline-block; width:60px;">In</div>115/230V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current (mains)">AC</span> 45-480 Hz <sup><font color="#FF8800">1</font></sup>          <li><div style="display:inline-block; width:60px;">LIVE</div><div style="display:inline-block; width:60px;">In</div>115/230V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current (mains)">AC</span> 45-480 Hz <sup><font color="#FF8800">1</font></sup>          <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div>Ground        </ol>
+        </font>
+        </td>
+        <td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ol>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="../../../ref/conn/mains/svg/iec60320_c14_sm.svg"
+             style="
+             max-width: 618px;
+            "
+             align="right"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+        </ol>
+</font></td></tr></table>      <a name=conn_dc></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        DC power input 
+        &nbsp;<font color="#CCC">
+        X5
+        </font>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Devices with a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current (battery)">DC</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current (battery)">DC</span>-type <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span> (ETM-1810/M/<font color=#F52E00>2</font>), can be powered by
+a 18 to 32V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current (battery)">DC</span> source, such as a 24V vehicle battery. The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current (battery)">DC</span> power should be
+connected to the <a href="../../../ref/conn/xlr/index.htm#power"><span data-balloon-pos="up" aria-label="More about: 3-pin male XLR receptacle">3-pin male XLR receptacle</span></a>
+at the rear (X5).
+Below is the pinout when looking into the receptacle. <sup><font color="#FF8800">1</font></sup>
+        </font>
+        </td></tr>
+      </table>
+<br />      <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+      <table width=100% cellspacing=0 cellpadding=0>
+        <tr>
+        <td width=100%>
+        <table
+         class="table"
+         width=100% border=0 cellspacing=0 cellpadding=1 bgcolor=#FFFFFF>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="32" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1.</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="50" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>(+)</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>red</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>+18 to 32V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current (battery)">DC</span> <sup><font color="#FF8800">2</font></sup></font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="32" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2.</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="50" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>(-)</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>blue</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>0V  <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current (battery)">DC</span></font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="right" valign="center" width="32" style=" padding-right: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3.</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="50" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>GND</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="100" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>yellow/green</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Ground</font></td>          </tr>
+        </table>
+<div style="height: 20px;"></div>      </td>
+      <td align="right" valign="top">
+      <img style=" width: ;" src="../../../ref/conn/xlr/svg/XLR3_M.svg"
+      >
+      </td>
+      </tr></table>
+      <table width="50" cellspacing="0" cellpadding="0"><tr>
+      <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+      </tr></table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr><td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+        <ol>
+        <li>
+Note that this pinout <font color=#F52E00>does not follow any existing convention.</font>
+  <font color="#E7E">&#10148;</font>&nbsp;<a href="../../../ref/conn/xlr/index.htm#power">More</a>
+        </li>
+        <li>
+The BM-3000 DC/DC converter can actually take 14-70V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current (battery)">DC</span>.
+        </ol>
+        </small></font></td></tr>
+      </table>
+<div style="height: 20px;"></div>      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Interconnection cables</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Cable from E-1800 to ETM-1810/M
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The table below describes how to connect the ETM-1810/M to a
+<a href="../../../df/telefunken/e1800"><span data-balloon-pos="up" aria-label="More about: Telefunken E-1800 receiver">Telefunken E-1800 receiver</span></a>.
+The table shows the wiring between the RADIO connector (X3) at the rear
+of the ETM-1810/M and the 6-pin 240&#176;  DIN socket (BU2) on the
+DE-1710/2 demodulator plug-in card of the
+<a href="../../../df/telefunken/e1800"><span data-balloon-pos="up" aria-label="More about: E-1800">E-1800</span></a>.
+The level can be adjusted with potentiometer R59, also on the DE-1710/2 plug-in.
+        </font>
+        </td></tr>
+      </table>
+<br />      <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+      <table width=100% cellspacing=0 cellpadding=0>
+        <tr>
+        <td width=100%>
+        <table
+         class="table"
+         width=100% border=0 cellspacing=1 cellpadding=2 bgcolor=#FFFFFF>
+          <tr>
+<td bgcolor="#E0E0E0" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>DE-1710 &#183; BU2</font></td><td bgcolor="#E0E0E0" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>RADIO (X3)</font></td>          <td bgcolor=#FFFFFF>&nbsp;</td>
+          <td bgcolor=#FFFFFF>&nbsp;</td>
+          </tr>
+          <tr>
+<td bgcolor="#E0E0E0" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>E-1800</font></td></b><td bgcolor="#E0E0E0" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>ETM-1810</font></td></b><td bgcolor="#E0E0E0" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Name</font></td></b><td bgcolor="#E0E0E0" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Description</font></td></b>          </tr>
+          <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>RX</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Audio in (600&Omega;)</font></td>          </tr>
+          <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>GND</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Ground (shield)</font></td>          </tr>
+          <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>RX</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Audio in  (600&Omega;)</font></td>          </tr>
+        </table>
+<div style="height: 20px;"></div>      </td>
+      </tr></table>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Cable from RX-1001 to ETM-1810/M
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When connecting the ETM-1810 to a Hagenuk RX-1001M receiver, use the following wiring:
+        </font>
+        </td></tr>
+      </table>
+<br />      <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+      <table width=100% cellspacing=0 cellpadding=0>
+        <tr>
+        <td width=100%>
+        <table
+         class="table"
+         width=100% border=0 cellspacing=1 cellpadding=2 bgcolor=#FFFFFF>
+          <tr>
+<td bgcolor="#E0E0E0" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>?</font></td><td bgcolor="#E0E0E0" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>RADIO (X3)</font></td>          <td bgcolor=#FFFFFF>&nbsp;</td>
+          <td bgcolor=#FFFFFF>&nbsp;</td>
+          </tr>
+          <tr>
+<td bgcolor="#E0E0E0" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>RX-1001M</font></td></b><td bgcolor="#E0E0E0" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>ETM-1810</font></td></b><td bgcolor="#E0E0E0" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Name</font></td></b><td bgcolor="#E0E0E0" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Description</font></td></b>          </tr>
+          <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>RX</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Audio in (600&Omega;)</font></td>          </tr>
+          <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>2</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>RX</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Audio in  (600&Omega;)</font></td>          </tr>
+          <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>6</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="100"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>3</font></td><td bgcolor="#F4F4F4" align="center" valign="center" width="60"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>GND</font></td><td bgcolor="#F4F4F4" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Ground (shield)</font></td>          </tr>
+        </table>
+<div style="height: 32px;"></div>      </td>
+      </tr></table>
+      <a name=spec></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Specifications</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td valign="">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li><div style="display:inline-block; width:100px;">Device</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="High Frequency (3-30 MHz)">HF</span> modem with <span class="short tooltip-red" data-balloon-pos="up" aria-label="Forward Error Correction">FEC</span> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Automatic Repeat Request">ARQ</span>          <li><div style="display:inline-block; width:100px;">Purpose</div>Reliable data communication via <a href="../../index.htm">HF radio</a>          <li><div style="display:inline-block; width:100px;">Model</div>ETM-1810/M <font color="#E7E">&#10148;</font>&nbsp;<a href="#brands">More</a>          <li><div style="display:inline-block; width:100px;">Family</div>ECHOTEL          <li><div style="display:inline-block; width:100px;">Manufacturer</div><a href="../../../manuf/telefunken">AEG Telefunken (TST)</a> <font color="#E7E">&#10148;</font>&nbsp;<a href="#brands">More</a>          <li><div style="display:inline-block; width:100px;">Year</div>1998          <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="National Stock Number (NATO Stock Number">NSN</span></div><font color="#E7E">&#10148;</font>&nbsp;<a href="#spec_nsn">see below</a>          <li><div style="display:inline-block; width:100px;">Predecessor</div><a href="../etm1800">ETM-1800</a>          <li><div style="display:inline-block; width:100px;">Successor</div><a href="../etm1820">ETM-1820/M</a>          <li><div style="display:inline-block; width:100px;">Firmware</div><font color="#E7E">&#10148;</font>&nbsp;<a href="cmd.htm#fw">More</a>          <li><div style="display:inline-block; width:100px;">Waveforms</div><font color="#E7E">&#10148;</font>&nbsp;<a href="#spec_wf">see below</a>          <li><div style="display:inline-block; width:100px;">Speed</div>75-19200 baud <font color="#E7E">&#10148;</font>&nbsp;<a href="#spec_int">More</a>          <li><div style="display:inline-block; width:100px;">Power</div>230V/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current (mains)">AC</span> or 18-32V/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current (battery)">DC</span> (typically: 24V) <sup><font color="#FF8800">1</font></sup>          <li><div style="display:inline-block; width:100px;">Dimensions</div>485 &#215; 465 &#215; 44 mm          <li><div style="display:inline-block; width:100px;">Weight</div>4019 g (4300 g with expansion card)          <li><div style="display:inline-block; width:100px;">Price</div>EUR 47,550 <sup><font color="#FF8800">2</font></sup>        </ul>
+</font></td></tr></table>      <table width="50" cellspacing="0" cellpadding="0"><tr>
+      <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+      </tr></table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr><td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+        <ol>
+        <li>
+Depending on model.
+        </li>
+        <li>
+Based on a VEBEG label attached to the device.
+        </ol>
+        </small></font></td></tr>
+      </table>
+<div style="height: 20px;"></div>      <a name=model></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Model numbers
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The diagram below shows how the model number is constructed.
+The basic model name is ETM-1810/M. The prefix identifies it as an
+ECHOTEL modem. The suffix '/M' shows that is supports multiple waveforms,
+in contrast to the <a href="index.htm"><span data-balloon-pos="up" aria-label="More about: ETM-1810">ETM-1810</span></a> which only supports <span class="short tooltip-red" data-balloon-pos="up" aria-label="Multiple Adaptive HF Radio System">MAHRS</span>.
+The next suffix tells us which type of <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span> is present. '/1' means
+that it has a 230V/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current (mains)">AC</span> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span>. '/2' means that it has a 18-32V/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current (battery)">DC</span>
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span>. The extension '/A' is only present when the additional
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span> board is fitted.
+<br />
+        <br />
+        <table 
+         border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+          <div style="position: relative;">
+          <div style="position: relative;">
+          <img src="svg/etm1810m_model.svg"
+           style="
+           max-width: 618px;
+          "
+           align="center"
+           vspace="4"
+           border=0
+          
+           />
+          </div>
+          </td></tr><tr><td align=center>
+        </td></tr></table>
+<br />
+        </font>
+        </td></tr>
+      </table>
+<br />      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        National Stock Numbers 
+        &nbsp;<font color="#CCC">
+        NSN
+        </font>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td valign="">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li><div style="display:inline-block; width:150px;">ETM-1810/M/1</div><div style="display:inline-block; width:150px;">5895-12-337-6401</div>230V/AC PSU          <li><div style="display:inline-block; width:150px;">ETM-1810/M/1-A</div><div style="display:inline-block; width:150px;">5895-12-357-2825</div>230V/AC PSU, extra DSP board          <li><div style="display:inline-block; width:150px;">ETM-1810/M/2-A</div><div style="display:inline-block; width:150px;">5895-12-357-2826</div>18-32V/DC PSU, extra DSP board        </ul>
+</font></td></tr></table>      <a name=features></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Features
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td valign="">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li>High data rates up to 19,200 bps          <li>Suitable for <span class="short tooltip-red" data-balloon-pos="up" aria-label="Multiple Adaptive HF Radio System">MAHRS</span>          <li>Suitable for <span class="short tooltip-red" data-balloon-pos="up" aria-label="Fast Adaptive HF Radio Communication System">FARCOS</span>          <li>Suitable for <span class="short tooltip-red" data-balloon-pos="up" aria-label="Standardization Agreement (NATO)">STANAG</span> 5066 systems <a href="#ref_3">[3]</a>          <li>Suitable for <span class="short tooltip-red" data-balloon-pos="up" aria-label="Standardization Agreement (NATO)">STANAG</span> 4538 systems          <li>Suitable for fax and data transmissions          <li>Suitable for burst transmissions          <li>Suitable for duplex, half-duplex and simplex transmissions          <li>Decision feedback equalizer          <li>Compatible with existing cipher equipment          <li>Synchrone data interface          <li>Remote control (option)          <li>Mains or battery power supply (option)          <li>Stationary or mobile applications          <li>19" 1U rackmount module        </ul>
+</font></td></tr></table>      <a name=spec_wf></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Waveforms
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td valign="">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Multiple Adaptive HF Radio System">MAHRS</span> including Frequency Hopping (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Hopping">FH</span>)          <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Military Standard">MIL-STD</span>-188-110A/B          <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Military Standard">MIL-STD</span>-188-110B Appendix F Independent Side Band (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Independent Side Band">ISB</span>)          <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Standardization Agreement (NATO)">STANAG</span> 4538          <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Standardization Agreement (NATO)">STANAG</span> 4539 Annex B, High Data Rate (HDR), including Autobaud          <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Standardization Agreement (NATO)">STANAG</span> 4415 75 bps (NATO robust waveform)          <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Standardization Agreement (NATO)">STANAG</span> 4481 <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span>          <li><span class="short" aria-label="NATO Standardization Agreement 4285 (waveform)" data-balloon-pos="up"><a href="../../../intel/nato/stanag/index.htm#s4285" class="short" >STANAG 4285</a></span>, including Annex E          <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Standardization Agreement (NATO)">STANAG</span> 4529 (Narrow-Band)          <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Standardization Agreement (NATO)">STANAG</span> 5065 (MSK-LF mode)          <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span> mode        </ul>
+</font></td></tr></table>      <a name=single></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Single-tone waveforms
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td valign="">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Standardization Agreement (NATO)">STANAG</span> 4538          <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Standardization Agreement (NATO)">STANAG</span> 4539          <li><span class="short" aria-label="NATO Standardization Agreement 4285 (waveform)" data-balloon-pos="up"><a href="../../../intel/nato/stanag/index.htm#s4285" class="short" >STANAG 4285</a></span>          <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Standardization Agreement (NATO)">STANAG</span> 4529          <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Military Standard">MIL-STD</span>-188-110B including Appendex F (ISB)        </ul>
+</font></td></tr></table>      <a name=spec_int></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Interfaces
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td valign="">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li><a href="#conn_x1"><div style="display:inline-block; width:100px;">Data</div>EIA RS-232C, DIN 66020, CCITT V.24.V.28</a>          <li><a href="#conn_x2"><div style="display:inline-block; width:100px;">Control</div>EIA RS-232C, DIN 66020, CCITT V.24.V.28 (internal connector)</a>          <li><div style="display:inline-block; width:100px;">Speed</div>75, 150, 300, 600, 1200, 2400, 4800, 9600, 19200 baud asynchonous          <li><a href="#conn_x3"><div style="display:inline-block; width:100px;">Radio</div>Proprietary</a>        </ul>
+</font></td></tr></table>      <a name=brands></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Branding
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The ETM-1810/M was sold under different names, including:
+        </font>
+        </td></tr>
+      </table>
+<br />      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td valign="">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li>AEG          <li>Telefunken          <li>AEG Telefunken          <li>Telefunken System Technik (TST)          <li>Daimler Benz Aerospace          <li>DASA          <li>EADS Racoms          <li>Telefunken Racoms        </ul>
+</font></td></tr></table>      <a name=ref></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>References</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ol>
+          <a name="ref_1"></a>
+<li><font color=#F52E00>Telefunken Racoms, <i>ECHOTEL ETM 1810/M</i></font><br />
+Website, 2009. Retrieved May 2013. <sup><font color="#FF8800">1</font></sup>
+          <p />
+          <a name="ref_2"></a>
+<li><font color=#F52E00>Roland Pr&#246;sch, <i>Technical Handbook for Radio Monitoring</i></font><br />
+2003. Retrieved February 2018.
+          <p />
+          <a name="ref_3"></a>
+          <li><a href="http://en.wikipedia.org/wiki/STANAG_5066" target="_blank">Wikipedia, <i>STANAG 5066</i></a><br />
+Retrieved March 2018.
+          <p />
+          <a name="ref_4"></a>
+<li><font color=#F52E00>Anonymous contributor, Connector pinouts and reverse-engineered command set</font><br />
+Crypto Museum, January-April 2025.
+          <p />
+          <a name="ref_5"></a>
+<li><font color=#F52E00>Anonymous former Telefunken employee</font><br />
+Personal communication, March 2018.
+        </ol>
+      </font></td></tr></table>
+<div style="height: 14px;"></div>      <table width="50" cellspacing="0" cellpadding="0"><tr>
+      <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+      </tr></table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr><td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+        <ol>
+        <li>
+Page no longer available (not even via WayBack Machine).
+        </ol>
+        </small></font></td></tr>
+      </table>
+<div style="height: 20px;"></div>      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Further information</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li><a href="cmd.htm">Control commands</a><br />
+          <li><a href="../etm1800">ETM-1800, the precessor</a><br />
+          <li><a href="../etm1820/index.htm">ETM-1820/M, the successor</a><br />
+          <li><a href="../../index.htm">Main radio page</a><br />
+        </ul>
+      </font></td></tr></table>
+<div style="height: 14px;"></div>      </td></tr>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr><td colspan=3 width=100%>
+      <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+      </table>
+      </td></tr>
+      <tr>
+      <td align=center width=100%>
+      <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+      Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+      If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+       
+      © Crypto Museum. Created: Tuesday 20 March 2018. Last changed: Thursday, 03 July 2025 - 13:18 CET.
+      <br />
+      </font
+      </td>
+      </tr>
+      <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+      <tr><td align=center>
+      <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+      </td></tr>
+    </table>
+    </td></tr>
+  </table>
+  </font>
+</td>
+</tr></table>
+</body>
+</html>

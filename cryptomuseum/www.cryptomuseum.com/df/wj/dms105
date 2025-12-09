@@ -1,0 +1,2033 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>DMS-105</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cryptomuseum">
+    <meta name="twitter:url" content="https://www.cryptomuseum.com/df/wj/dms105/index.htm">
+    <meta name="twitter:image" content="https://www.cryptomuseum.com/df/wj/dms105/img/302721/000/full.jpg">
+    <meta name="twitter:title" content="DMS-105A tunable demodulator">
+    <meta name="twitter:description" content="Tunable demodulator for subcarrier modulated signals, made by Watkins-Johnson in the early 1970s.">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of model numbers and names" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Radio Direction Finders" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/df.htm';" >DF</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Radio Monitoring Equipment" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../../df/mon.htm';" >Monitoring</div>
+</div>
+          <div class="but sel sub" onClick="location.href='../../../df/receivers.htm';" >Surveillance</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Technical Surveillance and Countermeasures" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/tscm.htm';" >TSCM</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../df/antennas.htm';" >Antennas</div>
+          <div class="but sub" onClick="location.href='../../../df/scanners.htm';" >Scanners</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="wire tapping" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/wired.htm';" >Wired</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../df/tempest.htm';" >TEMPEST</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Soviet Union" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/ussr.htm';" >USSR</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../../df/mason/index.htm';" >Mason</div>
+          <div class="but sub" onClick="location.href='../../../df/microtel/index.htm';" >Microtel</div>
+          <div class="but sub" onClick="location.href='../../../df/minilock/index.htm';" >Minilock</div>
+          <div class="but sub" onClick="location.href='../../../df/rei/index.htm';" >REI</div>
+          <div class="but sub" onClick="location.href='../../../df/rft/index.htm';" >RFT</div>
+          <div class="but sub" onClick="location.href='../../../df/rs/index.htm';" >Rohde & Schwarz</div>
+          <div class="but sub" onClick="location.href='../../../df/scanlock/index.htm';" >Scanlock</div>
+          <div class="but sub" onClick="location.href='../../../df/telefunken/index.htm';" >Telefunken</div>
+          <div class="but sub" onClick="location.href='../../../df/wj/index.htm';" >Watkins-Johnson</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>DMS-105</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Tunable demodulator</b>
+<br />
+<br />
+<b>DMS-105</b> is a tunable demodulator, introduced in 1971 by
+<a href="../../../manuf/wj"><span data-balloon-pos="up" aria-label="More about: Watkins-Johnson">Watkins-Johnson</span></a> (<span class="short" aria-label="Watkins-Johnson" data-balloon-pos="up"><a href="../../../manuf/wj" class="short" >W-J</a></span>) in Rockville (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Maryland (USA)">MD</span>, USA).
+The device can demodulate <span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Modulation">FM</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Single Side-Band">SSB</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Continuous Wave">CW</span> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span> signals
+in the 1 kHz to 1.6 MHz fre&#173;quency range, divided over <a href="#spec_bands"><span data-balloon-pos="up" aria-label="Jump to: two bands">two bands</span></a>.
+It was commonly used in combination with a microwave receiver, for demodulating
+subcarrier signals in Frequency Domain Multiplexed (FDM) telephony <a href="#ref_3">[3]</a>.
+It can also be used for the reception of
+<a href="../../../covert/bugs/masking"><span data-balloon-pos="up" aria-label="More about: double-modulated">double-modulated</span></a>
+<a href="../../../covert/bugs"><span data-balloon-pos="up" aria-label="More about: covert listening devices (bugs)">covert listening devices (bugs)</span></a>. <sup><font color="#FF8800">1</font></sup>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The device is housed in a 19" 3U rackmountable enclosure that measures
+483 &#215; 133.5 &#215; 500 mm and weighs 14 kg. All controls are located at the
+front panel, with the tuning knob at the bottom right and the five-digit
+readout at the top left.
+The frequency can be adjusted in steps of 100 Hz (normal mode) or 10 Hz
+(decimal shift mode).
+<br />
+<br />
+All connections are at the rear panel, with the exception of the
+headphones socket, which is located at the bottom left of the front panel.
+All input and output signals are single-ended (un&#173;balanced)
+and are available on BNC connectors. <sup><font color="#FF8800">2</font></sup>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/302721/000/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Watkins-Johnson DMS-105A">
+<a href="img/302721/000/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Watkins-Johnson DMS-105A">
+            <img src="img/302721/000/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Watkins-Johnson DMS-105A"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <b>DMS-105</b> was introduced in 1971 and features a 5-digit readout with
+neon tubes (nixie). It was followed in 1972 by the nearly identical <b>DMS-105A</b>
+&ndash; in which the neon readout has been replaced by a red <span class="short tooltip-red" data-balloon-pos="up" aria-label="Light Emitting Diode">LED</span> display &ndash;
+and the <b>DMS-105A-2</b> which has a modified <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Modulation">FM</span> narrowband cir&#173;cuit.
+The <b>DMS-105R</b> &ndash; introduced in 1973 &ndash; was made to comply with MIL-STD 461.
+It has im&#173;proved <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency Interference">RFI</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Electromagnetic Interference">EMI</span> shielding and filtering, and provides
+balanced (rather than single-ended) outputs.
+Apart from the intended use as a subcarrier demodulator, the DMS-105x can also
+be used as a general coverage <span class="short tooltip-red" data-balloon-pos="up" aria-label="Ultra Low Frequency (300 Hz - 3 kHz)">ULF</span>-<span class="short tooltip-red" data-balloon-pos="up" aria-label="Medium Frequency (300-3000 kHz)">MF</span> receiver, although in that case a
+pre-amplifier may be necessary <a href="#ref_3">[3]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+In particular <a href="../../../covert/bugs/masking"><span data-balloon-pos="up" aria-label="More about: subcarrier-modulated listening ...">subcarrier-modulated listening devices (bugs)</span></a>.
+          </li>
+          <li>
+On the <b>DMS-105R</b> some output signals are balanced.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Watkins-Johnson DMS-105A">          <img src="img/302721/000/thumbnail.jpg"
+           alt="Watkins-Johnson DMS-105A"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel">          <img src="img/302721/001/thumbnail.jpg"
+           alt="Front panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/001"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Rear panel">          <img src="img/302721/002/thumbnail.jpg"
+           alt="Rear panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/002"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 3</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/302721/000/full.jpg" alt="Watkins-Johnson DMS-105A">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 3</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/302721/001/full.jpg" alt="Front panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 3</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/302721/002/full.jpg" alt="Rear panel">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image below provides a quick overview of the controls at the front panel
+of the<b> DMS-105A</b>. At the top left is the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Light Emitting Diode">LED</span> frequency readout
+which replaces the Nixie tubes of the old DMS-105. Directly below the display
+is the resolution selector: 100 kHz (normal display) or 10 kHz (decimal shift).
+The frequency is adjusted with the large knob at the bottom right and can be
+fine-tuned with the knob to its left. The waveform type can be selected
+with the MODE selector at the centre.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/302721/001/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Front panel of the DMS-105A">
+<a href="img/302721/001/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Front panel of the DMS-105A">
+            <img src="img/dms105a_front.png"
+             style="
+            "
+             align="center"
+             width="571px"
+             vspace="4"
+             alt="Front panel of the DMS-105A"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+All connections, with the exception of the phones socket, are located at
+the rear of the device, as shown in the image below. At the right are the
+mains receptacle with the fuses and the mains voltage selector. The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span>
+input is at the far left. In most cases it will be connected to the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span>
+output of a regular communications receiver. Various outputs are
+available to suit all applications.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/302721/002/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Rear panel of the DMS-105A">
+<a href="img/302721/002/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Rear panel of the DMS-105A">
+            <img src="img/dms105a_rear.png"
+             style="
+            "
+             align="center"
+             width="574px"
+             vspace="4"
+             alt="Rear panel of the DMS-105A"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+Note that the audio output is provided on a BNC socket. This appears to be
+a modification of the DMS-105A shown here. We don't know whether it was delivered
+this way or as an aftermarket modification. By default, audio is
+provided on screw terminals as a 600 &Omega; balanced output.
+Also note that on the <b>DMS-105R</b>,
+Audio, Video and Converted <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> outputs are all balanced signals.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=ver></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Versions
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+<li><font color=#F52E00>DMS-105</font><br />
+This is the initial version of the tunable demodulator, introduced in July
+1971. It has all the features and specifications of the device described above,
+but its 5-digit frequency readout is made with neon tubes (nixie valves).
+            <p />
+<li><font color=#F52E00>DMS-105A</font><br />
+This is the improved version of the DMS-105, introduced approximately
+one year later, in July 1972. In this version, the nixie valves have been
+replaced by a 5-digit <span class="short tooltip-red" data-balloon-pos="up" aria-label="Light Emitting Diode">LED</span> display. It is otherwise identical to the DMS-105.
+The device featured here, is of this type.
+            <p />
+<li><font color=#F52E00>DMS-105A-2</font><br />
+This is a slightly modified version of the DMS-105A, introduced in 1973.
+The 8 kHz <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> bandwidth in <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Modulation">FM</span> Narrowband mode has been replaced by 1 kHz,
+and the 15 kHz converted <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> output is changed to 10 kHz.
+            <p />
+<li><font color=#F52E00>DMS-105R</font><br />
+This version is has the same specifications as the DMS-105(A), but has
+extra <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency Interference">RFI</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Electromagnetic Interference">EMI</span> shielding and filtering, in order to comply with MIL-STD 461.
+In addition, the audio, video and converted <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> outputs provide balanced
+signals on a triaxial connector. Furthermore, an audio transducer has been added
+in the phones output circuit to reduce the radiation associated with
+magnetic headsets.
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=setup></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Setup</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The diagram below shows a typical setup in which the DMS-105 is used to
+demodulate the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> signal of a regular communications receiver. This <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span>
+signal must be in the range 1 kHz &mdash; 1.6 MHz, which includes the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> outputs
+from <a href="../../../telex/teletron/tg44e/index.htm#"><span data-balloon-pos="up" aria-label="More about: most popular receivers">most popular receivers</span></a>
+at 30 kHz, 200 kHz or 455 kHz. At the bottom of this sections is a
+<a href="#iffreq"><span data-balloon-pos="up" aria-label="Jump to: non-exhaustive list">non-exhaustive list</span></a> of popular receivers and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> frequencies.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Using the DMS-105 for demodulating subcarrier-modulated signals" data-balloon-length="large" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Using the DMS-105 for demodulating subcarrier-modulated signals" data-balloon-length="large" class="tooltip-red">
+            <img src="svg/dms105_setup.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="Using the DMS-105 for demodulating subcarrier-modulated signals"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+It is also possible to use the DMS-105 directly as a general coverage receiver
+for signals in the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Ultra Low Frequency (300 Hz - 3 kHz)">ULF</span> to <span class="short tooltip-red" data-balloon-pos="up" aria-label="Medium Frequency (300-3000 kHz)">MF</span> range (1 kHz &mdash; 1.6 MHz), but it should be
+noted that in that case it might be necessary to add a pre-amplifier in the
+antenna path, as the DMS-105 on its own will be too insensitive.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Using the DMS-105 as a ULF-MF receiver" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Using the DMS-105 as a ULF-MF receiver" class="tooltip-red">
+            <img src="svg/dms105_rx.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="Using the DMS-105 as a ULF-MF receiver"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=iffreq></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Common IF frequencies
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+        <table width=100% cellspacing=0 cellpadding=0>
+          <tr>
+          <td width=100%>
+          <table
+           class="table"
+           style=" border-collapse: collapse;"
+           width=100% border=0 cellspacing=0 cellpadding=2 bgcolor=#FFFFFF>
+            <tr>
+<td bgcolor="#E0E0E0" align="right" valign="top" width="80" style=" padding-right: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Frequency</font></td></b><td bgcolor="#E0E0E0" align="left" valign="top" style=" padding-left: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>&#160;</font></td></b>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="right" valign="top" width="80" style=" padding-right: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>30 kHz</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href="../../../manuf/siemens"><span data-balloon-pos="up" aria-label="More about: Siemens">Siemens</span></a> E-311, E-401, R&S EK-47, Hagenuk RX-1001/M, <a href="../../../manuf/pfitzner"><span data-balloon-pos="up" aria-label="More about: Teletron">Teletron</span></a> <a href="../../../radio/teletron/te704"><span data-balloon-pos="up" aria-label="More about: TE-704">TE-704</span></a>, <a href="../../../radio/teletron/te712"><span data-balloon-pos="up" aria-label="More about: TE-712">TE-712</span></a>, <a href="../../../manuf/telefunken"><span data-balloon-pos="up" aria-label="More about: Telefunken">Telefunken</span></a> E-1700, <a href="../../../df/telefunken/e1800"><span data-balloon-pos="up" aria-label="More about: E-1800">E-1800</span></a> and <a href="../../../df/telefunken/e1800a"><span data-balloon-pos="up" aria-label="More about: E-1800/A">E-1800/A</span></a> <sup><font color="#FF8800">1</font></sup></font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="right" valign="top" width="80" style=" padding-right: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>100 kHz</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href="../../../manuf/siemens"><span data-balloon-pos="up" aria-label="More about: Siemens">Siemens</span></a> E-310, <a href="../../../manuf/racal"><span data-balloon-pos="up" aria-label="More about: Racal">Racal</span></a> (old)</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="right" valign="top" width="80" style=" padding-right: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>200 kHz</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href="../../../manuf/telefunken"><span data-balloon-pos="up" aria-label="More about: Telefunken">Telefunken</span></a> E-1500, E-1700, <a href="../../../df/telefunken/e1800"><span data-balloon-pos="up" aria-label="More about: E-1800">E-1800</span></a> and <a href="../../../df/telefunken/e1800a"><span data-balloon-pos="up" aria-label="More about: E-1800/A">E-1800/A</span></a> (standard)</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="right" valign="top" width="80" style=" padding-right: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>300 kHz</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>R&S EK-07, EK-11</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="right" valign="top" width="80" style=" padding-right: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>455 kHz</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href="../../../manuf/collins"><span data-balloon-pos="up" aria-label="More about: Collins">Collins</span></a> R-390/URR, <a href="../../../manuf/wj"><span data-balloon-pos="up" aria-label="More about: Watkins-Johnson">Watkins-Johnson</span></a> <a href="../../../df/wj/wj8711a"><span data-balloon-pos="up" aria-label="More about: WJ-8711A">WJ-8711A</span></a>, etc.</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="right" valign="top" width="80" style=" padding-right: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>500 kHz</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href="../../../manuf/collins"><span data-balloon-pos="up" aria-label="More about: Collins">Collins</span></a> 51J-line (51J-3 &equals; R-388/URR)</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="right" valign="top" width="80" style=" padding-right: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>525 kHz</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href="../../../manuf/telefunken"><span data-balloon-pos="up" aria-label="More about: Telefunken">Telefunken</span></a> E-127 KW/4, E-127 KW/5, ..., ELK-639/2, E-724 KW/2, E-863 KW/2, E-1700, <a href="../../../df/telefunken/e1800"><span data-balloon-pos="up" aria-label="More about: E-1800">E-1800</span></a> and <a href="../../../df/telefunken/e1800a"><span data-balloon-pos="up" aria-label="More about: E-1800/A">E-1800/A</span></a> <sup><font color="#FF8800">1</font></sup></font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="right" valign="top" width="80" style=" padding-right: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1326 kHz</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href="../../../manuf/siemens"><span data-balloon-pos="up" aria-label="More about: Siemens">Siemens</span></a> E-301, E-305, E-309a</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="right" valign="top" width="80" style=" padding-right: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1400 kHz</font></td><td bgcolor="#F4F4F4" align="left" valign="top" style=" padding-left: 4px; border: 1px solid #999;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>R&S EK-070, EK-071, <a href="../../../manuf/racal"><span data-balloon-pos="up" aria-label="More about: Racal">Racal</span></a> (new)</font></td>            </tr>
+          </table>
+<div style="height: 12px;"></div>        </td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Only when the optional
+  <a href="../../../df/telefunken/e1800/index.htm#fu1800"><span data-balloon-pos="up" aria-label="More about: Frequency Converter ...">Frequency Converter (Frequenzumsetzer) FU-1800</span></a>
+  is installed in the device.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 32px;"></div>        <a name=int></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Interior</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The DMS-105 is housed in a 19" 3U metal enclosure that consists of a
+rectangular frame with sliding top and bottom panels. The panels are held
+in place by two screws each, accessible from the rear. Loosen the screws
+and slide off the panels to access the interior. The image
+below shows the interior as seen from the top, after removing the cover
+from the centre compartment.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/302721/005/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/302721/005/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/dms105a_int_top.png"
+             style="
+            "
+             align="center"
+             width="603px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+Inside the device is a sub-frame with several compartments.
+Some sub-assemblies are contained in a separate metal enclosure that is
+mounted to the sub-frame. The metal compartment at the centre holds
+the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span> circuits, spread over 13 plug-in cards, inserted
+into a backplane.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/302721/004/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/302721/004/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/dms105a_int_bottom.png"
+             style="
+            "
+             align="center"
+             width="508px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The bottom side of the frame &ndash; shown in the image above &ndash; holds most of the
+wiring, in particular the wiring to and from the the backplane at the centre.
+This image shows how the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>s at the upper side are interconnected.
+The three <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>s close to the left side of the case are part of the
+power supply. They contain the voltage regulators that provide the various
+internal voltages.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior top view with removed cover">          <img src="img/302721/005/thumbnail.jpg"
+           alt="Interior top view with removed cover"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/005"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior - bottom view">          <img src="img/302721/004/thumbnail.jpg"
+           alt="Interior - bottom view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/004"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Mains transformer">          <img src="img/302721/007/thumbnail.jpg"
+           alt="Mains transformer"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/007"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Voltage regulators">          <img src="img/302721/009/thumbnail.jpg"
+           alt="Voltage regulators"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/009"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Local oscillator assembly">          <img src="img/302721/008/thumbnail.jpg"
+           alt="Local oscillator assembly"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/008"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Tuning gear">          <img src="img/302721/010/thumbnail.jpg"
+           alt="Tuning gear"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/010"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Input filter assembly">          <img src="img/302721/011/thumbnail.jpg"
+           alt="Input filter assembly"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/011"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Modified audio output">          <img src="img/302721/019/thumbnail.jpg"
+           alt="Modified audio output"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/019"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Extension PCB">          <img src="img/302721/012/thumbnail.jpg"
+           alt="Extension PCB"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 9);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/012"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Extra tools">          <img src="img/302721/013/thumbnail.jpg"
+           alt="Extra tools"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 10);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/013"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PCB pulling bracket">          <img src="img/302721/014/thumbnail.jpg"
+           alt="PCB pulling bracket"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 11);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/014"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Removing a PCB">          <img src="img/302721/015/thumbnail.jpg"
+           alt="Removing a PCB"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 12);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/015"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PCB half way removed">          <img src="img/302721/016/thumbnail.jpg"
+           alt="PCB half way removed"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 13);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/016"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PCB installed on extension board">          <img src="img/302721/017/thumbnail.jpg"
+           alt="PCB installed on extension board"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 14);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/017"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Removed PCB">          <img src="img/302721/018/thumbnail.jpg"
+           alt="Removed PCB"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 15);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/018"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Local oscillator assembly - bottom view">          <img src="img/302721/021/thumbnail.jpg"
+           alt="Local oscillator assembly - bottom view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 16);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302721/021"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'B'" onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">B</span></div></div><div style="height: 40px;"></div>
+<div id="slide_2" class="slide" onClick="slideClose('slide_2')"><span class="slide_close_left" onClick="slideClose('slide_2')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_2', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 1 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/302721/005/full.jpg" alt="Interior top view with removed cover">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 2 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/302721/004/full.jpg" alt="Interior - bottom view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 3 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/302721/007/full.jpg" alt="Mains transformer">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 4 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/302721/009/full.jpg" alt="Voltage regulators">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 5 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/302721/008/full.jpg" alt="Local oscillator assembly">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 6 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/302721/010/full.jpg" alt="Tuning gear">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 7 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/302721/011/full.jpg" alt="Input filter assembly">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 8 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/302721/019/full.jpg" alt="Modified audio output">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 9 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/302721/012/full.jpg" alt="Extension PCB">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 10 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/302721/013/full.jpg" alt="Extra tools">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 11 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/302721/014/full.jpg" alt="PCB pulling bracket">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 12 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/302721/015/full.jpg" alt="Removing a PCB">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 13 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/302721/016/full.jpg" alt="PCB half way removed">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 14 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/302721/017/full.jpg" alt="PCB installed on extension board">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 15 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/302721/018/full.jpg" alt="Removed PCB">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 16 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/302721/021/full.jpg" alt="Local oscillator assembly - bottom view">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_2', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_2', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=spec></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Specifications</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Device</div>Tunable demodulator            <li><div style="display:inline-block; width:100px;">Purpose</div>Demodulation of subcarrier modulated signals            <li><div style="display:inline-block; width:100px;">Model</div><a href="#spec_models">DMS-105, DMS-105A, etc.</a>            <li><div style="display:inline-block; width:100px;">Manufacturer</div><a href="../index.htm">Watkins-Johnson</a>            <li><div style="display:inline-block; width:100px;">Year</div>1972            <li><div style="display:inline-block; width:100px;">Country</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="National Stock Number (Nato Stock Number)">NSN</span></div>5895-01-096-3321 (DMS-105A)            <li><div style="display:inline-block; width:100px;">Waveforms</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Modulation">FM</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Lower Side Band">LSB</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Upper Side Band">USB</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Continuous Wave">CW</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Modulated Continuous Wave">MCW</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Shift Keying">FSK</span>            <li><div style="display:inline-block; width:100px;">Frequency</div>1 kHz &mdash; 1.6 MHz            <li><div style="display:inline-block; width:100px;">Accuracy</div>10 Hz            <li><div style="display:inline-block; width:100px;">Bands</div><a href="#spec_bands">2</a>            <li><div style="display:inline-block; width:100px;">Display</div>5-digit neon (LED matrix display on DMS-105A and later)            <li><div style="display:inline-block; width:100px;">Sensitivity</div>30&#181;V, 20 dB S/N &#64; 50 &Omega; and 1 kHz bandwidth            <li><div style="display:inline-block; width:100px;">Attenuator</div>0 to 50 dB (in 10 dB steps)            <li><div style="display:inline-block; width:100px;">Impedance</div>50 &Omega;, 1000 &Omega;            <li><div style="display:inline-block; width:100px;">Bandwidth</div><a href="#spec_bw">see below</a>            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span></div>2 kHz            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> out</div>15 kHz, 50 kHz, 100 kHz            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Beat Frequency Oscillator">BFO</span></div>Off, 1 kHz, variable (&#177; 8 kHz)            <li><div style="display:inline-block; width:100px;">Rejection</div>Image &ge; 70 dB<br /><div style="display:inline-block; width:100px;"></div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> &ge; 60 dB            <li><div style="display:inline-block; width:100px;">Audio</div>50 Hz &mdash; 16 kHz            <li><div style="display:inline-block; width:100px;">Video</div>2 V &#64; 50 &Omega;            <li><div style="display:inline-block; width:100px;">Power</div>115/230 V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> &#177;10%, 48-420 Hz            <li><div style="display:inline-block; width:100px;">Consumption</div>30 W            <li><div style="display:inline-block; width:100px;">Dimensions</div>483 &#215; 133.5 &#215; 500 mm            <li><div style="display:inline-block; width:100px;">Weight</div>14 kg            <li><div style="display:inline-block; width:100px;">Price</div>USD 12,000 - 16,000 (1971)          </ul>
+</font></td></tr></table>        <a name=spec_models></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Models
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">DMS-105</div><div style="display:inline-block; width:100px;">1971</div>Initial version            <li><div style="display:inline-block; width:100px;">DMS-105A</div><div style="display:inline-block; width:100px;">1972</div>As DMS-105, but with LED display instead of neon            <li><div style="display:inline-block; width:100px;">DMS-105A-2</div><div style="display:inline-block; width:100px;">1973</div>FM narrowband <s>1 kHz</s> 8 kHz, IF out <s>15 kHz</s> 10 kHz            <li><div style="display:inline-block; width:100px;">DMS-105R</div><div style="display:inline-block; width:100px;">1973</div>Improved <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency Interference">RFI</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Electromagnetic Interference">EMI</span> (MIL-STD 461), balanced signals          </ul>
+</font></td></tr></table>        <a name=spec_bands></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Bands
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li>1 kHz &mdash; 600 kHz            <li>540 kHz &mdash; 1600 kHz          </ol>
+</font></td></tr></table>        <a name=spec_bw></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Bandwidth 
+          &nbsp;<font color="#CCC">
+          SSB
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>2.5 kHz            <li>3.5 kHz            <li>4 kHz            <li>8 kHz          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Bandwidth 
+          &nbsp;<font color="#CCC">
+          other modes
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>150 Hz            <li>1 kHz            <li>5 kHz            <li>7 kHz            <li>8 kHz            <li>16 kHz          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Features
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>External local oscillator input (&ge; 0 dBm) - front panel selectable            <li>Digital automatic frequency control (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Automatic Frequency Control">DAFC</span>)            <li>Bypass mode (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> input directly connected to <span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span> circuit)          </ul>
+</font></td></tr></table><div style="height: 20px;"></div>        <a name=data></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Datasheets</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=a>
+            <a name="data_1"></a>
+            <li><a href="files/2N2270.pdf">2N2270 NPN Transistor</a><br />
+<span class="short" aria-label="Radio Corporation of America" data-balloon-pos="up"><a href="../../../manuf/rca" class="short" >RCA</a></span>. Undated
+            <p />
+            <a name="data_2"></a>
+            <li><a href="files/2N2904.pdf">2N2904 General Purpose PNP Transistor</a><br />
+Central Semiconductor Corp., 6 April 2015.
+            <p />
+            <a name="data_3"></a>
+            <li><a href="files/2N3251.pdf">2N3251 General Purpose PNP Transistor</a><br />
+New Jersey Semi-Conductor Products, Inc. Undated.
+            <p />
+            <a name="data_4"></a>
+            <li><a href="files/2N3933.pdf">2N3933 NPN UHF Transistor</a><br />
+New Jersey Semi-Conductor Products, Inc. Undated.
+            <p />
+            <a name="data_5"></a>
+            <li><a href="files/2N4037.pdf">2N4037 PNP Power Transistor (TO-5)</a><br />
+<span class="short" aria-label="Radio Corporation of America" data-balloon-pos="up"><a href="../../../manuf/rca" class="short" >RCA</a></span>. Undated
+            <p />
+            <a name="data_6"></a>
+            <li><a href="files/2N4074.pdf">2N4074 NPN Transistor</a><br />
+<span class="short" aria-label="Radio Corporation of America" data-balloon-pos="up"><a href="../../../manuf/rca" class="short" >RCA</a></span>. Undated.
+            <p />
+            <a name="data_7"></a>
+            <li><a href="files/2N4935.pdf">2N4935 VHF/UHF Transistor</a><br />
+<span class="short" aria-label="Radio Corporation of America" data-balloon-pos="up"><a href="../../../manuf/rca" class="short" >RCA</a></span>. Undated.
+            <p />
+            <a name="data_8"></a>
+            <li><a href="files/2N5109.pdf">2N5109 NPN VHF/UHF Transistor</a><br />
+Microsemi, 25 October 1999.
+            <p />
+            <a name="data_9"></a>
+            <li><a href="files/3N187.pdf">3N187 Dual Gate MOSFET</a><br />
+<a href="../../../manuf/ge">General Electric</a>. Undated.
+            <p />
+            <a name="data_10"></a>
+            <li><a href="files/BFX60_A473.pdf">BFX60 NPN RF Transistor (550 MHz)</a><br />
+<a href="../../../manuf/siemens">Siemens</a>. Undated.
+            <p />
+            <a name="data_11"></a>
+            <li><a href="files/MC1550G.pdf">MC1550G IF Amplifier (IC)</a><br />
+<a href="../../../manuf/motorola">Motorola</a>. Undated.
+          </ol type=a>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=doc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Documentation</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <a name="doc_1"></a>
+            <li><a href="files/DMS105_datasheet_19710601.pdf">Tunable Demodulator Type DMS-105 &mdash; Datasheet <sup><font color="#FF8800">1</font></sup> </a><br />
+<a href="../../../manuf/wj">Watkins-Johnson</a>, 1 June 1971.
+            <p />
+            <a name="doc_2"></a>
+            <li><a href="files/DMS105_datasheet_197303.pdf">Tunable Demodulators DMS-105A, DMS-105A-2, DMS-105R &mdash; Datasheet <sup><font color="#FF8800">1</font></sup> </a><br />
+<a href="../../../manuf/wj">Watkins-Johnson</a>, March 1973.
+            <p />
+            <a name="doc_3"></a>
+            <li><a href="files/DMS105A_manual_19771201.pdf">Instruction Manual for Type DMS-105A Tunable Demodulator <sup><font color="#FF8800">1</font></sup> </a><br />
+<a href="../../../manuf/wj">Watkins-Johnson</a>, 20 October 1972. Last updated 1 December 1977.
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="files/DMS105A_circuit.pdf">Circuit diagrams (cleaned and annotated)</a>
+            <p />
+            <a name="doc_4"></a>
+            <li><a href="files/DMS105_block.png">Annotated block diagram</a><br />
+Crypto Museum 9 July 2025.
+          </ol type=A>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Document kindly provided by Terry O-Laughlin <a href="#ref_1">[1]</a>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+            <li><a href="http://watkins-johnson.terryo.org/index.htm" target="_blank">Terry O'Laughlin, <i>Watkins-Johnson</i></a><br />
+Retrieved December 2016.
+            <p />
+            <a name="ref_2"></a>
+            <li><a href="http://blackradios.terryo.org" target="_blank">Terry O'Laughlin, <i>Black Radios</i></a><br />
+Retrieved December 2016.
+            <p />
+            <a name="ref_3"></a>
+            <li><a href="https://www.hfunderground.com/board/index.php?topic=48795.0" target="_blank">HF Underground, <i>General Coverage Comms rxer down to 20KHz</i></a><br />
+User: ThEleriCat. 12 December 2018.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../index.htm">Other W-J receivers</a><br />
+            <li><a href="../../receivers.htm">Other surveillance receivers</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Monday 12 December 2022. Last changed: Tuesday, 22 July 2025 - 16:21 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

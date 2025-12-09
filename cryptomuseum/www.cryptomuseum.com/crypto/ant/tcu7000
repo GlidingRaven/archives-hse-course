@@ -1,0 +1,2807 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>TCU-7000</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cryptomuseum">
+    <meta name="twitter:url" content="https://www.cryptomuseum.com/crypto/ant/tcu7000/index.htm">
+    <meta name="twitter:image" content="https://www.cryptomuseum.com/crypto/ant/tcu7000/img/304223/024/full.jpg">
+    <meta name="twitter:title" content="TCU-7000">
+    <meta name="twitter:description" content="Terminal Crypto Unit for the HRM-7000 (HF-7000) special forces radio set.">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of cryptographic devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/glossary.htm';" >Glossary</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="The ENIGMA cipher machine" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/enigma/index.htm';" >Enigma</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Machines from Boris Hagelin and/or Crypto AG" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/hagelin/index.htm';" >Hagelin</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Soviet rotor-based cipher machine M-125, codenamed Fialka" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/fialka/index.htm';" >Fialka</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Rotor-based cipher machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/rotor.htm';" >Rotor</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Pin-and-lug cipher machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/pinwheel.htm';" >Pin-wheel</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tapeless Rotorless On-Line cipher machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/trol/index.htm';" >TROL</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Secure speech devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/voice.htm';" >Voice</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Telegraphy and computer data encryption" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/data.htm';" >Data</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Manual cipher systems" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/manual.htm';" >Hand</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="The unbreakable One-Time Pad" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/otp/index.htm';" >OTP</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Electronic Message Units" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../../crypto/emu.htm';" >EMU</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Hardware Security Modules" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/hsm.htm';" >HSM</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines based on One-Time Tape encryption" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/ott.htm';" >Mixers</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Secure telephones and privacy sets" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/phone.htm';" >Phones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Bulk encryptors and IP-based networks" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/ip.htm';" >Bulk</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Key transfer devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/fill.htm';" >FILL</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Codebooks, procedures and key distribution material" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/codebook/index.htm';" >Codebooks</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Public and secret algorithms used in cryptography" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/algo/index.htm';" >Algorithms</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cryptographic Processors" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/chips.htm';" >Chips</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cryptanalytic Machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../cam/index.htm';" >Cryptanalysis</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../crypto/toys.htm';" >Toys</div>
+          <div class="but sub" onClick="location.href='../../../crypto/ww2.htm';" >World War II</div>
+          <div class="spacer"></div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Countries
+          </div>
+          <div class="hidden">
+            <div class="but sub" onClick="location.href='../../../crypto/cs.htm';" >Czechoslovakia</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former East-Germany" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/ddr/index.htm';" >DDR</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/france/index.htm';" >France</div>
+            <div class="but sub" onClick="location.href='../../../crypto/germany/index.htm';" >Germany</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="The Netherlands, Holland" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/nl/index.htm';" >Netherlands</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/ru/index.htm';" >Russia</div>
+            <div class="but sub" onClick="location.href='../../../crypto/swiss/index.htm';" >Switzerland</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United Kingdom" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/uk/index.htm';" >UK</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United States of America" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/usa/index.htm';" >USA</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Soviet Union" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/ussr/index.htm';" >USSR</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former Yugoslav republic" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/yugo/index.htm';" >Yugoslavia</div>
+</div>
+          </div>
+          </div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Manufacturers
+          </div>
+          <div class="hidden">
+            <div class="but sub" onClick="location.href='../../../crypto/ant/index.htm';" >ANT</div>
+            <div class="but sub" onClick="location.href='../../../crypto/aristo/index.htm';" >Aristo</div>
+            <div class="but sub" onClick="location.href='../../../crypto/ascom/index.htm';" >Ascom</div>
+            <div class="but sub" onClick="location.href='../../../crypto/att/index.htm';" >AT&amp;T</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Brown, Boveri and Company" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/bbc/index.htm';" >BBC</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/bosch/index.htm';" >Bosch</div>
+            <div class="but sub" onClick="location.href='../../../crypto/compumatica/index.htm';" >Compumatica</div>
+            <div class="but sub" onClick="location.href='../../../crypto/hagelin/index.htm';" >Crypto AG</div>
+            <div class="but sub" onClick="location.href='../../../crypto/datotek/index.htm';" >Datotek</div>
+            <div class="but sub" onClick="location.href='../../../crypto/foxit/fffe/index.htm';" >Fox-IT</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="General Dynamics" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../manuf/gd/index.htm';" >GD</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../manuf/gemalto/index.htm';" >Gemalto</div>
+            <div class="but sub" onClick="location.href='../../../crypto/gretag/index.htm';" >Gretag</div>
+            <div class="but sub" onClick="location.href='../../../crypto/harris/index.htm';" >Harris</div>
+            <div class="but sub" onClick="location.href='../../../crypto/hell/index.htm';" >HELL</div>
+            <div class="but sub" onClick="location.href='../../../crypto/itt/index.htm';" >ITT</div>
+            <div class="but sub" onClick="location.href='../../../crypto/lorenz/index.htm';" >Lorenz</div>
+            <div class="but sub" onClick="location.href='../../../crypto/lugagne/index.htm';" >Lugagne</div>
+            <div class="but sub" onClick="location.href='../../../crypto/mel/index.htm';" >MEL</div>
+            <div class="but sub" onClick="location.href='../../../crypto/mils/index.htm';" >Mils</div>
+            <div class="but sub" onClick="location.href='../../../crypto/motorola/index.htm';" >Motorola</div>
+            <div class="but sub" onClick="location.href='../../../manuf/mykotronx/index.htm';" >Mykotronx</div>
+            <div class="but sub" onClick="location.href='../../../crypto/nokia/index.htm';" >Nokia</div>
+            <div class="but sub" onClick="location.href='../../../crypto/omi/index.htm';" >OMI</div>
+            <div class="but sub" onClick="location.href='../../../crypto/omnisec/index.htm';" >Omnisec</div>
+            <div class="but sub" onClick="location.href='../../../crypto/philips/index.htm';" >Philips</div>
+            <div class="but sub" onClick="location.href='../../../crypto/ptt/index.htm';" >PTT</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Rohde & Schwarz" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/rs/index.htm';" >R&S</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/racal/index.htm';" >Racal</div>
+            <div class="but sub" onClick="location.href='../../../crypto/randata/index.htm';" >RanData</div>
+            <div class="but sub" onClick="location.href='../../../crypto/raytheon/index.htm';" >Raytheon</div>
+            <div class="but sub" onClick="location.href='../../../crypto/rca/index.htm';" >RCA</div>
+            <div class="but sub" onClick="location.href='../../../manuf/safenet/index.htm';" >Safenet</div>
+            <div class="but sub" onClick="location.href='../../../manuf/secunet/index.htm';" >Secunet</div>
+            <div class="but sub" onClick="location.href='../../../crypto/siemens/index.htm';" >Siemens</div>
+            <div class="but sub" onClick="location.href='../../../crypto/stk/index.htm';" >STK</div>
+            <div class="but sub" onClick="location.href='../../../crypto/tadiran/index.htm';" >Tadiran</div>
+            <div class="but sub" onClick="location.href='../../../crypto/tait/index.htm';" >Tait</div>
+            <div class="but sub" onClick="location.href='../../../manuf/tcc/index.htm';" >TCC</div>
+            <div class="but sub" onClick="location.href='../../../crypto/telefunken/index.htm';" >Telefunken</div>
+            <div class="but sub" onClick="location.href='../../../crypto/telsy/index.htm';" >Telsy</div>
+            <div class="but sub" onClick="location.href='../../../crypto/teltron/index.htm';" >Teltron</div>
+            <div class="but sub" onClick="location.href='../../../crypto/thales/index.htm';" >Thales</div>
+            <div class="but sub" onClick="location.href='../../../manuf/tno/index.htm';" >TNO</div>
+            <div class="but sub" onClick="location.href='../../../crypto/transvertex/index.htm';" >Transvertex</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tele Security Timmann" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/tst/index.htm';" >TST</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/tutus/index.htm';" >Tutus Data AB</div>
+            <div class="but sub" onClick="location.href='../../../manuf/ultra/index.htm';" >Ultra Electronics</div>
+            <div class="but sub" onClick="location.href='../../../manuf/utimaco/index.htm';" >Utimaco</div>
+            <div class="but sub" onClick="location.href='../../../manuf/zellweger/index.htm';" >Zellweger</div>
+            <div class="but sub" onClick="location.href='../../../manuf/index.htm';" >OTHER</div>
+          </div>
+          </div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../../germany"><div  data-balloon-pos="up" aria-label="Shortcut to Germany" class="key">Germany</div></a><a class="key" href="../index.htm"><div  data-balloon-pos="up" aria-label="Shortcut to ANT Nachrichtentechnik (later: Bosch)" class="key">ANT</div></a><a class="key" href="../../../manuf/telefunken"><div  data-balloon-pos="up" aria-label="Shortcut to AEG Telefunken (TST)" class="key">Telefunken</div></a><a class="key" href="../../../burst"><div  data-balloon-pos="up" aria-label="Shortcut to burst encoders" class="key">Burst</div></a><a class="key" href="../../../radio/hf7000"><div  data-balloon-pos="up" aria-label="Shortcut to HF-7000 radio system" class="key">HF-7000</div></a><a class="key" href="../../../spy/sf.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Special Forces" class="key">SF</div></a>&nbsp;&nbsp;<a class="key" href="../../../spy/fs5000/dsu.htm"><div  data-balloon-pos="up" aria-label="Back to Digital Storage Unit (DSU) for FS-5000 stay-behind radio (field station)" data-balloon-length="large" class="key right">&larr; DSU-5000</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>TCU-7000</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Terminal Crypto Unit</b>
+<br />
+<br />
+<b>TCU-7000</b> is a <a href="../../emu.htm"><span data-balloon-pos="up" aria-label="More about: secure message unit">secure message unit</span></a> for the
+<a href="../../../radio/hf7000"><span data-balloon-pos="up" aria-label="More about: HRM-7000 special forces (SF) ...">HRM-7000 special forces (SF) manpack radio set</span></a>,
+introduced in 1997 by <a href="../../bosch"><span data-balloon-pos="up" aria-label="More about: Bosch">Bosch</span></a> in Backnang (Germany),
+formerly known as <a href="../../../manuf/ant"><span data-balloon-pos="up" aria-label="More about: ANT Nachrichten&shy;tech&shy;nik">ANT Nachrichten&shy;tech&shy;nik</span></a>.
+It was marketed by
+<a href="../../../manuf/telefunken"><span data-balloon-pos="up" aria-label="More about: Telefunken System Technik (TST, ...">Telefunken System Technik (TST, later: Telefunken Racoms)</span></a>
+and is similar to &ndash; but more advanced than &ndash; the
+<a href="../../../spy/fs5000/dsu.htm"><span data-balloon-pos="up" aria-label="More about: Digital Storage Unit (DSU)">Digital Storage Unit (DSU)</span></a>
+of the <a href="../../../spy/fs5000"><span data-balloon-pos="up" aria-label="More about: FS-5000 stay-behind radio set">FS-5000 stay-behind radio set</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The device measures 224 &#215; 148 &#215; 50 mm and weighs 2.6 kg. It is connected to
+the <a href="../../../radio/hf7000"><span data-balloon-pos="up" aria-label="More about: HRM-7000 manpack radio">HRM-7000 manpack radio</span></a> via a single
+coaxiable cable and can be used to control the radio, as well as for sending
+and receiving encrypted text messages.
+<br />
+<br />
+There is also a bi-directional optical inter&shy;face for the connec&shy;tion
+of peripheral equipment, such as a printer or a
+<a href="../../../pc"><span data-balloon-pos="up" aria-label="More about: personal computer">personal computer</span></a> (<span class="short" aria-label="Personal Computer" data-balloon-pos="up"><a href="../../../pc" class="short" >PC</a></span>).
+The user interface consists of a 2 &#215; 40 character Liquid Crystal Display (LCD)
+and a 47 button tac&shy;tile keyboard. This includes five soft keys (F1-F5)
+that are used for the menu driven operation.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304223/024/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="TCU-7000 made by ANT (Bosch) and marketed by TST (Telefunken)" data-balloon-length="large">
+<a href="img/304223/024/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="TCU-7000 made by ANT (Bosch) and marketed by TST (Telefunken)" data-balloon-length="large">
+            <img src="img/304223/024/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="TCU-7000 made by ANT (Bosch) and marketed by TST (Telefunken)"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The TCU-7000 was developed as part of the
+<a href="../../../radio/hf7000"><span data-balloon-pos="up" aria-label="More about: HF-7000 radio system">HF-7000 radio system</span></a>, in particular
+as an accessory to the <a href="../../../radio/hf7000"><span data-balloon-pos="up" aria-label="More about: HRM-7000 manpack radio">HRM-7000 manpack radio</span></a>.
+The system was intended for use by the German Special Forces (SF)
+&mdash; known as <i>Fernsp&#228;her</i>.
+The TCU-7000 is approved for messages up to <b><span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span> Confidential</b>.
+Development was started in 1994, hot on the heels of the
+modular <a href="../../../spy/fs5000"><span data-balloon-pos="up" aria-label="More about: FS-5000 field station">FS-5000 field station</span></a>
+that had been developed for <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span>'s
+<a href="../../glossary.htm#cold_war"><span data-balloon-pos="up" aria-label="More about: Cold War">Cold War</span></a> clandestine
+<a href="../../../spy/sbo"><span data-balloon-pos="up" aria-label="More about: stay-behind organisations">stay-behind organisations</span></a> (<span class="short" aria-label="Stay-Behind Organisation" data-balloon-pos="up"><a href="../../../spy/sbo" class="short" >SBO</a></span>), a.k.a.
+<a href="../../../spy/sbo"><span data-balloon-pos="up" aria-label="More about: GLADIO">GLADIO</span></a>.
+<br />
+<br />
+There are several <a href="#spec_ver"><span data-balloon-pos="up" aria-label="Jump to: versions of the TCU-7000">versions of the TCU-7000</span></a>,
+that can be found under a <a href="#spec_man"><span data-balloon-pos="up" aria-label="Jump to: variety of brand names">variety of brand names</span></a>. It is
+currently unknown how many units were produced over the years.
+It was approved by the <span class="short" aria-label="Bundesamt f&#252;r Sicherheit in der Informationstechnik" data-balloon-pos="up"><a href="../../../intel/bsi" class="short" >BSI</a></span> &mdash; the German national cypher authority &mdash;
+and the approval has been extended until 2025.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Left angle view">          <img src="img/304223/026/thumbnail.jpg"
+           alt="Left angle view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/026"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TCU-7000 made by ANT (Bosch) and marketed by TST (Telefunken)" data-balloon-length="large">          <img src="img/304223/024/thumbnail.jpg"
+           alt="TCU-7000 made by ANT (Bosch) and marketed by TST (Telefunken)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/024"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel">          <img src="img/304223/031/thumbnail.jpg"
+           alt="Front panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/031"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Bottom view">          <img src="img/304223/028/thumbnail.jpg"
+           alt="Bottom view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/028"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Batteries installed">          <img src="img/304223/022/thumbnail.jpg"
+           alt="Batteries installed"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/022"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Coaxial connection to HRM-7000 radio">          <img src="img/304223/027/thumbnail.jpg"
+           alt="Coaxial connection to HRM-7000 radio"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/027"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Optical interface with transmitter (left) and receiver (right) and two locking threads" data-balloon-length="large">          <img src="img/304223/025/thumbnail.jpg"
+           alt="Optical interface with transmitter (left) and receiver (right) and two locking threads"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/025"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Operating the emergency button">          <img src="img/304223/036/thumbnail.jpg"
+           alt="Operating the emergency button"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/036"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304223/026/full.jpg" alt="Left angle view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304223/024/full.jpg" alt="TCU-7000 made by ANT (Bosch) and marketed by TST (Telefunken)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304223/031/full.jpg" alt="Front panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304223/028/full.jpg" alt="Bottom view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304223/022/full.jpg" alt="Batteries installed">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304223/027/full.jpg" alt="Coaxial connection to HRM-7000 radio">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304223/025/full.jpg" alt="Optical interface with transmitter (left) and receiver (right) and two locking threads">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304223/036/full.jpg" alt="Operating the emergency button">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image below provides an overview of the features of the TCU-7000.
+The device is powered by
+<a href="img/304223/022/full.jpg"><span data-balloon-pos="up" aria-label="More about: four internal 3.6V AA-size ...">four internal 3.6V AA-size batteries</span></a>
+that form two separate 7.2V power banks.
+One bank is used for powering the microprocessor
+and the peripheral parts, whilst the other one is used for powering the
+battery-backed CMOS Static <span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span> and the CMOS Real-Time Clock (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Real Time Clock">RTC</span>).
+The latter is controlled by an internal a
+<a href="img/304223/015/full.jpg"><span data-balloon-pos="up" aria-label="More about: tamper switch">tamper switch</span></a>, which cuts the power
+to the Static <span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span> as soon as the case is opened. This will instantly
+delete any cryptographic keys and messages held in memory.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304223/026/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304223/026/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/tcu7000_ext.png"
+             style="
+            "
+             align="center"
+             width="600px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The device has a 1-wire coaxial interface for connection to the
+<a href="../../../radio/hf7000"><span data-balloon-pos="up" aria-label="More about: HRM-7000 manpack radio">HRM-7000 manpack radio</span></a>,
+and a <a href="img/304223/025/full.jpg"><span data-balloon-pos="up" aria-label="More about: contact&shy;less optical interface">contact&shy;less optical interface</span></a>
+for connection of any further
+peripherals or <a href="../../../pc"><span data-balloon-pos="up" aria-label="More about: personal computer">personal computer</span></a> (<span class="short" aria-label="Personal Computer" data-balloon-pos="up"><a href="../../../pc" class="short" >PC</a></span>).
+It has a menu-driven user interface
+that consists of an <span class="short tooltip-red" data-balloon-pos="up" aria-label="Liquid Crystal Display">LCD</span> and a tactile keyboard. The keyboard holds the
+standard 26 characters of the Latin alphabet (A-Z) in <span class="short" aria-label="United States of America (USA)" data-balloon-pos="up"><a href="../../usa" class="short" >US</a></span>-order (QWERTY),
+plus the digits 0-9. In addition there is a SPACE key, a SHIFT-key and an
+<a href="img/304223/035/full.jpg"><span data-balloon-pos="up" aria-label="More about: orange emergency key">orange emergency key</span></a>.
+At the top, just below the display, are five context-sensitive soft-keys
+(F1-F5), of which the functions are
+<a href="img/304223/034/full.jpg"><span data-balloon-pos="up" aria-label="More about: displayed in the menu">displayed in the menu</span></a>.
+Punctuation marks are available as a SHIFT-function of the digits 1-9.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Differences with DSU-5000
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<a href="img/304223/044/full.jpg"><span data-balloon-pos="up" aria-label="More about: Compared to its predecessor">Compared to its predecessor</span></a>
+the <a href="../../../spy/fs5000/dsu.htm"><span data-balloon-pos="up" aria-label="More about: DSU-5000">DSU-5000</span></a>,
+the following differences are observed:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="img/304223/044/full.jpg">Larger enclosure with larger keys</a>            <li>Green rather than grey            <li>2 &#215; 40 character display            <li>16-bit processor            <li>Larger message buffers            <li>4 batteries (rather than 2)            <li>Single-wire interface to radio            <li>Optical interface for peripherals            <li>Single <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>          </ul>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=>
+<a href="img/304223/044/full.jpg">              <div style="position: relative;" data-balloon-pos="up" aria-label="TCU-7000 and DSU-5000">
+<a href="img/304223/044/full.jpg">              <div style="position: relative;" data-balloon-pos="up" aria-label="TCU-7000 and DSU-5000">
+              <img src="img/304223/044/small.jpg"
+               style="
+               max-width: 618px;
+              "
+               align="left"
+               vspace="4"
+               alt="TCU-7000 and DSU-5000"
+               border=0
+               width=298 height=200
+               />
+              </div>
+              </a>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Sleep mode
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+A fully <a href="img/304223/032/full.jpg"><span data-balloon-pos="up" aria-label="More about: initialised device">initialised device</span></a>
+will automatically go to sleep if no key has been
+pressed for 60 seconds. This puts the device in an extremely low-power state,
+whilst the contents of the Static <span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span> are retained. To wake the device up
+again, press the orange button briefly. After 1.5 seconds, the device will
+wake up and resume its operation.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=zero></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Zeroizing
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In case of an emergency, for example when security is compromised, it might
+be necessary to delete the encryption keys and the messages that are held
+in memory. This procedure is known as ZEROIZING. By convention it is
+implemented as a two-step procedure, which goes as follows:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li>When in operation, briefly press the orange button, this interrupts the normal operation of the device and opens the <a href="img/304223/037/full.jpg">Emergency menu</a>.<br /><br />            <li>Select the required action <div style="display:inline-block; font-family:monospace; font-size:14px;">DELETE</div> (F1), <div style="display:inline-block; font-family:monospace; font-size:14px;">ABORT</div> (F2) or <div style="display:inline-block; font-family:monospace; font-size:14px;">CANCEL</div> (F3). and answer any further questions. In case you accidentally pressed the orange button, select END (F5) to resume normal operation.          </ol>
+</font></td></tr></table><div style="height: 14px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Fresh startup">          <img src="img/304223/032/thumbnail.jpg"
+           alt="Fresh startup"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/032"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Selecting initialisation without CCU">          <img src="img/304223/033/thumbnail.jpg"
+           alt="Selecting initialisation without CCU"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/033"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Main menu">          <img src="img/304223/034/thumbnail.jpg"
+           alt="Main menu"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/034"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Strt and Emergency button">          <img src="img/304223/035/thumbnail.jpg"
+           alt="Strt and Emergency button"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/035"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Operating the emergency button">          <img src="img/304223/036/thumbnail.jpg"
+           alt="Operating the emergency button"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/036"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Zeroize menu">          <img src="img/304223/037/thumbnail.jpg"
+           alt="Zeroize menu"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/037"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TCU-7000 and DSU-5000">          <img src="img/304223/044/thumbnail.jpg"
+           alt="TCU-7000 and DSU-5000"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/044"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="ANT logo cast in the two case shells">          <img src="img/304223/043/thumbnail.jpg"
+           alt="ANT logo cast in the two case shells"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/043"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'B'" onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">B</span></div></div><div style="height: 40px;"></div>
+<div id="slide_2" class="slide" onClick="slideClose('slide_2')"><span class="slide_close_left" onClick="slideClose('slide_2')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_2', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304223/032/full.jpg" alt="Fresh startup">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304223/033/full.jpg" alt="Selecting initialisation without CCU">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304223/034/full.jpg" alt="Main menu">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304223/035/full.jpg" alt="Strt and Emergency button">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304223/036/full.jpg" alt="Operating the emergency button">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304223/037/full.jpg" alt="Zeroize menu">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304223/044/full.jpg" alt="TCU-7000 and DSU-5000">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304223/043/full.jpg" alt="ANT logo cast in the two case shells">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_2', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_2', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=hist></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>History</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+During the <a href="../../glossary.htm#cold_war"><span data-balloon-pos="up" aria-label="More about: Cold War">Cold War</span></a> many European countries
+had a so-called <a href="../../../spy/sbo"><span data-balloon-pos="up" aria-label="More about: Stay-Behind Organisation">Stay-Behind Organisation</span></a> (<span class="short" aria-label="Stay-Behind Organisation" data-balloon-pos="up"><a href="../../../spy/sbo" class="short" >SBO</a></span>) &mdash;
+a clandestine organisation that would activate itself in case of
+an invasion by the <a href="../../glossary.htm#soviet"><span data-balloon-pos="up" aria-label="More about: Soviet Union">Soviet Union</span></a> (<span class="short" aria-label="Union of Soviet Socialist Republics" data-balloon-pos="up"><a href="../../glossary.htm#soviet" class="short" >USSR</a></span>).
+The <span class="short" aria-label="Stay-Behind Organisation" data-balloon-pos="up"><a href="../../../spy/sbo" class="short" >SBO</a></span>s had been founded immediately after the end of
+<a href="../../ww2.htm"><span data-balloon-pos="up" aria-label="More about: World War II">World War II</span></a> (<span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../../ww2.htm" class="short" >WWII</a></span>),
+in some countries as early as 1946.
+As each country's <span class="short" aria-label="Stay-Behind Organisation" data-balloon-pos="up"><a href="../../../spy/sbo" class="short" >SBO</a></span> used different (incompatible) equipment, it was
+decided in 1980 to develop a new high-end field station &mdash; the
+<a href="../../../spy/fs5000"><span data-balloon-pos="up" aria-label="More about: FS-5000">FS-5000</span></a>, codenamed <a href="../../../spy/fs5000"><span data-balloon-pos="up" aria-label="More about: HARPOON">HARPOON</span></a>.
+In 1985, the development contract was awarded to the German company
+<a href="../../../manuf/telefunken"><span data-balloon-pos="up" aria-label="More about: AEG Telefunken">AEG Telefunken</span></a>, using the German intelligence
+service <a href="../../../intel/bnd"><span data-balloon-pos="up" aria-label="More about: Bundesnachrichtendienst">Bundesnachrichtendienst</span></a> (<span class="short" aria-label="Bundesnachrichtendienst (Federal Intelligence Service)" data-balloon-pos="up"><a href="../../../intel/bnd" class="short" >BND</a></span>)
+as the intermediary legend.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <a href="../../../spy/fs5000"><span data-balloon-pos="up" aria-label="More about: FS-5000">FS-5000</span></a> &ndash; shown in the image on the right &ndash;
+had a modular design, which allowed it to be hidden
+more easily than a single bigger device. It also simplified repairs and
+allowed the radio to be used in a number of different configurations.
+<br />
+<br />
+Development took three years, and in 1988 the
+<a href="../../../spy/fs5000"><span data-balloon-pos="up" aria-label="More about: FS-5000 (HARPOON)">FS-5000 (HARPOON)</span></a> was ready for release.
+Between 1988 and 1991, all 854 radio sets of the initial order were delivered
+by <a href="../../../manuf/telefunken"><span data-balloon-pos="up" aria-label="More about: Telefunken">Telefunken</span></a> for the total sum of
+DM 130 million (EUR 65 million). It has meanwhile become known that
+additional sets were supplied between 1991 and 1995.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../../spy/fs5000">            <div style="position: relative;" data-balloon-pos="up" aria-label="Complete FS-5000 radio station">
+<a href="../../../spy/fs5000">            <div style="position: relative;" data-balloon-pos="up" aria-label="Complete FS-5000 radio station">
+            <img src="../../../spy/fs5000/img/301524/090/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Complete FS-5000 radio station"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+By 1991 however, following a series of incidents with the Italian <span class="short" aria-label="Stay-Behind Organisation" data-balloon-pos="up"><a href="../../../spy/sbo" class="short" >SBO</a></span>
+(GLADIO) and the discovery of several caches with weapons &ndash; for example in
+<a href="../../../spy/sbo/nl"><span data-balloon-pos="up" aria-label="More about: The Netherlands">The Netherlands</span></a>
+&ndash; the existence of the clan&shy;des&shy;tine organisations
+had become known to the public.
+This forced the governments of several European countries
+to admit their existence and eventually to dismantle them.
+As a result, the newly introduced <a href="../../../spy/fs5000"><span data-balloon-pos="up" aria-label="More about: FS-5000">FS-5000</span></a>
+saw little action and was shelved less than a year after its introduction.
+In Germany, the <a href="../../../spy/fs5000"><span data-balloon-pos="up" aria-label="More about: FS-5000">FS-5000</span></a> units were stored in the Army
+equipment depot in Lorch-Wispertal.
+<br />
+<br />
+In the meantime, the <a href="../../../spy/fs5000"><span data-balloon-pos="up" aria-label="More about: FS-5000">FS-5000</span></a> had attracted the attention
+of the <i>Fernsp&#228;her</i> &mdash; the German Special Forces (SF) &mdash;
+who wanted a similar radio for operations behind enemy lines.
+Unlike the modular <a href="../../../spy/fs5000"><span data-balloon-pos="up" aria-label="More about: FS-5000">FS-5000</span></a> however,
+the <i>Fernsp&#228;her</i> wanted an all-in-one radio with a handheld control
+and message device. Telefunken was awarded the development contract
+of the new radio system, which was designated
+<a href="../../../radio/hf7000"><span data-balloon-pos="up" aria-label="More about: HF-7000">HF-7000</span></a>. As the development would
+take several years, it was decided to take the unused German
+<a href="../../../spy/fs5000"><span data-balloon-pos="up" aria-label="More about: FS-5000 units">FS-5000 units</span></a>
+from storage, and convert them for <i>Fernsp&#228;her</i> use.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In August 1993, the modified <a href="../../../spy/fs5000"><span data-balloon-pos="up" aria-label="More about: FS-5000 set">FS-5000 set</span></a>
+&ndash; designated <b>FS-5000M</b> &ndash; was released.
+The firmware had been simplified and the menus translated to German.
+Many of the stay-behind-specific features, which were of little or no
+interest to the <i>Fernsp&#228;her</i>, had been removed.
+<br />
+<br />
+In addition, the <a href="../../../spy/fs5000/dsu.htm"><span data-balloon-pos="up" aria-label="More about: control unit (DSU)">control unit (DSU)</span></a>
+had been de&shy;tached and was connected to
+the radio set by means of a
+<a href="../../../spy/fs5000/img/301524/098/full.jpg"><span data-balloon-pos="up" aria-label="More about: 1 metre long multi cable">1 metre long multi cable</span></a>.
+It allowed the <i>Fernsp&#228;her</i> to continue their training and prepare for
+the forthcoming <a href="../../../radio/hf7000"><span data-balloon-pos="up" aria-label="More about: HF-7000">HF-7000</span></a>
+(in par&shy;ticular the <a href="../../../radio/hf7000"><span data-balloon-pos="up" aria-label="More about: HRM-7000 manpack radio">HRM-7000 manpack radio</span></a>
+with <span class="short tooltip-red" data-balloon-pos="up" aria-label="Terminal Crypto Unit">TCU</span>).
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../../spy/fs5000/dsu.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="The DSU of the FS-5000 (SR 5000M)">
+<a href="../../../spy/fs5000/dsu.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="The DSU of the FS-5000 (SR 5000M)">
+            <img src="../../../spy/fs5000/img/301524/060/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="The DSU of the FS-5000 (SR 5000M)"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Development of the <a href="../../../radio/hf7000"><span data-balloon-pos="up" aria-label="More about: HF-7000 system">HF-7000 system</span></a>
+took several years, but the availability of
+newer components allowed the new
+manpack (<a href="../../../radio/hf7000"><span data-balloon-pos="up" aria-label="More about: HRM-7000">HRM-7000</span></a>)
+to be considerably smaller
+and less heavy than the <a href="../../../spy/fs5000"><span data-balloon-pos="up" aria-label="More about: FS-5000">FS-5000</span></a>.
+The new control unit &ndash; <b>TCU-7000</b> &ndash; was
+watertight and had an enhanced 2 &#215; 40 character display, allowing intuitive
+menu-driven control. Rather than using a multi cable, the TCU-7000 is connected
+to the HRM-7000 radio by means of a single wire coaxial cable with <span class="short tooltip-red" data-balloon-pos="up" aria-label="Threaded Neill Concelman (threaded version of the BNC connector)" data-balloon-length="large">TNC</span>
+connectors.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=manuf></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Manufacturer
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Although different brand names can be found on TCU-7000 units, they were
+all manufactured in the same factory in Backnang, albeit under different
+ownership. When development started in 1994, the company was known as
+<a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: ANT Nachrichtentechnik">ANT Nachrichtentechnik</span></a>, a former subsidary of AEG Telefunken
+that had been sold in 1983 to a consortium consisting of
+<a href="../../bosch"><span data-balloon-pos="up" aria-label="More about: Bosch">Bosch</span></a>, Mannesmann and Allianz.
+For this reason the name
+<a href="img/304223/043/full.jpg"><span data-balloon-pos="up" aria-label="More about: ANT is still cast inside the case ...">ANT is still cast inside the case shells</span></a>.
+By the time the device was ready for production (1997), the company had
+meanwhile become a full daughter of <a href="../../bosch"><span data-balloon-pos="up" aria-label="More about: Bosch">Bosch</span></a>,
+hence the name <a href="../../bosch"><span data-balloon-pos="up" aria-label="More about: Bosch">Bosch</span></a> on the
+<a href="img/304223/028/full.jpg"><span data-balloon-pos="up" aria-label="More about: serial number label at the back">serial number label at the back</span></a>.
+Production was later moved to <a href="../../../manuf/telefunken"><span data-balloon-pos="up" aria-label="More about: Telefunken Racoms">Telefunken Racoms</span></a>
+&mdash; the manufacturer of the <a href="../../../radio/hf7000"><span data-balloon-pos="up" aria-label="More about: HF-7000 radio">HF-7000 radio</span></a> &mdash;
+which was eventually taken over by the Israeli <a href="../../../manuf/elbit"><span data-balloon-pos="up" aria-label="More about: Elbit">Elbit</span></a>.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=int></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Interior</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The TCU-7000 is housed in a watertight die-cast aluminium enclosure
+that consists of two parts: (1) the upper case shell that contains the
+printed circuit board (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>), the display and the key&shy;board, and (2)
+the bottom panel that contains the two battery compartments. Both parts
+are <a href="img/304223/043/full.jpg"><span data-balloon-pos="up" aria-label="More about: cast with the logo of ANT">cast with the logo of ANT</span></a> &mdash; the original developer of the device.
+The interior can be accessed by re&shy;mo&shy;ving 7 screws from the edges
+of the bottom panel, after which the bottom can be taken off.
+<br />
+<br />
+Note that the bottom panel is connected to the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> by means of a
+<a href="img/304223/019/full.jpg"><span data-balloon-pos="up" aria-label="More about: 4-wire cable with a ...">4-wire cable with a con&shy;nec&shy;tor</span></a>
+at the centre of the bottom panel. Separate the
+connector to allow the
+<a href="img/304223/016/full.jpg"><span data-balloon-pos="up" aria-label="More about: bottom panel to be re&shy;moved">bottom panel to be re&shy;moved</span></a>.
+Inside the case shell is
+the printed circuit board (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>) of which the
+<a href="img/304223/009/full.jpg"><span data-balloon-pos="up" aria-label="More about: bottom side">bottom side</span></a> is imme&shy;dia&shy;tely
+visible, To remove the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> from the case shell,
+disconnect the <a href="img/304223/020/full.jpg"><span data-balloon-pos="up" aria-label="More about: single-wire interface">single-wire interface</span></a>,
+re&shy;lease the <a href="img/304223/021/full.jpg"><span data-balloon-pos="up" aria-label="More about: keyboard flex wiring">keyboard flex wiring</span></a>
+and desolder the legs of the optical transmitter and receiver,
+held in the right side panel.
+Next, remove 8 screws from the edges of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>.
+The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> can now be lifted from the case shell.
+The image below shows the <a href="img/304223/010/full.jpg"><span data-balloon-pos="up" aria-label="More about: top side">top side</span></a>,
+which holds the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Liquid Crystal Display">LCD</span> display.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304223/008/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Upper side of the PCB with processor and LCD. Click to enlarge." data-balloon-length="large">
+<a href="img/304223/008/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Upper side of the PCB with processor and LCD. Click to enlarge." data-balloon-length="large">
+            <img src="img/tcu7000_int_top.png"
+             style="
+            "
+             align="center"
+             width="600px"
+             vspace="4"
+             alt="Upper side of the PCB with processor and LCD. Click to enlarge."
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+<a href="img/304223/010/full.jpg"><span data-balloon-pos="up" aria-label="More about: This side">This side</span></a> of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> holds most of the parts,
+in particular the
+MC68302 processor &mdash; a combi&shy;nation of a Motorola 68000 and a multiprotocol
+communication unit &mdash; flash memory (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Electrically Ereasable Read-Only Memory">EEPROM</span>) and static <span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span>. The latter is
+used for storing sensitive data, such as the encryption keys, which are
+retained by the main battery. A <a href="img/304223/015/full.jpg"><span data-balloon-pos="up" aria-label="More about: tamper switch">tamper switch</span></a>
+at the centre of the board,
+cuts the power to the static <span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span> as soon as the bottom of the case is
+removed, which then purges the keys.
+The tamper switch is normally engaged by a metal stub at the centre of the
+<a href="img/304223/019/full.jpg"><span data-balloon-pos="up" aria-label="More about: bottom panel's inside">bottom panel's inside</span></a>.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304223/006/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Bottom side of the PCB with additional components. Click to enlarge." data-balloon-length="large">
+<a href="img/304223/006/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Bottom side of the PCB with additional components. Click to enlarge." data-balloon-length="large">
+            <img src="img/tcu7000_int_bottom.png"
+             style="
+            "
+             align="center"
+             width="576px"
+             vspace="4"
+             alt="Bottom side of the PCB with additional components. Click to enlarge."
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The <a href="img/304223/009/full.jpg"><span data-balloon-pos="up" aria-label="More about: bottom side">bottom side</span></a> of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>,
+i.e. the side that is
+<a href="img/304223/018/full.jpg"><span data-balloon-pos="up" aria-label="More about: visible after removing the bottom ...">visible after removing the bottom panel</span></a>,
+holds the keyboard and display connectors, some additional
+logic, two large capacitors and a large 64K 16-bit <span class="short tooltip-red" data-balloon-pos="up" aria-label="Ereasable Read-Only Memory">EPROM</span> that holds the
+firmware. Also on this side are the I<sup>2</sup>C interface and the real-time clock (RTC).
+The latter is a low-power CMOS device that keeps running
+when the device is unpowered.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Bottom view">          <img src="img/304223/028/thumbnail.jpg"
+           alt="Bottom view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/028"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Bottom panel separated from case shell. Note the battery cable." data-balloon-length="large">          <img src="img/304223/019/thumbnail.jpg"
+           alt="Bottom panel separated from case shell. Note the battery cable."
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/019"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Case shell with PCB, and bottom panel with batteries" data-balloon-length="large">          <img src="img/304223/016/thumbnail.jpg"
+           alt="Case shell with PCB, and bottom panel with batteries"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/016"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Case shell with PCB">          <img src="img/304223/018/thumbnail.jpg"
+           alt="Case shell with PCB"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/018"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Top side of the PCB">          <img src="img/304223/008/thumbnail.jpg"
+           alt="Top side of the PCB"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/008"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Bottom side of the PCB">          <img src="img/304223/006/thumbnail.jpg"
+           alt="Bottom side of the PCB"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/006"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PCB - top">          <img src="img/304223/010/thumbnail.jpg"
+           alt="PCB - top"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/010"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PCB - bottom">          <img src="img/304223/009/thumbnail.jpg"
+           alt="PCB - bottom"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/009"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Tamper switch">          <img src="img/304223/015/thumbnail.jpg"
+           alt="Tamper switch"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 9);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/015"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Microprocessor, EEPROMs and static RAM">          <img src="img/304223/012/thumbnail.jpg"
+           alt="Microprocessor, EEPROMs and static RAM"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 10);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/012"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Internal power supply unit (PSU)">          <img src="img/304223/011/thumbnail.jpg"
+           alt="Internal power supply unit (PSU)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 11);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/011"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Battery wiring detail">          <img src="img/304223/013/thumbnail.jpg"
+           alt="Battery wiring detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 12);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/013"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Single wire interface">          <img src="img/304223/020/thumbnail.jpg"
+           alt="Single wire interface"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 13);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/020"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Keyboard flex wiring">          <img src="img/304223/021/thumbnail.jpg"
+           alt="Keyboard flex wiring"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 14);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/021"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Data label for next battery change">          <img src="img/304223/029/thumbnail.jpg"
+           alt="Data label for next battery change"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 15);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/029"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Military 3.6V batteries (AA-size)  in battery compartment" data-balloon-length="large">          <img src="img/304223/023/thumbnail.jpg"
+           alt="Military 3.6V batteries (AA-size)  in battery compartment"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 16);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/023"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'C'" onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">C</span></div></div><div style="height: 40px;"></div>
+<div id="slide_3" class="slide" onClick="slideClose('slide_3')"><span class="slide_close_left" onClick="slideClose('slide_3')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_3', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 1 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304223/028/full.jpg" alt="Bottom view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 2 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304223/019/full.jpg" alt="Bottom panel separated from case shell. Note the battery cable.">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 3 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304223/016/full.jpg" alt="Case shell with PCB, and bottom panel with batteries">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 4 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304223/018/full.jpg" alt="Case shell with PCB">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 5 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304223/008/full.jpg" alt="Top side of the PCB">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 6 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304223/006/full.jpg" alt="Bottom side of the PCB">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 7 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304223/010/full.jpg" alt="PCB - top">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 8 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304223/009/full.jpg" alt="PCB - bottom">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 9 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304223/015/full.jpg" alt="Tamper switch">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 10 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304223/012/full.jpg" alt="Microprocessor, EEPROMs and static RAM">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 11 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304223/011/full.jpg" alt="Internal power supply unit (PSU)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 12 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304223/013/full.jpg" alt="Battery wiring detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 13 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304223/020/full.jpg" alt="Single wire interface">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 14 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304223/021/full.jpg" alt="Keyboard flex wiring">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 15 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304223/029/full.jpg" alt="Data label for next battery change">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 16 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304223/023/full.jpg" alt="Military 3.6V batteries (AA-size)  in battery compartment">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_3', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_3', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=rest></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Restoration</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When we found the TCU-7000 featured here on a flea market in Germany
+in June 2024, it was not in a very good state and it was uncertain whether
+it would ever work again. Part of the exterior was
+<a href="img/304223/001/full.jpg"><span data-balloon-pos="up" aria-label="More about: badly corroded">badly corroded</span></a>, which suggests that the device had
+been exposed to water for some time.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Opening the device appeared to be a challenge, as two of the screws in the
+bottom panel didn't come loose as a result of the corrosion. These two screws
+were drilled out and their remains were removed from the treads  with special
+tools.
+<br />
+<br />
+Once the bottom panel was removed, we were able to inspect the interior.
+The image on the right shows that most of the corrosion is
+con&shy;cen&shy;trated around
+the area of two optical inter&shy;face ports.
+Apparently these ports are not as watertight as they should have been,
+as a result of which water had gradually been able to enter.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304223/002/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Corroded inside of the case shell">
+<a href="img/304223/002/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Corroded inside of the case shell">
+            <img src="img/304223/002/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Corroded inside of the case shell"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+After desoldering the optical transmitter and receiver from the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>, the
+gold-plated legs of these components immediately fell off. As this cannot be
+fixed, they will have to be replaced. Luckily, the device can be used without
+the optical interface. After removing the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>, the two case halves were
+thoroughly cleaned after which the corrosion of the interior and exterior
+was scraped off.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The damaged parts of the exterior where then repainted with a carefully mixed
+paint that mat&shy;ches the original colour. Next, both sides of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>
+were thoroughly cleaned with special sub&shy;stances,
+especially around the optical interface.
+<br />
+<br />
+It turned out that electrolyte had been leaking from the
+<a href="img/304223/005/full.jpg"><span data-balloon-pos="up" aria-label="More about: large 1000&#181;F capacitor">large 1000&#181;F capacitor</span></a> at the bottom of
+the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>, which had caused minor damage to the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>. It was
+replaced by a modern alternative and the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> was cleaned and preserved.
+The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> was then re-seated in the case, after which key&shy;board
+and 1-wire interface were reconnected.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304223/042/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Four 3.6V AA-size batteries installed in the two battery compartments" data-balloon-length="large">
+<a href="img/304223/042/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Four 3.6V AA-size batteries installed in the two battery compartments" data-balloon-length="large">
+            <img src="img/304223/042/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Four 3.6V AA-size batteries installed in the two battery compartments"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+At this point it was decided to leave the optical interface unused for now,
+as suitable replacement parts had not yet been located. After reconnecting the
+battery compartment, the bottom panel was mounted in place again. Next,
+four military 3.6V AA-size lithium batteries were installed in the two
+battery compartments. They provide two separate 7.2V supply voltages;
+one of which is only used to power the Static <span class="short tooltip-red" data-balloon-pos="up" aria-label="Random Access Memory">RAM</span> chips and the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Real Time Clock">RTC</span>.
+After pressing the <a href="img/304223/036/full.jpg"><span data-balloon-pos="up" aria-label="More about: orange button on the keyboard">orange button on the keyboard</span></a>,
+the device gradually came to life with an
+<a href="img/304223/032/full.jpg"><span data-balloon-pos="up" aria-label="More about: initialisation message">initialisation message</span></a> and
+a memory test.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Problems
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><s>Two screws binding</s>            <li><s>Exterior badly corroded</s>            <li><s>Interior partly corroded</s>            <li><s><span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> partly corroded</s>            <li>Optical interface broken            <li><s>100&#181;F capacitor leaking</s>          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Fixed
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>Two binding screws drilled out, thread cleared            <li>Interior cleaned, corrosion removed            <li>Exterior cleaned, corrosion removed, partly repainted            <li>Opto transmitter and receiver removed            <li>Both sides of <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> thoroughly cleaned            <li>1000&#181;F capacitor replaced            <li>Four 3.6V Lithium batteries fitted          </ul>
+</font></td></tr></table><div style="height: 14px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Corroded case shell">          <img src="img/304223/000/thumbnail.jpg"
+           alt="Corroded case shell"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TCU-7000 in corroded enclosure">          <img src="img/304223/003/thumbnail.jpg"
+           alt="TCU-7000 in corroded enclosure"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/003"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Corroded ports of the optical interface">          <img src="img/304223/001/thumbnail.jpg"
+           alt="Corroded ports of the optical interface"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/001"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Corroded inside of the case shell">          <img src="img/304223/002/thumbnail.jpg"
+           alt="Corroded inside of the case shell"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/002"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Leaking capacitor">          <img src="img/304223/005/thumbnail.jpg"
+           alt="Leaking capacitor"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/005"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Corroded coaxial connector">          <img src="img/304223/004/thumbnail.jpg"
+           alt="Corroded coaxial connector"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/004"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Corrosion of the bottom panel">          <img src="img/304223/014/thumbnail.jpg"
+           alt="Corrosion of the bottom panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/014"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Four 3.6V AA-size batteries installed in the two battery compartments" data-balloon-length="large">          <img src="img/304223/042/thumbnail.jpg"
+           alt="Four 3.6V AA-size batteries installed in the two battery compartments"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304223/042"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'D'" onClick="slideOpen('slide_4'); slideCurrent('slide_4', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">D</span></div></div><div style="height: 40px;"></div>
+<div id="slide_4" class="slide" onClick="slideClose('slide_4')"><span class="slide_close_left" onClick="slideClose('slide_4')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_4', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304223/000/full.jpg" alt="Corroded case shell">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304223/003/full.jpg" alt="TCU-7000 in corroded enclosure">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304223/001/full.jpg" alt="Corroded ports of the optical interface">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304223/002/full.jpg" alt="Corroded inside of the case shell">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304223/005/full.jpg" alt="Leaking capacitor">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304223/004/full.jpg" alt="Corroded coaxial connector">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304223/014/full.jpg" alt="Corrosion of the bottom panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304223/042/full.jpg" alt="Four 3.6V AA-size batteries installed in the two battery compartments">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_4', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_4', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=spec></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Specifications</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Device</div>Terminal control unit            <li><div style="display:inline-block; width:100px;">Purpose</div><a href="../../emu.htm">Secure messaging</a> and control of <a href="../../../radio/hf7000">HF-7000 radio</a>            <li><div style="display:inline-block; width:100px;">Model</div>TCU-7000            <li><div style="display:inline-block; width:100px;">Manufacturer</div><span class="short" aria-label="ANT Nachrichtentechnik" data-balloon-pos="up"><a href="../index.htm" class="short" >ANT</a></span>, <a href="#spec_man">see below</a>            <li><div style="display:inline-block; width:100px;">Reseller</div><span class="short" aria-label="Telefunken System Technik" data-balloon-pos="up"><a href="../../../manuf/telefunken" class="short" >TST</a></span>, <a href="#spec_seller">see below</a>            <li><div style="display:inline-block; width:100px;">Year</div>1997            <li><div style="display:inline-block; width:100px;">Classification</div><span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span> Confidential            <li><div style="display:inline-block; width:100px;">Display</div>2 &#215; 40 characters            <li><div style="display:inline-block; width:100px;">Keyboard</div>47 buttons (including 5 soft keys)            <li><div style="display:inline-block; width:100px;">Interfaces</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Threaded Neill Concelman (threaded version of the BNC connector)" data-balloon-length="large">TNC</span> (HRU, CCU), Optical (peripherals)            <li><div style="display:inline-block; width:100px;">Power</div>2 &#215; 7.2V (internal)            <li><div style="display:inline-block; width:100px;">Batteries</div>4 &#215; 3.6V AA-size Lithium            <li><div style="display:inline-block; width:100px;">Tempest</div>AMSG 784 B            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Electromagnetic Compatibility">EMC</span></div>VG 95332            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Electromagnetic Pulse">EMP</span></div>VG 95373, VG 95903            <li><div style="display:inline-block; width:100px;">Approval</div><span class="short" aria-label="Bundesamt f&#252;r Sicherheit in der Informationstechnik" data-balloon-pos="up"><a href="../../../intel/bsi" class="short" >BSI</a></span>-Z-0004-2004, <span class="short" aria-label="Bundesamt f&#252;r Sicherheit in der Informationstechnik" data-balloon-pos="up"><a href="../../../intel/bsi" class="short" >BSI</a></span>-VSA 10281 <a href="#ref_2">[2]</a>            <li><div style="display:inline-block; width:100px;">Temperature</div>-20&#176;C to +55&#176;C            <li><div style="display:inline-block; width:100px;">Dimensions</div>205 &#215; 120 &#215; 38 mm            <li><div style="display:inline-block; width:100px;">Weight</div>990 g (with batteries)          </ul>
+</font></td></tr></table>        <a name=spec_ver></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Versions
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">TCU-7000</div>Initial version (1997), developed by <span class="short" aria-label="ANT Nachrichtentechnik" data-balloon-pos="up"><a href="../index.htm" class="short" >ANT</a></span>, sold by <a href="../../bosch">Bosch</a>            <li><div style="display:inline-block; width:100px;">TCU-7000L</div>?            <li><div style="display:inline-block; width:100px;">TCU-7000XP</div>Combination of TCU-7000 and TCU-7000L (<span class="short" aria-label="Rohde & Schwarz" data-balloon-pos="up"><a href="../../../manuf/rs" class="short" >R&S</a></span>, 2004)            <li><div style="display:inline-block; width:100px;">TCU-7000E</div>Elbit version (2022)          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=spec_man></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Manufacturer
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:60px;">1994</div><a href="../../../manuf/ant">ANT</a>            <li><div style="display:inline-block; width:60px;">1995</div><a href="../../bosch">Bosch</a>            <li><div style="display:inline-block; width:60px;">2004</div><span class="short" aria-label="Rohde & Schwarz" data-balloon-pos="up"><a href="../../../manuf/rs" class="short" >R&S</a></span>            <li><div style="display:inline-block; width:60px;">?</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Aerospace Data Security GmbH">ASDS</span>            <li><div style="display:inline-block; width:60px;">2007</div><a href="../../../manuf/elbit">Elbit</a>          </ul>
+</font></td></tr></table>        <a name=spec_seller></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Reseller
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:60px;">1997</div><span class="short" aria-label="Telefunken System Technik" data-balloon-pos="up"><a href="../../../manuf/telefunken" class="short" >TST</a></span>            <li><div style="display:inline-block; width:60px;">1999</div>EADS            <li><div style="display:inline-block; width:60px;">2000</div>EADS Racoms            <li><div style="display:inline-block; width:60px;">2004</div><a href="../../../manuf/telefunken">Telefunken Racoms</a>            <li><div style="display:inline-block; width:60px;">2007</div><a href="../../../manuf/elbit">Elbit</a>          </ul>
+</font></td></tr></table><div style="height: 20px;"></div>        <a name=data></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Datasheets</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=a>
+            <a name="data_1"></a>
+            <li><a href="../../../data/ic/MC68302.pdf">MC68302, Integrated multiprotocol processor</a><br />
+Motorola, 1995.
+            <p />
+            <a name="data_2"></a>
+            <li><a href="../../../data/ic/UPD43256B.pdf">&#181;PD43256B, 32KB CMOS Static RAM</a><br />
+NEC Corporation, 1990. Version May 1997 N.
+            <p />
+            <a name="data_3"></a>
+            <li><a href="../../../data/ic/X28C256.pdf">X28C256, 5 Volt, byte-alterable EEPROM</a><br />
+Xicor, 1991. Version 1 August 1997.
+            <p />
+            <a name="data_4"></a>
+            <li><a href="../../../data/ic/PCF8583.pdf">PCF8583, Clock and calendar with 240 byte RAM</a><br />
+NXP (formerly: Philips), version 6 October 2010.
+            <p />
+            <a name="data_5"></a>
+            <li><a href="../../../data/ic/PCF8584.pdf">PCF8584, I2C-bus controller</a><br />
+NXP (formerly: Philips), 1997.
+            <p />
+            <a name="data_6"></a>
+            <li><a href="../../../data/ic/AM27C1024.pdf">AM27C1024, 1 Megabit (65K &#215; 16 bit) CMOS EPROM</a><br />
+AMD, May 1998.
+            <p />
+            <a name="data_7"></a>
+            <li><a href="../../../data/ic/MAX635.pdf">MAX635, Inverting Switching Regulator (-5V)</a><br />
+Maxim, 1991.
+            <p />
+            <a name="data_8"></a>
+            <li><a href="../../../data/fet/vp2206.pdf">VP2206, P-Channel enhancement-mode vertical DMOS FET</a><br />
+Spupertex Inc., 2013.
+          </ol type=a>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=doc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Documentation</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <a name="doc_1"></a>
+            <li><a href="../../../radio/hf7000/files/HF7000_DE.pdf">Telefunken Racoms, <i>HF Ger&#228;tefamilie 7000</i></a><br />
+12-page full-colour brochure (German). April 2006. Retrieved May 2013.
+            <p />
+            <a name="doc_2"></a>
+            <li><a href="../../../radio/hf7000/files/HF7000.pdf">Telefunken Racoms, <i>HF Ger&#228;tefamilie 7000</i></a><br />
+12-page full-colour brochure (German). April 2009. Retrieved August 2010.
+          </ol type=A>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+<li><font color=#F52E00>Anonymous donor, TCU-7000 - THANKS !</font><br />
+Crypto Museum, June 2024.
+            <p />
+            <a name="ref_2"></a>
+            <li><a href="https://www.bsi.bund.de/SharedDocs/Zulassung/DE/Produkte/TCU_7000XP.html" target="_blank"><i>BSI-Schift 7164: Liste der zugelassenen IT-Sicherheitsprodukte und -systeme</i></a><br />
+List of approved IT security products and systems (German).<br />
+<span class="short" aria-label="Bundesamt f&#252;r Sicherheit in der Informationstechnik" data-balloon-pos="up"><a href="../../../intel/bsi" class="short" >BSI</a></span>. Visited 6 July 2024.
+            <p />
+            <a name="ref_3"></a>
+            <li><a href="http://www.tfk-racoms.com/en/company/history">Telefunken Racoms, <i>History</i></a><br />
+Timeline -> 1985, SY5000 adaptive HF system to NATO special services.<br />
+Telefunken website. Retrieved May 2009.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../../../radio/hf7000">HF-7000, special forces radio set</a><br />
+            <li><a href="../../../spy/fs5000">FS-5000, stay-behind radio set</a><br />
+            <li><a href="../index.htm">About ANT, the developer</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Sunday 07 July 2024. Last changed: Wednesday, 05 November 2025 - 11:47 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

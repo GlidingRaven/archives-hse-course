@@ -1,0 +1,3406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>Spy sets</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="Keywords" content="spy radio set, agentenfunk, agentenfunkgerät, clandestine radio service">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../index.htm"><img src="../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but sub first sel" onClick="location.href='../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../spy/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../spy/glossary.htm';" >Glossary</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../spy/ww2.htm';" >World War II</div>
+          <div class="but sub" onClick="location.href='../spy/coldwar.htm';" >Cold War</div>
+          <div class="but sub" onClick="location.href='../spy/sf.htm';" >Special forces</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Spy radio sets used by Stay-Behind Organisations in Europe" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../spy/sbo/index.htm';" >Stay-Behind</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Short Range Agent Communication" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../spy/srac.htm';" >SRAC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="One-Way Voice Link - Numbers Stations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../spy/owvl/index.htm';" >OWVL</div>
+</div>
+          <div class="but sub" onClick="location.href='../spy/rx.htm';" >Receivers</div>
+          <div class="but sub" onClick="location.href='../spy/other.htm';" >Other</div>
+          <div class="spacer"></div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Countries
+          </div>
+          <div class="hidden">
+            <div class="but sub" onClick="location.href='../spy/sbo/at/index.htm';" >Austria</div>
+            <div class="but sub" onClick="location.href='../spy/belgium.htm';" >Belgium</div>
+            <div class="but sub" onClick="location.href='../spy/cs.htm';" >Czechoslovakia</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former East-Germany" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../spy/ddr.htm';" >DDR</div>
+</div>
+            <div class="but sub" onClick="location.href='../spy/kyynel/index.htm';" >Finland</div>
+            <div class="but sub" onClick="location.href='../spy/fr.htm';" >France</div>
+            <div class="but sub" onClick="location.href='../spy/de.htm';" >Germany</div>
+            <div class="but sub" onClick="location.href='../spy/hu.htm';" >Hungary</div>
+            <div class="but sub" onClick="location.href='../spy/italy.htm';" >Italy</div>
+            <div class="but sub" onClick="location.href='../spy/japan.htm';" >Japan</div>
+            <div class="but sub" onClick="location.href='../spy/nl.htm';" >Netherlands</div>
+            <div class="but sub" onClick="location.href='../spy/norway.htm';" >Norway</div>
+            <div class="but sub" onClick="location.href='../spy/poland.htm';" >Poland</div>
+            <div class="but sub" onClick="location.href='../spy/sweden.htm';" >Sweden</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United Kingdom" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../spy/uk.htm';" >UK</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United States of America" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../spy/usa.htm';" >USA</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former Soviet Union" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../spy/ussr.htm';" >USSR</div>
+</div>
+            <div class="but sub" onClick="location.href='../spy/yugo.htm';" >Yugoslavia</div>
+          </div>
+          </div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../index.htm"><img src="../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Spy radio sets</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Clandestine radio equipment</b>
+<br />
+<br />
+Ever since the invention of radio, people have been trying to use transmitters
+and receivers for secret communication. In times of war, spies, agents and the
+resistance would use such secret communication to contact their home office or
+government and send important information to them.
+Such secret communication systems are often called <b>Spy Radio Sets</b>,
+or <b>Spy Sets</b> for short.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+We are well aware that the term <b>Spy Sets</b> is not always correct. The equipment
+described in this section was also used by secret agents, Special Forces (SF),
+embassies, diplomatic services, resistance groups,
+<a href="sbo"><span data-balloon-pos="up" aria-label="More about: stay-behind organisations">stay-behind organisations</span></a>
+and others. However, as it has become a popular expression,
+we call all of them <b>Spy Sets</b> here.
+<br />
+<br />
+Please note that we are not trying to present a complete overview of all
+spy radio sets that have ever been used in the world.
+We only describe the sets that we have in our own collection,
+or that we've been able to research.
+That said, we do show a rather representative cross-section
+of the many different spy radios out there,
+and we try to describe them to the best of our abilities and provide
+as much information as possible.
+<br />
+<br />
+For a complete list of the spy sets covered on this website, please
+check our , or click any of the thumbnail images below.
+For those interested in the mysterious
+<a href="owvl/index.htm"><span data-balloon-pos="up" aria-label="More about: Number Stations">Number Stations</span></a> on the SW-bands,
+please check our <a href="owvl/index.htm"><span data-balloon-pos="up" aria-label="More about: OWVL-page">OWVL-page</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="list.htm">Index of spy sets</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="glossary.htm">Glossary</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Picture of a Type 3 Mk II (B2) in action." class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Picture of a Type 3 Mk II (B2) in action." class="tooltip-red">
+            <img src="b2/img/b2_mjc_01_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Picture of a Type 3 Mk II (B2) in action."
+             border=0
+             width=298 height=446
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+If you can provide additional information on certain items, please do not
+hesitate to <a href="mailto:info@cryptomuseum.com"><span data-balloon-pos="up" aria-label="Send e-mail to: info@cryptomuseum.com">contact</span></a> us. If you have any surplus documentation or
+equipment, or if you have an item that is listed on our
+<a href="../wanted/index.htm"><span data-balloon-pos="up" aria-label="More about: wanted page">wanted page</span></a>, please
+<a href="mailto:info@cryptomuseum.com"><span data-balloon-pos="up" aria-label="Send e-mail to: info@cryptomuseum.com">contact us</span></a> directly.
+We look forward to hearing from you.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=countries></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Countries
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=sbo/at>
+<div  data-balloon-pos="up" aria-label="Austria (Österreich)">          <img src="be20/img/302318/047/thumbnail.jpg"
+           alt="Austria (Österreich)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=sbo/at>Austria</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=belgium.htm>
+<div  data-balloon-pos="up" aria-label="Belgium">          <img src="mcr1_bg/img/303049/010/thumbnail.jpg"
+           alt="Belgium"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=belgium.htm>Belgium</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=cs.htm>
+<div  data-balloon-pos="up" aria-label="Czechoslovakia">          <img src="pluto/img/302157/000/thumbnail.jpg"
+           alt="Czechoslovakia"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=cs.htm>Czech</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ddr.htm>
+<div  data-balloon-pos="up" aria-label="Spy sets developed or used in the former DDR (East-Germany)" data-balloon-length="large">          <img src="ddr2/img/302973/166/thumbnail.jpg"
+           alt="Spy sets developed or used in the former DDR (East-Germany)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ddr.htm>DDR</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=kyynel/index.htm>
+<div  data-balloon-pos="up" aria-label="Finland">          <img src="kyynel/img/301629/041/thumbnail.jpg"
+           alt="Finland"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=kyynel/index.htm>Finland</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=fr.htm>
+<div  data-balloon-pos="up" aria-label="Spy sets made in (or used by) France">          <img src="bcra/img/303187/040/thumbnail.jpg"
+           alt="Spy sets made in (or used by) France"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=fr.htm>France</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=de.htm>
+<div  data-balloon-pos="up" aria-label="Spy sets developed in Germany before, during and after WWII" data-balloon-length="large">          <img src="sp15/img/300079/082/thumbnail.jpg"
+           alt="Spy sets developed in Germany before, during and after WWII"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=de.htm>Germany</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=hu.htm>
+<div  data-balloon-pos="up" aria-label="Hungarian spy radio sets">          <img src="ak20/img/302148/017/thumbnail.jpg"
+           alt="Hungarian spy radio sets"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=hu.htm>Hungary</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=italy.htm>
+<div  data-balloon-pos="up" aria-label="Italian spy radio sets">          <img src="se90_40/img/302870/017/thumbnail.jpg"
+           alt="Italian spy radio sets"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=italy.htm>Italy</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=japan.htm>
+<div  data-balloon-pos="up" aria-label="Japanese WWII miniature VHF transceiver Type 94 Mark 6 (94-6)" data-balloon-length="large">          <img src="94-6/img/301579/043/thumbnail.jpg"
+           alt="Japanese WWII miniature VHF transceiver Type 94 Mark 6 (94-6)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=japan.htm>Japan</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=nl.htm>
+<div  data-balloon-pos="up" aria-label="The Netherlands">          <img src="zo47/img/302296/096/thumbnail.jpg"
+           alt="The Netherlands"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=nl.htm>NL</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=poland.htm>
+<div  data-balloon-pos="up" aria-label="Spy sets developed and built by the Poles in the UK (during WWII)" data-balloon-length="large">          <img src="bp3/img/301941/026/thumbnail.jpg"
+           alt="Spy sets developed and built by the Poles in the UK (during WWII)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=poland.htm>Poland</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=sweden.htm>
+<div  data-balloon-pos="up" aria-label="Sweden">          <img src="ra190/img/301951/078/thumbnail.jpg"
+           alt="Sweden"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=sweden.htm>Sweden</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=uk.htm>
+<div  data-balloon-pos="up" aria-label="Spy sets created and/or used by the UK (during and after WWII)" data-balloon-length="large">          <img src="a3/img/300482/021/thumbnail.jpg"
+           alt="Spy sets created and/or used by the UK (during and after WWII)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=uk.htm>UK</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=usa.htm>
+<div  data-balloon-pos="up" aria-label="Spy sets used and/or created by the USA">          <img src="rs1/img/300140/011/thumbnail.jpg"
+           alt="Spy sets used and/or created by the USA"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=usa.htm>USA</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ussr.htm>
+<div  data-balloon-pos="up" aria-label="Spy sets created and or used by the former USSR (Russia) or Warsaw Pact" data-balloon-length="large">          <img src="r350/img/300738/000/thumbnail.jpg"
+           alt="Spy sets created and or used by the former USSR (Russia) or Warsaw Pact"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ussr.htm>USSR</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=yugo.htm>
+<div  data-balloon-pos="up" aria-label="Yugoslavia">          <img src="rtp8/img/302280/103/thumbnail.jpg"
+           alt="Yugoslavia"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=yugo.htm>Yugoslavia</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=other.htm>
+<div  data-balloon-pos="up" aria-label="Spy sets that do not fall into any of the othe categories" data-balloon-length="large">          <img src="sweetheart/img/300704/024/thumbnail.jpg"
+           alt="Spy sets that do not fall into any of the othe categories"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=other.htm>Other</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <a name=themes></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Themes
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=ww2.htm>
+<div  data-balloon-pos="up" aria-label="World War II">          <img src="b2/img/301684/000/thumbnail.jpg"
+           alt="World War II"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ww2.htm>WWII</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=coldwar.htm>
+<div  data-balloon-pos="up" aria-label="Spy radio sets used during the Cold War">          <img src="r353/img/300148/132/thumbnail.jpg"
+           alt="Spy radio sets used during the Cold War"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=coldwar.htm>Cold War</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=gladio/index.htm>
+<div  data-balloon-pos="up" aria-label="Spy radio sets used by Stay-Behind Organisations (SBO), also known as 'Gladio'." data-balloon-length="large">          <img src="sp15/img/302081/225/thumbnail.jpg"
+           alt="Spy radio sets used by Stay-Behind Organisations (SBO), also known as 'Gladio'."
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=gladio/index.htm>Stay-Behind</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=sf.htm>
+<div  data-balloon-pos="up" aria-label="Special Forces (SF), also known as Special Operations Forces (SOF)" data-balloon-length="large">          <img src="../radio/se6861/img/300721/036/thumbnail.jpg"
+           alt="Special Forces (SF), also known as Special Operations Forces (SOF)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=sf.htm>SF</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=srac.htm>
+<div  data-balloon-pos="up" aria-label="Short Range Agent Communication">          <img src="../covert/deaddrop/uher/img/302167/006/thumbnail.jpg"
+           alt="Short Range Agent Communication"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=srac.htm>SRAC</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=owvl/index.htm>
+<div  data-balloon-pos="up" aria-label="One-Way Voice Links (OWVL), also known as the mysterious Numbers Stations." data-balloon-length="large">          <img src="owvl/img/301099/045/thumbnail.jpg"
+           alt="One-Way Voice Links (OWVL), also known as the mysterious Numbers Stations."
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=owvl/index.htm>OWVL</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=rx.htm>
+<div  data-balloon-pos="up" aria-label="Stand-alone receivers">          <img src="zenith/1000/img/302171/003/thumbnail.jpg"
+           alt="Stand-alone receivers"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=rx.htm>Receivers</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=oranje/index.htm>
+<div  data-balloon-pos="up" aria-label="Radio Oranje (Radio Orange)">          <img src="oranje/img/ro_QW_thumb.jpg"
+           alt="Radio Oranje (Radio Orange)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=oranje/index.htm>Radio Oranje</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=rhn>
+<div  data-balloon-pos="up" aria-label="Radio Omroep Herrijzend Nederland (The Netherlands Revived)" data-balloon-length="large">          <img src="../img/thumb.jpg"
+           alt="Radio Omroep Herrijzend Nederland (The Netherlands Revived)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=rhn>Herreizend Nederland</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Other clandestine equipment</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Please note that this part of the website only deals with transmitters and
+receivers used for clandestine operations, commonly referred to as <b>spy radios</b>.
+In reality however, many other electronic devices have been used in clandestine
+warfare, such as equipment used for tracking enemy transmitters
+(<a href="../df/index.htm"><span data-balloon-pos="up" aria-label="More about: direction finders">direction finders</span></a>),
+<a href="../df/index.htm"><span data-balloon-pos="up" aria-label="More about: intercept receivers">intercept receivers</span></a>,
+<a href="../df/index.htm"><span data-balloon-pos="up" aria-label="More about: TSCM equipment">TSCM equipment</span></a>,
+<a href="../covert/radio/index.htm"><span data-balloon-pos="up" aria-label="More about: covert radios">covert radios</span></a>,
+<a href="../burst/index.htm"><span data-balloon-pos="up" aria-label="More about: burst encoders">burst encoders</span></a>,
+<a href="../covert/camera/index.htm"><span data-balloon-pos="up" aria-label="More about: spy cameras">spy cameras</span></a>,
+<a href="../covert/rec/index.htm"><span data-balloon-pos="up" aria-label="More about: concealed recorders">concealed recorders</span></a>
+and much more. Information about these additional devices can be found
+<a href="../covert/index.htm"><span data-balloon-pos="up" aria-label="More about: elsewhere on this website">elsewhere on this website</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Related subjects
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../radar/eureka/index.htm>
+<div  data-balloon-pos="up" aria-label="Eureka beacon">          <img src="../img/thumb.jpg"
+           alt="Eureka beacon"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../radar/eureka/index.htm>Eureka</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Spy radio sets on this website</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=mk5/index.htm>
+<div  data-balloon-pos="up" aria-label="Whaddon Mk V spy radio set (La Paracette) - 1941">          <img src="mk5/img/mk5_thumb.jpg"
+           alt="Whaddon Mk V spy radio set (La Paracette) - 1941"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mk5/index.htm>Mk V<br />Paracette</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=mk7/index.htm>
+<div  data-balloon-pos="up" aria-label="Whaddon Mk VII spy radio set  (Paraset)">          <img src="mk7/img/303467/002/thumbnail.jpg"
+           alt="Whaddon Mk VII spy radio set  (Paraset)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mk7/index.htm>Mk VII<br />Paraset</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=mk15/index.htm>
+<div  data-balloon-pos="up" aria-label="Whaddon Mk XV (Mark 15) spy radio set - 1943">          <img src="mk15/img/303702/033/thumbnail.jpg"
+           alt="Whaddon Mk XV (Mark 15) spy radio set - 1943"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mk15/index.htm>Mk XV</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=sstr1>
+<div  data-balloon-pos="up" aria-label="American suitcase spy radio set SSTR-1 (WWII)">          <img src="sstr1/img/303491/023/thumbnail.jpg"
+           alt="American suitcase spy radio set SSTR-1 (WWII)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=sstr1>SSTR-1</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=rbz/index.htm>
+<div  data-balloon-pos="up" aria-label="RBZ receiver (WWII)">          <img src="rbz/img/301585/005/thumbnail.jpg"
+           alt="RBZ receiver (WWII)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=rbz/index.htm>RBZ</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=rs1/index.htm>
+<div  data-balloon-pos="up" aria-label="RS-1 (AN/GRC109)">          <img src="rs1/img/300140/005/thumbnail.jpg"
+           alt="RS-1 (AN/GRC109)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=rs1/index.htm>RS-1</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=rs6/index.htm>
+<div  data-balloon-pos="up" aria-label="RS-6">          <img src="rs6/img/300768/005/thumbnail.jpg"
+           alt="RS-6"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=rs6/index.htm>RS-6</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=as3/index.htm>
+<div  data-balloon-pos="up" aria-label="Automatic Station 3 (CIA)">          <img src="as3/img/303434/073/thumbnail.jpg"
+           alt="Automatic Station 3 (CIA)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=as3/index.htm>AS-3</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=as3/at3.htm>
+<div  data-balloon-pos="up" aria-label="Automatic CIA agent radio set">          <img src="as3/img/303434/036/thumbnail.jpg"
+           alt="Automatic CIA agent radio set"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=as3/at3.htm>AT-3</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=as3/rre11.htm>
+<div  data-balloon-pos="up" aria-label="CIA receiver RR/E-11">          <img src="as3/img/303407/014/thumbnail.jpg"
+           alt="CIA receiver RR/E-11"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=as3/rre11.htm>RR/E-11</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=rst101/index.htm>
+<div  data-balloon-pos="up" aria-label="Belgian RST-101 spy radio set (MBLE)">          <img src="rst101/img/303125/034/thumbnail.jpg"
+           alt="Belgian RST-101 spy radio set (MBLE)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=rst101/index.htm>RST-101<br />Paraset</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=prc64/index.htm>
+<div  data-balloon-pos="up" aria-label="AN/PRC-64 and Delco 5300">          <img src="prc64/img/301090/032/thumbnail.jpg"
+           alt="AN/PRC-64 and Delco 5300"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=prc64/index.htm>PRC-64<br />RS-69</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=rs100>
+<div  data-balloon-pos="up" aria-label="RS-100 integrated spy radio set">          <img src="rs100/img/304031/000/thumbnail.jpg"
+           alt="RS-100 integrated spy radio set"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=rs100>RS-100</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=tar224/index.htm>
+<div  data-balloon-pos="up" aria-label="TAR-224A spy radio set">          <img src="tar224/img/301651/035/thumbnail.jpg"
+           alt="TAR-224A spy radio set"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=tar224/index.htm>TAR-224</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=12wg/index.htm>
+<div  data-balloon-pos="up" aria-label="4-piece (or 2-piece) valve-based spy radio set">          <img src="12wg/img/301778/134/thumbnail.jpg"
+           alt="4-piece (or 2-piece) valve-based spy radio set"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=12wg/index.htm>12WG</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=sp15/index.htm>
+<div  data-balloon-pos="up" aria-label="German spy set SP-15">          <img src="sp15/img/300079/082/thumbnail.jpg"
+           alt="German spy set SP-15"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=sp15/index.htm>SP-15</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=sp15/nl.htm>
+<div  data-balloon-pos="up" aria-label="Dutch version of the SP-15 with synthesizer">          <img src="sp15/img/302081/225/thumbnail.jpg"
+           alt="Dutch version of the SP-15 with synthesizer"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=sp15/nl.htm>FSS-7</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=sp20/index.htm>
+<div  data-balloon-pos="up" aria-label="German spy set SP-20">          <img src="sp20/img/300080/035/thumbnail.jpg"
+           alt="German spy set SP-20"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=sp20/index.htm>SP-20</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=prm4150/index.htm>
+<div  data-balloon-pos="up" aria-label="Racal PRM-4150">          <img src="prm4150/img/prm4150_thumbnail.jpg"
+           alt="Racal PRM-4150"
+           border="0" width=75 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=prm4150/index.htm>PRM-4150</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=b2/index.htm>
+<div  data-balloon-pos="up" aria-label="Type 3 Mark II, also known as the B2">          <img src="b2/img/301684/000/thumbnail.jpg"
+           alt="Type 3 Mark II, also known as the B2"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=b2/index.htm>3 Mk II<br />B2</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=a3/index.htm>
+<div  data-balloon-pos="up" aria-label="The UK Type A Mk. III (A3)">          <img src="a3/img/300482/021/thumbnail.jpg"
+           alt="The UK Type A Mk. III (A3)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=a3/index.htm>A Mk. III<br />A3</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=od/index.htm>
+<div  data-balloon-pos="up" aria-label="Homemade spy radio station used by the Ordedienst (OD) in the Netherlands during WWII" data-balloon-length="large">          <img src="od/img/303549/005/thumbnail.jpg"
+           alt="Homemade spy radio station used by the Ordedienst (OD) in the Netherlands during WWII"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=od/index.htm>OD Set</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=mk119/index.htm>
+<div  data-balloon-pos="up" aria-label="Mk. 119">          <img src="mk119/img/301631/009/thumbnail.jpg"
+           alt="Mk. 119"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mk119/index.htm>Mk.119</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=mk122/index.htm>
+<div  data-balloon-pos="up" aria-label="Mk. 122">          <img src="mk122/img/301508/004/thumbnail.jpg"
+           alt="Mk. 122"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mk122/index.htm>Mk.122</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=mk123/index.htm>
+<div  data-balloon-pos="up" aria-label="Mk. 123">          <img src="mk123/img/300153/000/thumbnail.jpg"
+           alt="Mk. 123"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mk123/index.htm>Mk.123</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=mk301/index.htm>
+<div  data-balloon-pos="up" aria-label="Mk. 301 Receiver">          <img src="mk301/img/301509/018/thumbnail.jpg"
+           alt="Mk. 301 Receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mk301/index.htm>Mk.301</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=mk328/index.htm>
+<div  data-balloon-pos="up" aria-label="Mk. 328 Receiver">          <img src="mk328/img/300559/017/thumbnail.jpg"
+           alt="Mk. 328 Receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mk328/index.htm>Mk.328</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=mcr1/index.htm>
+<div  data-balloon-pos="up" aria-label="The UK Type 36/1 (MCR-1)">          <img src="mcr1/img/300419/056/thumbnail.jpg"
+           alt="The UK Type 36/1 (MCR-1)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mcr1/index.htm>Type 36/1<br />MCR-1</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=mcr1_bg/index.htm#post>
+<div  data-balloon-pos="up" aria-label="Belgian post-war version of the UK Type 36/1 (MCR-1), made by MBLE (Philips)" data-balloon-length="large">          <img src="mcr1_bg/img/303049/010/thumbnail.jpg"
+           alt="Belgian post-war version of the UK Type 36/1 (MCR-1), made by MBLE (Philips)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mcr1_bg/index.htm#post>MCR-1 Bg</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=oranje/acorn.htm>
+<div  data-balloon-pos="up" aria-label="Clandestine midget receiver with three 'acorn' valves" data-balloon-length="large">          <img src="oranje/img/303571/017/thumbnail.jpg"
+           alt="Clandestine midget receiver with three 'acorn' valves"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=oranje/acorn.htm>Acorn</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=zo47/index.htm>
+<div  data-balloon-pos="up" aria-label="Philips ZO-47, used by Dutch stay-behind from 1947 onwards" data-balloon-length="large">          <img src="zo47/img/302296/096/thumbnail.jpg"
+           alt="Philips ZO-47, used by Dutch stay-behind from 1947 onwards"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=zo47/index.htm>ZO-47</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=sweetheart/index.htm>
+<div  data-balloon-pos="up" aria-label="Norwegian Receiver Type 31/1 (Sweetheart)">          <img src="sweetheart/img/300704/024/thumbnail.jpg"
+           alt="Norwegian Receiver Type 31/1 (Sweetheart)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=sweetheart/index.htm>Type 31/1<br />Sweetheart</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=ma444/index.htm>
+<div  data-balloon-pos="up" aria-label="Swedish built clandestine WW-II receiver (used by Norwegian resistance)" data-balloon-length="large">          <img src="ma444/img/301628/000/thumbnail.jpg"
+           alt="Swedish built clandestine WW-II receiver (used by Norwegian resistance)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ma444/index.htm>MA-444</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=op3/index.htm>
+<div  data-balloon-pos="up" aria-label="Polish OP-3 (Type 30/1) WW-II clandestine receiver">          <img src="op3/img/301627/010/thumbnail.jpg"
+           alt="Polish OP-3 (Type 30/1) WW-II clandestine receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=op3/index.htm>OP-3</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=94-6/index.htm>
+<div  data-balloon-pos="up" aria-label="Japanese miniature 94-6 VHF transceiver (WW-II)">          <img src="94-6/img/301579/043/thumbnail.jpg"
+           alt="Japanese miniature 94-6 VHF transceiver (WW-II)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=94-6/index.htm>94-6</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=kyynel/m5.htm>
+<div  data-balloon-pos="up" aria-label="Kyynel M-5 transmitter">          <img src="kyynel/img/303691/037/thumbnail.jpg"
+           alt="Kyynel M-5 transmitter"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=kyynel/m5.htm>M-5</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=kyynel/index.htm>
+<div  data-balloon-pos="up" aria-label="Kyynel M-10X Finnish/Swedish spy radio set (WW-II)">          <img src="kyynel/img/301629/018/thumbnail.jpg"
+           alt="Kyynel M-10X Finnish/Swedish spy radio set (WW-II)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=kyynel/index.htm>M-10</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=kyynel/m11.htm>
+<div  data-balloon-pos="up" aria-label="Kyynel M-11 and M-11X">          <img src="kyynel/img/303405/040/thumbnail.jpg"
+           alt="Kyynel M-11 and M-11X"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=kyynel/m11.htm>M-11</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=rion/pr56.htm>
+<div  data-balloon-pos="up" aria-label="PR-56A receiver">          <img src="rion/img/300673/006/thumbnail.jpg"
+           alt="PR-56A receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=rion/pr56.htm>PR-56A</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=rion/index.htm>
+<div  data-balloon-pos="up" aria-label="Rion spy radio set">          <img src="rion/img/302544/074/thumbnail.jpg"
+           alt="Rion spy radio set"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=rion/index.htm>Rion</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=r350/index.htm>
+<div  data-balloon-pos="up" aria-label="R-350 / Orel (Eagle)">          <img src="r350/img/300142/027/thumbnail.jpg"
+           alt="R-350 / Orel (Eagle)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=r350/index.htm>R-350</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=r350m/index.htm>
+<div  data-balloon-pos="up" aria-label="R-350M / Orel (Eagle)">          <img src="r350m/img/301476/043/thumbnail.jpg"
+           alt="R-350M / Orel (Eagle)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=r350m/index.htm>R-350M</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=r353/index.htm>
+<div  data-balloon-pos="up" aria-label="R-353 / Proton">          <img src="r353/img/300148/132/thumbnail.jpg"
+           alt="R-353 / Proton"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=r353/index.htm>R-353</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=r354/index.htm>
+<div  data-balloon-pos="up" aria-label="R-354 / Shmel (Bumblebee)">          <img src="r354/img/300573/007/thumbnail.jpg"
+           alt="R-354 / Shmel (Bumblebee)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=r354/index.htm>R-354</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=r394/k.htm>
+<div  data-balloon-pos="up" aria-label="R-394 K (Strizh-K)">          <img src="r394/img/301492/032/thumbnail.jpg"
+           alt="R-394 K (Strizh-K)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=r394/k.htm>R-394K</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=r394/km.htm>
+<div  data-balloon-pos="up" aria-label="R-394 KM (Strizh-KM)">          <img src="r394/img/300141/025/thumbnail.jpg"
+           alt="R-394 KM (Strizh-KM)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=r394/km.htm>R-394KM</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=r394/t.htm>
+<div  data-balloon-pos="up" aria-label="R-394T (Strizh-T) - based on R-394KM">          <img src="r394/img/302019/079/thumbnail.jpg"
+           alt="R-394T (Strizh-T) - based on R-394KM"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=r394/t.htm>R-394T</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=severok/index.htm>
+<div  data-balloon-pos="up" aria-label="Severok-K">          <img src="severok/img/301200/021/thumbnail.jpg"
+           alt="Severok-K"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=severok/index.htm>Severok-K</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=r397/ok.htm>
+<div  data-balloon-pos="up" aria-label="Soviet R-397-OK long distance digital spy transmitter" data-balloon-length="large">          <img src="r397/img/303612/000/thumbnail.jpg"
+           alt="Soviet R-397-OK long distance digital spy transmitter"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=r397/ok.htm>R-397-OK Okolsh</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../radio/se6861/index.htm>
+<div  data-balloon-pos="up" aria-label="AEG Telefunken SE-6861 (LAPR)">          <img src="../radio/se6861/img/300721/036/thumbnail.jpg"
+           alt="AEG Telefunken SE-6861 (LAPR)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../radio/se6861/index.htm>SE-6861</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../radio/mel/prc319/index.htm>
+<div  data-balloon-pos="up" aria-label="Special Forces radio station AN/PRC-319 (BA-1302)">          <img src="../radio/mel/prc319/img/300865/011/thumbnail.jpg"
+           alt="Special Forces radio station AN/PRC-319 (BA-1302)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../radio/mel/prc319/index.htm>PRC-319</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=fs5000/index.htm>
+<div  data-balloon-pos="up" aria-label="Telefunken spy set FS-5000 (HARPOON)">          <img src="fs5000/img/301524/080/thumbnail.jpg"
+           alt="Telefunken spy set FS-5000 (HARPOON)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=fs5000/index.htm>FS-5000</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../spy/hrm7000>
+<div  data-balloon-pos="up" aria-label="Telefunken tactical radio family HRM-7000 (HF-7000)" data-balloon-length="large">          <img src="../spy/hrm7000/img/304272/005/thumbnail.jpg"
+           alt="Telefunken tactical radio family HRM-7000 (HF-7000)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../spy/hrm7000>HRM-7000</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=r355/index.htm>
+<div  data-balloon-pos="up" aria-label="Russian R-355 Base Station Controller">          <img src="r355/img/301949/022/thumbnail.jpg"
+           alt="Russian R-355 Base Station Controller"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=r355/index.htm>R-355</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ra190/index.htm>
+<div  data-balloon-pos="up" aria-label="Swedish R-190 special forces radio">          <img src="ra190/img/301951/078/thumbnail.jpg"
+           alt="Swedish R-190 special forces radio"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ra190/index.htm>Ra-190</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=icf2001d/index.htm>
+<div  data-balloon-pos="up" aria-label="Sony ICF-2001D receiver that was used by some Soviet spies in the West" data-balloon-length="large">          <img src="icf2001d/img/302028/002/thumbnail.jpg"
+           alt="Sony ICF-2001D receiver that was used by some Soviet spies in the West"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=icf2001d/index.htm>ICF-2001D</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=zenith/1000/index.htm>
+<div  data-balloon-pos="up" aria-label="Zenith Royal 1000 Trans-Oceanic receiver">          <img src="zenith/1000/img/302171/003/thumbnail.jpg"
+           alt="Zenith Royal 1000 Trans-Oceanic receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=zenith/1000/index.htm>1000D</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=xcr30/index.htm>
+<div  data-balloon-pos="up" aria-label="Barlow-Wadley XCR-30 world receiver (500 kHz - 30 MHz)" data-balloon-length="large">          <img src="xcr30/img/303488/004/thumbnail.jpg"
+           alt="Barlow-Wadley XCR-30 world receiver (500 kHz - 30 MHz)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=xcr30/index.htm>XCR-30</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=sp15/uhu.htm>
+<div  data-balloon-pos="up" aria-label="BN-48 (UHU) backup receiver">          <img src="sp15/img/302037/022/thumbnail.jpg"
+           alt="BN-48 (UHU) backup receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=sp15/uhu.htm>UHU</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ap5/index.htm>
+<div  data-balloon-pos="up" aria-label="AP-5 spy radio set, developed by the Poles in the UK" data-balloon-length="large">          <img src="ap5/img/302731/036/thumbnail.jpg"
+           alt="AP-5 spy radio set, developed by the Poles in the UK"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ap5/index.htm>AP-5</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=bp3/index.htm>
+<div  data-balloon-pos="up" aria-label="BP-3 spy radio set developed by the Poles in the UK" data-balloon-length="large">          <img src="bp3/img/301941/026/thumbnail.jpg"
+           alt="BP-3 spy radio set developed by the Poles in the UK"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=bp3/index.htm>BP-3</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=bp5/index.htm>
+<div  data-balloon-pos="up" aria-label="BP-5 spy radio set developed by the Poles in the UK" data-balloon-length="large">          <img src="bp5/img/301941/045/thumbnail.jpg"
+           alt="BP-5 spy radio set developed by the Poles in the UK"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=bp5/index.htm>BP-5</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=pluto/index.htm>
+<div  data-balloon-pos="up" aria-label="PLUTO spy radio set (1958)">          <img src="pluto/img/302157/000/thumbnail.jpg"
+           alt="PLUTO spy radio set (1958)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=pluto/index.htm>Pluto</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=sirius/index.htm>
+<div  data-balloon-pos="up" aria-label="SIRIUS spy radio set (1962)">          <img src="sirius/img/302160/048/thumbnail.jpg"
+           alt="SIRIUS spy radio set (1962)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=sirius/index.htm>Sirius</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=pivonka/index.htm>
+<div  data-balloon-pos="up" aria-label="PIVO&#327;KA automatic morse keyer">          <img src="pivonka/img/302161/000/thumbnail.jpg"
+           alt="PIVO&#327;KA automatic morse keyer"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=pivonka/index.htm>Pivo&#328;ka</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=kongo/index.htm>
+<div  data-balloon-pos="up" aria-label="50W transmitter used in Congo">          <img src="kongo/img/302165/000/thumbnail.jpg"
+           alt="50W transmitter used in Congo"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=kongo/index.htm>Kongo</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=cs_300/index.htm>
+<div  data-balloon-pos="up" aria-label="20W transmitter used in Angola">          <img src="cs_300/img/302180/037/thumbnail.jpg"
+           alt="20W transmitter used in Angola"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=cs_300/index.htm>300A</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=cs_300/300ab.htm>
+<div  data-balloon-pos="up" aria-label="200W radio station used in Congo and Kurdistan (North Iraque)" data-balloon-length="large">          <img src="cs_300/img/302181/004/thumbnail.jpg"
+           alt="200W radio station used in Congo and Kurdistan (North Iraque)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=cs_300/300ab.htm>300AB</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=davor/index.htm>
+<div  data-balloon-pos="up" aria-label="FM broadcast propaganda transmitter">          <img src="davor/img/302182/001/thumbnail.jpg"
+           alt="FM broadcast propaganda transmitter"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=davor/index.htm>Davor</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ak20/index.htm>
+<div  data-balloon-pos="up" aria-label="Hungarian AK-20 spy radio set">          <img src="ak20/img/302148/017/thumbnail.jpg"
+           alt="Hungarian AK-20 spy radio set"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ak20/index.htm>AK-20</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=bodrog/index.htm>
+<div  data-balloon-pos="up" aria-label="Czechoslovakian VHF or UHF bug receiver">          <img src="bodrog/img/302197/007/thumbnail.jpg"
+           alt="Czechoslovakian VHF or UHF bug receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=bodrog/index.htm>Bodrog</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=rtp8/ssb.htm>
+<div  data-balloon-pos="up" aria-label="Single-piece version of the RTP-8/SSB spy radio set" data-balloon-length="large">          <img src="rtp8/img/302805/022/thumbnail.jpg"
+           alt="Single-piece version of the RTP-8/SSB spy radio set"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=rtp8/ssb.htm>RTP-8<br />SSB</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=rtp8/ssb3.htm>
+<div  data-balloon-pos="up" aria-label="Three-piece RTP8-SSB/3 spy radio set">          <img src="rtp8/img/302280/103/thumbnail.jpg"
+           alt="Three-piece RTP8-SSB/3 spy radio set"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=rtp8/ssb3.htm>RTP-8<br />SSB/3</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=s87_20/index.htm>
+<div  data-balloon-pos="up" aria-label="Abwehr 20W base station transmitter S-87/20">          <img src="s87_20/img/302843/061/thumbnail.jpg"
+           alt="Abwehr 20W base station transmitter S-87/20"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=s87_20/index.htm>S-87/20</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=se88_5/index.htm>
+<div  data-balloon-pos="up" aria-label="Abwehr 5W transmitter">          <img src="se88_5/img/se88_thumb.jpg"
+           alt="Abwehr 5W transmitter"
+           border="0" width=74 height=50
+           style="
+           opacity: 0.3;
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=se88_5/index.htm>SE-88/5</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=se90_40/s90_40.htm>
+<div  data-balloon-pos="up" aria-label="Abwehr base station transmitter S-90/40">          <img src="se90_40/img/302870/017/thumbnail.jpg"
+           alt="Abwehr base station transmitter S-90/40"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=se90_40/s90_40.htm>S-90/40</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=se98_3/index.htm>
+<div  data-balloon-pos="up" aria-label="Abwehr spy radio set SE-98/3">          <img src="se98_3/img/302382/183/thumbnail.jpg"
+           alt="Abwehr spy radio set SE-98/3"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=se98_3/index.htm>SE-98/3</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=se109_3/index.htm>
+<div  data-balloon-pos="up" aria-label="Abwehr spy radio set SE-109/3">          <img src="se109_3/img/302401/000/thumbnail.jpg"
+           alt="Abwehr spy radio set SE-109/3"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=se109_3/index.htm>SE-109/3</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=be20/3.htm>
+<div  data-balloon-pos="up" aria-label="Berger BE-20/3 three-piece radio set (Austria)">          <img src="be20/img/302439/039/thumbnail.jpg"
+           alt="Berger BE-20/3 three-piece radio set (Austria)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=be20/3.htm>BE-20/3</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=b2m>
+<div  data-balloon-pos="up" aria-label="Telefunken B2M, clone of the British B2">          <img src="b2m/img/304028/013/thumbnail.jpg"
+           alt="Telefunken B2M, clone of the British B2"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=b2m>B2M</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=esk52/index.htm>
+<div  data-balloon-pos="up" aria-label="Telefunken ESK-52 (made the French intelligence services)" data-balloon-length="large">          <img src="esk52/img/301940/002/thumbnail.jpg"
+           alt="Telefunken ESK-52 (made the French intelligence services)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=esk52/index.htm>ESK-52</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=esk632/index.htm>
+<div  data-balloon-pos="up" aria-label="Telefunken ESK-632 (made the French intelligence services)" data-balloon-length="large">          <img src="esk632/img/302862/000/thumbnail.jpg"
+           alt="Telefunken ESK-632 (made the French intelligence services)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=esk632/index.htm>ESK-632</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=bnd_conv/index.htm>
+<div  data-balloon-pos="up" aria-label="BND short-wave converter">          <img src="bnd_conv/img/302567/001/thumbnail.jpg"
+           alt="BND short-wave converter"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=bnd_conv/index.htm>Converter</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=pcr/index.htm>
+<div  data-balloon-pos="up" aria-label="Portable Communications Receiver (PCR)">          <img src="pcr/img/pcr_pa3esy_thumb.jpg"
+           alt="Portable Communications Receiver (PCR)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=pcr/index.htm>PCR</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=rs49/index.htm>
+<div  data-balloon-pos="up" aria-label="RS-49 modular spy radio station">          <img src="rs49/img/303526/030/thumbnail.jpg"
+           alt="RS-49 modular spy radio station"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=rs49/index.htm>RS-49</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=rs49/rt49.htm>
+<div  data-balloon-pos="up" aria-label="RT-49 transmitter">          <img src="rs49/img/303527/009/thumbnail.jpg"
+           alt="RT-49 transmitter"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=rs49/rt49.htm>RT-49</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=rs49/rr49.htm>
+<div  data-balloon-pos="up" aria-label="RR-49 receiver">          <img src="rs49/img/303526/000/thumbnail.jpg"
+           alt="RR-49 receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=rs49/rr49.htm>RR-49</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=rs59/index.htm>
+<div  data-balloon-pos="up" aria-label="RS-59 modular spy radio station">          <img src="rs59/img/302769/023/thumbnail.jpg"
+           alt="RS-59 modular spy radio station"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=rs59/index.htm>RS-59</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=sezha/index.htm>
+<div  data-balloon-pos="up" aria-label="A-610 SEZHA miniature receiver (USSR)">          <img src="sezha/img/303611/008/thumbnail.jpg"
+           alt="A-610 SEZHA miniature receiver (USSR)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=sezha/index.htm>A-610</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=tensor/index.htm>
+<div  data-balloon-pos="up" aria-label="Tensor 4-piece spy radio set (USSR)">          <img src="tensor/img/302748/077/thumbnail.jpg"
+           alt="Tensor 4-piece spy radio set (USSR)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=tensor/index.htm>Tensor</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=qrc222/index.htm>
+<div  data-balloon-pos="up" aria-label="QRC-222 suitcase spy radio set (1964)">          <img src="qrc222/img/302783/013/thumbnail.jpg"
+           alt="QRC-222 suitcase spy radio set (1964)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=qrc222/index.htm>QRC-222</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=radione/r3.htm>
+<div  data-balloon-pos="up" aria-label="Radione R3 receiver">          <img src="radione/img/302842/013/thumbnail.jpg"
+           alt="Radione R3 receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=radione/r3.htm>R3</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=radione/rs20m.htm>
+<div  data-balloon-pos="up" aria-label="Radione RS-20/M transmitter">          <img src="radione/img/303465/037/thumbnail.jpg"
+           alt="Radione RS-20/M transmitter"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=radione/rs20m.htm>RS-20/M</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ddr2/index.htm>
+<div  data-balloon-pos="up" aria-label="DDR spy radio set 'Type 2'">          <img src="ddr2/img/302973/166/thumbnail.jpg"
+           alt="DDR spy radio set 'Type 2'"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ddr2/index.htm>DDR 2</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=bcra/index.htm>
+<div  data-balloon-pos="up" aria-label="BCRA transmitter">          <img src="bcra/img/303187/040/thumbnail.jpg"
+           alt="BCRA transmitter"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=bcra/index.htm>BCRA</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ee2>
+<div  data-balloon-pos="up" aria-label="French plug-in transmitter Type 2">          <img src="ee2/img/303855/015/thumbnail.jpg"
+           alt="French plug-in transmitter Type 2"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ee2>EE-2</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=trtg2a/index.htm>
+<div  data-balloon-pos="up" aria-label="French TR-TG-2A spy radio set">          <img src="trtg2a/img/303178/039/thumbnail.jpg"
+           alt="French TR-TG-2A spy radio set"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=trtg2a/index.htm>TR-TG-2A</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=pd5>
+<div  data-balloon-pos="up" aria-label="PD-5 spy radio transmitter with PSU">          <img src="pd5/img/304034/001/thumbnail.jpg"
+           alt="PD-5 spy radio transmitter with PSU"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=pd5>PD-5</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=owvl/32620/index.htm>
+<div  data-balloon-pos="up" aria-label="Speech/morse generator, Device 32620, used by Numbers Stations" data-balloon-length="large">          <img src="owvl/32620/img/302685/075/thumbnail.jpg"
+           alt="Speech/morse generator, Device 32620, used by Numbers Stations"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=owvl/32620/index.htm>32620</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=wsa6>
+<div  data-balloon-pos="up" aria-label="WSA-6 (32212) modular FSK spy radio burst transmitter (DDR)" data-balloon-length="large">          <img src="wsa6/img/304338/005/thumbnail.jpg"
+           alt="WSA-6 (32212) modular FSK spy radio burst transmitter (DDR)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=wsa6>WSA-6</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=grenze>
+<div  data-balloon-pos="up" aria-label="UHF agent-to-base cross-border data link">          <img src="grenze/img/304432/055/thumbnail.jpg"
+           alt="UHF agent-to-base cross-border data link"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=grenze>Grenze</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=oranje/index.htm>
+<div  data-balloon-pos="up" aria-label="Radio Oranje (Radio Orange)">          <img src="oranje/img/ro_QW_thumb.jpg"
+           alt="Radio Oranje (Radio Orange)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=oranje/index.htm>Oranje</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <img src="../img/blank.gif" width=1 height=2>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="list.htm">Index of spy sets</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=wanted></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Wanted
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=mk5/index.htm>
+<div  data-balloon-pos="up" aria-label="Whaddon Mk V spy radio set (La Paracette) - 1941">          <img src="mk5/img/mk5_thumb.jpg"
+           alt="Whaddon Mk V spy radio set (La Paracette) - 1941"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=mk5/index.htm>Mk V</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ksg/index.htm>
+<div  data-balloon-pos="up" aria-label="FS-8 (KSG-Sender) (transmitter) developed by the BND in 1957" data-balloon-length="large">          <img src="ksg/img/302040/003/thumbnail.jpg"
+           alt="FS-8 (KSG-Sender) (transmitter) developed by the BND in 1957"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ksg/index.htm>FS-8</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=kyynel/index.htm>
+<div  data-balloon-pos="up" aria-label="Kyynel M-10X Finnish/Swedish spy radio set (WW-II)">          <img src="kyynel/img/301629/018/thumbnail.jpg"
+           alt="Kyynel M-10X Finnish/Swedish spy radio set (WW-II)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=kyynel/index.htm>Kyynel</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=cds501/index.htm>
+<div  data-balloon-pos="up" aria-label="CDS-501 short-range agent communications">          <img src="cds501/img/cds501_thumb.png"
+           alt="CDS-501 short-range agent communications"
+           border="0"
+           style="
+           max-height: 50px;
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=cds501/index.htm>CDS-501</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=rs804/index.htm>
+<div  data-balloon-pos="up" aria-label="RS-804 satellite message burst transmitter">          <img src="rs804/img/rs804_thumb.png"
+           alt="RS-804 satellite message burst transmitter"
+           border="0"
+           style="
+           max-height: 50px;
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=rs804/index.htm>RS-804</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../covert/radio/srr100/index.htm>
+<div  data-balloon-pos="up" aria-label="CIA surveillance receiver SSR-100">          <img src="../covert/radio/srr100/img/srr100_11_thumb.jpg"
+           alt="CIA surveillance receiver SSR-100"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../covert/radio/srr100/index.htm>SRR-100</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <a name=lit></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Literature</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=a>
+            <a name="lit_1"></a>
+            <li><a href="../people/vreisleben/files/DV_ClandestineCommunications_20240113.pdf">Detlev Vreisleben, <i>Clandestine Communications</i></a><br />
+Presentation about secret communications and cryptography in<br />Germany
+during the Cold War (English).
+13 January 2024. 105 pages.
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../people/vreisleben/files/DV_GeheimeKommunication_20240113.pdf">German version</a>
+          </ol type=a>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="list.htm">Index of spy sets</a><br />
+            <li><a href="glossary.htm">Glossary of expressions</a><br />
+            <li><a href="owvl/index.htm">Number stations</a><br />
+            <li><a href="conn.htm">Overview of battery connectors</a><br />
+            <li><a href="gladio/index.htm">Information about Gladio (stay-behind)</a><br />
+            <li><a href="../covert/index.htm">Other covert equipment</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Monday 03 August 2009. Last changed: Monday, 24 November 2025 - 15:03 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../index.htm"><img src=../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

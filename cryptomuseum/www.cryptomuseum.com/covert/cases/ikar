@@ -1,0 +1,1513 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>IKAR</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cryptomuseum">
+    <meta name="twitter:url" content="https://www.cryptomuseum.com/covert/cases/ikar/index.htm">
+    <meta name="twitter:image" content="https://www.cryptomuseum.com/covert/cases/ikar/img/302588/030/full.jpg">
+    <meta name="twitter:title" content="Soviet project IKAR">
+    <meta name="twitter:description" content="Secret Soviet project to discover, research and describe CIA covert listening devices (bugs).">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of covert-related items" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/glossary.htm';" >Glossary</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../../covert/camera/index.htm';" >Cameras</div>
+          <div class="but sub" onClick="location.href='../../../covert/rec/index.htm';" >Recorders</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Concealed radios" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Covert listening devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/bugs/index.htm';" >Bugs</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../covert/mic/index.htm';" >Microphones</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Covert wired and wireless earphones" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/ear/index.htm';" >Earpieces</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Free Space Optics and optoelectronics" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/opto/index.htm';" >Optics</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Concealment devices and microcaches" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/conceal/index.htm';" >Concealments</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Dead letter boxes" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/deaddrop/index.htm';" >Dead drops</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tools used in the espionage trade" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/tools/index.htm';" >Tools</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Spy-related stories and covert operations" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../../covert/cases/index.htm';" >Stories</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../covert/sw/index.htm';" >Software</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="tracking devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../covert/tracking/index.htm';" >Tracking</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../index.htm"><div  data-balloon-pos="up" aria-label="Shortcut to covert operations" class="key">Covert</div></a><a class="key" href="../../../intel/cia"><div  data-balloon-pos="up" aria-label="Shortcut to Central Intelligence Agency (USA)" class="key">CIA</div></a><a class="key" href="../../../intel/fbi"><div  data-balloon-pos="up" aria-label="Shortcut to Federal Bureau of Investigation (USA_" class="key">FBI</div></a><a class="key" href="../../../intel/kgb"><div  data-balloon-pos="up" aria-label="Shortcut to Committee for State Security" class="key">KGB</div></a><a class="key" href="../../bugs/ec"><div  data-balloon-pos="up" aria-label="Shortcut to EASYCHAIR (listening devices)" class="key">EC</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Project IKAR</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>US bugs discovered by the Soviets</b>
+<br />
+<br />
+Project <b>IKAR</b> (Icarus) <sup><font color="#FF8800">1</font></sup> was a <a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: secret investigation">secret investigation</span></a>
+by the Soviet Union (USSR), carried out between 1969 and 1978,
+in which <a href="../../bugs"><span data-balloon-pos="up" aria-label="More about: covert listening devices">covert listening devices</span></a> of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span>
+<a href="../../../intel/cia"><span data-balloon-pos="up" aria-label="More about: Central Intelligence Agency">Central Intelligence Agency</span></a> (<span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span>) were
+discovered, analysed and documented.
+The file was secretly shared with the security services in other
+<a href="../../../spy/glossary.htm#wp"><span data-balloon-pos="up" aria-label="More about: Warsaw Pact">Warsaw Pact</span></a>
+countries including Poland. It was publicly revealed in September 2022
+by Zach Dorfman in an article on The Brush Pass, with scans of the
+original photographic evidence <a href="#ref_1">[1]</a><a href="#ref_2">[2]</a>.
+It is likely that the file was compiled by the <span class="short" aria-label="Committee for State Security" data-balloon-pos="up"><a href="../../../intel/kgb" class="short" >KGB</a></span> &mdash;
+the main intelligence service of the <span class="short" aria-label="Soviet Union" data-balloon-pos="up"><a href="../../../spy/glossary.htm#ussr" class="short" >USSR</a></span>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The file, which was discovered in the archives of the Polish Ministry of
+the Interior, contains 23 pages with full-colour images of a wide variety
+of <a href="../../bugs"><span data-balloon-pos="up" aria-label="More about: covert surveillance devices (bugs)">covert surveillance devices (bugs)</span></a>
+that were found in the buildings and even in the vehicles of the Soviet
+mission in Washington (<span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">USA</span>).
+<br />
+<br />
+According to the Soviets, these devices were all planted by the Americans,
+and demonstrate the scale at which America eavesdrops on the Soviet Union.
+Although the American bugging efforts are indeed enormous, it is not unique
+to the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span>.
+The scale at which the Soviet Union has bugged the Americans,
+it at least as comprehensive. <sup><font color="#FF8800">2</font></sup>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="files/IKAR_IPN_BU_003172_44_t5.pdf">            <div style="position: relative;" data-balloon-pos="up" aria-label="The first two pages of the file (click to read the complete file) - Retrieved from Polish Archives [2]." data-balloon-length="large">
+<a href="files/IKAR_IPN_BU_003172_44_t5.pdf">            <div style="position: relative;" data-balloon-pos="up" aria-label="The first two pages of the file (click to read the complete file) - Retrieved from Polish Archives [2]." data-balloon-length="large">
+            <img src="img/IKAR_t5_1.jpg"
+             style="
+            "
+             align="left"
+             width="298px"
+             vspace="4"
+             alt="The first two pages of the file (click to read the complete file) - Retrieved from Polish Archives [2]."
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+It is indeed very likely that the devices shown in the Soviet file,
+were planted by the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span> <a href="../../../intel/cia"><span data-balloon-pos="up" aria-label="More about: Central Intelligence Agency">Central Intelligence Agency</span></a>
+(<span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span>) or by the counter-intelligence unit of the
+<a href="../../../intel/fbi"><span data-balloon-pos="up" aria-label="More about: Federal Bureau of Investigation">Federal Bureau of Investigation</span></a> (<span class="short" aria-label="Federal Bureau of Investigation (USA)" data-balloon-pos="up"><a href="../../../intel/fbi" class="short" >FBI</a></span>).
+In fact, some of these devices can be found on the Crypto Museum website.
+Below we will analyse and describe some of the devices that are revealed
+in the secret Soviet file in more detail.
+If you recognise any of the other items listed in the Soviet file,
+<a href="mailto:info@cryptomuseum.com"><span data-balloon-pos="up" aria-label="Send e-mail to: info@cryptomuseum.com">please contact us</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="files/IKAR_IPN_BU_003172_44_t5.pdf">Read the complete file</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li style="margin-bottom: 6px;">
+IKAR (Icarus) is the Polish name for the project. The original Russian
+  name for the project is currently unknown, but might have been &#1048;&#1050;&#1040;&#1056;
+  (IKAR) as well.
+          </li>
+          <li style="margin-bottom: 6px;">
+It is known that the old American Embassy in Moscow was ridden with
+  bugs. Not only in the walls, but also inside office equipment.
+  See for example the story about the <a href="../../bugs/selectric"><span data-balloon-pos="up" aria-label="More about: IBM Selectric Bug">IBM Selectric Bug</span></a>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>EASY CHAIR Mark V 
+          &nbsp;<font color="#CCC">
+          page 4 image 5</b>
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<a href="img/IKAR_t5_2.jpg"><span data-balloon-pos="up" aria-label="More about: Image 5 on page 4">Image 5 on page 4</span></a>
+shows a device that seems to be made up from two
+brass pipes that are joined at the centre. Each of the pipes has a
+length of approx. 10 cm and a tickness of less than 1 cm.
+According to the description, it was mounted inside one of the
+white tubes that are also shown. Although we don't know from what
+material the white tubes were made, it seems likely that it was
+non-conductive, perhaps some kind of plastic, as otherwise it would
+have blocked the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> signals.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="IKAR page 4, image 5, with translated captions [2]" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="IKAR page 4, image 5, with translated captions [2]" class="tooltip-red">
+            <img src="img/IKAR_img_5.png"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="IKAR page 4, image 5, with translated captions [2]"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+Although it is not entirely certain, it seems likely that the device
+shown above, is a variant of the
+<a href="../../bugs/ec/ec5"><span data-balloon-pos="up" aria-label="More about: EASY CHAIR Mark V Passive Element ...">EASY CHAIR Mark V Passive Element (EC V)</span></a>,
+developed for the <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span> between 1962 and 1964 by the
+<a href="../../../manuf/nrp"><span data-balloon-pos="up" aria-label="More about: Dutch Radar Laboratory">Dutch Radar Laboratory</span></a> (<span class="short" aria-label="Nederlands Radar Proefstation (Dutch Radar Laboratory)" data-balloon-pos="up"><a href="../../../manuf/nrp" class="short" >NRP</a></span>).
+In particular the <a href="../../bugs/ec/ec5/index.htm#thin"><span data-balloon-pos="up" aria-label="More about: Thin PE">Thin PE</span></a>
+variant of the <b>EC V</b> resembles the device discovered by the Soviets.
+If that is the case, it is unlikely that the righmost brass pipe
+contains a power supply, as the <a href="../../bugs/ec/ec5"><span data-balloon-pos="up" aria-label="More about: EC V">EC V</span></a>
+is a passive device,
+which is remotely powered by a strong <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> signal.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The two brass pipes form the
+arms of an open dipole antenna. At the center is a diode (crystal)
+that rectifies the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> energy that is beamed at it from a nearby
+location, and uses it to feed an audio amplifier.
+The amplifier causes the minute reflected energy from the dipole
+antenna to be amplitude modulated, with the room audio on a 120 kHz
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Modulation">FM</span> subcarrier. The image on the right shows one half
+of the <a href="../../bugs/ec/ec5/index.htm#thin"><span data-balloon-pos="up" aria-label="More about: thin variant">thin variant</span></a>
+of the <a href="../../bugs/ec/ec5"><span data-balloon-pos="up" aria-label="More about: EC V">EC V</span></a>.
+<br />
+<br />
+There are however some doubts. The two brass pipes shown in the
+image are each 10 cm long, which indicates a frequency of approx. 750 MHz.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../bugs/ec/ec5/img/302576/015/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Thin PE with detector and protective polythene centre part" data-balloon-length="large">
+<a href="../../bugs/ec/ec5/img/302576/015/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Thin PE with detector and protective polythene centre part" data-balloon-length="large">
+            <img src="../../bugs/ec/ec5/img/302576/015/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Thin PE with detector and protective polythene centre part"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <a href="../../bugs/ec/ec5"><span data-balloon-pos="up" aria-label="More about: EC V devices">EC V devices</span></a> made by the <span class="short" aria-label="Nederlands Radar Proefstation (Dutch Radar Laboratory)" data-balloon-pos="up"><a href="../../../manuf/nrp" class="short" >NRP</a></span> however,
+operated at a frequency between 378 and 420 MHz, roughly half
+the frequency of the device discovered by the Soviets.
+Although it is possible that the <span class="short" aria-label="Nederlands Radar Proefstation (Dutch Radar Laboratory)" data-balloon-pos="up"><a href="../../../manuf/nrp" class="short" >NRP</a></span> made such devices for
+750 MHz, there is no surviving  evidence in our archives.
+It is more likely that they were made by a different <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span>
+subcontractor, using the original <span class="short" aria-label="Nederlands Radar Proefstation (Dutch Radar Laboratory)" data-balloon-pos="up"><a href="../../../manuf/nrp" class="short" >NRP</a></span> design as a base.
+After all, the <span class="short" aria-label="Nederlands Radar Proefstation (Dutch Radar Laboratory)" data-balloon-pos="up"><a href="../../../manuf/nrp" class="short" >NRP</a></span> was predominantly a research laboratory rather
+than a manufacturer.
+<br />
+<br />
+There are also doubts about the Russian caption at the botton of
+the photograph, which claims that the device was found in the wall
+of a residential appartment <b>behind a mains outlet</b>.
+But the device is far too big to be fitted behind a mains outlet,
+and the presence of power lines in the vicinity of the device
+would prevent it from working, as it would short out the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> field.
+Bugs that are fitted
+behind a mains outlet are generally much smaller and are powered
+directly from the mains. It is more likely that the white tubes,
+inside which the device was hidden, were common pieces of
+furniture, such as curtain rails or a rods for holding down
+the carpet on the staircase.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../bugs/ec/ec5">More about the EASYCHAIR Mark V bug</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=nrp></a>
+        <div style="background-color: #EEEEEE; font-size: 8pt; padding: 12px; color: #777777; overflow: auto;">
+<font color=#F52E00><b>About the NRP</b></font>
+<p />
+Shortly after <span class="short tooltip-red" data-balloon-pos="up" aria-label="World War II">WWII</span>, the <a href="../../../manuf/nrp"><span data-balloon-pos="up" aria-label="More about: Dutch Radar Laboratory">Dutch Radar Laboratory</span></a>
+(<span class="short" aria-label="Nederlands Radar Proefstation (Dutch Radar Laboratory)" data-balloon-pos="up"><a href="../../../manuf/nrp" class="short" >NRP</a></span>) was hired by the <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span> to investigate a novel listening
+device &mdash; known as <a href="../../bugs/thing"><span data-balloon-pos="up" aria-label="More about: The Thing">The Thing</span></a> &mdash; that was found inside
+a wooden carving of the Greal Seal of the United States. The carving
+was a gift from the Soviets, and the bug was used to eavesdrop on the
+US Ambassador for no less than seven years.
+The <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span> wanted the <span class="short" aria-label="Nederlands Radar Proefstation (Dutch Radar Laboratory)" data-balloon-pos="up"><a href="../../../manuf/nrp" class="short" >NRP</a></span> to develop similar bugs that could be
+used by the <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span>.
+It resulted in a research contract between the <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span> and the <span class="short" aria-label="Nederlands Radar Proefstation (Dutch Radar Laboratory)" data-balloon-pos="up"><a href="../../../manuf/nrp" class="short" >NRP</a></span>
+&mdash; codenamed <a href="../../bugs/ec"><span data-balloon-pos="up" aria-label="More about: EASY CHAIR">EASY CHAIR</span></a> &mdash;
+that lasted more than 30 years.
+<br />
+<br />
+It was agreed that the <span class="short" aria-label="Nederlands Radar Proefstation (Dutch Radar Laboratory)" data-balloon-pos="up"><a href="../../../manuf/nrp" class="short" >NRP</a></span> would develop listening devices (bugs)
+and deliver the baseline documentation to the <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span>, so that the
+actual devices could be manufactured by a third party in the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span>.
+In most cases, the <span class="short" aria-label="Nederlands Radar Proefstation (Dutch Radar Laboratory)" data-balloon-pos="up"><a href="../../../manuf/nrp" class="short" >NRP</a></span> produced only a handful of devices (prototypes),
+but occasionally they also produced the bugs in quantity.
+What happened to the designs once the documentation had been delivered
+to the <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span> is unknown.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../../manuf/nrp">More about the NRP</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../bugs/ec">About the EASY CHAIR research contract</a>
+        </div>
+        <div class="clear_float"></div>
+<div style="height: 20px;"></div>        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>SRT-56 
+          &nbsp;<font color="#CCC">
+          page 13 image 21</b>
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<a href="img/IKAR_t5_7.jpg"><span data-balloon-pos="up" aria-label="More about: Image 21 on page 13">Image 21 on page 13</span></a> shows a device that can be
+identified unambiguously as the high-band version of the
+<a href="../../bugs/ec/srt56"><span data-balloon-pos="up" aria-label="More about: SRT-56">SRT-56</span></a>, <sup><font color="#FF8800">1</font></sup>
+manufactured for the <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span> between 1971 and 1973 by the
+<a href="../../../manuf/nrp"><span data-balloon-pos="up" aria-label="More about: Dutch Radar Laboratory">Dutch Radar Laboratory</span></a> (<span class="short" aria-label="Nederlands Radar Proefstation (Dutch Radar Laboratory)" data-balloon-pos="up"><a href="../../../manuf/nrp" class="short" >NRP</a></span>).
+It transmits at 1500 MHz and uses a novel modulation technique
+known as Pulse Position Modulation (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Pulse Position Modulation">PPM</span>), combined with
+audio masking, that makes it difficult to find.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="IKAR page 13, image 21, with translated captions [2]" data-balloon-length="large" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="IKAR page 13, image 21, with translated captions [2]" data-balloon-length="large" class="tooltip-red">
+            <img src="img/IKAR_img_21.png"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="IKAR page 13, image 21, with translated captions [2]"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The image above shows the original photograph with translated captions.
+According to the Russians, the set was discovered inside the wall
+of one of the offices of the Soviet mission in Washington.
+It consists of four pieces (which we have numbered 1 - 4).
+It is probably the same set (or similar) that was
+presented by the Soviets during a
+<a href="../../bugs/ec/srt56/index.htm#soviet"><span data-balloon-pos="up" aria-label="More about: press conference on 10 April 1987">press conference on 10 April 1987</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image on the right shows a still from a news item that was
+broadcast in the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span> after the press conference.
+It shows the same four items as the image in the Soviet file,
+which suggests that the four items were used as part of a
+single setup.
+<br />
+<br />
+Item <font color=#F52E00>(1)</font> is clearly an <a href="../../bugs/ec/srn58"><span data-balloon-pos="up" aria-label="More about: SRN-58 coaxial antenna">SRN-58 coaxial antenna</span></a>
+for 1500 MHz, manufacturered by the <span class="short" aria-label="Nederlands Radar Proefstation (Dutch Radar Laboratory)" data-balloon-pos="up"><a href="../../../manuf/nrp" class="short" >NRP</a></span>. The Russians identified
+it as a microwave antenna for 2 GHZ which a reasonably accurate guess.
+Item <font color=#F52E00>(2)</font> is identified as the <b>modulator</b> which is also correct.
+It is an <a href="../../bugs/ec/srt56/index.htm#video"><span data-balloon-pos="up" aria-label="More about: SWE-56 video encoder">SWE-56 video encoder</span></a>
+which is responsible for hiding the audio by means of the
+Rejected Pulse (RP) audio masking scheme.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../bugs/ec/img/persco_87_2_full.png">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="../../bugs/ec/img/persco_87_2_full.png">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="../../bugs/ec/img/persco_87_2_full.png"
+             style="
+            "
+             align="left"
+             width="298px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Item <font color=#F52E00>(3)</font> is an <a href="../../bugs/ec/srt56/index.htm#srk145"><span data-balloon-pos="up" aria-label="More about: SRK-145 transmitter">SRK-145 transmitter</span></a>
+for 1500 MHz. It uses Pulse Position Modulation (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Pulse Position Modulation">PPM</span>) as a result of which
+it consumes very little power. Due to the nature of <span class="short tooltip-red" data-balloon-pos="up" aria-label="Pulse Position Modulation">PPM</span>, the transmitter
+produces a large number of sidebands, each with very little energy, which makes
+it diffcult to discover it in the frequency spectrum. In practice it
+can hardly be discriminated from the background noise.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../bugs/ec/srt56/index.htm#soviet">More about the press conference of 10 April 1987</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Mystery item
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Item <font color=#F52E00>(4)</font> is a bit of a mystery. Although it clearly belongs to the same
+setup, we cannot identify it unambiguously. The Russians have described it
+as a 10 GHz transmitter, but this seems most unlikely as the device is entirely
+made of metal. Furthermore, 10 GHz would not be a good choice for a device
+that is embedded inside a wall, as its signals would have been absorbed by the wall.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+It appears to have the same diameter (1 1/8") as the other parts.
+It is unpainted, which suggest
+that it was not made by the <span class="short" aria-label="Nederlands Radar Proefstation (Dutch Radar Laboratory)" data-balloon-pos="up"><a href="../../../manuf/nrp" class="short" >NRP</a></span> but rather by the <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span> or one of its
+other contractors.
+It might be a mains power supply unit like the
+<a href="../../bugs/ec/srt56/index.htm#uwp56"><span data-balloon-pos="up" aria-label="More about: UWP-56">UWP-56</span></a> or (more likely) a stack of
+mercury batteries. In the latter case, the device would have had a limited
+life, although it might have lasted for a year.
+<br />
+<br />
+The image on the right shows a functionally identical setup, created at
+Crypto Museum from surviving EASY CHAIR parts. In this case, the mysterious
+item is replaced by a <a href="../../bugs/ec/srt56/index.htm#uwp56"><span data-balloon-pos="up" aria-label="More about: UWP-56">UWP-56</span></a> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span>.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/302588/030/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="High-band version of the SRT-56">
+<a href="img/302588/030/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="High-band version of the SRT-56">
+            <img src="img/302588/030/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="High-band version of the SRT-56"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Another possibility is that item <font color=#F52E00>(4)</font> is a contact microphone like the
+<a href="../../mic/swm25"><span data-balloon-pos="up" aria-label="More about: CIA's SWM-25">CIA's SWM-25</span></a>, along with an audio pre-amplifier/equaliser.
+Such microphones had been developed by other contract partners and were
+used by the <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span>. They were suitable for listening through concrete walls
+and offered very good intelligibility; in most cases equal to a microphone
+present in the actual room.
+In any case, the Russian assessment that it is a 10 GHz transmitter should
+be dismissed as a fantasy.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../bugs/ec/srt56">Full description of the SRT-56 bug</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+It is possible that instead of an <a href="../../bugs/ec/srt56"><span data-balloon-pos="up" aria-label="More about: SRT-56 bug">SRT-56 bug</span></a>,
+  it was an <a href="../../bugs/ec/srt52"><span data-balloon-pos="up" aria-label="More about: SRT-52">SRT-52</span></a>, which is nearly identical
+  but uses a different audio masking scheme &mdash;
+  <a href="../../bugs/masking/index.htm#tp"><span data-balloon-pos="up" aria-label="More about: Triple Pulse (TP)">Triple Pulse (TP)</span></a> instead of
+  <a href="../../bugs/masking/index.htm#rp"><span data-balloon-pos="up" aria-label="More about: Rejected Pulse (RP)">Rejected Pulse (RP)</span></a>. But as
+  this audio masking scheme was not supported by the later receivers
+  used by the <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span>, the <a href="../../bugs/ec/srt56"><span data-balloon-pos="up" aria-label="More about: SRT-56">SRT-56</span></a> seems a more
+  likely candidate.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+            <li><a href="https://thebrushpass.projectbrazen.com/coldwarbuggingsovietunion/" target="_blank">Zach Dorfman, <br /><i>Unearthed File Reveals Huge Cold War-Era US Bugging Operation Against Soviets</i></a><br />
+The Brush Pass (website), 22 September 2022.
+            <p />
+            <a name="ref_2"></a>
+            <li><a href="files/IKAR_IPN_BU_003172_44_t5.pdf"><i>Covert listening devices exposed in the buildings of Soviet missions in Washington</i></a><br />
+Soviet Union, 1974-1990 (in Russian language).<br />
+Retrieved from Polish Archives by <a href="#ref_1">[1]</a>. IPN BU 003172/44 t.5.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../../bugs/ec">CIA project EASY CHAIR</a><br />
+            <li><a href="../../bugs">Other bugs</a><br />
+            <li><a href="../../../intel/cia">Other CIA devices</a><br />
+            <li><a href="../../../intel/kgb">About the KGB</a><br />
+            <li><a href="../index.htm">Other covert stories</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Tuesday 22 November 2022. Last changed: Friday, 25 November 2022 - 08:29 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

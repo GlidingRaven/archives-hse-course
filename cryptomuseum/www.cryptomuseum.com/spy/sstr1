@@ -1,0 +1,2974 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>SSTR-1</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../index.htm"><img src="../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../spy/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../spy/glossary.htm';" >Glossary</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sel sub" onClick="location.href='../../spy/ww2.htm';" >World War II</div>
+          <div class="but sel sub" onClick="location.href='../../spy/coldwar.htm';" >Cold War</div>
+          <div class="but sub" onClick="location.href='../../spy/sf.htm';" >Special forces</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Spy radio sets used by Stay-Behind Organisations in Europe" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../spy/sbo/index.htm';" >Stay-Behind</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Short Range Agent Communication" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../spy/srac.htm';" >SRAC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="One-Way Voice Link - Numbers Stations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../spy/owvl/index.htm';" >OWVL</div>
+</div>
+          <div class="but sub" onClick="location.href='../../spy/rx.htm';" >Receivers</div>
+          <div class="but sub" onClick="location.href='../../spy/other.htm';" >Other</div>
+          <div class="spacer"></div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Countries
+          </div>
+          <div class="hidden">
+            <div class="but sub" onClick="location.href='../../spy/sbo/at/index.htm';" >Austria</div>
+            <div class="but sub" onClick="location.href='../../spy/belgium.htm';" >Belgium</div>
+            <div class="but sub" onClick="location.href='../../spy/cs.htm';" >Czechoslovakia</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former East-Germany" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../spy/ddr.htm';" >DDR</div>
+</div>
+            <div class="but sub" onClick="location.href='../../spy/kyynel/index.htm';" >Finland</div>
+            <div class="but sub" onClick="location.href='../../spy/fr.htm';" >France</div>
+            <div class="but sub" onClick="location.href='../../spy/de.htm';" >Germany</div>
+            <div class="but sub" onClick="location.href='../../spy/hu.htm';" >Hungary</div>
+            <div class="but sub" onClick="location.href='../../spy/italy.htm';" >Italy</div>
+            <div class="but sub" onClick="location.href='../../spy/japan.htm';" >Japan</div>
+            <div class="but sub" onClick="location.href='../../spy/nl.htm';" >Netherlands</div>
+            <div class="but sub" onClick="location.href='../../spy/norway.htm';" >Norway</div>
+            <div class="but sub" onClick="location.href='../../spy/poland.htm';" >Poland</div>
+            <div class="but sub" onClick="location.href='../../spy/sweden.htm';" >Sweden</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United Kingdom" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../spy/uk.htm';" >UK</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United States of America" data-balloon-length="medium">
+            <div class="but sel sub" onClick="location.href='../../spy/usa.htm';" >USA</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former Soviet Union" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../spy/ussr.htm';" >USSR</div>
+</div>
+            <div class="but sub" onClick="location.href='../../spy/yugo.htm';" >Yugoslavia</div>
+          </div>
+          </div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../index.htm"><img src="../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../usa.htm"><div  data-balloon-pos="up" aria-label="Shortcut to United States spy radio sets" class="key">USA</div></a><a class="key" href="../ww2.htm"><div  data-balloon-pos="up" aria-label="Shortcut to World War II" class="key">WWII</div></a><a class="key" href="../../intel/index.htm#oss"><div  data-balloon-pos="up" aria-label="Shortcut to Office of stratic Services" class="key">OSS</div></a><a class="key" href="../../intel/cia/index.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Central Intelligence Agency" class="key">CIA</div></a><a class="key" href="../sbo/index.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Stay-Behind Organisations" class="key">SBO</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>SSTR-1</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>WWII clandestine spy radio set</b>
+<font color=#F52E00>- this page is a stub</font>
+<br />
+<br />
+<b>SSTR-1</b>, <sup><font color="#FF8800">1</font></sup> also known as <b>TR1</b>, <sup><font color="#FF8800">2</font></sup> was a modular valve-based
+<a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: clandestine transmitter/receiver ...">clandestine transmitter/receiver set</span></a>, also known as a
+<a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: spy radio set">spy radio set</span></a>, developed in 1942
+for the <a href="../usa.htm"><span data-balloon-pos="up" aria-label="More about: US">US</span></a>
+<a href="../../intel/index.htm#oss"><span data-balloon-pos="up" aria-label="More about: Office of Stratic Services (OSS)">Office of Stratic Services (OSS)</span></a>
+&mdash; the forerunner of the <span class="short" aria-label="Central Intelligence Agency (CIA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span>.
+During <a href="../glossary.htm#ww2"><span data-balloon-pos="up" aria-label="More about: World War II (WWII)">World War II (WWII)</span></a>, the set was used extensively
+by <span class="short" aria-label="Office of Strategic Services (USA)" data-balloon-pos="up"><a href="../../intel/index.htm#oss" class="short" >OSS</a></span> agents operating on occupied (European) territory, by resistance
+organisations throughout Europe and in the China-Burma-India theatre <a href="#ref_1">[1]</a>.
+It is the American equivalent of the
+British <a href="../b2/index.htm"><span data-balloon-pos="up" aria-label="More about: Type 3 Mark II (B2)">Type 3 Mark II (B2)</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The set consists of a <a href="#tx"><span data-balloon-pos="up" aria-label="Jump to: transmitter">transmitter</span></a>, <a href="#rx"><span data-balloon-pos="up" aria-label="Jump to: receiver">receiver</span></a>,
+<a href="#psu"><span data-balloon-pos="up" aria-label="Jump to: power supply unit (PSU)">power supply unit (PSU)</span></a> and a collection of <a href="#spares"><span data-balloon-pos="up" aria-label="Jump to: spare parts">spare parts</span></a>,
+each housed in a metal enclosure and covered by a removable lid. It was
+usually supplied in a <a href="#case"><span data-balloon-pos="up" aria-label="Jump to: fibre board transit case">fibre board transit case</span></a>, but was often
+used outside the case and in varying configurations.
+Some users operated it from within a travel suitcase.
+<br />
+<br />
+The image on the right shows the dark green fibre board transit case with the various modules
+in upright position, ready for use. Although the set is often shown
+like this in museums, the lid cannot be closed as the receiver is too high. <sup><font color="#FF8800">3</font></sup>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/303491/023/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="SSTR-1 in green fibre board transit case">
+<a href="img/303491/023/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="SSTR-1 in green fibre board transit case">
+            <img src="img/303491/023/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="SSTR-1 in green fibre board transit case"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Prior to the <span class="short" aria-label="United States of America" data-balloon-pos="up"><a href="../usa.htm" class="short" >US</a></span> entering <span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../glossary.htm#ww2" class="short" >WWII</a></span>, the <span class="short" aria-label="Office of Strategic Services (USA)" data-balloon-pos="up"><a href="../../intel/index.htm#oss" class="short" >OSS</a></span> had a very basic radio set for
+clandestine operations. It had the advantage that it could be powered from
+both <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span> mains networks, but had otherwise a number of design
+deficiencies. This prompted the <span class="short" aria-label="Office of Strategic Services (USA)" data-balloon-pos="up"><a href="../../intel/index.htm#oss" class="short" >OSS</a></span> to come up with an improved design <a href="#ref_2">[2]</a>.
+<br />
+<br />
+The task was given to Major Henry Shore, who was a former employee of the
+<a href="../../manuf/rca/index.htm"><span data-balloon-pos="up" aria-label="More about: Radio Corporation of America (RCA)">Radio Corporation of America (RCA)</span></a>. Shore wanted
+<span class="short" aria-label="Radio Corporation of America" data-balloon-pos="up"><a href="../../manuf/rca/index.htm" class="short" >RCA</a></span> to be involved with the project, but the company was too busy with other
+wartime projects for the <span class="short" aria-label="United States of America" data-balloon-pos="up"><a href="../usa.htm" class="short" >US</a></span> Government. It was then agreed that <span class="short" aria-label="Radio Corporation of America" data-balloon-pos="up"><a href="../../manuf/rca/index.htm" class="short" >RCA</a></span>
+employee Earl Anderson would work on it in his own time, using the existing
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span> radio as a starting point.
+<br />
+<br />
+The first version of the SSTR-1 was released in 1942, its name being a
+combination of the model number of the transmitter (SST-1) and the receiver
+(SSR-1).
+The prefix 'SS' is the abbreviation of '<u>S</u>trategic <u>S</u>ervices'
+(<span class="short" aria-label="Office of Strategic Services (USA)" data-balloon-pos="up"><a href="../../intel/index.htm#oss" class="short" >OSS</a></span>).
+Throughout the war, the design was updated several times, resulting
+in the addition of a letter-suffix to the model. <sup><font color="#FF8800">4</font></sup>
+After the war, the SSTR-1 remained in use by the newly established <span class="short" aria-label="Central Intelligence Agency (CIA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span>
+until at least 1953, despite the fact that new
+<a href="../usa.htm"><span data-balloon-pos="up" aria-label="More about: clandestine radio sets">clandestine radio sets</span></a> like the
+<a href="../rs1/index.htm"><span data-balloon-pos="up" aria-label="More about: RS-1">RS-1</span></a> and <a href="../rs6/index.htm"><span data-balloon-pos="up" aria-label="More about: RS-6">RS-6</span></a> had meanwhile
+become available <a href="#ref_2">[2]</a>.
+The SSTR-1 was also used as a temporary solution by several European
+<a href="../sbo/index.htm"><span data-balloon-pos="up" aria-label="More about: Stay-Behind Organisations (SBOs)">Stay-Behind Organisations (SBOs)</span></a>
+in the early days of the <span class="short" aria-label="State of political and military tension in the period after WWII (1947-1991)" data-balloon-pos="up"><a href="../coldwar.htm" class="short" >Cold War</a></span> &mdash;
+for example in <a href="../sbo/nl/index.htm#sstr1"><span data-balloon-pos="up" aria-label="More about: The Netherlands">The Netherlands</span></a>
+and in <a href="../sbo/be"><span data-balloon-pos="up" aria-label="More about: Belgium">Belgium</span></a> &mdash; until it was replaced by newer radio sets.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li style="margin-bottom: 6px;">
+<b>SSTR-1</b> is the abbreviation of Strategic Services Transmitter Receiver No. 1
+          </li>
+          <li style="margin-bottom: 6px;">
+The <b>SSTR-1</b> was known also as <b>TR1</b>, for example by the Dutch post-war
+  <a href="../sbo/nl/index.htm"><span data-balloon-pos="up" aria-label="More about: Stay-Behind Organisation O&I">Stay-Behind Organisation O&I</span></a>.
+  In that case, <b>'TR'</b> is the abbreviation of <b>Transmitter Receiver</b>.
+          </li>
+          <li style="margin-bottom: 6px;">
+The receiver has to be <a href="img/303491/001/full.jpg"><span data-balloon-pos="up" aria-label="More about: placed on its side">placed on its side</span></a>
+  before the lid of the <a href="#transit"><span data-balloon-pos="up" aria-label="Jump to: transit case">transit case</span></a> can be closed.
+          </li>
+          <li style="margin-bottom: 6px;">
+Receiver model numbers from SSR-1-<b>A</b> to SSR-1-<b>G</b> have been observed,
+  whilst transmitter model numbers range from SST-1-<b>A</b> to SST-1-<b>E</b>.
+  <font color="#E7E">&#10148;</font>&nbsp;<a href="#spec">More</a>
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Fibre board transit case">          <img src="img/303491/000/thumbnail.jpg"
+           alt="Fibre board transit case"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Febire board transit case with SSTR-1 spy radio set" data-balloon-length="large">          <img src="img/303491/001/thumbnail.jpg"
+           alt="Febire board transit case with SSTR-1 spy radio set"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/001"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="SSTR-1 in green fibre board transit case">          <img src="img/303491/023/thumbnail.jpg"
+           alt="SSTR-1 in green fibre board transit case"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/023"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver, transmitter and power supply unit">          <img src="img/303491/024/thumbnail.jpg"
+           alt="Receiver, transmitter and power supply unit"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/024"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="SSTR-1 front view">          <img src="img/303491/025/thumbnail.jpg"
+           alt="SSTR-1 front view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/025"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Headphones">          <img src="img/303491/007/thumbnail.jpg"
+           alt="Headphones"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/007"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Morse key">          <img src="img/303491/028/thumbnail.jpg"
+           alt="Morse key"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/028"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Crystals for the SSTR-1">          <img src="img/303491/030/thumbnail.jpg"
+           alt="Crystals for the SSTR-1"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/030"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303491/000/full.jpg" alt="Fibre board transit case">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303491/001/full.jpg" alt="Febire board transit case with SSTR-1 spy radio set">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303491/023/full.jpg" alt="SSTR-1 in green fibre board transit case">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303491/024/full.jpg" alt="Receiver, transmitter and power supply unit">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303491/025/full.jpg" alt="SSTR-1 front view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303491/007/full.jpg" alt="Headphones">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303491/028/full.jpg" alt="Morse key">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303491/030/full.jpg" alt="Crystals for the SSTR-1">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image below gives an overview of the contents of the SSTR-1 transit case.
+At the far left is the SSR-1 receiver, which is higher than the other modules.
+It is powered by the SST-1 trans&shy;mitter to its right. The transmitter is in
+turn powered by the largest module: the SSP-1 power supply unit (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span>).
+The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span> is powered by a 6V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span> source,
+or directly from the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> mains. The remaining space &ndash; at the far right &ndash;
+is taken by the accessories and a range of spare parts.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/303491/025/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/303491/025/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/sstr1_ext.png"
+             style="
+            "
+             align="left"
+             width="550px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The headphones should be connected at the top left of the receiver.
+When transmitting, the operator can use the internal morse key &ndash; located
+at the front edge &ndash; or the supplied external key, which can be connected
+to the jack socket to the left of the internal key.
+The transmitter produ&shy;ces ~ 15 Watts.
+Note that in the setup shown above, it is difficult to operate the internal
+morse key, as it is just below the edge of the fibre board transit case.
+This indicates that the set was not intended for operation from within
+the transit case, but had to be removed from it for proper use.
+<br />
+<br />
+The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span> has three functions. It can act as a:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:100px;">Mains <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span></div>For powering the device from the mains (90-230V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span>)            <li><div style="display:inline-block; width:100px;">Inverter</div>For powering the device from a 6V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span> car battery            <li><div style="display:inline-block; width:100px;">Charger</div>To charge a 6V battery from the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> mains          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=usage></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Known usage</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <a name=schendel></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Ton van Schendel
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+A special example of the SSTR-1 is shown in the image below <a href="#ref_3">[3]</a>.
+It is of <span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../glossary.htm#ww2" class="short" >WWII</a></span> vintage and was owned by Dutch resistance fighter
+<a href="../../people/schendel/anton.htm"><span data-balloon-pos="up" aria-label="More about: Ton van Schendel">Ton van Schendel</span></a>. During the war,
+he worked for the Dutch <a href="../../df/rcd/index.htm"><span data-balloon-pos="up" aria-label="More about: radio monitoring service">radio monitoring service</span></a>,
+the <span class="short" aria-label="Radio Controledienst (Radio Monitoring Service - The Netherlands)" data-balloon-pos="up"><a href="../../df/rcd/index.htm" class="short" >RCD</a></span>, and simultaneously &mdash; covertly &mdash; for
+the <a href="../../intel/od/index.htm"><span data-balloon-pos="up" aria-label="More about: Ordedienst (OD)">Ordedienst (OD)</span></a>. <sup><font color="#FF8800">1</font></sup>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+From the start of <span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../glossary.htm#ww2" class="short" >WWII</a></span> until his arrest by the Germans in February 1943,
+<a href="../../people/schendel/anton.htm"><span data-balloon-pos="up" aria-label="More about: van Schendel">van Schendel</span></a> was the chief marconist
+of the <span class="short" aria-label="Ordedienst (Dutch resistance organisation)" data-balloon-pos="up"><a href="../../intel/od/index.htm" class="short" >OD</a></span>. He trained many clandestine radio operators <sup><font color="#FF8800">2</font></sup> and
+occasionally operated a <a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: clandestine radio station">clandestine radio station</span></a> himself,
+in particular for communication with England.
+<br />
+<br />
+The <span class="short" aria-label="Ordedienst (Dutch resistance organisation)" data-balloon-pos="up"><a href="../../intel/od/index.htm" class="short" >OD</a></span> mainly used radio sets provided by the British <span class="short" aria-label="Secret Intelligence Service (MI6)" data-balloon-pos="up"><a href="../../intel/sis" class="short" >SIS</a></span>
+and <span class="short" aria-label="Special Operations Executive" data-balloon-pos="up"><a href="../../intel/soe" class="short" >SOE</a></span>, such as the <a href="../mk5"><span data-balloon-pos="up" aria-label="More about: Mark V">Mark V</span></a> and <a href="../mk7"><span data-balloon-pos="up" aria-label="More about: Mark VII">Mark VII</span></a>
+(<a href="../paraset"><span data-balloon-pos="up" aria-label="More about: Parasets">Parasets</span></a>), the <a href="../b2"><span data-balloon-pos="up" aria-label="More about: Type 3 Mark II (B2)">Type 3 Mark II (B2)</span></a>
+and the <a href="../a3"><span data-balloon-pos="up" aria-label="More about: Type A Mark III (A3)">Type A Mark III (A3)</span></a>.
+When these were in short supply however, radios from American origin were
+supplied instead, such as this <b>SSTR-1</b>.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/303546/000/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="SSTR-1 transmitter and receiver">
+<a href="img/303546/000/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="SSTR-1 transmitter and receiver">
+            <img src="img/303546/000/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="SSTR-1 transmitter and receiver"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image above shows the SSTR-1 transmitter (SST-1) and receiver (SSR-1)
+that were in posses&shy;sion of
+<a href="../../people/schendel/anton.htm"><span data-balloon-pos="up" aria-label="More about: Ton van Schendel">Ton van Schendel</span></a>
+some time after <span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../glossary.htm#ww2" class="short" >WWII</a></span>. It was used by the <span class="short" aria-label="Ordedienst (Dutch resistance organisation)" data-balloon-pos="up"><a href="../../intel/od/index.htm" class="short" >OD</a></span> during the war
+and/or by the <a href="../sbo/nl/index.htm"><span data-balloon-pos="up" aria-label="More about: Dutch Stay-Behind Organisation O&I">Dutch Stay-Behind Organisation O&I</span></a>
+in the early days of the <span class="short" aria-label="State of political and military tension in the period after WWII (1947-1991)" data-balloon-pos="up"><a href="../coldwar.htm" class="short" >Cold War</a></span>.
+As far as we know,
+these are the only surviving parts of van Schendel's radio set.
+It is unknown whether the original <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span> was lost, or whether it
+was never provided. It is possible that the set had been supplied
+without the original <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span> and that an alternative <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span> &ndash; made
+locally by the <span class="short" aria-label="Ordedienst (Dutch resistance organisation)" data-balloon-pos="up"><a href="../../intel/od/index.htm" class="short" >OD</a></span> &ndash; was used instead.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../people/schendel/anton.htm">More about Ton van Schendel</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../intel/od">More about the Ordedienst (OD)</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li style="margin-bottom: 6px;">
+During <span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../glossary.htm#ww2" class="short" >WWII</a></span>, the <a href="../../intel/od"><span data-balloon-pos="up" aria-label="More about: Ordedienst (Order Service)">Ordedienst (Order Service)</span></a>
+  was one of three
+  <a href="../nl.htm"><span data-balloon-pos="up" aria-label="More about: major resistance organisations in ...">major resistance organisations in The Netherlands</span></a>.
+  It provided intelligence to the British <span class="short" aria-label="Military Intelligence 6 (UK)" data-balloon-pos="up"><a href="../../intel/index.htm#mi6" class="short" >MI6</a></span> and
+  to the Dutch Government in exile in London. Its task was to act as a law
+  enforcement service immediately after the liberation of The Netherlands.
+  <font color="#E7E">&#10148;</font>&nbsp;<a href="../../intel/od">More</a>
+          </li>
+          <li style="margin-bottom: 6px;">
+Radio operators were also known as <b>marconists</b>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=sbo></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Stay-Behind organisations
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+After <span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../glossary.htm#ww2" class="short" >WWII</a></span> &ndash; at the beginning of the <span class="short" aria-label="State of political and military tension in the period after WWII (1947-1991)" data-balloon-pos="up"><a href="../coldwar.htm" class="short" >Cold War</a></span> &ndash;
+the SSTR-1 remained in use until at least 1953, despite the fact that
+newer <span class="short" aria-label="Central Intelligence Agency (CIA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span> <a href="../usa.htm"><span data-balloon-pos="up" aria-label="More about: spy radio sets">spy radio sets</span></a>, like the <a href="../rs1/index.htm"><span data-balloon-pos="up" aria-label="More about: RS-1">RS-1</span></a>
+and <a href="../rs6/index.htm"><span data-balloon-pos="up" aria-label="More about: RS-6">RS-6</span></a>, had meanwhile become available.
+In the early days of their existence, some European
+<a href="../sbo/index.htm"><span data-balloon-pos="up" aria-label="More about: Stay-Behind Organisations (SBOs)">Stay-Behind Organisations (SBOs)</span></a>
+used left&shy;overs from <span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../glossary.htm#ww2" class="short" >WWII</a></span>
+as a gap-fill solution until newer sets became available to them.
+The stay-behind use of the SSTR-1 is confirmed for the following countries:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../sbo/nl">The Netherlands</a>            <li><a href="../sbo/be">Belgium</a>          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<font color="#E7E">&#10148;</font>&nbsp;<a href="../sbo">More about stay-behind organisations</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=parts></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Parts</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=#transit>
+<div  data-balloon-pos="up" aria-label="Fibre board transit case">          <img src="img/303491/000/thumbnail.jpg"
+           alt="Fibre board transit case"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#transit>Transit</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#rx>
+<div  data-balloon-pos="up" aria-label="Receiver `SSR-1">          <img src="img/303491/017/thumbnail.jpg"
+           alt="Receiver `SSR-1"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#rx>RX</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#tx>
+<div  data-balloon-pos="up" aria-label="Transmitter SST-1">          <img src="img/303491/013/thumbnail.jpg"
+           alt="Transmitter SST-1"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#tx>TX</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#psu>
+<div  data-balloon-pos="up" aria-label="Power supply unit `SSP-1">          <img src="img/303491/010/thumbnail.jpg"
+           alt="Power supply unit `SSP-1"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#psu>PSU</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#phones>
+<div  data-balloon-pos="up" aria-label="Headphones">          <img src="img/303491/007/thumbnail.jpg"
+           alt="Headphones"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#phones>Phones</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#morse>
+<div  data-balloon-pos="up" aria-label="Morse key">          <img src="img/303491/028/thumbnail.jpg"
+           alt="Morse key"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#morse>Morse</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#xtal>
+<div  data-balloon-pos="up" aria-label="Quartz crystals">          <img src="img/303491/030/thumbnail.jpg"
+           alt="Quartz crystals"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#xtal>Crystal</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#ant>
+<div  data-balloon-pos="up" aria-label="Wire antenna">          <img src="img/303491/004/thumbnail.jpg"
+           alt="Wire antenna"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#ant>Antenna</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=#spares>
+<div  data-balloon-pos="up" aria-label="Container with spare parts and accessories">          <img src="img/303491/009/thumbnail.jpg"
+           alt="Container with spare parts and accessories"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#spares>Spares</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#manual>
+<div  data-balloon-pos="up" aria-label="Operating instructions">          <img src="img/303507/000/thumbnail.jpg"
+           alt="Operating instructions"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#manual>Manual</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <a name=transit></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Transit case
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+in most cases, the SSTR-1 was supplied in a dark green fibre board
+transit case, such as the one shown in the image on the right. It contains
+the receiver, transmitter, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span> and all accessories and <a href="#spares"><span data-balloon-pos="up" aria-label="Jump to: spare parts">spare parts</span></a>.
+The lid is held in place by 8 spring loaded clips, and has a rubber gasket
+to make it water resistant. Note that this is <u>not</u> a suitcase.
+<br />
+<br />
+The radio set has to be removed from the case before operation. In some cases,
+the complete set was placed inside a regular travel suitcase.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/303491/000/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Fibre board transit case">
+<a href="img/303491/000/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Fibre board transit case">
+            <img src="img/303491/000/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Fibre board transit case"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=rx></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Receiver 
+          &nbsp;<font color="#CCC">
+          SSR-1
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The receiver is the leftmost module in the <a href="#transit"><span data-balloon-pos="up" aria-label="Jump to: transit case">transit case</span></a>. It is
+higher than the other module and has to be placed on its side before
+closing the lid of the transit case. When in transit, the controls of the
+receiver can be covered by a metal lid.
+<br />
+<br />
+There were at least <a href="#spec_rx"><span data-balloon-pos="up" aria-label="Jump to: four versions">four versions</span></a> of the receiver,
+each with a different frequency range and <a href="#spec_rx"><span data-balloon-pos="up" aria-label="Jump to: speci&shy;fi&shy;cations">speci&shy;fi&shy;cations</span></a>.
+The one shown here is an <a href="#spec_ssr1g"><span data-balloon-pos="up" aria-label="Jump to: SSR-1-G">SSR-1-G</span></a>, which covers 2.4 to 16.3 MHz,
+divided over two ranges which can be tuned freely.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/303491/017/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Receiver with lid removed">
+<a href="img/303491/017/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Receiver with lid removed">
+            <img src="img/303491/017/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Receiver with lid removed"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=tx></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Transmitter 
+          &nbsp;<font color="#CCC">
+          SST-1
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The transmitter is placed to the right of the <a href="#rx"><span data-balloon-pos="up" aria-label="Jump to: receiver">receiver</span></a>.
+It is crystal-controlled and is suitable for the transmission of
+<span class="short" aria-label="Continuous Wave (Morse)" data-balloon-pos="up"><a href="../../radio/morse/index.htm" class="short" >CW</a></span> signals (<a href="../../radio/morse"><span data-balloon-pos="up" aria-label="More about: morse">morse</span></a>) only. When in transit, it can be
+covered by a metal lid.
+<br />
+<br />
+There are at least <a href="#spec_tx"><span data-balloon-pos="up" aria-label="Jump to: two versions">two versions</span></a> of the trans&shy;mit&shy;ter, with
+slightly different <a href="#spec_tx"><span data-balloon-pos="up" aria-label="Jump to: specification">specification</span></a>. The one shown here is an
+<a href="#spec_sst1e"><span data-balloon-pos="up" aria-label="Jump to: SST-1-E">SST-1-E</span></a>. It covers 3 to 15 MHz and has an output power between
+8 and 15 W.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/303491/013/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Transmitter with lid removed">
+<a href="img/303491/013/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Transmitter with lid removed">
+            <img src="img/303491/013/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Transmitter with lid removed"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=psu></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Power supply unit 
+          &nbsp;<font color="#CCC">
+          SSP-1
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span> is the heaviest module and is placed to the right of the
+<a href="#tx"><span data-balloon-pos="up" aria-label="Jump to: transmitter">transmitter</span></a>. When in transit, it can be covered by a metal lid
+that also holds 2 spare fuses.
+The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span> allows the radio set to be powered from virtually any <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> mains
+network in the world between 90 and 230 V.
+<br />
+<br />
+The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span> can also be used as a power inverter, in which case a 6V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span>
+source can be used to power the radio set. In addition, the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span> can be
+used as a battery charger, allowing a 6V battery to be charged from the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span>
+mains.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/303491/010/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="PSU">
+<a href="img/303491/010/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="PSU">
+            <img src="img/303491/010/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="PSU"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=phones></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Headphones
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The SSTR-1 was supplied with the headphones shown in the image on the right.
+It is connected to the <a href="#rx"><span data-balloon-pos="up" aria-label="Jump to: SSR-1 receiver">SSR-1 receiver</span></a> by means of a 6 mm jack.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/303491/006/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Headphones">
+<a href="img/303491/006/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Headphones">
+            <img src="img/303491/006/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Headphones"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=morse></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Morse key
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <a href="#tx"><span data-balloon-pos="up" aria-label="Jump to: transmitter">transmitter</span></a> is suitable for <span class="short" aria-label="Continuous Wave (Morse)" data-balloon-pos="up"><a href="../../radio/morse/index.htm" class="short" >CW</a></span> (<a href="../../radio/morse"><span data-balloon-pos="up" aria-label="More about: morse">morse</span></a>)
+transmissions only, and can be oprated with the
+<font color=#F52E00>internal morse key</font> located at the font edge.
+<br />
+<br />
+The <a href="#tx"><span data-balloon-pos="up" aria-label="Jump to: tranmitter">tranmitter</span></a> can also be used with an external morse key, which
+must be connected to the 6 mm jack sockeet to the left of the internal
+morse key. The morse key shown in the image on the right was supplied with the
+set featured here.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/303491/005/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Morse key">
+<a href="img/303491/005/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Morse key">
+            <img src="img/303491/005/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Morse key"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=xtal></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Quartz crystals
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <a href="#tx"><span data-balloon-pos="up" aria-label="Jump to: transmitter">transmitter</span></a> is crystal operated. The crystal socket, at the centre
+of the transmitter, accepts a wide range of crystal shapes, such as the small
+FT-243 shape and the larger <span class="short" aria-label="United States of America" data-balloon-pos="up"><a href="../usa.htm" class="short" >US</a></span> and <span class="short" aria-label="United Kingdom (Great Britain)" data-balloon-pos="up"><a href="../uk.htm" class="short" >UK</a></span> crystals with a pin distance of
+19 mm.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../radio/xtal/index.htm#ft243">Crystal shapes</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/303491/030/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Crystals for the SSTR-1">
+<a href="img/303491/030/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Crystals for the SSTR-1">
+            <img src="img/303491/030/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Crystals for the SSTR-1"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=ant></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Wire antenna
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In most cases, the SSTR-1 was supplied with a wire antenna, consisting of
+two long pieces of electric wire. An additional (short) piece of wire was
+used to connect the radio set to ground.
+<br />
+<br />
+In some cases, alternative antennas were used, such as the roll-up mesh antenna
+shown in the image on the right. Ideally, each wire should be a &#188;&lambda;
+long, but longer wires can easily be tuned for maximum <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> output.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/303491/004/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Rollup antenna">
+<a href="img/303491/004/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Rollup antenna">
+            <img src="img/303491/004/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Rollup antenna"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=spares></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Spare parts
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+To allow the SSTR-1 to be repaired in the field, it was supplied with a range
+of spare parts, such as spare valves, fuses, vibrator, egg isolators, light
+bulbs, tools, etc.,
+some of which are shown in the image on the right.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="#spec_spares">List of spare parts</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/303491/009/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Spares">
+<a href="img/303491/009/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Spares">
+            <img src="img/303491/009/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Spares"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=manual></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Operating instructions
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Operating instruction and technical descriptions were provided in the form
+of the small A5-size booklet shown in the image on the right. It contains
+many photographs of the exterior and interior of the modules, along with
+clear descriptions on their use.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="files/sstr1_manual.pdf">Read the manual</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/303507/001/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="SSTR-1 operating instructions">
+<a href="img/303507/001/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="SSTR-1 operating instructions">
+            <img src="img/303507/000/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="SSTR-1 operating instructions"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Fibre board transit case">          <img src="img/303491/000/thumbnail.jpg"
+           alt="Fibre board transit case"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Febire board transit case with SSTR-1 spy radio set" data-balloon-length="large">          <img src="img/303491/001/thumbnail.jpg"
+           alt="Febire board transit case with SSTR-1 spy radio set"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/001"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Transmitter covered with lid">          <img src="img/303491/015/thumbnail.jpg"
+           alt="Transmitter covered with lid"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/015"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Transmitter with lid removed">          <img src="img/303491/013/thumbnail.jpg"
+           alt="Transmitter with lid removed"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/013"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Crystals for the SSTR-1">          <img src="img/303491/030/thumbnail.jpg"
+           alt="Crystals for the SSTR-1"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/030"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Crystal installed on the transmitter">          <img src="img/303491/014/thumbnail.jpg"
+           alt="Crystal installed on the transmitter"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/014"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Large crystal installed on the transmitter">          <img src="img/303491/029/thumbnail.jpg"
+           alt="Large crystal installed on the transmitter"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/029"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver covered with lid">          <img src="img/303491/016/thumbnail.jpg"
+           alt="Receiver covered with lid"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/016"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver with lid removed">          <img src="img/303491/017/thumbnail.jpg"
+           alt="Receiver with lid removed"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 9);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/017"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Controls and volume adjustment">          <img src="img/303491/018/thumbnail.jpg"
+           alt="Controls and volume adjustment"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 10);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/018"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Runing knob and scales">          <img src="img/303491/019/thumbnail.jpg"
+           alt="Runing knob and scales"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 11);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/019"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Band selector">          <img src="img/303491/020/thumbnail.jpg"
+           alt="Band selector"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 12);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/020"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="PSU">          <img src="img/303491/010/thumbnail.jpg"
+           alt="PSU"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 13);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/010"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Note on the body of the PSU">          <img src="img/303491/011/thumbnail.jpg"
+           alt="Note on the body of the PSU"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 14);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/011"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Controls and meter on the PSU">          <img src="img/303491/012/thumbnail.jpg"
+           alt="Controls and meter on the PSU"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 15);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/012"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Headphones">          <img src="img/303491/007/thumbnail.jpg"
+           alt="Headphones"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 16);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/007"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Headphones">          <img src="img/303491/006/thumbnail.jpg"
+           alt="Headphones"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 17);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/006"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Morse key">          <img src="img/303491/005/thumbnail.jpg"
+           alt="Morse key"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 18);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/005"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Morse key">          <img src="img/303491/028/thumbnail.jpg"
+           alt="Morse key"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 19);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/028"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Rollup antenna">          <img src="img/303491/004/thumbnail.jpg"
+           alt="Rollup antenna"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 20);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/004"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Spares">          <img src="img/303491/009/thumbnail.jpg"
+           alt="Spares"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 21);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/009"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Spares, morse key, etc.">          <img src="img/303491/003/thumbnail.jpg"
+           alt="Spares, morse key, etc."
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 22);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/003"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Accessories and spares">          <img src="img/303491/021/thumbnail.jpg"
+           alt="Accessories and spares"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 23);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/021"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Vibrator pack">          <img src="img/303491/008/thumbnail.jpg"
+           alt="Vibrator pack"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 24);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303491/008"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="SSTR-1 operating instructions">          <img src="img/303507/000/thumbnail.jpg"
+           alt="SSTR-1 operating instructions"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 25);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303507/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Page from the SSTR-1 instruction booklet">          <img src="img/303507/001/thumbnail.jpg"
+           alt="Page from the SSTR-1 instruction booklet"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 26);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303507/001"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'B'" onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">B</span></div></div><div style="height: 40px;"></div>
+<div id="slide_2" class="slide" onClick="slideClose('slide_2')"><span class="slide_close_left" onClick="slideClose('slide_2')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_2', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 1 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/000/full.jpg" alt="Fibre board transit case">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 2 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/001/full.jpg" alt="Febire board transit case with SSTR-1 spy radio set">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 3 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/015/full.jpg" alt="Transmitter covered with lid">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 4 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/013/full.jpg" alt="Transmitter with lid removed">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 5 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/030/full.jpg" alt="Crystals for the SSTR-1">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 6 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/014/full.jpg" alt="Crystal installed on the transmitter">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 7 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/029/full.jpg" alt="Large crystal installed on the transmitter">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 8 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/016/full.jpg" alt="Receiver covered with lid">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 9 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/017/full.jpg" alt="Receiver with lid removed">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 10 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/018/full.jpg" alt="Controls and volume adjustment">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 11 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/019/full.jpg" alt="Runing knob and scales">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 12 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/020/full.jpg" alt="Band selector">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 13 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/010/full.jpg" alt="PSU">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 14 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/011/full.jpg" alt="Note on the body of the PSU">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 15 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/012/full.jpg" alt="Controls and meter on the PSU">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 16 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/007/full.jpg" alt="Headphones">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 17 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/006/full.jpg" alt="Headphones">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 18 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/005/full.jpg" alt="Morse key">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 19 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/028/full.jpg" alt="Morse key">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 20 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/004/full.jpg" alt="Rollup antenna">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 21 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/009/full.jpg" alt="Spares">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 22 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/003/full.jpg" alt="Spares, morse key, etc.">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 23 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/021/full.jpg" alt="Accessories and spares">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 24 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303491/008/full.jpg" alt="Vibrator pack">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 25 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303507/000/full.jpg" alt="SSTR-1 operating instructions">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 26 / 26</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303507/001/full.jpg" alt="Page from the SSTR-1 instruction booklet">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_2', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_2', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=conn></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Connections</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <a name=conn_valves></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Valves
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>6J5            <li>6K8            <li>6SC7          </ul>
+</font>        </td><td width="25%"
+        >
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li>6SG7          <li>6SA7          <li>6SQ7        </ul>
+</font>      </td><td width="25%"
+      >
+      <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+      <ul>
+        <li>6SN7        <li>6L6        <li>7V7      </ul>
+</font>    </td><td width="25%"
+    >
+    <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+    <ul>
+      <li>7J7      <li>7F7      <li>7Z4    </ul>
+</font></td></tr></table><div style="height: 14px;"></div>  <a name=spec></a>
+  <table width=100% border=0 cellpadding=0 cellspacing=0>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+    <tr>
+    <td align="left" valign="center">
+    <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+    <b>Specifications</b>
+    </font>
+    </td>
+    </tr>
+    <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  </table>
+  <table width=100% border=0 cellspacing=0 cellpadding=4>
+    <tr>
+    <td valign="">
+    <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+    <ul>
+      <li><div style="display:inline-block; width:100px;">Device</div><a href="../index.htm">Clandestine suitcase radio set</a>      <li><div style="display:inline-block; width:100px;">Purpose</div>Agent communication      <li><div style="display:inline-block; width:100px;">Model</div>SSTR-1      <li><div style="display:inline-block; width:100px;">Year</div>1942      <li><div style="display:inline-block; width:100px;">Country</div><span class="short" aria-label="United States spy radio sets" data-balloon-pos="up"><a href="../usa.htm" class="short" >USA</a></span>      <li><div style="display:inline-block; width:100px;">Organisation</div><a href="../../intel/index.htm#oss">Office of Strategic Services (OSS)</a>      <li><div style="display:inline-block; width:100px;">Development</div><span class="short" aria-label="Office of Strategic Services (USA)" data-balloon-pos="up"><a href="../../intel/index.htm#oss" class="short" >OSS</a></span> employees, <br /><div style="display:inline-block; width:100px;"></div>Radio Development & Research Corporation, <br /><div style="display:inline-block; width:100px;"></div>Pioneer Electric and Research (Forest Park, IL, USA)      <li><div style="display:inline-block; width:100px;">Manufacturer</div>Radio Development & Research Corporation (transmitter), <br /><div style="display:inline-block; width:100px;"></div>P.R. Mallory Co. (PSU), <br /><div style="display:inline-block; width:100px;"></div>Finch Telecommunications (Passaic, NJ, USA)      <li><div style="display:inline-block; width:100px;">Users</div><span class="short" aria-label="Office of Strategic Services (USA)" data-balloon-pos="up"><a href="../../intel/index.htm#oss" class="short" >OSS</a></span>, agents, resistance, <span class="short" aria-label="Central Intelligence Agency (CIA)" data-balloon-pos="up"><a href="../../intel/cia/index.htm" class="short" >CIA</a></span>, <a href="../sbo">stay-behind</a>      <li><div style="display:inline-block; width:100px;">Receiver</div>SSR-1-A, D, E or G (<a href="#spec_rx">see below</a>)      <li><div style="display:inline-block; width:100px;">Transmitter</div>SST-1-A or E (<a href="#spec_tx">see below</a>)      <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span></div>SSP-1-C, SSP-1-D, SSP-2, SSP-3 or SSP-4 (<a href="#spec_psu">see below</a>)      <li><div style="display:inline-block; width:100px;">Generator</div>Hand-crank power generator GN-35 or GN-44    </ul>
+</font></td></tr></table>  <a name=spec_rx></a>
+  <a name=spec_ssr1a></a>
+  <table width=100% border=0 cellpadding=0 cellspacing=0>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+    <tr>
+    <td align="left" valign="center">
+    <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+    Receiver 
+    &nbsp;<font color="#CCC">
+    SSR-1-A
+    </font>
+    </font>
+    </td>
+    </tr>
+    <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  </table>
+  <table width=100% border=0 cellspacing=0 cellpadding=4>
+    <tr>
+    <td valign="">
+    <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+    <ul>
+      <li><div style="display:inline-block; width:100px;">Model</div>SSR-1-A      <li><div style="display:inline-block; width:100px;">Frequency</div>2.8 - 16.6 MHZ      <li><div style="display:inline-block; width:100px;">Bands</div>3 (2.8-5.1 MHz, 4.5-9.1 MHz, 8.3-16.6 MHz)      <li><div style="display:inline-block; width:100px;">Circuits</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> stage, Oscillator/Mixer, Detector/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span>, AF amplifier      <li><div style="display:inline-block; width:100px;">Modulation</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Telegraphy">R/T</span>, <span class="short" aria-label="Continuous Wave (Morse)" data-balloon-pos="up"><a href="../../radio/morse/index.htm" class="short" >CW</a></span>      <li><div style="display:inline-block; width:100px;">Valves</div>6J5, 6K8, 6SC7 (2x)      <li><div style="display:inline-block; width:100px;">Dimensions</div>241 x 102 x 76 mm      <li><div style="display:inline-block; width:100px;">Weight</div>2300 grams    </ul>
+</font></td></tr></table>  <a name=spec_ssr1d></a>
+  <table width=100% border=0 cellpadding=0 cellspacing=0>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+    <tr>
+    <td align="left" valign="center">
+    <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+    Receiver 
+    &nbsp;<font color="#CCC">
+    SSR-1-D
+    </font>
+    </font>
+    </td>
+    </tr>
+    <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  </table>
+  <table width=100% border=0 cellspacing=0 cellpadding=4>
+    <tr>
+    <td valign="">
+    <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+    <ul>
+      <li><div style="display:inline-block; width:100px;">Model</div>SSR-1-D      <li><div style="display:inline-block; width:100px;">Frequency</div>2.9 - 16 MHZ      <li><div style="display:inline-block; width:100px;">Bands</div>2 (2.9-6.6 MHz, 6.6-16 MHz)      <li><div style="display:inline-block; width:100px;">Circuits</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> stage, Oscillator/Mixer, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> stage, Detector/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Beat Frequency Oscillator">BFO</span>      <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span></div>2 MHz      <li><div style="display:inline-block; width:100px;">Modulation</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Telegraphy">R/T</span>, <span class="short" aria-label="Continuous Wave (Morse)" data-balloon-pos="up"><a href="../../radio/morse/index.htm" class="short" >CW</a></span>      <li><div style="display:inline-block; width:100px;">Valves</div>7V7 (3x), 7J7, 7F7      <li><div style="display:inline-block; width:100px;">Dimensions</div>241 x 102 x 76 mm      <li><div style="display:inline-block; width:100px;">Weight</div>2300 grams    </ul>
+</font></td></tr></table>  <a name=spec_ssr1e></a>
+  <table width=100% border=0 cellpadding=0 cellspacing=0>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+    <tr>
+    <td align="left" valign="center">
+    <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+    Receiver 
+    &nbsp;<font color="#CCC">
+    SSR-1-E
+    </font>
+    </font>
+    </td>
+    </tr>
+    <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  </table>
+  <table width=100% border=0 cellspacing=0 cellpadding=4>
+    <tr>
+    <td valign="">
+    <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+    <ul>
+      <li><div style="display:inline-block; width:100px;">Model</div>SSR-1-E      <li><div style="display:inline-block; width:100px;">Frequency</div>2.7 - 17 MHZ      <li><div style="display:inline-block; width:100px;">Bands</div>2 (2.7-6.6 MHz, 6.5-17 MHz)      <li><div style="display:inline-block; width:100px;">Circuits</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> stage, Oscillator/Mixer, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> stage, Detector, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Beat Frequency Oscillator">BFO</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span>      <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span></div>455 kHz      <li><div style="display:inline-block; width:100px;">Modulation</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Telegraphy">R/T</span>, <span class="short" aria-label="Continuous Wave (Morse)" data-balloon-pos="up"><a href="../../radio/morse/index.htm" class="short" >CW</a></span>      <li><div style="display:inline-block; width:100px;">Valves</div>6SG7 (2x), 6SA7, 6SQ7, 6SN7      <li><div style="display:inline-block; width:100px;">Dimensions</div>241 x 102 x 76 mm      <li><div style="display:inline-block; width:100px;">Weight</div>2300 grams    </ul>
+</font></td></tr></table>  <a name=spec_ssr1g></a>
+  <table width=100% border=0 cellpadding=0 cellspacing=0>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+    <tr>
+    <td align="left" valign="center">
+    <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+    Receiver 
+    &nbsp;<font color="#CCC">
+    SSR-1-G
+    </font>
+    </font>
+    </td>
+    </tr>
+    <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  </table>
+  <table width=100% border=0 cellspacing=0 cellpadding=4>
+    <tr>
+    <td valign="">
+    <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+    <ul>
+      <li><div style="display:inline-block; width:100px;">Model</div>SSR-1-G      <li><div style="display:inline-block; width:100px;">Frequency</div>2.4 - 16.3 MHZ      <li><div style="display:inline-block; width:100px;">Bands</div>2 (2.4-6.3 MHz, 6.2-16.3 MHz)      <li><div style="display:inline-block; width:100px;">Circuits</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> stage, Oscillator/Mixer, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> stage, Detector/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Beat Frequency Oscillator">BFO</span>      <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span></div>2 MHz      <li><div style="display:inline-block; width:100px;">Modulation</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Telegraphy">R/T</span>, <span class="short" aria-label="Continuous Wave (Morse)" data-balloon-pos="up"><a href="../../radio/morse/index.htm" class="short" >CW</a></span>      <li><div style="display:inline-block; width:100px;">Valves</div>7V7 (3x), 7J7, 7F7      <li><div style="display:inline-block; width:100px;">Dimensions</div>241 x 102 x 76 mm      <li><div style="display:inline-block; width:100px;">Weight</div>2300 grams    </ul>
+</font></td></tr></table>  <a name=spec_tx></a>
+  <a name=sst1a></a>
+  <table width=100% border=0 cellpadding=0 cellspacing=0>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+    <tr>
+    <td align="left" valign="center">
+    <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+    Transmitter 
+    &nbsp;<font color="#CCC">
+    SST-1-A
+    </font>
+    </font>
+    </td>
+    </tr>
+    <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  </table>
+  <table width=100% border=0 cellspacing=0 cellpadding=4>
+    <tr>
+    <td valign="">
+    <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+    <ul>
+      <li><div style="display:inline-block; width:100px;">Model</div>SST-1A      <li><div style="display:inline-block; width:100px;">Frequency</div>3-14 MHz      <li><div style="display:inline-block; width:100px;">Bands</div>3 (3-5 MHz, 5-8 MHz, 8-14 MHz)      <li><div style="display:inline-block; width:100px;">Output</div>8 - 15 W      <li><div style="display:inline-block; width:100px;">Circuits</div>Crystal oscillator/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Amplifier">PA</span>      <li><div style="display:inline-block; width:100px;">Valve</div>6L6    </ul>
+</font></td></tr></table>  <a name=spec_sst1e></a>
+  <table width=100% border=0 cellpadding=0 cellspacing=0>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+    <tr>
+    <td align="left" valign="center">
+    <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+    Transmitter 
+    &nbsp;<font color="#CCC">
+    SST-1-E
+    </font>
+    </font>
+    </td>
+    </tr>
+    <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  </table>
+  <table width=100% border=0 cellspacing=0 cellpadding=4>
+    <tr>
+    <td valign="">
+    <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+    <ul>
+      <li><div style="display:inline-block; width:100px;">Model</div>SST-1A      <li><div style="display:inline-block; width:100px;">Frequency</div>3-15 MHz      <li><div style="display:inline-block; width:100px;">Bands</div>3 (3-7 MHz, 6-12 MHz, 8-15 MHz)      <li><div style="display:inline-block; width:100px;">Output</div>8 - 15 W      <li><div style="display:inline-block; width:100px;">Circuits</div>Crystal oscillator/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Amplifier">PA</span>      <li><div style="display:inline-block; width:100px;">Valve</div>6L6      <li><div style="display:inline-block; width:100px;">Dimensions</div>240 x 102 7.6 mm      <li><div style="display:inline-block; width:100px;">Weight</div>1800 grams    </ul>
+</font></td></tr></table>  <a name=spec_psu></a>
+  <table width=100% border=0 cellpadding=0 cellspacing=0>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+    <tr>
+    <td align="left" valign="center">
+    <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+    Power supply unit 
+    &nbsp;<font color="#CCC">
+    SSP-1-D
+    </font>
+    </font>
+    </td>
+    </tr>
+    <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  </table>
+  <table width=100% border=0 cellspacing=0 cellpadding=4>
+    <tr>
+    <td valign="">
+    <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+    <ul>
+      <li><div style="display:inline-block; width:100px;">Mains</div>90, 110, 125, 150, 200, 230 V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> (40-60 Hz)      <li><div style="display:inline-block; width:100px;">Battery</div>6V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span>      <li><div style="display:inline-block; width:100px;">Valve</div>7Z4      <li><div style="display:inline-block; width:100px;">Dimensions</div>241 x 152 x 89 mm      <li><div style="display:inline-block; width:100px;">Weight</div>4500 grams    </ul>
+</font></td></tr></table>  <a name=spec_spares></a>
+  <table width=100% border=0 cellpadding=0 cellspacing=0>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+    <tr>
+    <td align="left" valign="center">
+    <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+    Spares
+    </font>
+    </td>
+    </tr>
+    <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  </table>
+  <table width=100% border=0 cellspacing=0 cellpadding=4>
+    <tr>
+    <td valign="">
+    <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+    <ul>
+      <li>2 &#215; Antenna wire      <li>4 &#215; Antenna insulators      <li>Coupling plug (for German wall outlet)      <li>Coupling plug (for French Domestic wall outlet)      <li>Solder      <li>Bypass condensers      <li>Filter condensers      <li>Vacuum tube 6L6      <li>Pilot light      <li>Ground clamp      <li>Alligator clip      <li>Spare fuses      <li>Screw driver      <li>Knife      <li>Vibrator unit      <li>Neon bulb      <li>Crystal socket adapter      <li>Vacuum tubes 3 &#215; 7V7, 1 &#215; 7Q7, 1 &#215; 7F7    </ul>
+</font></td></tr></table><div style="height: 14px;"></div>  <a name=doc></a>
+  <table width=100% border=0 cellpadding=0 cellspacing=0>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+    <tr>
+    <td align="left" valign="center">
+    <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+    <b>Documentation</b>
+    </font>
+    </td>
+    </tr>
+    <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  </table>
+  <table width=100% border=0 cellspacing=0 cellpadding=4>
+    <tr>
+    <td>
+    <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+    <ol type=A>
+      <a name="doc_1"></a>
+      <li><a href="files/sstr1_manual.pdf">Description and Operating Instructions SSTR-1</a><br />
+Receiver SSR-1-G, transmitter SST-1-E, power supply SSP0-1-D.<br />
+Publisher and date unknown. #CM303507.
+    </ol type=A>
+  </font></td></tr></table>
+<div style="height: 14px;"></div>  <a name=ref></a>
+  <table width=100% border=0 cellpadding=0 cellspacing=0>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+    <tr>
+    <td align="left" valign="center">
+    <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+    <b>References</b>
+    </font>
+    </td>
+    </tr>
+    <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  </table>
+  <table width=100% border=0 cellspacing=0 cellpadding=4>
+    <tr>
+    <td>
+    <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+    <ol>
+      <a name="ref_1"></a>
+<li><font color=#F52E00>Louis Meulstee, <i>Wireless for the Warrior, volume 4</i></font><br />
+ISBN 0952063-36-0, September 2004.
+      <p />
+      <a name="ref_2"></a>
+      <li><a href="http://spyradios.com/sstr1.html" target="_blank">Peter McColum, <i>The SSTR-1 "Suitcase Radio"</i></a><br />
+Retrieved May 2021.
+      <p />
+      <a name="ref_3"></a>
+<li><font color=#F52E00>Cor Moerman, SSTR-1 radio set of Ton van Schendel - THANKS !</font><br />
+Donated November 2020.
+    </ol>
+  </font></td></tr></table>
+<div style="height: 14px;"></div>  <table width=100% border=0 cellpadding=0 cellspacing=0>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+    <tr>
+    <td align="left" valign="center">
+    <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+    <b>Further information</b>
+    </font>
+    </td>
+    </tr>
+    <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+    <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+  </table>
+  <table width=100% border=0 cellspacing=0 cellpadding=4>
+    <tr>
+    <td>
+    <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+    <ul>
+      <li><a href="../sstr5/index.htm">SSTR-5 spy radio set</a><br />
+      <li><a href="../usa.htm">Other US spy radio sets</a><br />
+      <li><a href="../index.htm">Other spy radio sets</a><br />
+    </ul>
+  </font></td></tr></table>
+<div style="height: 14px;"></div>  </td></tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr><td colspan=3 width=100%>
+  <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+  </table>
+  </td></tr>
+  <tr>
+  <td align=center width=100%>
+  <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+  Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+  If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+   
+  © Crypto Museum. Created: Friday 21 May 2021. Last changed: Wednesday, 23 July 2025 - 14:22 CET.
+  <br />
+  </font
+  </td>
+  </tr>
+  <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+  <tr><td align=center>
+  <a href="../../index.htm"><img src=../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+  </td></tr>
+</table>
+</td></tr>
+</table>
+</font>
+</td>
+</tr></table>
+</body>
+</html>

@@ -1,0 +1,2547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>RS-111</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cryptomuseum">
+    <meta name="twitter:url" content="https://www.cryptomuseum.com/df/wj/rs111/index.htm">
+    <meta name="twitter:image" content="https://www.cryptomuseum.com/df/wj/rs111/img/303846/034/full.jpg">
+    <meta name="twitter:title" content="RS-111-1B receiver">
+    <meta name="twitter:description" content="Watkin-Johnson RS-111 surveillance receiver, introduced in 1963 by CEI and produced until 1980. Played an important role in the Watergate Scandal.">
+    <meta name="Keywords" content="Watkins-Johnson, WJ, CEI, Watergate, CIA, Plumbers, RS-111, RS111, Receiver">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of model numbers and names" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Radio Direction Finders" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/df.htm';" >DF</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Radio Monitoring Equipment" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../../df/mon.htm';" >Monitoring</div>
+</div>
+          <div class="but sel sub" onClick="location.href='../../../df/receivers.htm';" >Surveillance</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Technical Surveillance and Countermeasures" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/tscm.htm';" >TSCM</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../df/antennas.htm';" >Antennas</div>
+          <div class="but sub" onClick="location.href='../../../df/scanners.htm';" >Scanners</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="wire tapping" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/wired.htm';" >Wired</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../df/tempest.htm';" >TEMPEST</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Soviet Union" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/ussr.htm';" >USSR</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../../df/mason/index.htm';" >Mason</div>
+          <div class="but sub" onClick="location.href='../../../df/microtel/index.htm';" >Microtel</div>
+          <div class="but sub" onClick="location.href='../../../df/minilock/index.htm';" >Minilock</div>
+          <div class="but sub" onClick="location.href='../../../df/rei/index.htm';" >REI</div>
+          <div class="but sub" onClick="location.href='../../../df/rft/index.htm';" >RFT</div>
+          <div class="but sub" onClick="location.href='../../../df/rs/index.htm';" >Rohde & Schwarz</div>
+          <div class="but sub" onClick="location.href='../../../df/scanlock/index.htm';" >Scanlock</div>
+          <div class="but sub" onClick="location.href='../../../df/telefunken/index.htm';" >Telefunken</div>
+          <div class="but sub" onClick="location.href='../../../df/wj/index.htm';" >Watkins-Johnson</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../../../manuf/wj"><div  data-balloon-pos="up" aria-label="Shortcut to Watkins-Johnson" class="key">W-J</div></a><a class="key" href="../../../manuf/cei"><div  data-balloon-pos="up" aria-label="Shortcut to Communication Electronics Inc." class="key">CEI</div></a><a class="key" href="../../../intel/cia"><div  data-balloon-pos="up" aria-label="Shortcut to Central Intelligence Agency (USA)" class="key">CIA</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>RS-111-1B 
+          &nbsp;<font color="#CCC">
+          AN/URR-52B</b>
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Surveillance receiver</b>
+<br />
+<br />
+<b>RS-111</b> is a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Very High Frequency (30-300 MHz)">VHF</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Ultra High Frequency (300-3000 MHz)">UHF</span> <a href="../../../df/receivers.htm"><span data-balloon-pos="up" aria-label="More about: surveillance receiver">surveillance receiver</span></a>,
+<a href="../../../manuf/cei"><span data-balloon-pos="up" aria-label="More about: introduced in 1963 by ...">introduced in 1963 by Communication Electronics Inc.</span></a>
+(<span class="short" aria-label="Communication Electronics Inc." data-balloon-pos="up"><a href="../../../manuf/cei" class="short" >CEI</a></span>) in Bethesda (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Maryland">MD</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>).
+It was in production for 17 years, initially by <span class="short" aria-label="Communication Electronics Inc." data-balloon-pos="up"><a href="../../../manuf/cei" class="short" >CEI</a></span> and from 1967 onwards
+by <a href="../../../manuf/wj"><span data-balloon-pos="up" aria-label="More about: Watkins-Johnson">Watkins-Johnson</span></a> (<span class="short" aria-label="Watkins-Johnson" data-balloon-pos="up"><a href="../../../manuf/wj" class="short" >W-J</a></span>), after the latter had taken
+over <span class="short" aria-label="Communication Electronics Inc." data-balloon-pos="up"><a href="../../../manuf/cei" class="short" >CEI</a></span> <a href="#ref_1">[1]</a>. It is arguably the most popular
+sur&shy;veillance receiver of the era. It played a role
+the <a href="#watergate"><span data-balloon-pos="up" aria-label="Jump to: Watergate Scandal (1972-1974)">Watergate Scandal (1972-1974)</span></a> <a href="#ref_2">[2]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The device is housed in a heavy 3U 19" rack&shy;mountable enclosure.
+It covers all frequencies between 30 MHz and 1 GHz and is suitable for
+the reception of <span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Modulation">FM</span> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Continupus Wave">CW</span> radio signals.
+<br />
+<br />
+The device has four individual tuners, one for each band: <font color=#F52E00>(1)</font> 30-60 MHz,
+<font color=#F52E00>(2)</font> 60-300 MHz, <font color=#F52E00>(3)</font> 235-500 MHz and <font color=#F52E00>(4)</font> 490-1000 MHz. It has 3
+selectable bandwidths at 20, 75 and 300 kHz, plus a 2 MHz wideband output
+for monitoring and external demodulation. A built-in cathode ray
+tube (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Rady Tube">CRT</span>) is used as a panorama viewer, and shows 0 to 3 MHz of the
+current spectrum.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/303846/034/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="RS-111 receiver">
+<a href="img/303846/034/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="RS-111 receiver">
+            <img src="img/303846/034/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="RS-111 receiver"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The first version of the RS-111 was introduced in 1963 by the original
+manufacturer <span class="short" aria-label="Communication Electronics Inc." data-balloon-pos="up"><a href="../../../manuf/cei" class="short" >CEI</a></span> in Beth&shy;esda (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Maryland">MD</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>). Initially developed as a
+monitoring receiver for the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span> Department of Defense (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Department of Defense (USA)">DoD</span>),
+it also became a beloved surveillance receiver for the intelligence and
+law enforcement community.
+One of the most prominent users of the RS-111 was the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span>
+<a href="../../../intel/cia"><span data-balloon-pos="up" aria-label="More about: Central Intelligence Agency">Central Intelligence Agency</span></a> (<span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span>), where it was
+typically used for the reception of
+<a href="../../../covert/bugs"><span data-balloon-pos="up" aria-label="More about: covert listening devices (bugs)">covert listening devices (bugs)</span></a>.
+<br />
+<br />
+When <span class="short" aria-label="Communication Electronics Inc." data-balloon-pos="up"><a href="../../../manuf/cei" class="short" >CEI</a></span> was taken over by <a href="../../../manuf/wj"><span data-balloon-pos="up" aria-label="More about: Watkins-Johnson">Watkins-Johnson</span></a> (<span class="short" aria-label="Watkins-Johnson" data-balloon-pos="up"><a href="../../../manuf/wj" class="short" >W-J</a></span>)
+in 1967, the RS-111 remained in production until 1980.
+In total, well over 1000 units were manufactured. Over the years,
+the device was up&shy;dated and modified a number of times, and special
+variants were made for specific custo&shy;mers. The version/variant number
+is added as a suffix to the model number, e.g.: RS-111-1B-<b>12A</b> for version
+<b>12A</b> of 1968.
+According to one source, there were 105 variants of the device <a href="#ref_2">[2]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="RS-111 receiver">          <img src="img/303846/034/thumbnail.jpg"
+           alt="RS-111 receiver"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303846/034"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel">          <img src="img/303846/022/thumbnail.jpg"
+           alt="Front panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303846/022"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Rear panel">          <img src="img/303846/021/thumbnail.jpg"
+           alt="Rear panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303846/021"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Band 2 tuning (60-300 MHz)">          <img src="img/303846/037/thumbnail.jpg"
+           alt="Band 2 tuning (60-300 MHz)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303846/037"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Panorama viewer">          <img src="img/303846/038/thumbnail.jpg"
+           alt="Panorama viewer"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303846/038"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Bandwidth selector">          <img src="img/303846/036/thumbnail.jpg"
+           alt="Bandwidth selector"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303846/036"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Band selector">          <img src="img/303846/040/thumbnail.jpg"
+           alt="Band selector"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303846/040"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Waveform (mode)">          <img src="img/303846/041/thumbnail.jpg"
+           alt="Waveform (mode)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 303846/041"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303846/034/full.jpg" alt="RS-111 receiver">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303846/022/full.jpg" alt="Front panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303846/021/full.jpg" alt="Rear panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303846/037/full.jpg" alt="Band 2 tuning (60-300 MHz)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303846/038/full.jpg" alt="Panorama viewer">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303846/036/full.jpg" alt="Bandwidth selector">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303846/040/full.jpg" alt="Band selector">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/303846/041/full.jpg" alt="Waveform (mode)">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+All controls of the RS-111-1B are at the font panel of the device, as
+shown in the image below. According to former users, the RS-111 was a
+dream to operate. The front panel has an elegant layout and the controls
+are grouped logically. The lower half holds the individual tuning controls
+of each of the four frequency bands. The 4-position band selector is
+located at the far right.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/303846/001/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Front panel of the RS-111-1B-12A (1974)">
+<a href="img/303846/001/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Front panel of the RS-111-1B-12A (1974)">
+            <img src="img/rs111_front.png"
+             style="
+            "
+             align="center"
+             width="588px"
+             vspace="4"
+             alt="Front panel of the RS-111-1B-12A (1974)"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+At the upper half is the panorama display which comprises a 1 x 2"
+green Cathode Ray Tube (CRT) and several controls. The CRT displays part
+of the frequency spectrum around the currently selected frequency.
+At the centre is the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span> bandwidth selector, and the adjustment of
+the Beat Frequency Oscillator (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Beat Frequency Oscillator">BFO</span>). Towards the right is the
+MODE selector and the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span> volume control. At the far right is the
+signal strength indicator. On older versions this was a tuning indicator. <sup><font color="#FF8800">1</font></sup>
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/303846/002/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Rear panel of the RS-111-1B-12A (1974)">
+<a href="img/303846/002/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Rear panel of the RS-111-1B-12A (1974)">
+            <img src="img/rs111_rear.png"
+             style="
+            "
+             align="center"
+             width="574px"
+             vspace="4"
+             alt="Rear panel of the RS-111-1B-12A (1974)"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+All connections, with exception of the 6 mm jack socket for the headphones,
+are located at the rear panel, as shown in the image above. Two separate
+antenna inputs are available (J1, J2) for the 30-500 and 490-1000 MHz
+frequency ranges respectively. There are several outputs for the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span>,
+local oscillators, and various narrow- and wideband video signals.
+At the bottom left is the fixed mains power cord, plus the mains voltage
+selector with a fuse at either side. The leftmost fuse is only used when
+115V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> is selected, whilst the rightmost one is only used for 230V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+From version RS-111-1B-12 onwards, the tuning indicator is replaced
+  by a signal strength meter. For tuning, the new <span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Rady Tube">CRT</span> display marker
+  should be used. This feature is also added on version RS-111-1B-12.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=watergate></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Watergate Scandal 
+          &nbsp;<font color="#CCC">
+          1972-1974</b>
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The RS-111 played an important role during the Watergate scandal (1972-1974),
+which even&#173;tu&#173;al&#173;ly led to the resignation of <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span> President Nixon in 1974 <a href="#ref_3">[3]</a>.
+As part of the Republican campaign for Nixons re-election, a group known as
+'The Plumbers' broke into the Watergate offices of their political oppo&#173;nents
+&ndash; the Demo&#173;cra&#173;tic Party &ndash; to photograph documents and plant telephone bugs.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+One of the people working for the
+<i>Committee for the re-election of the President</i>, was James W. McCord Jr.,
+an experienced former <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span> operative, who knew his way around bugs
+and associated equipment, and knew where to get them.
+<br />
+<br />
+A wireless telephone bug, that could be planted inside a telephone set, was obtained
+from Bell & Howell. Such a device was also know as a KEL-device, named after
+the company that originally developed it. Although Bell & Howell also manu&#173;fac&#173;tured
+a portable receiver for such a bug, with a built-in re&#173;cor&#173;der, McCord choose a
+Watkins-Johnson RS-111, probably because it was much more sensitive.
+It allowed the bug to reach the room he had booked in a hotel across the street.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/19730522_Bettmann_McCord_bug.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Conspirator James McCord demonstrates for the Senate Watergate Committee some of the bugs used in the bugging of the Democratic Headquarters. Source: Bettmann Archive (22 May 1973)." data-balloon-length="large">
+<a href="img/19730522_Bettmann_McCord_bug.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Conspirator James McCord demonstrates for the Senate Watergate Committee some of the bugs used in the bugging of the Democratic Headquarters. Source: Bettmann Archive (22 May 1973)." data-balloon-length="large">
+            <img src="img/19730522_Bettmann_McCord_bug_small1.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Conspirator James McCord demonstrates for the Senate Watergate Committee some of the bugs used in the bugging of the Democratic Headquarters. Source: Bettmann Archive (22 May 1973)."
+             border=0
+             width=298 height=240
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image above shows McCord &ndash;
+during the con&#173;gres&#173;sional he&#173;a&#173;ring before the Senate Watergate Committee on
+22 May 1973. In his hand he holds the Bell & Howell bug that was planted in one
+of the telephones.
+At the left is the RS-111 used for the reception of the bug at 118.9 MHz.
+He used his contacts as a former <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span> operative to purchase a sales demo unit directly from the CEI division of Watkins-Johnson in Rock&#173;ville (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Maryland">MD</span>,
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>), for a much reduced price, paying in cash.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="files/19720512_WJ_delivery.pdf">            <div style="position: relative;" data-balloon-pos="up" aria-label="Delivery note issued by Watkins-Johnson to James McCord on 12 May 1972. Click to see the full document [5]." data-balloon-length="large">
+<a href="files/19720512_WJ_delivery.pdf">            <div style="position: relative;" data-balloon-pos="up" aria-label="Delivery note issued by Watkins-Johnson to James McCord on 12 May 1972. Click to see the full document [5]." data-balloon-length="large">
+            <img src="img/WJ_delivery.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="Delivery note issued by Watkins-Johnson to James McCord on 12 May 1972. Click to see the full document [5]."
+             border=0
+             width=811 height=275
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The delivery note above reveals that the deal took place on 12 May 1972,
+and that McCord payed just USD 3500 &mdash; about half the official price &mdash;
+for the <b>RS-111-1B-12</b> with serial number <b>132</b>.
+The <a href="files/19720515_WJ_invoice.pdf"><span data-balloon-pos="up" aria-label="More about: official sales invoice">official sales invoice</span></a>
+was sent a few days later, on 15 May 1972, along with the manual <a href="#ref_5">[5]</a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="files/19720515_WJ_invoice.pdf">Sales invoice</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="files/20080600_PopCom_Watergate.pdf">Full story by Terry O-Laughlin</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=video></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Footage</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <a name=video_test></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          First test
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+This short 44 sec. video clip presents the RS-111 in our collection,
+minutes after it was restored on 17 July 2025. For the demonstration,
+band 2 was selected (30-300 MHz), and the device was tuned to a local radio
+station in the FM broadcast band.
+<br />
+<br />
+The modulated signal from the radio station can be seen on the panorama
+viewer at the top left, which can also be used as a tuning aid.
+<br />
+<br />
+<b>Source</b><br />
+Crypto Museum, 17 July 2025
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign="top">
+          <iframe width="298" height="200" src="https://www.youtube.com/embed/8-NH2l7PoTc" frameborder="0" allowfullscreen></iframe>
+        </td></tr></table>
+        </td></tr>
+      </table>
+<br />      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        </td></tr>
+      </table>
+<br />      <a name=block></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Block diagram</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the simplified block diagram of the RS-111. At the left are
+four <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> tuners that to&#173;gether cover the entire 30-1000 MHz range.
+There are two mixer paths: one for the 30-300 MHz range, and one for the
+235-1000 MHz range. The former is directly converted to 21.4 MHz,
+whilst the latter is first converted to 60 MHz and then to 21.4 MHz.
+At the centre is the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span> strip, which is in reality much more complex
+than the block diagram suggests. It provides several output signals.
+<br />
+        <br />
+        <table 
+         border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+          <div style="position: relative;" data-balloon-pos="up" aria-label="Simplified block diagram of the RS-111" class="tooltip-red">
+          <div style="position: relative;" data-balloon-pos="up" aria-label="Simplified block diagram of the RS-111" class="tooltip-red">
+          <img src="svg/rs111_block.svg"
+           style="
+           max-width: 618px;
+          "
+           align="center"
+           vspace="4"
+           alt="Simplified block diagram of the RS-111"
+           border=0
+          
+           />
+          </div>
+          </td></tr><tr><td align=center>
+        </td></tr></table>
+<br />
+The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Wide Band">WB</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span> section provides <b>wideband</b>
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span> Video and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Modulation">FM</span> Video out&#173;puts with a 2 MHz bandwidth.
+These signals are intended for monitoring
+and for external demodulators that can process sub&#173;carrier
+(double-modulated) signals.
+The output from the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Narrow Band">NB</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span> unit (see below)
+is fed to the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Modulation">FM</span> dis&#173;criminator
+and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span> detector, each of which can be selected for the Audio and
+Video out&#173;puts. The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span> detector also drives the Automatic Gain Con&#173;trol
+(<span class="short tooltip-red" data-balloon-pos="up" aria-label="Automatic Gain Control">AGC</span>) and signal strength indicator.
+<br />
+<br />
+The diagram below shows a more detailed block diagram of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> tuners.
+Each tuner consists of an adjustable bandpass filter, an amplifier and
+another bandpass filter, followed by a mixer. The amplifier gain is controlled
+by the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Automatic Gain Control">AGC</span>. Furthermore, each tuner has its own Local Oscillator (LO).
+<br />
+        <br />
+        <table 
+         border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+          <div style="position: relative;" data-balloon-pos="up" aria-label="Individual RF tuner section" class="tooltip-red">
+          <div style="position: relative;" data-balloon-pos="up" aria-label="Individual RF tuner section" class="tooltip-red">
+          <img src="svg/rs111_rf.svg"
+           style="
+           max-width: 618px;
+          "
+           align="center"
+           vspace="4"
+           alt="Individual RF tuner section"
+           border=0
+          
+           />
+          </div>
+          </td></tr><tr><td align=center>
+        </td></tr></table>
+<br />
+The mixer produces an <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span> signal at 21.4 MHz, or in the case of the lower two
+tuners, 60 MHz which then converted down to 21.4 MHz in another mixer.
+The 490-1000 MHz tuner is built with stripline technology.
+The <b>narrowband</b> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span> unit (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Narrow Band">NB</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span>), consists in reality of three sections:
+<br />
+        <br />
+        <table 
+         border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+          <div style="position: relative;" data-balloon-pos="up" aria-label="The three sections of the narrowband IF strip" class="tooltip-red">
+          <div style="position: relative;" data-balloon-pos="up" aria-label="The three sections of the narrowband IF strip" class="tooltip-red">
+          <img src="svg/rs111_if.svg"
+           style="
+           max-width: 618px;
+          "
+           align="center"
+           vspace="4"
+           alt="The three sections of the narrowband IF strip"
+           border=0
+          
+           />
+          </div>
+          </td></tr><tr><td align=center>
+        </td></tr></table>
+<br />
+Each of the three IF sections (300 kHz, 75 kHz and 20 kHz) consists of an
+amplifier, a bandpass filter and another amplifier. The gain of each
+amplifier is controlled by the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Automatic Gain Control">AGC</span> signal. Note that the inputs and
+outputs of the three <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span> section are connected in parallel. The desired
+bandwidth is selected by applying the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Automatic Gain Control">AGC</span> signal. This biasses the
+transistors in the selected <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span>-amplifier stages. If no <span class="short tooltip-red" data-balloon-pos="up" aria-label="Automatic Gain Control">AGC</span> signal is
+applied, the corresponding amplifiers are automatically disabled.
+<br />
+<br />
+        </font>
+        </td></tr>
+      </table>
+<br />      <a name=int></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Interior</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Accessing the interior of the RS-111 is simple. The device is housed
+in a 3U 19" rackmountable enclosure that consists of a welded aluminium frame
+with a sub-frame that devides the case in an upper and a lower half. At the
+top and bottom are removable perforated panels that are held in place by 14
+click-screws each. After turning all click-screws 90&#176; counter clockwise,
+the panels can be removed, after which the interior becomes accessible
+as shown in the images below.
+<br />
+        <br />
+        <table 
+         border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/303846/011/full.jpg">          <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/303846/011/full.jpg">          <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+          <img src="img/rs111_int_top.png"
+           style="
+          "
+           align="center"
+           width="539px"
+           vspace="4"
+           alt="Click to see more"
+           border=0
+           />
+          </div>
+          </a>
+          </td></tr><tr><td align=center>
+        </td></tr></table>
+<br />
+The image above shows the upper half of the chassis, which comprises the
+power supply unit (PSU), the tuning sections for each of the four bands, and
+the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span>-strip that is responsible for de&#173;mo&#173;du&#173;la&#173;tion of the regular
+waveforms (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Modulation">FM</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Continupus Wave">CW</span>).
+Below the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span>-strip is another <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span>-strip
+that provides the video outputs.
+At the left end is the cathode ray tube (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Rady Tube">CRT</span>) that is part of the
+pano&#173;rama viewer. The accompanying electronics are housed in a separate
+sub-unit that is hinged-up in the image above.
+Note that many of the sub-units are gold-plated to optimise <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> shielding.
+<br />
+        <br />
+        <table 
+         border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/303846/043/full.jpg">          <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/303846/043/full.jpg">          <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+          <img src="img/rs111_int_bottom.png"
+           style="
+          "
+           align="center"
+           width="547px"
+           vspace="4"
+           alt="Click to see more"
+           border=0
+           />
+          </div>
+          </a>
+          </td></tr><tr><td align=center>
+        </td></tr></table>
+<br />
+The image above shows the lower half of the chassis, which comprises the
+individual band tuners and most of the wiring. From the date codes on the
+capacitors we were able to deduce that the device shown here was probably
+manufactured in late 1979 or early 1980. This means that it belongs to one
+of the last production batches of this device, as it was discontinued in 1980.
+<br />
+<br />
+Note that many parts of this radio were produced in-house at the Watkins-Johnson
+(CEI) facility in Rockville (Mary&#173;land, USA).
+The enclosures were made from aluminium stock and were cut,
+per&#173;fo&#173;ra&#173;ted, bended and welded in-house.
+The mains transformer and the tuning gears were fully made at the production
+site, and
+even the gold-plating of the sub-assemblies was done in-house <a href="#ref_1">[1]</a>.
+        </font>
+        </td></tr>
+      </table>
+<br /><div style="position: relative;">      <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+      <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+        <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        <tr>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="RS-111 interior - top view">        <img src="img/303846/010/thumbnail.jpg"
+         alt="RS-111 interior - top view"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/010"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="RS-111 interior - top view (with tilted panorama viewer electronics)" data-balloon-length="large">        <img src="img/303846/011/thumbnail.jpg"
+         alt="RS-111 interior - top view (with tilted panorama viewer electronics)"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 2);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/011"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Tuning units band 1, 2, 3 and 4">        <img src="img/303846/012/thumbnail.jpg"
+         alt="Tuning units band 1, 2, 3 and 4"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 3);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/012"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="IF strip">        <img src="img/303846/013/thumbnail.jpg"
+         alt="IF strip"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 4);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/013"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="IF strip crystal filters">        <img src="img/303846/018/thumbnail.jpg"
+         alt="IF strip crystal filters"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 5);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/018"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Band 3 front end - interior">        <img src="img/303846/024/thumbnail.jpg"
+         alt="Band 3 front end - interior"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 6);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/024"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Nuvistor in ceramic enclosure">        <img src="img/303846/029/thumbnail.jpg"
+         alt="Nuvistor in ceramic enclosure"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 7);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/029"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Band 3 local oscillator (7486 triode nuvistor)">        <img src="img/303846/032/thumbnail.jpg"
+         alt="Band 3 local oscillator (7486 triode nuvistor)"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 8);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/032"
+         /></div>
+        </td>
+        </tr>
+      </table>
+      <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+        <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        <tr>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="RS-111 interior - bottom view">        <img src="img/303846/003/thumbnail.jpg"
+         alt="RS-111 interior - bottom view"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 9);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/003"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="RS-111 interior - bottom side">        <img src="img/303846/043/thumbnail.jpg"
+         alt="RS-111 interior - bottom side"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 10);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/043"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front end band 2 (60-300 MHz) and band 1 (30-60 MHz)" data-balloon-length="large">        <img src="img/303846/008/thumbnail.jpg"
+         alt="Front end band 2 (60-300 MHz) and band 1 (30-60 MHz)"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 11);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/008"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front end band 3 (235-500 MHz)">        <img src="img/303846/006/thumbnail.jpg"
+         alt="Front end band 3 (235-500 MHz)"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 12);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/006"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front end band 4 (190-1000 MHz)">        <img src="img/303846/004/thumbnail.jpg"
+         alt="Front end band 4 (190-1000 MHz)"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 13);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/004"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Capacitors">        <img src="img/303846/005/thumbnail.jpg"
+         alt="Capacitors"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 14);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/005"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Wiring detail (bottom side)">        <img src="img/303846/007/thumbnail.jpg"
+         alt="Wiring detail (bottom side)"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 15);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/007"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Tuning gear">        <img src="img/303846/009/thumbnail.jpg"
+         alt="Tuning gear"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_2'); slideCurrent('slide_2', 16);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/009"
+         /></div>
+        </td>
+        </tr>
+        <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+      </table>
+      <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'B'" onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">B</span></div></div><div style="height: 40px;"></div>
+<div id="slide_2" class="slide" onClick="slideClose('slide_2')"><span class="slide_close_left" onClick="slideClose('slide_2')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_2', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 1 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303846/010/full.jpg" alt="RS-111 interior - top view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 2 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303846/011/full.jpg" alt="RS-111 interior - top view (with tilted panorama viewer electronics)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 3 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303846/012/full.jpg" alt="Tuning units band 1, 2, 3 and 4">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 4 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303846/013/full.jpg" alt="IF strip">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 5 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303846/018/full.jpg" alt="IF strip crystal filters">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 6 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303846/024/full.jpg" alt="Band 3 front end - interior">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 7 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303846/029/full.jpg" alt="Nuvistor in ceramic enclosure">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 8 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303846/032/full.jpg" alt="Band 3 local oscillator (7486 triode nuvistor)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 9 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303846/003/full.jpg" alt="RS-111 interior - bottom view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 10 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303846/043/full.jpg" alt="RS-111 interior - bottom side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 11 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303846/008/full.jpg" alt="Front end band 2 (60-300 MHz) and band 1 (30-60 MHz)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 12 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303846/006/full.jpg" alt="Front end band 3 (235-500 MHz)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 13 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303846/004/full.jpg" alt="Front end band 4 (190-1000 MHz)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 14 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303846/005/full.jpg" alt="Capacitors">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 15 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303846/007/full.jpg" alt="Wiring detail (bottom side)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 16 / 16</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/303846/009/full.jpg" alt="Tuning gear">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_2', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_2', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+      <a name=rest></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Restoration</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        27 July 2025
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When we received the RS-111 in our collection in December 2022, it was
+defective. Furthermore, the quality of the power cord was doubtful
+and the exterior had collected dust for quite a few years. Apparently, the
+previous owner had already started an attempt to repair the device, as the
+wiring around the mains power transformer had been soldered on. The transformer
+has two pri&#173;ma&#173;ry windings that can be connected in series (230V) or parallel
+(115V) by means of the voltage selector at the rear. It was decided to
+remove the voltage selector and wire the trans&#173;former per&#173;ma&#173;nently for 230V
+only. At the same time the power cord was replaced by a neoprene one.
+<br />
+<br />
+This was enough to bring the receiver to life again. The scale lamp of one
+of the four band tuners was replaced, and both the interior and exterior were
+cleaned thoroughly. When inspecting the interior, it was noticed that the
+device had been modified. BNC sockets had been added at either side of the
+screw terminal block at the <a href="img/303846/002/full.jpg"><span data-balloon-pos="up" aria-label="More about: rear panel">rear panel</span></a>,
+and a DYMO label had been added to describe their function as
+<i>pulse stretcher</i>.
+The BNC sockets and the screw terminal block were wired to an improvised
+homemade <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> with an isolated circuit that was fitted somewhere in a corner.
+We re&#173;moved the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> and the two BNC sockets, and restored the original
+wiring of the screw terminals.
+        </font>
+        </td></tr>
+      </table>
+<br />      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+A part that needed special attention is the
+<a href="img/303846/009/full.jpg"><span data-balloon-pos="up" aria-label="More about: tuning gear">tuning gear</span></a>, which is located
+directly behind the front panel. Operating the tuning dials was quite noisy
+and was not very smooth. The cogwheels were cleaned and oiled, but the
+biggest challenge ap&#173;peared to be the planetary gear <a href="#ref_4">[4]</a> that is fitted
+di&#173;rectly to the axle of each of each tuning dial.
+<br />
+<br />
+As the planetary gear <sup><font color="#FF8800">1</font></sup> is a closed construction it is difficult to apply oil
+to it. This was solved by removing the tuning knobs and applying oil di&#173;rect&#173;ly
+to the axle, whilst continuously turning it. The tuning gear is now smooth
+and silent again.
+        </font></td>
+        <td>&nbsp;&nbsp;</td>
+        <td align=center valign=top width=100>
+        <table 
+         border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/303846/009/full.jpg">          <div style="position: relative;" data-balloon-pos="up" aria-label="Tuning gear">
+<a href="img/303846/009/full.jpg">          <div style="position: relative;" data-balloon-pos="up" aria-label="Tuning gear">
+          <img src="img/303846/009/small.jpg"
+           style="
+           max-width: 618px;
+          "
+           align="left"
+           vspace="4"
+           alt="Tuning gear"
+           border=0
+           width=298 height=200
+           />
+          </div>
+          </a>
+          </td></tr><tr><td align=center>
+        </td></tr></table>
+        </td></tr>
+      </table>
+<br />      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+As the mains power in continental Europe often exceeds 230V nowadays &mdash;
+in some cases it is as high as 245V &mdash; whilst the transformer is made for 230V,
+it was decided to connect
+<a href="img/303846/044/full.jpg"><span data-balloon-pos="up" aria-label="More about: two 22&Omega;/5W re&#173;sis&#173;tors in ...">two 22&Omega;/5W re&#173;sis&#173;tors in series</span></a> <sup><font color="#FF8800">2</font></sup> with the
+primairy winding. This reduces the primary voltage somewhat, and pre&#173;vents the
+transformer from saturating and running hot. The device was then
+<a href="#video_test"><span data-balloon-pos="up" aria-label="Jump to: tested with live signals">tested with live signals</span></a>
+on each of the four frequency bands.
+Amazingly, the receiver was still within its speci&#173;fi&#173;ca&#173;tions and no further
+alignment was needed, more than 45 years <sup><font color="#FF8800">3</font></sup> after it was manufacturered.
+        </font>
+        </td></tr>
+      </table>
+<br />      <table width="50" cellspacing="0" cellpadding="0"><tr>
+      <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+      </tr></table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr><td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+        <ol>
+        <li style="margin-bottom: 6px;">
+Also known as an <b>epicyclic gearing</b> <a href="#ref_4">[4]</a>.
+        </li>
+        <li style="margin-bottom: 6px;">
+One resistor in series with the LIVE wire (brown) and one in series with
+  the NULL wire (blue).
+        </li>
+        <li style="margin-bottom: 6px;">
+From the date codes on some of the components, we estimated that the
+  device shown here was built in late 1979 or early 1980, which means that
+  it was produced in one of the last batches (1963-1980).
+        </ol>
+        </small></font></td></tr>
+      </table>
+<div style="height: 20px;"></div>      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Problems
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td valign="">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li><s>Completely dead</s>          <li><s>Exterior dusty and dirty</s>          <li><s>Tuning gear stiff and noisy</s>        </ul>
+</font></td></tr></table><div style="height: 14px;"></div>      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Fixed
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td valign="">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li>Exterior thoroughly cleaned          <li>Interior thoroughly cleaned          <li>Mains wiring corrected and modified          <li>Mains power cord replaced          <li>115/230V voltage selector removed (now wired permanently for 230V only)          <li>Two resistors connected in series with the primary side to lower the mains voltage          <li>Scale lamp replaced          <li>Unrelated <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> with <i>pulse stretcher</i> removed          <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermedia Frequency">IF</span>-wiring restored (was modified by previous owner)          <li>Two BNC sockets at rear panel removed          <li>Wiring of 600&Omega; audio line out restored (screw terminals)        </ul>
+</font></td></tr></table><div style="height: 14px;"></div><div style="position: relative;">      <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+      <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+        <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        <tr>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel">        <img src="img/303846/001/thumbnail.jpg"
+         alt="Front panel"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/001"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Rear panel">        <img src="img/303846/002/thumbnail.jpg"
+         alt="Rear panel"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 2);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/002"
+         /></div>
+        </td>
+        <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+        <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Tuning gear">        <img src="img/303846/009/thumbnail.jpg"
+         alt="Tuning gear"
+         border="0" width=74 height=50
+         onClick="slideOpen('slide_3'); slideCurrent('slide_3', 3);"
+         style="
+         cursor: pointer;"
+         max-width: 618px;
+        "
+         title="image # 303846/009"
+         /></div>
+        </td>
+        </tr>
+        <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+      </table>
+      <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'C'" onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">C</span></div></div><div style="height: 40px;"></div>
+<div id="slide_3" class="slide" onClick="slideClose('slide_3')"><span class="slide_close_left" onClick="slideClose('slide_3')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_3', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 1 / 3</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/303846/001/full.jpg" alt="Front panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 2 / 3</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/303846/002/full.jpg" alt="Rear panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 3 / 3</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/303846/009/full.jpg" alt="Tuning gear">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_3', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_3', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+      <a name=spec></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Specifications</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td valign="">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li><div style="display:inline-block; width:100px;">Device</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Very High Frequency (30-300 MHz)">VHF</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Ultra High Frequency (300-3000 MHz)">UHF</span> surveillance receiver          <li><div style="display:inline-block; width:100px;">Purpose</div>Surveillance and radio monitoring          <li><div style="display:inline-block; width:100px;">Model</div>RS-111          <li><div style="display:inline-block; width:100px;">Manufacturer</div><span class="short" aria-label="Communication Electronics Inc." data-balloon-pos="up"><a href="../../../manuf/cei" class="short" >CEI</a></span> (until 1967), <a href="../../../manuf/wj">Watkins-Johnson</a> (from 1967)          <li><div style="display:inline-block; width:100px;">Designator</div>AN/URR-52          <li><div style="display:inline-block; width:100px;">Year</div>1963          <li><div style="display:inline-block; width:100px;">Country</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>          <li><div style="display:inline-block; width:100px;">Production</div>1963-1980 (17 years)          <li><div style="display:inline-block; width:100px;">Frequency</div>30-1000 MHz          <li><div style="display:inline-block; width:100px;">Bands</div><a href="#spec_bands">4 (see below)</a>          <li><div style="display:inline-block; width:100px;">Waveforms</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Modulation">FM</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Continupus Wave">CW</span>          <li><div style="display:inline-block; width:100px;">Bandwidth</div>20, 75, 300 kHz, 2 MHz (video)          <li><div style="display:inline-block; width:100px;">Power</div>115/230 V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span>, 50-400 Hz          <li><div style="display:inline-block; width:100px;">Dimensions</div>483 &#215; 400 &#215; 134 mm          <li><div style="display:inline-block; width:100px;">Weight</div>16 kg          <li><div style="display:inline-block; width:100px;">Quantity</div>&gt; 1000          <li><div style="display:inline-block; width:100px;">Price</div>US$ 6,250 (1968) <a href="#doc_1">[A]</a>        </ul>
+</font></td></tr></table>      <a name=spec_maj></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Major versions
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+      <table width=100% cellspacing=0 cellpadding=0>
+        <tr>
+        <td width=100%>
+        <table
+         class="table"
+         width=100% border=0 cellspacing=0 cellpadding=1 bgcolor=#FFFFFF>
+          <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="35" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>&#160;</font></td></b><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Civil</font></td></b><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Military</font></td></b><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Year</font></td></b><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Description</font></td></b>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="35" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>RS-111-1B-7</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>AN/URR-52A</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1963</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>First core version of the RS-111</font></td>          </tr>
+          <tr>
+<td bgcolor="#FFFFFF" align="left" valign="center" width="35" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>RS-111-1B-12</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>AN/URR-52B</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>1968</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Second core version of the RS-111</font></td>          </tr>
+        </table>
+<div style="height: 20px;"></div>      </td>
+      </tr></table>
+      <a name=spec_bands></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        Bands
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td valign="">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ol>
+          <li>30-60 MHz          <li>60-300 MHz          <li>235-500 MHz          <li>490-1000 MHz        </ol>
+</font></td></tr></table><div style="height: 20px;"></div>      <a name=var></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Production variants</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr>
+        <td valign=top align=left>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is a non-exhaustive list of known production variants:
+        </font>
+        </td></tr>
+      </table>
+<br />      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        RS-111-1B-7
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td valign="">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li>1963          <li>Modified version of the RS-111-1B, with:          <li>Internal relays controlled from front panel, providing <span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Modulation">FM</span> video output          <li>Single antenna for entire frequency range          <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Automatic Gain Control">AGC</span> monitor        </ul>
+</font></td></tr></table>      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        RS-111-1B-12
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td valign="">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li>1968          <li>Second core version of the RS-111-1B          <li>New 3ASP1 <span class="short tooltip-red" data-balloon-pos="up" aria-label="Cathode Rady Tube">CRT</span> (instead of 2XP1)          <li>New panarama viewer electronics with switchable 21.4 MHz marker and improved linearity          <li>Additional unamplified <span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span> video output          <li>Signal strength meter (instead of tuning indicator)        </ul>
+</font></td></tr></table>      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        RS-111-1B-12B
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td valign="">
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li>1974          <li>Same as RS-111-1B-12, but with:          <li>Digital Automatic Frequency Control (DAFC)          <li>Provision for external 6-digit frequency readout <sup><font color="#FF8800">1</font></sup>        </ul>
+</font></td></tr></table>      <table width="50" cellspacing="0" cellpadding="0"><tr>
+      <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+      </tr></table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr><td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+        <ol>
+        <li>
+Compatible frequency counters are DRO-309A and DRO-333.
+        </ol>
+        </small></font></td></tr>
+      </table>
+<div style="height: 20px;"></div>      <a name=lit></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Literature</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ol type=a>
+          <a name="lit_1"></a>
+          <li><a href="files/20080600_PopCom_Watergate.pdf">Terry O'Laughlin, <i>The Watergate Rig: The Most Infamous Spy Radio</i></a><br />
+Popular Communications, June 2009. <sup><font color="#FF8800">1</font></sup>
+        </ol type=a>
+      </font></td></tr></table>
+<div style="height: 14px;"></div>      <table width="50" cellspacing="0" cellpadding="0"><tr>
+      <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+      </tr></table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr><td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+        <ol>
+        <li>
+Document kindly provided by <a href="https://watkins-johnson.terryo.org" target="_blank"><span data-balloon-pos="up" aria-label="watkins-johnson.terryo.org (off-site)">Terry O'Laughlin</span></a>
+  of the <a href="https://watkins-johnson.terryo.org" target="_blank"><span data-balloon-pos="up" aria-label="watkins-johnson.terryo.org (off-site)">Watkins-Johnson website</span></a> <a href="#ref_1">[1]</a>.
+        </ol>
+        </small></font></td></tr>
+      </table>
+<div style="height: 20px;"></div>      <a name=doc></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Documentation</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ol type=A>
+          <a name="doc_1"></a>
+          <li><a href="files/RS111_1B_7_datasheet.pdf">RS-111-1B-7 datasheet <sup><font color="#FF8800">1</font></sup> </a><br />
+CEI, Rockville (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Maryland">MD</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>). 5 April 1968.
+          <p />
+          <a name="doc_2"></a>
+          <li><a href="files/RS111_1B_12_datasheet.pdf">RS-111-1B-12 datasheet <sup><font color="#FF8800">1</font></sup> </a><br />
+CEI, Rockville (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Maryland">MD</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>). 5 April 1968.
+          <p />
+          <a name="doc_3"></a>
+          <li><a href="files/RS111_1B_12B_datasheet.pdf">RS-111-1B-12B datasheet</a><br />
+Watkins-Johnson, Gaithersburg (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Maryland">MD</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>). December 1974.
+          <p />
+          <a name="doc_4"></a>
+          <li><a href="files/RS111_1B_2_manual.pdf">RS-111-1B-2 instruction manual</a><br />
+CEI, Rockville (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Maryland">MD</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>). 30 November 1965. <sup><font color="#FF8800">1</font></sup>
+          <p />
+          <a name="doc_5"></a>
+          <li><a href="files/RS111_1B_7_service.pdf">RS-111-1B-7 (AN/URR-52A) technical manual</a><br />
+This manual covers all versions from the first couple of years.<br />
+Watkins-Johnson Company CEI Division, Rockville (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Maryland">MD</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>). 16 April 1973. <sup><font color="#FF8800">1</font></sup>
+          <p />
+          <a name="doc_6"></a>
+          <li><a href="files/RS111_1B_12A_service.pdf">RS-111-1B-12A technical manual</a><br />
+This manual covers all versions from 12 onwards.<br />
+Watkins-Johnson Company , Gaithersburg (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Maryland">MD</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>). 5 June 1974. <sup><font color="#FF8800">1</font></sup>
+          <p />
+          <a name="doc_7"></a>
+          <li><a href="files/RS111_1B_17_supplement.pdf">RS-111-1B-17 supplement</a><br />
+Watkins-Johnson Company CEI Division, Rockville (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Maryland">MD</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>). 15 July 1971. <sup><font color="#FF8800">1</font></sup>
+          <p />
+          <a name="doc_8"></a>
+          <li><a href="files/RS111_1B_26_supplement.pdf">RS-111-1B-26 supplement</a><br />
+Watkins-Johnson Company CEI Division, Rockville (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Maryland">MD</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>). 17 September 1970. <sup><font color="#FF8800">1</font></sup>
+        </ol type=A>
+      </font></td></tr></table>
+<div style="height: 14px;"></div>      <table width="50" cellspacing="0" cellpadding="0"><tr>
+      <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+      </tr></table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr><td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+        <ol>
+        <li>
+Document kindly provided by <a href="https://watkins-johnson.terryo.org" target="_blank"><span data-balloon-pos="up" aria-label="watkins-johnson.terryo.org (off-site)">Terry O'Laughlin</span></a>
+  of the <a href="https://watkins-johnson.terryo.org" target="_blank"><span data-balloon-pos="up" aria-label="watkins-johnson.terryo.org (off-site)">Watkins-Johnson website</span></a> <a href="#ref_1">[1]</a>.
+        </ol>
+        </small></font></td></tr>
+      </table>
+<div style="height: 20px;"></div>      <a name=ref></a>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>References</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ol>
+          <a name="ref_1"></a>
+          <li><a href="https://watkins-johnson.terryo.org/CEI-Receivers/RS-111.htm" target="_blank">Terry O. Laughlin, <i>CEI and WJ RS-111 Receiver Series</i></a><br />
+<a href="https://watkins-johnson.terryo.org" target="_blank">Terry O.'s WJ website</a>.
+Visited 12 December 2022.
+          <p />
+          <a name="ref_2"></a>
+          <li><a href="files/20080600_PopCom_Watergate.pdf">Terry O'Laughlin, <i>The Watergate Rig: The Most Infamous Spy Radio</i></a><br />
+Popular Communications, June 2009. <sup><font color="#FF8800">1</font></sup>
+          <p />
+          <a name="ref_3"></a>
+          <li><a href="https://en.wikipedia.org/wiki/Watergate_scandal" target="_blank">Wikipedia, <i>Watergate scandal</i></a><br />
+Visited 12 July 2025.
+          <p />
+          <a name="ref_4"></a>
+          <li><a href="https://en.wikipedia.org/wiki/Epicyclic_gearing" target="_blank">Wikipedia, <i>Epicyclic gearing</i></a><br />
+Visited 27 July 2025.
+          <p />
+          <a name="ref_5"></a>
+<li><font color=#F52E00>U.S. vs. Liddy et al (Watergate files) exhibit 124 & 125</font><br />
+US National Archives, criminal case CR 1827-72.
+        </ol>
+      </font></td></tr></table>
+<div style="height: 14px;"></div>      <table width="50" cellspacing="0" cellpadding="0"><tr>
+      <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+      </tr></table>
+      <table width=100% border=0 cellspacing=0 cellpadding=0>
+        <tr><td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+        <ol>
+        <li>
+Document kindly provided by <a href="https://watkins-johnson.terryo.org" target="_blank"><span data-balloon-pos="up" aria-label="watkins-johnson.terryo.org (off-site)">Terry O'Laughlin</span></a>
+  of the <a href="https://watkins-johnson.terryo.org" target="_blank"><span data-balloon-pos="up" aria-label="watkins-johnson.terryo.org (off-site)">Watkins-Johnson website</span></a> <a href="#ref_1">[1]</a>.
+        </ol>
+        </small></font></td></tr>
+      </table>
+<div style="height: 20px;"></div>      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        <tr>
+        <td align="left" valign="center">
+        <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+        <b>Further information</b>
+        </font>
+        </td>
+        </tr>
+        <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+        <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+      </table>
+      <table width=100% border=0 cellspacing=0 cellpadding=4>
+        <tr>
+        <td>
+        <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+        <ul>
+          <li><a href="../../../manuf/cei">CEI, the original manufacturer</a><br />
+          <li><a href="../../../manuf/wj">Watkins-Johnson, the later manufacturer</a><br />
+          <li><a href="../index.htm">Other W-J receivers</a><br />
+          <li><a href="../../receivers.htm">Other surveillance receivers</a><br />
+        </ul>
+      </font></td></tr></table>
+<div style="height: 14px;"></div>      </td></tr>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr><td colspan=3 width=100%>
+      <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+      </table>
+      </td></tr>
+      <tr>
+      <td align=center width=100%>
+      <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+      Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+      If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+       
+      © Crypto Museum. Created: Monday 12 December 2022. Last changed: Sunday, 17 August 2025 - 20:31 CET.
+      <br />
+      </font
+      </td>
+      </tr>
+      <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+      <tr><td align=center>
+      <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+      </td></tr>
+    </table>
+    </td></tr>
+  </table>
+  </font>
+</td>
+</tr></table>
+</body>
+</html>

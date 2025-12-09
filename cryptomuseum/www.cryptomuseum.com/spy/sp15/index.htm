@@ -1,0 +1,2955 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>SP-15</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="Keywords" content="sp15, SP-15, bn-58, bn58, FE-8, FE-9, FE9, sp-20E, FSS7, FSS-7, FFS-7, FFS7">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../index.htm"><img src="../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../spy/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../spy/glossary.htm';" >Glossary</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../spy/ww2.htm';" >World War II</div>
+          <div class="but sel sub" onClick="location.href='../../spy/coldwar.htm';" >Cold War</div>
+          <div class="but sel sub" onClick="location.href='../../spy/sf.htm';" >Special forces</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Spy radio sets used by Stay-Behind Organisations in Europe" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../spy/sbo/index.htm';" >Stay-Behind</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Short Range Agent Communication" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../spy/srac.htm';" >SRAC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="One-Way Voice Link - Numbers Stations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../spy/owvl/index.htm';" >OWVL</div>
+</div>
+          <div class="but sub" onClick="location.href='../../spy/rx.htm';" >Receivers</div>
+          <div class="but sub" onClick="location.href='../../spy/other.htm';" >Other</div>
+          <div class="spacer"></div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Countries
+          </div>
+          <div class="hidden">
+            <div class="but sub" onClick="location.href='../../spy/sbo/at/index.htm';" >Austria</div>
+            <div class="but sub" onClick="location.href='../../spy/belgium.htm';" >Belgium</div>
+            <div class="but sub" onClick="location.href='../../spy/cs.htm';" >Czechoslovakia</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former East-Germany" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../spy/ddr.htm';" >DDR</div>
+</div>
+            <div class="but sub" onClick="location.href='../../spy/kyynel/index.htm';" >Finland</div>
+            <div class="but sub" onClick="location.href='../../spy/fr.htm';" >France</div>
+            <div class="but sel sub" onClick="location.href='../../spy/de.htm';" >Germany</div>
+            <div class="but sub" onClick="location.href='../../spy/hu.htm';" >Hungary</div>
+            <div class="but sub" onClick="location.href='../../spy/italy.htm';" >Italy</div>
+            <div class="but sub" onClick="location.href='../../spy/japan.htm';" >Japan</div>
+            <div class="but sub" onClick="location.href='../../spy/nl.htm';" >Netherlands</div>
+            <div class="but sub" onClick="location.href='../../spy/norway.htm';" >Norway</div>
+            <div class="but sub" onClick="location.href='../../spy/poland.htm';" >Poland</div>
+            <div class="but sub" onClick="location.href='../../spy/sweden.htm';" >Sweden</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United Kingdom" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../spy/uk.htm';" >UK</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United States of America" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../spy/usa.htm';" >USA</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former Soviet Union" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../spy/ussr.htm';" >USSR</div>
+</div>
+            <div class="but sub" onClick="location.href='../../spy/yugo.htm';" >Yugoslavia</div>
+          </div>
+          </div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../index.htm"><img src="../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../sbo/index.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Stay-Behind Organisations" class="key">SBO</div></a><a class="key" href="../sf.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Special Forces" class="key">SF</div></a><a class="key" href="../de.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Bundes Republik Deutschland (Germany)" class="key">BRD</div></a><a class="key" href="../sbo/nl/index.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Netherlands" class="key">NL</div></a><a class="key" href=""><div  data-balloon-pos="up" aria-label="Shortcut to Bundesachrichtendienst" class="key"><font color="red">BND</font></div></a>&nbsp;&nbsp;<a class="key" href="nl.htm"><div  data-balloon-pos="up" aria-label="Forward to FSS-7" class="key right">FSS-7 &rarr;</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>SP-15 
+          &nbsp;<font color="#CCC">
+          FSS-7</b>
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Modular hybrid spy radio set</b>
+<br />
+<br />
+<b>SP-15</b> is a modular hybrid <sup><font color="#FF8800">1</font></sup>
+<a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: agent communication set">agent communication set</span></a>, also known as a
+<a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: spy radio set">spy radio set</span></a>, developed around 1958 by the German intelligence
+service <a href="../../intel/index.htm#bnd"><span data-balloon-pos="up" aria-label="More about: Bundes&shy;achrichten&shy;dienst">Bundes&shy;achrichten&shy;dienst</span></a> (<span class="short" aria-label="Bundesachrichtendienst" data-balloon-pos="up"><a href="../../intel/bnd" class="short" >BND</a></span>)
+and manufactured by Wandel &amp; Goltermann in Reutlingen (Germany).
+It was used for espionage, diplomatic traffic,
+<a href="../sf.htm"><span data-balloon-pos="up" aria-label="More about: Special Forces">Special Forces</span></a> (<span class="short" aria-label="Special Forces" data-balloon-pos="up"><a href="../sf.htm" class="short" >SF</a></span>), clandestine (covert) operations and
+<a href="../sbo/index.htm"><span data-balloon-pos="up" aria-label="More about: Stay-Behind Organisations">Stay-Behind Organisations</span></a> (<span class="short" aria-label="Stay-Behind Organisation" data-balloon-pos="up"><a href="../sbo/index.htm" class="short" >SBO</a></span>).
+Certain components of the SP-15 radio station were also used by partner
+organizations and agencies in other countries.
+In The Netherlands, SP-15 was used by the <span class="short" aria-label="Stay-Behind Organisation" data-balloon-pos="up"><a href="../sbo/index.htm" class="short" >SBO</a></span>
+<span class="short" aria-label="Operati&#235;n en Inlichtingen (Operations and Intelligence) - the Dutch SBO" data-balloon-pos="up"><a href="../gladio/nl" class="short" >O&I</a></span>, and was known as <a href="nl.htm"><span data-balloon-pos="up" aria-label="More about: FSS-7">FSS-7</span></a>. <sup><font color="#FF8800">2</font></sup>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+A complete SP-15 radio station consists of an <a href="#rx"><span data-balloon-pos="up" aria-label="Jump to: FE-8 receiver">FE-8 receiver</span></a>,
+an <a href="#tx"><span data-balloon-pos="up" aria-label="Jump to: FSS-7 transmitter">FSS-7 transmitter</span></a>,
+a <a href="../../burst/index.htm"><span data-balloon-pos="up" aria-label="More about: high-speed morse burst encoder">high-speed morse burst encoder</span></a>,
+an <a href="#ac"><span data-balloon-pos="up" aria-label="Jump to: AC mains power supply unit">AC mains power supply unit</span></a>
+a <a href="#dc"><span data-balloon-pos="up" aria-label="Jump to: 12V DC battery power supply unit">12V DC battery power supply unit</span></a>,
+various battery chargers, <a href="#xtal"><span data-balloon-pos="up" aria-label="Jump to: crystals">crystals</span></a> and one or two boxes
+with accessories, spare parts and tools.
+<br />
+<br />
+The image on the right shows the transmitter (right), the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span> (centre),
+the receiver (left), a morse key (front right) and various accessories.
+The set was often supplied with a
+<a href="#burst"><span data-balloon-pos="up" aria-label="Jump to: burst encoder">burst encoder</span></a> for high-speed transmissions in
+<a href="../../radio/morse/index.htm"><span data-balloon-pos="up" aria-label="More about: morse code">morse code</span></a>,
+to minimize the chance of
+<a href="../../df/df.htm"><span data-balloon-pos="up" aria-label="More about: direction finding (RDF)">direction finding (RDF)</span></a>.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/300079/074/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Typical SP-15 spy radio outfit">
+<a href="img/300079/074/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Typical SP-15 spy radio outfit">
+            <img src="img/300079/074/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Typical SP-15 spy radio outfit"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+For use by agents, the radio set was usually packed in a leather
+suitcase. For <a href="../sf.htm"><span data-balloon-pos="up" aria-label="More about: Special Forces">Special Forces</span></a> (<span class="short" aria-label="Special Forces" data-balloon-pos="up"><a href="../sf.htm" class="short" >SF</a></span>) a special <a href="#sf"><span data-balloon-pos="up" aria-label="Jump to: webbing unit">webbing unit</span></a>
+was available, allowing the units to be carried on the chest.
+When used by <a href="../sbo/index.htm"><span data-balloon-pos="up" aria-label="More about: Stay-Behind Organizations">Stay-Behind Organizations</span></a> (<span class="short" aria-label="Stay-Behind Organisation" data-balloon-pos="up"><a href="../sbo/index.htm" class="short" >SBO</a></span>)
+the various units were usually stored in a <a href="nl.htm"><span data-balloon-pos="up" aria-label="More about: watertight container">watertight container</span></a>.
+The SP-15 was suitable for deployment anywhere in the world.
+It was also used by the <span class="short" aria-label="United States of America (USA)" data-balloon-pos="up"><a href="../usa.htm" class="short" >US</a></span>
+<a href="../../intel/cia/index.htm"><span data-balloon-pos="up" aria-label="More about: Central Intelligence Agency (CIA)">Central Intelligence Agency (CIA)</span></a>, for example
+in covert operations in the former <span class="short" aria-label="Deutsche Demokratische Republik (German Democratic Republic - GDR)" data-balloon-pos="up"><a href="../ddr.htm" class="short" >DDR</a></span> (East Germany) <a href="#ref_7">[7]</a>.
+<br />
+<br />
+Around 1970, the SP-15 was succeeded by the <a href="../sp20/index.htm"><span data-balloon-pos="up" aria-label="More about: SP-20">SP-20</span></a>
+developed by <a href="../../manuf/telefunken/index.htm"><span data-balloon-pos="up" aria-label="More about: Telefunken">Telefunken</span></a>,
+but remained in use in some countries well into the 1980s.
+In The Netherlands, for example, the SP-15 was used until it was
+replaced in the mid-1980s by the digital <a href="../prm4150"><span data-balloon-pos="up" aria-label="More about: RACAL PRM-4150">RACAL PRM-4150</span></a>.
+Eventually, all SP-15 units &ndash; in fact all clandestine sets in Europe &ndash;
+were replaced by the pan-European <a href="../fs5000/index.htm"><span data-balloon-pos="up" aria-label="More about: FS-5000 (Harpoon)">FS-5000 (Harpoon)</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="nl.htm">Dutch stay-behind version of the SP-15</a>
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+In this context, <i>hyrid</i> means that it contains both valves (tubes)
+  and transistors.
+          </li>
+          <li>
+FSS-7 is actually the designator of the transmitter, but in The Netherlands
+  it was used for the complete set. The designator (FSS-7) is sometimes
+  erroneously written as FS-7 or FFS-7.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="SP-15 spy radio set">          <img src="img/300079/082/thumbnail.jpg"
+           alt="SP-15 spy radio set"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300079/082"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Typical SP-15 spy radio station">          <img src="img/300079/079/thumbnail.jpg"
+           alt="Typical SP-15 spy radio station"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300079/079"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Typical SP-15 spy radio outfit">          <img src="img/300079/074/thumbnail.jpg"
+           alt="Typical SP-15 spy radio outfit"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300079/074"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Crystal operated transmitter">          <img src="img/300079/076/thumbnail.jpg"
+           alt="Crystal operated transmitter"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300079/076"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 4</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/300079/082/full.jpg" alt="SP-15 spy radio set">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 4</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/300079/079/full.jpg" alt="Typical SP-15 spy radio station">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 4</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/300079/074/full.jpg" alt="Typical SP-15 spy radio outfit">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 4 / 4</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/300079/076/full.jpg" alt="Crystal operated transmitter">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=parts></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Parts</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=fs7.htm>
+<div  data-balloon-pos="up" aria-label="Valve-based FSS-7 transmitter made by Wandel & Goltermann, also known as BN-22" data-balloon-length="large">          <img src="img/300727/013/thumbnail.jpg"
+           alt="Valve-based FSS-7 transmitter made by Wandel & Goltermann, also known as BN-22"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=fs7.htm>TX</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=fe8.htm>
+<div  data-balloon-pos="up" aria-label="FE-8 receiver made by Wandel &amp; Goltermann, also known as BN-58" data-balloon-length="large">          <img src="img/303773/012/thumbnail.jpg"
+           alt="FE-8 receiver made by Wandel &amp; Goltermann, also known as BN-58"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=fe8.htm>RX</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#uhu>
+<div  data-balloon-pos="up" aria-label="Alternative FE-9 receiver made by Wandel & Goltermann, also known as BN-48 or UHU" data-balloon-length="large">          <img src="img/302037/022/thumbnail.jpg"
+           alt="Alternative FE-9 receiver made by Wandel & Goltermann, also known as BN-48 or UHU"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#uhu>UHU</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#ac>
+<div  data-balloon-pos="up" aria-label="Mains AC power supply unit">          <img src="img/302081/051/thumbnail.jpg"
+           alt="Mains AC power supply unit"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#ac>AC</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#dc>
+<div  data-balloon-pos="up" aria-label="DC Power Supply Unit (12-24V)">          <img src="img/300727/013/thumbnail.jpg"
+           alt="DC Power Supply Unit (12-24V)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#dc>DC</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#xtal>
+<div  data-balloon-pos="up" aria-label="Quartz crystals for the transmitter">          <img src="img/302081/291/thumbnail.jpg"
+           alt="Quartz crystals for the transmitter"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#xtal>Crystals</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#burst>
+<div  data-balloon-pos="up" aria-label="Various types of burst encoders">          <img src="../../burst/mmp/img/301698/006/thumbnail.jpg"
+           alt="Various types of burst encoders"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#burst>Burst</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#key>
+<div  data-balloon-pos="up" aria-label="Accessories and spare parts">          <img src="img/302081/174/thumbnail.jpg"
+           alt="Accessories and spare parts"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#key>Spares</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=#nl>
+<div  data-balloon-pos="up" aria-label="Dutch stay-behind (Gladio) outfit">          <img src="img/302081/225/thumbnail.jpg"
+           alt="Dutch stay-behind (Gladio) outfit"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#nl>NL</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#sf>
+<div  data-balloon-pos="up" aria-label="Special Forces webbing kit">          <img src="img/300146/005/thumbnail.jpg"
+           alt="Special Forces webbing kit"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#sf>Webbing</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#fsk>
+<div  data-balloon-pos="up" aria-label="FSK Modulator for very high speed burst transmissions" data-balloon-length="large">          <img src="../../burst/mmp/img/301698/056/thumbnail.jpg"
+           alt="FSK Modulator for very high speed burst transmissions"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#fsk>FSK</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#cal>
+<div  data-balloon-pos="up" aria-label="Calibrator for the receiver">          <img src="img/301697/000/thumbnail.jpg"
+           alt="Calibrator for the receiver"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#cal>Cal</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <a name=tx></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Transmitter 
+          &nbsp;<font color="#CCC">
+          FSS-7 &#183; BN-22
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The transmitter of the SP-15 was developed by the
+<a href="../../intel/index.htm#bnd"><span data-balloon-pos="up" aria-label="More about: Bundesnachrichtendienst (BND)">Bundesnachrichtendienst (BND)</span></a>
+around 1958 and manufactured by  Wandel &amp; Golterman (W&G) until 1962.
+In Germany it was known as <b>FSS-7</b>
+or <b>BN-22</b>.
+It has two valves (EL95 for the oscillator and EL81 for the HF power amplifier)
+and one transistor (OC450) and is suitable for CW only.
+<br />
+<br />
+Power output was 10W or 20W, switchable from the PSU (see below).
+The transmitter is crystal operated, but the
+<a href="#nl"><span data-balloon-pos="up" aria-label="Jump to: Dutch version (FSS-7/NL)">Dutch version (FSS-7/NL)</span></a>
+was later modified for use with a synthesizer.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="fs7.htm">More information</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="fs7.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="fs7.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/300727/013/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=rx></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Receiver 
+          &nbsp;<font color="#CCC">
+          BN-58 &#183; FE-8
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The FE-8 receiver was developed around 1958 by the
+<a href="../../intel/index.htm#bnd"><span data-balloon-pos="up" aria-label="More about: Bundesnachrichtendienst (BND)">Bundesnachrichtendienst (BND)</span></a>
+and was manufactured by Wandel &amp; Golterman (W&G).
+It can be used in combination with the FSS-7, but
+also as a standalone receiver. Power is provided by an
+internal battery, or by an external source.
+<br />
+<br />
+The receiver has two ranges (2.5-9.1 MHz and 9.1-24 MHz) with permeability
+tuning, resulting in a linear scale for both ranges. This receiver
+was also used with the later <a href="../sp20/index.htm"><span data-balloon-pos="up" aria-label="More about: SP-20 radio sets">SP-20 radio sets</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="fe8.htm">More information</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="fe8.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="FE-8 (BN-58) receiver with both tuning cranks folded out" data-balloon-length="large">
+<a href="fe8.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="FE-8 (BN-58) receiver with both tuning cranks folded out" data-balloon-length="large">
+            <img src="img/303773/012/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="FE-8 (BN-58) receiver with both tuning cranks folded out"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=uhu></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Receiver UHU 
+          &nbsp;<font color="#CCC">
+          BN-48 &#183; FE-9
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+For situations where the wide frequency range of the FE-8 was
+not needed, the smaller FE-9 was used, which covers the lower
+frequencies only (2-9 MHz). The reduced size and weight made it
+easier to smuggle the device into a country.
+<br />
+<br />
+The FE-9 (codenamed UHU) is suitable for the reception of AM and CW (morse) signals.
+It was developed by the
+<a href="../../intel/index.htm#bnd"><span data-balloon-pos="up" aria-label="More about: Bundesnachrichtendienst (BND)">Bundesnachrichtendienst (BND)</span></a>
+and built by Wandel &amp; Golterman (W&G).
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="uhu.htm">More information</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="uhu.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="BN-48 (UHU)">
+<a href="uhu.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="BN-48 (UHU)">
+            <img src="img/302037/022/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="BN-48 (UHU)"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=ac></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          AC Power supply 
+          &nbsp;<font color="#CCC">
+          BN-22/2
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The SP-15 was supplied with a highly compact mains power supply unit (PSU)
+that was suitable for all common AC mains voltages in the world, between
+95 and 235 V. It produces the LT and HT voltages for the transmitter.
+<br />
+<br />
+It is slotted into the left side of the transmitter or, in the case
+of the modified Dutch FSS-7/NL, into the left side of the
+<a href="#box"><span data-balloon-pos="up" aria-label="Jump to: special junction box">special junction box</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="ac.htm">More information</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="ac.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Mains AC power supply unit">
+<a href="ac.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Mains AC power supply unit">
+            <img src="img/302081/051/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Mains AC power supply unit"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=dc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          DC Power Supply
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When no mains AC network was available, it was also possible to power
+the SP-15 from a 12V DC source, such as the battery of a car. This was done
+by swapping the AC PSU for a DC one.
+<br />
+<br />
+It contains a power inverter that converts the 12V DC input into 6.3V
+for the filaments and a HT AC voltage for the transmitter's valves.
+Like the AC PSU, it is slotted into the left side of the transmitter.
+It contains a relay to prevent the DC power source from being reversed
+accidentally.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="dc.htm">More information</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/302081/023/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="DC battery inverter">
+<a href="img/302081/023/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="DC battery inverter">
+            <img src="img/302081/023/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="DC battery inverter"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=xtal></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Quartz crystals
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <a href="#tx"><span data-balloon-pos="up" aria-label="Jump to: FSS-7 transmitter">FSS-7 transmitter</span></a> operates on fixed frequencies as determined
+by a quartz crystal. Several crystals, for pre-determined BND channels,
+were supplied with the set. The were either supplied in a blue carton box
+or in a small grey hammer-paint metal container.
+...
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/302081/292/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Quartz Crystals in metal container">
+<a href="img/302081/292/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Quartz Crystals in metal container">
+            <img src="img/302081/292/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Quartz Crystals in metal container"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=fsk></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          FSK Modulator 
+          &nbsp;<font color="#CCC">
+          wanted
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+For burst transmissions at very high speed, such as the 1200 baud
+mode of the MMP burst encoder shown above, the existing keying methods
+were not adequate and this primitive FSK Modulator was developed as
+an alternative.
+<br />
+<br />
+It was inserted between the crystal and the crystal socket of the
+FS-7 transmitter.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../burst/mmp/index.htm#fsk">More information</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../burst/mmp/index.htm#fsk">            <div style="position: relative;" data-balloon-pos="up" aria-label="FSK modulator and crystal">
+<a href="../../burst/mmp/index.htm#fsk">            <div style="position: relative;" data-balloon-pos="up" aria-label="FSK modulator and crystal">
+            <img src="../../burst/mmp/img/301698/040/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="FSK modulator and crystal"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=cal></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Calibrator
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The analogue scale of the FE-8 (BN-58) receiver can be calibrated with
+this external calibrator, that is connected to the receiver's antenna
+and ground sockets.
+<br />
+<br />
+It is powered by an internal 6V battery, which is
+identical to the one used in the FE-8 itself. It was supplied with the
+SP-15 sets that were used in Germany.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="fe8.htm#cal">More information</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="fe8.htm#cal">            <div style="position: relative;" data-balloon-pos="up" aria-label="FE-8 calibration device">
+<a href="fe8.htm#cal">            <div style="position: relative;" data-balloon-pos="up" aria-label="FE-8 calibration device">
+            <img src="img/301697/000/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="FE-8 calibration device"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="RT-3 burst encoder connected to the FE-7 transmitter" data-balloon-length="large">          <img src="img/300079/081/thumbnail.jpg"
+           alt="RT-3 burst encoder connected to the FE-7 transmitter"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300079/081"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="MMP connected to the FS-7 transmitter (SP-15)">          <img src="../../burst/mmp/img/301698/032/thumbnail.jpg"
+           alt="MMP connected to the FS-7 transmitter (SP-15)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 301698/032"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'B'" onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">B</span></div></div><div style="height: 40px;"></div>
+<div id="slide_2" class="slide" onClick="slideClose('slide_2')"><span class="slide_close_left" onClick="slideClose('slide_2')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_2', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 1 / 2</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/300079/081/full.jpg" alt="RT-3 burst encoder connected to the FE-7 transmitter">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 2 / 2</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="../../burst/mmp/img/301698/032/full.jpg" alt="MMP connected to the FS-7 transmitter (SP-15)">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_2', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_2', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=key></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Accessories
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The SP-15 came with a large number of accessories, some of which are
+shown here.
+The most remarkable one is the surprisingly cheap looking morse key,
+made of a rather poor quality plastic.
+In use, the key is not as bad as it looks as it's rather heavy.
+Furthermore, the plastic is shielded on the inside.
+<br />
+<br />
+Other accessories include antennas and cables.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/300581/001/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/300581/001/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/300581/001/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="The rather cheap-ish morse key">          <img src="img/300581/001/thumbnail.jpg"
+           alt="The rather cheap-ish morse key"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300581/001"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Morse check light">          <img src="img/300079/016/thumbnail.jpg"
+           alt="Morse check light"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300079/016"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Side-tone cable">          <img src="img/300588/000/thumbnail.jpg"
+           alt="Side-tone cable"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300588/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Roll-up antenna">          <img src="img/300151/000/thumbnail.jpg"
+           alt="Roll-up antenna"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300151/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Crystal tuner">          <img src="img/300079/065/thumbnail.jpg"
+           alt="Crystal tuner"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300079/065"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Crystal storage box">          <img src="img/300079/068/thumbnail.jpg"
+           alt="Crystal storage box"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300079/068"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Contents of the crystal box">          <img src="img/300079/066/thumbnail.jpg"
+           alt="Contents of the crystal box"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300079/066"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Metal container with crystals">          <img src="img/302081/291/thumbnail.jpg"
+           alt="Metal container with crystals"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302081/291"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Quartz Crystals in metal container">          <img src="img/302081/292/thumbnail.jpg"
+           alt="Quartz Crystals in metal container"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 9);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 302081/292"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'C'" onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">C</span></div></div><div style="height: 40px;"></div>
+<div id="slide_3" class="slide" onClick="slideClose('slide_3')"><span class="slide_close_left" onClick="slideClose('slide_3')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_3', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 1 / 9</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/300581/001/full.jpg" alt="The rather cheap-ish morse key">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 2 / 9</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/300079/016/full.jpg" alt="Morse check light">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 3 / 9</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/300588/000/full.jpg" alt="Side-tone cable">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 4 / 9</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/300151/000/full.jpg" alt="Roll-up antenna">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 5 / 9</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/300079/065/full.jpg" alt="Crystal tuner">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 6 / 9</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/300079/068/full.jpg" alt="Crystal storage box">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 7 / 9</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/300079/066/full.jpg" alt="Contents of the crystal box">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 8 / 9</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/302081/291/full.jpg" alt="Metal container with crystals">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 9 / 9</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/302081/292/full.jpg" alt="Quartz Crystals in metal container">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_3', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_3', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=sf></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Webbing kit
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+For use by special forces and reconnaissance units, a special webbing
+pack was developed that allowed the various units to be worn on the
+chest. The webbing pack had a pocket for the transmitter and power
+convertor and another one for the receiver and the accessories.
+<br />
+<br />
+Power for the set was delivered by a separate (heavy) battery belt
+that would be worn around the waist.
+The belt contained 10 rechargeable NiCd batteries of 1.2V/10Ah each.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/300146/005/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="The FS-7 transmitter inside one of the pockets">
+<a href="img/300146/005/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="The FS-7 transmitter inside one of the pockets">
+            <img src="img/300146/005/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="The FS-7 transmitter inside one of the pockets"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=41 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="The complete webbing pack">          <img src="img/300146/000/thumbnail.jpg"
+           alt="The complete webbing pack"
+           border="0" width=41 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300146/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="The complete webbing pack">          <img src="img/300146/001/thumbnail.jpg"
+           alt="The complete webbing pack"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300146/001"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="The complete webbing pack">          <img src="img/300146/002/thumbnail.jpg"
+           alt="The complete webbing pack"
+           border="0" width=33 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300146/002"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="The complete webbing pack">          <img src="img/300146/003/thumbnail.jpg"
+           alt="The complete webbing pack"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300146/003"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="The complete webbing pack">          <img src="img/300146/004/thumbnail.jpg"
+           alt="The complete webbing pack"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300146/004"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="The FS-7 transmitter inside one of the pockets">          <img src="img/300146/005/thumbnail.jpg"
+           alt="The FS-7 transmitter inside one of the pockets"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300146/005"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="The FS-7 transmitter inside one of the pockets">          <img src="img/300146/006/thumbnail.jpg"
+           alt="The FS-7 transmitter inside one of the pockets"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 300146/006"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'D'" onClick="slideOpen('slide_4'); slideCurrent('slide_4', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">D</span></div></div><div style="height: 40px;"></div>
+<div id="slide_4" class="slide" onClick="slideClose('slide_4')"><span class="slide_close_left" onClick="slideClose('slide_4')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_4', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 1 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/300146/000/full.jpg" alt="The complete webbing pack">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 2 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/300146/001/full.jpg" alt="The complete webbing pack">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 3 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/300146/002/full.jpg" alt="The complete webbing pack">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 4 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/300146/003/full.jpg" alt="The complete webbing pack">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 5 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/300146/004/full.jpg" alt="The complete webbing pack">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 6 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/300146/005/full.jpg" alt="The FS-7 transmitter inside one of the pockets">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 7 / 7</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/300146/006/full.jpg" alt="The FS-7 transmitter inside one of the pockets">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_4', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_4', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=burst></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Burst encoders</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In order to reduce the chance of detection and interception
+by means of Radio Direction Finding (RDF),
+the SP-15 was often used in combination with a so-called
+<a href="../../burst/index.htm"><span data-balloon-pos="up" aria-label="More about: burst encoder">burst encoder</span></a>.
+It allows a pre-recorded message to be played back &mdash;
+commonly in <a href="../../radio/morse/index.htm"><span data-balloon-pos="up" aria-label="More about: morse code">morse code</span></a> &mdash;
+at very high speed.
+As the transmitter is only on the air for a very short moment,
+there will be less chance to do a proper triangulation and
+locate the radio station, which would have endangered
+the entire operation.
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=#ksg>
+<div  data-balloon-pos="up" aria-label="Kurzsignalgeber">          <img src="../../burst/ksg/img/302039/041/thumbnail.jpg"
+           alt="Kurzsignalgeber"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#ksg>KSG</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#rt3>
+<div  data-balloon-pos="up" aria-label="NATO-issue RT-3 burst encoder">          <img src="../../burst/rt3/img/300081/001/thumbnail.jpg"
+           alt="NATO-issue RT-3 burst encoder"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#rt3>RT-3</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#gra71>
+<div  data-balloon-pos="up" aria-label="American GRA-71 burst encoder">          <img src="img/301746/001/thumbnail.jpg"
+           alt="American GRA-71 burst encoder"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#gra71>GRA-71</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#speicher>
+<div  data-balloon-pos="up" aria-label="German Speicher (memory) burst encoder">          <img src="../../burst/speicher/img/302081/070/thumbnail.jpg"
+           alt="German Speicher (memory) burst encoder"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#speicher>Speicher</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#mmp>
+<div  data-balloon-pos="up" aria-label="German MMP burst encoder">          <img src="../../burst/mmp/img/301698/006/thumbnail.jpg"
+           alt="German MMP burst encoder"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#mmp>MMP</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <a name=ksg></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          KSG Burst Encoder
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the early days of the SP-15, the burst encoder of the predecessor,
+the <a href="../ksg/index.htm"><span data-balloon-pos="up" aria-label="More about: KSG-Sender">KSG-Sender</span></a>,
+was used to send short messages of 20 to 25 digits
+in morse code. The KSG consisted of a metal disc in which a number
+of mechanically coded inserts had to be installed.
+A crank was then used to rotate it.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../burst/ksg/index.htm">More information</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../burst/ksg/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="KSG with the crank in place">
+<a href="../../burst/ksg/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="KSG with the crank in place">
+            <img src="../../burst/ksg/img/302039/041/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="KSG with the crank in place"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=rt3></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          RT-3 Burst Encoder
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The second burst encoder to be issued with the SP-15 was this
+electro-mechanical <a href="../../burst/rt3/index.htm"><span data-balloon-pos="up" aria-label="More about: RT-3">RT-3</span></a> unit.
+A small military-grade metal box that allowed a message of
+25 characters to be stored mechanically. Once on-air, the message
+was played back by operating a hand crank.
+<br />
+<br />
+Later, more advanced burst encoders were issued, such as the
+<a href="../../burst/gra71/index.htm"><span data-balloon-pos="up" aria-label="More about: GRA-71">GRA-71</span></a>,
+<a href="../../burst/mmp/index.htm"><span data-balloon-pos="up" aria-label="More about: MMP">MMP</span></a>
+and <a href="../../burst/speicher/index.htm"><span data-balloon-pos="up" aria-label="More about: Speicher">Speicher</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../burst/rt3/index.htm">More information</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../burst/rt3/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="The RT-3 burst encoder. Click for additional information." data-balloon-length="large">
+<a href="../../burst/rt3/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="The RT-3 burst encoder. Click for additional information." data-balloon-length="large">
+            <img src="../../burst/rt3/img/300081/001/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="The RT-3 burst encoder. Click for additional information."
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=gra71></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          GRA-71 Burst Encoder
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+For a long time, the SP-15 was used in combination with the
+American military GRA-71 burst encoder that allowed the dots and
+dashes of the morse characters to be recorded on a piece
+of ferro-magnetic (audio) tape.
+<br />
+<br />
+Especially for use with the SP-15, they were supplied
+in grey hammerite, rather than the usual black as
+used by the US Army.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../burst/gra71/index.htm">More information</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../burst/gra71/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="CO-3A burst encoder as used with the GRA-71, in grey hammerite, especially for the SP15." data-balloon-length="large">
+<a href="../../burst/gra71/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="CO-3A burst encoder as used with the GRA-71, in grey hammerite, especially for the SP15." data-balloon-length="large">
+            <img src="img/301746/001/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="CO-3A burst encoder as used with the GRA-71, in grey hammerite, especially for the SP15."
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=speicher></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Speicher Burst Encoder
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The Speicher (Eng: memory) was a fully electronic burst encoder
+for sending numbers at high speed in morse code. It was powered
+directly from the mains and was housed in a similar case as the
+<a href="../sp20/index.htm"><span data-balloon-pos="up" aria-label="More about: SP-20 spy radio set">SP-20 spy radio set</span></a>.
+<br />
+<br />
+The Speicher was probably issued in the 1970s to replace the
+rather limited <a href="../../burst/mmp/index.htm"><span data-balloon-pos="up" aria-label="More about: RT-3">RT-3</span></a>.
+Eventually it was replaced itself by the
+more advanced <a href="../../burst/mmp/index.htm"><span data-balloon-pos="up" aria-label="More about: MMP">MMP</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../burst/speicher/index.htm">More information</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../burst/speicher/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Speicher (memory) burst encoder">
+<a href="../../burst/speicher/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Speicher (memory) burst encoder">
+            <img src="../../burst/speicher/img/302081/070/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Speicher (memory) burst encoder"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=mmp></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          MMP Burst Encoder
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The MMP was a fully electronic high-speed (1200 baud) burst
+encoder that was used with both the SP-15 and the
+<a href="../sp20/index.htm"><span data-balloon-pos="up" aria-label="More about: SP-20">SP-20</span></a> spy sets.
+<br />
+<br />
+The MMP replaced older devices, such as the mechanical
+<a href="../../burst/rt3/index.htm"><span data-balloon-pos="up" aria-label="More about: RT-3">RT-3</span></a>,
+the American <a href="../../burst/gra71/index.htm"><span data-balloon-pos="up" aria-label="More about: AN/GRA-71">AN/GRA-71</span></a>
+and the early electronic <a href="../../burst/speicher/index.htm"><span data-balloon-pos="up" aria-label="More about: Speicher">Speicher</span></a>.
+It could hold more than 1000 letters and numbers in its battery-backed
+CMOS memory and send them at various speeds between 15 and 1200 baud.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../burst/mmp/index.htm">More information</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../burst/mmp/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="High-speed morse burst encoder MMP-B">
+<a href="../../burst/mmp/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="High-speed morse burst encoder MMP-B">
+            <img src="../../burst/mmp/img/301698/006/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="High-speed morse burst encoder MMP-B"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=nl></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Synthesizer 
+          &nbsp;<font color="#CCC">
+          FSS-7</b>
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Modified FSS-7 used by Dutch Stay-Behind</b>
+<br />
+<br />
+In The Netherlands, the SP-15 was used for the national
+<a href="../sbo/index.htm"><span data-balloon-pos="up" aria-label="More about: Stay-Behind">Stay-Behind</span></a>
+organisation
+<a href="../sbo/nl/index.htm"><span data-balloon-pos="up" aria-label="More about: ..."><b>O&amp;I</b> (Dutch: Operati&#235;n en Inlichtingen)</span></a>
+during the 1960s and 1970s.
+O&amp;I agents were given two green water-tight containers that could be
+burried underground, e.g. in the garden of their house. One of these contained
+a hand gun, ammunition, cash money and gold (the latter for bribing people).
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The other one contained the SP-15 radio set,
+together with a wide range of accessories
+such as antennas, <a href="#xtal"><span data-balloon-pos="up" aria-label="Jump to: crystals">crystals</span></a>, spare parts and a <a href="#burst"><span data-balloon-pos="up" aria-label="Jump to: burst encoder">burst encoder</span></a>.
+The image on the right shows a typical modified Dutch FSS-7 (SP-15)
+with synthesizer.
+<br />
+<br />
+Around 1975, the set was given a mid-life upgrade by the addition
+of a synthesizer for the transmitter and a purpose-built junction box.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="nl.htm">More information</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="nl.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Complete setup with standard morse key">
+<a href="nl.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Complete setup with standard morse key">
+            <img src="img/302081/233/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Complete setup with standard morse key"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=speicher1></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Speicher Burst Encoder
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <a href="nl.htm"><span data-balloon-pos="up" aria-label="More about: Dutch Stay-Behind version of the ...">Dutch Stay-Behind version of the SP-15</span></a>
+is known to have been used in combination with
+various burst encoders. Some of these
+have been on display at the Dutch Signals Museum <a href="#ref_4">[4]</a>.
+<br />
+<br />
+The only known surviving FSS-7 container, which is now in the
+collection Museum Jan Corver, was found with the
+<a href="../../burst/speicher/index.htm"><span data-balloon-pos="up" aria-label="More about: Speicher burst encoder">Speicher burst encoder</span></a>
+shown in the image on the right.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../burst/speicher/index.htm">More information</a>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../burst/speicher/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Dutch FFS-7 (SP-15) set with Speicher burst encoder" data-balloon-length="large">
+<a href="../../burst/speicher/index.htm">            <div style="position: relative;" data-balloon-pos="up" aria-label="Dutch FFS-7 (SP-15) set with Speicher burst encoder" data-balloon-length="large">
+            <img src="img/302081/229/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Dutch FFS-7 (SP-15) set with Speicher burst encoder"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=doc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Documentation</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <a name="doc_1"></a>
+            <li><a href="files/fs7_diagram.pdf">FS-7 Transmitter circuit diagram <sup><font color="#FF8800">1</font></sup> </a><br />
+Original circuit diagram from H. Pfitzner.<br />
+<font color="#E7E">&#10148;</font>&nbsp;<a href="files/FS7_schema.gif">Reproduction by Karsten Hansky</a>
+            <p />
+            <a name="doc_2"></a>
+            <li><a href="files/BN22_Desc.pdf">FS-7 Test protocol <sup><font color="#FF8800">1</font></sup> </a><br />
+Date unknown.
+            <p />
+            <a name="doc_3"></a>
+            <li><a href="files/bn58_circuit.pdf">BN-58 Receiver circuit diagram <sup><font color="#FF8800">1</font></sup> </a><br />
+Wandel & Goltermann, 30 September 1960.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="files/bn58_circuit_90.pdf">Same diagram rotated by 90&#176;</a>
+            <p />
+            <a name="doc_4"></a>
+            <li><a href="files/LG8A_BattCharger_Circuit.pdf">LG-8A, battery charger for FE-8 (BN-58), circuit diagram <sup><font color="#FF8800">1</font></sup> </a><br />
+Wandel & Goltermann, date unknown.
+            <p />
+            <a name="doc_5"></a>
+            <li><a href="img/302037/020/full.jpg">UHU circuit diagram</a><br />
+Original circuit diagram mounted inside case lid [1].
+            <p />
+            <a name="doc_6"></a>
+            <li><a href="files/BN22_2_Circuit.pdf">BN-22/2 AC PSU original circuit diagram <sup><font color="#FF8800">1</font></sup> </a><br />
+H. Pfitzner, 21 September 1959.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="files/BN22_2_Circuit_2.jpg">Annotated version <sup><font color="#FF8800">1</font></sup> </a>
+            <p />
+            <a name="doc_7"></a>
+            <li><a href="files/FSS7_DC_PSU.pdf">DC power inverter for FSS-7, circuit diagram <sup><font color="#FF8800">1</font></sup> </a><br />
+Date unknown.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="files/FSS7_DC_PSU_2.jpg">As printed inside bottomlid</a>
+            <p />
+            <a name="doc_8"></a>
+            <li><a href="files/SP15_BND_instr_DE.pdf">Operating instructions (German) <sup><font color="#FF8800">2</font></sup> </a><br />
+<a href="../../intel/bnd">Bundesnachrichtendienst</a> (<span class="short" aria-label="Bundesachrichtendienst" data-balloon-pos="up"><a href="../../intel/bnd" class="short" >BND</a></span>). Undated.<br />
+6 Pages.
+            <p />
+            <a name="doc_9"></a>
+            <li><a href="files/SP15_BND_msgtable_DE.pdf">Message table (German) <sup><font color="#FF8800">2</font></sup> </a><br />
+<a href="../../intel/bnd">Bundesnachrichtendienst</a> (<span class="short" aria-label="Bundesachrichtendienst" data-balloon-pos="up"><a href="../../intel/bnd" class="short" >BND</a></span>). April 1960.<br />
+10 Pages.
+            <p />
+            <a name="doc_10"></a>
+            <li><a href="files/SP15_BND_E158_I.pdf">Frequency table for one full year - Series E158-I <sup><font color="#FF8800">2</font></sup> </a><br />
+<a href="../../intel/bnd">Bundesnachrichtendienst</a> (<span class="short" aria-label="Bundesachrichtendienst" data-balloon-pos="up"><a href="../../intel/bnd" class="short" >BND</a></span>). Undated.<br />
+12 Pages.
+            <p />
+            <a name="doc_11"></a>
+            <li><a href="files/SP15_BND_E158_II.pdf">Frequency table for one full year - Series E158-II <sup><font color="#FF8800">2</font></sup> </a><br />
+<a href="../../intel/bnd">Bundesnachrichtendienst</a> (<span class="short" aria-label="Bundesachrichtendienst" data-balloon-pos="up"><a href="../../intel/bnd" class="short" >BND</a></span>). Undated.<br />
+12 Pages.
+          </ol type=A>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Document kindly provided by Jim Meyer <a href="#ref_1">[1]</a>.
+          </li>
+          <li>
+Document kindly provided by Detlev Vreisleben <a href="#ref_7">[7]</a>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+            <li><a href="http://www.qrz.com/db/hs0zhk">Helmut 'Jim' Meyer, <i>HS0ZHK, My way to Ham - Radio and beyond</i></a><br />
+Website QRZ.COM. Personal correspondence.
+Retrieved April 2013.
+            <p />
+            <a name="ref_2"></a>
+            <li><a href="../../events/2008/sm/index.htm">Museum Jan Corver, <i>Exhibition Secret Messages</i></a><br />
+The Dutch version of the SP-15 was on display during this exhibition.
+            <p />
+            <a name="ref_3"></a>
+<li><font color=#F52E00>Louis Meulstee, <i>Wireless for the Warrior, volume 4</i></font><br />
+ISBN: 0952063-36-0, September 2004.
+            <p />
+            <a name="ref_4"></a>
+            <li><a href="../../links/mvd/index.htm">Museum Verbindingsdienst, <i>Burst Encoders for Stay-Behind use</i></a><br />
+Dutch Signals Museum.
+Photographed by Crypto Museum. 25 February 2009.
+            <p />
+            <a name="ref_5"></a>
+<li><font color=#F52E00>Geschiedenis van de Sectie Algemene Zaken, Hoofdstuk VI, Consolidatie</font><br />
+History of the Section General Affairs, Chapter 6, Consolidation.
+pp. 79 - 80 (Dutch)<br />
+Describing the period May 1970 - December 1981.
+Dutch National Archives. Top Secret.
+<small>Partly declassified and released in 2007 under the FOI Act.</small>
+            <p />
+            <a name="ref_6"></a>
+<li><font color=#F52E00>Armin M&#252;ller, <i>Wellenkrieg</i></font><br />
+ISBN 978-3-86153-947-6, June 2017. pp. 100&mdash;103.
+            <p />
+            <a name="ref_7"></a>
+<li><font color=#F52E00>Detlev Vreisleben, <i>Personal correspondence</i></font><br />
+Retrieved May 2018.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="nl.htm">Enhanced Dutch variant of the FSS-7 (SP-15)</a><br />
+            <li><a href="../sp20/index.htm">SP-20, the German successor to the SP-15</a><br />
+            <li><a href="../sbo/index.htm">Other Gladio spy sets</a><br />
+            <li><a href="../index.htm">Other spy sets</a><br />
+            <li><a href="../de.htm">Other German spy radio sets</a><br />
+            <li><a href="../list.htm">Index of spy sets</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Monday 03 August 2009. Last changed: Sunday, 13 April 2025 - 16:59 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../index.htm"><img src=../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

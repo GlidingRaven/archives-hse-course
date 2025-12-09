@@ -1,0 +1,3567 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>Grenze</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cryptomuseum">
+    <meta name="twitter:url" content="https://www.cryptomuseum.com/spy/grenze/index.htm">
+    <meta name="twitter:image" content="https://www.cryptomuseum.com/spy/grenze/img/304432/055/full.jpg">
+    <meta name="twitter:title" content="Codename: GRENZE">
+    <meta name="twitter:description" content="Secret UHF cross-border spy radio system, developed around 1988 in the former DDR.">
+    <meta name="Keywords" content="Grenze, DDR, spy radio set, 32261, 32262, 32922">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../index.htm"><img src="../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../spy/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../spy/glossary.htm';" >Glossary</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../spy/ww2.htm';" >World War II</div>
+          <div class="but sel sub" onClick="location.href='../../spy/coldwar.htm';" >Cold War</div>
+          <div class="but sub" onClick="location.href='../../spy/sf.htm';" >Special forces</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Spy radio sets used by Stay-Behind Organisations in Europe" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../spy/sbo/index.htm';" >Stay-Behind</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Short Range Agent Communication" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../spy/srac.htm';" >SRAC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="One-Way Voice Link - Numbers Stations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../spy/owvl/index.htm';" >OWVL</div>
+</div>
+          <div class="but sub" onClick="location.href='../../spy/rx.htm';" >Receivers</div>
+          <div class="but sub" onClick="location.href='../../spy/other.htm';" >Other</div>
+          <div class="spacer"></div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Countries
+          </div>
+          <div class="hidden">
+            <div class="but sub" onClick="location.href='../../spy/sbo/at/index.htm';" >Austria</div>
+            <div class="but sub" onClick="location.href='../../spy/belgium.htm';" >Belgium</div>
+            <div class="but sub" onClick="location.href='../../spy/cs.htm';" >Czechoslovakia</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former East-Germany" data-balloon-length="medium">
+            <div class="but sel sub" onClick="location.href='../../spy/ddr.htm';" >DDR</div>
+</div>
+            <div class="but sub" onClick="location.href='../../spy/kyynel/index.htm';" >Finland</div>
+            <div class="but sub" onClick="location.href='../../spy/fr.htm';" >France</div>
+            <div class="but sub" onClick="location.href='../../spy/de.htm';" >Germany</div>
+            <div class="but sub" onClick="location.href='../../spy/hu.htm';" >Hungary</div>
+            <div class="but sub" onClick="location.href='../../spy/italy.htm';" >Italy</div>
+            <div class="but sub" onClick="location.href='../../spy/japan.htm';" >Japan</div>
+            <div class="but sub" onClick="location.href='../../spy/nl.htm';" >Netherlands</div>
+            <div class="but sub" onClick="location.href='../../spy/norway.htm';" >Norway</div>
+            <div class="but sub" onClick="location.href='../../spy/poland.htm';" >Poland</div>
+            <div class="but sub" onClick="location.href='../../spy/sweden.htm';" >Sweden</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United Kingdom" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../spy/uk.htm';" >UK</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United States of America" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../spy/usa.htm';" >USA</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former Soviet Union" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../spy/ussr.htm';" >USSR</div>
+</div>
+            <div class="but sub" onClick="location.href='../../spy/yugo.htm';" >Yugoslavia</div>
+          </div>
+          </div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../index.htm"><img src="../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../ddr.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Deutsche Demokratische Republik (German Democratic Republic, GDR)" data-balloon-length="large" class="key">DDR</div></a><a class="key" href="../../intel/stasi"><div  data-balloon-pos="up" aria-label="Shortcut to Ministerium für Staatssicherheit (Ministry for State Security) (DDR)" data-balloon-length="large" class="key">MfS</div></a>&nbsp;&nbsp;<a class="key" href="../horizont"><div  data-balloon-pos="up" aria-label="Back to Horizont (codename), the predecessor of Grenze" data-balloon-length="large" class="key right">&larr; Horizont</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Grenze</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>UHF agent-to-base radio system</b>
+<br />
+<br />
+<b>GRENZE</b> (English: Border) is the codename of a secret cross-border
+<a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: agent-to-base radio system">agent-to-base radio system</span></a>,
+developed around 1988 by Department 33 of the Technical Operations Division
+(<span class="short tooltip-red" data-balloon-pos="up" aria-label="Operativ-Technischer Sektor (Technical Operations) (MfS)" data-balloon-length="large">OTS</span>/33) of the <a href="../../intel/stasi"><span data-balloon-pos="up" aria-label="More about: Ministerium f&#252;r Staatssicherheit">Ministerium f&#252;r Staatssicherheit</span></a>
+(<span class="short" aria-label="Ministerium f&#252;r Staatssicherheit (Ministry for State Security) (DDR)" data-balloon-pos="up"><a href="../../intel/stasi" class="short" >MfS</a></span>, <span class="short" aria-label="Staatssicherheit (State Security) (DDR)" data-balloon-pos="up"><a href="../../intel/stasi" class="short" >Stasi</a></span>) &mdash; the intelligence service of the former <span class="short" aria-label="Deutsche Demokratische Republik (German Democratic Republic, GDR)" data-balloon-pos="up"><a href="../ddr.htm" class="short" >DDR</a></span> (East-
+Germany) &mdash; for use by Stasi Department <span class="short tooltip-red" data-balloon-pos="up" aria-label="Hauptverwaltung Aufkl&#228;rung (reconnaissance headquarters) - Stasi" data-balloon-length="large">HVA</span>/VIII.
+The devices were manufactured at Institut f&#252;r Nach&#173;richten&#173;technik (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Institut f&#252;r Nachrichtentechnik (Berlin, DDR)">INT</span>) and
+Funkwerk Berlin (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Funkwerk Berlin (DDR)">FWB</span>), both located in East Berlin (<span class="short" aria-label="Deutsche Demokratische Republik (German Democratic Republic, GDR)" data-balloon-pos="up"><a href="../ddr.htm" class="short" >DDR</a></span>) <a href="#ref_6">[6]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>GRENZE</b> was the successor to the <a href="../horizont"><span data-balloon-pos="up" aria-label="More about: HORIZONT communication system">HORIZONT communication system</span></a>.
+A single one-way data link (<span class="short tooltip-red" data-balloon-pos="up" aria-label="One-Way Data Link">OWDL</span>) consists of a
+<a href="#tss"><span data-balloon-pos="up" aria-label="Jump to: TSS-2 transmitter (field station)">TSS-2 transmitter (field station)</span></a> and
+<a href="#tse"><span data-balloon-pos="up" aria-label="Jump to: TSE-2 receiver (base sation)">TSE-2 receiver (base sation)</span></a>,
+and uses <span class="short tooltip-red" data-balloon-pos="up" aria-label="Differential Phase Shift Keying">DPSK</span> modulation for high-speed
+trans&#173;mission of digital messages at 38.47 Kb/s.
+<br />
+<br />
+The <a href="#tss"><span data-balloon-pos="up" aria-label="Jump to: transmitter">transmitter</span></a> was controlled by an
+<a href="#hx20"><span data-balloon-pos="up" aria-label="Jump to: EPSON HX-20 portable computer">EPSON HX-20 portable computer</span></a>
+which was free&#173;ly available in the West from 1982 onward.
+The image on the right shows the key com&#173;po&#173;nents of the system.
+The <a href="#tse"><span data-balloon-pos="up" aria-label="Jump to: receiver">receiver</span></a> was controlled by a regular IBM-compatible
+computer with suitable software.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304432/055/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Complete GRENZE system, with TSE-2, TSS-2 and EPSON HX-20" data-balloon-length="large">
+<a href="img/304432/055/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Complete GRENZE system, with TSE-2, TSS-2 and EPSON HX-20" data-balloon-length="large">
+            <img src="img/304432/055/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Complete GRENZE system, with TSE-2, TSS-2 and EPSON HX-20"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+GRENZE was intended as a replacement for the ageing
+<a href="../horizont"><span data-balloon-pos="up" aria-label="More about: HORIZONT communication system">HORIZONT communication system</span></a>
+that had been in service since 1978 and was easy to detect and intercept.
+GRENZE uses frequency hopping (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Hopping">FH</span>) as a countermesasure.
+The first specifications date back to 1982 <a href="#doc_1">[A]</a> and it seems likely that
+the development of the devices started in 1985 or 1986.
+By November 1988, GRENZE was re&#173;por&#173;tedly 'complete'
+although the firmware was probably still under development
+at that point.
+<br />
+<br />
+The first production batch was completed around March 1989 and was
+scheduled for deployment in 1990. In November 1989 however, the
+<a href="../glossary.htm#berlin_wall"><span data-balloon-pos="up" aria-label="More about: Berlin Wall fell">Berlin Wall fell</span></a>, which led to
+reunification of Germany in 1990 and eventually
+the end of the <a href="../glossary.htm#cold_war"><span data-balloon-pos="up" aria-label="More about: Cold War">Cold War</span></a>.
+It is therefore unlikely that the <b>GRENZE</b> system was ever used in practice.
+Nevertheless it gives a good insight into the advanced state of technology
+in <a href="../ddr.htm"><span data-balloon-pos="up" aria-label="More about: East-Germany">East-Germany</span></a> and the capabilities of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Operativ-Technischer Sektor (Technical Operations) (MfS)" data-balloon-length="large">OTS</span> engineers
+at the time of the <a href="../glossary.htm#wende"><span data-balloon-pos="up" aria-label="More about: ..."><i>Wende</i></span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TSE2 receiver and TSS-2 transmitter in storage containers" data-balloon-length="large">          <img src="img/304432/000/thumbnail.jpg"
+           alt="TSE2 receiver and TSS-2 transmitter in storage containers"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TSE-2 receiver (left) and TSS-2 transmitter (right)" data-balloon-length="large">          <img src="img/304432/007/thumbnail.jpg"
+           alt="TSE-2 receiver (left) and TSS-2 transmitter (right)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/007"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Complete GRENZE system, with TSE-2, TSS-2 and EPSON HX-20" data-balloon-length="large">          <img src="img/304432/055/thumbnail.jpg"
+           alt="Complete GRENZE system, with TSE-2, TSS-2 and EPSON HX-20"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/055"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Complete GRENZE system, with TSE-2, TSS-2 and EPSON HX-20" data-balloon-length="large">          <img src="img/304432/053/thumbnail.jpg"
+           alt="Complete GRENZE system, with TSE-2, TSS-2 and EPSON HX-20"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/053"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 4</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304432/000/full.jpg" alt="TSE2 receiver and TSS-2 transmitter in storage containers">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 4</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304432/007/full.jpg" alt="TSE-2 receiver (left) and TSS-2 transmitter (right)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 4</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304432/055/full.jpg" alt="Complete GRENZE system, with TSE-2, TSS-2 and EPSON HX-20">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 4 / 4</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304432/053/full.jpg" alt="Complete GRENZE system, with TSE-2, TSS-2 and EPSON HX-20">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=features></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image below shows the basic components of the GRENZE communication
+system. At the left is a standard
+<a href="../../pc/epson/hx20"><span data-balloon-pos="up" aria-label="More about: EPSON HX-20 portable computer">EPSON HX-20 portable computer</span></a> that is
+used as the controller for the <a href="#tss"><span data-balloon-pos="up" aria-label="Jump to: TSS-2 trans&#173;mitter">TSS-2 trans&#173;mitter</span></a> at the centre.
+At the right is the <a href="#tse"><span data-balloon-pos="up" aria-label="Jump to: receiver">receiver</span></a>, which is shown here without the
+controlling com&#173;puter.
+Each of the devices must be powered by an external 12V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span> source.
+The <span class="short" aria-label="EPSON HX-20 portable computer" data-balloon-pos="up"><a href="../../pc/epson/hx20" class="short" >HX-20</a></span> computer is powered by internal batteries that should be
+charged with a mains adapter before use, which takes approx. 8 hours.
+A full charge of the batteries allows 50 hours of uninterrupted operation.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304432/053/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304432/053/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/grenze_ext.png"
+             style="
+            "
+             align="center"
+             width="580px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Complete GRENZE system, with TSE-2, TSS-2 and EPSON HX-20" data-balloon-length="large">          <img src="img/304432/053/thumbnail.jpg"
+           alt="Complete GRENZE system, with TSE-2, TSS-2 and EPSON HX-20"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/053"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TSE-2 receiver (left) and TSS-2 transmitter (right)" data-balloon-length="large">          <img src="img/304432/007/thumbnail.jpg"
+           alt="TSE-2 receiver (left) and TSS-2 transmitter (right)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/007"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel">          <img src="img/304432/006/thumbnail.jpg"
+           alt="Front panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/006"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel">          <img src="img/304431/002/thumbnail.jpg"
+           alt="Front panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304431/002"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'B'" onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">B</span></div></div><div style="height: 40px;"></div>
+<div id="slide_2" class="slide" onClick="slideClose('slide_2')"><span class="slide_close_left" onClick="slideClose('slide_2')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_2', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 1 / 4</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304432/053/full.jpg" alt="Complete GRENZE system, with TSE-2, TSS-2 and EPSON HX-20">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 2 / 4</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304432/007/full.jpg" alt="TSE-2 receiver (left) and TSS-2 transmitter (right)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 3 / 4</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304432/006/full.jpg" alt="Front panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 4 / 4</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304431/002/full.jpg" alt="Front panel">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_2', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_2', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=setup></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Setup</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Basic setup 
+          &nbsp;<font color="#CCC">
+          32922
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The simplest configuration of a GRENZE system is shown in the block
+diagram below. At the left is the agent station, which consists of
+the <a href="#tss"><span data-balloon-pos="up" aria-label="Jump to: TSS-2 (32262) transmitter">TSS-2 (32262) transmitter</span></a> and an EPSON HX-20 (with ap&#173;pro&#173;pri&#173;ate
+software), which is used as a control and message device. At the right
+is the <a href="#tse"><span data-balloon-pos="up" aria-label="Jump to: TSE-2 (32261) receiver">TSE-2 (32261) receiver</span></a>, which is connected to a regular
+personal computer with suitable software.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/32922_simple.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+Note that it is a <b>one-way</b> data  link from the Agent to the Base, running over
+a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Ultra High Frequency (300-3000 MHz)">UHF</span> frequency in the 70 cm radio band. This means that it is a line-of-sight
+(LOS) system that is suitable for use in urban areas at distances between
+4 and 50 km, depending on obstacles like buildings and moun&#173;tains.
+It also means that the Agent does not receive a confirmation of his
+transmission. The range of the system could be extended by adding
+so-called repeater stations in the transmission path.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Typical setup 
+          &nbsp;<font color="#CCC">
+          32922
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+A more complete setup is shown in the block diagram below. It is known
+by the Stasi designator <b>Projekt 32922</b>.
+At the left is the field station (i.e. the agent side) which is located
+outside <span class="short" aria-label="Deutsche Demokratische Republik (German Democratic Republic, GDR)" data-balloon-pos="up"><a href="../ddr.htm" class="short" >DDR</a></span> borders. Frequency hopping data for the
+transmitter is provided by the con&#173;nec&#173;ted controller, or by a
+cassette player using audible tones (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency Shift Keying">AFSK</span>).
+The transmitter was con&#173;nected to a directional <span class="short tooltip-red" data-balloon-pos="up" aria-label="Ultra High Frequency (300-3000 MHz)">UHF</span> antenna with circular
+polarisation, and transmitted its data at a speed of 38.47 kb/s.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/32922_setup.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+At the right is the base sation, which was internaly known as
+<b>Projekt 32922-12</b>. It consists of an 92132-21 antenna (or similar) and
+up to three <a href="#tse"><span data-balloon-pos="up" aria-label="Jump to: TSE-2 receivers">TSE-2 receivers</span></a> that were controlled by an <span class="short tooltip-red" data-balloon-pos="up" aria-label="International Business Machines (company)">IBM</span>-compatible
+computer (Projekt 32261-43) with suitable software on floppy discs. All units
+were powered from the mains, via an uninterrupted power supply unit (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Uninterrupted Power Supply">UPS</span>)
+that could span a power outage of 20 minutes. Each <a href="#tse"><span data-balloon-pos="up" aria-label="Jump to: TSE-2 receiver">TSE-2 receiver</span></a> could
+handle up to six <a href="#tss"><span data-balloon-pos="up" aria-label="Jump to: TSS-2 field stations">TSS-2 field stations</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Receiving station 
+          &nbsp;<font color="#CCC">
+          32261-43
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The diagram below shows the receiving station in more detail. From the antenna,
+the signal is am&#173;pli&#173;fied in a distribution amplifier, and then applied
+to the three <a href="#tse"><span data-balloon-pos="up" aria-label="Jump to: TSE-2 receivers">TSE-2 receivers</span></a>. The receivers are controlled via their
+serial port (RS232) by a regular MSDOS compatible computer (<span class="short" aria-label="Personal Computer" data-balloon-pos="up"><a href="../../pc" class="short" >PC</a></span>) that also
+processes the received data. The <span class="short" aria-label="Personal Computer" data-balloon-pos="up"><a href="../../pc" class="short" >PC</a></span> was initialised with 5&#188;" or 3&#189;"
+floppy discs containing the initial fre&#173;quen&#173;cy and the frequency hopping
+tables (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Hopping">FH</span>), that had been prepared at Base.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/32261-43_setup.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+            <div style="margin-top: 4px; margin-bottom: 4px;">
+            <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+            <b>
+            <center>Receiving station 32922-12</center>
+            </b>
+            </font>
+            </div>
+          </td></tr></table>
+<br />
+Data received from the field station(s) was processed by the MSDOS <span class="short" aria-label="Personal Computer" data-balloon-pos="up"><a href="../../pc" class="short" >PC</a></span>,
+and then delivered to a connected
+teleprinter in 5-bit baudot format. It was usually saved to 5-bit perforated
+tape, after which it was (manually) sent to Base via a
+<a href="../../telex"><span data-balloon-pos="up" aria-label="More about: regular telex subscriber line">regular telex subscriber line</span></a>.
+The data was <b>not</b> directly passed to the Base by means of a modem,
+although this might have been a later option.
+Note that <b>no</b> printer, keyboard and monitor were connected to the <span class="short" aria-label="Personal Computer" data-balloon-pos="up"><a href="../../pc" class="short" >PC</a></span>,
+although these peripherals <b>could</b> be connected for maintenance purposes,
+for example when installing or updating the software.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=parts></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Parts</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=#cont>
+<div  data-balloon-pos="up" aria-label="Storage containers">          <img src="img/304432/000/thumbnail.jpg"
+           alt="Storage containers"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#cont>Containers</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#tss>
+<div  data-balloon-pos="up" aria-label="DPSK Transmitter TSS-2">          <img src="img/304431/001/thumbnail.jpg"
+           alt="DPSK Transmitter TSS-2"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#tss>TSS-2</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#tse>
+<div  data-balloon-pos="up" aria-label="DPSK Receiver TSE-2">          <img src="img/304432/004/thumbnail.jpg"
+           alt="DPSK Receiver TSE-2"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#tse>TSE-2</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#hx20>
+<div  data-balloon-pos="up" aria-label="Portable computer HX-20 (EPSON, Japan)">          <img src="../../pc/epson/hx20/img/304434/028/thumbnail.jpg"
+           alt="Portable computer HX-20 (EPSON, Japan)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#hx20>HX-20</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=#cables>
+<div  data-balloon-pos="up" aria-label="Interconnection cables">          <img src="../../img/thumb.jpg"
+           alt="Interconnection cables"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=#cables>Cables</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <a name=cont></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Storage containers
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When they were first delivered, the <a href="#tse"><span data-balloon-pos="up" aria-label="Jump to: TSE-2 receiver">TSE-2 receiver</span></a> and the
+<a href="#tss"><span data-balloon-pos="up" aria-label="Jump to: TSS-2 transmitter">TSS-2 transmitter</span></a> were each
+<a href="img/304432/003/full.jpg"><span data-balloon-pos="up" aria-label="More about: wrapped in a plastic bag">wrapped in a plastic bag</span></a> and
+stowed in the yellow-brown transit containers shown in the image
+on the right.
+<br />
+<br />
+Each container consists of
+<a href="img/304432/002/full.jpg"><span data-balloon-pos="up" aria-label="More about: two plastic shells">two plastic shells</span></a> that are held together
+by a metal bracket at either side, that is fitted to the bottom shell.
+The serial number of the unit is printed on a white label at the centre
+of the upper shell.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304432/000/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="TSE2 receiver and TSS-2 transmitter in storage containers" data-balloon-length="large">
+<a href="img/304432/000/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="TSE2 receiver and TSS-2 transmitter in storage containers" data-balloon-length="large">
+            <img src="img/304432/000/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="TSE2 receiver and TSS-2 transmitter in storage containers"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=tss></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Transmitter 
+          &nbsp;<font color="#CCC">
+          TSS-2
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The TSS-2 transmitter is the smallest of the two devices.
+It is housed in a light grey metal en&#173;clo&#173;sure that measures
+46 &#215; 90 &#215; 185 mm and weighs 1266 grams. All <a href="#conn_tss"><span data-balloon-pos="up" aria-label="Jump to: connections">connections</span></a>
+are at the <a href="img/304431/002/full.jpg"><span data-balloon-pos="up" aria-label="More about: side with the black heatsink">side with the black heatsink</span></a>.
+<br />
+<br />
+The transmitter must be powered by an external 12V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span>
+source, such as the battery of a car. It is controlled by an
+<a href="#hx20"><span data-balloon-pos="up" aria-label="Jump to: EPSON HX-20 portable com&#173;puter">EPSON HX-20 portable com&#173;puter</span></a> that is connected to its
+<a href="#conn_tss_in"><span data-balloon-pos="up" aria-label="Jump to: serial port">serial port</span></a>.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="#int_tss">Look inside the transmitter</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304431/001/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="TSS-2 transmitter">
+<a href="img/304431/001/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="TSS-2 transmitter">
+            <img src="img/304431/001/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="TSS-2 transmitter"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=tse></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Receiver 
+          &nbsp;<font color="#CCC">
+          TSE-2
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The TSE-2 receiver is the largest of the two devices.
+It is housed in a light grey metal en&#173;clo&#173;sure that measures
+88 &#215; 155 &#215; 280 mm and weighs 3526 grams. All <a href="#conn_tse"><span data-balloon-pos="up" aria-label="Jump to: connections">connections</span></a>
+are at the <a href="img/304432/006/full.jpg"><span data-balloon-pos="up" aria-label="More about: side with the black heatsink">side with the black heatsink</span></a>.
+<br />
+<br />
+The device was fully controlled by an external MSDOS-compatible
+computer, that was con&#173;nec&#173;ted to its serial port. Currently,
+no in&#173;for&#173;ma&#173;tion about this controlling computer is available.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="#int_tse">Look inside the receiver</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304432/004/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="TSE-2 receiver">
+<a href="img/304432/004/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="TSE-2 receiver">
+            <img src="img/304432/004/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="TSE-2 receiver"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=hx20></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Controller 
+          &nbsp;<font color="#CCC">
+          HX-20
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <a href="#tss"><span data-balloon-pos="up" aria-label="Jump to: TSS-2 transmitter">TSS-2 transmitter</span></a> has no controls of its own, and was entirely
+operated from an external controller in the form of an
+<a href="../../pc/epson/hx20"><span data-balloon-pos="up" aria-label="More about: EPSON HX-20 por&#173;ta&#173;ble computer">EPSON HX-20 por&#173;ta&#173;ble computer</span></a>.
+The <span class="short" aria-label="EPSON HX-20 portable computer" data-balloon-pos="up"><a href="../../pc/epson/hx20" class="short" >HX-20</a></span> was the first lap&#173;top computer in the world, and
+could be purchased freely in Western Europe.
+<br />
+<br />
+The <a href="#tss"><span data-balloon-pos="up" aria-label="Jump to: TSS-2">TSS-2</span></a> was connected to the
+<a href="../../pc/epson/hx20/index.htm#conn_rs232"><span data-balloon-pos="up" aria-label="More about: RS232C port of the HX-20">RS232C port of the HX-20</span></a>, and the
+special Stasi-developed soft&#173;ware was loaded into the <span class="short" aria-label="EPSON HX-20 portable computer" data-balloon-pos="up"><a href="../../pc/epson/hx20" class="short" >HX-20</a></span> by means of a
+<a href="../../pc/epson/hx20/index.htm#cass"><span data-balloon-pos="up" aria-label="More about: micro&#173;cassette">micro&#173;cassette</span></a>.
+The software is unavailable.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../pc/epson/hx20">More information</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../pc/epson/hx20">            <div style="position: relative;" data-balloon-pos="up" aria-label="EPSON HX-20 portable computer">
+<a href="../../pc/epson/hx20">            <div style="position: relative;" data-balloon-pos="up" aria-label="EPSON HX-20 portable computer">
+            <img src="../../pc/epson/hx20/img/304434/028/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="EPSON HX-20 portable computer"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=cables></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Cables
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Special cables were supplied for connection of the <a href="#tss)"><span data-balloon-pos="up" aria-label="Jump to: TSS-2 transmitter">TSS-2 transmitter</span></a>
+to the <a href="#hx20"><span data-balloon-pos="up" aria-label="Jump to: EPSON HX-20 com&#173;pu&#173;ter">EPSON HX-20 com&#173;pu&#173;ter</span></a>, and for connection of the
+<a href="#tse"><span data-balloon-pos="up" aria-label="Jump to: TSE-2 receiver">TSE-2 receiver</span></a> to an MSDOS-compatible computer.
+<br />
+<br />
+Neither of these cables is currently available to us and we are still
+trying to work out the required pinout for such cables.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="../../img/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TSE2 receiver and TSS-2 transmitter in storage containers" data-balloon-length="large">          <img src="img/304432/000/thumbnail.jpg"
+           alt="TSE2 receiver and TSS-2 transmitter in storage containers"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Both devices in their storage containers">          <img src="img/304432/003/thumbnail.jpg"
+           alt="Both devices in their storage containers"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/003"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TSE-2 receiver in storage container">          <img src="img/304432/002/thumbnail.jpg"
+           alt="TSE-2 receiver in storage container"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/002"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TSS-2 in storage container">          <img src="img/304431/000/thumbnail.jpg"
+           alt="TSS-2 in storage container"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304431/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TSS-2 transmitter">          <img src="img/304431/001/thumbnail.jpg"
+           alt="TSS-2 transmitter"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304431/001"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TSE-2 receiver (left) and TSS-2 transmitter (right)" data-balloon-length="large">          <img src="img/304432/007/thumbnail.jpg"
+           alt="TSE-2 receiver (left) and TSS-2 transmitter (right)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_3'); slideCurrent('slide_3', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/007"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'C'" onClick="slideOpen('slide_3'); slideCurrent('slide_3', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">C</span></div></div><div style="height: 40px;"></div>
+<div id="slide_3" class="slide" onClick="slideClose('slide_3')"><span class="slide_close_left" onClick="slideClose('slide_3')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_3', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 1 / 6</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304432/000/full.jpg" alt="TSE2 receiver and TSS-2 transmitter in storage containers">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 2 / 6</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304432/003/full.jpg" alt="Both devices in their storage containers">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 3 / 6</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304432/002/full.jpg" alt="TSE-2 receiver in storage container">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 4 / 6</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304431/000/full.jpg" alt="TSS-2 in storage container">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 5 / 6</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304431/001/full.jpg" alt="TSS-2 transmitter">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">C</div> 6 / 6</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_3', 1);" src="img/304432/007/full.jpg" alt="TSE-2 receiver (left) and TSS-2 transmitter (right)">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_3', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_3', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=int></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Interior</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <a href="#tss"><span data-balloon-pos="up" aria-label="Jump to: TSS-2 transmitter">TSS-2 transmitter</span></a> and <a href="#tse"><span data-balloon-pos="up" aria-label="Jump to: TSE-2 receiver">TSE-2 receiver</span></a> are extremely
+complex devices.
+Although we would normally take such devices apart completely to show
+their interior, we have decided to only partly disassemble them. The
+reason is that the devices are brand new and are still in their
+original state. To show all aspects of the devices, we would have to
+desolder part of the wiring. Never&#173;the&#173;less, the photographs below
+should give a good impression of the build quality of the devices.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=int_tss></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Transmitter 
+          &nbsp;<font color="#CCC">
+          TSS-2
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The transmitter is housed in a grey metal enclosure that is open at
+one end. The interior is fitted to the black heatsink that also
+holds the connections. It is held in place by means of two screws
+at the other end of the enclosure. After removing these screws,
+the interior can be removed from the case. Some force may be needed
+as the rubber gasket behind the heatsink may be binding.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TSS-2 removed from enclosure">          <img src="img/304431/003/thumbnail.jpg"
+           alt="TSS-2 removed from enclosure"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304431/003"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior (top)">          <img src="img/304431/004/thumbnail.jpg"
+           alt="Interior (top)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304431/004"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="004 - Interior (top)">          <img src="img/304431/005/thumbnail.jpg"
+           alt="004 - Interior (top)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304431/005"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Bottom side - all covers removed">          <img src="img/304431/012/thumbnail.jpg"
+           alt="Bottom side - all covers removed"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304431/012"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Bottom side - all covers removed">          <img src="img/304431/013/thumbnail.jpg"
+           alt="Bottom side - all covers removed"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304431/013"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="004 - Interior (bottom detail)">          <img src="img/304431/007/thumbnail.jpg"
+           alt="004 - Interior (bottom detail)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304431/007"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="CPU board">          <img src="img/304431/009/thumbnail.jpg"
+           alt="CPU board"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304431/009"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="CPU board modification">          <img src="img/304431/010/thumbnail.jpg"
+           alt="CPU board modification"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_4'); slideCurrent('slide_4', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304431/010"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'D'" onClick="slideOpen('slide_4'); slideCurrent('slide_4', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">D</span></div></div><div style="height: 40px;"></div>
+<div id="slide_4" class="slide" onClick="slideClose('slide_4')"><span class="slide_close_left" onClick="slideClose('slide_4')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_4', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304431/003/full.jpg" alt="TSS-2 removed from enclosure">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304431/004/full.jpg" alt="Interior (top)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304431/005/full.jpg" alt="004 - Interior (top)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304431/012/full.jpg" alt="Bottom side - all covers removed">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304431/013/full.jpg" alt="Bottom side - all covers removed">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304431/007/full.jpg" alt="004 - Interior (bottom detail)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304431/009/full.jpg" alt="CPU board">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">D</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_4', 1);" src="img/304431/010/full.jpg" alt="CPU board modification">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_4', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_4', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=int_tse></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Receiver 
+          &nbsp;<font color="#CCC">
+          TSE-2
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The receiver is housed in a grey metal enclosure that is open at
+one end. The interior is fitted to the black heatsink that also
+holds the connections. It is held in place by means of two screws
+at the other end of the enclosure. After removing these screws,
+the interior can be removed from the case. Some force may be needed
+as the rubber gasket behind the heatsink may be binding.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304432/048/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304432/048/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/tse2_int.png"
+             style="
+            "
+             align="center"
+             width="570px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The receiver consists of many different sub-circuits, each of which
+is housed in a shielded com&ndash;part&#173;ment. The com&#173;partments are assembled
+into three planes: one at the top, one at the bottom and one at the
+centre. The image above shows how the top and centre planes are hinged,
+which allows the interior to be opened like a book. At the front is the
+wiring between the three planes.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TSE-2 receiver being removed from the enclosure">          <img src="img/304432/011/thumbnail.jpg"
+           alt="TSE-2 receiver being removed from the enclosure"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/011"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TSE-2 receiver outside enclosure">          <img src="img/304432/012/thumbnail.jpg"
+           alt="TSE-2 receiver outside enclosure"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/012"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior (top view)">          <img src="img/304432/013/thumbnail.jpg"
+           alt="Interior (top view)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/013"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior (top view)">          <img src="img/304432/014/thumbnail.jpg"
+           alt="Interior (top view)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/014"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior (top view)">          <img src="img/304432/015/thumbnail.jpg"
+           alt="Interior (top view)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/015"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior - bottom view">          <img src="img/304432/018/thumbnail.jpg"
+           alt="Interior - bottom view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/018"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior - bottom view">          <img src="img/304432/019/thumbnail.jpg"
+           alt="Interior - bottom view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/019"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Wiring at the rear">          <img src="img/304432/017/thumbnail.jpg"
+           alt="Wiring at the rear"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/017"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Antenna input detail">          <img src="img/304432/016/thumbnail.jpg"
+           alt="Antenna input detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 9);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/016"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver interior - bottom view - detail">          <img src="img/304432/020/thumbnail.jpg"
+           alt="Receiver interior - bottom view - detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 10);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/020"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver circuit detail">          <img src="img/304432/021/thumbnail.jpg"
+           alt="Receiver circuit detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 11);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/021"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Central clock">          <img src="img/304432/022/thumbnail.jpg"
+           alt="Central clock"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 12);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/022"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="TSE-2 receiver - bottom side">          <img src="img/304432/025/thumbnail.jpg"
+           alt="TSE-2 receiver - bottom side"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 13);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/025"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior - top view">          <img src="img/304432/040/thumbnail.jpg"
+           alt="Interior - top view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 14);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/040"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver interior - top view">          <img src="img/304432/027/thumbnail.jpg"
+           alt="Receiver interior - top view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 15);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/027"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver interior - top view">          <img src="img/304432/028/thumbnail.jpg"
+           alt="Receiver interior - top view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 16);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/028"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver interior - top view - detail">          <img src="img/304432/029/thumbnail.jpg"
+           alt="Receiver interior - top view - detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 17);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/029"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver interior - top view - detail">          <img src="img/304432/030/thumbnail.jpg"
+           alt="Receiver interior - top view - detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 18);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/030"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver interior - top view - detail">          <img src="img/304432/032/thumbnail.jpg"
+           alt="Receiver interior - top view - detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 19);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/032"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver interior - top view - detail">          <img src="img/304432/033/thumbnail.jpg"
+           alt="Receiver interior - top view - detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 20);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/033"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver interior - bottom view - detail">          <img src="img/304432/036/thumbnail.jpg"
+           alt="Receiver interior - bottom view - detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 21);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/036"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver interior - bottom view - detail">          <img src="img/304432/037/thumbnail.jpg"
+           alt="Receiver interior - bottom view - detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 22);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/037"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver interior - bottom view - detail">          <img src="img/304432/038/thumbnail.jpg"
+           alt="Receiver interior - bottom view - detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 23);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/038"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver interior - bottom view - detail">          <img src="img/304432/039/thumbnail.jpg"
+           alt="Receiver interior - bottom view - detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 24);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/039"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Hinges">          <img src="img/304432/041/thumbnail.jpg"
+           alt="Hinges"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 25);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/041"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Screw for unlocking bottom plane">          <img src="img/304432/042/thumbnail.jpg"
+           alt="Screw for unlocking bottom plane"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 26);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/042"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Screw for unlocking bottom plane">          <img src="img/304432/043/thumbnail.jpg"
+           alt="Screw for unlocking bottom plane"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 27);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/043"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Top plane unfolded">          <img src="img/304432/044/thumbnail.jpg"
+           alt="Top plane unfolded"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 28);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/044"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Bottom side detail">          <img src="img/304432/045/thumbnail.jpg"
+           alt="Bottom side detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 29);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/045"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="2 screws for unlocking center plane">          <img src="img/304432/046/thumbnail.jpg"
+           alt="2 screws for unlocking center plane"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 30);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/046"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="1 screw for unlocking center plane">          <img src="img/304432/047/thumbnail.jpg"
+           alt="1 screw for unlocking center plane"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 31);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/047"
+           /></div>
+          </td>
+          <td width=4><img src="../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Two circuit planes unfolded">          <img src="img/304432/048/thumbnail.jpg"
+           alt="Two circuit planes unfolded"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_5'); slideCurrent('slide_5', 32);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304432/048"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'E'" onClick="slideOpen('slide_5'); slideCurrent('slide_5', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">E</span></div></div><div style="height: 40px;"></div>
+<div id="slide_5" class="slide" onClick="slideClose('slide_5')"><span class="slide_close_left" onClick="slideClose('slide_5')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_5', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 1 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/011/full.jpg" alt="TSE-2 receiver being removed from the enclosure">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 2 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/012/full.jpg" alt="TSE-2 receiver outside enclosure">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 3 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/013/full.jpg" alt="Interior (top view)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 4 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/014/full.jpg" alt="Interior (top view)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 5 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/015/full.jpg" alt="Interior (top view)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 6 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/018/full.jpg" alt="Interior - bottom view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 7 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/019/full.jpg" alt="Interior - bottom view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 8 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/017/full.jpg" alt="Wiring at the rear">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 9 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/016/full.jpg" alt="Antenna input detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 10 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/020/full.jpg" alt="Receiver interior - bottom view - detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 11 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/021/full.jpg" alt="Receiver circuit detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 12 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/022/full.jpg" alt="Central clock">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 13 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/025/full.jpg" alt="TSE-2 receiver - bottom side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 14 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/040/full.jpg" alt="Interior - top view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 15 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/027/full.jpg" alt="Receiver interior - top view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 16 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/028/full.jpg" alt="Receiver interior - top view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 17 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/029/full.jpg" alt="Receiver interior - top view - detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 18 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/030/full.jpg" alt="Receiver interior - top view - detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 19 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/032/full.jpg" alt="Receiver interior - top view - detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 20 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/033/full.jpg" alt="Receiver interior - top view - detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 21 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/036/full.jpg" alt="Receiver interior - bottom view - detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 22 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/037/full.jpg" alt="Receiver interior - bottom view - detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 23 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/038/full.jpg" alt="Receiver interior - bottom view - detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 24 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/039/full.jpg" alt="Receiver interior - bottom view - detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 25 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/041/full.jpg" alt="Hinges">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 26 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/042/full.jpg" alt="Screw for unlocking bottom plane">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 27 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/043/full.jpg" alt="Screw for unlocking bottom plane">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 28 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/044/full.jpg" alt="Top plane unfolded">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 29 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/045/full.jpg" alt="Bottom side detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 30 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/046/full.jpg" alt="2 screws for unlocking center plane">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 31 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/047/full.jpg" alt="1 screw for unlocking center plane">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">E</div> 32 / 32</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_5', 1);" src="img/304432/048/full.jpg" alt="Two circuit planes unfolded">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_5', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_5', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=rest></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Restoration</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <a href="#tss"><span data-balloon-pos="up" aria-label="Jump to: TSS-2 transmitter">TSS-2 transmitter</span></a> and <a href="#tse"><span data-balloon-pos="up" aria-label="Jump to: TSE-2 receiver">TSE-2 receiver</span></a> in our collection
+were both new-old-stock (<span class="short tooltip-red" data-balloon-pos="up" aria-label="new-old-stock">NOS</span>) when we received them,
+<a href="img/304432/003/full.jpg"><span data-balloon-pos="up" aria-label="More about: packed in sealed plastic bags">packed in sealed plastic bags</span></a>
+and <a href="img/304432/000/full.jpg"><span data-balloon-pos="up" aria-label="More about: stowed in the original storage ...">stowed in the original storage containers</span></a>.
+We therefore assume that they are both in working condition and that no
+restoration is required.
+<br />
+<br />
+Ideally, we would like to bring both devices
+to life, but for that, full knownledge of the serial con&#173;trol protocols
+is needed.
+It should be possible though, to extract the control protocol for the
+<a href="#tss"><span data-balloon-pos="up" aria-label="Jump to: TSS-2 trans&#173;mitter">TSS-2 trans&#173;mitter</span></a> from the disassembled source code of the
+transmitter <a href="#doc_8">[H]</a>,
+whilst we might be able to extract the control protocol of the
+<a href="#tse"><span data-balloon-pos="up" aria-label="Jump to: TSE-2 receiver">TSE-2 receiver</span></a>
+from the available Stasi documents. This is an ongoing process that will
+hopefully evolve over time. Any progress will be reported here.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Things to do
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>Reconstruct TSS-2 control protocol            <li>Reconstruct TSE-2 control protocol            <li><s>Work out pinout of TSS-2 serial port</s>            <li>Work out pinout of TSE-2 serial port            <li>Work out pinout of the 7-pin connector of the TSE-2            <li>Find connectors for both devices            <li>Create serial cables for TSS-2 and TS-2            <li>Create power cables            <li>Write test software for TSS-2 and TSE-2            <li>Restore EPSON HX-20 computer            <li>Port test software to HX-20 computer            <li>Setup realistic demonstration link          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Missing
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>Circuit diagrams of the TSE-2 receiver (project 32261)            <li>Serial cable between TSS-2 and HX-20            <li>Serial cable between TSE-2 and PC            <li>7-pin connector for TSE-2            <li>LEMO connectors            <li>Power cables          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=conn_tss></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Transmitter connections</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <a name=conn_tss_in></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Data input 
+          &nbsp;<font color="#CCC">
+          X11
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The TSS-2 transmitter (32262) has a 4-pin S-series (half-moon) size-0
+LEMO socket for con&#173;nec&#173;tion of the data
+input. Two interfaces are available on this connector: <font color=#F52E00>(1)</font> serial data from
+the <a href="#hx20"><span data-balloon-pos="up" aria-label="Jump to: HX-20 controller">HX-20 controller</span></a> (unmodulated data, RS232C, one way),
+and <font color=#F52E00>(2)</font> two-tone <span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency Shift Keying">AFSK</span> data from a tape player (modulated data, one-way).
+The latter could be used to read frequency hopping tables that had been
+prepared elsewhere, directly from a tape cassette.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div>Ground            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div>Ground            <li><div style="display:inline-block; width:60px;">RXD</div><div style="display:inline-block; width:60px;">&rarr;]</div>Serial input from HX-20            <li><div style="display:inline-block; width:60px;">RXA</div><div style="display:inline-block; width:60px;">&rarr;]</div>Audio input from tape player (AFSK)          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="../../ref/conn/lemo/svg/lemo_half_4.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=conn_tss_pwr></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Power 
+          &nbsp;<font color="#CCC">
+          X12
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The transmitter is powered by an external 12.5V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span> source,
+which must be connected to the two pin LEMO connector at the front
+panel.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">PWR</div>+12.5V DC            <li><div style="display:inline-block; width:60px;">GND</div>Ground          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="../../ref/conn/lemo/svg/lemo_half_2h.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=conn_tss_ant></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Antenna 
+          &nbsp;<font color="#CCC">
+          X13
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">RF</div>RF output            <li><div style="display:inline-block; width:60px;">GND</div>Ground          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="../../ref/conn/bnc/svg/TNC2h.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=conn_tse></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Receiver connections</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+At the front panel of the receiver (i.e. the side with the large
+black heatsink) are three connectors: one for connection of the
+antenna, one for the interface to a personal computer (PC),
+and one for connector to the power supply unit.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=conn_tse_ant></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Antenna
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">RF</div>RF input            <li><div style="display:inline-block; width:60px;">GND</div>Ground          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="../../ref/conn/bnc/svg/TNC2h.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=tse_pwr></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Power
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The receiver has a large 7-pin receptacle for connection of power and
+possibly also other signals. The pinout of this connector is currently
+unknown.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li>?            <li>?            <li>?            <li>?            <li>?            <li>?          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="svg/tse2_7pin.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Serial port
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The receiver has a 4-pin S-series 0-size LEMO socket on which the
+serial RS232 port is available. The pinout of this connector is
+currently unknown.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li>?            <li>?            <li>?            <li>?          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="../../ref/conn/lemo/svg/lemo_half_4.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=spec></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Specifications</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Device(s)</div><a href="../index.htm">Spy radio system</a> for digital data            <li><div style="display:inline-block; width:100px;">Purpose</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Ultra High Frequency (300-3000 MHz)">UHF</span> line-of-sight (LOS) agent-to-base communication            <li><div style="display:inline-block; width:100px;">Codename</div>GRENZE            <li><div style="display:inline-block; width:100px;">Project</div>32922            <li><div style="display:inline-block; width:100px;">Developer</div><span class="short" aria-label="Ministerium f&#252;r Staatssicherheit (Ministry for State Security) (DDR)" data-balloon-pos="up"><a href="../../intel/stasi" class="short" >MfS</a></span> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Operativ-Technischer Sektor (Technical Operations) (MfS)" data-balloon-length="large">OTS</span>/33            <li><div style="display:inline-block; width:100px;">User</div><span class="short" aria-label="Ministerium f&#252;r Staatssicherheit (Ministry for State Security) (DDR)" data-balloon-pos="up"><a href="../../intel/stasi" class="short" >MfS</a></span> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Hauptverwaltung Aufkl&#228;rung (reconnaissance headquarters) - Stasi" data-balloon-length="large">HVA</span>/VIII            <li><div style="display:inline-block; width:100px;">Classification</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Vertrouliche Verschlu&#223;sache (confidential classified matter)" data-balloon-length="large">VVS</span> B 307            <li><div style="display:inline-block; width:100px;">Development</div>1988            <li><div style="display:inline-block; width:100px;">Manufacturing</div>1989            <li><div style="display:inline-block; width:100px;">Operational</div><s>1990</s>            <li><div style="display:inline-block; width:100px;">Country</div><span class="short" aria-label="Deutsche Demokratische Republik (German Democratic Republic, GDR)" data-balloon-pos="up"><a href="../ddr.htm" class="short" >DDR</a></span> (<a href="../ddr.htm">East-Germany</a>)            <li><div style="display:inline-block; width:100px;">Predecessor</div><a href="../horizont">HORIZONT (32900)</a>            <li><div style="display:inline-block; width:100px;">Frequency</div>440-465 MHz (frequency hopping)            <li><div style="display:inline-block; width:100px;">Span</div>25 MHz            <li><div style="display:inline-block; width:100px;">Channels</div>251            <li><div style="display:inline-block; width:100px;">Spacing</div>100 kHz            <li><div style="display:inline-block; width:100px;">Speed</div>38.47 KBaud            <li><div style="display:inline-block; width:100px;">Groups <sup><font color="#FF8800">1</font></sup> </div>200 (600 max.)            <li><div style="display:inline-block; width:100px;">Modulation</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Differential Phase Shift Keying">DPSK</span>            <li><div style="display:inline-block; width:100px;">Dimensions</div>see below            <li><div style="display:inline-block; width:100px;">Weight</div>see below            <li><div style="display:inline-block; width:100px;">Quantity</div>20-50 (est.)          </ul>
+</font></td></tr></table>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td width="20"><img src="../img/blank.gif" width="1" height="5"/></td>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Each group consists of 5 letters (A-Z) and a space.
+          </ol>
+          </small></font></td></tr>
+        </table>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Features
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>Frequency hopping            <li>Differential Phase-Shift Keying (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Differential Phase Shift Keying">DPSK</span>)            <li>High data rate burst transmission (38,400 baud)            <li>Computer controlled Automatic Link Establishment (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Automatic Link Establishment">ALE</span>)            <li>Simple operation            <li>Frequency management system            <li>Low chance of detection            <li>Low chance of interception          </ul>
+</font></td></tr></table>        <a name=spec_tse></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Receiver 
+          &nbsp;<font color="#CCC">
+          TSE-2
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Device</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Differential Phase Shift Keying">DPSK</span> Receiver            <li><div style="display:inline-block; width:100px;">Purpose</div>Secret communication (base side)            <li><div style="display:inline-block; width:100px;">Model</div>TSE-2            <li><div style="display:inline-block; width:100px;">Project</div>32261            <li><div style="display:inline-block; width:100px;">Year</div>1989            <li><div style="display:inline-block; width:100px;">Country</div><span class="short" aria-label="Deutsche Demokratische Republik (German Democratic Republic, GDR)" data-balloon-pos="up"><a href="../ddr.htm" class="short" >DDR</a></span> (<a href="../ddr.htm">East-Germany</a>)            <li><div style="display:inline-block; width:100px;">Frequency</div>440-465 MHz (frequency hopping)            <li><div style="display:inline-block; width:100px;">IF1</div>76.8 MHz            <li><div style="display:inline-block; width:100px;">IF2</div>10.7 MHz            <li><div style="display:inline-block; width:100px;">Bandwidth</div>80 kHz &#64;  6dB            <li><div style="display:inline-block; width:100px;">Stability</div>3&#183;10<sup>-6</sup>            <li><div style="display:inline-block; width:100px;">Sensitivity</div>1&#181;V            <li><div style="display:inline-block; width:100px;">Interface</div>RS-232C            <li><div style="display:inline-block; width:100px;">Speed</div>9600 Baud            <li><div style="display:inline-block; width:100px;"><span class="short" aria-label="Unwanted intelligence bearing emanations" data-balloon-pos="up"><a href="../../df/tempest.htm" class="short" >Tempest</a></span></div>100 m            <li><div style="display:inline-block; width:100px;">Power</div>12V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span>            <li><div style="display:inline-block; width:100px;">Temperature</div>0&#176;C to 50&#176;C            <li><div style="display:inline-block; width:100px;">Dimensions</div>88 &#215; 155 &#215; 280 (<b>HWD</b>)            <li><div style="display:inline-block; width:100px;">Container</div>?            <li><div style="display:inline-block; width:100px;">Weight</div>3526 g          </ul>
+</font></td></tr></table>        <a name=spec_tss></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Transmiter 
+          &nbsp;<font color="#CCC">
+          TSS-2
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Device</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="Differential Phase Shift Keying">DPSK</span> Transmitter            <li><div style="display:inline-block; width:100px;">Purpose</div>Secret communication (agent side)            <li><div style="display:inline-block; width:100px;">Model</div>TSS-2            <li><div style="display:inline-block; width:100px;">Project</div>32262            <li><div style="display:inline-block; width:100px;">Year</div>1989            <li><div style="display:inline-block; width:100px;">Country</div><span class="short" aria-label="Deutsche Demokratische Republik (German Democratic Republic, GDR)" data-balloon-pos="up"><a href="../ddr.htm" class="short" >DDR</a></span> (<a href="../ddr.htm">East-Germany</a>)            <li><div style="display:inline-block; width:100px;">Frequency</div>440-465 MHz (frequency hopping)            <li><div style="display:inline-block; width:100px;">Output</div>1.5, 5, 15 W            <li><div style="display:inline-block; width:100px;">Interface 1</div>RS-232C (1200 baud) RX only            <li><div style="display:inline-block; width:100px;">Interface 2</div>FSK (1200 baud) 1200/1800 Hz            <li><div style="display:inline-block; width:100px;">Data</div>11-bit (1 start bit, 8 data bits, 2 stop bits) neg. logic            <li><div style="display:inline-block; width:100px;">Storage</div>600 groups (max. 200 used)            <li><div style="display:inline-block; width:100px;">Cycles</div>2            <li><div style="display:inline-block; width:100px;">Power</div>12V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Direct Current">DC</span>            <li><div style="display:inline-block; width:100px;">Temperature</div>0&#176;C to 50&#176;C            <li><div style="display:inline-block; width:100px;">Dimensions</div>46 &#215; 90 &#215; 185 mm (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Height-Width-Depth">HWD</span>)            <li><div style="display:inline-block; width:100px;">Container</div>65 &#215; 110 &#215; 204 mm (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Height-Width-Depth">HWD</span>)            <li><div style="display:inline-block; width:100px;">Weight</div>1266 g          </ul>
+</font></td></tr></table>        <a name=spec_hx20></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Controller 
+          &nbsp;<font color="#CCC">
+          HX-20
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Device</div><a href="../../pc">Portable computer</a>            <li><div style="display:inline-block; width:100px;">Purpose</div>Controlling <a href="#spec_tss">TSS-2 transmitter</a>            <li><div style="display:inline-block; width:100px;">Model</div><a href="../../pc/epson/hx20">HX-20</a>            <li><div style="display:inline-block; width:100px;">Manufacturer</div>EPSON            <li><div style="display:inline-block; width:100px;">Year</div>1982            <li><div style="display:inline-block; width:100px;">Country</div>Japan            <li><div style="display:inline-block; width:100px;">Software</div>Proprietary (<span class="short" aria-label="Ministerium f&#252;r Staatssicherheit (Ministry for State Security) (DDR)" data-balloon-pos="up"><a href="../../intel/stasi" class="short" >MfS</a></span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Operativ-Technischer Sektor (Technical Operations) (MfS)" data-balloon-length="large">OTS</span>)            <li><div style="display:inline-block; width:100px;">Dimensions</div>45 &#215; 290 &#215; 220 mm (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Height-Width-Depth">HWD</span>)            <li><div style="display:inline-block; width:100px;">Weight</div>1600 g          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Known project numbrs
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="#tse"><div style="display:inline-block; width:100px;">32261</div>TSE-2 Base receiver</a>            <li><div style="display:inline-block; width:100px;">32261-43</div>Controller for three TSE-2 receivers            <li><div style="display:inline-block; width:100px;">32261-100</div>Test transmitter (uses start channel)            <li><a href="#tss"><div style="display:inline-block; width:100px;">32262</div>TSS-2 Agent transmitter</a>            <li><div style="display:inline-block; width:100px;">32922</div>Complete GRENZE system (TSE-2/TSS-2)            <li><div style="display:inline-block; width:100px;">32922-12</div>Receiving station            <li><div style="display:inline-block; width:100px;">32922-21</div>Uninterrupted power supply (UPS)            <li><div style="display:inline-block; width:100px;">92132-21</div>Base station antenna          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Surviving serial numbers
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">TSS-2</div><div style="display:inline-block; width:100px;">1289/11</div>Crypto Museum, Netherlands            <li><div style="display:inline-block; width:100px;">TSE-2</div><div style="display:inline-block; width:100px;">1389/26</div>Crypto Museum, Netherlands          </ul>
+</font></td></tr></table><div style="height: 20px;"></div>        <a name=doc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Documentation</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <a name="doc_1"></a>
+            <li><a href="files/19821105_MfS_OTS_TSS2_TSE2.pdf">Aufgabestellung zur Studie TSS 2/TSE 2</a><br />
+Requirements for the feasibility study of the TSS-2 and TSE-2 (German).<br />
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Vertrouliche Verschlu&#223;sache (confidential classified matter)" data-balloon-length="large">VVS</span>-o203 MfS-Nr. B 368/82. Dr. Henkelmann. Berlin, 5 November 1982.<br />
+<small>Bundesarchiv &mdash; Stasi-Unterlagen Archiv. Mfs OTS, Nr. 1924. <a href="#ref_2">[2]</a></small>
+            <p />
+            <a name="doc_2"></a>
+            <li><a href="files/19830406_MfS_OTS_TSS2_TSE2.pdf">Protokoll zur Themenberatung TSS/TSE-2 von 6. 4. 1983</a><br />
+Minutes of meeting at INT Berlin about the development of the TSS-2 and TSE-2 (German).
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Vertrouliche Verschlu&#223;sache (confidential classified matter)" data-balloon-length="large">VVS</span>-o203, MfS-Nr. B 156/83. INT Berlin, 6 April 1983.<br />
+<small>Bundesarchiv &mdash; Stasi-Unterlagen Archiv. Mfs OTS, Nr. 1924. <a href="#ref_2">[2]</a></small>
+            <p />
+            <a name="doc_3"></a>
+            <li><a href="files/19840000_MfS_OTS_TSS2_TSE2.pdf">Forderungen zum K-Pflichtenheft TSS-2/TSE-2</a><br />
+Specification for TSE-2 and TSS-2 an their microprocessor platforms (German).<br />
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Vertrouliche Verschlu&#223;sache (confidential classified matter)" data-balloon-length="large">VVS</span>-o203, MfS-Nr. B 320/84. Dr. Henkelmann, 1984.<br />
+<small>Bundesarchiv &mdash; Stasi-Unterlagen Archiv. Mfs OTS, Nr. 1924. <a href="#ref_2">[2]</a></small>
+            <p />
+            <a name="doc_4"></a>
+            <li><a href="files/19860220_MfS_OTS_TSS2_TSE2.pdf">Bericht zur Erprobung der A3-Muster von TSS-2, TSE-2</a><br />
+Report about early tests with TSS-2 and TSE-2 prototypes (German).<br />
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Vertrouliche Verschlu&#223;sache (confidential classified matter)" data-balloon-length="large">VVS</span>-o203, MfS-Nr. B 81/86, Dr. Henkelmann. OTS/33. Berlin, 20 February 1986.<br />
+<small>Bundesarchiv &mdash; Stasi-Unterlagen Archiv. Mfs OTS, Nr. 1925. <a href="#ref_2">[2]</a></small>
+            <p />
+            <a name="doc_5"></a>
+            <li><a href="files/19881024_MfS_OTS_32922-51.pdf">Technische Forderungen zum System 32922-51 Funkleitplatz TSS/TSE</a><br />
+Design for a complete system of receiving, intermediate and base sations (German).<br />
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Operativ-Technischer Sektor (Technical Operations) (MfS)" data-balloon-length="large">OTS</span>/33. Berlin, 24 October 1988.<br />
+<small>Bundesarchiv &mdash; Stasi-Unterlagen Archiv. Mfs OTS, Nr. 1223. <a href="#ref_2">[2]</a></small>
+            <p />
+            <a name="doc_6"></a>
+            <li><a href="files/19881109_MfS_OTS_32261-43.pdf">Aufgabenstellung 32261-43 (Bedienger&#228;t System 'Grenze')</a><br />
+Technical requirements for receiver controller 32261-43 (German).<br />
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Operativ-Technischer Sektor (Technical Operations) (MfS)" data-balloon-length="large">OTS</span>/33, Schiffel, OSL. Berlin, 9 November 1988.<br />
+<small>Bundesarchiv &mdash; Stasi-Unterlagen Archiv. Mfs OTS, Nr. 1223. <a href="#ref_2">[2]</a></small>
+            <p />
+            <a name="doc_7"></a>
+            <li><a href="files/19890900_MfS_OTS_32261-43.pdf">Taktisch-Technische Forderungen - Bedienger&#228;t f&#252;r Empfangsstelle 32922-12</a><br />
+Description of receiver communication protocol (German).<br />
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Operativ-Technischer Sektor (Technical Operations) (MfS)" data-balloon-length="large">OTS</span>/33 Schiffel, Schmidt. <span class="short tooltip-red" data-balloon-pos="up" aria-label="Hauptverwaltung Aufkl&#228;rung (reconnaissance headquarters) - Stasi" data-balloon-length="large">HVA</span> VIII Degenhardt. Berlin, September 1989.<br />
+<small>Bundesarchiv &mdash; Stasi-Unterlagen Archiv. Mfs OTS, Nr. 1223. <a href="#ref_2">[2]</a></small>
+            <p />
+            <a name="doc_8"></a>
+            <li><a href="files/20000429_TSS2_Jirmann.pdf">Prof. Dr. Jochen Jirmann, <i>Der Agentensender VSS B307 der Stasi</i> <sup><font color="#FF8800">1</font></sup> </a><br />
+Disassembly of the internal firmware of the TSS-2 transmitter (German).<br />
+29 April 2000. 4 pages.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="files/STASI4.zip">Assembler listing</a>
+            <p />
+            <a name="doc_9"></a>
+            <li><a href="files/19991219_TSS2_Staritz.pdf">DL3CS, Handwritten technical notes about the TSS-2 transmitter</a><br />
+<a href="../../people/staritz/rudolf.htm">Rudolf Staritz</a>, Bamberg (Germany),
+19-26 December 1999.
+            <p />
+            <a name="doc_10"></a>
+            <li><a href="files/32262_wiring.jpg">TSS-2 transmitter - wiring diagram</a><br />
+Drawing 1451.004-10001/10003. 4 March 1986 &mdash; 7 November 1988.
+          </ol type=A>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+The title of this article (VSS B307) refers to the Stasi classification
+  of the item, not the model number.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+<li><font color=#F52E00>Detlev Vreisleben, TSS-2 and TSE-2 devices - THANKS !</font><br />
+Crypto Museum, November 2025.
+            <p />
+            <a name="ref_2"></a>
+            <li><a href="http://www.bstu.de/EN" target="_blank">Bundesbeauftragte f&#252;r die Stasi-Unterlagen (BStU) <sup><font color="#FF8800">1</font></sup> </a><br />
+Federal Commissioner for the Stasi-Records.
+            <p />
+            <a name="ref_3"></a>
+            <li><a href="../../intel/stasi/files/MfS_19880830_Strategie_2000.pdf">Strategie 2000 - Operative Nachrichtenverbindingstechnik</a><br />
+Descriptions of operational and planned intelligence communication technology (German).<br />
+<span class="short" aria-label="Ministerium f&#252;r Staatssicherheit (Ministry for State Security) (DDR)" data-balloon-pos="up"><a href="../../intel/stasi" class="short" >MfS</a></span> <span class="short tooltip-red" data-balloon-pos="up" aria-label="Operativ-Technischer Sektor (Technical Operations) (MfS)" data-balloon-length="large">OTS</span>, B 37/88. Berlin, 30 August 1988. Page 3.
+            <p />
+            <a name="ref_4"></a>
+            <li><a href="../../intel/stasi/files/MfS_OTM_19861015.pdf">Ordnung Nr. HV A 1/86 f&#252;r die Arbeit mit operativ-technischen Mitteln</a><br />
+OTM Ordnung. <span class="short tooltip-red" data-balloon-pos="up" aria-label="Vertrouliche Verschlu&#223;sache (confidential classified matter)" data-balloon-length="large">VVS</span> <span class="short" aria-label="Ministerium f&#252;r Staatssicherheit (Ministry for State Security) (DDR)" data-balloon-pos="up"><a href="../../intel/stasi" class="short" >MfS</a></span> o059-A 35/86. Berlin, 15 October 1986. pp. 30-31.
+            <p />
+            <a name="ref_5"></a>
+            <li><a href="files/19890329_MfS_OTS_32900.pdf">Degenhardt (HV A/VIII) an Schmidt (OTS/33), <i>UKW-Verbindungssystem 32900</i></a><br />
+Letter about planned migration from 32900 (Horizont) to 32922 (Grenze) - (German).<br />
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Hauptverwaltung Aufkl&#228;rung (reconnaissance headquarters) - Stasi" data-balloon-length="large">HVA</span>/VIII. Berlin, 29 March 1989. 1 page.<br />
+Bundesarchiv &mdash; Stasi-Unterlagen Archiv. Mfs OTS, Nr. 1223. <a href="#ref_2">[2]</a>
+            <p />
+            <a name="ref_6"></a>
+            <li><a href="../../intel/stasi/files/19870200_MfS_OTS_Liste.pdf">Schl&#252;sselliste zum PT WUT, Stand 2/87</a><br />
+Index of projects under development per February 1987 (German).<br />
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Geheime Verschlu&#223;sache (secret classified matter)">GVS</span>-o203 <span class="short" aria-label="Ministerium f&#252;r Staatssicherheit (Ministry for State Security) (DDR)" data-balloon-pos="up"><a href="../../intel/stasi" class="short" >MfS</a></span>-Nr. B 61/87. February 1987.<br />
+<small>Bundesarchiv &mdash; Stasi-Unterlagen Archiv. Mfs OTS, Nr. 1924. <a href="#ref_2">[2]</a></small>
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Full name: Bundesbeauftragte f&#252;r die Unterlagen des Staatssicherheitsdienstes
+  der ehemaligen Deutschen Demokratischen Republik
+  (<a href="../glossary.htm#ddr"><span data-balloon-pos="up" aria-label="More about: DDR">DDR</span></a>) &mdash;
+  Federal Commissioner for the Records of the
+  <a href="../glossary.htm#mfs"><span data-balloon-pos="up" aria-label="More about: State Security Service">State Security Service</span></a>
+  of the former German Democratic Republic (<a href="../glossary.htm#ddr"><span data-balloon-pos="up" aria-label="More about: GDR">GDR</span></a>) &mdash;
+  officially abbreviated <b>BStU</b>.
+  Since June 2021 part of the <i>Bundesarchiv</i> and known as
+  <b>Stasi-Unterlagen-Archiv</b>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../horizont">HORIZONT spy radio system, the predecessor</a><br />
+            <li><a href="../../pc/epson/hx20">EPSON HX-20 portable computer</a><br />
+            <li><a href="../../intel/stasi">MfS (Stasi)</a><br />
+            <li><a href="../ddr.htm">Other DDR spy radio sets</a><br />
+            <li><a href="../index.htm">Other spy radio sets</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Friday 07 November 2025. Last changed: Friday, 21 November 2025 - 21:31 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../index.htm"><img src=../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

@@ -1,0 +1,1255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>Sentyron</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../index.htm"><img src="../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but sub first sel" onClick="location.href='../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../index.htm"><img src="../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Sentyron</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Formerly known as Fox Crypto</b>
+<br />
+<br />
+<b>Sentyron</b>, formerly known as <a href="../foxit"><span data-balloon-pos="up" aria-label="More about: Fox Crypto">Fox Crypto</span></a>, is a
+<a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: developer and manufacturer">developer and manufacturer</span></a> of
+<a href="../../crypto"><span data-balloon-pos="up" aria-label="More about: cryptographic pro&#173;ducts">cryptographic pro&#173;ducts</span></a>, based in Delft (Netherlands).
+The company was founded in 2003 as Fox Crypto &mdash; a se&#173;pa&#173;rate division of
+its former parent <a href="../foxit"><span data-balloon-pos="up" aria-label="More about: Fox-IT">Fox-IT</span></a>. Since 1 August 2024 it is part
+of <b>CR Group Nordic AB</b>.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Sentyron logo (2025)" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Sentyron logo (2025)" class="tooltip-red">
+            <img src="img/sentyron_logo.jpg"
+             style="
+            "
+             align="center"
+             width="250px"
+             vspace="4"
+             alt="Sentyron logo (2025)"
+             border=0
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The company has its roots in the Dutch IT-company <a href="../foxit"><span data-balloon-pos="up" aria-label="More about: Fox-IT">Fox-IT</span></a>,
+founded in 1999 by Menno van der Marel and Ronald Prins.
+In 2003, <a href="../foxit"><span data-balloon-pos="up" aria-label="More about: Fox-IT">Fox-IT</span></a> acquired part of the legacy of
+<a href="../../crypto/philips"><span data-balloon-pos="up" aria-label="More about: Philips Crypto BV">Philips Crypto BV</span></a>,
+for which it founded subsidiary Fox Crypto BV. With the acquisition,
+Fox Crypto gained access to chip technology that had been approved
+for the protection of state secrets. It resulted in the in&#173;tro&#173;duc&#173;tion
+of the <a href="../../crypto/foxit/fffe"><span data-balloon-pos="up" aria-label="More about: Fort Fox File Encryptor (FFFE)">Fort Fox File Encryptor (FFFE)</span></a>,
+which was based on <span class="short" aria-label="Philips Usfa BV" data-balloon-pos="up"><a href="../../crypto/philips" class="short" >Philips</a></span>' ill-fated
+<a href="../../crypto/philips/vcard"><span data-balloon-pos="up" aria-label="More about: V-Card Project">V-Card Project</span></a>.
+<br />
+<br />
+The history of Philips Crypto dates back to 1957, when the company
+&mdash; at the time known as <a href="../../crypto/philips/usfa.htm"><span data-balloon-pos="up" aria-label="More about: Philips Usfa">Philips Usfa</span></a> &mdash;
+took over development of post-<span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../../crypto/glossary.htm#ww2" class="short" >WWII</a></span> cryptographic systems
+from the Dutch state-owned telecom monopolist <span class="short" aria-label="Post, Telegraph and Telephone (Netherlands)" data-balloon-pos="up"><a href="../ptt" class="short" >PTT</a></span>.
+When <a href="../../crypto/philips/usfa.htm"><span data-balloon-pos="up" aria-label="More about: Philips Usfa">Philips Usfa</span></a> was sold to
+<a href="../thales"><span data-balloon-pos="up" aria-label="More about: Thomson (now: Thales)">Thomson (now: Thales)</span></a> in 1989,
+the crypto-division was branched out as
+<a href="../../crypto/philips"><span data-balloon-pos="up" aria-label="More about: Philips Crypto BV">Philips Crypto BV</span></a>,
+at the request of the Dutch Go&#173;vern&#173;ment.
+In 2003, <a href="../../crypto/philips"><span data-balloon-pos="up" aria-label="More about: Philips Crypto">Philips Crypto</span></a> was dissolved due to lack
+of revenue, after which its assets were divided between
+<a href="../compumatica"><span data-balloon-pos="up" aria-label="More about: Compumatica">Compumatica</span></a> and <a href="../foxit"><span data-balloon-pos="up" aria-label="More about: Fox-IT">Fox-IT</span></a>.
+It gave Fox Crypto access to approved technology for the protection of
+state secrets, including Philips' versatile
+<a href="../../crypto/philips/gcd/index.htm#gcd"><span data-balloon-pos="up" aria-label="More about: GCD and GCD-&Phi; (2000) crypto ...">GCD and GCD-&Phi; (2000) crypto chips</span></a>.
+<br />
+<br />
+In 2015, parent company <a href="../foxit"><span data-balloon-pos="up" aria-label="More about: Fox-IT">Fox-IT</span></a> was acquired by the British
+<b>NCC Group</b>, which raised sequrity concern with the Dutch Goverment,
+especially after the <span class="short" aria-label="United Kingdom (Great Britain)" data-balloon-pos="up"><a href="../../crypto/uk" class="short" >UK</a></span> withdrew itself from the Euro&#173;pe&#173;an Union in
+2020.
+Special measures were taken to ensure the security of the Dutch State.
+On 1 August 2024, NCC Group sold Fox Crypto to the Swedish <b>CR Group Nordic AB</b>,
+after which Fox Crypto was wholly European again.
+In order to avoid confusion, in particular with respect to its former
+parent <a href="../foxit"><span data-balloon-pos="up" aria-label="More about: Fox-IT">Fox-IT</span></a>,
+the company name was changed to <b>Sentyron</b> in September 2025.
+With the acquisition by CR Group, Sentyron is now a sister company of
+the Swedish <a href="../../crypto/tutus"><span data-balloon-pos="up" aria-label="More about: Tutus Data AB">Tutus Data AB</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Sentyron products on this website
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+<center>No Sentyron products in our collection yet</center>
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Known Sentyron products</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>Sentyron DataDiode Ruggedised (1G-10G)            <li>Sentyron DataDiode Andean (1G)            <li>Secure Mobile            <li>Electronic Key Management System (EKMS)            <li>SkyTale (Generation 3)            <li><a href="../../crypto/secunet/sina">SINA</a>            <li>ClientPortal            <li>OpenVPN-NL          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=hist></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>History</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The timeline below shows the history of Sentyron and its predecessors,
+starting with the earliest development of a
+<a href="../../crypto/ott.htm"><span data-balloon-pos="up" aria-label="More about: one-time tape">one-time tape</span></a> (<span class="short" aria-label="One-Time Tape (cipher machine), also known as a 'mixer'" data-balloon-pos="up"><a href="../../crypto/ott.htm" class="short" >OTT</a></span>) cipher
+machine by the Dutch state-owned <span class="short" aria-label="Post, Telegraph and Telephone (Netherlands)" data-balloon-pos="up"><a href="../ptt" class="short" >PTT</a></span> shortly af&#173;ter World War II (<span class="short" aria-label="World War II" data-balloon-pos="up"><a href="../../crypto/glossary.htm#ww2" class="short" >WWII</a></span>)
+had ended. These machines were developed at the <span class="short" aria-label="Post, Telegraph and Telephone (Netherlands)" data-balloon-pos="up"><a href="../ptt" class="short" >PTT</a></span>'s
+<a href="../ptt/neher.htm"><span data-balloon-pos="up" aria-label="More about: Dr. Neher La&#173;bo&#173;ra&#173;to&#173;ry">Dr. Neher La&#173;bo&#173;ra&#173;to&#173;ry</span></a>, but were manufactured at
+<a href="../../crypto/philips/usfa.htm"><span data-balloon-pos="up" aria-label="More about: Philips Usfa">Philips Usfa</span></a> &mdash; a subsidiary of the big
+<a href="../philips"><span data-balloon-pos="up" aria-label="More about: Philips">Philips</span></a> conglomerate which had been founded in 1948 at the request
+of the Dutch Goverment for the (secret) production of equip&#173;ment and supplies
+for the Royal Dutch Army, like proximity fuses and night vision goggles.
+<br />
+<br />
+At <span class="short" aria-label="Post, Telegraph and Telephone (Netherlands)" data-balloon-pos="up"><a href="../ptt" class="short" >PTT</a></span>'s prestigious <a href="../ptt/neher.htm"><span data-balloon-pos="up" aria-label="More about: Dr. Neher Laboratory">Dr. Neher Laboratory</span></a> in
+Leidschendam (Netherlands),
+<a href="../../people/oberman/rmm.htm"><span data-balloon-pos="up" aria-label="More about: Dr. Ir. Roelof Ober&#173;man">Dr. Ir. Roelof Ober&#173;man</span></a> and his colleague
+Anton Snijders developed three <span class="short" aria-label="One-Time Tape (cipher machine), also known as a 'mixer'" data-balloon-pos="up"><a href="../../crypto/ott.htm" class="short" >OTT</a></span> cipher machines:
+<a href="../../crypto/ptt/colex"><span data-balloon-pos="up" aria-label="More about: Colex">Colex</span></a>, <a href="../../crypto/philips/ec1"><span data-balloon-pos="up" aria-label="More about: Ecolex I">Ecolex I</span></a> and
+<a href="../../crypto/philips/ec2"><span data-balloon-pos="up" aria-label="More about: Eco&#173;lex II">Eco&#173;lex II</span></a>, the last of which was even used at
+<span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../intel/nato" class="short" >NATO</a></span>. In 1957, <a href="../../crypto/philips"><span data-balloon-pos="up" aria-label="More about: Philips Usfa">Philips Usfa</span></a> took over the development
+of cipher machines from <span class="short" aria-label="Post, Telegraph and Telephone (Netherlands)" data-balloon-pos="up"><a href="../ptt" class="short" >PTT</a></span>, after which
+<a href="../../people/oberman/rmm.htm"><span data-balloon-pos="up" aria-label="More about: Oberman">Oberman</span></a> and Snijders left <span class="short" aria-label="Post, Telegraph and Telephone (Netherlands)" data-balloon-pos="up"><a href="../ptt" class="short" >PTT</a></span> to persue a
+career as professors at Delft University. <span class="short" aria-label="Philips Usfa BV" data-balloon-pos="up"><a href="../../crypto/philips" class="short" >Philips</a></span> subsequently developed
+<a href="../../crypto/philips/ec4"><span data-balloon-pos="up" aria-label="More about: Ecolex IV">Ecolex IV</span></a>, which was the last <span class="short" aria-label="One-Time Tape (cipher machine), also known as a 'mixer'" data-balloon-pos="up"><a href="../../crypto/ott.htm" class="short" >OTT</a></span>.
+<br />
+<br />
+In 1961, development started of the first tapeless rotorless online cipher
+machines (<span class="short" aria-label="Tapeless Rotorless On-Line (cipher machines)" data-balloon-pos="up"><a href="../../crypto/trol" class="short" >TROL</a></span>), in which electronic circuits based on (non)linear
+feedback shift registers (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Linear Feedback Shift Register">LFSR</span>) replaced the rotors of its
+<a href="../../crypto/rotor.htm"><span data-balloon-pos="up" aria-label="More about: mechanical predecessors">mechanical predecessors</span></a>.
+The <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../intel/nato" class="short" >NATO</a></span>-evaluation, for which <span class="short" aria-label="Tapeless Rotorless On-Line (cipher machines)" data-balloon-pos="up"><a href="../../crypto/trol" class="short" >TROL</a></span> was initially
+developed, was eventually lost to the British
+<a href="../../crypto/uk/bid610"><span data-balloon-pos="up" aria-label="More about: BID/610 (ALVIS)">BID/610 (ALVIS)</span></a>, but its technology was used in 1967
+in <a href="../../crypto/philips/tarolex"><span data-balloon-pos="up" aria-label="More about: Tarolex">Tarolex</span></a>.
+It was also used in 1972 for the <a href="../../crypto/philips/ec10"><span data-balloon-pos="up" aria-label="More about: Ecolex X">Ecolex X</span></a>
+which would be in service for no less than 20 years.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/sentyron_timeline.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+In the following years, <span class="short" aria-label="Philips Usfa BV" data-balloon-pos="up"><a href="../../crypto/philips" class="short" >Philips</a></span> developed the next generations of
+cipher machines for the Dutch Army and <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../intel/nato" class="short" >NATO</a></span>, such as
+<a href="../../crypto/philips/mucolex"><span data-balloon-pos="up" aria-label="More about: Mucolex">Mucolex</span></a> &mdash; the first Trunk Encryption Device
+(<span class="short tooltip-red" data-balloon-pos="up" aria-label="Trunk Encryption Device">TED</span>) &mdash; <a href="../../crypto/philips/miniflex"><span data-balloon-pos="up" aria-label="More about: Miniflex">Miniflex</span></a>,
+<a href="../../crypto/philips/picoflex"><span data-balloon-pos="up" aria-label="More about: Picoflex">Picoflex</span></a>
+and the highly successful <a href="../../crypto/philips/aroflex"><span data-balloon-pos="up" aria-label="More about: Aroflex">Aroflex</span></a>,
+but also high-end speech encryption devices like
+<a href="../../crypto/philips/spendex10"><span data-balloon-pos="up" aria-label="More about: Spendex 10">Spendex 10</span></a>,
+<a href="../../crypto/philips/spendex40"><span data-balloon-pos="up" aria-label="More about: Spendex 40">Spendex 40</span></a> and
+<a href="../../crypto/philips/spendex50"><span data-balloon-pos="up" aria-label="More about: Spendex 50 (DBT)">Spendex 50 (DBT)</span></a>.
+In 1989, <a href="../../crypto/philips"><span data-balloon-pos="up" aria-label="More about: Philips Usfa">Philips Usfa</span></a> was sold to
+<a href="../thales"><span data-balloon-pos="up" aria-label="More about: Thomson (now: Thales)">Thomson (now: Thales)</span></a>, but the crypto division was kept out of
+the deal, at the express wish of the Dutch Government. All crypto-activities
+were transferred to the newly founded <a href="../../crypto/philips"><span data-balloon-pos="up" aria-label="More about: Philips Crypto">Philips Crypto</span></a>,
+whilst goverment funding was minimised. From then on, <span class="short" aria-label="Philips Usfa BV" data-balloon-pos="up"><a href="../../crypto/philips" class="short" >Philips</a></span> had to
+get additional revenue from sales to commercial and foreign customers,
+although for each of these it had to seek the Government's permission.
+<br />
+<br />
+Between 1990 and 2000, <span class="short" aria-label="Philips Usfa BV" data-balloon-pos="up"><a href="../../crypto/philips" class="short" >Philips</a></span> developed a series of versatile cryptographic
+processors with proprietary, public and even <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../intel/nato" class="short" >NATO</a></span>-grade encryption
+algorithms, starting with the
+<a href="../../crypto/philips/gcd/index.htm#gcd"><span data-balloon-pos="up" aria-label="More about: General Crypto Device (GCD)">General Crypto Device (GCD)</span></a>
+in 1996, followed by the
+<a href="../../crypto/philips/gcd/index.htm#gcdphi"><span data-balloon-pos="up" aria-label="More about: GCD-Phi (1997)">GCD-Phi (1997)</span></a>
+and <a href="../../crypto/philips/gcd/index.htm#gp2"><span data-balloon-pos="up" aria-label="More about: GCD Phi 2000 (1999)">GCD Phi 2000 (1999)</span></a>.
+Although Phi&#173;lips sucessfully developed a series of commercial devices,
+including the <a href="../../crypto/philips/pnvx"><span data-balloon-pos="up" aria-label="More about: PNVX secure telehpone">PNVX secure telehpone</span></a>,
+the <a href="../../crypto/philips/pfdx"><span data-balloon-pos="up" aria-label="More about: PFDX secure fax">PFDX secure fax</span></a> and the
+<a href="../../crypto/philips/languard"><span data-balloon-pos="up" aria-label="More about: LAN Guard virtual private network">LAN Guard virtual private network</span></a>,
+it failed to successfully market these products.
+The final blow came when it failed to successfully implement
+<a href="../../crypto/philips/vcard"><span data-balloon-pos="up" aria-label="More about: V-kaart (V-card)">V-kaart (V-card)</span></a> &mdash; a PCMCIA card for
+secure file transfer and storage, developed for the Dutch Government.
+This was partly due to the ever changing requirements and specifications
+on the side of the Dutch Government and the Dutch Ministry of Defense.
+In 2003, <span class="short" aria-label="Philips Crypto BV" data-balloon-pos="up"><a href="../../crypto/philips" class="short" >Philips Crypto</a></span> was dissolved and its assets were taken over
+by <a href="../compumatica"><span data-balloon-pos="up" aria-label="More about: Compumatica">Compumatica</span></a> in Uden
+(<a href="../../crypto/philips/languard"><span data-balloon-pos="up" aria-label="More about: LanGuard">LanGuard</span></a>)
+and <span class="short" aria-label="Fox-IT" data-balloon-pos="up"><a href="../foxit" class="short" >Fox-IT</a></span> in Delft
+(<a href="../../crypto/philips/vcard"><span data-balloon-pos="up" aria-label="More about: V-card">V-card</span></a>,
+<a href="../../crypto/philips/gcd/index.htm#gcd"><span data-balloon-pos="up" aria-label="More about: GCD">GCD</span></a>).
+<br />
+<br />
+<span class="short" aria-label="Fox-IT" data-balloon-pos="up"><a href="../foxit" class="short" >Fox-IT</a></span>, which had been founded in 1999, established a seprate division
+&ndash; Fox Crypto &ndash; for hol&#173;ding the <span class="short" aria-label="Philips Usfa BV" data-balloon-pos="up"><a href="../../crypto/philips" class="short" >Philips</a></span> legacy and for developing further
+cryptographic products for the Dutch Go&#173;vern&#173;ment and the Ministry of Defense.
+It successfully redeveloped the software for <span class="short" aria-label="Philips Usfa BV" data-balloon-pos="up"><a href="../../crypto/philips" class="short" >Philips</a></span>' ill-fated
+<a href="../../crypto/philips/vcard"><span data-balloon-pos="up" aria-label="More about: V-card">V-card</span></a> and re-released it as the
+<a href="../../crypto/foxit/fffe"><span data-balloon-pos="up" aria-label="More about: Fort Fox File Encryptor">Fort Fox File Encryptor</span></a> (<span class="short" aria-label="Fort Fox File Encryptor" data-balloon-pos="up"><a href="../../crypto/foxit/fffe" class="short" >FFFE</a></span>),
+which remained in use until 2012.
+<br />
+<br />
+For the next 20 years, Fox Crypto developed and marketed a
+<a href="../foxit/index.htm#prod"><span data-balloon-pos="up" aria-label="More about: series of cryptographic products">series of cryptographic products</span></a>,
+including <span class="short" aria-label="Fort Fox File Encryptor" data-balloon-pos="up"><a href="../../crypto/foxit/fffe" class="short" >FFFE</a></span>, the Fort Fox Data Diode (FFDD) and
+the <a href="../../crypto/foxit/redfox"><span data-balloon-pos="up" aria-label="More about: Red Fox cryptographic module">Red Fox cryptographic module</span></a>.
+It also started with the development of an Electronic Key Management System
+(EKMS) for the Dutch Ministry of Defense.
+In 2015, parent company <span class="short" aria-label="Fox-IT" data-balloon-pos="up"><a href="../foxit" class="short" >Fox-IT</a></span> was acquired by the British NCC Group.
+This raised security concerns with the Dutch Government, especially after
+Britain left the European Union in 2020 (Brexit), and extra measures had to
+be take to guarantee the crypto sovereignty of the Dutch State.
+In 2024, Fox Crypto became wholly European again, when it was acquired by
+the Swedish CR Group Nordic AB. As part of the deal, the name was changed
+to <b>Sentyron</b> in 2025.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=adr></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Address</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+<li><font color=#F52E00><b>Sentyron</b></font><br />
+Olaf Palmestraat 6<br />
+2616 Delft<br />
+Netherlands<br />
+<br />
+Phone: +31 (0)15 284 79 99<br />
+Website: <a href="https://www.sentyron.com" target="_blank">sentyron.com</a>
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../foxit">Fox-IT, the previous parent</a><br />
+            <li><a href="../../crypto/philips">Philips Usfa, the precessor</a><br />
+            <li><a href="../../crypto/tutus">Tutus Data AB, sister company</a><br />
+            <li><a href="../index.htm">Index of manufacturers</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Friday 19 September 2025. Last changed: Tuesday, 21 October 2025 - 09:23 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../index.htm"><img src=../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

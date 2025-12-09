@@ -1,0 +1,1911 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>Telephones</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../index.htm"><img src="../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but sub first sel" onClick="location.href='../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of telephone equipment" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../phone/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../phone/glossary.htm';" >Glossary</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Telephone tapping and eavesdropping" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../phone/tapping.htm';" >Tapping</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../index.htm"><img src="../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Telephones</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Historical telephone sets</b>
+<br />
+<br />
+This section of the website is about historical telephones
+that are mentioned or featured else&shy;where on this website. These pages are
+by no means intended to give a complete overview of historical telephone
+sets, but act merely as a placeholder for background information on them.
+For telephones with cryptographic features, please check our
+<a href="../crypto/phone.htm"><span data-balloon-pos="up" aria-label="More about: page about crypto-telephones">page about crypto-telephones</span></a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Telephone sets featured on this website
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../crypto/phone.htm>
+<div  data-balloon-pos="up" aria-label="Telephone sets with cryptographic features">          <img src="../crypto/uk/secraphone/img/302261/111/thumbnail.jpg"
+           alt="Telephone sets with cryptographic features"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../crypto/phone.htm>Crypto<br />phones</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=ericsson/1951/index.htm>
+<div  data-balloon-pos="up" aria-label="Ericsson Model 1951">          <img src="ericsson/1951/img/302593/002/thumbnail.jpg"
+           alt="Ericsson Model 1951"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=ericsson/1951/index.htm>Ericsson<br />1951</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=heemaf/1955/index.htm>
+<div  data-balloon-pos="up" aria-label="Heemaf Model 1955">          <img src="heemaf/1955/img/302601/000/thumbnail.jpg"
+           alt="Heemaf Model 1955"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=heemaf/1955/index.htm>Heemaf<br />1955</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=autovon/index.htm>
+<div  data-balloon-pos="up" aria-label="US military Autovon switched telephone network">          <img src="autovon/img/301648/003/thumbnail.jpg"
+           alt="US military Autovon switched telephone network"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=autovon/index.htm>Autovon<br />ISVN</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=gpo/300/index.htm>
+<div  data-balloon-pos="up" aria-label="GPO series 300 telephones">          <img src="gpo/300/img/302938/004/thumbnail.jpg"
+           alt="GPO series 300 telephones"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=gpo/300/index.htm>GPO 300 series</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=gpo/700/index.htm>
+<div  data-balloon-pos="up" aria-label="GPO series 700 telephones">          <img src="gpo/700/img/303644/001/thumbnail.jpg"
+           alt="GPO series 700 telephones"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=gpo/700/index.htm>GPO 700 series</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=t65/index.htm>
+<div  data-balloon-pos="up" aria-label="Dutch PTT standard telephone set with pulse dialling" data-balloon-length="large">          <img src="t65/img/301906/013/thumbnail.jpg"
+           alt="Dutch PTT standard telephone set with pulse dialling"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=t65/index.htm>PTT<br />T65</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=t65/tdk.htm>
+<div  data-balloon-pos="up" aria-label="Dutch PTT standard T65-TDK with DTMF dialling">          <img src="t65/img/301540/002/thumbnail.jpg"
+           alt="Dutch PTT standard T65-TDK with DTMF dialling"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=t65/tdk.htm>PTT<br />T65-TDK</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=kf4_2/index.htm>
+<div  data-balloon-pos="up" aria-label="Krypto-Fernsprecher 4-2">          <img src="kf4_2/img/303379/009/thumbnail.jpg"
+           alt="Krypto-Fernsprecher 4-2"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=kf4_2/index.htm>NATO<br />KF 4-2</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=drsn>
+<div  data-balloon-pos="up" aria-label="Defense Red Switch Network">          <img src="../crypto/raytheon/ist2/img/ist2_thumb.jpg"
+           alt="Defense Red Switch Network"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=drsn>DRSN<br />IST-2</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=cisco/7962g/index.htm>
+<div  data-balloon-pos="up" aria-label="Cisco 7962G Unified IP Phone">          <img src="cisco/7962g/img/cisco_7962g_thumb.jpg"
+           alt="Cisco 7962G Unified IP Phone"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=cisco/7962g/index.htm>Cisco<br />7962G</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=cis/dtd7962/index.htm>
+<div  data-balloon-pos="up" aria-label="CIS Secure DTD-7962-T2 TEMPEST version of Cisco 7962G Unified IP Phone" data-balloon-length="large">          <img src="cis/dtd7962/img/303331/000/thumbnail.jpg"
+           alt="CIS Secure DTD-7962-T2 TEMPEST version of Cisco 7962G Unified IP Phone"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=cis/dtd7962/index.htm>CIS<br />DTD-7962</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../crypto/gsmk/ip19/index.htm>
+<div  data-balloon-pos="up" aria-label="GSMK CryptoPhone IP-19">          <img src="../crypto/gsmk/ip19/img/303529/002/thumbnail.jpg"
+           alt="GSMK CryptoPhone IP-19"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../crypto/gsmk/ip19/index.htm>GSMK<br/>IP-19</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <a name=mobile></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Mobile phones
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=atf/castor.htm>
+<div  data-balloon-pos="up" aria-label="Dutch variant of the AEG 4015C, for use on the Dutch ATF-1 network" data-balloon-length="large">          <img src="atf/img/303113/003/thumbnail.jpg"
+           alt="Dutch variant of the AEG 4015C, for use on the Dutch ATF-1 network"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=atf/castor.htm>Castor</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=atf/pollux.htm>
+<div  data-balloon-pos="up" aria-label="Dutch variant of the Motorola Pulsar II VHF, for use on the Dutch ATF-1 network" data-balloon-length="large">          <img src="atf/img/303112/003/thumbnail.jpg"
+           alt="Dutch variant of the Motorola Pulsar II VHF, for use on the Dutch ATF-1 network"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=atf/pollux.htm>Pollux</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=atf/becker.htm>
+<div  data-balloon-pos="up" aria-label="Hacked German Becker car phone (Telefunken)">          <img src="atf/img/303126/005/thumbnail.jpg"
+           alt="Hacked German Becker car phone (Telefunken)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=atf/becker.htm>Becker</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=atf/carvox2451.htm>
+<div  data-balloon-pos="up" aria-label="CARVOX 2451 - used for phone phreaking">          <img src="atf/img/303108/003/thumbnail.jpg"
+           alt="CARVOX 2451 - used for phone phreaking"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=atf/carvox2451.htm>CV 2451</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=nokia/rd59/index.htm>
+<div  data-balloon-pos="up" aria-label="Nokia Mobira RD-59 (CARVOX 2453)">          <img src="nokia/rd59/img/302799/000/thumbnail.jpg"
+           alt="Nokia Mobira RD-59 (CARVOX 2453)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=nokia/rd59/index.htm>RD-59</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=nokia/rd72/index.htm>
+<div  data-balloon-pos="up" aria-label="Nokia RD-72 used as emergency backup phone">          <img src="nokia/rd72/img/303568/000/thumbnail.jpg"
+           alt="Nokia RD-72 used as emergency backup phone"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=nokia/rd72/index.htm>RD-72</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <a name=rel></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Related subjects
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../crypto/uk/secraphone/6ac3.htm>
+<div  data-balloon-pos="up" aria-label="Frequency Changer No. 6AC/3 - British wartime telephone scrambler as used by Churchill" data-balloon-length="large">          <img src="../crypto/uk/secraphone/img/303626/040/thumbnail.jpg"
+           alt="Frequency Changer No. 6AC/3 - British wartime telephone scrambler as used by Churchill"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../crypto/uk/secraphone/6ac3.htm>6AC/3</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=tapping.htm>
+<div  data-balloon-pos="up" aria-label="Wire tapping and wirless tapping">          <img src="atr/img/303104/021/thumbnail.jpg"
+           alt="Wire tapping and wirless tapping"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=tapping.htm>Tapping</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=atf/cot/index.htm>
+<div  data-balloon-pos="up" aria-label="Home-made ATF-1 carphone phreaking unit">          <img src="atf/cot/img/303345/000/thumbnail.jpg"
+           alt="Home-made ATF-1 carphone phreaking unit"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=atf/cot/index.htm>ATF-1</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=quorum/faxpediter/index.htm>
+<div  data-balloon-pos="up" aria-label="Pocket organiser with built-in fax machine (1994)">          <img src="quorum/faxpediter/img/303340/006/thumbnail.jpg"
+           alt="Pocket organiser with built-in fax machine (1994)"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=quorum/faxpediter/index.htm>Faxpediter</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../ref/smartcard/index.htm#sim>
+<div  data-balloon-pos="up" aria-label="Subscriber Identity Module">          <img src="../ref/smartcard/img/303409/002/thumbnail.jpg"
+           alt="Subscriber Identity Module"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../ref/smartcard/index.htm#sim>SIM</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Related subjects</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="atf/index.htm#atf2">NMT-450</a><br />
+            <li><a href="atf/index.htm#atf3">NMT-900</a><br />
+            <li><a href="gsm">GSM</a><br />
+            <li><a href="atf/index.htm">Mobile telephony in the Netherlands</a><br />
+            <li><a href="tapping.htm">Telephone tapping</a><br />
+            <li><a href="dtmf">DTMF dialling</a><br />
+          </ul>
+        </font></td></tr></table>
+        <a name=mob></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Mobile public networks
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:40px;">0G</div>Forerunner, analogue radio telephone, manually patched            <li><div style="display:inline-block; width:40px;">1G</div>First generation, analogue, Cellnet,  <a href="atf/index.htm#atf1">ATF-1</a>, <a href="atf/index.htm#atf2">ATF-2</a>, <a href="atf/index.htm#atf3">ATF-3</a>, etc.            <li><div style="display:inline-block; width:40px;">2G</div><span class="short" aria-label="Global System for Mobile communication" data-balloon-pos="up"><a href="gsm" class="short" >GSM</a></span>, D-AMPS            <li><div style="display:inline-block; width:40px;">3G</div><span class="short" aria-label="Universal Mobile Telecommunications System" data-balloon-pos="up"><a href="https://en.wikipedia.org/wiki/UMTS" class="short" target="_blank" >UMTS</a></span>            <li><div style="display:inline-block; width:40px;">4G</div><span class="short" aria-label="Long Term Evolution" data-balloon-pos="up"><a href="https://en.wikipedia.org/wiki/LTE_Advanced" class="short" target="_blank" >LTE Advanced</a></span>            <li><div style="display:inline-block; width:40px;">5G</div><span class="short" aria-label="New Radio (5G)" data-balloon-pos="up"><a href="https://en.wikipedia.org/wiki/5G" class="short" target="_blank" >NR</a></span>          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=dial></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Dialling standards</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+<li><font color=#F52E00>Pulse</font><br />
+Pulse signalling is the oldest standard for dialling a
+number over a subscriber line on an automatically switched exchange. The telephones have a rotary dial that
+&ndash; when operated &ndash; interrupts the line current at 10 pulses per second.
+For this reason it is also known as a <b>loop disconnect</b> system <a href="#ref_1">[1]</a>.
+In the 1970s and 80's, when button-operated telephone sets became mainstream,
+many of them simulated the loop disconnect pulses.
+            <p />
+            <li><a href="dtmf">Tone</a><br />
+In 1963, the Bell System (USA) introduced push-button dialling by means of
+<a href="dtmf">Dual-Tone Multi-Frequency signalling (DTMF)</a>
+under the name <a href="dtmf">Touch-Tone</a> <a href="#ref_2">[2]</a>.
+It allowed faster dialling and was less prone to mistakes.
+In Europe it was known as <a href="dtmf">DTMF</a>
+or <a href="dtmf">MF4</a>, but was not introduced until the 1970s and 80s.
+And even then, many push-button phones still simulated pulse-dialling
+as the exchanges had not yet been converted to <span class="short tooltip-red" data-balloon-pos="up" aria-label="Dual-Tone Multi-Frequency (signalling)">DTMF</span>.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="dtmf">More</a>
+            <p />
+<li><font color=#F52E00>ISDN</font><br />
+ISDN was a set of digital communications standards that could be implemented
+over existing <span class="short" aria-label="Public Switched Telephone Network" data-balloon-pos="up"><a href="glossary.htm#pstn" class="short" >PSTN</a></span> (copper) wiring. The signalling was sent over the
+network as part of one of the digital protocols.
+ISDN was short-lived and was succeeded by ADSL and VoIP.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="glossary.htm#isdn">More</a>
+            <p />
+<li><font color=#F52E00>VoIP</font><br />
+With the arrival of wideband internet, many telecom operators have
+converted their networks to <span class="short tooltip-red" data-balloon-pos="up" aria-label="Internet Protocol">IP</span>-based communications, using the
+<a href="glossary.htm#voip">Voice-over-Internet Protocol (VoIP)</a>.
+With this protocol, signalling
+information is typically sent as out-of-band data, using the
+<a href="glossary.htm#sip">Session Initiation Protocol (SIP)</a>.
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=conn></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Wiring standards</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <a name=conn_pots></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          POTS
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Old analogue telephone lines (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Plain Old Telephone System (or: Plain Old Telephone Service)" data-balloon-length="large">POTS</span>) commonly only need two wires for the
+connection between a telehone set and the telephone line. Power, signalling
+and audio is passed over these two wires. Although there are many different
+designators for these wires, the most common European name for them is
+<b>(A)</b> and <b>(B)</b>. In the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States">US</span>, they were known as Ring <b>(R)</b> or <b>(-)</b>
+and Tip <b>(T)</b> or <b>(+)</b>. Further&shy;more, each country used to assign its own
+colour scheme to the wiring.
+To avoid confusion, we will use the European designators
+<b>(A)</b> and <b>(B)</b> here,
+and colour them <font color=#F52E00><b>red</b></font>
+and <a href="#"><span data-balloon-pos="up" aria-label="Jump to: ..."><b>blue</b></span></a> respectively.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=conn_rj></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Modular jack
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<a href="../ref/conn/rj/index.htm"><span data-balloon-pos="up" aria-label="More about: Modular jacks">Modular jacks</span></a> &mdash; also known as
+<a href="../ref/conn/rj/index.htm"><span data-balloon-pos="up" aria-label="More about: Registered Jack (RJ) connectors">Registered Jack (RJ) connectors</span></a> &mdash;
+are a relative simple yet
+reliable way to connect (analogue) telephone equipment to a telephone line.
+The connector was initially developed in the United States, but has since
+been adopted worldwide. They exist in many forms:
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/RJconn.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+Although there are many variations, the most popular ones are shown above.
+The specified pin-numbering is when looking into the female socket,
+(i.e. not the plug).
+At the centre are the contacts that are used for connection to old analogue
+telephone lines (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Plain Old Telephone System (or: Plain Old Telephone Service)" data-balloon-length="large">POTS</span>), with the official <i>modular</i> designator at the
+bottom. It shows the number of positions (P) and the number of actual
+contacts (C). To avoid confusion, the official designator should be used
+instead of RJ-<i>something</i>.
+At the right is the
+<a href="../ref/conn/rj/index.htm#ethernet"><span data-balloon-pos="up" aria-label="More about: RJ45 or 8P8C ethernet connector">RJ45 or 8P8C ethernet connector</span></a>,
+which is shown here for comparison only.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../ref/conn/rj/index.htm">More about Registered Jack (RJ) connectors</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=conn_us></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          American standards
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In the <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States">US</span>, 6P2C, 6P4C and 6P6C connectors were used for single-line,
+two-line and three-line configurations respectively, as shown in the
+diagram below. The most common wiring is for a single-line, which is
+always connected to the middle two contacts, regardless the connector
+type. The single-line <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States">US</span> standard was adopted by most countries
+in the world, with some exceptions.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/pots_us.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=conn_eu></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          European standards
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In Europe, the situation was much more complicated, as each country
+traditionally had its own type of connector and wall socket. The
+introduction of the <a href="../ref/conn/rj/index.htm"><span data-balloon-pos="up" aria-label="More about: Registered Jack">Registered Jack</span></a>
+did not take place until the mid-1970s,
+when foreign equipment was gradually being allowed on European networks.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/pots_eu.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+Although most countries have meanwhile adopted the American standard &ndash;
+shown on the left &ndash; the UK uses the outermost two contacts of a 6P4C
+connector, whilst Belgium uses the rightmost two contacts. This leads
+to compatibility issues when connecting foreign equipment to a line.
+To avoid confusion, Crypto Museum suggests to wire the wall socket as
+per rightmost diagram.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=conn_rj45></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Crypto Museum standards
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+With analogue lines (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Plain Old Telephone System (or: Plain Old Telephone Service)" data-balloon-length="large">POTS</span>) gradually disappearing and ethernet cabling
+becoming much more common, we have been looking for a simple way to distribute
+old analogue lines throughout the premises, using modern cabling
+standards, such as <span class="short tooltip-red" data-balloon-pos="up" aria-label="Category 3 cable">Cat-3</span>,
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Category 5 cable">Cat-5</span>,
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Unshielded Twisted Pair">UTP</span>
+and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Shielded Twisted Pair">STP</span>,
+and <a href="../ref/conn/rj/index.htm#ethernet"><span data-balloon-pos="up" aria-label="More about: RJ45 jacks">RJ45 jacks</span></a>.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/pots_rj45.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+Above is the wiring scheme we use at Crypto Museum for the connection of up
+to four analogue telephone lines via regular
+<a href="../ref/conn/rj/index.htm#ethernet"><span data-balloon-pos="up" aria-label="More about: ethernet wiring">ethernet wiring</span></a>, taking the
+common twisted-pair wiring order into account. We have created small breakout
+boxes to provide upto 4 analogue lines, some of which we have modified
+by shorting lines 3-5 and 4-6, so that one of the sockets accepts any type
+of 2-wire equipment, regardless the connection variant (American, European,
+British or Belgian).
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Handset
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the wiring for a standard handset as it is used on most modern
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Plain Old Telephone System (or: Plain Old Telephone Service)" data-balloon-length="large">POTS</span> telephone sets. It uses the smaller RJ9 (4P4C) connector that is in
+most cases wired with a coiled cable.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/pots_handset.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Older standards</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Netherlands
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the pinout of a Dutch analogue subscriber line, as endorsed
+by the (then) state-owned provider <span class="short" aria-label="Post, Telegraph and Telephone" data-balloon-pos="up"><a href="../manuf/ptt/index.htm" class="short" >PTT</a></span>. This is the pinout when looking
+into the wall socket, which is the same as looking at the screw terminals
+inside the instrument's plug (shown here). When no external bell is connected,
+a wire strap should be placed in the wall socket, between the B and EB contacts.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:60px;">a</div>Subscriber line (A) <font color=#F52E00>red</font>            <li><div style="display:inline-block; width:60px;">b</div>Subscriber line (B) <a href="#">blue</a>            <li><div style="display:inline-block; width:60px;">EB</div>External bell  (normally strapped to b) <sup><font color="#FF8800">1</font></sup>            <li><div style="display:inline-block; width:60px;">GND</div>Ground          </ul>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="svg/pots_nl.svg"
+               style="
+               max-width: 618px;
+              "
+               align="left"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+The (EB) terminal is normally strapped to (b) terminal inside the
+  wall socket. It is removed when an external bell set is connected to
+  these terminals. If the phone doesn't ring, check whether
+  this strap is present.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+            <li><a href="https://en.wikipedia.org/wiki/Pulse_dialling" target="_blank">Wikipedia, <i>Pulse dialling</i></a><br />
+Retrieved July 2021.
+            <p />
+            <a name="ref_2"></a>
+            <li><a href="https://en.wikipedia.org/wiki/Dial-tone_multi-frequency_signalling" target="_blank">Wikipedia, <i>Dial-tone multi-frequency signalling</i></a><br />
+Retrieved July 2021.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="glossary.htm">Glossary of telephone expressions</a><br />
+            <li><a href="../ref/conn/rj/index.htm">Registered Jack (RJ) connectors</a><br />
+            <li><a href="../crypto/phone.htm">Crypto telephones</a><br />
+            <li><a href="../telex/index.htm">Telex systems</a><br />
+            <li><a href="../index.htm">Main index</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Thursday 30 March 2017. Last changed: Wednesday, 18 September 2024 - 07:06 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../index.htm"><img src=../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

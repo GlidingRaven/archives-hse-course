@@ -1,0 +1,2123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>Cryptauphyl</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="Keywords" content="Cryptauphyl, CryptoPhil, CryptoPhyl, Cryptofil, Cryptofile, Cryptaufil">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of cryptographic devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Frequently used expressions and abbreviations" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/glossary.htm';" >Glossary</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="The ENIGMA cipher machine" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/enigma/index.htm';" >Enigma</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Machines from Boris Hagelin and/or Crypto AG" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/hagelin/index.htm';" >Hagelin</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Soviet rotor-based cipher machine M-125, codenamed Fialka" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/fialka/index.htm';" >Fialka</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Rotor-based cipher machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/rotor.htm';" >Rotor</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Pin-and-lug cipher machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/pinwheel.htm';" >Pin-wheel</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tapeless Rotorless On-Line cipher machines" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../../crypto/trol/index.htm';" >TROL</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Secure speech devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/voice.htm';" >Voice</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Telegraphy and computer data encryption" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../../crypto/data.htm';" >Data</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Manual cipher systems" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/manual.htm';" >Hand</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="The unbreakable One-Time Pad" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/otp/index.htm';" >OTP</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Electronic Message Units" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/emu.htm';" >EMU</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Hardware Security Modules" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/hsm.htm';" >HSM</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines based on One-Time Tape encryption" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/ott.htm';" >Mixers</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Secure telephones and privacy sets" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/phone.htm';" >Phones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Bulk encryptors and IP-based networks" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/ip.htm';" >Bulk</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Key transfer devices" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/fill.htm';" >FILL</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Codebooks, procedures and key distribution material" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/codebook/index.htm';" >Codebooks</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Public and secret algorithms used in cryptography" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/algo/index.htm';" >Algorithms</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cryptographic Processors" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../crypto/chips.htm';" >Chips</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cryptanalytic Machines" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../cam/index.htm';" >Cryptanalysis</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../crypto/toys.htm';" >Toys</div>
+          <div class="but sub" onClick="location.href='../../../crypto/ww2.htm';" >World War II</div>
+          <div class="spacer"></div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Countries
+          </div>
+          <div class="hidden">
+            <div class="but sub" onClick="location.href='../../../crypto/cs.htm';" >Czechoslovakia</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former East-Germany" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/ddr/index.htm';" >DDR</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/france/index.htm';" >France</div>
+            <div class="but sub" onClick="location.href='../../../crypto/germany/index.htm';" >Germany</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="The Netherlands, Holland" data-balloon-length="medium">
+            <div class="but sel sub" onClick="location.href='../../../crypto/nl/index.htm';" >Netherlands</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/ru/index.htm';" >Russia</div>
+            <div class="but sub" onClick="location.href='../../../crypto/swiss/index.htm';" >Switzerland</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United Kingdom" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/uk/index.htm';" >UK</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="United States of America" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/usa/index.htm';" >USA</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Soviet Union" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/ussr/index.htm';" >USSR</div>
+</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Former Yugoslav republic" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/yugo/index.htm';" >Yugoslavia</div>
+</div>
+          </div>
+          </div>
+          <div class="submenu">
+          <div class="but sub">
+            <img src="../../../img/down.png" style="float: right; margin-right: 7px; margin-top: 7px;" />
+            <img src="../../../img/down.png" style="float: left; margin-left: 7px; margin-top: 7px;" />
+            Manufacturers
+          </div>
+          <div class="hidden">
+            <div class="but sub" onClick="location.href='../../../crypto/ant/index.htm';" >ANT</div>
+            <div class="but sub" onClick="location.href='../../../crypto/aristo/index.htm';" >Aristo</div>
+            <div class="but sub" onClick="location.href='../../../crypto/ascom/index.htm';" >Ascom</div>
+            <div class="but sub" onClick="location.href='../../../crypto/att/index.htm';" >AT&amp;T</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Brown, Boveri and Company" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/bbc/index.htm';" >BBC</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/bosch/index.htm';" >Bosch</div>
+            <div class="but sub" onClick="location.href='../../../crypto/compumatica/index.htm';" >Compumatica</div>
+            <div class="but sub" onClick="location.href='../../../crypto/hagelin/index.htm';" >Crypto AG</div>
+            <div class="but sub" onClick="location.href='../../../crypto/datotek/index.htm';" >Datotek</div>
+            <div class="but sub" onClick="location.href='../../../crypto/foxit/fffe/index.htm';" >Fox-IT</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="General Dynamics" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../manuf/gd/index.htm';" >GD</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../manuf/gemalto/index.htm';" >Gemalto</div>
+            <div class="but sub" onClick="location.href='../../../crypto/gretag/index.htm';" >Gretag</div>
+            <div class="but sub" onClick="location.href='../../../crypto/harris/index.htm';" >Harris</div>
+            <div class="but sub" onClick="location.href='../../../crypto/hell/index.htm';" >HELL</div>
+            <div class="but sub" onClick="location.href='../../../crypto/itt/index.htm';" >ITT</div>
+            <div class="but sub" onClick="location.href='../../../crypto/lorenz/index.htm';" >Lorenz</div>
+            <div class="but sub" onClick="location.href='../../../crypto/lugagne/index.htm';" >Lugagne</div>
+            <div class="but sub" onClick="location.href='../../../crypto/mel/index.htm';" >MEL</div>
+            <div class="but sub" onClick="location.href='../../../crypto/mils/index.htm';" >Mils</div>
+            <div class="but sub" onClick="location.href='../../../crypto/motorola/index.htm';" >Motorola</div>
+            <div class="but sub" onClick="location.href='../../../manuf/mykotronx/index.htm';" >Mykotronx</div>
+            <div class="but sub" onClick="location.href='../../../crypto/nokia/index.htm';" >Nokia</div>
+            <div class="but sub" onClick="location.href='../../../crypto/omi/index.htm';" >OMI</div>
+            <div class="but sub" onClick="location.href='../../../crypto/omnisec/index.htm';" >Omnisec</div>
+            <div class="but sub" onClick="location.href='../../../crypto/philips/index.htm';" >Philips</div>
+            <div class="but sub" onClick="location.href='../../../crypto/ptt/index.htm';" >PTT</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Rohde & Schwarz" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/rs/index.htm';" >R&S</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/racal/index.htm';" >Racal</div>
+            <div class="but sub" onClick="location.href='../../../crypto/randata/index.htm';" >RanData</div>
+            <div class="but sub" onClick="location.href='../../../crypto/raytheon/index.htm';" >Raytheon</div>
+            <div class="but sub" onClick="location.href='../../../crypto/rca/index.htm';" >RCA</div>
+            <div class="but sub" onClick="location.href='../../../manuf/safenet/index.htm';" >Safenet</div>
+            <div class="but sub" onClick="location.href='../../../manuf/secunet/index.htm';" >Secunet</div>
+            <div class="but sub" onClick="location.href='../../../crypto/siemens/index.htm';" >Siemens</div>
+            <div class="but sub" onClick="location.href='../../../crypto/stk/index.htm';" >STK</div>
+            <div class="but sub" onClick="location.href='../../../crypto/tadiran/index.htm';" >Tadiran</div>
+            <div class="but sub" onClick="location.href='../../../crypto/tait/index.htm';" >Tait</div>
+            <div class="but sub" onClick="location.href='../../../manuf/tcc/index.htm';" >TCC</div>
+            <div class="but sub" onClick="location.href='../../../crypto/telefunken/index.htm';" >Telefunken</div>
+            <div class="but sub" onClick="location.href='../../../crypto/telsy/index.htm';" >Telsy</div>
+            <div class="but sub" onClick="location.href='../../../crypto/teltron/index.htm';" >Teltron</div>
+            <div class="but sub" onClick="location.href='../../../crypto/thales/index.htm';" >Thales</div>
+            <div class="but sel sub" onClick="location.href='../../../manuf/tno/index.htm';" >TNO</div>
+            <div class="but sub" onClick="location.href='../../../crypto/transvertex/index.htm';" >Transvertex</div>
+            <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tele Security Timmann" data-balloon-length="medium">
+            <div class="but sub" onClick="location.href='../../../crypto/tst/index.htm';" >TST</div>
+</div>
+            <div class="but sub" onClick="location.href='../../../crypto/tutus/index.htm';" >Tutus Data AB</div>
+            <div class="but sub" onClick="location.href='../../../manuf/ultra/index.htm';" >Ultra Electronics</div>
+            <div class="but sub" onClick="location.href='../../../manuf/utimaco/index.htm';" >Utimaco</div>
+            <div class="but sub" onClick="location.href='../../../manuf/zellweger/index.htm';" >Zellweger</div>
+            <div class="but sub" onClick="location.href='../../../manuf/index.htm';" >OTHER</div>
+          </div>
+          </div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../index.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Netherlands" class="key">NL</div></a><a class="key" href="../../../manuf/tno"><div  data-balloon-pos="up" aria-label="Shortcut to Applied Physics Laboratory (Netherlands)" data-balloon-length="large" class="key">TNO</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Cryptauphyl</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Electronic on-line telex encryptor</b>
+<br />
+<br />
+<b>Cryptauphyl</b> <sup><font color="#FF8800">1</font></sup>
+was an electronic tapeless rotorless cipher machine (<span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span>) <sup><font color="#FF8800">2</font></sup>
+for on-line and off-line encryption and decryption of
+<a href="../../../telex"><span data-balloon-pos="up" aria-label="More about: telegraphy signals (telex)">telegraphy signals (telex)</span></a>,
+developed between 1960 and 1962 by the State Defense Organisation
+of the Applied Physics Laboratory (<span class="short" aria-label="State Defense Organisation - Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >RVO-TNO</a></span>, now: <span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span>) in The Hague (Netherlands) <a href="#ref_1">[1]</a>.
+The first incarnation of the device could be broken by the
+<a href="../../../intel/nbv"><span data-balloon-pos="up" aria-label="More about: Dutch cipher authorithy">Dutch cipher authorithy</span></a> <span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span> (<span class="short" aria-label="Netherlands National Communications Security Agency (NBV)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NLNCSA</a></span>, now part of <span class="short" aria-label="General Intelligence and Security Service (Netherlands)" data-balloon-pos="up"><a href="../../../intel/aivd" class="short" >AIVD</a></span>)
+with no more than 1200 characters of ciphertext <a href="#ref_2">[2]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Cryptauphyl was developed as part of a national and international contest
+under the name <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span>,
+to develop electronic al&#173;ter&#173;na&#173;tives for the ageing
+<a href="../../rotor.htm"><span data-balloon-pos="up" aria-label="More about: ro&#173;tor machines">ro&#173;tor machines</span></a> of the
+previous decades, such as the well-known <a href="../../enigma"><span data-balloon-pos="up" aria-label="More about: Enigma">Enigma</span></a>,
+the <a href="../../pinwheel.htm"><span data-balloon-pos="up" aria-label="More about: Hagelin pin-and-lug machines">Hagelin pin-and-lug machines</span></a> and <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span>'s
+<a href="../../usa/kl7"><span data-balloon-pos="up" aria-label="More about: eight-rotor KL-7">eight-rotor KL-7</span></a>.
+<br />
+<br />
+Cryptauphyl is first described in a
+<a href="files/19601125_RVO_cryptauphyl.pdf"><span data-balloon-pos="up" aria-label="More about: confidential memorandum">confidential memorandum</span></a> of <span class="short" aria-label="State Defense Organisation - Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >RVO-TNO</a></span>,
+which was sub&#173;mit&#173;ted in No&#173;vem&#173;ber 1960 to the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Nationale Verbindingsbeveiligingsraad (National Communications Security Council)" data-balloon-length="large">NVBR</span>, the
+National Communications Security Council. From this, we learn
+that the device has a fully transistorised key generator with traffic flow
+security (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Traffic Flow Security">TFS</span>).
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="No image available. See the CLASSIFIED note below." class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="No image available. See the CLASSIFIED note below." class="tooltip-red">
+            <img src="svg/small_tno.svg"
+             style="
+            "
+             align="left"
+             width="298px"
+             vspace="4"
+             alt="No image available. See the CLASSIFIED note below."
+             border=0
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Strangely, and perhaps erroneously, the description claims that the characters
+generated by the key generator have a Gaussian distribution <a href="#ref_1">[1]</a>. Clearly,
+this cannot be the intention when de&#173;ve&#173;lo&#173;ping a secure cipher machine,
+for which one would expect a uniform distribution.
+This was likely a misinterpretation of the person who wrote the
+<a href="files/19601125_RVO_cryptauphyl.pdf"><span data-balloon-pos="up" aria-label="More about: description">description</span></a>, as the <span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span>
+later reports in a me&#173;mo&#173;ran&#173;dum that Cryptauphyl's frequency distribution
+was within reasonable boundaries <a href="#ref_2">[2]</a>.
+<br />
+<br />
+It is known that Cryptauphyl was a self-synchronising cipher machine,
+also known as <i>auto&#173;clave</i>, based on linear feedback shift registers
+(<span class="short tooltip-red" data-balloon-pos="up" aria-label="Linear Feedback Shift Register">LFSR</span>) <a href="#ref_3">[3]</a>. An autoclave allows late-entry com&#173;mu&#173;ni&#173;ca&#173;tion without additional
+synchronisation, but is often prone to error propagation in case of
+inter&#173;fe&#173;rence. Furthermore, the use of <span class="short tooltip-red" data-balloon-pos="up" aria-label="Linear Feedback Shift Register">LFSR</span>s makes the cipher susceptible
+to codebreaking.
+This was known by the <span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span> however, and adequate proposals for the
+addition of non-linear operations were suggested, both by the <span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span> and by
+<a href="../../../people/oberman/rmm.htm"><span data-balloon-pos="up" aria-label="More about: Professor Oberman">Professor Oberman</span></a> of Delft University.
+It can be assu&#173;med that such nonlinear improvements were implemented in a
+later incarnation of Cryptauphyl.
+<br />
+<br />
+From the minutes of the <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span>-commission of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Nationale Verbindingsbeveiligingsraad (National Communications Security Council)" data-balloon-length="large">NVBR</span>, it seems likely that
+four different pro&#173;to&#173;types were made by <span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span> over the course of 1961 and 1962,
+each successive one with further im&#173;pro&#173;ve&#173;ments.
+It is currently unknown whe&#173;ther the machine was ever produced in any reasonable
+quantity, but for several reasons this seems very unlikely:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>Due to a contract between <span class="short" aria-label="Philips Usfa" data-balloon-pos="up"><a href="../../philips" class="short" >Philips</a></span> and the Dutch State, <sup><font color="#FF8800">3</font></sup> series production would only have been possible at <span class="short" aria-label="Philips Usfa" data-balloon-pos="up"><a href="../../philips" class="short" >Philips</a></span> at the time. No such production is known.            <li>The Dutch Government chose <a href="../../philips/trol">Ecolex V</a>, the <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span> design from <span class="short" aria-label="Philips Usfa" data-balloon-pos="up"><a href="../../philips" class="short" >Philips</a></span> (rather than Cryptauphyl), for submission to <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span>'s <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span>-evaluation in July 1962.            <li><span class="short" aria-label="State Defense Organisation - Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >RVO-TNO</a></span> withdrew Cryptauphyl from <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span>'s <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span>-evaluation in january 1962 <a href="#ref_10">[10]</a>.            <li>Cryptauphyl-inventor <b>Rudolf Slegtenhorst</b> left <span class="short" aria-label="State Defense Organisation - Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >RVO-TNO</a></span> in 1963 to become director at the Reactor Institute of Delft University <a href="#ref_11">[11]</a>.            <li>None of the mandatory documents for appro&#173;val, commissioning and decommissioning, exist in the archives of the <span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span>. Even for domestic or diplomatic governmental traffic, approval of the <span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span> was (and is) mandatory.          </ul>
+</font></td></tr></table>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li style="margin-bottom: 6px;">
+Cryptauphyl is an acronym for
+  <u>Crypt</u>ographic <u>Au</u>tomatic <u>Phy</u>sics <u>L</u>aboratory.
+  Also written as <b>CryptauPhyl</b> and &ndash; erroneously &ndash; as <b>Cryptophyl</b>,
+  <b>Cryptophil</b> or <b>Cryptofiel</b>.
+          </li>
+          <li style="margin-bottom: 6px;">
+Not to be confused with other machines that were developed for <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span>'s
+  <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span> evaluation, such as the <a href="../../philips/trol"><span data-balloon-pos="up" aria-label="More about: Philips Ecolex V">Philips Ecolex V</span></a>, the British
+  <a href="../../uk/bid610"><span data-balloon-pos="up" aria-label="More about: ALVIS (BID/610)">ALVIS (BID/610)</span></a>, the <a href="../../philips/tarolex"><span data-balloon-pos="up" aria-label="More about: Philips Tarolex">Philips Tarolex</span></a>,
+  the <a href="../../philips/ec10"><span data-balloon-pos="up" aria-label="More about: Philips Ecolex X">Philips Ecolex X</span></a>
+  and the <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span> designs from foreign manufacturers.
+          </li>
+          <li style="margin-bottom: 6px;">
+Due to a contract between <span class="short tooltip-red" data-balloon-pos="up" aria-label="State Company for Post, Telephone and Telegraph">PTT</span> (acting on behalve of the Dutch State) and <span class="short" aria-label="Philips Usfa" data-balloon-pos="up"><a href="../../philips" class="short" >Philips</a></span>,
+  signed in September 1957, production of cipher machines had to be given to
+  <span class="short" aria-label="Philips Usfa" data-balloon-pos="up"><a href="../../philips" class="short" >Philips</a></span>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <div style="background-color: #EEEEEE; font-size: 8pt; padding: 12px; color: #777777; overflow: auto;">
+<font color=#F52E00>CLASSIFIED &mdash;</font>
+At present we are unable to show a picture of Cryptauphyl, as its
+developer &ndash; <span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span> &ndash; has repeatedly refused to release information
+about this device, stating that it is still <i><font color=#F52E00>state secret</font></i> (after 60+ years),
+claiming that it was in use until 1992. This seems very unlikely however,
+as there are no approval documents in the archives of the Dutch cipher authority
+<span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span> (<span class="short" aria-label="Netherlands National Communications Security Agency (NBV)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NLNCSA</a></span>). It is also known that the final design of a <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span> system
+was <u>not</u> <span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span>'s Cryptauphyl,
+but rather the <span class="short" aria-label="Philips Usfa" data-balloon-pos="up"><a href="../../philips" class="short" >Philips</a></span> <a href="../../philips/trol"><span data-balloon-pos="up" aria-label="More about: Ecolex V">Ecolex V</span></a> &mdash; with input from
+<a href="../../../people/oberman/rmm.htm"><span data-balloon-pos="up" aria-label="More about: Oberman">Oberman</span></a> & Snijders &mdash;
+which was crypto&#173;gra&#173;phi&#173;cally incompatible with the <span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span> design.
+The <a href="../../philips/trol"><span data-balloon-pos="up" aria-label="More about: Ecolex V">Ecolex V</span></a> later evolved into the <a href="../../philips/tarolex"><span data-balloon-pos="up" aria-label="More about: Philips Tarolex">Philips Tarolex</span></a>
+and finally the <a href="../../philips/ec10"><span data-balloon-pos="up" aria-label="More about: Philips Ecolex X">Philips Ecolex X</span></a>.
+Since detailed technical descriptions of the latter two systems exist in the public domain,
+including on this web&#173;site,
+the secrecy surrounding Cryptauphyl &ndash; which is of 1961 vintage &ndash; does not hold.
+        </div>
+        <div class="clear_float"></div>
+<div style="height: 20px;"></div>        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <table width=100% border=0 cellspacing=0 cellpadding=0>
+            <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+            <tr>
+            <td align="left" valign="center" width=100%>
+            <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+            Advantages
+            </font>
+            </td>
+            </tr>
+            <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+            <tr><td height=4></td></tr>
+          </table>
+<ul>
+<li>Self-synchronising (autoclave)</li>
+<li>Late-entry synchronisation</li>
+<li>Traffic Flow Security (TFS)</li>
+</ul>
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="../../../img/blank.gif"
+             style="
+            "
+             align="left"
+             width="1px"
+             vspace="4"
+             border=0
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <table width=100% border=0 cellspacing=0 cellpadding=0>
+            <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+            <tr>
+            <td align="left" valign="center" width=100%>
+            <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+            Disadvantages
+            </font>
+            </td>
+            </tr>
+            <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+            <tr><td height=4></td></tr>
+          </table>
+<ul>
+<li>Weak encryption algorithm</li>
+<li>Prone to error propagation</li>
+<li>Recognisable ciphertext format</li>
+<li>Low data rate</li>
+</ul>
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=hist></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>History</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <table width=100% border=0 cellspacing=0 cellpadding=0>
+            <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+            <tr>
+            <td align="left" valign="center" width=100%>
+            <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+            Post-WWII developments
+            </font>
+            </td>
+            </tr>
+            <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+            <tr><td height=4></td></tr>
+          </table>
+In the period following <a href="../../glossary.htm#ww2"><span data-balloon-pos="up" aria-label="More about: World War II">World War II</span></a>, the
+Dutch Government and the Royal Netherlands Army used a variety of cipher machines
+for protecting confidential communications, including the
+<a href="../../enigma/g"><span data-balloon-pos="up" aria-label="More about: German Enigma Model G31">German Enigma Model G31</span></a>,
+the <a href="../../hagelin/bc38"><span data-balloon-pos="up" aria-label="More about: Hagelin BC-38">Hagelin BC-38</span></a> and <a href="../../hagelin/c446"><span data-balloon-pos="up" aria-label="More about: C-446">C-446</span></a>, and several
+hand methods. But as these sys&#173;tems were known to be weak, the Dutch Government asked
+the <a href="../../../manuf/ptt/neher.htm"><span data-balloon-pos="up" aria-label="More about: Dr. Neher Lab">Dr. Neher Lab</span></a> &mdash; the national laboratory of the
+<a href="../../../manuf/ptt"><span data-balloon-pos="up" aria-label="More about: Dutch Post Office">Dutch Post Office</span></a> (<span class="short tooltip-red" data-balloon-pos="up" aria-label="State Company for Post, Telephone and Telegraph">PTT</span>) &mdash; to develop a secure system for
+diplomatic traffic.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The <a href="../../../manuf/ptt/neher.htm"><span data-balloon-pos="up" aria-label="More about: Neher Lab">Neher Lab</span></a>, subsequenty produced a series of
+<a href="../../ott.htm"><span data-balloon-pos="up" aria-label="More about: one-time-tape machines (mixers)">one-time-tape machines (mixers)</span></a>, starting in 1946 with the relay-based
+<a href="../../ptt/colex"><span data-balloon-pos="up" aria-label="More about: Colex">Colex</span></a>, developed by <a href="../../../people/oberman/rmm.htm"><span data-balloon-pos="up" aria-label="More about: Dr. Roelof Oberman">Dr. Roelof Oberman</span></a>
+and his colleague Anton Snijders. The ma&#173;chine was so successful that it was
+succeeded in 1950 by the <a href="../../philips/ec1"><span data-balloon-pos="up" aria-label="More about: valve-based Ecolex I">valve-based Ecolex I</span></a> and in 1955 by the
+<a href="../../philips/ec2"><span data-balloon-pos="up" aria-label="More about: transistorised Ecolex II">transistorised Ecolex II</span></a>, both of which were manufactured
+at <a href="../../philips"><span data-balloon-pos="up" aria-label="More about: Philips Usfa">Philips Usfa</span></a>. When correctly implemented and used,
+<a href="../../ott.htm"><span data-balloon-pos="up" aria-label="More about: one-time tape machines">one-time tape machines</span></a> (<span class="short" aria-label="One-Time Tape cipher machine (mixer)" data-balloon-pos="up"><a href="../../ott.htm" class="short" >OTT</a></span>) are unbreakable.
+<br />
+<br />
+In 1957, <span class="short" aria-label="Philips Usfa" data-balloon-pos="up"><a href="../../philips" class="short" >Philips</a></span> took over development from <span class="short tooltip-red" data-balloon-pos="up" aria-label="State Company for Post, Telephone and Telegraph">PTT</span>, after which <span class="short tooltip-red" data-balloon-pos="up" aria-label="../../../people/oberman/rmm.htm">Oberman</span> and Snijders
+left <span class="short tooltip-red" data-balloon-pos="up" aria-label="State Company for Post, Telephone and Telegraph">PTT</span>.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../philips/ec2">            <div style="position: relative;" data-balloon-pos="up" aria-label="Philips Ecolex-II with Siemens T-send-77b on top">
+<a href="../../philips/ec2">            <div style="position: relative;" data-balloon-pos="up" aria-label="Philips Ecolex-II with Siemens T-send-77b on top">
+            <img src="../../philips/ec2/img/302833/069/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Philips Ecolex-II with Siemens T-send-77b on top"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Despite their advantage as being unbreakable, <span class="short" aria-label="One-Time Tape cipher machine (mixer)" data-balloon-pos="up"><a href="../../ott.htm" class="short" >OTT</a></span> systems also have several
+disadvantages.
+The key needed for en&#173;cryp&#173;ti&#173;on of a message, must be at least as long as the
+message itself, and can only be used once. Consequently, large quantities of
+key tapes had to be distributed well in ad&#173;van&#173;ce of sending a message. In practice,
+the distribution of the bulky key tapes was a logistical nightmare,
+which was undesired in times of crisis. To counter this, <b>self-permuting</b>
+sys&#173;tems were promoted, in which the (random) key tape is replaced
+by a so-called <b>key generator</b> &mdash; an elec&#173;tro&#173;nic system that produces a long
+pseudo-random sequence of uniformly distributed numbers, seeded by a
+re&#173;la&#173;ti&#173;vely short initial num&#173;ber of fixed length, which is known as the <i>secret key</i>.
+          <br />
+          <br />
+          <table width=100% border=0 cellspacing=0 cellpadding=0>
+            <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+            <tr>
+            <td align="left" valign="center" width=100%>
+            <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+            Individual TROL developments
+            </font>
+            </td>
+            </tr>
+            <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+            <tr><td height=4></td></tr>
+          </table>
+In those days, self-permuting cipher machines were also known as
+<b>Tapeless Rotorless On-Line (TROL)</b>, referring to the departure from the previous
+ge&#173;ne&#173;ra&#173;tion of <a href="../../rotor.htm"><span data-balloon-pos="up" aria-label="More about: rotor-based machines">rotor-based machines</span></a>
+like the <a href="../../enigma"><span data-balloon-pos="up" aria-label="More about: Enigma">Enigma</span></a>,
+that were only suitable for off-line traffic and were cumbersome in operation.
+In the late-1950s, the Dutch Government expressed an interest in a <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span>-based
+cipher system, after which several parties began developing a potential candidate.
+<span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span> systems were developed in&#173;de&#173;pen&#173;dent&#173;ly by <span class="short" aria-label="State Defense Organisation - Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >RVO-TNO</a></span>,
+<a href="../../philips/usfa"><span data-balloon-pos="up" aria-label="More about: Philips Usfa">Philips Usfa</span></a> and two people from Delft University:
+<a href="../../../people/oberman/rmm.htm"><span data-balloon-pos="up" aria-label="More about: Professor Roelof Oberman">Professor Roelof Oberman</span></a> and Anton Snijders.
+At this point, <span class="short" aria-label="Philips Usfa" data-balloon-pos="up"><a href="../../philips" class="short" >Philips</a></span> had already taken over development from <span class="short tooltip-red" data-balloon-pos="up" aria-label="State Company for Post, Telephone and Telegraph">PTT</span>,
+and <span class="short tooltip-red" data-balloon-pos="up" aria-label="../../../people/oberman/rmm.htm">Oberman</span> and Snijders had left <span class="short tooltip-red" data-balloon-pos="up" aria-label="State Company for Post, Telephone and Telegraph">PTT</span> to persue a career at Delft University.
+Cryp&#173;tau&#173;phyl was <span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span>'s candidate, for which <a href="#pat"><span data-balloon-pos="up" aria-label="Jump to: two patents">two patents</span></a>
+were filed, listing <b>Rudolf Slegtenhorst</b> as the inventor <a href="#pat"><span data-balloon-pos="up" aria-label="Jump to: [I...X]">[I...X]</span></a>.
+<br />
+<br />
+All par&#173;ties submitted their design to the <span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span>, but from an <span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span>
+memorandum of 31 May 1961, it be&#173;comes clear that
+none of the designs were cryptographically strong enough <a href="#ref_2">[2]</a>.
+The Oberman-Snijders design could be broken with 15,000 characters of
+ciphertext, whilst just 1200 characters were needed to break <span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span>'s
+Cryptauphyl <a href="#ref_2">[2]</a>. Furthermore, Cryptauphyl appeared to be prone to error
+propagation, due to the fact that it was essentially an autoclave.
+The Philips design was no better, as one text (with a weak chosen key) could
+be broken with just 154 characters of cipher&#173;text, whilst a second one
+(with a stronger key) gave in after no more than 3000 cha&#173;racters.
+The <span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span> concluded that the Oberman/Snijders design could easily be improved
+by adding extra non-linearity, for which  both Oberman & Snijders
+and the <span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span> developed an appropriate solution.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <table width=100% border=0 cellspacing=0 cellpadding=0>
+            <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+            <tr>
+            <td align="left" valign="center" width=100%>
+            <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+            The TROL-commission
+            </font>
+            </td>
+            </tr>
+            <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+            <tr><td height=4></td></tr>
+          </table>
+Similar initiatives for the development of <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span> equipment had meanwhile been
+launched in the <span class="short" aria-label="United States of America (USA)" data-balloon-pos="up"><a href="../../usa" class="short" >US</a></span>, <span class="short" aria-label="United Kingdom (Great Britain)" data-balloon-pos="up"><a href="../../uk" class="short" >UK</a></span>, <a href="../../germany"><span data-balloon-pos="up" aria-label="More about: Germany">Germany</span></a> and
+<a href="../../france"><span data-balloon-pos="up" aria-label="More about: France">France</span></a>, all of which were potential candidates
+for the forthcoming <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span> evaluation '<span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span>'. If the Netherlands wanted to
+participate in the evaluation, the individual efforts somehow had to be combined,
+as the deadline was nearing. In order to speed things up, a spe&#173;cial
+<span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span>-commission was founded under super&#173;vision of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Nationale Verbindingsbeveiligingsraad (National Communications Security Council)" data-balloon-length="large">NVBR</span>.
+The first meeting of this com&#173;mis&#173;sion took place on 1 June 1961 at the
+Ministry of Foreign Affairs in The Hague <a href="#ref_3">[3]</a>.
+<br />
+<br />
+Present at the meeting were representatives of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Nationale Verbindingsbeveiligingsraad (National Communications Security Council)" data-balloon-length="large">NVBR</span>,
+its executive organ <span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span>, the state-owned laboratory <span class="short" aria-label="State Defense Organisation - Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >RVO-TNO</a></span>,
+<a href="../../philips"><span data-balloon-pos="up" aria-label="More about: Philips Usfa">Philips Usfa</span></a> and Delft University
+(i.e. <a href="../../../people/oberman/rmm.htm"><span data-balloon-pos="up" aria-label="More about: Oberman">Oberman</span></a> and Snijders).
+The formentioned memorandum of 31 May 1961 <a href="#ref_2">[2]</a>
+was discussed, and it was suggested that the Oberman/Snijders
+solution was the best way for&#173;ward, provided that extra non-linearity &ndash;
+as developed by <span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span>'s Fred Hafkamp &ndash; was added to the design. <sup><font color="#FF8800">1</font></sup>
+<a href="../../philips"><span data-balloon-pos="up" aria-label="More about: Philips">Philips</span></a> could then use the design for its forthcoming
+<a href="../../philips/trol"><span data-balloon-pos="up" aria-label="More about: Ecolex V">Ecolex V</span></a> in which the <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span> key generator was used as an add-on
+for a mo&#173;di&#173;fied <a href="../../philips/ec4"><span data-balloon-pos="up" aria-label="More about: Ecolex IV">Ecolex IV</span></a>.
+The image on the right shows an intermediate design of
+the <a href="../../philips/trol"><span data-balloon-pos="up" aria-label="More about: Ecolex V">Ecolex V</span></a>, with the Tarolex key generator at
+the bottom right.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../philips/trol">            <div style="position: relative;" data-balloon-pos="up" aria-label="One of the early TROL prototypes produced at Philips Usfa. Click for further information." data-balloon-length="large">
+<a href="../../philips/trol">            <div style="position: relative;" data-balloon-pos="up" aria-label="One of the early TROL prototypes produced at Philips Usfa. Click for further information." data-balloon-length="large">
+            <img src="../../philips/trol/img/trol_proto1_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="One of the early TROL prototypes produced at Philips Usfa. Click for further information."
+             border=0
+             width=298 height=472
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+At the second meeting of the <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span>-commission on 9 June 1961, all
+parties agreed with the pro&#173;posal of the <span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span>, that the best way forward
+was to use the Oberman/Snijders key generator in the
+<a href="../../philips/trol"><span data-balloon-pos="up" aria-label="More about: Philips Ecolex V">Philips Ecolex V</span></a>.
+It became clear however, that <span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span> was reluctant to abandon its Cryptauphyl
+design and that they would proceed with its development independently from
+the group <a href="#ref_4">[4]</a>. At the third meeting of the commission, on 11 July 1961,
+<span class="short" aria-label="Philips Usfa" data-balloon-pos="up"><a href="../../philips" class="short" >Philips</a></span> indicated
+that they could not wait for the group to come up with a final design,
+if they wanted to meet the <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span> deadline. Con&#173;se&#173;quent&#173;ly, it was decided
+that each of the parties would further develop its own <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span> design,
+with input from the <span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span>, and that <span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span> approval was required for
+submission of a design to <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Adequate improvements with additional non-linearity had also been proposed by
+  Oberman and Snijders, but eventually Hafkamp's solution was chosen as it
+  was simpler to implement.
+  Hafkamp was an autodidact crypto expert, who had developed his own terminology.
+  In his notes, he describes the addition of non-linear ope&#173;ra&#173;tions as
+  <i>irregular replacements</i> <a href="#ref_2">[2]</a>...<a href="#ref_5">[5]</a>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=eval></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          NATO evaluation
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<span class="short" aria-label="Philips Usfa" data-balloon-pos="up"><a href="../../philips" class="short" >Philips</a></span> improved its <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span> design by increasing the complexity of the
+key generator, including the addition of non-linear operations as
+suggested by the <span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span>, probably with help from <span class="short tooltip-red" data-balloon-pos="up" aria-label="../../../people/oberman/rmm.htm">Oberman</span> & Snijders,
+and Hafkamp (<span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span>). In January 1962, <span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span> informed the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Nationale Verbindingsbeveiligingsraad (National Communications Security Council)" data-balloon-length="large">NVBR</span>
+that it had withdrawn its Cryptauphyl from the <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span>-evaluation, but that
+its developement would be continued <a href="#ref_10">[10]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In July 1962, <a href="../../philips"><span data-balloon-pos="up" aria-label="More about: Philips">Philips</span></a> submitted its final
+<a href="../../philips/trol"><span data-balloon-pos="up" aria-label="More about: Ecolex V">Ecolex V</span></a> de&#173;sign
+to <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span> for aproval by <span class="short" aria-label="Security and Evaluation Agency (NATO)" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >SECAN</a></span>. It passed all tests, but eventually
+lost the evaluation to the <a href="../../uk/bid610"><span data-balloon-pos="up" aria-label="More about: British ALVIS (BID/610)">British ALVIS (BID/610)</span></a>,
+in what was thought to be a policial decision.
+At <a href="../../philips"><span data-balloon-pos="up" aria-label="More about: Philips">Philips</span></a>, the <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span> de&#173;ve&#173;lop&#173;ment was initially
+terminated, but was revived in 1966 when the need arose once again for
+a self-per&#173;muting system for the Dutch Army, for which <span class="short" aria-label="Philips Usfa" data-balloon-pos="up"><a href="../../philips" class="short" >Philips</a></span>
+proposed the all new <a href="../../philips/ec10"><span data-balloon-pos="up" aria-label="More about: Ecolex X">Ecolex X</span></a>.
+<br />
+<br />
+As development for the proposed <a href="../../philips/ec10"><span data-balloon-pos="up" aria-label="More about: Ecolex X">Ecolex X</span></a> would take
+too long, it was de&#173;ci&#173;ded to revive <a href="../../philips/trol"><span data-balloon-pos="up" aria-label="More about: Ecolex V">Ecolex V</span></a>
+as a gap-fill solution. After all, <a href="../../philips/trol"><span data-balloon-pos="up" aria-label="More about: Ecolex V">Ecolex V</span></a>
+was in a nearly fi&#173;nished state and allowed <span class="short" aria-label="Philips Usfa" data-balloon-pos="up"><a href="../../philips" class="short" >Philips</a></span> to come up
+with a 'new' and approved system in less than a year.
+Furthermore, it allowed the existing <a href="../../philips/ec4"><span data-balloon-pos="up" aria-label="More about: Ecolex IV">Ecolex IV</span></a> <span class="short" aria-label="One-Time Tape cipher machine (mixer)" data-balloon-pos="up"><a href="../../ott.htm" class="short" >OTT</a></span>
+cipher machines to be reused.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="../../philips/tarolex">            <div style="position: relative;" data-balloon-pos="up" aria-label="Philips Tarolex with teleprinter (1967)">
+<a href="../../philips/tarolex">            <div style="position: relative;" data-balloon-pos="up" aria-label="Philips Tarolex with teleprinter (1967)">
+            <img src="../../philips/tarolex/img/tarolex_set1_small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Philips Tarolex with teleprinter (1967)"
+             border=0
+             width=298 height=267
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Although initially designated <b>Ecolex V</b>,
+it was renamed <a href="../../philips/tarolex"><span data-balloon-pos="up" aria-label="More about: Tarolex 19"">Tarolex 19"</span></a> <sup><font color="#FF8800">1</font></sup>
+in December 1962.
+<a href="../../philips/tarolex"><span data-balloon-pos="up" aria-label="More about: Tarolex">Tarolex</span></a> was introduced in 1967 and a total
+of 151 units were built. It solved the
+Army's imme&#173;di&#173;ate problem, but was still a gap-fill solution.
+The device was large and heavy and had to be used in combination with
+the existing bulky <a href="../../philips/ec4"><span data-balloon-pos="up" aria-label="More about: Ecolex IV">Ecolex IV</span></a>
+one-time tape machine, which had to be modi&#173;fied for connection to
+<a href="../../philips/tarolex"><span data-balloon-pos="up" aria-label="More about: Tarolex">Tarolex</span></a>. Immediately after the
+<a href="../../philips/tarolex"><span data-balloon-pos="up" aria-label="More about: Tarolex machines">Tarolex machines</span></a> had been delivered,
+<a href="../../philips"><span data-balloon-pos="up" aria-label="More about: Philips">Philips</span></a> started development of the projected
+<a href="../../philips/ec10"><span data-balloon-pos="up" aria-label="More about: Ecolex X">Ecolex X</span></a>.
+The latter was introduced in 1972 and carried many properties of the
+original <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span> and <a href="../../philips/tarolex"><span data-balloon-pos="up" aria-label="More about: Tarolex">Tarolex</span></a> principles, albeit
+in a modernised form.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+The name Tarolex was derived from <u>Ta</u>peless <u>R</u>otorless
+  <u>O</u>n-<u>L</u>ine encryption device ('ex'), which is basically the same
+  as <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span>, but is more in line with Philips' naming conventions
+  like Ecolex, Satcolex, etc. Tarolex was initially used as
+  the name of one of the <a href="../../philips/trol"><span data-balloon-pos="up" aria-label="More about: three TROL components">three TROL components</span></a>,
+  but was later used for the entire system in the form <b>Tarolex 19"</b> or
+  <b>Tarolex II</b>, which was eventually shortened to <b>Tarolex</b>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Cryptauphyl
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+What happened to the Cryptauphyl design remains unclear.
+At the second meeting of the <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span>-commission, <span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span> had made it clear
+they they would continue to cooperate with the other parties, but
+that they would also continue to develop Cryptauphyl <a href="#ref_4">[4]</a>.
+<span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span> expected to have a first lab version in late 1961, at which
+point they would have fulfilled the government's order.
+It was then up to the Minister of Defense to decide which
+<span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span>-design would be submitted to <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span>.
+In that case, prototypes were expected to be delivered in the first
+half of 1962.
+<span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span> had made it clear though, that Cryptauphyl would not be suitable for
+use as an add-on to the <a href="../../philips/ec4"><span data-balloon-pos="up" aria-label="More about: Philips Ecolex IV">Philips Ecolex IV</span></a> <a href="#ref_4">[4]</a>.
+<br />
+<br />
+<span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span> later informed the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Nationale Verbindingsbeveiligingsraad (National Communications Security Council)" data-balloon-length="large">NVBR</span> that it would not submit Cryptauphyl
+for evaluation to <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span>, but that they would continue its development
+<a href="#ref_10">[10]</a>.
+<span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span> had initially filed two patents related to the design of Cryptauphyl:
+one on 2 February 1961 for a
+<a href="files/GB1298451.pdf"><span data-balloon-pos="up" aria-label="More about: pseudo random number generator">pseudo random number generator</span></a>,
+and one on 31 May 1961 for a
+<a href="files/NL107306.pdf"><span data-balloon-pos="up" aria-label="More about: com&#173;plete encryption system (NL ...">com&#173;plete encryption system (NL 107,306)</span></a>.
+The first one was probably aban&#173;donned
+as it is not avai&#173;la&#173;ble from the Dutch Patent Office (2025)
+and the application number has been reused. In any case, both patents were
+filed in several other countries the following
+year, in May 1962 <a href="#pat"><span data-balloon-pos="up" aria-label="Jump to: [I-IV and VI-X]">[I-IV and VI-X]</span></a>,
+which confirms <span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span>'s intention to further develop the device.
+It is likely though that its development was eventually terminated,
+as in 1963 Cryptauphyl-inventor <b>Rudolf Slegtenhorst</b> left <span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span>
+to become director at the Reactor Institute at Delft University <a href="#ref_11">[11]</a>.
+<br />
+<br />
+Whether Cryptauphyl was ever taken into production remains to be seen.
+<span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span> insisted that its self-synchronising
+feature (autoclave) was a unique selling point as it allowed late-entry
+com&#173;mu&#173;ni&#173;ca&#173;tion. However, such systems generally give rise to
+error propagation, which for <span class="short" aria-label="Philips Usfa" data-balloon-pos="up"><a href="../../philips" class="short" >Philips</a></span> and the <span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span> had been a reason
+to reject the design.
+It is certain though, that Cryptauphyl was not used by the Dutch Government
+(in casu the Dutch Army), as in that case the mandatory approval of the
+<span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span> would have been required, and no approval document exists
+in the <span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span> archives.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=dev></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Descendants of the TROL development
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=75 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+          <a href=../../philips/trol/index.htm>
+<div  data-balloon-pos="up" aria-label="Tapeless Rotorless Online cipher system">          <img src="../../philips/trol/img/trol_reader_thumbnail.jpg"
+           alt="Tapeless Rotorless Online cipher system"
+           border="0" width=75 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../philips/trol/index.htm>Ecolex V 1962</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../philips/tarolex/index.htm>
+<div  data-balloon-pos="up" aria-label="TAROLEX key stream generator">          <img src="../../philips/tarolex/img/302734/007/thumbnail.jpg"
+           alt="TAROLEX key stream generator"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../philips/tarolex/index.htm>Tarolex 1967</a></font>
+          </div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+          <a href=../../philips/ec10/index.htm>
+<div  data-balloon-pos="up" aria-label="Ecolex X (Ecolex 10) online/offline cipher machine">          <img src="../../philips/ec10/img/304358/044/thumbnail.jpg"
+           alt="Ecolex X (Ecolex 10) online/offline cipher machine"
+           border="0" width=74 height=50
+           style="
+           max-width: 618px;
+          "
+           /></div>
+          </a>
+          <div style="padding-top: 4px;">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><a href=../../philips/ec10/index.htm>Ecolex X 1972</a></font>
+          </div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div style="height: 40px;"></div>        <a name=fam></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>A family of devices</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Cryptauphyl was part of a family of devices that were developed at <span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span>
+between 1960 and 1966. The other family members do not serve any cryptographic purpose,
+but are used for processing <a href="../../../telex"><span data-balloon-pos="up" aria-label="More about: 5-bit digital telegraphy (telex)">5-bit digital telegraphy (telex)</span></a>.
+The following devices in this family are currently known <a href="#ref_6">[6]</a>:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Punchrophyl</div><div style="display:inline-block; width:100px;">1960</div>Telex interceptor/recorder (paper tape) <a href="#ref_7">[7]</a>            <li><div style="display:inline-block; width:100px;">Cryptauphyl</div><div style="display:inline-block; width:100px;">1960</div>Telegraphy encryption device (<span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span>)            <li><div style="display:inline-block; width:100px;">Scribophyl</div><div style="display:inline-block; width:100px;">1961</div>Printing device for (foreign) telex messages <a href="#ref_8">[8]</a>            <li><div style="display:inline-block; width:100px;">Pluto</div><div style="display:inline-block; width:100px;">1966</div>Radio telex message registration system          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=help></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Please help</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+At present we have no further information about Cryptauphyl, other than wat
+is presented on this page. We are looking for additional information that
+may help us to expand this page, such as photographs, technical descriptions,
+circuit diagrams and personal accounts of people who have worked with the
+device or with any related equipment. If you can help,
+please <font color="#E7E">&#10148;</font>&nbsp;<a href="mailto:info@cryptomuseum.com">contact us</a>.
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=spec></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Specifications</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Device</div>Self-permuting <a href="../../index.htm">encryption/decryption device</a>            <li><div style="display:inline-block; width:100px;">Purpose</div>Online telex encryption, one-time key creation            <li><div style="display:inline-block; width:100px;">Category</div>Tapeless, rotorless, on-line (<span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span>)            <li><div style="display:inline-block; width:100px;">Name</div>Cryptauphyl            <li><div style="display:inline-block; width:100px;">Inventor</div>Rudolf Slegtenhorst            <li><div style="display:inline-block; width:100px;">Manufacturer</div><span class="short" aria-label="State Defense Organisation - Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >RVO-TNO</a></span>, Physics Lab            <li><div style="display:inline-block; width:100px;">Development</div>1960-1962            <li><div style="display:inline-block; width:100px;">Year</div>-            <li><div style="display:inline-block; width:100px;">Country</div><a href="../../nl">Netherlands</a>            <li><div style="display:inline-block; width:100px;">Algorithm</div>Proprietary autoclave            <li><div style="display:inline-block; width:100px;">Alphabet</div>32 (<a href="../../../ref/ita2">ITA-2</a>), 26 (A-Z)            <li><div style="display:inline-block; width:100px;">Speed</div>400, 800, 1600 <span class="short tooltip-red" data-balloon-pos="up" aria-label="characters per minute">cpm</span>            <li><div style="display:inline-block; width:100px;">Interface</div>20/40 mA, 60 V, single/double current            <li><div style="display:inline-block; width:100px;">Power</div>?            <li><div style="display:inline-block; width:100px;">Dimensions</div>?            <li><div style="display:inline-block; width:100px;">Weight</div>?            <li><div style="display:inline-block; width:100px;">Quantity</div>4 (prototypes only)          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=pat></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Related patents</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Dutch patent application 260,780
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=I>
+            <li><a href="files/BE613307.pdf">Belgian Patent BE 613,307<br />Nul-&#233;&#233;n generator</a><br />
+<span class="short" aria-label="State Defense Organisation - Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >RVO-TNO</a></span>, filed 31 January 1962, priority 2 February 1961. <sup><font color="#FF8800">1</font></sup>
+            <p />
+            <li><a href="files/DE977938.pdf">German Patent DE 977,938<br />Schaltungsanordnung zum Erzeugen von Impulsfolgen mit statistisch verteilen Impulsen</a><br />
+Rudolf Slegtenhorst for <span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span>, 2 February 1962, priority 2 February 1961.<br />
+Published 26 July 1973.
+            <p />
+            <li><a href="files/FR1605102.pdf">French Patent FR 1,605,102<br />G&#233;n&#233;rateur produisant une s&#233;rie quasi-arbitraire de z&#233;ros et d/uns</a><br />
+<span class="short" aria-label="State Defense Organisation - Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >RVO-TNO</a></span>, filed 1 February 1962, priority 2 February 1961.<br />
+Published 16 March 1973.
+            <p />
+            <li><a href="files/GB1298451.pdf">British Patent GB 1,298,451<br />Generator producing a quasi random series of zeroes and ones</a><br />
+<span class="short" aria-label="State Defense Organisation - Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >RVO-TNO</a></span>, filed 31 January 1962, priority 2 February 1961.<br />
+Published 6 December 1972.
+          </ol type=I>
+        </font></td></tr></table>
+        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td width="20"><img src="../img/blank.gif" width="1" height="5"/></td>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+The original Dutch patent (with application number 260,780) is not available
+  in the Dutch Patent Office's database. It is likely that it was an
+  abandoned patent, as the application number was later resused.
+          </ol>
+          </small></font></td></tr>
+        </table>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Dutch patent 107,306
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=I value="5">
+            <li value="5"><a href="files/NL107306.pdf">Dutch Patent NL 107,306<br />Stelsel voor geheime berichtgeving</a><br />
+Rudolf Slegtenhorst for <span class="short tooltip-red" data-balloon-pos="up" aria-label="Rijksverdedigingsorganisatie (State Defense Organisation)" data-balloon-length="large">RVO</span>-<span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span>, filed 31 May 1961 as NL365,358.<br />
+Published 15 April 1969.
+            <p />
+            <li><a href="files/BE618271.pdf">Belgian Patent BE 618,271<br />Stelsel voor geheime berichtgeving</a><br />
+RVO-TNO, filed 29 May 1962, priority 31 May 1961.<br />
+Published 19 September 1969.
+            <p />
+            <li><a href="files/DE977777.pdf">German Patent DE 977,777<br />Mit Binaerkodierung arbeitende Anordnung zur Verschluesselung von Nachrichtensignalen</a><br />
+Rudolf Slegtenhorst for <span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span>, 31 May 1962, priority 31 May 1961.<br />
+Published 26 March 1970.
+            <p />
+            <li><a href="files/DK108615.pdf">Danish Patent DK 108,615<br />Al&#230;g til hemmelig kommunikation</a><br />
+Rudolf Slegtenhorst for <span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span>, 1 June 1962, priority 31 May 1961.<br />
+Published 8 January 1968.
+            <p />
+            <li><a href="files/GB1172971.pdf">British Patent GB 1,172,971<br />Secrecy Communication System</a><br />
+<span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span> (NL), files 29 May 1962, priority 31 May 1961.<br />
+Published 3 December 1969.
+            <p />
+            <li><a href="files/NO113572.pdf">Norwegian Patent NO 113,572<br />Kommunikasjonssystem for Overfoering av Hemmelige Meldinger</a><br />
+Rudolf Slegtenhorst for <span class="short" aria-label="Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >TNO</a></span>, 30 May 1962, priority 31 May 1961.<br />
+Published 13 February 1970.
+          </ol type=I>
+        </font></td></tr></table>
+        <a name=doc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Documentation</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <a name="doc_1"></a>
+            <li><a href="files/19601125_RVO_cryptauphyl.pdf">Cryptauphyl, description (Dutch)</a><br />
+<span class="short" aria-label="State Defense Organisation - Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >RVO-TNO</a></span> to <span class="short tooltip-red" data-balloon-pos="up" aria-label="Nationale Verbindingsbeveiligingsraad (National Communications Security Council)" data-balloon-length="large">NVBR</span>, 25 November 1960 <a href="#ref_1">[1]</a>.
+          </ol type=A>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+            <li><a href="files/19601125_RVO_cryptauphyl.pdf"><i>Memorandum Eigenschappen Cryptauphyl</i></a><br />
+Memorandum Cryptauphyl specifications (in Dutch language). <sup><font color="#FF8800">1</font></sup> <br />
+<span class="short" aria-label="State Defense Organisation - Applied Physics Laboratory" data-balloon-pos="up"><a href="../../../manuf/tno" class="short" >RVO-TNO</a></span>, Physisch Laboratorium, 25 November 1960. CONFIDENTIAL.<br />
+            <p />
+            <a name="ref_2"></a>
+            <li><a href="files/19610531_NBV_TROL_memo.pdf"><i>MEMORANDUM betreffende de huidige stand van de Nederlandse ontwikkeling<br />op het gebied van zelfsleutelende electronische vercijferapparatuur</i></a><br />
+<span class="short" aria-label="Nederlands Bureau voor de Verbindingsbeveiliging (Dutch National Bureau for Signals Security)" data-balloon-pos="up"><a href="../../../intel/nbv" class="short" >NBV</a></span>, 31 May 1961. GEHEIM (SECRET).
+            <p />
+            <a name="ref_3"></a>
+            <li><a href="files/19610616_TROL_1.pdf"><i>Verslag technische werkgroep TROL, 1 June 1961</i></a><br />
+Report of the technical committee <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span> (Dutch).<br />
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Nationale Verbindingsbeveiligingsraad (National Communications Security Council)" data-balloon-length="large">NVBR</span>, 16 June 1961. GEHEIM (SECRET).
+            <p />
+            <a name="ref_4"></a>
+            <li><a href="files/19610626_TROL_2.pdf"><i>Verslag technische werkgroep TROL, 9 June 1961</i></a><br />
+Report of the technical committee <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span> (Dutch).<br />
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Nationale Verbindingsbeveiligingsraad (National Communications Security Council)" data-balloon-length="large">NVBR</span>, 26 June 1961. GEHEIM (SECRET).
+            <p />
+            <a name="ref_5"></a>
+            <li><a href="files/19610724_TROL_3.pdf"><i>Verslag technische werkgroep TROL, 11 July 1961</i></a><br />
+Report of the technical committee <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span> (Dutch).<br />
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Nationale Verbindingsbeveiligingsraad (National Communications Security Council)" data-balloon-length="large">NVBR</span>, 24 July 1961. GEHEIM (SECRET).
+            <p />
+            <a name="ref_6"></a>
+            <li><a href="https://www.museumwaalsdorp.nl/nl/index/radio_communicatie/radiocommunicatie-cryptografie/">Museum Waalsdorp, <i>Cryptografie/vercijfering</i></a><br />
+Accessed December 2023. <sup><font color="#FF8800">2</font></sup>
+            <p />
+            <a name="ref_7"></a>
+            <li><a href="https://bit.ly/40ze6hI" target="_blank"><i>Vastlegging telexberichten met de PUNCHROPHYL (1960)</i></a><br />
+Museum Waalsdorp. Retrieved December 2023.
+            <p />
+            <a name="ref_8"></a>
+            <li><a href="https://bit.ly/3NQUv4W" target="_blank"><i>Printing (un)coded telex messages with the SCRIBOPHYL (1961)</i></a><br />
+Museum Waalsdorp. Retrieved December 2023.
+            <p />
+            <a name="ref_9"></a>
+<li><font color=#F52E00>Maarten Oberman, Personal correspondence</font><br />
+November 2023 &mdash; August 2025.
+            <p />
+            <a name="ref_10"></a>
+<li><font color=#F52E00>Minutes of 15th NVBR meeting of 30 January 1962</font><br />
+Withdrawl of Cryptauphyl for <span class="short" aria-label="North Atlantic Treaty Organisation" data-balloon-pos="up"><a href="../../../intel/nato" class="short" >NATO</a></span>'s <span class="short" aria-label="Tapeless Rotorless Online (principle)" data-balloon-pos="up"><a href="../../trol" class="short" >TROL</a></span> evaluation. <sup><font color="#FF8800">3</font></sup> <br />
+NVBR, 30 January 1962.
+            <p />
+            <a name="ref_11"></a>
+<li><font color=#F52E00>Rob Slegtenhorst (son of Rudolf Slegtenhorst)</font><br />
+Personal correspondence, 14 September 2025.
+            <p />
+            <a name="ref_12"></a>
+            <li><a href="https://historiek.net/mislukte-nederlandse-cryptosystemen/177399/" target="_blank">Oberman et al., <i>Drie ambitieuze Nederlandse cryptosystemen die strandden</i></a><br />
+Three failed Dutch encryption systems (1955-1965) (in Dutch language).<br />
+Maarten Oberman, Paul Reuvers and Marc Simons.<br />
+Historiek, 27 September 2025.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Document released by Nationaal Archief (NA), obtained via Karl de Leeuw (CM304347).
+          </li>
+          <li>
+All references to Cryptauphyl, including a photograph that was attributed
+  to the device, have since been removed from the website.
+          </li>
+          <li>
+Partly declassified by <span class="short" aria-label="General Intelligence and Security Service (Netherlands)" data-balloon-pos="up"><a href="../../../intel/aivd" class="short" >AIVD</a></span>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../../philips/trol">Philips Ecolex V (TROL)</a><br />
+            <li><a href="../../philips/tarolex">Philips Tarolex</a><br />
+            <li><a href="../../philips/ec10">Philips Ecolex X</a><br />
+            <li><a href="../../../intel/nbv">NBV, the Dutch cipher authority</a><br />
+            <li><a href="../../../manuf/tno">TNO, the developer</a><br />
+<br />
+            <li><a href="../../nl.htm">Other encryption devices in The Netherlands</a><br />
+            <li><a href="../../data.htm">Oter telex encryption devices</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Tuesday 23 January 2024. Last changed: Monday, 13 October 2025 - 08:01 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

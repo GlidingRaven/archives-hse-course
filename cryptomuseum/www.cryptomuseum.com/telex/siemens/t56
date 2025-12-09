@@ -1,0 +1,2643 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>T-56</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cryptomuseum">
+    <meta name="twitter:url" content="https://www.cryptomuseum.com/telex/siemens/t56/index.htm">
+    <meta name="twitter:image" content="https://www.cryptomuseum.com/telex/siemens/t56/img/304022/019/full.jpg">
+    <meta name="twitter:title" content="T-56 connection device">
+    <meta name="twitter:description" content="Teleprinter connection device (TCD) for 2-wire, 4-wire, single-current and double-current configurations. With dial facility and signalling.">
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of telegraphic equipment" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../telex/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Tools used in combination with telegraphic equipment" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../telex/tools/index.htm';" >Tools</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../../telex/creed/index.htm';" >Creed</div>
+          <div class="but sub" onClick="location.href='../../../telex/gretag/etk47/index.htm';" >Gretag</div>
+          <div class="but sub" onClick="location.href='../../../telex/hell/index.htm';" >HELL</div>
+          <div class="but sub" onClick="location.href='../../../telex/sagem/index.htm';" >Sagem</div>
+          <div class="but sel sub" onClick="location.href='../../../telex/siemens/index.htm';" >Siemens</div>
+          <div class="but sub" onClick="location.href='../../../telex/telefunken/index.htm';" >Telefunken</div>
+          <div class="but sub" onClick="location.href='../../../telex/teletype/index.htm';" >Teletype</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../../index.htm#tcd"><div  data-balloon-pos="up" aria-label="Shortcut to Teleprinter Connection Devices" class="key">TCD</div></a><a class="key" href="../index.htm"><div  data-balloon-pos="up" aria-label="Shortcut to Siemens & Halske" class="key">Siemens</div></a>&nbsp;&nbsp;<a class="key" href="circuit.htm"><div  data-balloon-pos="up" aria-label="Forward to cicuit diagram" class="key right">Circuit diagram &rarr;</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>T-56</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>Teleprinter connection device</b>
+<font color=#F52E00>- this page is a stub</font>
+<br />
+<br />
+<b>T-56</b> is a  teleprinter connection device (<span class="short" aria-label="Teleprinter Connection Device (German: Fernschreibanschlussger&#228;t, FAG)" data-balloon-pos="up"><a href="../../index.htm#tcd" class="short" >TCD</a></span>) &mdash;
+(German: <i>Fernschreib-Endsatz</i> or <i>Fernschreib-anschluss&shy;ger&#228;t</i>
+(<span class="short tooltip-red" data-balloon-pos="up" aria-label="Fernschreibanschlussger&#228;t (Teleprinter Connection Device, TCD)" data-balloon-length="large">FAG</span>)) &mdash; introduced around 1957 by <a href="../index.htm"><span data-balloon-pos="up" aria-label="More about: Siemens & Halske">Siemens & Halske</span></a> in Germany.
+It's a uni&shy;ver&shy;sal device for connec&shy;ting a <span class="short" aria-label="teletypewriter (teletype, TTY)" data-balloon-pos="up"><a href="../../index.htm" class="short" >teleprinter</a></span>
+to a telegraphy dial-up sub&shy;scriber line (<span class="short" aria-label="Teleprinter Exchange" data-balloon-pos="up"><a href="../../index.htm" class="short" >telex</a></span>), or a
+leased line. It is suitable for 2- and 4-wire equipment in
+single- and double-current configurations.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The T-56 is a tabletop device that is housed in a brown or green metal
+enclosure. At the front is a sloped control panel with several push-buttons,
+a rotary dial and a +/-current meter.
+At the rear are connections for the teleprinter, a paper tape reader
+and the 2-wire or 4-wire subscriber line.
+<br />
+<br />
+The T-56 provides the interface between a 4-wire teleprinter and the
+2- or 4-wire single- or double-current line. It also provides signalling.
+When not online, the device provides line current to the teleprinter and
+the (optional) paper tape reader, which can also be connected at the rear.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304022/019/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="T-56 Teleprinter terminating unit">
+<a href="img/304022/019/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="T-56 Teleprinter terminating unit">
+            <img src="img/304022/019/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="T-56 Teleprinter terminating unit"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+It is suitable for fixed as well as mobile use, and was usually
+placed aside the teleprinter. It can be used on leased lines,
+but was mainly intended for dial-up
+subscriber lines, either automatically switched or manually patched.
+It converts a 2-wire single-current line to 4-wire double-current for the
+teleprinter, but is also suitable for 2-wire double-current (a.k.a.
+impuls telegraphy).
+<br />
+<br />
+Simpler alternatives for the T-56 are the <font color=#F52E00>Siemens FAG</font>
+and the <font color=#F52E00>Lorenz FZGT-564</font>.
+For simple single-current configurations
+with two machines and without dial-up facility,
+<a href="../ag13"><span data-balloon-pos="up" aria-label="More about: Anschlussger&#228;t 13 (connection ...">Anschlussger&#228;t 13 (connection device 13)</span></a>
+can be used. The latter is ideally suited for 4-wire  demonstration setups.
+The T-56 was produced from 1957 to at least 1980, with only small differences
+between models.
+Most versions have <a href="img/304022/016/full.jpg"><span data-balloon-pos="up" aria-label="More about: German instructions">German instructions</span></a> printed
+at the bottom of the case, but the versions that came with
+<a href="img/304024/004/full.jpg"><span data-balloon-pos="up" aria-label="More about: instructions in English">instructions in English</span></a>, are labelled
+<a href="img/304024/003/full.jpg"><span data-balloon-pos="up" aria-label="More about: Telegraph Terminal Repeater T56">Telegraph Terminal Repeater T56</span></a> (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Telegraph Terminal Repeater">TTR</span>).
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="T-56 Teleprinter terminating unit">          <img src="img/304022/019/thumbnail.jpg"
+           alt="T-56 Teleprinter terminating unit"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/019"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Rear view">          <img src="img/304022/028/thumbnail.jpg"
+           alt="Rear view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/028"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Rear side">          <img src="img/304022/024/thumbnail.jpg"
+           alt="Rear side"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/024"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front view">          <img src="img/304022/032/thumbnail.jpg"
+           alt="Front view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/032"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Control panel">          <img src="img/304022/021/thumbnail.jpg"
+           alt="Control panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/021"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Current meter">          <img src="img/304022/022/thumbnail.jpg"
+           alt="Current meter"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/022"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Operating the rotary dial">          <img src="img/304022/023/thumbnail.jpg"
+           alt="Operating the rotary dial"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/023"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Cut-out for access to MODE-selector (some models only)" data-balloon-length="large">          <img src="img/304024/001/thumbnail.jpg"
+           alt="Cut-out for access to MODE-selector (some models only)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304024/001"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304022/019/full.jpg" alt="T-56 Teleprinter terminating unit">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304022/028/full.jpg" alt="Rear view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304022/024/full.jpg" alt="Rear side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 4 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304022/032/full.jpg" alt="Front view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 5 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304022/021/full.jpg" alt="Control panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 6 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304022/022/full.jpg" alt="Current meter">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 7 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304022/023/full.jpg" alt="Operating the rotary dial">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 8 / 8</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304024/001/full.jpg" alt="Cut-out for access to MODE-selector (some models only)">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=features></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The image below shows the sloped control panel of the T-56.
+At the left is a large rotary dial that is used to make outgoing calls
+by dialling the subscriber number of the other party. It is a regular dial
+that was also used on <a href="../../../phone"><span data-balloon-pos="up" aria-label="More about: contemporary telephone sets">contemporary telephone sets</span></a>
+like the German W48. To its right is a current meter that can show three
+different currents, depending on the setting of the meter function selector
+below it. During normal operation it should be in the rightmost position (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Fernschreiber (teleprinter)">Fs</span>).
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304022/032/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304022/032/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/t56_front.png"
+             style="
+            "
+             align="center"
+             width="615px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The device does not have a power switch and is active as long as it is connected
+to the mains.
+At the right edge of the control panel are three adjustment screws that will
+be explained later.
+At the bottom are five push-buttons with coloured caps, some of
+which have an indicator lamp. The rightmost button (Lin/Loc) is an
+on/off switch. The push-buttons have the following functions:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td>
+        <table width=100% cellspacing=0 cellpadding=0>
+          <tr>
+          <td width=100%>
+          <table
+           class="table"
+           width=100% border=0 cellspacing=0 cellpadding=2 bgcolor=#FFFFFF>
+            <tr>
+<td bgcolor="#FFFFFF" align="center" valign="center" width="60" style=" border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;<br />&#160;</font></td><td bgcolor="#E0E0E0" align="center" valign="center" width="44" style=" border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Lamp</b></font></td><td bgcolor="#E0E0E0" align="left" valign="center" width="130" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>German</b></font></td><td bgcolor="#E0E0E0" align="left" valign="center" width="130" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>English</b></font></td><td bgcolor="#E0E0E0" align="left" valign="center" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555><b>Description</b></font></td>            <td bgcolor=#E0E0E0>&nbsp;</td>
+            </tr>
+            <tr>
+<td bgcolor="#CFEACF" align="center" valign="center" width="60" style=" border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>AT</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="44" style=" border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#10004;</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="130" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Anruftaste</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="130" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Call button</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Initiate outgoing call</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;<br />&#160;</font></td>            </tr>
+            <tr>
+<td bgcolor="#FFDDDD" align="center" valign="center" width="60" style=" border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>ST</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="44" style=" border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#10004;</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="130" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Schlu&#223;taste</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="130" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>End button</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Terminate the current call</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;<br />&#160;</font></td>            </tr>
+            <tr>
+<td bgcolor="#F4F4F4" align="center" valign="center" width="60" style=" border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Fs<br />Lin</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="44" style=" border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>-</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="130" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Fernschreiber Linie</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="130" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Teleprinter line</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Connect teleprinter to the line</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;<br />&#160;</font></td>            </tr>
+            <tr>
+<td bgcolor="#EEEECC" align="center" valign="center" width="60" style=" border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Fs<br />Loc</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="44" style=" border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#10004;</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="130" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Fernschreiber Lokal</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="130" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Teleprinter local</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Use teleprinter locally (off-line)</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;<br />&#160;</font></td>            </tr>
+            <tr>
+<td bgcolor="#FFE0BB" align="center" valign="center" width="60" style=" border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Ls<br />Lin/Loc</font></td><td bgcolor="#FFFFFF" align="center" valign="center" width="44" style=" border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#10004;</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="130" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Lochstreifen<br />Linie/Lokal</font></td><td bgcolor="#FFFFFF" align="left" valign="center" width="130" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Tape reader<br />line/local</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>Connect tape reader to the line<br />or use it locally</font></td><td bgcolor="#FFFFFF" align="left" valign="center" style=" padding-left: 4px; border-bottom: 1px solid #ccc;"><font size=-1 size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>&#160;<br />&#160;</font></td>            </tr>
+          </table>
+<div style="height: 20px;"></div>        </td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+All connections are at the rear. A fixed cable is connected
+to the mains wall socket. There are <a href="../../index.htm#ados"><span data-balloon-pos="up" aria-label="More about: ADoS sockets">ADoS sockets</span></a>
+are for connection of the teleprinter (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Fernschreiber (teleprinter)">Fs</span>) and the tape reader (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Lochstreifensender (tape transmitter)">Ls</span>), as well as power sockets
+for providing mains power to these devices. At the top left are screw terminals
+for con&shy;nec&shy;tion of the RX-line (a1, b1). Likewise the TX-line is
+connected to the screw terminals at the top right (a2, b2).
+With 2-wire line configurations, only the leftmost terminal is used (a1, b1).
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304022/024/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304022/024/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/t56_rear.png"
+             style="
+            "
+             align="center"
+             width="610px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=ver></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Versions
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Several versions of the T-56 have surfaced,
+predominantly with small differences.
+The following versions are currently known, based on the observations
+of German collector Heinz Blumberg <a href="#ref_1">[1]</a> with additional observations from
+ourselves, based on the date code of the capacitors.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">5074/14-IX</div>1959-10 <sup><font color="#FF8800">1</font></sup>            <li><div style="display:inline-block; width:100px;">5074/14-X</div>1959-02            <li><div style="display:inline-block; width:100px;">5074/14-XIII</div>1962-11            <li><div style="display:inline-block; width:100px;">5074/14-XII</div>1963-06            <li><div style="display:inline-block; width:100px;">5074/14-XV</div>1967            <li><div style="display:inline-block; width:100px;">5074/14</div>1969-02<br /><br />            <li><div style="display:inline-block; width:100px;">5074/14a-IV</div><div style="display:inline-block; width:100px;">1966-01 <sup><font color="#FF8800">2</div></font></sup>English          </ul>
+</font></td></tr></table>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Date stamp at the bottom of the device.
+          </li>
+          <li>
+Based on the date code on capacitor C10a.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=modes></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Modes
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The device is suitable for three different configurations, or modes,
+that can be selected with the hidden
+<a href="img/304022/011/full.jpg"><span data-balloon-pos="up" aria-label="More about: MODE-switch at the left side">MODE-switch at the left side</span></a> of the device.
+This selector can be accessed after removing the cover from the device,
+although some models have a
+<a href="img/304024/001/full.jpg"><span data-balloon-pos="up" aria-label="More about: rectangular hole in the left side ...">rectangular hole in the left side panel</span></a>
+through with the selector can be accessed.
+The MODE-selector is shown in the image below.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+It is mounted on a small sub-frame and has three positions that are
+labelled as follows:
+<ul>
+<div style="display:inline-block; width:160px;"><li>2-wire double-current</div>2 Dr
+          <img src="svg/2c.svg" style="position:relative; width:px; bottom:px;" />
+</li>
+<div style="display:inline-block; width:160px;"><li>4-wire double-current</div>4 Dr
+          <img src="svg/2c.svg" style="position:relative; width:px; bottom:px;" />
+</li>
+<div style="display:inline-block; width:160px;"><li>2-wire single-current</div>2 Dr
+          <img src="svg/1c.svg" style="position:relative; width:px; bottom:px;" />
+</li>
+</ul>
+The MODE-selector allows two functional blocks of the T-56 to be
+bypassed: (1) the single-current to double-current converter, and (2)
+the 4-wire to 2-wire converter. This is further explained in the
+<a href="#block"><span data-balloon-pos="up" aria-label="Jump to: block diagram">block diagram</span></a>.
+The chapter below deals with each of these configurations.
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304022/011/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Mode selector - front view">
+<a href="img/304022/011/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Mode selector - front view">
+            <img src="img/304022/011/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Mode selector - front view"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <a name=setup></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Setup</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The T-56 can be used in a variety of configurations, or modes, for
+use on short lines, long lines, leased lines and dial-up subscriber lines.
+It can connect the teleprinter to a local or remote tele&shy;printer exchange,
+or directly to another teleprinter, which can be hundreds of km away.
+In most cases, multiplexers are used somewhere in the path, to allow
+multiple connections to be carried by a single (long distance) line.
+Below are some examples of possible configurations.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=setup_4w2c></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          4-wire double-current
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In this configuration, the <a href="img/304022/011/full.jpg"><span data-balloon-pos="up" aria-label="More about: MODE-selector">MODE-selector</span></a>
+inside the T-56 is set to the middle position: 4-wire double-current.
+Two wires are used for the transmission circuit and
+another two for the reception circuit. If the distance between the
+teleprinter and the exchange is short, these four wires may be carried
+directly to the exchange.
+In most cases however, the lines of several subscribers will be multiplexed
+onto a single long distance line. At the other end, the line is demultiplexed
+and the four wires are connected transparently to the exchange, as shown in the
+diagram below.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="4-wire double-current configuration with multiplexed line to the exchange" data-balloon-length="large" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="4-wire double-current configuration with multiplexed line to the exchange" data-balloon-length="large" class="tooltip-red">
+            <img src="svg/t56_4w2c_exchange.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="4-wire double-current configuration with multiplexed line to the exchange"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+In the same vein it is possible to connect the teleprinter directly to a
+remote teleprinter via a fixed or leased line. Like in the configuration above,
+the four wires may run directly to the other end, but will in most cases
+be multiplexed with other leased lines. This situation is shown here:
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="4-wire double-current leased line via a multiplexed path" data-balloon-length="large" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="4-wire double-current leased line via a multiplexed path" data-balloon-length="large" class="tooltip-red">
+            <img src="svg/t56_4w2c_leased.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="4-wire double-current leased line via a multiplexed path"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=setup_2w1c></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          2-wire single-current
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In this configuration, the <a href="img/304022/011/full.jpg"><span data-balloon-pos="up" aria-label="More about: MODE-selector">MODE-selector</span></a>
+inside the T-56 is set to the lower position: 2-wire single-current.
+It allows the teleprinter to be connected directly (without multiplexing)
+to a local exchange. This mode is suitable for short distances only,
+up to several km, and is shown here:
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="2-wire single-current line directly to the local exchange" data-balloon-length="large" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="2-wire single-current line directly to the local exchange" data-balloon-length="large" class="tooltip-red">
+            <img src="svg/t56_2w1c_exchange.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="2-wire single-current line directly to the local exchange"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=setup_2w2c></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          2-wire double-current
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+In this configuration, the <a href="img/304022/011/full.jpg"><span data-balloon-pos="up" aria-label="More about: MODE-selector">MODE-selector</span></a>
+inside the T-56 is set to the upper position: 2-wire double-current.
+It is similar to the configuration above (2-wire single-current),
+but is suitable for longer distances (up to several hundreds of kilometres),
+as the line is balanced. It is also known as <i>impulse telegraphy</i>.
+Just before the exchange, the 2-wire line is converted to a 4-wire line.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="2-wire double-current line directly to a remote exchange which can be hundreds of km away" data-balloon-length="large" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="2-wire double-current line directly to a remote exchange which can be hundreds of km away" data-balloon-length="large" class="tooltip-red">
+            <img src="svg/t56_2w2c_exchange.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="2-wire double-current line directly to a remote exchange which can be hundreds of km away"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+2-wire double-current configurations are often used as part of a more
+complex routed tele&shy;graphy connections, that may run over several long and
+short distance telegraphy paths, as illustrated in the diagram below.
+In this example, the signal first runs over a long distance 2-wire path, is then
+coverted to a 4-wire line, and is then multiplexed over another long distance path.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="2-wire double-current line running via different paths to a far away exchange" data-balloon-length="large" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="2-wire double-current line running via different paths to a far away exchange" data-balloon-length="large" class="tooltip-red">
+            <img src="svg/t56_2w2c_exchange_mp.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="2-wire double-current line running via different paths to a far away exchange"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The 2-wire double-current configuration is also extremely useful for
+use on long distance leased lines, as illustrated in the diagram below.
+It allows two teleprinters, each with a T-56 connection device,
+to be linked directly by means of a single wire pair over long distances.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="2-wire double-current long distance leased line" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="2-wire double-current long distance leased line" class="tooltip-red">
+            <img src="svg/t56_2w2c_leased.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="2-wire double-current long distance leased line"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=today></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Using the t-56 today</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When building a local telex network, for example for demonstrations or museums,
+it is advised to the 2-wire single-current mode. This mode can also be used
+for owners of an <a href="../../itelex"><span data-balloon-pos="up" aria-label="More about: iTelex interface">iTelex interface</span></a>, when con&shy;nec&shy;ting to
+other iTelex subscribers in the world. The T-56 is perfectly suitable for this.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Using 2-wire single-current for connection via iTelex" data-balloon-length="large" class="tooltip-red">
+            <div style="position: relative;" data-balloon-pos="up" aria-label="Using 2-wire single-current for connection via iTelex" data-balloon-length="large" class="tooltip-red">
+            <img src="svg/t56_2w1c_itelex.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="Using 2-wire single-current for connection via iTelex"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../itelex">More about iTelex</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=block></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Block diagram</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the block diagram of the T-56. The device consists of three functional
+parts (1, 2 and 3) that are further described below. Blocks <font color=#F52E00>(2)</font> and <font color=#F52E00>(3)</font>
+can be bypassed with the <a href="#modes"><span data-balloon-pos="up" aria-label="Jump to: MODE-selector">MODE-selector</span></a>.
+The teleprinter is connected at the top left, using 4 wires: 2 for the
+transmission circuit and 2 for the reception circuit.
+Note however, that it is treated as a 2-wire device, as the TX and RX lines
+are connected in series immediately when the wires enter the T-56.
+This is done to allow the <a href="../../hybrid.htm"><span data-balloon-pos="up" aria-label="More about: hybrid circuit">hybrid circuit</span></a> to do its job.
+The optional tape reader (German: Lochstreifensender) is at the bottom left.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/t56_block.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+Common to all blocks is the internal power supply unit (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span>). It is connected
+the the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span> mains and provides the voltages for the relays, plus the positive
+and negative currents for driving the single- and double-current telegraphy lines.
+The three blocks have the following functions:
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+<li><font color=#F52E00><b>Teleprinter interface</b></font><br />
+This part forms the interface to the teleprinter and the optional tape reader
+(TR), both of which are treated as 2-wire devices (the TX and RX lines of the
+teleprinter are connected in series).
+It is also respon&shy;sible for signalling incoming calls and for dialling a
+subscriber number. The line is internally expanded to a 4-wire single-current
+system, by means of a <a href="../../hybrid.htm">hybrid circuit</a>. <sup><font color="#FF8800">1</font></sup>
+This part of the device is always used, regardless the
+configuration, even when the device is switched to local operation.
+This section also control the mains power supply to the teleprinter.
+In the original (German) manual <a href="#doc_3">[C]</a>, this block
+is known as <i>Fern&shy;schaltger&#228;t</i>, abbreviated <span class="short tooltip-red" data-balloon-pos="up" aria-label="Fernschaltger&#228;t (Teleprinter Connection Device)">FG</span> or <span class="short tooltip-red" data-balloon-pos="up" aria-label="Fernschaltger&#228;t (Teleprinter Connection Device)">FSG</span>.
+            <p />
+<li><font color=#F52E00><b>Current converter</b></font><br />
+The middle part converts the single-current <span class="short tooltip-red" data-balloon-pos="up" aria-label="Transmitter (outgoing signal line)">TX</span> wire pair into a
+double-current <i>balanced</i> signal &mdash; and vice versa for the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Receiver (incoming signal line)">RX</span> wire pair &mdash;
+making it suitable for use on long distance lines.
+This part can be bypassed with the <a href="#modes">MODE-selector</a>.
+            <p />
+<li><font color=#F52E00><b>4 to 2-wire hybrid</b></font><br />
+This part converts the internal 4-wire double-current signal (the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Transmitter (outgoing signal line)">TX</span>
+and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Transmitter (outgoing signal line)">TX</span> pairs) into a combined two-way 2-wire double-current signal,
+suitable for long distance communi&shy;ca&shy;tion over a single 2-wire pair,
+with full echo cancellation.
+This is done by means of a <a href="../../hybrid.htm">hybrid circuit</a>. <sup><font color="#FF8800">1</font></sup>
+In the original German manual <a href="#doc_3">[C]</a>, the conversion from 4- to 2-wire
+is known as <i>Impulstelegrafie</i> (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Impulstelegrafie (2-wire double-current)">JT</span>).
+This part can be bypassed with the <a href="#modes">MODE-selector</a>.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+A <a href="../../hybrid.htm"><span data-balloon-pos="up" aria-label="More about: hybrid circuit">hybrid circuit</span></a>, also known as a
+  <a href="../../hybrid.htm"><span data-balloon-pos="up" aria-label="More about: fork circuit">fork circuit</span></a>, can combine and split
+  two individual signals without one seeing the other. This is done
+  to avoid echos on long haul telecommunications lines. In the T-56,
+  the hybrids are not easily recognised as they are formed by two
+  polar relays of which the multiple coils are scattered througout
+  the circuit. Several sub-circuits contribute to the currents in these
+  coils.
+  <font color="#E7E">&#10148;</font>&nbsp;<a href="../../hybrid.htm">More on hybrids</a>
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=circuit></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Circuit diagram</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the original circuit diagram, extracted from the
+original 1962 manual. It's an extremely complex device of which
+the switching logic is entirely built with relays and a plethora
+of relay-contacts. This is further complicated by the fact that
+the device can be used in three different modes of operation.
+The circuit diagram is discussed in more detail on a
+<a href="circuit.htm"><span data-balloon-pos="up" aria-label="More about: separate page">separate page</span></a>.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="files/t56_circuit.pdf">            <div style="position: relative;" data-balloon-pos="up" aria-label="Circuit diagram of the T56 teleprinter connection device. Click to enlarge." data-balloon-length="large">
+<a href="files/t56_circuit.pdf">            <div style="position: relative;" data-balloon-pos="up" aria-label="Circuit diagram of the T56 teleprinter connection device. Click to enlarge." data-balloon-length="large">
+            <img src="files/t56_circuit_diagram.jpg"
+             style="
+            "
+             align="center"
+             width="618px"
+             vspace="4"
+             alt="Circuit diagram of the T56 teleprinter connection device. Click to enlarge."
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="circuit.htm">Detailed explanation of the circuit diagram</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../hybrid.htm">Detailed explanation of the (hidden) hybrid circuit</a>
+<br />
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304022/001/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Interior of the T56, seen from the front left.">
+<a href="img/304022/001/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Interior of the T56, seen from the front left.">
+            <img src="img/t56_int.png"
+             style="
+            "
+             align="center"
+             width="604px"
+             vspace="4"
+             alt="Interior of the T56, seen from the front left."
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=int></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Interior</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The the interior of the device can be accessed by removing four screws
+(marked with a red circle) from the corners of the bottom of the case,
+after which the case shell can be lifted off. All electric and electronic
+parts are mounted to the bottom panel, including the control panel
+and the rear panel with the connections. The annotated images above and below
+give an idea of its layout.
+<br />
+<br />
+The mains transformer is located at the right side, towards the rear.
+To its left are 6 function relays marked H1, U, UH, L, C and AZ.
+In front of the relays is a bank of power resistors that are neatly
+grouped together. The two
+<a href="img/304024/008/full.jpg"><span data-balloon-pos="up" aria-label="More about: special polar relays (A and B)">special polar relays (A and B)</span></a> are located
+just in front of the centre. They have a transparent cover and should
+not be opened. An extra relay (H2) is located to the left of the
+polar relays, and a further relay (D) in the rear right corner.
+The complex multi-deck 3-position MODE-selector is located at the
+front left, just behind the control panel.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/t56_top.png">            <div style="position: relative;" data-balloon-pos="up" aria-label="These are the component references. Move the mouse away from the image to see a clear overview. Click the image to enlarge." data-balloon-length="large">
+<a href="img/t56_top.png">            <div style="position: relative;" data-balloon-pos="up" aria-label="These are the component references. Move the mouse away from the image to see a clear overview. Click the image to enlarge." data-balloon-length="large">
+            <img src="img/t56_top.png"
+             style="
+            "
+             align="center"
+             width="603"
+             vspace="4"
+             alt="These are the component references. Move the mouse away from the image to see a clear overview. Click the image to enlarge."
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+A remarkable feature of the device are the two light bulbs, that are
+located to the right of the polar relays. They are part of the
+internal <span class="short tooltip-red" data-balloon-pos="up" aria-label="Power Supply Unit">PSU</span> and act as a current limiter for the +60V
+and -60V rails. They are used as a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Positive Temperature Coefficient (resistor)">PTC</span> resistor and
+can be seen as an early form of resettable fuse.
+<br />
+<br />
+Note the <a href="img/304022/033/full.jpg"><span data-balloon-pos="up" aria-label="More about: hidden toggle switch">hidden toggle switch</span></a>
+that is mounted in a vertical panel,
+just behind the current meter. It acts as a shorting bridge and allows
+selection between manually patched operation (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Handvermittlung (manually patched exchange)">HV</span>) and automatically
+switched operation (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Telegrafie-Wahlvermittlung (telegraphy dial-up exchange, automatically switched operation)" data-balloon-length="large">TW</span>, Telex). It is shown here in the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Handvermittlung (manually patched exchange)">HV</span> position.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="circuit.htm">Detailed explanation of the circuit diagram</a>
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="../../hybrid.htm">Detailed explanation of the (hidden) hybrid circuit</a>
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Instruction in German at the bottom of the case">          <img src="img/304022/016/thumbnail.jpg"
+           alt="Instruction in German at the bottom of the case"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/016"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Model and serial number tag (German)">          <img src="img/304022/017/thumbnail.jpg"
+           alt="Model and serial number tag (German)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/017"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Model plate at the bottom (English)">          <img src="img/304024/003/thumbnail.jpg"
+           alt="Model plate at the bottom (English)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304024/003"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior - right angle view">          <img src="img/304022/000/thumbnail.jpg"
+           alt="Interior - right angle view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior - left angle view">          <img src="img/304022/001/thumbnail.jpg"
+           alt="Interior - left angle view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/001"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior seen from the rear left">          <img src="img/304022/034/thumbnail.jpg"
+           alt="Interior seen from the rear left"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/034"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior seen from the rear right">          <img src="img/304022/035/thumbnail.jpg"
+           alt="Interior seen from the rear right"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/035"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Left side">          <img src="img/304022/003/thumbnail.jpg"
+           alt="Left side"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/003"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Right side">          <img src="img/304022/004/thumbnail.jpg"
+           alt="Right side"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 9);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/004"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior - top view">          <img src="img/304022/015/thumbnail.jpg"
+           alt="Interior - top view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 10);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/015"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Mode selector - front view">          <img src="img/304022/011/thumbnail.jpg"
+           alt="Mode selector - front view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 11);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/011"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Mode selector - rear view">          <img src="img/304022/012/thumbnail.jpg"
+           alt="Mode selector - rear view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 12);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/012"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Protective lamps">          <img src="img/304022/005/thumbnail.jpg"
+           alt="Protective lamps"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 13);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/005"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Two telegraph relays">          <img src="img/304022/010/thumbnail.jpg"
+           alt="Two telegraph relays"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 14);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/010"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Transformer and rectifier">          <img src="img/304022/006/thumbnail.jpg"
+           alt="Transformer and rectifier"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 15);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/006"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Transformer and bridge rectifiers">          <img src="img/304022/036/thumbnail.jpg"
+           alt="Transformer and bridge rectifiers"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 16);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/036"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Choke coil">          <img src="img/304022/037/thumbnail.jpg"
+           alt="Choke coil"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 17);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/037"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Relays and resistors">          <img src="img/304022/007/thumbnail.jpg"
+           alt="Relays and resistors"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 18);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/007"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Detail">          <img src="img/304022/013/thumbnail.jpg"
+           alt="Detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 19);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/013"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel wiring detail">          <img src="img/304022/014/thumbnail.jpg"
+           alt="Front panel wiring detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 20);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/014"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="HV/Telex switch (DDr bridge)">          <img src="img/304022/033/thumbnail.jpg"
+           alt="HV/Telex switch (DDr bridge)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 21);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/033"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Bottom sub-panel removed">          <img src="img/304022/029/thumbnail.jpg"
+           alt="Bottom sub-panel removed"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 22);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/029"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Circuit diagram inside the case shell">          <img src="img/304022/038/thumbnail.jpg"
+           alt="Circuit diagram inside the case shell"
+           border="0" width=63 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 23);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304022/038"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="T-rls-46a polar relay (B) - left angle view">          <img src="img/304024/008/thumbnail.jpg"
+           alt="T-rls-46a polar relay (B) - left angle view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 24);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304024/008"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'B'" onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">B</span></div></div><div style="height: 40px;"></div>
+<div id="slide_2" class="slide" onClick="slideClose('slide_2')"><span class="slide_close_left" onClick="slideClose('slide_2')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_2', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 1 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/016/full.jpg" alt="Instruction in German at the bottom of the case">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 2 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/017/full.jpg" alt="Model and serial number tag (German)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 3 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304024/003/full.jpg" alt="Model plate at the bottom (English)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 4 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/000/full.jpg" alt="Interior - right angle view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 5 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/001/full.jpg" alt="Interior - left angle view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 6 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/034/full.jpg" alt="Interior seen from the rear left">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 7 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/035/full.jpg" alt="Interior seen from the rear right">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 8 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/003/full.jpg" alt="Left side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 9 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/004/full.jpg" alt="Right side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 10 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/015/full.jpg" alt="Interior - top view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 11 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/011/full.jpg" alt="Mode selector - front view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 12 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/012/full.jpg" alt="Mode selector - rear view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 13 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/005/full.jpg" alt="Protective lamps">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 14 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/010/full.jpg" alt="Two telegraph relays">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 15 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/006/full.jpg" alt="Transformer and rectifier">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 16 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/036/full.jpg" alt="Transformer and bridge rectifiers">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 17 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/037/full.jpg" alt="Choke coil">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 18 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/007/full.jpg" alt="Relays and resistors">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 19 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/013/full.jpg" alt="Detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 20 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/014/full.jpg" alt="Front panel wiring detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 21 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/033/full.jpg" alt="HV/Telex switch (DDr bridge)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 22 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/029/full.jpg" alt="Bottom sub-panel removed">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 23 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304022/038/full.jpg" alt="Circuit diagram inside the case shell">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 24 / 24</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304024/008/full.jpg" alt="T-rls-46a polar relay (B) - left angle view">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_2', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_2', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=rest></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Restoration</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+We have collected a number of hints, tips and guidelines that can be
+useful when reparing, restoring or adjusting a T-56 unit. These are
+based on the collected experiences of German collector Heinz Blumberg,
+complemented by our own experiences and observations.
+<br />
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="fault.htm">Fault finding and adjustments</a>
+<br />
+<br />
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304022/007/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Relays and resistors">
+<a href="img/304022/007/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Relays and resistors">
+            <img src="img/304022/007/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Relays and resistors"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<br />
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=spec></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Specifications</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Device</div><a href="../../index.htm#tcd">Teleprinter connection device (TCD)</a>            <li><div style="display:inline-block; width:100px;">Purpose</div>Connection of teleprinter to dial-up telex subscriber line            <li><div style="display:inline-block; width:100px;">Model</div>T-56            <li><div style="display:inline-block; width:100px;">Manufacturer</div><a href="../index.htm">Siemens & Halske</a>            <li><div style="display:inline-block; width:100px;">Years</div>1957-1980            <li><div style="display:inline-block; width:100px;">Designator</div>Fs Sk 5074/14            <li><div style="display:inline-block; width:100px;">Standard</div>TW-39            <li><div style="display:inline-block; width:100px;">Wiring</div>2- and 4-wire            <li><div style="display:inline-block; width:100px;">Current</div>Single and double            <li><div style="display:inline-block; width:100px;">Signalling</div>Rotary dial, buzzer (2-wire only)            <li><div style="display:inline-block; width:100px;">Modes</div>3 (<a href="#modes">see below</a>)            <li><div style="display:inline-block; width:100px;">Power</div>110, 125, 150, 180, 220V/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span>, 50Hz            <li><div style="display:inline-block; width:100px;">Colour</div>Green, beige            <li><div style="display:inline-block; width:100px;">Dimensions</div>350 &#215; 250 &#215; 130 mm            <li><div style="display:inline-block; width:100px;">Weight</div>8.5 kg          </ul>
+</font></td></tr></table>        <a name=spec_ver></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Versions
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">5074/14-X</div>1959-02            <li><div style="display:inline-block; width:100px;">5074/14-XIII</div>1962-11            <li><div style="display:inline-block; width:100px;">5074/14-XII</div>1963-06            <li><div style="display:inline-block; width:100px;">5074/14-XV</div>1967            <li><div style="display:inline-block; width:100px;">5074/14</div>1969-02          </ul>
+</font></td></tr></table>        <a name=spec_modes></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Modes
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>2-wire double-current            <li>4-wire double-current            <li>2-wire single-current          </ul>
+</font></td></tr></table>        <a name=spec_parts></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Spare parts
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:200px;">1 &#215; Telegraph Relay A</div>Trls-63a            <li><div style="display:inline-block; width:200px;">1 &#215; Telegraph Relay B</div>Trls-64a            <li><div style="display:inline-block; width:200px;">1 &#215; Fuse Si1</div>0.16C (DIN 41571)            <li><div style="display:inline-block; width:200px;">1 &#215; Fuse Si2</div>T4E (DIN 41571)            <li><div style="display:inline-block; width:200px;">2 &#215; Fuse-Lamp SiL1, SiL2</div>T 25/I            <li><div style="display:inline-block; width:200px;">5 &#215; Pilot lamp</div>Fg lp 62e          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=doc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Documentation</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <a name="doc_1"></a>
+<li><font color=#F52E00>Ferschreib-Endsatz T-56</font><br />
+Description and operating instructions (German).<br />
+Fs Bs/Ba 5074/14. <a href="../index.htm">Siemens & Halske</a>, 1 November 1962.<br />
+<small>Not scanned. Please refer to the 1976 version below under C, D and E.</small>
+            <p />
+            <a name="doc_2"></a>
+            <li><a href="files/t56_schema_orig.jpg">T-56 Annotated circuit diagram</a><br />
+Extracted from <a href="#ref_1">[1]</a>. Crypto Museum, August 2024.
+<br /><font color="#E7E">&#10148;</font>&nbsp;<a href="files/t56_circuit.pdf">Origial circuit diagram</a>
+            <p />
+            <a name="doc_3"></a>
+            <li><a href="files/T56_manual_1_3_197610.pdf">Fernschreibanschlussger&#228;t T56 - Teile 1 bis 3</a><br />
+Description, operation and maintenance - Part 1 to 3.<br />
+TDv 5815/008-13. <a href="../index.htm">Siemens & Halske</a>, October 1976.
+            <p />
+            <a name="doc_4"></a>
+            <li><a href="files/T56_manual_4_198001.pdf">Fernschreibanschlussger&#228;t T56 - Teil 4</a><br />
+Field Repair - Part 4.<br />
+TDv 5815/008-40(F). <a href="../index.htm">Siemens & Halske</a>, January 1980.
+            <p />
+            <a name="doc_5"></a>
+            <li><a href="files/T56_manual_5_197702.pdf">Fernschreibanschlussger&#228;t T56 - Teil 5</a><br />
+Replacement parts - Part 5.<br />
+TDv 5815/008-50. <a href="../index.htm">Siemens & Halske</a>, February 1977.
+            <p />
+            <a name="doc_6"></a>
+            <li><a href="files/T56_karte_196805.pdf">Taschenkarte Fernmeldetruppe Nr 3</a><br />
+<a href="files/T56_karte_196805.pdf">Bedienung Fernschreibanschlus&#223;ger&#228;t T 56 (short form instructions)</a>.<br />
+TDv 5815/008-12. Bundeswehr, May 1968.
+            <p />
+            <a name="doc_7"></a>
+            <li><a href="img/304024/004/full.jpg">English instruction plate at the bottom</a><br />
+Taken from T-56, S/N 49/43394. Crypto Museum 11 September 2024.
+          </ol type=A>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+<li><font color=#F52E00>Heinz Blumberg, T-56 and additional information - THANKS !</font><br />
+Museum der Sammlungen. Germany, April 2023 - September 2024.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="circuit.htm">T-56 circuit diagram explained</a><br />
+            <li><a href="fault.htm">T-56 fault finding and adjustments</a><br />
+            <li><a href="../../hybrid.htm">Hybrid circuit (echo cancellation)</a><br />
+            <li><a href="../../../pub/cm/trls43a">About polar relays</a><br />
+<br />
+            <li><a href="../ag13">Anschlussger&#228;t 13</a><br />
+            <li><a href="../../index.htm#conn#ados">Pin-out of the telex connectors</a><br />
+            <li><a href="../index.htm">Other Siemens telex equipment</a><br />
+            <li><a href="../../index.htm">Main telex page</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Friday 30 August 2024. Last changed: Friday, 13 September 2024 - 15:35 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>

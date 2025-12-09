@@ -1,0 +1,2778 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://www.cryptomuseum.com/balloon.css" />
+    <title>WJ-8711A</title>
+    <style type="text/css">
+    a {text-decoration:none}
+    a:hover {color:#123A99; text-decoration:underline}
+    sup {font-size: smaller; vertical-align: baseline; position: relative; bottom: 0.33em}
+    sub {font-size: smaller; vertical-align: baseline; position: relative; bottom: -0.25em}
+    pre {font-size: 13px; padding: 0px; margin: 0px;}
+    td.but1 a {color: black;}
+    td.but2 a {color: white;}
+    table.fixed {table-layout: fixed;}
+    table.fixed td {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    body, table {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+      font-size: 12px;
+    }
+    
+    h4 {
+      font-size: 32px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    div.quote {
+      font-family: monospace;
+      font-size: 14px;
+      color: #D60;
+      padding-left: 40px;
+      margin-bottom: 16px;
+    }
+    
+    div.censor {
+      position: relative;
+      display: inline;
+      color: green;
+      background-color: #ddd;
+    }
+    
+    div.key {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 13px;
+      background: #ededed;
+      color: #aaa;
+      font-size: 12px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.key:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.key:hover {
+      text-decoration: none;
+    }
+    
+    div.button {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 6px;
+      margin-bottom: 0px;
+      background: #60aaff;
+      color: #aaa;
+      color: white;
+      top: 0px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    /* CSS hack to resize the container to the height of its children */
+    
+    .clear_float {
+      clear: both;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    
+    div.right {
+      float: right;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-top: -3px;
+    }
+    
+    div.widget {
+      display: inline;
+      background: #eee;
+      padding-left: 4px;
+      padding-right: 4px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    /* Buttons at left hand side */
+    
+    div.menu {
+      width: 100%;
+      padding-left: 22px;
+      padding-top: 8px;
+    }
+    
+    div.menu a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    div.menu a:hover {
+      underline: none;
+      text-decoration: none;
+    }
+    
+    div.menu div.but {
+      width: 134px;
+      height: 23px;
+      margin-bottom: 4px;
+      color: black;
+      background: #FFDE38;
+      text-align: center;
+      line-height: 23px;
+      cursor: pointer;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    }
+    
+    div.menu div.sub {
+      color: white;
+      background: #78C7FF;
+    }
+    
+    div.menu div.first {
+      font-weight: bold;
+      color: black;
+    }
+    
+    div.menu div.sel {
+      font-weight: bold;
+      background: #0D8FE6;
+      color: white;
+    }
+    
+    div.menu div.spacer {
+      height: 8px;
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+    }
+    
+    div.menu div.hidden {
+      display: none;
+    }
+    
+    div.menu div.submenu {
+      width: 134px;
+    }
+    
+    div.menu div.submenu:hover .hidden {
+      display: block;
+    }
+    
+    div.menu div.alt {
+      background: #ffaaaa;
+    }
+    
+    div.short {
+      color: #338833;
+      color: #aa66aa;
+      display: inline;
+      text-align: center;
+    }
+    
+    div.short:hover {
+      color: red;
+    }
+    
+    span.short {
+      color: #338833;
+      color: #aa66aa;
+      text-align: center;
+    }
+    
+    span.short:hover {
+      color: red;
+    }
+    
+    div.paper {
+      padding: 6px;
+      padding-bottom: 10px;
+      margin: 0px;
+      border-left: 8px solid #ddd;
+      margin-top: 8px;
+      margin-bottom: 22px;
+      padding-left: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    div.paper div.title {
+      font-size: 15px;
+      min-height: 28px;
+      margin-bottom: 4px;
+      margin-top: 4px;
+      color: black;
+    }
+    
+    div.paper:hover {
+      border-left: 8px solid #fb0;
+      background-color: #fffcf8;
+    }
+    
+    div.paper:hover .pkey {
+      background-color: #ffcc88;
+      color: #886644;
+    }
+    
+    div.paper div.author {
+      margin-top: 8px;
+    }
+    
+    div.paper div.author ol,
+    div.paper div.author ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+    }
+    
+    div.paper div.hist {
+      margin-top: 8px;
+    }
+    
+    div.paper div.hist ul {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      font-size: 11px;
+    }
+    
+    div.paper div.abstract {
+      font-size: 11px;
+      margin-left: 20px;
+    }
+    
+    div.paper div.quotation {
+      margin-left: 20px;
+    }
+    
+    div.paper div.spacer {
+      height: 8px;
+    }
+    
+    .ekey {
+    //  background-color: #eee;
+    //  border-color: #888;
+      color: #ddbb66;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px;
+    }
+    
+    div.paper:hover .ekey {
+      color: #cc8844;;
+    }
+    
+    .hkey {
+      color: #67c;
+      font-size: 10px;
+      padding: 2px;
+      padding-left: 6px;
+      padding-right: 6px;
+    
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+    }
+    
+    div.paper:hover .hkey {
+      color: #cc8844;
+    }
+    
+    .hkey:hover {
+      background-color: #efe8df;
+    }
+    
+    div.pkey {
+      display: inline;
+      padding: 3px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin: 0px;
+      margin-right: 0px;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      background: #e0e0e0;
+      color: #777;
+      font-size: 12px;
+      top: -2px;
+    
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+    
+    }
+    
+    div.pkey:hover,
+    div.paper:hover div.pkey:hover {
+      background: #60aaff;
+      color: white;
+    }
+    
+    a.pkey:hover {
+      text-decoration: none;
+    }
+    
+    div.legend {
+      display: inline-block;
+      text-align: center;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      bottom: -1px;
+    }
+    
+    div.remark, div.red, div.blue, div.grey {
+      background-color: #ffe8e8;
+      color: #ff4444;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      margin-top: 5px;
+      padding: 4px;
+      padding-bottom: 7px;
+      padding-left: 8px;
+      font-size: 11px;
+    }
+    
+    div.blue {
+      background-color: #e0f0ff;
+      color: #8090b0;
+    }
+    
+    div.grey {
+      background-color: #f0f0f0;
+      color: #777777;
+    }
+    
+    div.tred {
+      color: red;
+    }
+    
+    /* Vertical text in tables */
+    
+    table.table td.vert,
+    table.table tr.vert td {
+      width: 20px;
+      height: 120px;
+    }
+    
+    div.vert {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+      width: 100px;
+      height: 20px;
+      position: relative;
+      left: 22px;
+      bottom: 4px;
+      -webkit-transform-origin: left bottom 0;
+      transform-origin: left bottom 0;
+      text-align: left;
+    }
+    
+    
+    /* CSS code for slideshow */
+    
+    .slide {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .slide_content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      margin-bottom: 200px;
+      padding: 0;
+      width: 90%;
+      max-width: 1000px;
+      align: center;
+    
+      border: 12px solid white;
+    
+      -webkit-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -ms-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      -o-box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.6);
+    }
+    
+    .slide_img {
+    }
+    
+    .slide_close,
+    .slide_close_left {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .slide_close_left {
+      left: 25px;
+    }
+    
+    .slide_close:hover,
+    .slide_close:focus,
+    .slide_close_left:hover,
+    .slide_close_left:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .slide_main {
+      display: none;
+    }
+    
+    .slide_small {
+      max-width: 500px;
+      align: center;
+      border: 1px dotted red;
+    }
+    
+    .slide_next,
+    .slide_prev {
+      cursor: pointer;
+      background: rgba(128, 128, 128, 0.5);
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    
+    .slide_next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .slide_next:hover,
+    .slide_prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      color: white;
+    }
+    
+    .slide_number {
+      color: #f2f2f2;
+      font-size: 20px;
+      padding: 8px 12px;
+      position: absolute;
+      top: -60px;
+      left: -20px;
+    }
+    
+    .slide_group {
+      color: #9f9f9f;
+      font-size: 32px;
+      display: inline;
+      margin-right: 6px;
+    }
+    
+    .slide_index {
+      color: #e0e0e0;
+      font-size: 32px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: 330px;
+      margin-top: -20px;
+      cursor: pointer;
+    }
+    
+    .slide_caption {
+      text-align: center;
+      background-color: white;
+      color: #666;
+      font-size: 18px;
+      padding: 0px;
+    }
+    
+    .slide_demo {
+      opacity: 0.6;
+    }
+    
+    /* Special ticks in lists */
+    
+    ul.tick {
+      list-style: none;
+      padding: 0px;
+      padding-left: 13px;
+    }
+    
+    ul.tick li:before {
+      content: '\2022';
+      margin: 10px;
+    }
+    
+    ul.tick li.tick:before {
+      content: '\2714';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 7px;
+      color: #22aa22;
+    }
+    
+    ul.tick li.cross:before {
+      content: '\2718';
+      margin: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      color: #ff2222;
+    }
+    
+    /* Lists with prefixed counter */
+    
+    div.counter {
+      counter-increment: number;
+      counter-reset: subnum;
+    }
+    
+    ol.counter, {
+      counter-reset: number;
+      counter-reset: subnum;
+      list-style-position: outside;
+    }
+    
+    ol.counter li {
+      list-style: none;
+      counter-increment: subnum;
+    }
+    
+    ol.counter li:before {
+      content: counter(number) "." counter(subnum);
+      position: relative;
+      left: -15px;
+    }
+    
+    ol.counter_UL li:before {
+      content: counter(number, upper-latin) "." counter(subnum);
+    }
+    
+    ol.counter_LL li:before {
+      content: counter(number, lower-latin) "." counter(subnum);
+    }
+    
+    ol.counter_UR li:before {
+      content: counter(number, upper-roman) "." counter(subnum);
+    }
+    
+    ol.counter_LR li:before {
+      content: counter(number, lower-roman) "." counter(subnum);
+    }
+    
+    .tooltip-red {
+      --balloon-color: #cc0000;
+    }
+    
+    /* Tour icon with text */
+    
+    .tour:hover {
+      animation: tour 10s infinite linear;
+    }
+    
+    @keyframes tour {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    
+    </style>
+    <link rel="icon" href="https://www.cryptomuseum.com/img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="https://www.cryptomuseum.com//img/favicon.ico" />
+    <script language="JavaScript">
+    
+    function slideOpen(slidename) {
+      document.getElementById(slidename).style.display = "block";
+    }
+    
+    function slideClose(slidename) {
+      document.getElementById(slidename).style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    //slideShow(slideIndex);
+    
+    function slideNext(slidename, n) {
+      slideShow(slidename, slideIndex += n);
+      event.cancelBubble=true;
+    }
+    
+    function slideCurrent(slidename, n) {
+      slideShow(slidename, slideIndex = n);
+      event.cancelBubble=true;
+    }
+    
+    function slideShow(slidename, n) {
+    
+      var i;
+      var slideId = document.getElementById(slidename);
+      var slides = slideId.getElementsByClassName("slide_main");
+      var alts = slideId.getElementsByClassName("slide_img");
+      var captionText = slideId.getElementsByClassName("dummy_caption");
+    
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      captionText[0].innerHTML = alts[slideIndex-1].alt;
+    
+    }
+    
+    function slideCloseAll() {
+    
+      var i;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          slideClose(slideId);
+        }
+      }
+    
+    }
+    
+    function getOpenSlide() {
+    
+      var open = 0;
+      var i;
+      var j;
+      var sub;
+      var slideId;
+      var slides = document.getElementsByClassName("slide");
+    
+      if (slides.length) {
+        for (i = 0; i < slides.length; i++) {
+          slideId = slides[i].id;
+          if (document.getElementById(slideId).style.display == "block") open = slideId;
+        }
+      }
+      return open;
+    
+    }
+    
+    
+    /*
+       This function handles key presses in the entire document and
+       is called from the onKeyDown handler of the <body> element.
+    */
+    
+    function slideKey(e) {
+    
+      var open = getOpenSlide();
+      var key = e.keyCode;
+    
+      if (open) {
+        if (key == 27) {slideCloseAll()};
+        if (key == 39) {slideNext(open, 1)};
+        if (key == 37) {slideNext(open, -1)};
+      }
+    
+    }
+    
+    </script>
+    <script language="JavaScript">
+    
+      function toggle_search() {
+      
+        var x = document.getElementById("search");
+        ios = /ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase());
+        frm = document.getElementById("searchForm");
+    
+        if (!ios) frm.target = '_blank';
+    
+        if (x.style.display == "none") {
+          x.style.display = "inline";
+          x = document.getElementById("q");
+          x.value = '';
+          x.focus();
+        } else {
+          x.style.display = "none";
+        }
+      
+      }
+    
+    </script>
+  </head>
+<body background="../../../" bgcolor="#FFFFFF" text="#000000" link="#123A99" vlink="#3659AD" onKeyDown="slideKey(event);">    <table border=0 cellspacing=0 cellpadding=0 width=100%><tr><td width=100% align=center>
+    <table  width=800 border=0 cellspacing=0 cellpadding=0>
+    <a name=top_of_page></a>
+      <tr>
+      </tr>
+    </table>
+    <table width=800 border=0 cellpadding=0 cellspacing=0>
+      <tr><td valign=top>
+      <table width=180 border=0 cellpadding=0 cellspacing=0>
+        <tr><td valign="top" align="center"><div data-balloon-pos="left" aria-label="Click for homepage"><a href="../../../index.htm"><img src="../../../svg/logo/wheel.svg" align="center" border="0" /></a></div></td></tr>
+        <tr><td><div class="menu">
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Click here to return to the homepage" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../index.htm';" >Homepage</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Cipher machines and other cryptographic items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../crypto/index.htm';" >Crypto</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Clandestine agent radio sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../spy/index.htm';" >Spy radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="High-speed data transmitters" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../burst/index.htm';" >Burst encoders</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Intercept, direction finding, TSCM, wire-tapping, etc." data-balloon-length="medium">
+          <div class="but sub first" onClick="location.href='../../../df/index.htm';" >Intercept</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Alphabetic index of model numbers and names" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/list.htm';" >Index</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Radio Direction Finders" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/df.htm';" >DF</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Radio Monitoring Equipment" data-balloon-length="medium">
+          <div class="but sel sub" onClick="location.href='../../../df/mon.htm';" >Monitoring</div>
+</div>
+          <div class="but sel sub" onClick="location.href='../../../df/receivers.htm';" >Surveillance</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Technical Surveillance and Countermeasures" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/tscm.htm';" >TSCM</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../df/antennas.htm';" >Antennas</div>
+          <div class="but sub" onClick="location.href='../../../df/scanners.htm';" >Scanners</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="wire tapping" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/wired.htm';" >Wired</div>
+</div>
+          <div class="but sub" onClick="location.href='../../../df/tempest.htm';" >TEMPEST</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Soviet Union" data-balloon-length="medium">
+          <div class="but sub" onClick="location.href='../../../df/ussr.htm';" >USSR</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but sub" onClick="location.href='../../../df/mason/index.htm';" >Mason</div>
+          <div class="but sub" onClick="location.href='../../../df/microtel/index.htm';" >Microtel</div>
+          <div class="but sub" onClick="location.href='../../../df/minilock/index.htm';" >Minilock</div>
+          <div class="but sub" onClick="location.href='../../../df/rei/index.htm';" >REI</div>
+          <div class="but sub" onClick="location.href='../../../df/rft/index.htm';" >RFT</div>
+          <div class="but sub" onClick="location.href='../../../df/rs/index.htm';" >Rohde & Schwarz</div>
+          <div class="but sub" onClick="location.href='../../../df/scanlock/index.htm';" >Scanlock</div>
+          <div class="but sub" onClick="location.href='../../../df/telefunken/index.htm';" >Telefunken</div>
+          <div class="but sel sub" onClick="location.href='../../../df/wj/index.htm';" >Watkins-Johnson</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Under-cover related items" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../covert/index.htm';" >Covert</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Military radios and radio-related subjects" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../radio/index.htm';" >Radio</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Personal Computers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../pc/index.htm';" >PC</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Digital telegraphy" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../telex/index.htm';" >Telex</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Regular, special, fixed and mobile telephone sets" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../phone/index.htm';" >Telephones</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of people mentioned on this website" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../people/index.htm';" >People</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of intelligence, security and law-enforcement agencies" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../intel/index.htm';" >Agencies</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Index of manufacturers" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../manuf/index.htm';" >Manufacturers</div>
+</div>
+          <div class="spacer"></div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="If you like the information presented on this website, please consider making a donation" data-balloon-length="medium">
+          <div class="but alt" onClick="location.href='../../../donate.htm';" >DONATE</div>
+</div>
+          <div class="spacer"></div>
+          <div class="but" onClick="location.href='../../../pub/index.htm';" >Publications</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Standard and reference documents" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../ref/index.htm';" >Standards</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items of which we have more than one, or that do not fit in the collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../sale/index.htm';" >For sale</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Self-build kits for electronics enthusiasts" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../kits/index.htm';" >Kits</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that can be ordered via regular mail" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../shop/index.htm';" >Shop</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Latest news about cryptography, espionage, covert operations, book releases, etc." data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../news/index.htm';" >News</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Scheduled events in which Crypto Museum is involved" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../events/index.htm';" >Events</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Items that are still missing in our collection" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../wanted/index.htm';" >Wanted</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="How to contact us" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../contact/index.htm';" >Contact</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Our mission statement -- Why we do this" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../mission.htm';" >About us</div>
+</div>
+          <div style="text-align: center;"  data-balloon-pos="left" aria-label="Links to related websites that you might find interesting" data-balloon-length="medium">
+          <div class="but" onClick="location.href='../../../links/index.htm';" >Links</div>
+</div>
+        </div>
+</td></tr>
+        <tr><td align="center">
+</td></tr>
+        <tr><td>
+        </td></tr>
+      </table>
+      </td><td valign=top>
+      <table width=100% border=0 cellpadding=0 cellspacing=0>
+        <tr><td><table border="0" width="100%" cellpadding="0" cellspacing="0"><tr>
+        <td align="left" valign="bottom">
+<a href="https://www.twitter.com/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow cryptomuseum on X (formerly known as Twitter)" data-balloon-length="medium"><img src="../../../svg/x_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://cryptomuseum.bsky.social" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Follow us on Bluesky" data-balloon-length="medium"><img src="../../../svg/bluesky_logo.svg" border="0" style="width: 20px; margin-bottom: 3px; margin-right: 2px;" /></div></a>&nbsp;<a href="https://www.youtube.com/user/cryptomuseum" target="_blank"><div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Watch cryptomuseum on YouTube" data-balloon-length="medium"><img src="../../../img/sm/youtube_play_24.png" border="0" style="margin-bottom: 3px;"></div></a>&nbsp;<div style="display: inline-block; text-align: center;"  data-balloon-pos="down" aria-label="Click to search this site" data-balloon-length="medium"><img src="../../../svg/search.svg" border="0" style="position: relative; bottom: 2px; left: 2px;" onClick="toggle_search()" /></div>
+        &nbsp;<div id="search" style="display:none; position:absolute;  width: 250px;">
+
+        <form id="searchForm" action="https://www.google.com/search" method="get" style="display:inline; width:220px;">
+
+        <input type="hidden" name="sitesearch" value="https://www.cryptomuseum.com" />
+        <input id="q" type="text" name="q" size="32" style="width: 192px;" placeholder="Enter your text and press Enter"/>
+        <div style="display:inline; position:relative; left: -20px;" onClick="document.getElementById('q').value = ''; document.getElementById('q').focus();" onMouseOver="this.style.cursor='pointer'">×</div>
+        <input type="submit" value="Search" name="submit" style="display:none;" />
+        </form>
+
+        </div>
+
+        </td>
+        <td align=right valign=bottom width=1>
+        <a href="../../../index.htm"><img src="../../../svg/logo/word.svg" align=right alt="Click for homepage" border=0></a>
+        </td>
+        </tr></table></td></tr>
+        <tr><td colspan=0>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        </td></tr>
+        <tr><td colspan=0 height=14>
+        <img src="../../../img/blank.gif" width=1 height=14>
+        </td></tr>
+        <tr><td>
+<a class="key" href="../../../manuf/wj"><div  data-balloon-pos="up" aria-label="Shortcut to Watkins-Johnson" class="key">W-J</div></a>&nbsp;&nbsp;<a class="key" href="../wj8711"><div  data-balloon-pos="up" aria-label="Back to WJ-8711" class="key right">&larr; WJ-8711</div></a>&nbsp;&nbsp;        <div style="height: 20px;"></div>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>WJ-8711A</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+<b>HF surveillance and monitoring receiver</b>
+<br />
+<br />
+<b>WJ-8711A</b> is a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>-based <span class="short tooltip-red" data-balloon-pos="up" aria-label="High Freuqency (3-30 MHz)">HF</span> <a href="../../mon.htm"><span data-balloon-pos="up" aria-label="More about: monitoring receiver">monitoring receiver</span></a> for the
+5 kHz to 30 MHz frequency range, intro&shy;du&shy;ced around 1996 by
+<a href="../../../manuf/wj"><span data-balloon-pos="up" aria-label="More about: Watkins-Johnson">Watkins-Johnson</span></a> (<span class="short" aria-label="Watkins-Johnson" data-balloon-pos="up"><a href="../../../manuf/wj" class="short" >W-J</a></span>) in Gaithersburg (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Maryland">MD</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>)
+as an up&shy;dated ver&shy;sion of the highly successful <a href="../wj8711"><span data-balloon-pos="up" aria-label="More about: WJ-8711">WJ-8711</span></a>, which
+had been in production from 1991-1996 <a href="#ref_2">[2]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Like its predecessors and other contemporary receivers, the WJ-8711A is housed
+in a 19" 3U enclosure, but weighs far less, due to the use of miniature (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Surface Mount Device">SMD</span>)
+components and the simple non-modular mechanical construction. As such it is
+probably the lightest receiver in its class.
+<br />
+<br />
+The front panel is clear and well layed out, and operation is intuitive.
+The use of a digital signal processor (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>) not only simplifies the
+design, but also boosts its <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span> per&shy;for&shy;mance.
+The audio quality is superb and the band&shy;width can be set between
+56 Hz and 16 kHz in 66 steps.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304314/033/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Watkins-Johnson WJ-8711A">
+<a href="img/304314/033/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Watkins-Johnson WJ-8711A">
+            <img src="img/304314/033/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Watkins-Johnson WJ-8711A"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The use of a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span> makes it possible to update the receiver with new
+waveforms and improved per&shy;formance, simply by issueing a firmware update.
+It also significantly reduces the production cost. As a unit price of
+US$ 20,486, it was less than half the price of competing receivers like the
+<a href="../../telefunken/e1800a"><span data-balloon-pos="up" aria-label="More about: AEG telefunken E-1800/A">AEG telefunken E-1800/A</span></a>.
+The WJ-8711A was in production from 1996 to 2010.
+The 'black box' ver&shy;sion of the receiver (without front panel, but with
+V.24 interface) is known as the <b>WJ-8712A</b>.
+<br />
+<br />
+The WJ-8711A was the last self-contained stand-alone receiver from <span class="short" aria-label="Watkins-Johnson" data-balloon-pos="up"><a href="../../../manuf/wj" class="short" >W-J</a></span>
+before everthing went fully digital. It is similar in appearance and
+operation to the contemporary but cheaper Ten-Tec RX-340, which was released
+around the time of the introduction of the original <a href="../wj8711"><span data-balloon-pos="up" aria-label="More about: WJ-8711">WJ-8711</span></a> (1990),
+but was aimed at the amateur market.
+For <a href="https://bit.ly/4c7ONac" target="_blank"><span data-balloon-pos="up" aria-label="bit.ly (off-site)">comparison between the two receivers</span></a>,
+refer to <a href="#ref_5">[5]</a>.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Watkins-Johnson WJ-8711A">          <img src="img/304314/033/thumbnail.jpg"
+           alt="Watkins-Johnson WJ-8711A"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/033"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel">          <img src="img/304314/031/thumbnail.jpg"
+           alt="Front panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/031"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Rear panel">          <img src="img/304314/027/thumbnail.jpg"
+           alt="Rear panel"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_1'); slideCurrent('slide_1', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/027"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'A'" onClick="slideOpen('slide_1'); slideCurrent('slide_1', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">A</span></div></div><div style="height: 40px;"></div>
+<div id="slide_1" class="slide" onClick="slideClose('slide_1')"><span class="slide_close_left" onClick="slideClose('slide_1')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_1', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 1 / 3</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304314/033/full.jpg" alt="Watkins-Johnson WJ-8711A">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 2 / 3</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304314/031/full.jpg" alt="Front panel">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">A</div> 3 / 3</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_1', 1);" src="img/304314/027/full.jpg" alt="Rear panel">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_1', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_1', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=features></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Features</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the front panel of the WJ-8711A. The controls are grouped
+as indicated by grey seg&shy;ments and white lines. At the right is the
+frequency tuning section with a large clear green 8-digit readout.
+At the bottom right is the tuning knob, of which the tuning step can
+be altered from 1 MHz down to 1 Hz. Direct entry of the desired
+frequency is possible via the 16-button keypad.
+<br />
+<br />
+At the centre are the settings for Automatic Gain Control (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Automatic Gain Control">AGC</span>),
+Beat Frequency Oscillator (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Beat Frequency Oscillator">BFO</span>), noise blanker, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> bandwidth,
+waveform (mode) and squelch, all of which can be adjusted with a single
+knob. In addition, this section gives access to a menu with various
+other parameters.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304314/031/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304314/031/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/wj8711a_front.png"
+             style="
+            "
+             align="center"
+             width="603px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+The section at the left gives access to the device's memory, in which
+up to 100 channels can be programmed. Scanning is possible at a speed
+of 150 channels per seconds. It is also possible to scan a band segment
+by setting the upper and lower boundaries. Along the bottom edge are
+controls for adjusting the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> gain and the audio volume (of the
+internal or external speaker). A separate volume control is available for
+the headphones, to the right of the 6 mm jack socket.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304314/027/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304314/027/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/wj8711a_rear.png"
+             style="
+            "
+             align="center"
+             width="540px"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+<br />
+All connections (with exception of the headphones) are at the rear of the
+device, shown in the image above. At the right is the connection to the
+internal switched-mode power supply unit, which accepts 100-254V <span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span>.
+At the bottom left are four BNC sockets for connection of the an&shy;tenna,
+an optional signal monitor, an optional external 10 MHz reference input
+and the 455 kHz <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> output. At the centre is a black contact strip to
+which the external speaker can be connected. There are also two
+transformer-isolated line outputs, plus a couple of switching contacts.
+For external control from a computer, a simple V.24 port is
+available. It supports the CSMA protocol.
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=ver></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Versions
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+<li><font color=#F52E00>WJ-8711</font><br />
+This is the initial version of the receiver, released in 1991.
+It was developed at the request of a <span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America (USA)">US</span> government agency, presumably
+the <span class="short" aria-label="National Security Agency (USA)" data-balloon-pos="up"><a href="../../../intel/nsa" class="short" >NSA</a></span> or the <span class="short" aria-label="Central Intelligence Agency (USA)" data-balloon-pos="up"><a href="../../../intel/cia" class="short" >CIA</a></span>, in an attempt to significantly reduce the price
+of surveillance and monitoring receivers.
+<font color="#E7E">&#10148;</font>&nbsp;<a href="../wj8711">More</a>
+            <p />
+<li><font color=#F52E00><b>WJ-8711A</b></font><br />
+This is an improved version of the WJ-8711, in which the DSP has been
+replaced with a different type, and the firmware has been adapted
+accordingly. This version also contains a number of
+<a href="#diff">improvements and enhancements (see below)</a>.
+The device featured here is of this type.
+The following differences with the original WJ-8711 have been recorded:<br />
+<br />
+<ul>
+<li>Different <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span> (and firmware)
+<li>Improved performance
+<li>Improved audio quality
+<li>Better suppression of internally generated noise
+</ul>
+            <p />
+<li><font color=#F52E00>WJ-8711A-3</font><br />
+Government version of the WJ-8711A, with the following extras:<br />
+<br />
+<ul>
+<li>FSK mode
+<li>Preselector fitted
+<li>Internal loudspeaker fitted
+<li>High stability reference oscillator
+</ul>
+            <p />
+<li><font color=#F52E00>HF-1000</font><br />
+Consumer (amateur) version of the WJ-8711, aimed at shortwave listeners
+and amateur radio operators.
+            <p />
+<li><font color=#F52E00>HF-1000A</font><br />
+Amateur version of the WJ-8711A.
+            <p />
+<li><font color=#F52E00>WJ-8712</font><br />
+Black box version of the WJ-8711, without control panel. Can only be
+controlled via the V.24 interface.
+            <p />
+<li><font color=#F52E00>WJ-8712A</font><br />
+Black box version of the WJ-8711A, without control panel. Can only be
+controlled via the V.24 interface.
+          </ul>
+        </font></td></tr></table>
+<div style="height: 20px;"></div>        <a name=block></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Block diagram</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Below is the block diagram of the WJ-8711A. The antenna input at the
+top left is fed &mdash; via an optional preselector &mdash; to the input of the
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> subsystem. The 25 kHz output from the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> sub&shy;system is then fed
+to a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span> and finally to the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span> subsystem, after which the audio
+is delivered to the headphones and optionally to an internal or external speaker.
+All subsystems are con&shy;trol&shy;led by the central
+processing unit (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Central Processing Unit">CPU</span>), which is interfaced to the front panel (Controls).
+The radio can also be con&shy;trol&shy;led
+via the <a href="#conn_v24"><span data-balloon-pos="up" aria-label="Jump to: V.24 (RS232/CSMA) interface">V.24 (RS232/CSMA) interface</span></a> at the rear of the device.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/wj8711a_block.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+            <div style="margin-top: 4px; margin-bottom: 4px;">
+            <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+            <b>
+            <center>WJ-8711A - block diagram</center>
+            </b>
+            </font>
+            </div>
+          </td></tr></table>
+<br />
+Below is a more detailed block diagram of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> subsystem. The signal from
+the antenna is first fed (via an optional preselector) to a low-pass filter
+and then optionally through a preamplifier or attenuator, before it is passed
+to the first mixer (IF1), where it is mixed with the 1st <span class="short tooltip-red" data-balloon-pos="up" aria-label="Local Oscillator">LO</span>. The IF1 output
+at 40.455 MHz is then mixed in the second mixer (IF2) with 40 MHz from the
+2nd <span class="short tooltip-red" data-balloon-pos="up" aria-label="Local Oscillator">LO</span>, re&shy;sul&shy;ting in a 455 kHz signal. In the 3rd mixer (IF3) this
+455 kHz signal is mixed with 430 kHz from the 3rd <span class="short tooltip-red" data-balloon-pos="up" aria-label="Local Oscillator">LO</span> to obtain a balanced
+25 kHz signal that can be processed by the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span> subsystem.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/wj8711a_block_rf.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+            <div style="margin-top: 4px; margin-bottom: 4px;">
+            <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+            <b>
+            <center>RF subsystem - block diagram</center>
+            </b>
+            </font>
+            </div>
+          </td></tr></table>
+<br />
+The balanced 25 kHz signal from the IF3 stage is fed to a 16-bit <span class="short tooltip-red" data-balloon-pos="up" aria-label="Analogue-to-Digital Converter">ADC</span> that
+samples it at 100 kHz. The resulting digital data is fed to a pre-programmed
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span> that performs a variety of operations and functions, such as 1 Hz fine
+tuning <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> filtering, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Received Signal Strength Indicator">RSSI</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Automatic Gain Control">AGC</span>, <span class="short tooltip-red" data-balloon-pos="up" aria-label="Beat Frequency Oscillator">BFO</span>, squelch and demodulation.
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+            <div style="position: relative;">
+            <div style="position: relative;">
+            <img src="svg/wj8711a_block_dsp.svg"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             border=0
+            
+             />
+            </div>
+            </td></tr><tr><td align=center>
+            <div style="margin-top: 4px; margin-bottom: 4px;">
+            <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+            <b>
+            <center>DSP/AF subsystem - block diagram</center>
+            </b>
+            </font>
+            </div>
+          </td></tr></table>
+<br />
+After processing, the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span> output is converted back to the analogue
+domain with a <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital-to-Analog Converter">DAC</span>. This is a multiplexed signal that carries both side
+bands of an <span class="short tooltip-red" data-balloon-pos="up" aria-label="Independent Side Band">ISB</span> signal. The multiplexed signal is de&shy;mul&shy;ti&shy;plexed,
+resulting in separate <span class="short tooltip-red" data-balloon-pos="up" aria-label="Lower Side Band">LSB</span> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Upper Side band">USB</span> components that are passed to the
+headphones. The signals are also available as LINE A and LINE B signals.
+The multiplexed signal from the output of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital-to-Analog Converter">DAC</span> is also upconverted
+to 455 kHz, filtered, buffered and passed to the <a href="#conn_if"><span data-balloon-pos="up" aria-label="Jump to: IF output">IF output</span></a>
+at the rear.
+<br />
+<br />
+<br />
+          <br />
+          <table 
+           border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=top>
+<a href="img/304314/030/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+<a href="img/304314/030/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Click to see more">
+            <img src="img/wh8711a_int.png"
+             style="
+             max-width: 618px;
+            "
+             align="center"
+             vspace="4"
+             alt="Click to see more"
+             border=0
+            
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </font>
+          </td></tr>
+        </table>
+<br />        <a name=int></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Interior</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The interior of the WJ-8711A can be accessed by removing 10 screws
+(2 at the top, two at the rear, 3 at the left and 3 at the right),
+after which the top panel can be lifted off.
+This reveals the interior, as shown in the image above.
+The device is surprisingly empty, which explains its low weight.
+At the left is the wide range switched-mode power supply, which
+accepts 100-254V/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Alternating Current">AC</span>.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Inside the enclosure are just three printed circuit boards:
+(1) the digital board, (2) the tuner board and (3) the front panel board.
+The latter is mounted behind the front panel. Each of the three  boards
+is discussed in more detail below.
+<br />
+<br />
+At the center of the device, to the right of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Powr Supply Unit">PSU</span>, is the
+digital board with the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Central Processing Unit">CPU</span> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>. It controls all parts of the
+radio. It is connec&shy;ted to the tuner board and to the front panel
+<span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> by means of two <a href="img/304314/026/full.jpg"><span data-balloon-pos="up" aria-label="More about: 24-wire rainbow ribbon cables">24-wire rainbow ribbon cables</span></a>.
+It has a DB25 socket with the <a href="#conn_v24"><span data-balloon-pos="up" aria-label="Jump to: V.24 control port">V.24 control port</span></a>
+and a contact strip for audio and switching outputs.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304314/000/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="CPU - top view">
+<a href="img/304314/000/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="CPU - top view">
+            <img src="img/304314/000/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="CPU - top view"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The board is built around a
+<a href="files/M68HC11E.pdf"><span data-balloon-pos="up" aria-label="More about: Motorola MC68HC11A 8-bit ...">Motorola MC68HC11A 8-bit microcontroller</span></a>
+with built-in peripherals. The firmware for the microcontroller is
+held in a 256KB <span class="short tooltip-red" data-balloon-pos="up" aria-label="Erasable Programmable Read-Only Memory">EPROM</span>. Also on the board is a
+<a href="files/DSP56002.pdf"><span data-balloon-pos="up" aria-label="More about: Motorola DSP56002 Digital Signal ...">Motorola DSP56002 Digital Signal Processor</span></a>
+(<span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>), of which the firmware is held in a separate 64KB <span class="short tooltip-red" data-balloon-pos="up" aria-label="Erasable Programmable Read-Only Memory">EPROM</span>.
+There are two free 24-pin headers on which a range of
+<a href="#spec_opt"><span data-balloon-pos="up" aria-label="Jump to: (retrofittable) options">(retrofittable) options</span></a> can be installed.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+To the right of the digital board is the slightly lar&shy;ger
+<a href="img/304314/004/full.jpg"><span data-balloon-pos="up" aria-label="More about: tuner board">tuner board</span></a>. It holds the analogue <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span>
+cir&shy;cuits, plus the three <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> stages, each with their own mixer
+and synthesizer, all driven by a com&shy;mon highly stable 10 MHz
+reference signal.
+<br />
+<br />
+The <span class="short tooltip-red" data-balloon-pos="up" aria-label="Radio Frequency">RF</span> and <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> circuits are built with <span class="short tooltip-red" data-balloon-pos="up" aria-label="Surface Mount Device">SMD</span> parts,
+and are spread over a series of shielded
+com&shy;part&shy;ments, each covered by a metal cap (that has been removed
+in the image on the right).
+At the <a href="img/304314/005/full.jpg"><span data-balloon-pos="up" aria-label="More about: bottom of the board">bottom of the board</span></a> are some larger
+parts, such as a wideband amplifier and the 10 MHz
+tempe&shy;ra&shy;ture-compensated crystal oscillator (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Temperature Compensated Crystal Oscillator">TCXO</span>).
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304314/004/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Receiver board - top view">
+<a href="img/304314/004/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Receiver board - top view">
+            <img src="img/304314/004/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Receiver board - top view"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The tuner board is connected to the digital board via a short
+24-pin rainbow ribbon cable. This includes the balanced 25 kHz <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span>3
+signal, which is digitized by means of a 16-bit <span class="short tooltip-red" data-balloon-pos="up" aria-label="Analogue-to-Digital Converter">ADC</span> on the digital
+board and then passed to the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>. All <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span>/<span class="short tooltip-red" data-balloon-pos="up" aria-label="Audio Frequency">AF</span> processing is done
+on the digital board.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+Also connected to the digital board is the front panel assembly, shown
+in the image on the right. Is consists of a large <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> that runs over the
+full width of the receiver. It holds the dis&shy;plays, rotary encoders
+and push-buttons, some of which protrude the aluminium front panel.
+<br />
+<br />
+The image on the right shows the solder side of the front panel <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>.
+The front panel has its own microcontroller (not visible here) of which
+the firmware is held in an <a href="img/304314/025/full.jpg"><span data-balloon-pos="up" aria-label="More about: EPROM at the sol&shy;der side">EPROM at the sol&shy;der side</span></a>
+(here visible on the far left). This allows it to be swapped without disassembling
+the front panel.
+          </font></td>
+          <td>&nbsp;&nbsp;</td>
+          <td align=center valign=top width=100>
+          <table 
+           border="0" cellpadding="0" cellspacing="0" ><tr><td align="center" valign=top>
+<a href="img/304314/022/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Front panel seen from the inside">
+<a href="img/304314/022/full.jpg">            <div style="position: relative;" data-balloon-pos="up" aria-label="Front panel seen from the inside">
+            <img src="img/304314/022/small.jpg"
+             style="
+             max-width: 618px;
+            "
+             align="left"
+             vspace="4"
+             alt="Front panel seen from the inside"
+             border=0
+             width=298 height=200
+             />
+            </div>
+            </a>
+            </td></tr><tr><td align=center>
+          </td></tr></table>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+The signal strength indicator is an old type <i>moving coil instrument</i>
+which is housed in a separate aluminium enclosure that is fitted to the
+front panel <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>. It is backlit with a light bulb and is dri&shy;ven by the
+front panel microcontroller, based on the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Received Signal Strength Indicator">RSSI</span> value provided by the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>.
+Aside the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span> (here visible on the far right) is the
+mains power switch wiring and the headphones socket.
+          </font>
+          </td></tr>
+        </table>
+<br /><div style="position: relative;">        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="WJ-8711A with cover removed">          <img src="img/304314/030/thumbnail.jpg"
+           alt="WJ-8711A with cover removed"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/030"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Mains filter (replaced)">          <img src="img/304314/021/thumbnail.jpg"
+           alt="Mains filter (replaced)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 2);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/021"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="CPU board">          <img src="img/304314/019/thumbnail.jpg"
+           alt="CPU board"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 3);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/019"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="CPU top side">          <img src="img/304314/017/thumbnail.jpg"
+           alt="CPU top side"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 4);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/017"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="CPU - bottom side">          <img src="img/304314/018/thumbnail.jpg"
+           alt="CPU - bottom side"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 5);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/018"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="CPU - top view">          <img src="img/304314/000/thumbnail.jpg"
+           alt="CPU - top view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 6);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/000"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="CPU - top view">          <img src="img/304314/001/thumbnail.jpg"
+           alt="CPU - top view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 7);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/001"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="CPU - bottom view">          <img src="img/304314/002/thumbnail.jpg"
+           alt="CPU - bottom view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 8);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/002"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Interior - Radio board">          <img src="img/304314/032/thumbnail.jpg"
+           alt="Interior - Radio board"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 9);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/032"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver board">          <img src="img/304314/020/thumbnail.jpg"
+           alt="Receiver board"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 10);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/020"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver board - top side">          <img src="img/304314/015/thumbnail.jpg"
+           alt="Receiver board - top side"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 11);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/015"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver board - bottom side">          <img src="img/304314/016/thumbnail.jpg"
+           alt="Receiver board - bottom side"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 12);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/016"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver board - top view">          <img src="img/304314/003/thumbnail.jpg"
+           alt="Receiver board - top view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 13);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/003"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver board - top view">          <img src="img/304314/004/thumbnail.jpg"
+           alt="Receiver board - top view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 14);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/004"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver board - bottom view">          <img src="img/304314/005/thumbnail.jpg"
+           alt="Receiver board - bottom view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 15);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/005"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver board - bottom view">          <img src="img/304314/006/thumbnail.jpg"
+           alt="Receiver board - bottom view"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 16);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/006"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Wideband amplifier">          <img src="img/304314/007/thumbnail.jpg"
+           alt="Wideband amplifier"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 17);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/007"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Filter">          <img src="img/304314/008/thumbnail.jpg"
+           alt="Filter"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 18);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/008"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Temperature Controlled Chrystal Oscillator (TCXO)">          <img src="img/304314/009/thumbnail.jpg"
+           alt="Temperature Controlled Chrystal Oscillator (TCXO)"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 19);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/009"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver detail">          <img src="img/304314/010/thumbnail.jpg"
+           alt="Receiver detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 20);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/010"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver detail">          <img src="img/304314/011/thumbnail.jpg"
+           alt="Receiver detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 21);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/011"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver detail">          <img src="img/304314/012/thumbnail.jpg"
+           alt="Receiver detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 22);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/012"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver detail">          <img src="img/304314/013/thumbnail.jpg"
+           alt="Receiver detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 23);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/013"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Receiver detail">          <img src="img/304314/014/thumbnail.jpg"
+           alt="Receiver detail"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 24);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/014"
+           /></div>
+          </td>
+          </tr>
+        </table>
+        <table width="1" border="0" cellspacing="0" cellpadding="0" width=74 height=50>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+          <tr>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel seen from the inside">          <img src="img/304314/022/thumbnail.jpg"
+           alt="Front panel seen from the inside"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 25);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/022"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel seen from the inside">          <img src="img/304314/022/thumbnail.jpg"
+           alt="Front panel seen from the inside"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 26);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/022"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Mains wiring">          <img src="img/304314/023/thumbnail.jpg"
+           alt="Mains wiring"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 27);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/023"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Meter enclosure">          <img src="img/304314/024/thumbnail.jpg"
+           alt="Meter enclosure"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 28);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/024"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Front panel EPROM and rotary encoder">          <img src="img/304314/025/thumbnail.jpg"
+           alt="Front panel EPROM and rotary encoder"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 29);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/025"
+           /></div>
+          </td>
+          <td width=4><img src="../../../img/blank.gif" width=4 height=1></td>
+          <td align=center valign=top>
+<div  data-balloon-pos="up" aria-label="Wiring between front panel and CPU">          <img src="img/304314/026/thumbnail.jpg"
+           alt="Wiring between front panel and CPU"
+           border="0" width=74 height=50
+           onClick="slideOpen('slide_2'); slideCurrent('slide_2', 30);"
+           style="
+           cursor: pointer;"
+           max-width: 618px;
+          "
+           title="image # 304314/026"
+           /></div>
+          </td>
+          </tr>
+          <tr><td width=1 height=4><img src="../../../img/blank.gif" width=1 height=1></td></tr>
+        </table>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+<div class="slide_index" title="Click here to start slide show 'B'" onClick="slideOpen('slide_2'); slideCurrent('slide_2', 1);"><span data-balloon-pos="right" aria-label="Click here to start slide show">B</span></div></div><div style="height: 40px;"></div>
+<div id="slide_2" class="slide" onClick="slideClose('slide_2')"><span class="slide_close_left" onClick="slideClose('slide_2')">&times;</span>
+<div class="slide_content" onClick="slideNext('slide_2', -1)">
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 1 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/030/full.jpg" alt="WJ-8711A with cover removed">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 2 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/021/full.jpg" alt="Mains filter (replaced)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 3 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/019/full.jpg" alt="CPU board">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 4 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/017/full.jpg" alt="CPU top side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 5 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/018/full.jpg" alt="CPU - bottom side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 6 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/000/full.jpg" alt="CPU - top view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 7 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/001/full.jpg" alt="CPU - top view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 8 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/002/full.jpg" alt="CPU - bottom view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 9 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/032/full.jpg" alt="Interior - Radio board">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 10 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/020/full.jpg" alt="Receiver board">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 11 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/015/full.jpg" alt="Receiver board - top side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 12 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/016/full.jpg" alt="Receiver board - bottom side">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 13 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/003/full.jpg" alt="Receiver board - top view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 14 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/004/full.jpg" alt="Receiver board - top view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 15 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/005/full.jpg" alt="Receiver board - bottom view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 16 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/006/full.jpg" alt="Receiver board - bottom view">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 17 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/007/full.jpg" alt="Wideband amplifier">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 18 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/008/full.jpg" alt="Filter">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 19 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/009/full.jpg" alt="Temperature Controlled Chrystal Oscillator (TCXO)">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 20 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/010/full.jpg" alt="Receiver detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 21 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/011/full.jpg" alt="Receiver detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 22 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/012/full.jpg" alt="Receiver detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 23 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/013/full.jpg" alt="Receiver detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 24 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/014/full.jpg" alt="Receiver detail">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 25 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/022/full.jpg" alt="Front panel seen from the inside">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 26 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/022/full.jpg" alt="Front panel seen from the inside">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 27 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/023/full.jpg" alt="Mains wiring">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 28 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/024/full.jpg" alt="Meter enclosure">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 29 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/025/full.jpg" alt="Front panel EPROM and rotary encoder">
+</div>
+<div class="slide_main">
+<div class="slide_number"><div class="slide_group">B</div> 30 / 30</div>
+<img class="slide_img" style="width: 100%;" onCLick="slideNext('slide_2', 1);" src="img/304314/026/full.jpg" alt="Wiring between front panel and CPU">
+</div>
+<a class="slide_prev" onClick="slideNext('slide_2', -1)">&#10094;</a>
+<a class="slide_next" onClick="slideNext('slide_2', 1)">&#10095;</a>
+<div class="slide_caption">
+<p class="dummy_caption"></p>
+</div>
+</div>
+</div>
+        <a name=rest></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Restoration</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          2 April 2025
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+When we received our WJ-8711A in March 2025, it was in working condition,
+but had only been cleaned super&shy;ficially. On the inside, a very fine dust had
+settled, and the edges of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>s were oxidi&shy;sed, probably as a result of
+extended storage in a damp place. In order to clean the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Printed Circuit Board">PCB</span>s, the entire unit
+was taken apart and the individual boards were thoroughly cleaned. At this stage,
+we took safety copies of the three <span class="short tooltip-red" data-balloon-pos="up" aria-label="Erasable Programmable Read-Only Memory">EPROM</span>s and inspected the Dallas timekeeping
+unit with built-in Lithium battery. As the latter was still OK, it was decided to
+place it back for now.
+<br />
+<br />
+Next, the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Powr Supply Unit">PSU</span> was inspected. Based on the quality of the electrolytic capacitors
+inside the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Powr Supply Unit">PSU</span>, it was deciced to replace them all with modern alternatives. The
+smaller ones were replaced with 125&#176;C low-<span class="short tooltip-red" data-balloon-pos="up" aria-label="Equivalence Series Resistance">ESR</span> types, whilst the bigger ones were
+replaced by 105&#176;C long-life low-<span class="short tooltip-red" data-balloon-pos="up" aria-label="Equivalence Series Resistance">ESR</span> types. As mains filter units tend to break
+down after several years, it was also decided to replace the mains filter of the
+WJ-8711A &mdash; which is integrated with the mains power receptacle &mdash; preemptively.
+The device was then reassembled and thoroughly tested, to ensure that it works as
+expected.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Problems
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><s>Extremely dirty</s>            <li><s>PSU capacitors in bad state</s>          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Fixed
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>Exterior and interior thoroughly cleaned            <li>EPROM contents read and stored            <li>Mains filter replaced            <li>Electrolytic capacitors in PSU swapped            <li>Dallas timekeeper IC inspected          </ul>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=conn></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Connections</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          RF input 
+          &nbsp;<font color="#CCC">
+          A3J1
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+This is the antenna input, terminated at 50&Omega;.
+Note that the antenna input is <font color=#F52E00>not protected</font> against static discharge
+and thunder storms by means of a surge arrestor. This can be fixed by
+installing the optional preselector, which does have a surge arrestor
+at its input.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">ANT</div><div style="display:inline-block; width:60px;">Out</div>Antenna input (50&Omega;)            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div>Ground          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="../../../ref/conn/bnc/svg/BNC.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Signal monitor output (SMO) 
+          &nbsp;<font color="#CCC">
+          A3J2
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+On this connector a 455 kHz IF signal is available with a bandwidth
+of 20 kHz (-3dB). The signal is taken directly from the output of the IF2 stage.
+It is buffered and can be used for connecting an external spectrum monitor
+(panorama viewer). Note that it will only show 20 kHz of the spectrum.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">SMO</div><div style="display:inline-block; width:60px;">Out</div>Signal Monitor Output            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div>Ground          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="../../../ref/conn/bnc/svg/BNC.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          10 MHz reference 
+          &nbsp;<font color="#CCC">
+          A3J3
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+By default, all internal frequencies are derived from a highly stable
+internal temperature-compen&shy;sated 10 MHz reference oscillator. If necessary,
+the device can be locked to an external 1, 2, 5 or 10 MHz source, that can be
+connected to the EXT REF socket (A3J3) at the rear. When a valid signal is
+detected on this port, the WJ-8711A will automatically the external signal.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">EXT/REF</div><div style="display:inline-block; width:60px;">In</div>External 1, 2, 5 or 10 MHz reference            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div>Ground          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="../../../ref/conn/bnc/svg/BNC.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=conn_if></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          IF output
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+On this socket, the 455 kHz Intermediate Frequency (<span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span>) signal is available.
+This signal is recon&shy;structed from the audio ouput of the <span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span>, which is
+then upconverted to 455 kHz, passed through a bandpass filter and buffered.
+Note that it is different from the 455 kHz <a href="#conn_smo"><span data-balloon-pos="up" aria-label="Jump to: SMO output">SMO output</span></a>.
+It can be used for further processing of exotic signals, e.g. by feeding it to
+an external demodulator.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li><div style="display:inline-block; width:60px;">IF</div><div style="display:inline-block; width:60px;">Out</div>25 kHz <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> output            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div>Ground          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="../../../ref/conn/bnc/svg/BNC.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=conn_v24></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          V.24 (RS232) / CSMA control port 
+          &nbsp;<font color="#CCC">
+          A2J3
+          </font>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr>
+          <td valign=top align=left>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+For external control, the WJ-8711A has a standard RS232 (v.24) serial port.
+The device supports both <span class="short" aria-label="Watkins-Johnson" data-balloon-pos="up"><a href="../../../manuf/wj" class="short" >W-J</a></span>'s proprietary protocol, as well as ICOM's
+CSMA, both of which are described in the manual.
+Only three wires are needed: TX, RX and GND. There is no hardware handshake.
+Instead it supports XON/XOFF and ACK/NACK software handshakes.
+Below is the pinout of the 25-pin female DB25 socket at the rear of the
+device, when looking into the receptacle.
+          </font>
+          </td></tr>
+        </table>
+<br />        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <li>-            <li><div style="display:inline-block; width:60px;">TX</div><div style="display:inline-block; width:60px;">Out</div>Data out (from WJ8711A)            <li><div style="display:inline-block; width:60px;">RX</div><div style="display:inline-block; width:60px;">In</div>Data in (to WJ8711A)            <li>-            <li>-            <li>-            <li><div style="display:inline-block; width:60px;">GND</div><div style="display:inline-block; width:60px;">-</div>Ground          </ol>
+          </font>
+          </td>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <table 
+             border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="center" valign=>
+              <div style="position: relative;">
+              <div style="position: relative;">
+              <img src="../../../ref/conn/dsub/svg/DB25_F.svg"
+               style="
+               max-width: 618px;
+              "
+               align="right"
+               vspace="4"
+               border=0
+              
+               />
+              </div>
+              </td></tr><tr><td align=center>
+            </td></tr></table>
+          </ol>
+</font></td></tr></table><div style="height: 14px;"></div>        <a name=spec></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Specifications</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:100px;">Device</div><a href="../../mon.htm">Monitoring receiver</a>            <li><div style="display:inline-block; width:100px;">Purpose</div><a href="../../receivers.htm">Surveillance</a> and <a href="../../mon.htm">spectrum monitoring</a>            <li><div style="display:inline-block; width:100px;">Principle</div>Triple conversion            <li><div style="display:inline-block; width:100px;">Model</div>WJ-8711A            <li><div style="display:inline-block; width:100px;">Manufacturer</div><a href="../../../manuf/wj">Watkins-Johnson</a>            <li><div style="display:inline-block; width:100px;">NSN</div>5826-01-473-2022            <li><div style="display:inline-block; width:100px;">Country</div><span class="short tooltip-red" data-balloon-pos="up" aria-label="United States of America">USA</span>            <li><div style="display:inline-block; width:100px;">Years</div>1996-2010            <li><div style="display:inline-block; width:100px;">Predecessor</div><a href="../wj8711">WJ-8711</a>            <li><div style="display:inline-block; width:100px;">Successor</div>?            <li><div style="display:inline-block; width:100px;">Frequency</div>5 kHz - 30 MHz            <li><div style="display:inline-block; width:100px;">Resolution</div>1Hz            <li><div style="display:inline-block; width:100px;">Waveforms</div><a href="#conn_wave">see below</a>            <li><div style="display:inline-block; width:100px;">Bandwidth</div>56 Hz - 16 kHz (66 steps)            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span></div>40 MHz, 455 kHz, 25 kHz <sup><font color="#FF8800">1</font></sup>            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Digital Signal Processor">DSP</span></div>Motorola 56002            <li><div style="display:inline-block; width:100px;">IP3</div>+30 dBm            <li><div style="display:inline-block; width:100px;">Memory</div>100 channels            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Automatic Gain Control">AGC</span></div>Slow, Medium, Fast            <li><div style="display:inline-block; width:100px;"><span class="short tooltip-red" data-balloon-pos="up" aria-label="Beat Frequency Oscillator">BFO</span></div>0-8000 Hz (in 10 Hz steps)            <li><div style="display:inline-block; width:100px;">Dimensions</div>508 &#215; 482 &#215; 133 mm            <li><div style="display:inline-block; width:100px;">Weight</div>&lt; 5 kg <sup><font color="#FF8800">2</font></sup>            <li><div style="display:inline-block; width:100px;">Price</div>US$ 20,486 (2023)          </ul>
+</font></td></tr></table>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Only the second <span class="short tooltip-red" data-balloon-pos="up" aria-label="Intermediate Frequency">IF</span> is available as an output.
+          </li>
+          <li>
+Weight without preselector (5.4 kg with preselector).
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=conn_wave></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Waveforms (modes)
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span>            <li>Synchronous <span class="short tooltip-red" data-balloon-pos="up" aria-label="Amplitude Modulation">AM</span>            <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Frequency Modulation">FM</span>            <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Continupus Wave">CW</span>            <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Independent Side Band">ISB</span>            <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Upper Side band">USB</span>            <li><span class="short tooltip-red" data-balloon-pos="up" aria-label="Lower Side Band">LSB</span>          </ul>
+</font></td></tr></table>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Scanning modes
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li>Channel scan            <li>F1-F2 scan            <li>F1-F2 scan with lockouts          </ul>
+</font></td></tr></table>        <a name=spec_opt></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+0" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          Options
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td valign="">
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><div style="display:inline-block; width:120px;">WJ-871Y/REF</div>High-stability reference oscillator            <li><div style="display:inline-block; width:120px;">WJ-8711/PRE</div>Suboctave Preselector            <li><div style="display:inline-block; width:120px;">WJ-8711A/COR</div>Varrier-Operated Relay            <li><div style="display:inline-block; width:120px;">WJ-8711/DSO1</div>Digital Signal Outout            <li><div style="display:inline-block; width:120px;">WJ-8711/488</div>IEEE-488 Interface (IEC-625, GPIB, HPIB)            <li><div style="display:inline-block; width:120px;">WJ-871Y/8KRF</div>8 kHz Roofing Filter            <li><div style="display:inline-block; width:120px;">WJ-871Y/485</div>RS-485 Interface            <li><div style="display:inline-block; width:120px;">WJ-871Y/SEU</div>Speech Enhancement Unit            <li><div style="display:inline-block; width:120px;">WJ-871Y/IFC125</div>12.5 kHz IF Output            <li><div style="display:inline-block; width:120px;">WJ-871Y/FSK</div>Frequecy Shift Keying            <li><div style="display:inline-block; width:120px;">WJ-8711/SPK</div>Internal speaker            <li><div style="display:inline-block; width:120px;">WJ-8711/BFP</div>Blank Front Panel          </ul>
+</font></td></tr></table><div style="height: 20px;"></div>        <a name=data></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Datasheets</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=a>
+            <a name="data_1"></a>
+            <li><a href="files/M68HC11E.pdf">MC68HC11 8-bit microcontroller</a><br />
+Freescale. July 2005. Rev. 5.1.
+            <p />
+            <a name="data_2"></a>
+            <li><a href="files/DSP56002.pdf">DSP56002 24-bit Digital Signal Processor</a><br />
+Motorola, Inc. 1996, Rev. 3.
+          </ol type=a>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <a name=doc></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Documentation</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol type=A>
+            <a name="doc_1"></a>
+            <li><a href="files/WJ8711_datasheet_199303.pdf">Digital HF Receiver WJ-8711 - Technical data sheet</a><br />
+<a href="../../../manuf/wj">Watkins-Johnson</a>, CET Division, March 1993.
+            <p />
+            <a name="doc_2"></a>
+            <li><a href="files/WJ8711A_WJ_1996.pdf">Digital HF Receiver WJ-8711A - Brochure</a><br />
+May 1996.
+            <p />
+            <a name="doc_3"></a>
+            <li><a href="files/WJ8711A_Signia_2003.pdf">WJ-8711A - Technical data sheet</a><br />
+Signia-IDT, 2003.
+            <p />
+            <a name="doc_4"></a>
+            <li><a href="files/WJ8711A_DRS_2005.pdf">WJ-8711A Digital HF Receiver - Brochure</a><br />
+DRS Technologies, Inc. 2005.
+            <p />
+            <a name="doc_5"></a>
+            <li><a href="files/WJ8711A_Signia_service_Q_2002.pdf">WJ-8711A - Technical Manual - <b>Rev. Q</b></a><br />
+Installation, Operation and Intermediate Level Maintenance Manual
+for the WJ-8711A Digital HF Receiver.
+Signia-IDT, Inc., 1995. Revision Q, November 2002. <sup><font color="#FF8800">1</font></sup>
+            <p />
+            <a name="doc_6"></a>
+            <li><a href="files/WJ8711A_DRS_service.pdf">WJ-8711A - Technical Manual - <b>Rev. Z</b></a><br />
+Installation, Operation and Intermediate Level Maintenance Manual
+for the WJ-8711A Digital HF Receiver.
+DRS Signal Solutions, Inc., 1995. Revision Z, March 2007. <sup><font color="#FF8800">1</font></sup>
+            <p />
+            <a name="doc_7"></a>
+            <li><a href="files/WJ8711_PRE_service.pdf">Type WJ-8711/PRE - Suboctave Preselector Option - technical manual</a><br />
+Signia-IDT, Inc., 2000. Rev. B, January 2003.
+            <p />
+            <a name="doc_8"></a>
+            <li><a href="files/Condor_PSU_SP1348A.pdf">Condor PSU SP1348A circuit diagram</a><br />
+DC Power Supplies Inc., 26 February 1993.
+            <p />
+            <a name="doc_9"></a>
+            <li><a href="files/WJ871Y_SEU_datasheet_199605.pdf">Speech Enhancement Unit WJ-971Y/SEU</a><br />
+Watkins-Johnson Company. May 1996.
+          </ol type=A>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width="50" cellspacing="0" cellpadding="0"><tr>
+        <td style="border-top: 1px solid #aaa;"><img src="../img/blank.gif" width="1" height="5"/></td>
+        </tr></table>
+        <table width=100% border=0 cellspacing=0 cellpadding=0>
+          <tr><td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#888888><small>
+          <ol>
+          <li>
+Document kindly provided by Terry O'Laughlin <a href="#ref_1">[1]</a>.
+          </ol>
+          </small></font></td></tr>
+        </table>
+<div style="height: 20px;"></div>        <a name=ref></a>
+        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>References</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ol>
+            <a name="ref_1"></a>
+            <li><a href="https://watkins-johnson.terryo.org" target="_blank">Terry O. Laughlin, <i>Watkins-Johnson</i></a><br />
+<a href="https://watkins-johnson.terryo.org" target="_blank">Terry O.'s WJ website</a>.
+Visited 30 March 2025.
+            <p />
+            <a name="ref_2"></a>
+<li><font color=#F52E00>Fred Osterman, <i>Shortwave receivers past and present (1945-1996)</i></font><br />
+Universal Radio Research. Second edition, January 1997. p. 331.<br />
+ISBN 1-882123-06-9.
+            <p />
+            <a name="ref_3"></a>
+            <li><a href="https://www.qsl.net/n9ewo/wj8711.html" target="_blank">Dave (N9EWO), <i>Watkins-Johnson WJ-8711/HF-1000 Series DSP Receiver</i> - Review</a><br />
+QSL.net/N9EWO. Undated.
+            <p />
+            <a name="ref_4"></a>
+            <li><a href="files/WJ8711A_Wrth_2011.pdf"><i>Watkins-Johnson 8711A - Review</i></a><br />
+World Radio TV Handbook (<a href="http://www.wrth.com" target="_blank">www.wrth.com</a>).<br />
+80s & 90s Classic Receivers. Issue 2011. p.26.
+            <p />
+            <a name="ref_5"></a>
+            <li><a href="https://bit.ly/4c7ONac" target="_blank">Paolo Viappiani, <i>The WJ-8711 & WJ-8712 vs. Ten-Tec RX-340 & RX-331 Receivers</i></a><br />
+SWLing Post website, March 2023, V2.5.
+            <p />
+            <a name="ref_6"></a>
+<li><font color=#F52E00>Ralph Menn, personal correspondence</font><br />
+February 2025.
+          </ol>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        <table width=100% border=0 cellpadding=0 cellspacing=0>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+          <tr>
+          <td align="left" valign="center">
+          <font size="+1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#F52E00>
+          <b>Further information</b>
+          </font>
+          </td>
+          </tr>
+          <tr><td colspan=2 height=1><img src=../../../img/blank.gif width=1 height=1></td></tr>
+          <tr><td height=4><img src="../../../img/blank.gif" width=1 height=4></td></tr>
+        </table>
+        <table width=100% border=0 cellspacing=0 cellpadding=4>
+          <tr>
+          <td>
+          <font size="-1" face="Lucida Grande,Arial,Verdana,sans-serif" color=#555555>
+          <ul>
+            <li><a href="../wj8711">WJ-8711, the predecessor</a><br />
+            <li><a href="../../../manuf/wj">Other Watkins-Johnson equipment</a><br />
+            <li><a href="../../index.htm">Other intercept receivers</a><br />
+          </ul>
+        </font></td></tr></table>
+<div style="height: 14px;"></div>        </td></tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td colspan=3 width=100%>
+        <div style="width: 100%; height: 2px; background: #FFBB00; margin-top: 2px; margin-bottom: 2px;"></div>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        </table>
+        </td></tr>
+        <tr>
+        <td align=center width=100%>
+        <font size="-2" face="Lucida Grande,Arial,Verdana,sans-serif" color="#777777">
+        Any links shown in <font color=#F52E00>red</font> are currently unavailable. 
+        If you like the information on this website, why not make a <a href="http://www.cryptomuseum.com/donate.htm"><span data-balloon-pos="up" aria-label="www.cryptomuseum.com (off-site)">donation</span></a>?<br /> 
+         
+        © Crypto Museum. Created: Sunday 30 March 2025. Last changed: Wednesday, 05 November 2025 - 12:02 CET.
+        <br />
+        </font
+        </td>
+        </tr>
+        <tr><td><img src="../img/blank.gif" width="1" height="4" /></td></tr>
+        <tr><td align=center>
+        <a href="../../../index.htm"><img src=../../../svg/logo/wheel_small.svg align=center alt="Click for homepage" vspace=4 border=0></a>
+        </td></tr>
+      </table>
+      </td></tr>
+    </table>
+    </font>
+  </td>
+  </tr></table>
+  </body>
+</html>
